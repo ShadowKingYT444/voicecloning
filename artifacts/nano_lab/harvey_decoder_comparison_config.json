@@ -1,0 +1,82 @@
+{
+  "output_dir": "artifacts/nano_lab/harvey_decoder_comparison",
+  "device": "cuda",
+  "threads": 2,
+  "optimized_loader": true,
+  "adapter": "artifacts/nano_lab/adapter_harvey_rank2.pt",
+  "resume": false,
+  "cases": [
+    {
+      "id": "business_base",
+      "reference": "artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+      "text": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence.",
+      "seed": 31,
+      "temperature": 0.65,
+      "steps": 2,
+      "voice": "harvey",
+      "adapter_scale": 1,
+      "save_conditionals": false
+    },
+    {
+      "id": "business_decoder_fit",
+      "reference": "artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit_harvey_v4/conditionals.pt",
+      "text": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence.",
+      "seed": 31,
+      "temperature": 0.65,
+      "steps": 2,
+      "voice": "harvey",
+      "adapter_scale": 1,
+      "save_conditionals": false
+    },
+    {
+      "id": "question_base",
+      "reference": "artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+      "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "seed": 47,
+      "temperature": 0.65,
+      "steps": 2,
+      "voice": "harvey",
+      "adapter_scale": 1,
+      "save_conditionals": false
+    },
+    {
+      "id": "question_decoder_fit",
+      "reference": "artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit_harvey_v4/conditionals.pt",
+      "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "seed": 47,
+      "temperature": 0.65,
+      "steps": 2,
+      "voice": "harvey",
+      "adapter_scale": 1,
+      "save_conditionals": false
+    },
+    {
+      "id": "narrative_base",
+      "reference": "artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+      "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "seed": 63,
+      "temperature": 0.65,
+      "steps": 2,
+      "voice": "harvey",
+      "adapter_scale": 1,
+      "save_conditionals": false
+    },
+    {
+      "id": "narrative_decoder_fit",
+      "reference": "artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit_harvey_v4/conditionals.pt",
+      "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "seed": 63,
+      "temperature": 0.65,
+      "steps": 2,
+      "voice": "harvey",
+      "adapter_scale": 1,
+      "save_conditionals": false
+    }
+  ]
+}

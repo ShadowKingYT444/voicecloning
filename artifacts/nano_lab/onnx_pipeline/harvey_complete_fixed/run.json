@@ -1,0 +1,172 @@
+{
+  "elapsed_seconds": 67.70502495765686,
+  "experimental_t3": true,
+  "experimental_t3_limitation": "The long T3 reference at sequence length 400 is not within the strict 3e-4 cache gate: 176 of 7.4M cache values exceeded the gate (max abs 0.000989; relative L2 1.44e-5). Logits, lengths 32/128, and decode cases passed. This integration run is experimental and does not claim full numerical T3 verification.",
+  "finished_unix": 1790695461.936777,
+  "model_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged",
+  "numpy_sampler": "not Torch-identical",
+  "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/harvey_complete_fixed.wav",
+  "rss_sample_interval_seconds": 0.1,
+  "rtf": 12.584577129675997,
+  "run_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/harvey_complete_fixed",
+  "sampled_peak_tree_rss_bytes": 847093760,
+  "schema_version": 1,
+  "stages": [
+    {
+      "elapsed_seconds": 3.306662082672119,
+      "finished_unix": 1790695397.886186,
+      "parent_elapsed_seconds": 4.247060298919678,
+      "result": {
+        "conditioning_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+        "field_count": 7,
+        "mode": "zero_shot",
+        "profile": "/home/terryd/gooning/voicecloning/voices/nano/harvey.json",
+        "skipped_optional_fields": [
+          "t3.clap_emb",
+          "t3.cond_prompt_speech_emb",
+          "gen.prompt_feat_len"
+        ]
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 234070016,
+        "rss_bytes": 234991616
+      },
+      "sampled_peak_tree_rss_bytes": 275337216,
+      "schema_version": 1,
+      "stage": "prepare",
+      "started_unix": 1790695394.5795248,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 16.68411159515381,
+      "finished_unix": 1790695415.4917638,
+      "parent_elapsed_seconds": 17.68602418899536,
+      "result": {
+        "eos_seen": true,
+        "experimental_t3": true,
+        "generated_token_count": 132,
+        "length_limit_reached": false,
+        "mode": "t3_generated_numpy_sampler",
+        "prefill_sequence_length": 200,
+        "raw_sampled_token_count": 133,
+        "speech_token_count_with_silence": 135,
+        "t3_used": true
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 805523456,
+        "rss_bytes": 494096384
+      },
+      "sampled_peak_tree_rss_bytes": 847093760,
+      "schema_version": 1,
+      "stage": "tokens",
+      "started_unix": 1790695398.8076541,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 3.5238280296325684,
+      "finished_unix": 1790695420.0173042,
+      "parent_elapsed_seconds": 4.040600061416626,
+      "result": {
+        "mel_length": 624,
+        "prompt_feat_length": 355,
+        "prompt_token_count": 177,
+        "speech_token_count": 135
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 399659008,
+        "rss_bytes": 328380416
+      },
+      "sampled_peak_tree_rss_bytes": 440262656,
+      "schema_version": 1,
+      "stage": "flow",
+      "started_unix": 1790695416.493478,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 16.491365432739258,
+      "finished_unix": 1790695437.0706277,
+      "parent_elapsed_seconds": 17.76368522644043,
+      "result": {
+        "mel_length": 269,
+        "prompt_feat_length": 355,
+        "seed": 31,
+        "speech_token_count": 135,
+        "steps": 2
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 568774656,
+        "rss_bytes": 482349056
+      },
+      "sampled_peak_tree_rss_bytes": 610246656,
+      "schema_version": 1,
+      "stage": "estimator",
+      "started_unix": 1790695420.5792637,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 9.78538203239441,
+      "finished_unix": 1790695448.1293933,
+      "parent_elapsed_seconds": 11.215580940246582,
+      "result": {
+        "audio_samples": 129120,
+        "audio_seconds": 5.38,
+        "mel_length": 269
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 341086208,
+        "rss_bytes": 161918976
+      },
+      "sampled_peak_tree_rss_bytes": 382337024,
+      "schema_version": 1,
+      "stage": "vocoder",
+      "started_unix": 1790695438.3440144,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 11.08648133277893,
+      "finished_unix": 1790695460.6385016,
+      "parent_elapsed_seconds": 12.739332914352417,
+      "result": {
+        "audio_samples": 129120,
+        "audio_seconds": 5.38,
+        "master_processing": {
+          "achieved_lufs": -20.17560687389813,
+          "gain_db": 3.246558917024731,
+          "highpass_hz": 45,
+          "noise_gate": false,
+          "target_lufs": -19,
+          "true_peak_ceiling_dbtp": -1,
+          "true_peak_oversampling": 4
+        },
+        "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/harvey_complete_fixed.wav",
+        "sample_rate": 24000,
+        "schema_version": 1,
+        "source": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/harvey_complete_fixed/vocoder/audio.npz",
+        "trim_fade": {
+          "fade_ms": 20,
+          "n_trim": 480
+        },
+        "watermark": "PerthImplicitWatermarker",
+        "watermark_applied": true
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 516431872,
+        "rss_bytes": 512532480
+      },
+      "sampled_peak_tree_rss_bytes": 558190592,
+      "schema_version": 1,
+      "stage": "finish",
+      "started_unix": 1790695449.552022,
+      "status": "ok"
+    }
+  ],
+  "status": "ok",
+  "supplied_tokens_mode": false,
+  "voice": "harvey"
+}

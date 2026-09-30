@@ -1,0 +1,17 @@
+{
+  "elapsed_seconds": 0.0157468318939209,
+  "finished_unix": 1790694775.2284775,
+  "result": {
+    "mode": "supplied_tokens_acoustic_verification",
+    "t3_used": false,
+    "token_count": 209
+  },
+  "rss": {
+    "peak_rss_bytes": 41353216,
+    "rss_bytes": 41603072
+  },
+  "schema_version": 1,
+  "stage": "tokens",
+  "started_unix": 1790694775.212732,
+  "status": "ok"
+}

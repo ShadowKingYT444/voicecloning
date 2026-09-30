@@ -1,0 +1,15 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: ec7d4387aa86477bb56c469ca920bcd8
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+loaded PerthNet (Implicit) at step 250,000
+  0%|          | 0/700 [00:00<?, ?it/s]  0%|          | 1/700 [00:00<01:54,  6.11it/s]  1%|          | 6/700 [00:00<00:26, 26.26it/s]  2%|▏         | 13/700 [00:00<00:15, 43.57it/s]  3%|▎         | 20/700 [00:00<00:12, 53.10it/s]  4%|▍         | 28/700 [00:00<00:11, 59.33it/s]  5%|▌         | 36/700 [00:00<00:10, 62.78it/s]  6%|▌         | 43/700 [00:00<00:10, 64.52it/s]  7%|▋         | 50/700 [00:00<00:09, 65.17it/s]  8%|▊         | 57/700 [00:01<00:09, 66.09it/s]  9%|▉         | 65/700 [00:01<00:09, 68.58it/s] 11%|█         | 74/700 [00:01<00:08, 73.18it/s] 12%|█▏        | 84/700 [00:01<00:07, 80.70it/s] 13%|█▎        | 94/700 [00:01<00:07, 82.72it/s] 15%|█▍        | 103/700 [00:01<00:07, 81.83it/s] 16%|█▌        | 112/700 [00:01<00:07, 82.07it/s] 17%|█▋        | 121/700 [00:01<00:06, 83.57it/s] 19%|█▊        | 130/700 [00:01<00:07, 80.74it/s] 20%|█▉        | 139/700 [00:01<00:07, 79.68it/s] 21%|██        | 148/700 [00:02<00:06, 81.82it/s] 22%|██▏       | 157/700 [00:02<00:06, 81.62it/s] 24%|██▎       | 166/700 [00:02<00:06, 79.78it/s] 25%|██▌       | 175/700 [00:02<00:06, 79.73it/s] 26%|██▋       | 184/700 [00:02<00:06, 81.15it/s] 28%|██▊       | 193/700 [00:02<00:06, 82.98it/s] 29%|██▉       | 202/700 [00:02<00:06, 82.44it/s] 29%|██▉       | 205/700 [00:02<00:06, 72.75it/s]
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  3.62it/s]100%|██████████| 2/2 [00:00<00:00,  5.58it/s]
+Segment 1: 8.36s audio in 8.66s
+{"output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/revalidation/asmr_soft.wav", "report": "artifacts/nano_lab/revalidation/asmr_soft.wav.json", "peak_rss_mib": 2125.05859375}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 55.519s
+             CPU time consumed: 49.514s
+                   Memory peak: 2.4G (swap: 0B)

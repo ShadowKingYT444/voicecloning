@@ -1,0 +1,28 @@
+{
+  "cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_cache.json",
+  "cache_sha256": "a2334f20df019e641a0555b7c1e62f68797e57f5316faf852cbb748e3b16b881",
+  "command": [
+    "scripts/nano_lab/codec_diagnostics.py",
+    "prepare"
+  ],
+  "created_unix": 1790695395.0161223,
+  "kind": "codec_source_diagnostics",
+  "s3gen_sil": 4299,
+  "schema_version": 1,
+  "selected": [
+    {
+      "id": "asmr7_train_01",
+      "metadata": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/asmr7_train_01.source.json",
+      "source_token_count": 150,
+      "tokens": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/asmr7_train_01.speech_tokens.npy"
+    },
+    {
+      "id": "asmr7_train_02",
+      "metadata": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/asmr7_train_02.source.json",
+      "source_token_count": 148,
+      "tokens": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/asmr7_train_02.speech_tokens.npy"
+    }
+  ],
+  "selection": "explicit IDs",
+  "synthetic_tts": false
+}

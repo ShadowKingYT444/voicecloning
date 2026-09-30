@@ -1,0 +1,9 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: c193aed30a604e50aa52d320db12f548
+PASS: omitted buffers restored after to_empty-style allocation; checkpoint parameter preserved
+PASS: identical read-only causal masks share storage across layers
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 33.448s
+             CPU time consumed: 28.868s
+                   Memory peak: 1G (swap: 0B)

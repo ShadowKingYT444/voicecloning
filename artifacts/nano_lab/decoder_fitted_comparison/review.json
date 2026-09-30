@@ -1,0 +1,236 @@
+{
+  "kind": "decoder_embedding_fit_new_text_comparison",
+  "promoted": false,
+  "human_listening_accepted": false,
+  "zero_shot_improvement": false,
+  "groups": {
+    "base_raw": {
+      "rows": [
+        {
+          "id": "morning_base_raw",
+          "speaker_cosine": 0.845779,
+          "dnsmos_overall": 3.176984072615381,
+          "dnsmos_background": 3.9584043226515107,
+          "small_wer": 0.0
+        },
+        {
+          "id": "question_base_raw",
+          "speaker_cosine": 0.873489,
+          "dnsmos_overall": 3.1504526426504396,
+          "dnsmos_background": 3.866269210263807,
+          "small_wer": 0.0
+        },
+        {
+          "id": "narrative_base_raw",
+          "speaker_cosine": 0.87854,
+          "dnsmos_overall": 3.1922261940679215,
+          "dnsmos_background": 4.001270647322611,
+          "small_wer": 0.0
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8659359999999999,
+        "dnsmos_overall": 3.173220969777914,
+        "dnsmos_background": 3.941981393412643,
+        "small_wer": 0.0
+      }
+    },
+    "base_mel": {
+      "rows": [
+        {
+          "id": "morning_base_mel",
+          "speaker_cosine": 0.845953,
+          "dnsmos_overall": 3.2141700793357075,
+          "dnsmos_background": 4.020583832747758,
+          "small_wer": 0.0
+        },
+        {
+          "id": "question_base_mel",
+          "speaker_cosine": 0.875305,
+          "dnsmos_overall": 3.03688078926857,
+          "dnsmos_background": 3.7009591390227667,
+          "small_wer": 0.0
+        },
+        {
+          "id": "narrative_base_mel",
+          "speaker_cosine": 0.884645,
+          "dnsmos_overall": 3.2809225844835503,
+          "dnsmos_background": 4.132111932697346,
+          "small_wer": 0.0
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8686343333333333,
+        "dnsmos_overall": 3.177324484362609,
+        "dnsmos_background": 3.9512183014892903,
+        "small_wer": 0.0
+      }
+    },
+    "fit_raw": {
+      "rows": [
+        {
+          "id": "morning_fit_raw",
+          "speaker_cosine": 0.860826,
+          "dnsmos_overall": 3.077840941206808,
+          "dnsmos_background": 3.7746957859999206,
+          "small_wer": 0.0
+        },
+        {
+          "id": "question_fit_raw",
+          "speaker_cosine": 0.901892,
+          "dnsmos_overall": 3.2793204241323206,
+          "dnsmos_background": 4.028106375906873,
+          "small_wer": 0.0
+        },
+        {
+          "id": "narrative_fit_raw",
+          "speaker_cosine": 0.891777,
+          "dnsmos_overall": 3.081602195515001,
+          "dnsmos_background": 3.851183734580803,
+          "small_wer": 0.0
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8848316666666667,
+        "dnsmos_overall": 3.14625452028471,
+        "dnsmos_background": 3.8846619654958654,
+        "small_wer": 0.0
+      }
+    },
+    "fit_mel": {
+      "rows": [
+        {
+          "id": "morning_fit_mel",
+          "speaker_cosine": 0.86326,
+          "dnsmos_overall": 3.115634951601715,
+          "dnsmos_background": 3.810192193176031,
+          "small_wer": 0.0
+        },
+        {
+          "id": "question_fit_mel",
+          "speaker_cosine": 0.90511,
+          "dnsmos_overall": 3.18177719591183,
+          "dnsmos_background": 3.920480033231793,
+          "small_wer": 0.0
+        },
+        {
+          "id": "narrative_fit_mel",
+          "speaker_cosine": 0.90015,
+          "dnsmos_overall": 3.2038074245133097,
+          "dnsmos_background": 4.0466971502456,
+          "small_wer": 0.0
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8895066666666667,
+        "dnsmos_overall": 3.167073190675618,
+        "dnsmos_background": 3.9257897922178078,
+        "small_wer": 0.0
+      }
+    }
+  },
+  "token_parity": {
+    "all_equal": true,
+    "comparisons": {
+      "morning": {
+        "base_mel": true,
+        "fit_raw": true,
+        "fit_mel": true
+      },
+      "question": {
+        "base_mel": true,
+        "fit_raw": true,
+        "fit_mel": true
+      },
+      "narrative": {
+        "base_mel": true,
+        "fit_raw": true,
+        "fit_mel": true
+      }
+    },
+    "comparison": "All torch ZIP entries except archive serialization ID",
+    "maximum_sampled_process_rss_mib": 2416.8046875
+  },
+  "prosody_status": "complete",
+  "notes": [
+    "Three texts and seeds. All variants use the same T3 adapter.",
+    "Fit has 15 training clips and two separate validation clips.",
+    "Equal-loudness evaluation at -27 LUFS. Similarity uses a held-out development reference subset.",
+    "The current fitted candidate is base_mel. New fit_mel improves mean similarity from .8686 to .8895 while DNSMOS changes from3.1773 to3.1671.",
+    "DNSMOS and speaker similarity do not establish realism. Raw WAVs passed SmallASR; listening copies use master processing and constant gain."
+  ],
+  "prosody": {
+    "morning_fit_mel": {
+      "median_voiced_f0_hz": 200.55846363410154,
+      "voiced_fraction": 0.47164591977869985,
+      "duration_s": 7.28,
+      "hnr_median_db": 5.814134967017102
+    },
+    "morning_base_mel": {
+      "median_voiced_f0_hz": 193.61722637472693,
+      "voiced_fraction": 0.4633471645919779,
+      "duration_s": 7.28,
+      "hnr_median_db": 6.204967215499403
+    },
+    "question_fit_raw": {
+      "median_voiced_f0_hz": 216.74822000913954,
+      "voiced_fraction": 0.4695121951219512,
+      "duration_s": 4.96,
+      "hnr_median_db": 4.68967641709289
+    },
+    "narrative_fit_mel": {
+      "median_voiced_f0_hz": 209.20362212664548,
+      "voiced_fraction": 0.46345029239766083,
+      "duration_s": 6.88,
+      "hnr_median_db": 4.61954328223025
+    },
+    "morning_fit_raw": {
+      "median_voiced_f0_hz": 200.25064619978605,
+      "voiced_fraction": 0.46196403872752423,
+      "duration_s": 7.28,
+      "hnr_median_db": 5.18458315288568
+    },
+    "question_fit_mel": {
+      "median_voiced_f0_hz": 216.7903645232146,
+      "voiced_fraction": 0.48577235772357724,
+      "duration_s": 4.96,
+      "hnr_median_db": 4.790538768330165
+    },
+    "question_base_mel": {
+      "median_voiced_f0_hz": 206.51874676179787,
+      "voiced_fraction": 0.4735772357723577,
+      "duration_s": 4.96,
+      "hnr_median_db": 4.828547197696695
+    },
+    "morning_base_raw": {
+      "median_voiced_f0_hz": 193.7475988221135,
+      "voiced_fraction": 0.45919778699861685,
+      "duration_s": 7.28,
+      "hnr_median_db": 5.866336124333644
+    },
+    "narrative_base_mel": {
+      "median_voiced_f0_hz": 203.45557979293926,
+      "voiced_fraction": 0.4692982456140351,
+      "duration_s": 6.88,
+      "hnr_median_db": 4.922615202408528
+    },
+    "narrative_fit_raw": {
+      "median_voiced_f0_hz": 210.02185422145374,
+      "voiced_fraction": 0.45760233918128657,
+      "duration_s": 6.88,
+      "hnr_median_db": 4.11580131668638
+    },
+    "narrative_base_raw": {
+      "median_voiced_f0_hz": 201.59410166496573,
+      "voiced_fraction": 0.4546783625730994,
+      "duration_s": 6.88,
+      "hnr_median_db": 4.345966851375474
+    },
+    "question_base_raw": {
+      "median_voiced_f0_hz": 204.03479594665305,
+      "voiced_fraction": 0.4634146341463415,
+      "duration_s": 4.96,
+      "hnr_median_db": 4.733884156052605
+    }
+  }
+}

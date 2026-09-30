@@ -1,0 +1,18 @@
+{
+  "label": "Harvey isolated reference 02",
+  "mode": "zero_shot",
+  "status": "candidate_under_validation",
+  "reference": "artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+  "conditioning_cache": "artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+  "decoder": "meanflow",
+  "steps": 2,
+  "cuda_dtype": "fp32",
+  "sampling": {
+    "temperature": 0.65,
+    "top_p": 0.95,
+    "top_k": 1000,
+    "repetition_penalty": 1.2
+  },
+  "source_case": "harvey_tune_isolated",
+  "watermark": true
+}

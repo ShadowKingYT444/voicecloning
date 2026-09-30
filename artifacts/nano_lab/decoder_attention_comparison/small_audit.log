@@ -1,0 +1,21 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "morning_attention0_raw", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "morning_attention1_raw", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "morning_attention0_mel", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "morning_attention1_mel", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "question_attention0_raw", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "question_attention1_raw", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "question_attention0_mel", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "question_attention1_mel", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "narrative_attention0_raw", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "narrative_attention1_raw", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "narrative_attention0_mel", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "narrative_attention1_mel", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "heldout01_attention0_mel", "wer": 0.0, "transcript": "Let's see who's the lucky person who gets to kiss me. Wait a minute, do I know you?"}
+{"id": "heldout01_attention1_mel", "wer": 0.0, "transcript": "Let's see who's the lucky person who gets to kiss me. Wait a minute, do I know you?"}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 28.222s
+             CPU time consumed: 2min 52.007s
+                   Memory peak: 1G (swap: 0B)

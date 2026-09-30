@@ -1,0 +1,33 @@
+{
+  "errors": [],
+  "inputs": [
+    "x",
+    "mask",
+    "mu",
+    "t",
+    "speaker_embedding",
+    "cond",
+    "r"
+  ],
+  "max_abs_error": 4.2438507080078125e-05,
+  "max_relative_error": 0.003794378567080318,
+  "method": "separate pure-ORT process against saved PyTorch reference arrays",
+  "outputs": 3,
+  "outputs_per_case": {
+    "mel256": {
+      "errors": 0,
+      "outputs": 1
+    },
+    "mel64": {
+      "errors": 0,
+      "outputs": 1
+    },
+    "mel8": {
+      "errors": 0,
+      "outputs": 1
+    }
+  },
+  "provider": "CPUExecutionProvider",
+  "stage": "meanflow_estimator",
+  "status": "verified"
+}

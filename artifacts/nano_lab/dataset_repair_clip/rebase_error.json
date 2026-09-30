@@ -1,0 +1,16 @@
+{
+  "command": [
+    "scripts/nano_lab/repair_dataset.py",
+    "rebase",
+    "--proposal",
+    "artifacts/nano_lab/dataset_repair_complete/proposal.json",
+    "--tiny-audit",
+    "artifacts/nano_lab/dataset_repair_complete/tiny_clip_audit.json",
+    "--small-audit",
+    "artifacts/nano_lab/dataset_repair_complete/small_ct2_audit.json",
+    "--output-dir",
+    "artifacts/nano_lab/dataset_repair_clip"
+  ],
+  "error": "ValueError: Tiny and Small audit row IDs must exactly match proposal candidates",
+  "status": "error"
+}

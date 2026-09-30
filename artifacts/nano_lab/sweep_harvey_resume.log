@@ -1,0 +1,16 @@
+MemoryMax=3GiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job
+Running as unit: nano-lab-191906.service; invocation ID: cc4724f35fb1478e80cabacf93474d2c
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+WARNING:root:Reference mel length is not equal to 2 * reference token length.
+
+loaded PerthNet (Implicit) at step 250,000
+  0%|          | 0/700 [00:00<?, ?it/s]  0%|          | 1/700 [00:00<01:40,  6.99it/s]  1%|          | 5/700 [00:00<00:30, 22.77it/s]  1%|▏         | 10/700 [00:00<00:20, 33.16it/s]  2%|▏         | 15/700 [00:00<00:18, 37.52it/s]  3%|▎         | 20/700 [00:00<00:18, 36.16it/s]  3%|▎         | 24/700 [00:00<00:20, 33.38it/s]  4%|▍         | 28/700 [00:00<00:19, 34.70it/s]  5%|▍         | 32/700 [00:00<00:19, 34.90it/s]  5%|▌         | 36/700 [00:01<00:19, 33.67it/s]  6%|▌         | 40/700 [00:01<00:20, 31.98it/s]  6%|▋         | 44/700 [00:01<00:21, 30.88it/s]  7%|▋         | 48/700 [00:01<00:21, 30.23it/s]  8%|▊         | 53/700 [00:01<00:18, 34.82it/s]  8%|▊         | 58/700 [00:01<00:17, 37.33it/s]  9%|▉         | 62/700 [00:01<00:17, 36.45it/s] 10%|▉         | 67/700 [00:01<00:16, 38.00it/s] 10%|█         | 71/700 [00:02<00:16, 38.27it/s] 11%|█         | 75/700 [00:02<00:16, 37.64it/s] 11%|█▏        | 79/700 [00:02<00:16, 37.13it/s] 12%|█▏        | 83/700 [00:02<00:19, 31.55it/s] 13%|█▎        | 88/700 [00:02<00:18, 33.70it/s] 13%|█▎        | 92/700 [00:02<00:17, 34.82it/s] 14%|█▎        | 96/700 [00:02<00:17, 35.40it/s] 14%|█▍        | 101/700 [00:02<00:15, 37.68it/s] 15%|█▌        | 105/700 [00:03<00:16, 36.77it/s] 16%|█▌        | 111/700 [00:03<00:14, 41.77it/s] 17%|█▋        | 117/700 [00:03<00:13, 44.45it/s] 18%|█▊        | 123/700 [00:03<00:12, 47.20it/s] 18%|█▊        | 128/700 [00:03<00:12, 47.46it/s] 19%|█▉        | 134/700 [00:03<00:11, 50.34it/s] 20%|██        | 140/700 [00:03<00:11, 49.28it/s] 21%|██        | 146/700 [00:03<00:11, 50.33it/s] 22%|██▏       | 152/700 [00:03<00:11, 45.94it/s] 22%|██▏       | 157/700 [00:04<00:13, 41.59it/s] 23%|██▎       | 162/700 [00:04<00:13, 40.28it/s] 24%|██▍       | 167/700 [00:04<00:13, 40.71it/s] 25%|██▍       | 172/700 [00:04<00:12, 40.62it/s] 25%|██▍       | 173/700 [00:04<00:13, 37.91it/s]
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  4.17it/s]100%|██████████| 2/2 [00:00<00:00,  5.75it/s]100%|██████████| 2/2 [00:00<00:00,  5.43it/s]
+{"id": "harvey_quote_04_isolated", "seconds": 7.06, "generation_seconds": 7.175489928000388, "rtf": 1.0163583467422648}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 8.067s
+             CPU time consumed: 1min 750ms
+                   Memory peak: 2.4G (swap: 0B)

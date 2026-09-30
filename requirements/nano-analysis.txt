@@ -1,0 +1,8 @@
+# Direct packages observed locally. Fresh environment resolution has not been tested.
+onnx==1.22.0
+onnxscript==0.7.2
+faster-whisper==1.2.1
+ctranslate2==4.8.2
+praat-parselmouth==0.4.7
+demucs==4.1.0
+pytest==9.1.1

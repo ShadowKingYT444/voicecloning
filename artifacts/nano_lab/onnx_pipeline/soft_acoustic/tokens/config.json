@@ -1,0 +1,13 @@
+{
+  "experimental_t3": true,
+  "mode": "supplied_tokens_acoustic_verification",
+  "schema_version": 1,
+  "source": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_soft_morning_31.tokens.npy",
+  "source_sha256": "834211300da35e372864820dd4e0219b837bcca916617f09f7e42b66f182f837",
+  "t3_used": false,
+  "trailing_silence": {
+    "already_present": true,
+    "count": 3,
+    "value": 4299
+  }
+}

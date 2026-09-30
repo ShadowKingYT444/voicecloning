@@ -1,0 +1,2411 @@
+{
+  "status": "not_promoted_content_errors_and_new_text_identity_regression",
+  "human_listening": false,
+  "groups": {
+    "0": {
+      "new_text_count": 2,
+      "mean_cosine": 0.8913535,
+      "mean_dnsmos": 3.1570359914660315
+    },
+    "half": {
+      "new_text_count": 2,
+      "mean_cosine": 0.88376,
+      "mean_dnsmos": 3.0166329755914774
+    },
+    "full": {
+      "new_text_count": 2,
+      "mean_cosine": 0.8579019999999999,
+      "mean_dnsmos": 3.367350359387257
+    }
+  },
+  "word_error_cases": {
+    "question_mlp_half": 0.0625,
+    "heldout01_mlp_half": 0.05,
+    "heldout01_mlp_full": 0.05
+  },
+  "peak_process_rss_mib": 2405.60546875,
+  "rows": [
+    {
+      "id": "question_mlp_0",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+      "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "seed": 79,
+      "steps": 2,
+      "temperature": 0.8,
+      "adapter_scale": 0,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 1,
+      "save_conditionals": false,
+      "decoder_fit_report": "artifacts/nano_lab/decoder_embedding_fit/fit_report.json",
+      "t3_donor_cache": "artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+      "t3_donor_mode": "prompt",
+      "repetition_penalty": 1.0,
+      "decoder": "meanflow",
+      "synthetic": true,
+      "runtime_loader": "optimized_fp32",
+      "adapter": "artifacts/nano_lab/adapter_asmr_mlp_rank2.pt",
+      "precision": {
+        "matmul_tf32": false,
+        "cudnn_tf32": false
+      },
+      "vocoder_controls": {
+        "voiced_noise_scale": 1.0,
+        "voiced_noise_std": 0.003,
+        "unvoiced_noise_std": 0.03333333333333333,
+        "experimental": false
+      },
+      "mel_calibration_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+      "t3_donor_runtime": {
+        "mode": "prompt",
+        "selected_fields": [
+          "t3.cond_prompt_speech_tokens"
+        ],
+        "prompt_embedding_invalidated": true,
+        "prompt_shape": [
+          1,
+          283
+        ],
+        "speaker_shape": null,
+        "gen_untouched": true,
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+        "sha256": "ba80b353c82ab7f8a59ecbab4da0ec59dcde252a93162e6773dde184d99a078c"
+      },
+      "decoder_projection_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "decoder_attention_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/question_mlp_0.wav",
+      "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/question_mlp_0.master.wav",
+      "seconds": 6.4,
+      "master_processing": {
+        "highpass_hz": 45,
+        "gain_db": 11.818887737229879,
+        "target_lufs": -19,
+        "achieved_lufs": -19.00000011011898,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      },
+      "generation_seconds": 4.5007829849928385,
+      "token_seconds": 2.7609904909913894,
+      "token_count": 160,
+      "rss_mib": 2379.984375,
+      "peak_rss_mib": 2378.59765625,
+      "rtf": 0.703247341405131,
+      "evaluation": {
+        "label": "question_mlp_0",
+        "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/question_mlp_0.wav",
+        "family": "asmr7",
+        "expected_text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+        "measurements": {
+          "duration_s": 6.4,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -28.717,
+          "peak_dbfs": -9.544,
+          "crest_db": 19.173,
+          "dc_offset": -5.4e-07,
+          "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+          "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+          "burst_p99_dbfs_proxy_30ms": -22.014,
+          "noise_floor_dbfs_proxy_low10pct_frames": -74.673,
+          "speech_level_dbfs_proxy_high50pct_frames": -25.936,
+          "snr_db_proxy_high50_minus_low10": 48.738,
+          "stationary_high_band_dbfs_proxy_low10pct_frames": -91.197,
+          "spectral_centroid_hz": 1048.505,
+          "spectral_flatness_proxy": 0.048383,
+          "high_band_fraction_proxy_ge8khz": 0.004706,
+          "noise_fields_are_heuristic_proxies": true
+        },
+        "rss_after_audio_load_mb": 119.03,
+        "speaker_similarity": {
+          "metric": "resemblyzer cosine to independent held-out same-voice refs",
+          "heldout_count": 2,
+          "successful_count": 2,
+          "mean_cosine": 0.88749,
+          "min_cosine": 0.846794,
+          "max_cosine": 0.928186,
+          "rows": [
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+              "cosine": 0.928186
+            },
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+              "cosine": 0.846794
+            }
+          ],
+          "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+        },
+        "dnsmos_signal": 3.4658607226952,
+        "dnsmos_background": 3.6342201601429447,
+        "dnsmos_overall": 3.000491636240355,
+        "dnsmos_windows": 4,
+        "dnsmos_repeated_short_clip": true
+      },
+      "audit": {
+        "id": "question_mlp_0",
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/question_mlp_0.wav",
+        "audio_sha256": "6afb323665efcd876c1a64ac196c330373854b3f4dd9ae2f2d4e764db49396a8",
+        "expected_text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+        "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+        "segments": [
+          {
+            "text": "Did you remember the blue folder?",
+            "start_s": 0.0,
+            "end_s": 2.0,
+            "avg_logprob": -0.3516723746838777,
+            "no_speech_prob": 0.02224009856581688,
+            "compression_ratio": 1.0256410256410255
+          },
+          {
+            "text": "I thought we agreed to meet at half past nine.",
+            "start_s": 3.2800000000000002,
+            "end_s": 6.28,
+            "avg_logprob": -0.3516723746838777,
+            "no_speech_prob": 0.02224009856581688,
+            "compression_ratio": 1.0256410256410255
+          }
+        ],
+        "wer": {
+          "wer": 0.0,
+          "reference_word_count": 16,
+          "hypothesis_word_count": 16,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_words": [
+            "did",
+            "you",
+            "remember",
+            "the",
+            "blue",
+            "folder",
+            "i",
+            "thought",
+            "we",
+            "agreed",
+            "to",
+            "meet",
+            "at",
+            "half",
+            "past",
+            "nine"
+          ],
+          "hypothesis_words": [
+            "did",
+            "you",
+            "remember",
+            "the",
+            "blue",
+            "folder",
+            "i",
+            "thought",
+            "we",
+            "agreed",
+            "to",
+            "meet",
+            "at",
+            "half",
+            "past",
+            "nine"
+          ]
+        },
+        "wer_contraction_normalized": {
+          "wer": 0.0,
+          "reference_word_count": 16,
+          "hypothesis_word_count": 16,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_words": [
+            "did",
+            "you",
+            "remember",
+            "the",
+            "blue",
+            "folder",
+            "i",
+            "thought",
+            "we",
+            "agreed",
+            "to",
+            "meet",
+            "at",
+            "half",
+            "past",
+            "nine"
+          ],
+          "hypothesis_words": [
+            "did",
+            "you",
+            "remember",
+            "the",
+            "blue",
+            "folder",
+            "i",
+            "thought",
+            "we",
+            "agreed",
+            "to",
+            "meet",
+            "at",
+            "half",
+            "past",
+            "nine"
+          ]
+        },
+        "model_identity": {
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "name": "faster-whisper-small",
+          "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+          "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+          "size_class": "small"
+        },
+        "seconds": 6.630752217999543
+      },
+      "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/question_mlp_0.wav"
+    },
+    {
+      "id": "question_mlp_half",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+      "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "seed": 79,
+      "steps": 2,
+      "temperature": 0.8,
+      "adapter_scale": 0.5,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 1,
+      "save_conditionals": false,
+      "decoder_fit_report": "artifacts/nano_lab/decoder_embedding_fit/fit_report.json",
+      "t3_donor_cache": "artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+      "t3_donor_mode": "prompt",
+      "repetition_penalty": 1.0,
+      "decoder": "meanflow",
+      "synthetic": true,
+      "runtime_loader": "optimized_fp32",
+      "adapter": "artifacts/nano_lab/adapter_asmr_mlp_rank2.pt",
+      "precision": {
+        "matmul_tf32": false,
+        "cudnn_tf32": false
+      },
+      "vocoder_controls": {
+        "voiced_noise_scale": 1.0,
+        "voiced_noise_std": 0.003,
+        "unvoiced_noise_std": 0.03333333333333333,
+        "experimental": false
+      },
+      "mel_calibration_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+      "t3_donor_runtime": {
+        "mode": "prompt",
+        "selected_fields": [
+          "t3.cond_prompt_speech_tokens"
+        ],
+        "prompt_embedding_invalidated": true,
+        "prompt_shape": [
+          1,
+          283
+        ],
+        "speaker_shape": null,
+        "gen_untouched": true,
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+        "sha256": "ba80b353c82ab7f8a59ecbab4da0ec59dcde252a93162e6773dde184d99a078c"
+      },
+      "decoder_projection_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "decoder_attention_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/question_mlp_half.wav",
+      "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/question_mlp_half.master.wav",
+      "seconds": 6.12,
+      "master_processing": {
+        "highpass_hz": 45,
+        "gain_db": 8.623102514705707,
+        "target_lufs": -19,
+        "achieved_lufs": -18.99999972378856,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      },
+      "generation_seconds": 2.4604990419902606,
+      "token_seconds": 1.95953750499757,
+      "token_count": 153,
+      "rss_mib": 2386.75390625,
+      "peak_rss_mib": 2385.35546875,
+      "rtf": 0.4020423271225916,
+      "evaluation": {
+        "label": "question_mlp_half",
+        "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/question_mlp_half.wav",
+        "family": "asmr7",
+        "expected_text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+        "measurements": {
+          "duration_s": 6.12,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -28.278,
+          "peak_dbfs": -11.116,
+          "crest_db": 17.162,
+          "dc_offset": -7e-08,
+          "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+          "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+          "burst_p99_dbfs_proxy_30ms": -19.185,
+          "noise_floor_dbfs_proxy_low10pct_frames": -97.526,
+          "speech_level_dbfs_proxy_high50pct_frames": -27.117,
+          "snr_db_proxy_high50_minus_low10": 70.41,
+          "stationary_high_band_dbfs_proxy_low10pct_frames": -106.623,
+          "spectral_centroid_hz": 976.398,
+          "spectral_flatness_proxy": 0.04773,
+          "high_band_fraction_proxy_ge8khz": 0.006015,
+          "noise_fields_are_heuristic_proxies": true
+        },
+        "rss_after_audio_load_mb": 439.74,
+        "speaker_similarity": {
+          "metric": "resemblyzer cosine to independent held-out same-voice refs",
+          "heldout_count": 2,
+          "successful_count": 2,
+          "mean_cosine": 0.866041,
+          "min_cosine": 0.843968,
+          "max_cosine": 0.888114,
+          "rows": [
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+              "cosine": 0.888114
+            },
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+              "cosine": 0.843968
+            }
+          ],
+          "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+        },
+        "dnsmos_signal": 3.6364046536790564,
+        "dnsmos_background": 4.177174592358342,
+        "dnsmos_overall": 3.414444712874626,
+        "dnsmos_windows": 4,
+        "dnsmos_repeated_short_clip": true
+      },
+      "audit": {
+        "id": "question_mlp_half",
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/question_mlp_half.wav",
+        "audio_sha256": "8e92e1dee42d1d9a68fe3fe5970e750ec1ebece9808c9df21bf0a8b56c5faf88",
+        "expected_text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+        "transcript": "Did you remember the blue folder? I thought we agreed to meet at a half past nine.",
+        "segments": [
+          {
+            "text": "Did you remember the blue folder?",
+            "start_s": 0.0,
+            "end_s": 2.0,
+            "avg_logprob": -0.2528348043560982,
+            "no_speech_prob": 0.028357939794659615,
+            "compression_ratio": 1.0379746835443038
+          },
+          {
+            "text": "I thought we agreed to meet at a half past nine.",
+            "start_s": 3.0,
+            "end_s": 6.0,
+            "avg_logprob": -0.2528348043560982,
+            "no_speech_prob": 0.028357939794659615,
+            "compression_ratio": 1.0379746835443038
+          }
+        ],
+        "wer": {
+          "wer": 0.0625,
+          "reference_word_count": 16,
+          "hypothesis_word_count": 17,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 1,
+          "reference_words": [
+            "did",
+            "you",
+            "remember",
+            "the",
+            "blue",
+            "folder",
+            "i",
+            "thought",
+            "we",
+            "agreed",
+            "to",
+            "meet",
+            "at",
+            "half",
+            "past",
+            "nine"
+          ],
+          "hypothesis_words": [
+            "did",
+            "you",
+            "remember",
+            "the",
+            "blue",
+            "folder",
+            "i",
+            "thought",
+            "we",
+            "agreed",
+            "to",
+            "meet",
+            "at",
+            "a",
+            "half",
+            "past",
+            "nine"
+          ]
+        },
+        "wer_contraction_normalized": {
+          "wer": 0.0625,
+          "reference_word_count": 16,
+          "hypothesis_word_count": 17,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 1,
+          "reference_words": [
+            "did",
+            "you",
+            "remember",
+            "the",
+            "blue",
+            "folder",
+            "i",
+            "thought",
+            "we",
+            "agreed",
+            "to",
+            "meet",
+            "at",
+            "half",
+            "past",
+            "nine"
+          ],
+          "hypothesis_words": [
+            "did",
+            "you",
+            "remember",
+            "the",
+            "blue",
+            "folder",
+            "i",
+            "thought",
+            "we",
+            "agreed",
+            "to",
+            "meet",
+            "at",
+            "a",
+            "half",
+            "past",
+            "nine"
+          ]
+        },
+        "model_identity": {
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "name": "faster-whisper-small",
+          "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+          "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+          "size_class": "small"
+        },
+        "seconds": 6.559548471996095
+      },
+      "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/question_mlp_half.wav"
+    },
+    {
+      "id": "question_mlp_full",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+      "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "seed": 79,
+      "steps": 2,
+      "temperature": 0.8,
+      "adapter_scale": 1,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 1,
+      "save_conditionals": false,
+      "decoder_fit_report": "artifacts/nano_lab/decoder_embedding_fit/fit_report.json",
+      "t3_donor_cache": "artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+      "t3_donor_mode": "prompt",
+      "repetition_penalty": 1.0,
+      "decoder": "meanflow",
+      "synthetic": true,
+      "runtime_loader": "optimized_fp32",
+      "adapter": "artifacts/nano_lab/adapter_asmr_mlp_rank2.pt",
+      "precision": {
+        "matmul_tf32": false,
+        "cudnn_tf32": false
+      },
+      "vocoder_controls": {
+        "voiced_noise_scale": 1.0,
+        "voiced_noise_std": 0.003,
+        "unvoiced_noise_std": 0.03333333333333333,
+        "experimental": false
+      },
+      "mel_calibration_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+      "t3_donor_runtime": {
+        "mode": "prompt",
+        "selected_fields": [
+          "t3.cond_prompt_speech_tokens"
+        ],
+        "prompt_embedding_invalidated": true,
+        "prompt_shape": [
+          1,
+          283
+        ],
+        "speaker_shape": null,
+        "gen_untouched": true,
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+        "sha256": "ba80b353c82ab7f8a59ecbab4da0ec59dcde252a93162e6773dde184d99a078c"
+      },
+      "decoder_projection_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "decoder_attention_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/question_mlp_full.wav",
+      "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/question_mlp_full.master.wav",
+      "seconds": 5.72,
+      "master_processing": {
+        "highpass_hz": 45,
+        "gain_db": 8.790043283917704,
+        "target_lufs": -19,
+        "achieved_lufs": -18.99999978158078,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      },
+      "generation_seconds": 2.448901110998122,
+      "token_seconds": 1.8318434090033406,
+      "token_count": 143,
+      "rss_mib": 2386.81640625,
+      "peak_rss_mib": 2385.35546875,
+      "rtf": 0.4281295648598116,
+      "evaluation": {
+        "label": "question_mlp_full",
+        "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/question_mlp_full.wav",
+        "family": "asmr7",
+        "expected_text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+        "measurements": {
+          "duration_s": 5.72,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -27.929,
+          "peak_dbfs": -12.555,
+          "crest_db": 15.374,
+          "dc_offset": -1.52e-06,
+          "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+          "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+          "burst_p99_dbfs_proxy_30ms": -20.836,
+          "noise_floor_dbfs_proxy_low10pct_frames": -79.751,
+          "speech_level_dbfs_proxy_high50pct_frames": -25.19,
+          "snr_db_proxy_high50_minus_low10": 54.56,
+          "stationary_high_band_dbfs_proxy_low10pct_frames": -97.703,
+          "spectral_centroid_hz": 617.263,
+          "spectral_flatness_proxy": 0.023956,
+          "high_band_fraction_proxy_ge8khz": 0.002661,
+          "noise_fields_are_heuristic_proxies": true
+        },
+        "rss_after_audio_load_mb": 439.76,
+        "speaker_similarity": {
+          "metric": "resemblyzer cosine to independent held-out same-voice refs",
+          "heldout_count": 2,
+          "successful_count": 2,
+          "mean_cosine": 0.848133,
+          "min_cosine": 0.830359,
+          "max_cosine": 0.865908,
+          "rows": [
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+              "cosine": 0.865908
+            },
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+              "cosine": 0.830359
+            }
+          ],
+          "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+        },
+        "dnsmos_signal": 3.6234478836751105,
+        "dnsmos_background": 4.128972730267297,
+        "dnsmos_overall": 3.363660050610676,
+        "dnsmos_windows": 3,
+        "dnsmos_repeated_short_clip": true
+      },
+      "audit": {
+        "id": "question_mlp_full",
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/question_mlp_full.wav",
+        "audio_sha256": "005a5e40b515b436c38bd0237c665d70ab2f0c6848623ba1a1832245f5cbd844",
+        "expected_text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+        "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+        "segments": [
+          {
+            "text": "Did you remember the blue folder?",
+            "start_s": 0.0,
+            "end_s": 2.0,
+            "avg_logprob": -0.34401576674502826,
+            "no_speech_prob": 0.026410989463329315,
+            "compression_ratio": 1.0256410256410255
+          },
+          {
+            "text": "I thought we agreed to meet at half past nine.",
+            "start_s": 3.0,
+            "end_s": 5.5,
+            "avg_logprob": -0.34401576674502826,
+            "no_speech_prob": 0.026410989463329315,
+            "compression_ratio": 1.0256410256410255
+          }
+        ],
+        "wer": {
+          "wer": 0.0,
+          "reference_word_count": 16,
+          "hypothesis_word_count": 16,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_words": [
+            "did",
+            "you",
+            "remember",
+            "the",
+            "blue",
+            "folder",
+            "i",
+            "thought",
+            "we",
+            "agreed",
+            "to",
+            "meet",
+            "at",
+            "half",
+            "past",
+            "nine"
+          ],
+          "hypothesis_words": [
+            "did",
+            "you",
+            "remember",
+            "the",
+            "blue",
+            "folder",
+            "i",
+            "thought",
+            "we",
+            "agreed",
+            "to",
+            "meet",
+            "at",
+            "half",
+            "past",
+            "nine"
+          ]
+        },
+        "wer_contraction_normalized": {
+          "wer": 0.0,
+          "reference_word_count": 16,
+          "hypothesis_word_count": 16,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_words": [
+            "did",
+            "you",
+            "remember",
+            "the",
+            "blue",
+            "folder",
+            "i",
+            "thought",
+            "we",
+            "agreed",
+            "to",
+            "meet",
+            "at",
+            "half",
+            "past",
+            "nine"
+          ],
+          "hypothesis_words": [
+            "did",
+            "you",
+            "remember",
+            "the",
+            "blue",
+            "folder",
+            "i",
+            "thought",
+            "we",
+            "agreed",
+            "to",
+            "meet",
+            "at",
+            "half",
+            "past",
+            "nine"
+          ]
+        },
+        "model_identity": {
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "name": "faster-whisper-small",
+          "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+          "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+          "size_class": "small"
+        },
+        "seconds": 5.510565012998995
+      },
+      "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/question_mlp_full.wav"
+    },
+    {
+      "id": "narrative_mlp_0",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+      "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "seed": 97,
+      "steps": 2,
+      "temperature": 0.8,
+      "adapter_scale": 0,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 1,
+      "save_conditionals": false,
+      "decoder_fit_report": "artifacts/nano_lab/decoder_embedding_fit/fit_report.json",
+      "t3_donor_cache": "artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+      "t3_donor_mode": "prompt",
+      "repetition_penalty": 1.0,
+      "decoder": "meanflow",
+      "synthetic": true,
+      "runtime_loader": "optimized_fp32",
+      "adapter": "artifacts/nano_lab/adapter_asmr_mlp_rank2.pt",
+      "precision": {
+        "matmul_tf32": false,
+        "cudnn_tf32": false
+      },
+      "vocoder_controls": {
+        "voiced_noise_scale": 1.0,
+        "voiced_noise_std": 0.003,
+        "unvoiced_noise_std": 0.03333333333333333,
+        "experimental": false
+      },
+      "mel_calibration_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+      "t3_donor_runtime": {
+        "mode": "prompt",
+        "selected_fields": [
+          "t3.cond_prompt_speech_tokens"
+        ],
+        "prompt_embedding_invalidated": true,
+        "prompt_shape": [
+          1,
+          283
+        ],
+        "speaker_shape": null,
+        "gen_untouched": true,
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+        "sha256": "ba80b353c82ab7f8a59ecbab4da0ec59dcde252a93162e6773dde184d99a078c"
+      },
+      "decoder_projection_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "decoder_attention_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/narrative_mlp_0.wav",
+      "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/narrative_mlp_0.master.wav",
+      "seconds": 7.08,
+      "master_processing": {
+        "highpass_hz": 45,
+        "gain_db": 10.165951916609647,
+        "target_lufs": -19,
+        "achieved_lufs": -18.999999745392564,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      },
+      "generation_seconds": 3.005319531992427,
+      "token_seconds": 2.4955847959936364,
+      "token_count": 177,
+      "rss_mib": 2391.51953125,
+      "peak_rss_mib": 2389.98046875,
+      "rtf": 0.424480159885936,
+      "evaluation": {
+        "label": "narrative_mlp_0",
+        "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/narrative_mlp_0.wav",
+        "family": "asmr7",
+        "expected_text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+        "measurements": {
+          "duration_s": 7.08,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -28.577,
+          "peak_dbfs": -9.136,
+          "crest_db": 19.441,
+          "dc_offset": -1.3e-07,
+          "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+          "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+          "burst_p99_dbfs_proxy_30ms": -21.312,
+          "noise_floor_dbfs_proxy_low10pct_frames": -83.335,
+          "speech_level_dbfs_proxy_high50pct_frames": -26.658,
+          "snr_db_proxy_high50_minus_low10": 56.677,
+          "stationary_high_band_dbfs_proxy_low10pct_frames": -94.643,
+          "spectral_centroid_hz": 1713.315,
+          "spectral_flatness_proxy": 0.092382,
+          "high_band_fraction_proxy_ge8khz": 0.013049,
+          "noise_fields_are_heuristic_proxies": true
+        },
+        "rss_after_audio_load_mb": 439.77,
+        "speaker_similarity": {
+          "metric": "resemblyzer cosine to independent held-out same-voice refs",
+          "heldout_count": 2,
+          "successful_count": 2,
+          "mean_cosine": 0.895217,
+          "min_cosine": 0.865862,
+          "max_cosine": 0.924572,
+          "rows": [
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+              "cosine": 0.924572
+            },
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+              "cosine": 0.865862
+            }
+          ],
+          "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+        },
+        "dnsmos_signal": 3.5780801534866895,
+        "dnsmos_background": 4.0810709461876575,
+        "dnsmos_overall": 3.3135803466917078,
+        "dnsmos_windows": 6,
+        "dnsmos_repeated_short_clip": true
+      },
+      "audit": {
+        "id": "narrative_mlp_0",
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/narrative_mlp_0.wav",
+        "audio_sha256": "30348406dbb90ba299b6651d7da4e2d42d0045addef634889d970c7c9143ea76",
+        "expected_text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+        "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+        "segments": [
+          {
+            "text": "The last train had already left when I reached the station.",
+            "start_s": 0.0,
+            "end_s": 3.84,
+            "avg_logprob": -0.21866875674043382,
+            "no_speech_prob": 0.017969870939850807,
+            "compression_ratio": 1.15625
+          },
+          {
+            "text": "A small light was still on above the ticket office.",
+            "start_s": 3.84,
+            "end_s": 7.0,
+            "avg_logprob": -0.21866875674043382,
+            "no_speech_prob": 0.017969870939850807,
+            "compression_ratio": 1.15625
+          }
+        ],
+        "wer": {
+          "wer": 0.0,
+          "reference_word_count": 21,
+          "hypothesis_word_count": 21,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_words": [
+            "the",
+            "last",
+            "train",
+            "had",
+            "already",
+            "left",
+            "when",
+            "i",
+            "reached",
+            "the",
+            "station",
+            "a",
+            "small",
+            "light",
+            "was",
+            "still",
+            "on",
+            "above",
+            "the",
+            "ticket",
+            "office"
+          ],
+          "hypothesis_words": [
+            "the",
+            "last",
+            "train",
+            "had",
+            "already",
+            "left",
+            "when",
+            "i",
+            "reached",
+            "the",
+            "station",
+            "a",
+            "small",
+            "light",
+            "was",
+            "still",
+            "on",
+            "above",
+            "the",
+            "ticket",
+            "office"
+          ]
+        },
+        "wer_contraction_normalized": {
+          "wer": 0.0,
+          "reference_word_count": 21,
+          "hypothesis_word_count": 21,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_words": [
+            "the",
+            "last",
+            "train",
+            "had",
+            "already",
+            "left",
+            "when",
+            "i",
+            "reached",
+            "the",
+            "station",
+            "a",
+            "small",
+            "light",
+            "was",
+            "still",
+            "on",
+            "above",
+            "the",
+            "ticket",
+            "office"
+          ],
+          "hypothesis_words": [
+            "the",
+            "last",
+            "train",
+            "had",
+            "already",
+            "left",
+            "when",
+            "i",
+            "reached",
+            "the",
+            "station",
+            "a",
+            "small",
+            "light",
+            "was",
+            "still",
+            "on",
+            "above",
+            "the",
+            "ticket",
+            "office"
+          ]
+        },
+        "model_identity": {
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "name": "faster-whisper-small",
+          "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+          "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+          "size_class": "small"
+        },
+        "seconds": 6.32750611899246
+      },
+      "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/narrative_mlp_0.wav"
+    },
+    {
+      "id": "narrative_mlp_half",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+      "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "seed": 97,
+      "steps": 2,
+      "temperature": 0.8,
+      "adapter_scale": 0.5,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 1,
+      "save_conditionals": false,
+      "decoder_fit_report": "artifacts/nano_lab/decoder_embedding_fit/fit_report.json",
+      "t3_donor_cache": "artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+      "t3_donor_mode": "prompt",
+      "repetition_penalty": 1.0,
+      "decoder": "meanflow",
+      "synthetic": true,
+      "runtime_loader": "optimized_fp32",
+      "adapter": "artifacts/nano_lab/adapter_asmr_mlp_rank2.pt",
+      "precision": {
+        "matmul_tf32": false,
+        "cudnn_tf32": false
+      },
+      "vocoder_controls": {
+        "voiced_noise_scale": 1.0,
+        "voiced_noise_std": 0.003,
+        "unvoiced_noise_std": 0.03333333333333333,
+        "experimental": false
+      },
+      "mel_calibration_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+      "t3_donor_runtime": {
+        "mode": "prompt",
+        "selected_fields": [
+          "t3.cond_prompt_speech_tokens"
+        ],
+        "prompt_embedding_invalidated": true,
+        "prompt_shape": [
+          1,
+          283
+        ],
+        "speaker_shape": null,
+        "gen_untouched": true,
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+        "sha256": "ba80b353c82ab7f8a59ecbab4da0ec59dcde252a93162e6773dde184d99a078c"
+      },
+      "decoder_projection_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "decoder_attention_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/narrative_mlp_half.wav",
+      "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/narrative_mlp_half.master.wav",
+      "seconds": 7.64,
+      "master_processing": {
+        "highpass_hz": 45,
+        "gain_db": 10.91931193892335,
+        "target_lufs": -19,
+        "achieved_lufs": -19.000203237275926,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      },
+      "generation_seconds": 3.22270637100155,
+      "token_seconds": 2.72572519199457,
+      "token_count": 191,
+      "rss_mib": 2401.2890625,
+      "peak_rss_mib": 2399.85546875,
+      "rtf": 0.42182020562847516,
+      "evaluation": {
+        "label": "narrative_mlp_half",
+        "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/narrative_mlp_half.wav",
+        "family": "asmr7",
+        "expected_text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+        "measurements": {
+          "duration_s": 7.64,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -27.991,
+          "peak_dbfs": -9.005,
+          "crest_db": 18.986,
+          "dc_offset": -2.3e-07,
+          "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+          "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+          "burst_p99_dbfs_proxy_30ms": -21.782,
+          "noise_floor_dbfs_proxy_low10pct_frames": -65.345,
+          "speech_level_dbfs_proxy_high50pct_frames": -26.053,
+          "snr_db_proxy_high50_minus_low10": 39.292,
+          "stationary_high_band_dbfs_proxy_low10pct_frames": -89.569,
+          "spectral_centroid_hz": 1273.034,
+          "spectral_flatness_proxy": 0.081477,
+          "high_band_fraction_proxy_ge8khz": 0.014624,
+          "noise_fields_are_heuristic_proxies": true
+        },
+        "rss_after_audio_load_mb": 443.89,
+        "speaker_similarity": {
+          "metric": "resemblyzer cosine to independent held-out same-voice refs",
+          "heldout_count": 2,
+          "successful_count": 2,
+          "mean_cosine": 0.901479,
+          "min_cosine": 0.885819,
+          "max_cosine": 0.91714,
+          "rows": [
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+              "cosine": 0.91714
+            },
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+              "cosine": 0.885819
+            }
+          ],
+          "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+        },
+        "dnsmos_signal": 3.40352948564977,
+        "dnsmos_background": 2.9965377123939727,
+        "dnsmos_overall": 2.6188212383083282,
+        "dnsmos_windows": 7,
+        "dnsmos_repeated_short_clip": true
+      },
+      "audit": {
+        "id": "narrative_mlp_half",
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/narrative_mlp_half.wav",
+        "audio_sha256": "071391bffae8062ca70864de18ebe1382a22e770eee1c4614cfa9a586b525273",
+        "expected_text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+        "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+        "segments": [
+          {
+            "text": "The last train had already left when I reached the station.",
+            "start_s": 0.0,
+            "end_s": 4.42,
+            "avg_logprob": -0.246140861085483,
+            "no_speech_prob": 0.014252685010433197,
+            "compression_ratio": 1.15625
+          },
+          {
+            "text": "A small light was still on above the ticket office.",
+            "start_s": 4.42,
+            "end_s": 7.62,
+            "avg_logprob": -0.246140861085483,
+            "no_speech_prob": 0.014252685010433197,
+            "compression_ratio": 1.15625
+          }
+        ],
+        "wer": {
+          "wer": 0.0,
+          "reference_word_count": 21,
+          "hypothesis_word_count": 21,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_words": [
+            "the",
+            "last",
+            "train",
+            "had",
+            "already",
+            "left",
+            "when",
+            "i",
+            "reached",
+            "the",
+            "station",
+            "a",
+            "small",
+            "light",
+            "was",
+            "still",
+            "on",
+            "above",
+            "the",
+            "ticket",
+            "office"
+          ],
+          "hypothesis_words": [
+            "the",
+            "last",
+            "train",
+            "had",
+            "already",
+            "left",
+            "when",
+            "i",
+            "reached",
+            "the",
+            "station",
+            "a",
+            "small",
+            "light",
+            "was",
+            "still",
+            "on",
+            "above",
+            "the",
+            "ticket",
+            "office"
+          ]
+        },
+        "wer_contraction_normalized": {
+          "wer": 0.0,
+          "reference_word_count": 21,
+          "hypothesis_word_count": 21,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_words": [
+            "the",
+            "last",
+            "train",
+            "had",
+            "already",
+            "left",
+            "when",
+            "i",
+            "reached",
+            "the",
+            "station",
+            "a",
+            "small",
+            "light",
+            "was",
+            "still",
+            "on",
+            "above",
+            "the",
+            "ticket",
+            "office"
+          ],
+          "hypothesis_words": [
+            "the",
+            "last",
+            "train",
+            "had",
+            "already",
+            "left",
+            "when",
+            "i",
+            "reached",
+            "the",
+            "station",
+            "a",
+            "small",
+            "light",
+            "was",
+            "still",
+            "on",
+            "above",
+            "the",
+            "ticket",
+            "office"
+          ]
+        },
+        "model_identity": {
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "name": "faster-whisper-small",
+          "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+          "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+          "size_class": "small"
+        },
+        "seconds": 5.597736823998275
+      },
+      "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/narrative_mlp_half.wav"
+    },
+    {
+      "id": "narrative_mlp_full",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+      "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "seed": 97,
+      "steps": 2,
+      "temperature": 0.8,
+      "adapter_scale": 1,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 1,
+      "save_conditionals": false,
+      "decoder_fit_report": "artifacts/nano_lab/decoder_embedding_fit/fit_report.json",
+      "t3_donor_cache": "artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+      "t3_donor_mode": "prompt",
+      "repetition_penalty": 1.0,
+      "decoder": "meanflow",
+      "synthetic": true,
+      "runtime_loader": "optimized_fp32",
+      "adapter": "artifacts/nano_lab/adapter_asmr_mlp_rank2.pt",
+      "precision": {
+        "matmul_tf32": false,
+        "cudnn_tf32": false
+      },
+      "vocoder_controls": {
+        "voiced_noise_scale": 1.0,
+        "voiced_noise_std": 0.003,
+        "unvoiced_noise_std": 0.03333333333333333,
+        "experimental": false
+      },
+      "mel_calibration_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+      "t3_donor_runtime": {
+        "mode": "prompt",
+        "selected_fields": [
+          "t3.cond_prompt_speech_tokens"
+        ],
+        "prompt_embedding_invalidated": true,
+        "prompt_shape": [
+          1,
+          283
+        ],
+        "speaker_shape": null,
+        "gen_untouched": true,
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+        "sha256": "ba80b353c82ab7f8a59ecbab4da0ec59dcde252a93162e6773dde184d99a078c"
+      },
+      "decoder_projection_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "decoder_attention_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/narrative_mlp_full.wav",
+      "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/narrative_mlp_full.master.wav",
+      "seconds": 9.56,
+      "master_processing": {
+        "highpass_hz": 45,
+        "gain_db": 7.288832758469045,
+        "target_lufs": -19,
+        "achieved_lufs": -19.000000063443128,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      },
+      "generation_seconds": 3.1935266869986663,
+      "token_seconds": 2.594692728991504,
+      "token_count": 239,
+      "rss_mib": 2406.6875,
+      "peak_rss_mib": 2405.23046875,
+      "rtf": 0.3340509086818688,
+      "evaluation": {
+        "label": "narrative_mlp_full",
+        "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/narrative_mlp_full.wav",
+        "family": "asmr7",
+        "expected_text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+        "measurements": {
+          "duration_s": 9.56,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -29.022,
+          "peak_dbfs": -11.635,
+          "crest_db": 17.388,
+          "dc_offset": -3e-07,
+          "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+          "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+          "burst_p99_dbfs_proxy_30ms": -19.522,
+          "noise_floor_dbfs_proxy_low10pct_frames": -81.562,
+          "speech_level_dbfs_proxy_high50pct_frames": -28.262,
+          "snr_db_proxy_high50_minus_low10": 53.3,
+          "stationary_high_band_dbfs_proxy_low10pct_frames": -97.611,
+          "spectral_centroid_hz": 935.536,
+          "spectral_flatness_proxy": 0.056096,
+          "high_band_fraction_proxy_ge8khz": 0.01412,
+          "noise_fields_are_heuristic_proxies": true
+        },
+        "rss_after_audio_load_mb": 444.77,
+        "speaker_similarity": {
+          "metric": "resemblyzer cosine to independent held-out same-voice refs",
+          "heldout_count": 2,
+          "successful_count": 2,
+          "mean_cosine": 0.867671,
+          "min_cosine": 0.855457,
+          "max_cosine": 0.879885,
+          "rows": [
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+              "cosine": 0.879885
+            },
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+              "cosine": 0.855457
+            }
+          ],
+          "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+        },
+        "dnsmos_signal": 3.6677584218285557,
+        "dnsmos_background": 4.083884300149027,
+        "dnsmos_overall": 3.371040668163838,
+        "dnsmos_windows": 1,
+        "dnsmos_repeated_short_clip": false
+      },
+      "audit": {
+        "id": "narrative_mlp_full",
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/narrative_mlp_full.wav",
+        "audio_sha256": "056a4d2bc74b12c57000a78adfca3fe3a72c8cec08e2d4ec1ebc4733f2232fc5",
+        "expected_text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+        "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+        "segments": [
+          {
+            "text": "The last train had already left when I reached the station.",
+            "start_s": 0.0,
+            "end_s": 3.2800000000000002,
+            "avg_logprob": -0.2889017292431423,
+            "no_speech_prob": 0.010714770294725895,
+            "compression_ratio": 1.15625
+          },
+          {
+            "text": "A small light was still on above the ticket office.",
+            "start_s": 5.28,
+            "end_s": 8.0,
+            "avg_logprob": -0.2889017292431423,
+            "no_speech_prob": 0.010714770294725895,
+            "compression_ratio": 1.15625
+          }
+        ],
+        "wer": {
+          "wer": 0.0,
+          "reference_word_count": 21,
+          "hypothesis_word_count": 21,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_words": [
+            "the",
+            "last",
+            "train",
+            "had",
+            "already",
+            "left",
+            "when",
+            "i",
+            "reached",
+            "the",
+            "station",
+            "a",
+            "small",
+            "light",
+            "was",
+            "still",
+            "on",
+            "above",
+            "the",
+            "ticket",
+            "office"
+          ],
+          "hypothesis_words": [
+            "the",
+            "last",
+            "train",
+            "had",
+            "already",
+            "left",
+            "when",
+            "i",
+            "reached",
+            "the",
+            "station",
+            "a",
+            "small",
+            "light",
+            "was",
+            "still",
+            "on",
+            "above",
+            "the",
+            "ticket",
+            "office"
+          ]
+        },
+        "wer_contraction_normalized": {
+          "wer": 0.0,
+          "reference_word_count": 21,
+          "hypothesis_word_count": 21,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_words": [
+            "the",
+            "last",
+            "train",
+            "had",
+            "already",
+            "left",
+            "when",
+            "i",
+            "reached",
+            "the",
+            "station",
+            "a",
+            "small",
+            "light",
+            "was",
+            "still",
+            "on",
+            "above",
+            "the",
+            "ticket",
+            "office"
+          ],
+          "hypothesis_words": [
+            "the",
+            "last",
+            "train",
+            "had",
+            "already",
+            "left",
+            "when",
+            "i",
+            "reached",
+            "the",
+            "station",
+            "a",
+            "small",
+            "light",
+            "was",
+            "still",
+            "on",
+            "above",
+            "the",
+            "ticket",
+            "office"
+          ]
+        },
+        "model_identity": {
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "name": "faster-whisper-small",
+          "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+          "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+          "size_class": "small"
+        },
+        "seconds": 6.255358214009902
+      },
+      "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/narrative_mlp_full.wav"
+    },
+    {
+      "id": "heldout01_mlp_0",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+      "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "seed": 31,
+      "steps": 2,
+      "temperature": 0.8,
+      "adapter_scale": 0,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 1,
+      "save_conditionals": false,
+      "decoder_fit_report": "artifacts/nano_lab/decoder_embedding_fit/fit_report.json",
+      "t3_donor_cache": "artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+      "t3_donor_mode": "prompt",
+      "repetition_penalty": 1.0,
+      "decoder": "meanflow",
+      "synthetic": true,
+      "runtime_loader": "optimized_fp32",
+      "adapter": "artifacts/nano_lab/adapter_asmr_mlp_rank2.pt",
+      "precision": {
+        "matmul_tf32": false,
+        "cudnn_tf32": false
+      },
+      "vocoder_controls": {
+        "voiced_noise_scale": 1.0,
+        "voiced_noise_std": 0.003,
+        "unvoiced_noise_std": 0.03333333333333333,
+        "experimental": false
+      },
+      "mel_calibration_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+      "t3_donor_runtime": {
+        "mode": "prompt",
+        "selected_fields": [
+          "t3.cond_prompt_speech_tokens"
+        ],
+        "prompt_embedding_invalidated": true,
+        "prompt_shape": [
+          1,
+          283
+        ],
+        "speaker_shape": null,
+        "gen_untouched": true,
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+        "sha256": "ba80b353c82ab7f8a59ecbab4da0ec59dcde252a93162e6773dde184d99a078c"
+      },
+      "decoder_projection_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "decoder_attention_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/heldout01_mlp_0.wav",
+      "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/heldout01_mlp_0.master.wav",
+      "seconds": 6.6,
+      "master_processing": {
+        "highpass_hz": 45,
+        "gain_db": 11.860997566958183,
+        "target_lufs": -19,
+        "achieved_lufs": -21.396744294289924,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      },
+      "generation_seconds": 2.578468592997524,
+      "token_seconds": 2.115936435002368,
+      "token_count": 165,
+      "rss_mib": 2406.7734375,
+      "peak_rss_mib": 2405.23046875,
+      "rtf": 0.3906770595450794,
+      "evaluation": {
+        "label": "heldout01_mlp_0",
+        "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/heldout01_mlp_0.wav",
+        "family": "asmr7",
+        "expected_text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+        "measurements": {
+          "duration_s": 6.6,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -29.476,
+          "peak_dbfs": -7.468,
+          "crest_db": 22.008,
+          "dc_offset": -3.9e-07,
+          "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+          "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+          "burst_p99_dbfs_proxy_30ms": -23.079,
+          "noise_floor_dbfs_proxy_low10pct_frames": -75.667,
+          "speech_level_dbfs_proxy_high50pct_frames": -27.369,
+          "snr_db_proxy_high50_minus_low10": 48.298,
+          "stationary_high_band_dbfs_proxy_low10pct_frames": -88.429,
+          "spectral_centroid_hz": 2153.51,
+          "spectral_flatness_proxy": 0.149911,
+          "high_band_fraction_proxy_ge8khz": 0.03184,
+          "noise_fields_are_heuristic_proxies": true
+        },
+        "rss_after_audio_load_mb": 447.04,
+        "speaker_similarity": {
+          "metric": "resemblyzer cosine to independent held-out same-voice refs",
+          "heldout_count": 2,
+          "successful_count": 2,
+          "mean_cosine": 0.870459,
+          "min_cosine": 0.849161,
+          "max_cosine": 0.891757,
+          "rows": [
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+              "cosine": 0.891757
+            },
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+              "cosine": 0.849161
+            }
+          ],
+          "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+        },
+        "dnsmos_signal": 3.085508270531083,
+        "dnsmos_background": 3.80516938027898,
+        "dnsmos_overall": 2.754234988884267,
+        "dnsmos_windows": 5,
+        "dnsmos_repeated_short_clip": true
+      },
+      "audit": {
+        "id": "heldout01_mlp_0",
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/heldout01_mlp_0.wav",
+        "audio_sha256": "7ea60ca06819580cfcfa65e7a6e3c3c6290ed0509943c4b2eb934079d533f37e",
+        "expected_text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+        "transcript": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+        "segments": [
+          {
+            "text": "Let's see who's the lucky person who gets to kiss me.",
+            "start_s": 0.0,
+            "end_s": 3.0,
+            "avg_logprob": -0.3529095709323883,
+            "no_speech_prob": 0.011692887172102928,
+            "compression_ratio": 1.0246913580246915
+          },
+          {
+            "text": "Wait a minute.",
+            "start_s": 3.7,
+            "end_s": 4.7,
+            "avg_logprob": -0.3529095709323883,
+            "no_speech_prob": 0.011692887172102928,
+            "compression_ratio": 1.0246913580246915
+          },
+          {
+            "text": "Do I know you?",
+            "start_s": 5.6000000000000005,
+            "end_s": 6.5,
+            "avg_logprob": -0.3529095709323883,
+            "no_speech_prob": 0.011692887172102928,
+            "compression_ratio": 1.0246913580246915
+          }
+        ],
+        "wer": {
+          "wer": 0.0,
+          "reference_word_count": 18,
+          "hypothesis_word_count": 18,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_words": [
+            "let's",
+            "see",
+            "who's",
+            "the",
+            "lucky",
+            "person",
+            "who",
+            "gets",
+            "to",
+            "kiss",
+            "me",
+            "wait",
+            "a",
+            "minute",
+            "do",
+            "i",
+            "know",
+            "you"
+          ],
+          "hypothesis_words": [
+            "let's",
+            "see",
+            "who's",
+            "the",
+            "lucky",
+            "person",
+            "who",
+            "gets",
+            "to",
+            "kiss",
+            "me",
+            "wait",
+            "a",
+            "minute",
+            "do",
+            "i",
+            "know",
+            "you"
+          ]
+        },
+        "wer_contraction_normalized": {
+          "wer": 0.0,
+          "reference_word_count": 20,
+          "hypothesis_word_count": 20,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_words": [
+            "let",
+            "us",
+            "see",
+            "who",
+            "is",
+            "the",
+            "lucky",
+            "person",
+            "who",
+            "gets",
+            "to",
+            "kiss",
+            "me",
+            "wait",
+            "a",
+            "minute",
+            "do",
+            "i",
+            "know",
+            "you"
+          ],
+          "hypothesis_words": [
+            "let",
+            "us",
+            "see",
+            "who",
+            "is",
+            "the",
+            "lucky",
+            "person",
+            "who",
+            "gets",
+            "to",
+            "kiss",
+            "me",
+            "wait",
+            "a",
+            "minute",
+            "do",
+            "i",
+            "know",
+            "you"
+          ]
+        },
+        "model_identity": {
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "name": "faster-whisper-small",
+          "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+          "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+          "size_class": "small"
+        },
+        "seconds": 5.648541595990537
+      },
+      "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/heldout01_mlp_0.wav"
+    },
+    {
+      "id": "heldout01_mlp_half",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+      "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "seed": 31,
+      "steps": 2,
+      "temperature": 0.8,
+      "adapter_scale": 0.5,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 1,
+      "save_conditionals": false,
+      "decoder_fit_report": "artifacts/nano_lab/decoder_embedding_fit/fit_report.json",
+      "t3_donor_cache": "artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+      "t3_donor_mode": "prompt",
+      "repetition_penalty": 1.0,
+      "decoder": "meanflow",
+      "synthetic": true,
+      "runtime_loader": "optimized_fp32",
+      "adapter": "artifacts/nano_lab/adapter_asmr_mlp_rank2.pt",
+      "precision": {
+        "matmul_tf32": false,
+        "cudnn_tf32": false
+      },
+      "vocoder_controls": {
+        "voiced_noise_scale": 1.0,
+        "voiced_noise_std": 0.003,
+        "unvoiced_noise_std": 0.03333333333333333,
+        "experimental": false
+      },
+      "mel_calibration_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+      "t3_donor_runtime": {
+        "mode": "prompt",
+        "selected_fields": [
+          "t3.cond_prompt_speech_tokens"
+        ],
+        "prompt_embedding_invalidated": true,
+        "prompt_shape": [
+          1,
+          283
+        ],
+        "speaker_shape": null,
+        "gen_untouched": true,
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+        "sha256": "ba80b353c82ab7f8a59ecbab4da0ec59dcde252a93162e6773dde184d99a078c"
+      },
+      "decoder_projection_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "decoder_attention_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/heldout01_mlp_half.wav",
+      "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/heldout01_mlp_half.master.wav",
+      "seconds": 7.2,
+      "master_processing": {
+        "highpass_hz": 45,
+        "gain_db": 12.0,
+        "target_lufs": -19,
+        "achieved_lufs": -19.205521194486188,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      },
+      "generation_seconds": 2.4806245190120535,
+      "token_seconds": 1.9670955850015162,
+      "token_count": 180,
+      "rss_mib": 2406.8203125,
+      "peak_rss_mib": 2405.35546875,
+      "rtf": 0.34453118319611853,
+      "evaluation": {
+        "label": "heldout01_mlp_half",
+        "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/heldout01_mlp_half.wav",
+        "family": "asmr7",
+        "expected_text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+        "measurements": {
+          "duration_s": 7.2,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -28.474,
+          "peak_dbfs": -11.389,
+          "crest_db": 17.085,
+          "dc_offset": 5.3e-07,
+          "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+          "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+          "burst_p99_dbfs_proxy_30ms": -20.955,
+          "noise_floor_dbfs_proxy_low10pct_frames": -74.32,
+          "speech_level_dbfs_proxy_high50pct_frames": -25.731,
+          "snr_db_proxy_high50_minus_low10": 48.589,
+          "stationary_high_band_dbfs_proxy_low10pct_frames": -91.725,
+          "spectral_centroid_hz": 1189.702,
+          "spectral_flatness_proxy": 0.083921,
+          "high_band_fraction_proxy_ge8khz": 0.024448,
+          "noise_fields_are_heuristic_proxies": true
+        },
+        "rss_after_audio_load_mb": 447.05,
+        "speaker_similarity": {
+          "metric": "resemblyzer cosine to independent held-out same-voice refs",
+          "heldout_count": 2,
+          "successful_count": 2,
+          "mean_cosine": 0.887988,
+          "min_cosine": 0.875472,
+          "max_cosine": 0.900504,
+          "rows": [
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+              "cosine": 0.900504
+            },
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+              "cosine": 0.875472
+            }
+          ],
+          "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+        },
+        "dnsmos_signal": 3.5628202900895367,
+        "dnsmos_background": 3.975099218300885,
+        "dnsmos_overall": 3.230017916374351,
+        "dnsmos_windows": 6,
+        "dnsmos_repeated_short_clip": true
+      },
+      "audit": {
+        "id": "heldout01_mlp_half",
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/heldout01_mlp_half.wav",
+        "audio_sha256": "5146b659cb49edd0bd933dfd4cae41358c48117b0ee3c41baecc8143f215a779",
+        "expected_text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+        "transcript": "Let's see who's the lucky person who gets the kiss me. Wait a minute. Do I know you?",
+        "segments": [
+          {
+            "text": "Let's see who's the lucky person who gets the kiss me.",
+            "start_s": 0.0,
+            "end_s": 3.44,
+            "avg_logprob": -0.47876288592815397,
+            "no_speech_prob": 0.011890677735209465,
+            "compression_ratio": 1.037037037037037
+          },
+          {
+            "text": "Wait a minute.",
+            "start_s": 4.28,
+            "end_s": 5.4,
+            "avg_logprob": -0.47876288592815397,
+            "no_speech_prob": 0.011890677735209465,
+            "compression_ratio": 1.037037037037037
+          },
+          {
+            "text": "Do I know you?",
+            "start_s": 5.84,
+            "end_s": 7.04,
+            "avg_logprob": -0.47876288592815397,
+            "no_speech_prob": 0.011890677735209465,
+            "compression_ratio": 1.037037037037037
+          }
+        ],
+        "wer": {
+          "wer": 0.055556,
+          "reference_word_count": 18,
+          "hypothesis_word_count": 18,
+          "substitutions": 1,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_words": [
+            "let's",
+            "see",
+            "who's",
+            "the",
+            "lucky",
+            "person",
+            "who",
+            "gets",
+            "to",
+            "kiss",
+            "me",
+            "wait",
+            "a",
+            "minute",
+            "do",
+            "i",
+            "know",
+            "you"
+          ],
+          "hypothesis_words": [
+            "let's",
+            "see",
+            "who's",
+            "the",
+            "lucky",
+            "person",
+            "who",
+            "gets",
+            "the",
+            "kiss",
+            "me",
+            "wait",
+            "a",
+            "minute",
+            "do",
+            "i",
+            "know",
+            "you"
+          ]
+        },
+        "wer_contraction_normalized": {
+          "wer": 0.05,
+          "reference_word_count": 20,
+          "hypothesis_word_count": 20,
+          "substitutions": 1,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_words": [
+            "let",
+            "us",
+            "see",
+            "who",
+            "is",
+            "the",
+            "lucky",
+            "person",
+            "who",
+            "gets",
+            "to",
+            "kiss",
+            "me",
+            "wait",
+            "a",
+            "minute",
+            "do",
+            "i",
+            "know",
+            "you"
+          ],
+          "hypothesis_words": [
+            "let",
+            "us",
+            "see",
+            "who",
+            "is",
+            "the",
+            "lucky",
+            "person",
+            "who",
+            "gets",
+            "the",
+            "kiss",
+            "me",
+            "wait",
+            "a",
+            "minute",
+            "do",
+            "i",
+            "know",
+            "you"
+          ]
+        },
+        "model_identity": {
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "name": "faster-whisper-small",
+          "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+          "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+          "size_class": "small"
+        },
+        "seconds": 6.371584168009576
+      },
+      "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/heldout01_mlp_half.wav"
+    },
+    {
+      "id": "heldout01_mlp_full",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+      "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "seed": 31,
+      "steps": 2,
+      "temperature": 0.8,
+      "adapter_scale": 1,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 1,
+      "save_conditionals": false,
+      "decoder_fit_report": "artifacts/nano_lab/decoder_embedding_fit/fit_report.json",
+      "t3_donor_cache": "artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+      "t3_donor_mode": "prompt",
+      "repetition_penalty": 1.0,
+      "decoder": "meanflow",
+      "synthetic": true,
+      "runtime_loader": "optimized_fp32",
+      "adapter": "artifacts/nano_lab/adapter_asmr_mlp_rank2.pt",
+      "precision": {
+        "matmul_tf32": false,
+        "cudnn_tf32": false
+      },
+      "vocoder_controls": {
+        "voiced_noise_scale": 1.0,
+        "voiced_noise_std": 0.003,
+        "unvoiced_noise_std": 0.03333333333333333,
+        "experimental": false
+      },
+      "mel_calibration_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+      "t3_donor_runtime": {
+        "mode": "prompt",
+        "selected_fields": [
+          "t3.cond_prompt_speech_tokens"
+        ],
+        "prompt_embedding_invalidated": true,
+        "prompt_shape": [
+          1,
+          283
+        ],
+        "speaker_shape": null,
+        "gen_untouched": true,
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+        "sha256": "ba80b353c82ab7f8a59ecbab4da0ec59dcde252a93162e6773dde184d99a078c"
+      },
+      "decoder_projection_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "decoder_attention_runtime": {
+        "enabled": false,
+        "restored": false,
+        "strength": 0.0,
+        "path": null
+      },
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/heldout01_mlp_full.wav",
+      "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/heldout01_mlp_full.master.wav",
+      "seconds": 7.4,
+      "master_processing": {
+        "highpass_hz": 45,
+        "gain_db": 9.991673535074742,
+        "target_lufs": -19,
+        "achieved_lufs": -19.08904259928549,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      },
+      "generation_seconds": 3.0531336560088675,
+      "token_seconds": 2.534591157003888,
+      "token_count": 185,
+      "rss_mib": 2407.08984375,
+      "peak_rss_mib": 2405.60546875,
+      "rtf": 0.4125856291903875,
+      "evaluation": {
+        "label": "heldout01_mlp_full",
+        "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/heldout01_mlp_full.wav",
+        "family": "asmr7",
+        "expected_text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+        "measurements": {
+          "duration_s": 7.4,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -28.524,
+          "peak_dbfs": -11.109,
+          "crest_db": 17.414,
+          "dc_offset": -2.2e-07,
+          "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+          "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+          "burst_p99_dbfs_proxy_30ms": -17.682,
+          "noise_floor_dbfs_proxy_low10pct_frames": -70.315,
+          "speech_level_dbfs_proxy_high50pct_frames": -28.561,
+          "snr_db_proxy_high50_minus_low10": 41.755,
+          "stationary_high_band_dbfs_proxy_low10pct_frames": -91.77,
+          "spectral_centroid_hz": 636.664,
+          "spectral_flatness_proxy": 0.037464,
+          "high_band_fraction_proxy_ge8khz": 0.009072,
+          "noise_fields_are_heuristic_proxies": true
+        },
+        "rss_after_audio_load_mb": 447.05,
+        "speaker_similarity": {
+          "metric": "resemblyzer cosine to independent held-out same-voice refs",
+          "heldout_count": 2,
+          "successful_count": 2,
+          "mean_cosine": 0.918918,
+          "min_cosine": 0.918718,
+          "max_cosine": 0.919117,
+          "rows": [
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+              "cosine": 0.918718
+            },
+            {
+              "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+              "cosine": 0.919117
+            }
+          ],
+          "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+        },
+        "dnsmos_signal": 3.646198303068782,
+        "dnsmos_background": 4.125761663600683,
+        "dnsmos_overall": 3.3484356207408976,
+        "dnsmos_windows": 6,
+        "dnsmos_repeated_short_clip": true
+      },
+      "audit": {
+        "id": "heldout01_mlp_full",
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/heldout01_mlp_full.wav",
+        "audio_sha256": "dfea169eb0ca620cd0c8b0ffa79b51bdcb9d1cfd1f22da9b1054774df28c64ac",
+        "expected_text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+        "transcript": "Let's see how is the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+        "segments": [
+          {
+            "text": "Let's see how is the lucky person who gets to kiss me.",
+            "start_s": 0.0,
+            "end_s": 3.0,
+            "avg_logprob": -0.40849071939786274,
+            "no_speech_prob": 0.01699994131922722,
+            "compression_ratio": 1.0120481927710843
+          },
+          {
+            "text": "Wait a minute.",
+            "start_s": 4.7,
+            "end_s": 5.6000000000000005,
+            "avg_logprob": -0.40849071939786274,
+            "no_speech_prob": 0.01699994131922722,
+            "compression_ratio": 1.0120481927710843
+          },
+          {
+            "text": "Do I know you?",
+            "start_s": 6.5,
+            "end_s": 7.4,
+            "avg_logprob": -0.40849071939786274,
+            "no_speech_prob": 0.01699994131922722,
+            "compression_ratio": 1.0120481927710843
+          }
+        ],
+        "wer": {
+          "wer": 0.111111,
+          "reference_word_count": 18,
+          "hypothesis_word_count": 19,
+          "substitutions": 1,
+          "deletions": 0,
+          "insertions": 1,
+          "reference_words": [
+            "let's",
+            "see",
+            "who's",
+            "the",
+            "lucky",
+            "person",
+            "who",
+            "gets",
+            "to",
+            "kiss",
+            "me",
+            "wait",
+            "a",
+            "minute",
+            "do",
+            "i",
+            "know",
+            "you"
+          ],
+          "hypothesis_words": [
+            "let's",
+            "see",
+            "how",
+            "is",
+            "the",
+            "lucky",
+            "person",
+            "who",
+            "gets",
+            "to",
+            "kiss",
+            "me",
+            "wait",
+            "a",
+            "minute",
+            "do",
+            "i",
+            "know",
+            "you"
+          ]
+        },
+        "wer_contraction_normalized": {
+          "wer": 0.05,
+          "reference_word_count": 20,
+          "hypothesis_word_count": 20,
+          "substitutions": 1,
+          "deletions": 0,
+          "insertions": 0,
+          "reference_words": [
+            "let",
+            "us",
+            "see",
+            "who",
+            "is",
+            "the",
+            "lucky",
+            "person",
+            "who",
+            "gets",
+            "to",
+            "kiss",
+            "me",
+            "wait",
+            "a",
+            "minute",
+            "do",
+            "i",
+            "know",
+            "you"
+          ],
+          "hypothesis_words": [
+            "let",
+            "us",
+            "see",
+            "how",
+            "is",
+            "the",
+            "lucky",
+            "person",
+            "who",
+            "gets",
+            "to",
+            "kiss",
+            "me",
+            "wait",
+            "a",
+            "minute",
+            "do",
+            "i",
+            "know",
+            "you"
+          ]
+        },
+        "model_identity": {
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "name": "faster-whisper-small",
+          "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+          "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+          "size_class": "small"
+        },
+        "seconds": 6.33912853700167
+      },
+      "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/heldout01_mlp_full.wav"
+    }
+  ]
+}

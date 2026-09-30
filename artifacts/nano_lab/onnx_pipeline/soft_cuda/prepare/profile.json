@@ -1,0 +1,20 @@
+{
+  "conditioning_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_soft_morning_31.conds.pt",
+  "conditioning_cache_sha256": "e6b44fc6e20bfeccbbcca7c68ddccede2618706ed3349878fcedd9b7d70ad5da",
+  "cuda_dtype": "fp32",
+  "decoder": "meanflow",
+  "label": "ASMR soft",
+  "mode": "zero_shot",
+  "profile_path": "/home/terryd/gooning/voicecloning/voices/nano/asmr_soft.json",
+  "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+  "sampling": {
+    "repetition_penalty": 1.2,
+    "temperature": 0.65,
+    "top_k": 1000,
+    "top_p": 0.95
+  },
+  "source_case": "asmr_soft_morning_31",
+  "status": "candidate_under_validation",
+  "steps": 2,
+  "watermark": true
+}

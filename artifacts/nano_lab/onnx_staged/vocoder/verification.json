@@ -1,0 +1,21 @@
+{
+  "errors": [],
+  "inputs": [
+    "speech_feat",
+    "phase_noise",
+    "sine_noise"
+  ],
+  "max_abs_error": 4.13358211517334e-05,
+  "max_relative_error": 0.1028880838087589,
+  "method": "separate pure-ORT process against saved PyTorch reference arrays",
+  "outputs": 1,
+  "outputs_per_case": {
+    "default": {
+      "errors": 0,
+      "outputs": 1
+    }
+  },
+  "provider": "CPUExecutionProvider",
+  "stage": "vocoder",
+  "status": "verified"
+}

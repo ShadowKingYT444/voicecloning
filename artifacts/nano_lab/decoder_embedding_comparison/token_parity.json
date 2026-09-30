@@ -1,0 +1,25 @@
+{
+  "all_token_archives_equal": true,
+  "comparison": {
+    "morning": {
+      "embedding_half": true,
+      "embedding_full": true,
+      "full_gen": true
+    },
+    "question": {
+      "embedding_half": true,
+      "embedding_full": true,
+      "full_gen": true
+    },
+    "narrative": {
+      "embedding_half": true,
+      "embedding_full": true,
+      "full_gen": true
+    }
+  },
+  "comparison_method": "ZIP entries including tensor metadata and storage, excluding archive serialization ID",
+  "rows": 12,
+  "errors": [],
+  "max_reported_rss_mib": 2395.41796875,
+  "max_reported_peak_rss_mib": 2393.7578125
+}

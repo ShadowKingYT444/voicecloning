@@ -1,0 +1,150 @@
+{
+  "output_dir": "artifacts/nano_lab/sweep_adapter_strength",
+  "adapter": "artifacts/nano_lab/adaptation_asmr_rank4.pt",
+  "cases": [
+    {
+      "id": "conv_scale0.0_neutral",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "neutral",
+      "seed": 31,
+      "temperature": 0.65,
+      "adapter_scale": 0.0
+    },
+    {
+      "id": "conv_scale0.0_calm",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "calm",
+      "seed": 31,
+      "temperature": 0.65,
+      "adapter_scale": 0.0
+    },
+    {
+      "id": "conv_scale0.25_neutral",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "neutral",
+      "seed": 31,
+      "temperature": 0.65,
+      "adapter_scale": 0.25
+    },
+    {
+      "id": "conv_scale0.25_calm",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "calm",
+      "seed": 31,
+      "temperature": 0.65,
+      "adapter_scale": 0.25
+    },
+    {
+      "id": "conv_scale0.5_neutral",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "neutral",
+      "seed": 31,
+      "temperature": 0.65,
+      "adapter_scale": 0.5
+    },
+    {
+      "id": "conv_scale0.5_calm",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "calm",
+      "seed": 31,
+      "temperature": 0.65,
+      "adapter_scale": 0.5
+    },
+    {
+      "id": "conv_scale1.0_neutral",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "neutral",
+      "seed": 31,
+      "temperature": 0.65,
+      "adapter_scale": 1.0
+    },
+    {
+      "id": "conv_scale1.0_calm",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "calm",
+      "seed": 31,
+      "temperature": 0.65,
+      "adapter_scale": 1.0
+    },
+    {
+      "id": "soft_scale0.0_neutral",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "text_id": "neutral",
+      "seed": 31,
+      "temperature": 0.65,
+      "adapter_scale": 0.0
+    },
+    {
+      "id": "soft_scale0.0_calm",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "text_id": "calm",
+      "seed": 31,
+      "temperature": 0.65,
+      "adapter_scale": 0.0
+    },
+    {
+      "id": "soft_scale0.25_neutral",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "text_id": "neutral",
+      "seed": 31,
+      "temperature": 0.65,
+      "adapter_scale": 0.25
+    },
+    {
+      "id": "soft_scale0.25_calm",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "text_id": "calm",
+      "seed": 31,
+      "temperature": 0.65,
+      "adapter_scale": 0.25
+    },
+    {
+      "id": "soft_scale0.5_neutral",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "text_id": "neutral",
+      "seed": 31,
+      "temperature": 0.65,
+      "adapter_scale": 0.5
+    },
+    {
+      "id": "soft_scale0.5_calm",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "text_id": "calm",
+      "seed": 31,
+      "temperature": 0.65,
+      "adapter_scale": 0.5
+    },
+    {
+      "id": "soft_scale1.0_neutral",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "text_id": "neutral",
+      "seed": 31,
+      "temperature": 0.65,
+      "adapter_scale": 1.0
+    },
+    {
+      "id": "soft_scale1.0_calm",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "text_id": "calm",
+      "seed": 31,
+      "temperature": 0.65,
+      "adapter_scale": 1.0
+    }
+  ]
+}

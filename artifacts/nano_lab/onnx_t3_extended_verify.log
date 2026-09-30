@@ -1,0 +1,259 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{
+  "cases": {
+    "L128.decode0": {
+      "elapsed_seconds": 0.04115095700035454,
+      "errors": [],
+      "outputs": 25
+    },
+    "L128.decode1": {
+      "elapsed_seconds": 0.08343584899921552,
+      "errors": [],
+      "outputs": 25
+    },
+    "L128.prefill": {
+      "elapsed_seconds": 1.036366917000123,
+      "errors": [],
+      "outputs": 25
+    },
+    "L32.decode0": {
+      "elapsed_seconds": 0.04632299999866518,
+      "errors": [],
+      "outputs": 25
+    },
+    "L32.decode1": {
+      "elapsed_seconds": 0.04066034000061336,
+      "errors": [],
+      "outputs": 25
+    },
+    "L32.prefill": {
+      "elapsed_seconds": 0.17753993999940576,
+      "errors": [],
+      "outputs": 25
+    },
+    "L400.decode0": {
+      "elapsed_seconds": 0.059730736997153144,
+      "errors": [],
+      "outputs": 25
+    },
+    "L400.decode1": {
+      "elapsed_seconds": 0.08366903899877798,
+      "errors": [],
+      "outputs": 25
+    },
+    "L400.prefill": {
+      "elapsed_seconds": 2.8870263989992964,
+      "errors": [
+        {
+          "index": 11,
+          "kind": "numeric",
+          "max_abs": 0.0008139610290527344,
+          "max_relative": 0.9357929229736327
+        },
+        {
+          "index": 13,
+          "kind": "numeric",
+          "max_abs": 0.0007013082504272461,
+          "max_relative": 0.3281500114337983
+        },
+        {
+          "index": 15,
+          "kind": "numeric",
+          "max_abs": 0.0006802082061767578,
+          "max_relative": 0.10656753407682776
+        },
+        {
+          "index": 16,
+          "kind": "numeric",
+          "max_abs": 0.0006282329559326172,
+          "max_relative": 0.175303197353914
+        },
+        {
+          "index": 17,
+          "kind": "numeric",
+          "max_abs": 0.0008131563663482666,
+          "max_relative": 0.18554297135243172
+        },
+        {
+          "index": 18,
+          "kind": "numeric",
+          "max_abs": 0.0006249547004699707,
+          "max_relative": 0.3893512890052682
+        },
+        {
+          "index": 19,
+          "kind": "numeric",
+          "max_abs": 0.0009889602661132812,
+          "max_relative": 0.1254071661237785
+        },
+        {
+          "index": 20,
+          "kind": "numeric",
+          "max_abs": 0.0007283985614776611,
+          "max_relative": 0.6556510925292969
+        },
+        {
+          "index": 21,
+          "kind": "numeric",
+          "max_abs": 0.000546872615814209,
+          "max_relative": 0.31970006816632585
+        },
+        {
+          "index": 22,
+          "kind": "numeric",
+          "max_abs": 0.0007140636444091797,
+          "max_relative": 0.28075851724876794
+        },
+        {
+          "index": 23,
+          "kind": "numeric",
+          "max_abs": 0.0006105899810791016,
+          "max_relative": 0.14130434782608695
+        },
+        {
+          "index": 24,
+          "kind": "numeric",
+          "max_abs": 0.000804603099822998,
+          "max_relative": 0.8800330864526189
+        }
+      ],
+      "outputs": 25
+    }
+  },
+  "errors": [
+    {
+      "case": "L400.prefill",
+      "index": 11,
+      "kind": "numeric",
+      "max_abs": 0.0008139610290527344,
+      "max_relative": 0.9357929229736327
+    },
+    {
+      "case": "L400.prefill",
+      "index": 13,
+      "kind": "numeric",
+      "max_abs": 0.0007013082504272461,
+      "max_relative": 0.3281500114337983
+    },
+    {
+      "case": "L400.prefill",
+      "index": 15,
+      "kind": "numeric",
+      "max_abs": 0.0006802082061767578,
+      "max_relative": 0.10656753407682776
+    },
+    {
+      "case": "L400.prefill",
+      "index": 16,
+      "kind": "numeric",
+      "max_abs": 0.0006282329559326172,
+      "max_relative": 0.175303197353914
+    },
+    {
+      "case": "L400.prefill",
+      "index": 17,
+      "kind": "numeric",
+      "max_abs": 0.0008131563663482666,
+      "max_relative": 0.18554297135243172
+    },
+    {
+      "case": "L400.prefill",
+      "index": 18,
+      "kind": "numeric",
+      "max_abs": 0.0006249547004699707,
+      "max_relative": 0.3893512890052682
+    },
+    {
+      "case": "L400.prefill",
+      "index": 19,
+      "kind": "numeric",
+      "max_abs": 0.0009889602661132812,
+      "max_relative": 0.1254071661237785
+    },
+    {
+      "case": "L400.prefill",
+      "index": 20,
+      "kind": "numeric",
+      "max_abs": 0.0007283985614776611,
+      "max_relative": 0.6556510925292969
+    },
+    {
+      "case": "L400.prefill",
+      "index": 21,
+      "kind": "numeric",
+      "max_abs": 0.000546872615814209,
+      "max_relative": 0.31970006816632585
+    },
+    {
+      "case": "L400.prefill",
+      "index": 22,
+      "kind": "numeric",
+      "max_abs": 0.0007140636444091797,
+      "max_relative": 0.28075851724876794
+    },
+    {
+      "case": "L400.prefill",
+      "index": 23,
+      "kind": "numeric",
+      "max_abs": 0.0006105899810791016,
+      "max_relative": 0.14130434782608695
+    },
+    {
+      "case": "L400.prefill",
+      "index": 24,
+      "kind": "numeric",
+      "max_abs": 0.000804603099822998,
+      "max_relative": 0.8800330864526189
+    }
+  ],
+  "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged/t3/nano_t3_kv.onnx",
+  "inference_seconds": 5.699076877997868,
+  "inputs": [
+    "inputs_embeds",
+    "cache_position",
+    "past_0",
+    "past_1",
+    "past_2",
+    "past_3",
+    "past_4",
+    "past_5",
+    "past_6",
+    "past_7",
+    "past_8",
+    "past_9",
+    "past_10",
+    "past_11",
+    "past_12",
+    "past_13",
+    "past_14",
+    "past_15",
+    "past_16",
+    "past_17",
+    "past_18",
+    "past_19",
+    "past_20",
+    "past_21",
+    "past_22",
+    "past_23"
+  ],
+  "max_abs_error": 0.0009889602661132812,
+  "max_relative_error": 0.9357929229736327,
+  "method": "pure ORT CPU against upstream Transformers GPT2 outputs; no PyTorch model loaded",
+  "peak_rss_bytes": 777064448,
+  "provider": "CPUExecutionProvider",
+  "rss_after_session_bytes": 714678272,
+  "rss_before_session_bytes": 59383808,
+  "session_load_seconds": 2.7033493729977636,
+  "stage": "t3",
+  "status": "mismatch",
+  "tolerances": {
+    "atol": 0.0003,
+    "rtol": 0.0003
+  }
+}
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 9.795s
+             CPU time consumed: 9.411s
+                   Memory peak: 1G (swap: 0B)

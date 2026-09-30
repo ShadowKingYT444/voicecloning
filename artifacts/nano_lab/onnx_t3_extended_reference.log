@@ -1,0 +1,8 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 44d60e23fcc540a88f771a235d820a56
+Stopping job: desktop headroom fell below 4 GiB
+          Finished with result: success
+Main processes terminated with: code=killed, status=15/TERM
+               Service runtime: 1min 40.432s
+             CPU time consumed: 1min 2.377s
+                   Memory peak: 1G (swap: 0B)

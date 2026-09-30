@@ -1,0 +1,9 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+[0929/163108.972309:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:130] Should skip nVidia device named: nvidia-drm
+[0929/163252.275207:ERROR:components/headless/command_handler/headless_command_handler.cc:390] Unexpected renderer destruction.
+          Finished with result: core-dump
+Main processes terminated with: code=dumped, status=5/TRAP
+               Service runtime: 1min 54.779s
+             CPU time consumed: 8.282s
+                   Memory peak: 277M (swap: 0B)

@@ -1,0 +1,23 @@
+{
+  "elapsed_seconds": 22.23988699913025,
+  "finished_unix": 1790695807.178104,
+  "result": {
+    "eos_seen": true,
+    "experimental_t3": true,
+    "generated_token_count": 143,
+    "length_limit_reached": false,
+    "mode": "t3_generated_numpy_sampler",
+    "prefill_sequence_length": 356,
+    "raw_sampled_token_count": 144,
+    "speech_token_count_with_silence": 146,
+    "t3_used": true
+  },
+  "rss": {
+    "peak_rss_bytes": 846004224,
+    "rss_bytes": 484732928
+  },
+  "schema_version": 1,
+  "stage": "tokens",
+  "started_unix": 1790695784.9382193,
+  "status": "ok"
+}

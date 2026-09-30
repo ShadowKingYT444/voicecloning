@@ -1,0 +1,176 @@
+{
+  "watermark_device": "cpu",
+  "stages": [
+    {
+      "stage": "loaded",
+      "rss_mib": 1385.47265625,
+      "gpu_allocated_mib": 1867.73095703125,
+      "Rss_mib": 1385.4765625,
+      "Pss_mib": 1376.43359375,
+      "Pss_Anon_mib": 661.98828125,
+      "Pss_File_mib": 382.4453125,
+      "Shared_Clean_mib": 11.921875,
+      "Private_Dirty_mib": 1005.38671875
+    },
+    {
+      "stage": "tokens_before",
+      "rss_mib": 1386.3359375,
+      "gpu_allocated_mib": 1867.7314453125,
+      "Rss_mib": 1386.3359375,
+      "Pss_mib": 1377.29296875,
+      "Pss_Anon_mib": 662.07421875,
+      "Pss_File_mib": 383.21875,
+      "Shared_Clean_mib": 11.921875,
+      "Private_Dirty_mib": 1005.47265625
+    },
+    {
+      "stage": "tokens_after",
+      "seconds": 4.771326473000954,
+      "rss_mib": 1876.24609375,
+      "gpu_allocated_mib": 1878.1083984375,
+      "Rss_mib": 1876.25,
+      "Pss_mib": 1867.220703125,
+      "Pss_Anon_mib": 1127.734375,
+      "Pss_File_mib": 407.482421875,
+      "Shared_Clean_mib": 11.90625,
+      "Private_Dirty_mib": 1471.9375
+    },
+    {
+      "stage": "acoustic_before",
+      "rss_mib": 1903.42578125,
+      "gpu_allocated_mib": 1878.10888671875,
+      "Rss_mib": 1903.43359375,
+      "Pss_mib": 1894.404296875,
+      "Pss_Anon_mib": 1152.66015625,
+      "Pss_File_mib": 409.740234375,
+      "Shared_Clean_mib": 11.90625,
+      "Private_Dirty_mib": 1496.86328125
+    },
+    {
+      "stage": "acoustic_after",
+      "seconds": 2.1043976040000416,
+      "rss_mib": 2291.60546875,
+      "gpu_allocated_mib": 1879.63916015625,
+      "Rss_mib": 2291.6171875,
+      "Pss_mib": 2282.5830078125,
+      "Pss_Anon_mib": 1471.46875,
+      "Pss_File_mib": 479.1103515625,
+      "Shared_Clean_mib": 11.90625,
+      "Private_Dirty_mib": 1816.5859375
+    },
+    {
+      "stage": "watermark_before",
+      "rss_mib": 2292.41015625,
+      "gpu_allocated_mib": 1878.87353515625,
+      "Rss_mib": 2292.4140625,
+      "Pss_mib": 2283.384765625,
+      "Pss_Anon_mib": 1472.23828125,
+      "Pss_File_mib": 479.142578125,
+      "Shared_Clean_mib": 11.90625,
+      "Private_Dirty_mib": 1817.35546875
+    },
+    {
+      "stage": "watermark_after",
+      "seconds": 1.2285868910003046,
+      "rss_mib": 2351.76953125,
+      "gpu_allocated_mib": 1878.87353515625,
+      "Rss_mib": 2351.76953125,
+      "Pss_mib": 2342.693359375,
+      "Pss_Anon_mib": 1518.61328125,
+      "Pss_File_mib": 492.076171875,
+      "Shared_Clean_mib": 11.96875,
+      "Private_Dirty_mib": 1863.73046875
+    },
+    {
+      "stage": "after_request_0_trim",
+      "rss_mib": 2310.6640625,
+      "gpu_allocated_mib": 1878.10498046875,
+      "Rss_mib": 2310.6640625,
+      "Pss_mib": 2301.587890625,
+      "Pss_Anon_mib": 1477.01953125,
+      "Pss_File_mib": 492.564453125,
+      "Shared_Clean_mib": 11.96875,
+      "Private_Dirty_mib": 1822.13671875
+    },
+    {
+      "stage": "tokens_before",
+      "rss_mib": 2310.671875,
+      "gpu_allocated_mib": 1878.10546875,
+      "Rss_mib": 2310.671875,
+      "Pss_mib": 2301.595703125,
+      "Pss_Anon_mib": 1477.0234375,
+      "Pss_File_mib": 492.568359375,
+      "Shared_Clean_mib": 11.96875,
+      "Private_Dirty_mib": 1822.140625
+    },
+    {
+      "stage": "tokens_after",
+      "seconds": 4.071098258000347,
+      "rss_mib": 2310.671875,
+      "gpu_allocated_mib": 1878.107421875,
+      "Rss_mib": 2310.671875,
+      "Pss_mib": 2301.4921875,
+      "Pss_Anon_mib": 1477.0234375,
+      "Pss_File_mib": 492.46484375,
+      "Shared_Clean_mib": 12.16796875,
+      "Private_Dirty_mib": 1822.1640625
+    },
+    {
+      "stage": "acoustic_before",
+      "rss_mib": 2310.68359375,
+      "gpu_allocated_mib": 1878.10791015625,
+      "Rss_mib": 2310.68359375,
+      "Pss_mib": 2301.50390625,
+      "Pss_Anon_mib": 1477.03515625,
+      "Pss_File_mib": 492.46484375,
+      "Shared_Clean_mib": 12.16796875,
+      "Private_Dirty_mib": 1822.17578125
+    },
+    {
+      "stage": "acoustic_after",
+      "seconds": 0.2846907309995004,
+      "rss_mib": 2317.5703125,
+      "gpu_allocated_mib": 1879.63916015625,
+      "Rss_mib": 2317.57421875,
+      "Pss_mib": 2308.39453125,
+      "Pss_Anon_mib": 1483.92578125,
+      "Pss_File_mib": 492.46484375,
+      "Shared_Clean_mib": 12.16796875,
+      "Private_Dirty_mib": 1829.84765625
+    },
+    {
+      "stage": "watermark_before",
+      "rss_mib": 2318.34375,
+      "gpu_allocated_mib": 1878.87353515625,
+      "Rss_mib": 2318.34375,
+      "Pss_mib": 2309.1640625,
+      "Pss_Anon_mib": 1484.6953125,
+      "Pss_File_mib": 492.46484375,
+      "Shared_Clean_mib": 12.16796875,
+      "Private_Dirty_mib": 1830.6171875
+    },
+    {
+      "stage": "watermark_after",
+      "seconds": 0.29509253300057026,
+      "rss_mib": 2352.27734375,
+      "gpu_allocated_mib": 1878.87353515625,
+      "Rss_mib": 2352.27734375,
+      "Pss_mib": 2343.09765625,
+      "Pss_Anon_mib": 1518.62890625,
+      "Pss_File_mib": 492.46484375,
+      "Shared_Clean_mib": 12.16796875,
+      "Private_Dirty_mib": 1864.55078125
+    },
+    {
+      "stage": "after_request_1_trim",
+      "rss_mib": 2310.6875,
+      "gpu_allocated_mib": 1878.10498046875,
+      "Rss_mib": 2310.6875,
+      "Pss_mib": 2301.5078125,
+      "Pss_Anon_mib": 1477.0390625,
+      "Pss_File_mib": 492.46484375,
+      "Shared_Clean_mib": 12.16796875,
+      "Private_Dirty_mib": 1822.9609375
+    }
+  ]
+}

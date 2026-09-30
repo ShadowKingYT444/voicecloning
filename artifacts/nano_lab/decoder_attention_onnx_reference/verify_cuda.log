@@ -1,0 +1,210 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+[0;93m2026-09-29 17:36:13.636381049 [W:onnxruntime:, transformer_memcpy.cc:111 ApplyImpl] 56 Memcpy nodes are added to the graph main_graph for CUDAExecutionProvider. It might have negative impact on performance (including unable to run CUDA graph). Set session_options.log_severity_level=1 to see the detail logs before this message.[m
+[1;31m2026-09-29 17:36:17.717455141 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:17.844753592 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:17.905459540 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:17.914466524 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:17.925787362 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:17.943824202 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:17.951067523 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:17.967011926 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:17.976444453 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:17.994236021 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.002777666 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.020274928 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.029104770 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.046601366 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.054502004 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.072002727 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.080669417 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.098055794 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.106891545 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.121739801 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.130336595 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.148406320 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.157247374 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.175034795 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.182903734 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.198630420 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.207519389 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.232099348 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.241907906 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.259126556 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.267642987 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.295963946 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.304464232 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.321416227 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.327946789 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.335363859 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.352846466 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.361356716 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.377660561 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.384896250 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.399248455 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.407520853 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.424411929 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.431103908 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.447299755 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.455717179 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.472373379 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.481617081 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.496287706 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.504599520 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.521675910 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.530113224 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.547289500 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.555570852 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.571079018 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.579601762 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.596796139 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.605528683 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.622974595 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.631952656 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.646521378 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.654689249 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:18.991093831 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.000539460 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.014203011 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.020887754 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.028037938 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.042471692 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.046714924 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.057657323 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.066050883 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.078986082 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.083317191 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.097695924 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.106022163 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.117992038 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.124790920 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.140787252 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.145603765 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.156111214 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.164320499 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.181147929 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.188036641 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.204175954 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.211625924 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.222542879 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.228471388 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.243415024 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.248296682 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.258977178 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.266564086 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.281502419 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.285688151 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.310607131 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.316742615 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.333271486 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.341287738 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.349242238 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.360300776 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.367718237 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.383035846 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.387455215 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.399293525 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.407776091 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.420353000 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.427413168 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.442986004 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.449701844 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.458891796 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.466210196 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.482117886 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.487290164 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.499366689 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.507675998 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.522069009 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.529628607 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.547030638 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.556204868 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.572905107 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.580898793 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.591893762 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.598195614 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.614879213 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 17:36:19.620473362 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+{
+  "status": "failed",
+  "experimental": true,
+  "scope": "Deterministic estimator calls at mel lengths 8,64,256,512,768; no waveform or T3 claim",
+  "graph_sha256": "df2a1c85850133ce490830b1c795da0d9bc1848ceac5226b3e997b43d16df643",
+  "weights_sha256": "76c1253a5ca4340c2457b871a708d0b14f673fb5fe8e0d6559b6f958f52bac03",
+  "adapter_sha256": "de6d40e5565011022efe776c1852f5bdc1850a87cf4e0e5ba51208aba3e747c2",
+  "strength": 1.0,
+  "reference_sha256": "26c499ec1440d1f15dade5e3ddc1aa381a3c6b7c932b58c16af4519369713950",
+  "atol": 0.0003,
+  "rtol": 0.0003,
+  "ort_provider": "cuda",
+  "onnxruntime_version": "1.26.0",
+  "checks": [
+    {
+      "status": "mismatch",
+      "elements": 20480,
+      "max_abs": 0.020074009895324707,
+      "max_relative": 5.420748299319728,
+      "relative_l2": 0.0007251547289715553,
+      "outside_tolerance_count": 8150,
+      "atol": 0.0003,
+      "rtol": 0.0003,
+      "case": "mel256",
+      "adapter_effect_max_abs": 0.1494462490081787
+    },
+    {
+      "status": "mismatch",
+      "elements": 5120,
+      "max_abs": 0.019664347171783447,
+      "max_relative": 20.827786921440328,
+      "relative_l2": 0.0008032252537887803,
+      "outside_tolerance_count": 2152,
+      "atol": 0.0003,
+      "rtol": 0.0003,
+      "case": "mel64",
+      "adapter_effect_max_abs": 0.10887753963470459
+    },
+    {
+      "status": "passed",
+      "elements": 640,
+      "max_abs": 3.62396240234375e-05,
+      "max_relative": 0.00048522219182911054,
+      "relative_l2": 3.0196506686699114e-06,
+      "outside_tolerance_count": 0,
+      "atol": 0.0003,
+      "rtol": 0.0003,
+      "case": "mel8",
+      "adapter_effect_max_abs": 0.05649375915527344
+    },
+    {
+      "status": "mismatch",
+      "elements": 40960,
+      "max_abs": 0.020609021186828613,
+      "max_relative": 18.814732142857142,
+      "relative_l2": 0.0005213830682212215,
+      "outside_tolerance_count": 16108,
+      "atol": 0.0003,
+      "rtol": 0.0003,
+      "case": "mel512",
+      "adapter_effect_max_abs": 0.16196668148040771
+    },
+    {
+      "status": "mismatch",
+      "elements": 61440,
+      "max_abs": 0.01911318302154541,
+      "max_relative": 27.75251509054326,
+      "relative_l2": 0.0004822698325323838,
+      "outside_tolerance_count": 23503,
+      "atol": 0.0003,
+      "rtol": 0.0003,
+      "case": "mel768",
+      "adapter_effect_max_abs": 0.18114161491394043
+    }
+  ],
+  "peak_rss_bytes": 992714752,
+  "elapsed_seconds": 11.913231368002016
+}
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 13.476s
+             CPU time consumed: 13.763s
+                   Memory peak: 739.4M (swap: 0B)

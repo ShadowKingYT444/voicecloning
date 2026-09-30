@@ -1,0 +1,14 @@
+MemoryMax=1024MiB, MemoryHigh=819MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: ba3983ed6819438f9f0934765d28ac7d
+{
+  "audit_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/audit_manifest.json",
+  "candidate_count": 5,
+  "proposal": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/proposal.json",
+  "protected_count": 2,
+  "rejected_count": 4
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 9.426s
+             CPU time consumed: 13.652s
+                   Memory peak: 441M (swap: 0B)

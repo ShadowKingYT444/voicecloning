@@ -1,0 +1,49 @@
+{
+  "status": "experimental_not_promoted",
+  "human_realism_verified": false,
+  "training_clips": 2,
+  "validation_clips": 1,
+  "summary": [
+    {
+      "variant": "base",
+      "count": 3,
+      "mean_speaker_cosine": 0.722054,
+      "mean_dnsmos_overall": 3.379896918151143,
+      "small_exact_count": 3
+    },
+    {
+      "variant": "speaker",
+      "count": 3,
+      "mean_speaker_cosine": 0.728552,
+      "mean_dnsmos_overall": 3.459529529158552,
+      "small_exact_count": 3
+    },
+    {
+      "variant": "adapter_half",
+      "count": 3,
+      "mean_speaker_cosine": 0.7097273333333334,
+      "mean_dnsmos_overall": 3.4432806234181403,
+      "small_exact_count": 3
+    },
+    {
+      "variant": "adapter_full",
+      "count": 3,
+      "mean_speaker_cosine": 0.7347383333333333,
+      "mean_dnsmos_overall": 3.423036974596267,
+      "small_exact_count": 3
+    }
+  ],
+  "limitation": "Tiny training and validation sets; no generalization claim. Reference is voice-isolated; main identity scores use original mixed heldout audio. Alternative isolated-reference scores are separate.",
+  "alternative_isolated_heldout_mean_cosine": {
+    "base": 0.7988606666666667,
+    "speaker": 0.8085976666666667,
+    "adapter_half": 0.7976776666666666,
+    "adapter_full": 0.8187323333333334
+  },
+  "level_matched_minus27_lufs_dnsmos": {
+    "base": 3.3991168989188942,
+    "speaker": 3.4529987147036962,
+    "adapter_half": 3.436113803453998,
+    "adapter_full": 3.378808503633337
+  }
+}

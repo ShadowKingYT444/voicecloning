@@ -1,0 +1,61 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+Traceback (most recent call last):
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/fit_decoder_projection.py", line 636, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/fit_decoder_projection.py", line 622, in main
+    _fit(args)
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/fit_decoder_projection.py", line 516, in _fit
+    epoch0_train = _evaluate(torch, estimator, train_states, initial_embedding, noises, anchors, steps=args.steps, envelope_weight=args.envelope_weight, distill_weight=args.distill_weight, regularizer=args.regularizer, adapter=adapter)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/fit_decoder_projection.py", line 339, in _evaluate
+    return {"mean": mean, "rows": rows, "delta": _delta_stats(torch, {row_id: _predict(torch, estimator, next(state for state in states if str(state["id"]) == row_id), embedding, noises[row_id], steps=steps) for row_id in [str(state["id"]) for state in states]}, anchors)}
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/fit_decoder_projection.py", line 287, in _predict
+    generated = embedding_fit._basic_euler(torch, estimator, state, embedding, noise, steps=steps)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/fit_decoder_embedding.py", line 418, in _basic_euler
+    dxdt = estimator.estimator.forward(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/decoder.py", line 324, in forward
+    x = transformer_block(
+        ^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/matcha/transformer.py", line 266, in forward
+    attn_output = self.attn1(
+                  ^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/attention_processor.py", line 607, in forward
+    return self.processor(
+           ^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/attention_processor.py", line 2750, in __call__
+    value = attn.to_v(encoder_hidden_states)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 7.62 GiB of which 20.50 MiB is free. Including non-PyTorch memory, this process has 7.60 GiB memory in use. Of the allocated memory 6.98 GiB is allocated by PyTorch, and 510.75 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 37.110s
+             CPU time consumed: 36.546s
+                   Memory peak: 1.3G (swap: 0B)

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "heldout01_mlp_0",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/heldout01_mlp_0.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "mlp"
+  },
+  {
+    "id": "heldout01_mlp_half",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/heldout01_mlp_half.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "mlp"
+  },
+  {
+    "id": "heldout01_mlp_full",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_mlp_comparison/level_matched/heldout01_mlp_full.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "mlp"
+  },
+  {
+    "id": "source_heldout01",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/cadence_penalty/level_matched/source_heldout01.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "source"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "status": "ready_for_acoustic_fitting",
+  "transcript_labels_used": false,
+  "source_clips": 30,
+  "train_clips": 28,
+  "valid_clips": 2,
+  "source_token_overlap_exact": 14,
+  "source_mel_overlap_passed": 14,
+  "old_native_reconstruction_max_abs": 0.0,
+  "all_30_fit_consumer_parity_max_abs": 0.0,
+  "artifacts": {
+    "manifest.json": {
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/manifest.json",
+      "sha256": "3885d08701e3f9fbf15793ad5afe2c0ce7ba8ed96e994070f35d65fc4259650a"
+    },
+    "cache_v2/manifest.json": {
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/cache_v2/manifest.json",
+      "sha256": "1e2315524ac5d85b085091f4d80cebb99d9f017c5adfa38b63915f941eb20414"
+    },
+    "flow_v2/manifest.json": {
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/manifest.json",
+      "sha256": "affdb5cf101c376a8fb82bf28cbc959508cc4c87f912f92bb5d081ef3dd41df6"
+    },
+    "fit_contract_parity/fit_report.json": {
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/fit_contract_parity/fit_report.json",
+      "sha256": "bfb4b74ece9888b608b8a6ba6a96566f2003697b112098c5a073586f314053e7"
+    }
+  },
+  "limits": "One guarded model job; original 3072MiB hard cap, no swap, 4096MiB desktop reserve.",
+  "disclosure": "Acoustic source preparation and numerical checks only. No new trained voice or perceptual quality acceptance."
+}

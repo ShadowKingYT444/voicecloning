@@ -1,0 +1,13 @@
+{
+  "experimental_t3": true,
+  "mode": "supplied_tokens_acoustic_verification",
+  "schema_version": 1,
+  "source": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/asmr7_train_01.speech_tokens.npy",
+  "source_sha256": "545af097fb8c53b33e3aa88869d8354cfc6a4da7139cc71a7f759b43ca95cb54",
+  "t3_used": false,
+  "trailing_silence": {
+    "already_present": true,
+    "count": 3,
+    "value": 4299
+  }
+}

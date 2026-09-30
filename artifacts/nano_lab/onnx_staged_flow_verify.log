@@ -1,0 +1,23 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: a301abab94e243269c70ecc784f3ee11
+Traceback (most recent call last):
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_staged.py", line 1205, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_staged.py", line 1196, in main
+    result = verify_stage(args.output_dir, args.stage, intra_op_num_threads=args.intra_op_num_threads)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_staged.py", line 1095, in verify_stage
+    session = ort.InferenceSession(str(graph_path), options, providers=["CPUExecutionProvider"])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 534, in __init__
+    self._create_inference_session(providers, provider_options, disabled_optimizers)
+  File "/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 629, in _create_inference_session
+    sess = C.InferenceSession(session_options, self._model_path, True, self._read_config_from_model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+onnxruntime.capi.onnxruntime_pybind11_state.InvalidGraph: [ONNXRuntimeError] : 10 : INVALID_GRAPH : Load model from /home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged/flow_encoder/nano_flow_encoder.onnx failed:This is an invalid model. Type Error: Type 'tensor(int64)' of input parameter (onnx::ConcatFromSequence_315) of operator (ConcatFromSequence) in node (/encoder/pre_lookahead_layer/ConcatFromSequence) is invalid.
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 1.282s
+             CPU time consumed: 1.176s
+                   Memory peak: 109.4M (swap: 0B)

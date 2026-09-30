@@ -1,0 +1,31 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "mel_comparison__neutral_base", "wer": 0.0, "transcript": "I left the blue notebook beside the window, please bring it with you when we meet tomorrow."}
+{"id": "mel_comparison__neutral_mel_half", "wer": 0.0, "transcript": "I left the blue notebook beside the window, please bring it with you when we meet tomorrow."}
+{"id": "mel_comparison__neutral_mel_full", "wer": 0.0, "transcript": "I left the blue notebook beside the window, please bring it with you when we meet tomorrow."}
+{"id": "mel_comparison__expressive_base", "wer": 0.0, "transcript": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened."}
+{"id": "mel_comparison__expressive_mel_half", "wer": 0.0, "transcript": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened."}
+{"id": "mel_comparison__expressive_mel_full", "wer": 0.0, "transcript": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened."}
+{"id": "mel_comparison__quiet_base", "wer": 0.0, "transcript": "The room is quiet now. Take a slow breath. We have plenty of time to talk."}
+{"id": "mel_comparison__quiet_mel_half", "wer": 0.0, "transcript": "The room is quiet now. Take a slow breath. We have plenty of time to talk."}
+{"id": "mel_comparison__quiet_mel_full", "wer": 0.0, "transcript": "The room is quiet now. Take a slow breath. We have plenty of time to talk."}
+{"id": "mel_robustness__question_79_base", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "mel_robustness__question_79_mel_full", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "mel_robustness__question_97_base", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "mel_robustness__question_97_mel_full", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "mel_robustness__narrative_79_base", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "mel_robustness__narrative_79_mel_full", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "mel_robustness__narrative_97_base", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "mel_robustness__narrative_97_mel_full", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "all_attn_comparison__neutral_base", "wer": 0.0, "transcript": "I left the blue notebook beside the window, please bring it with you when we meet tomorrow."}
+{"id": "all_attn_comparison__neutral_adapter_full", "wer": 0.0, "transcript": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow."}
+{"id": "all_attn_comparison__expressive_base", "wer": 0.0, "transcript": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened."}
+{"id": "all_attn_comparison__expressive_adapter_full", "wer": 0.0, "transcript": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened."}
+{"id": "all_attn_comparison__quiet_base", "wer": 0.0, "transcript": "The room is quiet now. Take a slow breath. We have plenty of time to talk."}
+{"id": "all_attn_comparison__quiet_adapter_full", "wer": 0.0, "transcript": "The room is quiet now. Take a slow breath. We have plenty of time to talk."}
+{"id": "onnx_soft_cuda_resident", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 2min 36.304s
+             CPU time consumed: 5min 8.804s
+                   Memory peak: 1023.9M (swap: 0B)

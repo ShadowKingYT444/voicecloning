@@ -1,0 +1,54 @@
+{
+  "human_listening": false,
+  "groups": {
+    "s50": {
+      "n": 6,
+      "speaker_cosine_mean": 0.8794851666666667,
+      "dnsmos_overall_mean": 2.979655803337223,
+      "dnsmos_background_mean": 3.7542129123884953,
+      "whisper_small_strict_exact": 6
+    },
+    "s75": {
+      "n": 6,
+      "speaker_cosine_mean": 0.8757566666666666,
+      "dnsmos_overall_mean": 3.130895198886014,
+      "dnsmos_background_mean": 3.936267963664873,
+      "whisper_small_strict_exact": 5
+    }
+  },
+  "content_annotations": [
+    {
+      "id": "conv_fitted_expressive_63_s75",
+      "original_normalized_wer": 0.04,
+      "transcript": "Really? I thought you'd forgotten. That is wonderful news. Come here for a moment. I want to hear every detail from the very beginning.",
+      "assessment": "Scoring artifact: in you'd forgotten the contraction expands to you had, not you would. The original raw scores are preserved. This is textual review, not audio listening."
+    }
+  ],
+  "harvey": [
+    {
+      "id": "harvey_expressive_t75_r11",
+      "cosine": 0.813237,
+      "dnsmos_overall": 3.4466275590134643,
+      "whisper_small_wer": 0.04
+    },
+    {
+      "id": "harvey_expressive_t75_r13",
+      "cosine": 0.790768,
+      "dnsmos_overall": 3.565367750626728,
+      "whisper_small_wer": 0.0
+    },
+    {
+      "id": "harvey_expressive_t90_r11",
+      "cosine": 0.813492,
+      "dnsmos_overall": 3.559692843895638,
+      "whisper_small_wer": 0.0
+    },
+    {
+      "id": "harvey_expressive_t90_r13",
+      "cosine": 0.803416,
+      "dnsmos_overall": 3.367148002025021,
+      "whisper_small_wer": 0.0
+    }
+  ],
+  "decision": "Retain zero-shot defaults. Expose 0.75 fitted ASMR only as an experimental option and verify actual CLI. Evaluate Harvey temperature 0.9/repetition penalty 1.1 on broader text before changing its default."
+}

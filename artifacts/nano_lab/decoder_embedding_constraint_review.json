@@ -1,0 +1,229 @@
+{
+  "kind": "decoder_embedding_constraint_diagnostic",
+  "source_fit_report": "artifacts/nano_lab/decoder_embedding_fit/fit_report.json",
+  "steps": 40,
+  "steps_at_cosine_cap": 17,
+  "cap": 0.98,
+  "best_step": 37,
+  "next_controlled_experiment": {
+    "prepare_dir": "artifacts/nano_lab/mel_calibration_asmr",
+    "min_cosine": 0.95,
+    "max_steps": 60,
+    "patience": 3,
+    "output_dir": "artifacts/nano_lab/decoder_embedding_fit_cap095"
+  },
+  "status": "fit_complete_speech_evaluation_pending",
+  "rationale": "The original fit reached its cosine constraint for17of40steps. Test a wider speaker-vector range on the SAME dataset before attributing gains to more clips or decoder weights. Memory limits stay unchanged.",
+  "acceptance": "Compare generated same-text/same-seed audio, exact words, identity, noise and source pitch/timing; training loss alone is insufficient.",
+  "fit_result": {
+    "best_step": 60,
+    "best_valid_total": 0.8381018340587616,
+    "stopped_after_steps": 60,
+    "fitted_embedding": {
+      "cosine_to_baseline": 0.9500000476837158,
+      "norm": 13.843836784362793,
+      "shape": [
+        1,
+        192
+      ]
+    },
+    "peak_rss_bytes": 1793843200,
+    "elapsed_seconds": 434.98216574000253,
+    "parity": {
+      "atol": 0.0001,
+      "failures": [],
+      "max_abs": 0.0,
+      "rmse_mean": 0.0,
+      "rows": [
+        {
+          "id": "asmr7_repair_001",
+          "max_abs": 0.0,
+          "passed": true,
+          "rmse": 0.0,
+          "shape": [
+            1,
+            80,
+            216
+          ]
+        },
+        {
+          "id": "asmr7_repair_006",
+          "max_abs": 0.0,
+          "passed": true,
+          "rmse": 0.0,
+          "shape": [
+            1,
+            80,
+            280
+          ]
+        },
+        {
+          "id": "asmr7_repair_007",
+          "max_abs": 0.0,
+          "passed": true,
+          "rmse": 0.0,
+          "shape": [
+            1,
+            80,
+            204
+          ]
+        },
+        {
+          "id": "asmr7_repair_008",
+          "max_abs": 0.0,
+          "passed": true,
+          "rmse": 0.0,
+          "shape": [
+            1,
+            80,
+            444
+          ]
+        },
+        {
+          "id": "asmr7_repair_010",
+          "max_abs": 0.0,
+          "passed": true,
+          "rmse": 0.0,
+          "shape": [
+            1,
+            80,
+            198
+          ]
+        },
+        {
+          "id": "asmr7_repair_012",
+          "max_abs": 0.0,
+          "passed": true,
+          "rmse": 0.0,
+          "shape": [
+            1,
+            80,
+            266
+          ]
+        },
+        {
+          "id": "asmr7_repair_013",
+          "max_abs": 0.0,
+          "passed": true,
+          "rmse": 0.0,
+          "shape": [
+            1,
+            80,
+            174
+          ]
+        },
+        {
+          "id": "asmr7_repair_014",
+          "max_abs": 0.0,
+          "passed": true,
+          "rmse": 0.0,
+          "shape": [
+            1,
+            80,
+            220
+          ]
+        },
+        {
+          "id": "asmr7_repair_015",
+          "max_abs": 0.0,
+          "passed": true,
+          "rmse": 0.0,
+          "shape": [
+            1,
+            80,
+            258
+          ]
+        },
+        {
+          "id": "asmr7_repair_019",
+          "max_abs": 0.0,
+          "passed": true,
+          "rmse": 0.0,
+          "shape": [
+            1,
+            80,
+            238
+          ]
+        },
+        {
+          "id": "asmr7_repair_023",
+          "max_abs": 0.0,
+          "passed": true,
+          "rmse": 0.0,
+          "shape": [
+            1,
+            80,
+            370
+          ]
+        },
+        {
+          "id": "asmr7_repair_024",
+          "max_abs": 0.0,
+          "passed": true,
+          "rmse": 0.0,
+          "shape": [
+            1,
+            80,
+            194
+          ]
+        },
+        {
+          "id": "asmr7_repair_025",
+          "max_abs": 0.0,
+          "passed": true,
+          "rmse": 0.0,
+          "shape": [
+            1,
+            80,
+            284
+          ]
+        },
+        {
+          "id": "asmr7_repair_028",
+          "max_abs": 0.0,
+          "passed": true,
+          "rmse": 0.0,
+          "shape": [
+            1,
+            80,
+            268
+          ]
+        },
+        {
+          "id": "asmr7_repair_033",
+          "max_abs": 0.0,
+          "passed": true,
+          "rmse": 0.0,
+          "shape": [
+            1,
+            80,
+            212
+          ]
+        },
+        {
+          "id": "asmr7_repair_011",
+          "max_abs": 0.0,
+          "passed": true,
+          "rmse": 0.0,
+          "shape": [
+            1,
+            80,
+            208
+          ]
+        },
+        {
+          "id": "asmr7_repair_022",
+          "max_abs": 0.0,
+          "passed": true,
+          "rmse": 0.0,
+          "shape": [
+            1,
+            80,
+            552
+          ]
+        }
+      ],
+      "status": "passed"
+    }
+  }
+}

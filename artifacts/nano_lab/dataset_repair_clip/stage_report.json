@@ -1,0 +1,5186 @@
+{
+  "accepted": [
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_005.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "d85d4c4d59149be28187808df69925326149f598ec702a0cbab6e01774e554c0",
+        "avg_logprob": -0.4885437525808811,
+        "compression_ratio": 0.8181818181818182,
+        "mean_word_probability": 0.7961689606308937,
+        "min_word_probability": 0.3051742911338806,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        },
+        "no_speech_prob": 0.016762100160121918,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+        "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407",
+        "segments": [
+          {
+            "avg_logprob": -0.4885437525808811,
+            "compression_ratio": 0.8181818181818182,
+            "end_s": 1.0,
+            "no_speech_prob": 0.016762100160121918,
+            "start_s": 0.0,
+            "text": "You want it?",
+            "words": [
+              {
+                "end_s": 0.28,
+                "probability": 0.7251571416854858,
+                "start_s": 0.0,
+                "word": "You"
+              },
+              {
+                "end_s": 0.36,
+                "probability": 0.652847170829773,
+                "start_s": 0.28,
+                "word": "want"
+              },
+              {
+                "end_s": 1.0,
+                "probability": 0.8380150198936462,
+                "start_s": 0.36,
+                "word": "it?"
+              }
+            ]
+          },
+          {
+            "avg_logprob": -0.4885437525808811,
+            "compression_ratio": 0.8181818181818182,
+            "end_s": 3.9,
+            "no_speech_prob": 0.016762100160121918,
+            "start_s": 2.14,
+            "text": "Of course I'm going in.",
+            "words": [
+              {
+                "end_s": 2.66,
+                "probability": 0.3051742911338806,
+                "start_s": 2.14,
+                "word": "Of"
+              },
+              {
+                "end_s": 2.96,
+                "probability": 0.9997507929801941,
+                "start_s": 2.66,
+                "word": "course"
+              },
+              {
+                "end_s": 3.22,
+                "probability": 0.8978952169418335,
+                "start_s": 2.96,
+                "word": "I'm"
+              },
+              {
+                "end_s": 3.44,
+                "probability": 0.9974895715713501,
+                "start_s": 3.22,
+                "word": "going"
+              },
+              {
+                "end_s": 3.9,
+                "probability": 0.9530224800109863,
+                "start_s": 3.44,
+                "word": "in."
+              }
+            ]
+          }
+        ],
+        "text": "You want it? Of course I'm going in.",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 9,
+          "hypothesis_words": [
+            "you",
+            "want",
+            "it",
+            "of",
+            "course",
+            "i",
+            "am",
+            "going",
+            "in"
+          ],
+          "insertions": 0,
+          "reference_word_count": 9,
+          "reference_words": [
+            "you",
+            "want",
+            "it",
+            "of",
+            "course",
+            "i",
+            "am",
+            "going",
+            "in"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "small_text": "You want it? Of course I'm going in!",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "You want it? Of course I'm going in."
+      },
+      "clip_tiny_text": "You want it? Of course I'm going in.",
+      "duration_s": 3.98,
+      "end_s": 25.85,
+      "family": "asmr7",
+      "id": "asmr7_repair_005",
+      "original_confidence": {
+        "avg_logprob": -0.282059,
+        "mean_word_probability": 0.8050767777777779,
+        "min_word_probability": 0.172744,
+        "no_speech_prob": 0.241204
+      },
+      "original_text": "You want it? No, of course I'm going in.",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "d85d4c4d59149be28187808df69925326149f598ec702a0cbab6e01774e554c0",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "You want it? No, of course I'm going in.",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "reference_audio_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": null,
+        "overlaps": null,
+        "profile_interval": null,
+        "same_raw_source": false,
+        "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "status": "unknown_profile_origin_interval",
+        "target_interval": {
+          "end_s": 25.85,
+          "start_s": 21.87
+        }
+      },
+      "reference_profile_kind": "profile_audio_without_raw_interval",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_text": "You want it? Of course I'm going in.",
+      "speaker_id": "asmr7",
+      "speech_end_s": 25.7,
+      "speech_start_s": 22.02,
+      "split": "train",
+      "start_s": 21.87,
+      "text": "You want it? Of course I'm going in.",
+      "transcript_audit": {
+        "audio_sha256": "d85d4c4d59149be28187808df69925326149f598ec702a0cbab6e01774e554c0",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 9,
+          "hypothesis_words": [
+            "you",
+            "want",
+            "it",
+            "of",
+            "course",
+            "i",
+            "am",
+            "going",
+            "in"
+          ],
+          "insertions": 0,
+          "reference_word_count": 9,
+          "reference_words": [
+            "you",
+            "want",
+            "it",
+            "of",
+            "course",
+            "i",
+            "am",
+            "going",
+            "in"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "You want it? Of course I'm going in!",
+        "status": "accepted",
+        "text_sha256": "ceaac85e7db9160ae69ef4717d5ae488128666ea4ac5650abafd2288fc5fbfe1",
+        "tiny_text": "You want it? Of course I'm going in."
+      },
+      "voice": "asmr7"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_006.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "7c573da034bec9d899a989beec8b56dab84194bc9cf4e4c19b14f7fe750c95c5",
+        "avg_logprob": -0.23085433416641676,
+        "compression_ratio": 1.119047619047619,
+        "mean_word_probability": 0.9518407553434372,
+        "min_word_probability": 0.7256696820259094,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        },
+        "no_speech_prob": 0.013404023833572865,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+        "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407",
+        "segments": [
+          {
+            "avg_logprob": -0.23085433416641676,
+            "compression_ratio": 1.119047619047619,
+            "end_s": 4.92,
+            "no_speech_prob": 0.013404023833572865,
+            "start_s": 0.0,
+            "text": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+            "words": [
+              {
+                "end_s": 0.68,
+                "probability": 0.7615728378295898,
+                "start_s": 0.0,
+                "word": "There's"
+              },
+              {
+                "end_s": 0.78,
+                "probability": 0.994502067565918,
+                "start_s": 0.68,
+                "word": "a"
+              },
+              {
+                "end_s": 1.0,
+                "probability": 0.9988428354263306,
+                "start_s": 0.78,
+                "word": "closet"
+              },
+              {
+                "end_s": 1.22,
+                "probability": 0.8944715261459351,
+                "start_s": 1.0,
+                "word": "in"
+              },
+              {
+                "end_s": 1.42,
+                "probability": 0.9948720335960388,
+                "start_s": 1.22,
+                "word": "pretty"
+              },
+              {
+                "end_s": 1.66,
+                "probability": 0.9970757961273193,
+                "start_s": 1.42,
+                "word": "much"
+              },
+              {
+                "end_s": 1.94,
+                "probability": 0.9944566488265991,
+                "start_s": 1.66,
+                "word": "every"
+              },
+              {
+                "end_s": 2.16,
+                "probability": 0.9991931319236755,
+                "start_s": 1.94,
+                "word": "room"
+              },
+              {
+                "end_s": 2.3,
+                "probability": 0.9943846464157104,
+                "start_s": 2.16,
+                "word": "in"
+              },
+              {
+                "end_s": 2.48,
+                "probability": 0.9951452612876892,
+                "start_s": 2.3,
+                "word": "this"
+              },
+              {
+                "end_s": 2.84,
+                "probability": 0.9993380904197693,
+                "start_s": 2.48,
+                "word": "house,"
+              },
+              {
+                "end_s": 3.54,
+                "probability": 0.9954149723052979,
+                "start_s": 3.38,
+                "word": "so"
+              },
+              {
+                "end_s": 3.74,
+                "probability": 0.7825215458869934,
+                "start_s": 3.54,
+                "word": "we"
+              },
+              {
+                "end_s": 3.9,
+                "probability": 0.9996190071105957,
+                "start_s": 3.74,
+                "word": "might"
+              },
+              {
+                "end_s": 4.04,
+                "probability": 0.9977079629898071,
+                "start_s": 3.9,
+                "word": "as"
+              },
+              {
+                "end_s": 4.2,
+                "probability": 0.9991245865821838,
+                "start_s": 4.04,
+                "word": "well"
+              },
+              {
+                "end_s": 4.34,
+                "probability": 0.998803973197937,
+                "start_s": 4.2,
+                "word": "put"
+              },
+              {
+                "end_s": 4.5,
+                "probability": 0.9229052662849426,
+                "start_s": 4.34,
+                "word": "them"
+              },
+              {
+                "end_s": 4.6,
+                "probability": 0.7256696820259094,
+                "start_s": 4.5,
+                "word": "to"
+              },
+              {
+                "end_s": 4.92,
+                "probability": 0.9911932349205017,
+                "start_s": 4.6,
+                "word": "use."
+              }
+            ]
+          }
+        ],
+        "text": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 21,
+          "hypothesis_words": [
+            "there",
+            "is",
+            "a",
+            "closet",
+            "in",
+            "pretty",
+            "much",
+            "every",
+            "room",
+            "in",
+            "this",
+            "house",
+            "so",
+            "we",
+            "might",
+            "as",
+            "well",
+            "put",
+            "them",
+            "to",
+            "use"
+          ],
+          "insertions": 0,
+          "reference_word_count": 21,
+          "reference_words": [
+            "there",
+            "is",
+            "a",
+            "closet",
+            "in",
+            "pretty",
+            "much",
+            "every",
+            "room",
+            "in",
+            "this",
+            "house",
+            "so",
+            "we",
+            "might",
+            "as",
+            "well",
+            "put",
+            "them",
+            "to",
+            "use"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "small_text": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "There's a closet in pretty much every room in this house, so we might as well put them to use."
+      },
+      "clip_tiny_text": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+      "duration_s": 5.46,
+      "end_s": 58.01,
+      "family": "asmr7",
+      "id": "asmr7_repair_006",
+      "original_confidence": {
+        "avg_logprob": -0.353991,
+        "mean_word_probability": 0.9246966999999999,
+        "min_word_probability": 0.568291,
+        "no_speech_prob": 0.386248
+      },
+      "original_text": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "7c573da034bec9d899a989beec8b56dab84194bc9cf4e4c19b14f7fe750c95c5",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "reference_audio_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": null,
+        "overlaps": null,
+        "profile_interval": null,
+        "same_raw_source": false,
+        "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "status": "unknown_profile_origin_interval",
+        "target_interval": {
+          "end_s": 58.01,
+          "start_s": 52.55
+        }
+      },
+      "reference_profile_kind": "profile_audio_without_raw_interval",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_text": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+      "speaker_id": "asmr7",
+      "speech_end_s": 57.86,
+      "speech_start_s": 52.7,
+      "split": "train",
+      "start_s": 52.55,
+      "text": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+      "transcript_audit": {
+        "audio_sha256": "7c573da034bec9d899a989beec8b56dab84194bc9cf4e4c19b14f7fe750c95c5",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 21,
+          "hypothesis_words": [
+            "there",
+            "is",
+            "a",
+            "closet",
+            "in",
+            "pretty",
+            "much",
+            "every",
+            "room",
+            "in",
+            "this",
+            "house",
+            "so",
+            "we",
+            "might",
+            "as",
+            "well",
+            "put",
+            "them",
+            "to",
+            "use"
+          ],
+          "insertions": 0,
+          "reference_word_count": 21,
+          "reference_words": [
+            "there",
+            "is",
+            "a",
+            "closet",
+            "in",
+            "pretty",
+            "much",
+            "every",
+            "room",
+            "in",
+            "this",
+            "house",
+            "so",
+            "we",
+            "might",
+            "as",
+            "well",
+            "put",
+            "them",
+            "to",
+            "use"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+        "status": "accepted",
+        "text_sha256": "3411c2f3d0f140ffbb05f986e860cb93c6b5e327e7ea3c4f2a3532bbb250c54f",
+        "tiny_text": "There's a closet in pretty much every room in this house, so we might as well put them to use."
+      },
+      "voice": "asmr7"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_007.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "840395254e9c7c0890545f76c9e9efa6df36eabdecce2062196f501c46facbd0",
+        "avg_logprob": -0.46322752128947864,
+        "compression_ratio": 0.7837837837837838,
+        "mean_word_probability": 0.8994131326675415,
+        "min_word_probability": 0.5758519172668457,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        },
+        "no_speech_prob": 0.008746556006371975,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+        "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407",
+        "segments": [
+          {
+            "avg_logprob": -0.46322752128947864,
+            "compression_ratio": 0.7837837837837838,
+            "end_s": 3.6,
+            "no_speech_prob": 0.008746556006371975,
+            "start_s": 0.0,
+            "text": "Sound good? Great. Very well.",
+            "words": [
+              {
+                "end_s": 0.3,
+                "probability": 0.5758519172668457,
+                "start_s": 0.0,
+                "word": "Sound"
+              },
+              {
+                "end_s": 0.84,
+                "probability": 0.9861370325088501,
+                "start_s": 0.3,
+                "word": "good?"
+              },
+              {
+                "end_s": 2.42,
+                "probability": 0.9562407732009888,
+                "start_s": 1.88,
+                "word": "Great."
+              },
+              {
+                "end_s": 3.3,
+                "probability": 0.9855595827102661,
+                "start_s": 2.98,
+                "word": "Very"
+              },
+              {
+                "end_s": 3.6,
+                "probability": 0.9932763576507568,
+                "start_s": 3.3,
+                "word": "well."
+              }
+            ]
+          }
+        ],
+        "text": "Sound good? Great. Very well.",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 5,
+          "hypothesis_words": [
+            "sound",
+            "good",
+            "great",
+            "very",
+            "well"
+          ],
+          "insertions": 0,
+          "reference_word_count": 5,
+          "reference_words": [
+            "sound",
+            "good",
+            "great",
+            "very",
+            "well"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "small_text": "Sound good? Great. Very well.",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "Sound good? Great. Very well."
+      },
+      "clip_tiny_text": "Sound good? Great. Very well.",
+      "duration_s": 3.96,
+      "end_s": 63.35,
+      "family": "asmr7",
+      "id": "asmr7_repair_007",
+      "original_confidence": {
+        "avg_logprob": -0.353991,
+        "mean_word_probability": 0.945032,
+        "min_word_probability": 0.790025,
+        "no_speech_prob": 0.386248
+      },
+      "original_text": "sound good. Great. Very well.",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "840395254e9c7c0890545f76c9e9efa6df36eabdecce2062196f501c46facbd0",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "sound good. Great. Very well.",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "reference_audio_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": null,
+        "overlaps": null,
+        "profile_interval": null,
+        "same_raw_source": false,
+        "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "status": "unknown_profile_origin_interval",
+        "target_interval": {
+          "end_s": 63.35,
+          "start_s": 59.39
+        }
+      },
+      "reference_profile_kind": "profile_audio_without_raw_interval",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_text": "Sound good? Great. Very well.",
+      "speaker_id": "asmr7",
+      "speech_end_s": 63.2,
+      "speech_start_s": 59.54,
+      "split": "train",
+      "start_s": 59.39,
+      "text": "Sound good? Great. Very well.",
+      "transcript_audit": {
+        "audio_sha256": "840395254e9c7c0890545f76c9e9efa6df36eabdecce2062196f501c46facbd0",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 5,
+          "hypothesis_words": [
+            "sound",
+            "good",
+            "great",
+            "very",
+            "well"
+          ],
+          "insertions": 0,
+          "reference_word_count": 5,
+          "reference_words": [
+            "sound",
+            "good",
+            "great",
+            "very",
+            "well"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "Sound good? Great. Very well.",
+        "status": "accepted",
+        "text_sha256": "59f5b832a0f10364702283030a130b38936ff3ee87468e6b4e540b7cfeacb088",
+        "tiny_text": "Sound good? Great. Very well."
+      },
+      "voice": "asmr7"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_008.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "43a93916176b50c56d80646950a5cfc851b5de42b1e466c6b5cfe0250d36b99a",
+        "avg_logprob": -0.27947550819766137,
+        "compression_ratio": 1.141304347826087,
+        "mean_word_probability": 0.9538968673774174,
+        "min_word_probability": 0.6199601888656616,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        },
+        "no_speech_prob": 0.021741151809692383,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+        "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407",
+        "segments": [
+          {
+            "avg_logprob": -0.27947550819766137,
+            "compression_ratio": 1.141304347826087,
+            "end_s": 3.06,
+            "no_speech_prob": 0.021741151809692383,
+            "start_s": 0.0,
+            "text": "Now, let's get this game underway.",
+            "words": [
+              {
+                "end_s": 0.7,
+                "probability": 0.9060032367706299,
+                "start_s": 0.0,
+                "word": "Now,"
+              },
+              {
+                "end_s": 1.48,
+                "probability": 0.9880971908569336,
+                "start_s": 1.24,
+                "word": "let's"
+              },
+              {
+                "end_s": 1.66,
+                "probability": 0.9922260046005249,
+                "start_s": 1.48,
+                "word": "get"
+              },
+              {
+                "end_s": 1.96,
+                "probability": 0.994537889957428,
+                "start_s": 1.66,
+                "word": "this"
+              },
+              {
+                "end_s": 2.44,
+                "probability": 0.9990022778511047,
+                "start_s": 1.96,
+                "word": "game"
+              },
+              {
+                "end_s": 3.06,
+                "probability": 0.922707200050354,
+                "start_s": 2.44,
+                "word": "underway."
+              }
+            ]
+          },
+          {
+            "avg_logprob": -0.27947550819766137,
+            "compression_ratio": 1.141304347826087,
+            "end_s": 7.82,
+            "no_speech_prob": 0.021741151809692383,
+            "start_s": 4.08,
+            "text": "I'll be nice enough to let whoever started the game up to go on first.",
+            "words": [
+              {
+                "end_s": 4.3,
+                "probability": 0.9936070144176483,
+                "start_s": 4.08,
+                "word": "I'll"
+              },
+              {
+                "end_s": 4.4,
+                "probability": 0.9996007084846497,
+                "start_s": 4.3,
+                "word": "be"
+              },
+              {
+                "end_s": 4.64,
+                "probability": 0.9988592863082886,
+                "start_s": 4.4,
+                "word": "nice"
+              },
+              {
+                "end_s": 4.84,
+                "probability": 0.9962463974952698,
+                "start_s": 4.64,
+                "word": "enough"
+              },
+              {
+                "end_s": 4.98,
+                "probability": 0.9992536902427673,
+                "start_s": 4.84,
+                "word": "to"
+              },
+              {
+                "end_s": 5.1,
+                "probability": 0.9974007606506348,
+                "start_s": 4.98,
+                "word": "let"
+              },
+              {
+                "end_s": 5.44,
+                "probability": 0.9923895001411438,
+                "start_s": 5.1,
+                "word": "whoever"
+              },
+              {
+                "end_s": 5.78,
+                "probability": 0.6199601888656616,
+                "start_s": 5.44,
+                "word": "started"
+              },
+              {
+                "end_s": 5.98,
+                "probability": 0.9748995304107666,
+                "start_s": 5.78,
+                "word": "the"
+              },
+              {
+                "end_s": 6.18,
+                "probability": 0.9872251152992249,
+                "start_s": 5.98,
+                "word": "game"
+              },
+              {
+                "end_s": 6.54,
+                "probability": 0.9949309229850769,
+                "start_s": 6.18,
+                "word": "up"
+              },
+              {
+                "end_s": 7.12,
+                "probability": 0.7399595975875854,
+                "start_s": 6.54,
+                "word": "to"
+              },
+              {
+                "end_s": 7.32,
+                "probability": 0.9705488681793213,
+                "start_s": 7.12,
+                "word": "go"
+              },
+              {
+                "end_s": 7.48,
+                "probability": 0.9820656180381775,
+                "start_s": 7.32,
+                "word": "on"
+              },
+              {
+                "end_s": 7.82,
+                "probability": 0.9823132157325745,
+                "start_s": 7.48,
+                "word": "first."
+              }
+            ]
+          }
+        ],
+        "text": "Now, let's get this game underway. I'll be nice enough to let whoever started the game up to go on first.",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 23,
+          "hypothesis_words": [
+            "now",
+            "let",
+            "us",
+            "get",
+            "this",
+            "game",
+            "underway",
+            "i",
+            "will",
+            "be",
+            "nice",
+            "enough",
+            "to",
+            "let",
+            "whoever",
+            "started",
+            "the",
+            "game",
+            "up",
+            "to",
+            "go",
+            "on",
+            "first"
+          ],
+          "insertions": 0,
+          "reference_word_count": 23,
+          "reference_words": [
+            "now",
+            "let",
+            "us",
+            "get",
+            "this",
+            "game",
+            "underway",
+            "i",
+            "will",
+            "be",
+            "nice",
+            "enough",
+            "to",
+            "let",
+            "whoever",
+            "started",
+            "the",
+            "game",
+            "up",
+            "to",
+            "go",
+            "on",
+            "first"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "small_text": "Now, let's get this game underway. I'll be nice enough to let whoever started the game up to go on first.",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "Now, let's get this game underway. I'll be nice enough to let whoever started the game up to go on first."
+      },
+      "clip_tiny_text": "Now, let's get this game underway. I'll be nice enough to let whoever started the game up to go on first.",
+      "duration_s": 8.74,
+      "end_s": 72.27,
+      "family": "asmr7",
+      "id": "asmr7_repair_008",
+      "original_confidence": {
+        "avg_logprob": -0.353991,
+        "mean_word_probability": 0.9466599999999998,
+        "min_word_probability": 0.585959,
+        "no_speech_prob": 0.386248
+      },
+      "original_text": "Now, let's get this game underway. I'll be nice enough to let whoever started the game up to go on first.",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "43a93916176b50c56d80646950a5cfc851b5de42b1e466c6b5cfe0250d36b99a",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "Now, let's get this game underway. I'll be nice enough to let whoever started the game up to go on first.",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "reference_audio_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": null,
+        "overlaps": null,
+        "profile_interval": null,
+        "same_raw_source": false,
+        "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "status": "unknown_profile_origin_interval",
+        "target_interval": {
+          "end_s": 72.27,
+          "start_s": 63.53
+        }
+      },
+      "reference_profile_kind": "profile_audio_without_raw_interval",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_text": "Now, let's get this game underway. I'll be nice enough to let whoever started the game up to go on first.",
+      "speaker_id": "asmr7",
+      "speech_end_s": 72.12,
+      "speech_start_s": 63.68,
+      "split": "train",
+      "start_s": 63.53,
+      "text": "Now, let's get this game underway. I'll be nice enough to let whoever started the game up to go on first.",
+      "transcript_audit": {
+        "audio_sha256": "43a93916176b50c56d80646950a5cfc851b5de42b1e466c6b5cfe0250d36b99a",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 23,
+          "hypothesis_words": [
+            "now",
+            "let",
+            "us",
+            "get",
+            "this",
+            "game",
+            "underway",
+            "i",
+            "will",
+            "be",
+            "nice",
+            "enough",
+            "to",
+            "let",
+            "whoever",
+            "started",
+            "the",
+            "game",
+            "up",
+            "to",
+            "go",
+            "on",
+            "first"
+          ],
+          "insertions": 0,
+          "reference_word_count": 23,
+          "reference_words": [
+            "now",
+            "let",
+            "us",
+            "get",
+            "this",
+            "game",
+            "underway",
+            "i",
+            "will",
+            "be",
+            "nice",
+            "enough",
+            "to",
+            "let",
+            "whoever",
+            "started",
+            "the",
+            "game",
+            "up",
+            "to",
+            "go",
+            "on",
+            "first"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "Now, let's get this game underway. I'll be nice enough to let whoever started the game up to go on first.",
+        "status": "accepted",
+        "text_sha256": "86e38e0d8f57852f038f6c8aedde9bd2035420a7313d22811cbee7f7f3459c38",
+        "tiny_text": "Now, let's get this game underway. I'll be nice enough to let whoever started the game up to go on first."
+      },
+      "voice": "asmr7"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_010.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "6180bd226a41a53a78ccdc5549b4ac05cb13270e147d86bedb440f688ae2d8c9",
+        "avg_logprob": -0.3660612669255998,
+        "compression_ratio": 0.9710144927536232,
+        "mean_word_probability": 0.9248406166831652,
+        "min_word_probability": 0.6816810965538025,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        },
+        "no_speech_prob": 0.009684710763394833,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+        "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407",
+        "segments": [
+          {
+            "avg_logprob": -0.3660612669255998,
+            "compression_ratio": 0.9710144927536232,
+            "end_s": 3.6,
+            "no_speech_prob": 0.009684710763394833,
+            "start_s": 0.0,
+            "text": "It's my birthday, so they better make these seven minutes worth it.",
+            "words": [
+              {
+                "end_s": 0.24,
+                "probability": 0.8253776133060455,
+                "start_s": 0.0,
+                "word": "It's"
+              },
+              {
+                "end_s": 0.42,
+                "probability": 0.9926653504371643,
+                "start_s": 0.24,
+                "word": "my"
+              },
+              {
+                "end_s": 0.74,
+                "probability": 0.9987614154815674,
+                "start_s": 0.42,
+                "word": "birthday,"
+              },
+              {
+                "end_s": 1.46,
+                "probability": 0.9599516987800598,
+                "start_s": 1.16,
+                "word": "so"
+              },
+              {
+                "end_s": 1.68,
+                "probability": 0.6816810965538025,
+                "start_s": 1.46,
+                "word": "they"
+              },
+              {
+                "end_s": 1.82,
+                "probability": 0.7397213578224182,
+                "start_s": 1.68,
+                "word": "better"
+              },
+              {
+                "end_s": 2.04,
+                "probability": 0.998895525932312,
+                "start_s": 1.82,
+                "word": "make"
+              },
+              {
+                "end_s": 2.3,
+                "probability": 0.9897794127464294,
+                "start_s": 2.04,
+                "word": "these"
+              },
+              {
+                "end_s": 2.46,
+                "probability": 0.9298468828201294,
+                "start_s": 2.3,
+                "word": "seven"
+              },
+              {
+                "end_s": 2.72,
+                "probability": 0.9927292466163635,
+                "start_s": 2.46,
+                "word": "minutes"
+              },
+              {
+                "end_s": 3.02,
+                "probability": 0.9923025369644165,
+                "start_s": 2.72,
+                "word": "worth"
+              },
+              {
+                "end_s": 3.6,
+                "probability": 0.9963752627372742,
+                "start_s": 3.02,
+                "word": "it."
+              }
+            ]
+          }
+        ],
+        "text": "It's my birthday, so they better make these seven minutes worth it.",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 13,
+          "hypothesis_words": [
+            "it",
+            "is",
+            "my",
+            "birthday",
+            "so",
+            "they",
+            "better",
+            "make",
+            "these",
+            "seven",
+            "minutes",
+            "worth",
+            "it"
+          ],
+          "insertions": 0,
+          "reference_word_count": 13,
+          "reference_words": [
+            "it",
+            "is",
+            "my",
+            "birthday",
+            "so",
+            "they",
+            "better",
+            "make",
+            "these",
+            "seven",
+            "minutes",
+            "worth",
+            "it"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "small_text": "It's my birthday, so they better make these seven minutes worth it.",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "It's my birthday, so they better make these seven minutes worth it."
+      },
+      "clip_tiny_text": "It's my birthday, so they better make these seven minutes worth it.",
+      "duration_s": 3.82,
+      "end_s": 86.49,
+      "family": "asmr7",
+      "id": "asmr7_repair_010",
+      "original_confidence": {
+        "avg_logprob": -0.233045,
+        "mean_word_probability": 0.9654540833333333,
+        "min_word_probability": 0.830763,
+        "no_speech_prob": 0.320487
+      },
+      "original_text": "It's my birthday, so they better make these seven minutes worth it.",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "6180bd226a41a53a78ccdc5549b4ac05cb13270e147d86bedb440f688ae2d8c9",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "It's my birthday, so they better make these seven minutes worth it.",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "reference_audio_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": null,
+        "overlaps": null,
+        "profile_interval": null,
+        "same_raw_source": false,
+        "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "status": "unknown_profile_origin_interval",
+        "target_interval": {
+          "end_s": 86.49,
+          "start_s": 82.67
+        }
+      },
+      "reference_profile_kind": "profile_audio_without_raw_interval",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_text": "It's my birthday, so they better make these seven minutes worth it.",
+      "speaker_id": "asmr7",
+      "speech_end_s": 86.34,
+      "speech_start_s": 82.82,
+      "split": "train",
+      "start_s": 82.67,
+      "text": "It's my birthday, so they better make these seven minutes worth it.",
+      "transcript_audit": {
+        "audio_sha256": "6180bd226a41a53a78ccdc5549b4ac05cb13270e147d86bedb440f688ae2d8c9",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 13,
+          "hypothesis_words": [
+            "it",
+            "is",
+            "my",
+            "birthday",
+            "so",
+            "they",
+            "better",
+            "make",
+            "these",
+            "seven",
+            "minutes",
+            "worth",
+            "it"
+          ],
+          "insertions": 0,
+          "reference_word_count": 13,
+          "reference_words": [
+            "it",
+            "is",
+            "my",
+            "birthday",
+            "so",
+            "they",
+            "better",
+            "make",
+            "these",
+            "seven",
+            "minutes",
+            "worth",
+            "it"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "It's my birthday, so they better make these seven minutes worth it.",
+        "status": "accepted",
+        "text_sha256": "27f90c3479ec83a60ae3a7fc6b97545af329c7ffa31413c70061d4187d5ab8f7",
+        "tiny_text": "It's my birthday, so they better make these seven minutes worth it."
+      },
+      "voice": "asmr7"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_011.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "2d73fa6ac8ed500c8077155b20fd5b1aaeeae872f1fefead4ebe92e5f728d370",
+        "avg_logprob": -0.41507547041949105,
+        "compression_ratio": 0.9074074074074074,
+        "mean_word_probability": 0.9312455952167511,
+        "min_word_probability": 0.613737940788269,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        },
+        "no_speech_prob": 0.01617858186364174,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+        "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407",
+        "segments": [
+          {
+            "avg_logprob": -0.41507547041949105,
+            "compression_ratio": 0.9074074074074074,
+            "end_s": 2.12,
+            "no_speech_prob": 0.01617858186364174,
+            "start_s": 0.0,
+            "text": "Will you stop pushing me?",
+            "words": [
+              {
+                "end_s": 0.26,
+                "probability": 0.613737940788269,
+                "start_s": 0.0,
+                "word": "Will"
+              },
+              {
+                "end_s": 0.54,
+                "probability": 0.9952062964439392,
+                "start_s": 0.26,
+                "word": "you"
+              },
+              {
+                "end_s": 0.86,
+                "probability": 0.9960930943489075,
+                "start_s": 0.54,
+                "word": "stop"
+              },
+              {
+                "end_s": 1.54,
+                "probability": 0.9236749410629272,
+                "start_s": 0.86,
+                "word": "pushing"
+              },
+              {
+                "end_s": 2.12,
+                "probability": 0.9979279041290283,
+                "start_s": 1.54,
+                "word": "me?"
+              }
+            ]
+          },
+          {
+            "avg_logprob": -0.41507547041949105,
+            "compression_ratio": 0.9074074074074074,
+            "end_s": 3.8,
+            "no_speech_prob": 0.01617858186364174,
+            "start_s": 2.44,
+            "text": "I'm getting up already.",
+            "words": [
+              {
+                "end_s": 2.86,
+                "probability": 0.9634250700473785,
+                "start_s": 2.44,
+                "word": "I'm"
+              },
+              {
+                "end_s": 3.14,
+                "probability": 0.9970171451568604,
+                "start_s": 2.86,
+                "word": "getting"
+              },
+              {
+                "end_s": 3.46,
+                "probability": 0.8974374532699585,
+                "start_s": 3.14,
+                "word": "up"
+              },
+              {
+                "end_s": 3.8,
+                "probability": 0.9966905117034912,
+                "start_s": 3.46,
+                "word": "already."
+              }
+            ]
+          }
+        ],
+        "text": "Will you stop pushing me? I'm getting up already.",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 10,
+          "hypothesis_words": [
+            "will",
+            "you",
+            "stop",
+            "pushing",
+            "me",
+            "i",
+            "am",
+            "getting",
+            "up",
+            "already"
+          ],
+          "insertions": 0,
+          "reference_word_count": 10,
+          "reference_words": [
+            "will",
+            "you",
+            "stop",
+            "pushing",
+            "me",
+            "i",
+            "am",
+            "getting",
+            "up",
+            "already"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "small_text": "Will you stop pushing me? I'm getting up already.",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "Will you stop pushing me? I'm getting up already."
+      },
+      "clip_tiny_text": "Will you stop pushing me? I'm getting up already.",
+      "duration_s": 4.02,
+      "end_s": 106.93,
+      "family": "asmr7",
+      "id": "asmr7_repair_011",
+      "original_confidence": {
+        "avg_logprob": -0.26497,
+        "mean_word_probability": 0.9469331111111112,
+        "min_word_probability": 0.749556,
+        "no_speech_prob": 0.320487
+      },
+      "original_text": "Will you stop pushing me? I'm getting up already.",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "2d73fa6ac8ed500c8077155b20fd5b1aaeeae872f1fefead4ebe92e5f728d370",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "Will you stop pushing me? I'm getting up already.",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "reference_audio_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": null,
+        "overlaps": null,
+        "profile_interval": null,
+        "same_raw_source": false,
+        "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "status": "unknown_profile_origin_interval",
+        "target_interval": {
+          "end_s": 106.93,
+          "start_s": 102.91
+        }
+      },
+      "reference_profile_kind": "profile_audio_without_raw_interval",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_text": "Will you stop pushing me? I'm getting up already.",
+      "speaker_id": "asmr7",
+      "speech_end_s": 106.78,
+      "speech_start_s": 103.06,
+      "split": "valid",
+      "start_s": 102.91,
+      "text": "Will you stop pushing me? I'm getting up already.",
+      "transcript_audit": {
+        "audio_sha256": "2d73fa6ac8ed500c8077155b20fd5b1aaeeae872f1fefead4ebe92e5f728d370",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 10,
+          "hypothesis_words": [
+            "will",
+            "you",
+            "stop",
+            "pushing",
+            "me",
+            "i",
+            "am",
+            "getting",
+            "up",
+            "already"
+          ],
+          "insertions": 0,
+          "reference_word_count": 10,
+          "reference_words": [
+            "will",
+            "you",
+            "stop",
+            "pushing",
+            "me",
+            "i",
+            "am",
+            "getting",
+            "up",
+            "already"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "Will you stop pushing me? I'm getting up already.",
+        "status": "accepted",
+        "text_sha256": "d0fdedfe44b9b0c1e8b34a9eaf3d246e2cc26cc88a210a3b5e00a13f1ad4077c",
+        "tiny_text": "Will you stop pushing me? I'm getting up already."
+      },
+      "voice": "asmr7"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_013.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "e2d427a7e015946c6c2400e510928e575a97ef5fd92a6c66e184267fefb67665",
+        "avg_logprob": -0.5035231480231652,
+        "compression_ratio": 0.8222222222222222,
+        "mean_word_probability": 0.769874956458807,
+        "min_word_probability": 0.2500627338886261,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        },
+        "no_speech_prob": 0.03516187518835068,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+        "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407",
+        "segments": [
+          {
+            "avg_logprob": -0.5035231480231652,
+            "compression_ratio": 0.8222222222222222,
+            "end_s": 3.16,
+            "no_speech_prob": 0.03516187518835068,
+            "start_s": 0.0,
+            "text": "Look, why on earth are you even here?",
+            "words": [
+              {
+                "end_s": 0.84,
+                "probability": 0.8570652008056641,
+                "start_s": 0.0,
+                "word": "Look,"
+              },
+              {
+                "end_s": 1.74,
+                "probability": 0.27103322744369507,
+                "start_s": 1.58,
+                "word": "why"
+              },
+              {
+                "end_s": 1.94,
+                "probability": 0.2500627338886261,
+                "start_s": 1.74,
+                "word": "on"
+              },
+              {
+                "end_s": 2.18,
+                "probability": 0.8190061450004578,
+                "start_s": 1.94,
+                "word": "earth"
+              },
+              {
+                "end_s": 2.3,
+                "probability": 0.9956886172294617,
+                "start_s": 2.18,
+                "word": "are"
+              },
+              {
+                "end_s": 2.46,
+                "probability": 0.9945783615112305,
+                "start_s": 2.3,
+                "word": "you"
+              },
+              {
+                "end_s": 2.76,
+                "probability": 0.9794619679450989,
+                "start_s": 2.46,
+                "word": "even"
+              },
+              {
+                "end_s": 3.16,
+                "probability": 0.9921033978462219,
+                "start_s": 2.76,
+                "word": "here?"
+              }
+            ]
+          }
+        ],
+        "text": "Look, why on earth are you even here?",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 8,
+          "hypothesis_words": [
+            "look",
+            "why",
+            "on",
+            "earth",
+            "are",
+            "you",
+            "even",
+            "here"
+          ],
+          "insertions": 0,
+          "reference_word_count": 8,
+          "reference_words": [
+            "look",
+            "why",
+            "on",
+            "earth",
+            "are",
+            "you",
+            "even",
+            "here"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "small_text": "Look, why on earth are you even here?",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "Look, why on earth are you even here?"
+      },
+      "clip_tiny_text": "Look, why on earth are you even here?",
+      "duration_s": 3.34,
+      "end_s": 160.73,
+      "family": "asmr7",
+      "id": "asmr7_repair_013",
+      "original_confidence": {
+        "avg_logprob": -0.448759,
+        "mean_word_probability": 0.80460275,
+        "min_word_probability": 0.245045,
+        "no_speech_prob": 0.252145
+      },
+      "original_text": "Look, why on earth are you even here?",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "e2d427a7e015946c6c2400e510928e575a97ef5fd92a6c66e184267fefb67665",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "Look, why on earth are you even here?",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "reference_audio_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": null,
+        "overlaps": null,
+        "profile_interval": null,
+        "same_raw_source": false,
+        "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "status": "unknown_profile_origin_interval",
+        "target_interval": {
+          "end_s": 160.73,
+          "start_s": 157.39
+        }
+      },
+      "reference_profile_kind": "profile_audio_without_raw_interval",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_text": "Look, why on earth are you even here?",
+      "speaker_id": "asmr7",
+      "speech_end_s": 160.58,
+      "speech_start_s": 157.54,
+      "split": "train",
+      "start_s": 157.39,
+      "text": "Look, why on earth are you even here?",
+      "transcript_audit": {
+        "audio_sha256": "e2d427a7e015946c6c2400e510928e575a97ef5fd92a6c66e184267fefb67665",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 8,
+          "hypothesis_words": [
+            "look",
+            "why",
+            "on",
+            "earth",
+            "are",
+            "you",
+            "even",
+            "here"
+          ],
+          "insertions": 0,
+          "reference_word_count": 8,
+          "reference_words": [
+            "look",
+            "why",
+            "on",
+            "earth",
+            "are",
+            "you",
+            "even",
+            "here"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "Look, why on earth are you even here?",
+        "status": "accepted",
+        "text_sha256": "82b7651f6d5a8431828cfbee1370fb7140851bbed927cf9d9b629dec51651a8f",
+        "tiny_text": "Look, why on earth are you even here?"
+      },
+      "voice": "asmr7"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_014.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "f4187b1b1ea1811e41b0ba1389475eecd1e2e532e269805f5d91856f46536ddd",
+        "avg_logprob": -0.2899282534917196,
+        "compression_ratio": 0.8596491228070176,
+        "mean_word_probability": 0.9390938371419907,
+        "min_word_probability": 0.6088154911994934,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        },
+        "no_speech_prob": 0.005449134390801191,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+        "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407",
+        "segments": [
+          {
+            "avg_logprob": -0.2899282534917196,
+            "compression_ratio": 0.8596491228070176,
+            "end_s": 3.82,
+            "no_speech_prob": 0.005449134390801191,
+            "start_s": 0.0,
+            "text": "It just means I'm stuck here with you for longer.",
+            "words": [
+              {
+                "end_s": 0.22,
+                "probability": 0.8698179721832275,
+                "start_s": 0.0,
+                "word": "It"
+              },
+              {
+                "end_s": 0.46,
+                "probability": 0.9972746968269348,
+                "start_s": 0.22,
+                "word": "just"
+              },
+              {
+                "end_s": 0.86,
+                "probability": 0.9991523027420044,
+                "start_s": 0.46,
+                "word": "means"
+              },
+              {
+                "end_s": 1.24,
+                "probability": 0.9506166279315948,
+                "start_s": 0.86,
+                "word": "I'm"
+              },
+              {
+                "end_s": 1.48,
+                "probability": 0.9996528625488281,
+                "start_s": 1.24,
+                "word": "stuck"
+              },
+              {
+                "end_s": 1.92,
+                "probability": 0.9949023723602295,
+                "start_s": 1.48,
+                "word": "here"
+              },
+              {
+                "end_s": 2.36,
+                "probability": 0.9875009059906006,
+                "start_s": 1.92,
+                "word": "with"
+              },
+              {
+                "end_s": 3.26,
+                "probability": 0.9964983463287354,
+                "start_s": 2.36,
+                "word": "you"
+              },
+              {
+                "end_s": 3.58,
+                "probability": 0.6088154911994934,
+                "start_s": 3.26,
+                "word": "for"
+              },
+              {
+                "end_s": 3.82,
+                "probability": 0.9867067933082581,
+                "start_s": 3.58,
+                "word": "longer."
+              }
+            ]
+          }
+        ],
+        "text": "It just means I'm stuck here with you for longer.",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 11,
+          "hypothesis_words": [
+            "it",
+            "just",
+            "means",
+            "i",
+            "am",
+            "stuck",
+            "here",
+            "with",
+            "you",
+            "for",
+            "longer"
+          ],
+          "insertions": 0,
+          "reference_word_count": 11,
+          "reference_words": [
+            "it",
+            "just",
+            "means",
+            "i",
+            "am",
+            "stuck",
+            "here",
+            "with",
+            "you",
+            "for",
+            "longer"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "small_text": "It just means I'm stuck here with you for longer.",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "It just means I'm stuck here with you for longer."
+      },
+      "clip_tiny_text": "It just means I'm stuck here with you for longer.",
+      "duration_s": 4.28,
+      "end_s": 204.95,
+      "family": "asmr7",
+      "id": "asmr7_repair_014",
+      "original_confidence": {
+        "avg_logprob": -0.178724,
+        "mean_word_probability": 0.9509926,
+        "min_word_probability": 0.61183,
+        "no_speech_prob": 0.519073
+      },
+      "original_text": "It just means I'm stuck here with you for longer.",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "f4187b1b1ea1811e41b0ba1389475eecd1e2e532e269805f5d91856f46536ddd",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "It just means I'm stuck here with you for longer.",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "reference_audio_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": null,
+        "overlaps": null,
+        "profile_interval": null,
+        "same_raw_source": false,
+        "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "status": "unknown_profile_origin_interval",
+        "target_interval": {
+          "end_s": 204.95,
+          "start_s": 200.67
+        }
+      },
+      "reference_profile_kind": "profile_audio_without_raw_interval",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_text": "It just means I'm stuck here with you for longer.",
+      "speaker_id": "asmr7",
+      "speech_end_s": 204.8,
+      "speech_start_s": 200.82,
+      "split": "train",
+      "start_s": 200.67,
+      "text": "It just means I'm stuck here with you for longer.",
+      "transcript_audit": {
+        "audio_sha256": "f4187b1b1ea1811e41b0ba1389475eecd1e2e532e269805f5d91856f46536ddd",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 11,
+          "hypothesis_words": [
+            "it",
+            "just",
+            "means",
+            "i",
+            "am",
+            "stuck",
+            "here",
+            "with",
+            "you",
+            "for",
+            "longer"
+          ],
+          "insertions": 0,
+          "reference_word_count": 11,
+          "reference_words": [
+            "it",
+            "just",
+            "means",
+            "i",
+            "am",
+            "stuck",
+            "here",
+            "with",
+            "you",
+            "for",
+            "longer"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "It just means I'm stuck here with you for longer.",
+        "status": "accepted",
+        "text_sha256": "6211d56c12a3b06c331546354207a24c746874fc1742d3624a68d57b3acd7ff3",
+        "tiny_text": "It just means I'm stuck here with you for longer."
+      },
+      "voice": "asmr7"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_015.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "61f61df1f60056d42f8fd22a8ebe698e7065e1a3792d973d7252e0e469080346",
+        "avg_logprob": -0.523960313626698,
+        "compression_ratio": 0.7777777777777778,
+        "mean_word_probability": 0.940084973971049,
+        "min_word_probability": 0.8742942214012146,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        },
+        "no_speech_prob": 0.014771591871976852,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+        "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407",
+        "segments": [
+          {
+            "avg_logprob": -0.523960313626698,
+            "compression_ratio": 0.7777777777777778,
+            "end_s": 2.24,
+            "no_speech_prob": 0.014771591871976852,
+            "start_s": 0.0,
+            "text": "Did I mention it's you?",
+            "words": [
+              {
+                "end_s": 0.36,
+                "probability": 0.8742942214012146,
+                "start_s": 0.0,
+                "word": "Did"
+              },
+              {
+                "end_s": 0.58,
+                "probability": 0.9880807399749756,
+                "start_s": 0.36,
+                "word": "I"
+              },
+              {
+                "end_s": 0.92,
+                "probability": 0.9941233992576599,
+                "start_s": 0.58,
+                "word": "mention"
+              },
+              {
+                "end_s": 1.44,
+                "probability": 0.9133933782577515,
+                "start_s": 0.92,
+                "word": "it's"
+              },
+              {
+                "end_s": 2.24,
+                "probability": 0.9779242873191833,
+                "start_s": 1.44,
+                "word": "you?"
+              }
+            ]
+          },
+          {
+            "avg_logprob": -0.523960313626698,
+            "compression_ratio": 0.7777777777777778,
+            "end_s": 4.72,
+            "no_speech_prob": 0.014771591871976852,
+            "start_s": 4.44,
+            "text": "Why?",
+            "words": [
+              {
+                "end_s": 4.72,
+                "probability": 0.892693817615509,
+                "start_s": 4.44,
+                "word": "Why?"
+              }
+            ]
+          }
+        ],
+        "text": "Did I mention it's you? Why?",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 7,
+          "hypothesis_words": [
+            "did",
+            "i",
+            "mention",
+            "it",
+            "is",
+            "you",
+            "why"
+          ],
+          "insertions": 0,
+          "reference_word_count": 7,
+          "reference_words": [
+            "did",
+            "i",
+            "mention",
+            "it",
+            "is",
+            "you",
+            "why"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "small_text": "Did I mention it's you? Why?",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "Did I mention it's you? Why?"
+      },
+      "clip_tiny_text": "Did I mention it's you? Why?",
+      "duration_s": 5.02,
+      "end_s": 210.91,
+      "family": "asmr7",
+      "id": "asmr7_repair_015",
+      "original_confidence": {
+        "avg_logprob": -0.178724,
+        "mean_word_probability": 0.9678459999999999,
+        "min_word_probability": 0.923727,
+        "no_speech_prob": 0.519073
+      },
+      "original_text": "Did I mention it's you? Why?",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "61f61df1f60056d42f8fd22a8ebe698e7065e1a3792d973d7252e0e469080346",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "Did I mention it's you? Why?",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "reference_audio_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": null,
+        "overlaps": null,
+        "profile_interval": null,
+        "same_raw_source": false,
+        "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "status": "unknown_profile_origin_interval",
+        "target_interval": {
+          "end_s": 210.91,
+          "start_s": 205.89
+        }
+      },
+      "reference_profile_kind": "profile_audio_without_raw_interval",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_text": "Did I mention it's you? Why?",
+      "speaker_id": "asmr7",
+      "speech_end_s": 210.76,
+      "speech_start_s": 206.04,
+      "split": "train",
+      "start_s": 205.89,
+      "text": "Did I mention it's you? Why?",
+      "transcript_audit": {
+        "audio_sha256": "61f61df1f60056d42f8fd22a8ebe698e7065e1a3792d973d7252e0e469080346",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 7,
+          "hypothesis_words": [
+            "did",
+            "i",
+            "mention",
+            "it",
+            "is",
+            "you",
+            "why"
+          ],
+          "insertions": 0,
+          "reference_word_count": 7,
+          "reference_words": [
+            "did",
+            "i",
+            "mention",
+            "it",
+            "is",
+            "you",
+            "why"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "Did I mention it's you? Why?",
+        "status": "accepted",
+        "text_sha256": "95572e87be3ff278321e5e0e18d0faf1c42e86ab4c004216bd3220efb84b9e28",
+        "tiny_text": "Did I mention it's you? Why?"
+      },
+      "voice": "asmr7"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_019.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "35cd121d9598f4e950a3ffe786211395e5712930665abf0ee1e4d1195cddc982",
+        "avg_logprob": -0.6174449284871419,
+        "compression_ratio": 0.851063829787234,
+        "mean_word_probability": 0.8830737514155251,
+        "min_word_probability": 0.6432449221611023,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        },
+        "no_speech_prob": 0.044331785291433334,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+        "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407",
+        "segments": [
+          {
+            "avg_logprob": -0.6174449284871419,
+            "compression_ratio": 0.851063829787234,
+            "end_s": 0.74,
+            "no_speech_prob": 0.044331785291433334,
+            "start_s": 0.0,
+            "text": "They're everywhere.",
+            "words": [
+              {
+                "end_s": 0.3,
+                "probability": 0.8693064153194427,
+                "start_s": 0.0,
+                "word": "They're"
+              },
+              {
+                "end_s": 0.74,
+                "probability": 0.999315619468689,
+                "start_s": 0.3,
+                "word": "everywhere."
+              }
+            ]
+          },
+          {
+            "avg_logprob": -0.6174449284871419,
+            "compression_ratio": 0.851063829787234,
+            "end_s": 4.38,
+            "no_speech_prob": 0.044331785291433334,
+            "start_s": 2.6,
+            "text": "You are so that bad.",
+            "words": [
+              {
+                "end_s": 3.2,
+                "probability": 0.6432449221611023,
+                "start_s": 2.6,
+                "word": "You"
+              },
+              {
+                "end_s": 3.54,
+                "probability": 0.7908970713615417,
+                "start_s": 3.2,
+                "word": "are"
+              },
+              {
+                "end_s": 3.84,
+                "probability": 0.9960350394248962,
+                "start_s": 3.54,
+                "word": "so"
+              },
+              {
+                "end_s": 4.08,
+                "probability": 0.884930431842804,
+                "start_s": 3.84,
+                "word": "that"
+              },
+              {
+                "end_s": 4.38,
+                "probability": 0.9977867603302002,
+                "start_s": 4.08,
+                "word": "bad."
+              }
+            ]
+          }
+        ],
+        "text": "They're everywhere. You are so that bad.",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 8,
+          "hypothesis_words": [
+            "they",
+            "are",
+            "everywhere",
+            "you",
+            "are",
+            "so",
+            "that",
+            "bad"
+          ],
+          "insertions": 0,
+          "reference_word_count": 8,
+          "reference_words": [
+            "they",
+            "are",
+            "everywhere",
+            "you",
+            "are",
+            "so",
+            "that",
+            "bad"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "small_text": "They're everywhere. You are so that bad.",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "They're everywhere. You are so that bad."
+      },
+      "clip_tiny_text": "They're everywhere. You are so that bad.",
+      "duration_s": 4.62,
+      "end_s": 234.49,
+      "family": "asmr7",
+      "id": "asmr7_repair_019",
+      "original_confidence": {
+        "avg_logprob": -0.267207,
+        "mean_word_probability": 0.8358901428571429,
+        "min_word_probability": 0.433494,
+        "no_speech_prob": 0.325938
+      },
+      "original_text": "They're everywhere. You are so that bad.",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "35cd121d9598f4e950a3ffe786211395e5712930665abf0ee1e4d1195cddc982",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "They're everywhere. You are so that bad.",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "reference_audio_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": null,
+        "overlaps": null,
+        "profile_interval": null,
+        "same_raw_source": false,
+        "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "status": "unknown_profile_origin_interval",
+        "target_interval": {
+          "end_s": 234.49,
+          "start_s": 229.87
+        }
+      },
+      "reference_profile_kind": "profile_audio_without_raw_interval",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_text": "They're everywhere. You are so that bad.",
+      "speaker_id": "asmr7",
+      "speech_end_s": 234.34,
+      "speech_start_s": 230.02,
+      "split": "train",
+      "start_s": 229.87,
+      "text": "They're everywhere. You are so that bad.",
+      "transcript_audit": {
+        "audio_sha256": "35cd121d9598f4e950a3ffe786211395e5712930665abf0ee1e4d1195cddc982",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 8,
+          "hypothesis_words": [
+            "they",
+            "are",
+            "everywhere",
+            "you",
+            "are",
+            "so",
+            "that",
+            "bad"
+          ],
+          "insertions": 0,
+          "reference_word_count": 8,
+          "reference_words": [
+            "they",
+            "are",
+            "everywhere",
+            "you",
+            "are",
+            "so",
+            "that",
+            "bad"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "They're everywhere. You are so that bad.",
+        "status": "accepted",
+        "text_sha256": "f544309ca68ab3aae45b64d4a4c48a8945511c5948ede6841f190fc0bc0304a9",
+        "tiny_text": "They're everywhere. You are so that bad."
+      },
+      "voice": "asmr7"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_022.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "9a53e7a4211fe6fbb6b2404e3f0fdc752761d9d9a4c7f4550509230cbf2269e8",
+        "avg_logprob": -0.4191376946189187,
+        "compression_ratio": 1.31,
+        "mean_word_probability": 0.8552708688378334,
+        "min_word_probability": 0.1151261255145073,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        },
+        "no_speech_prob": 0.02780161425471306,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+        "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407",
+        "segments": [
+          {
+            "avg_logprob": -0.4191376946189187,
+            "compression_ratio": 1.31,
+            "end_s": 6.54,
+            "no_speech_prob": 0.02780161425471306,
+            "start_s": 0.0,
+            "text": "How's it finally dawned on you that you ruined my birthday party by destroying my one chance?",
+            "words": [
+              {
+                "end_s": 0.74,
+                "probability": 0.5923331379890442,
+                "start_s": 0.0,
+                "word": "How's"
+              },
+              {
+                "end_s": 0.86,
+                "probability": 0.9754830598831177,
+                "start_s": 0.74,
+                "word": "it"
+              },
+              {
+                "end_s": 1.48,
+                "probability": 0.9764686822891235,
+                "start_s": 0.86,
+                "word": "finally"
+              },
+              {
+                "end_s": 2.6,
+                "probability": 0.656899705529213,
+                "start_s": 1.48,
+                "word": "dawned"
+              },
+              {
+                "end_s": 2.78,
+                "probability": 0.9957382678985596,
+                "start_s": 2.6,
+                "word": "on"
+              },
+              {
+                "end_s": 3.28,
+                "probability": 0.9955586194992065,
+                "start_s": 2.78,
+                "word": "you"
+              },
+              {
+                "end_s": 3.58,
+                "probability": 0.6278746128082275,
+                "start_s": 3.28,
+                "word": "that"
+              },
+              {
+                "end_s": 3.76,
+                "probability": 0.975055456161499,
+                "start_s": 3.58,
+                "word": "you"
+              },
+              {
+                "end_s": 3.92,
+                "probability": 0.8548898100852966,
+                "start_s": 3.76,
+                "word": "ruined"
+              },
+              {
+                "end_s": 4.22,
+                "probability": 0.9959753155708313,
+                "start_s": 3.92,
+                "word": "my"
+              },
+              {
+                "end_s": 4.42,
+                "probability": 0.9983166456222534,
+                "start_s": 4.22,
+                "word": "birthday"
+              },
+              {
+                "end_s": 4.84,
+                "probability": 0.9971447587013245,
+                "start_s": 4.42,
+                "word": "party"
+              },
+              {
+                "end_s": 5.06,
+                "probability": 0.9856858253479004,
+                "start_s": 4.84,
+                "word": "by"
+              },
+              {
+                "end_s": 5.36,
+                "probability": 0.9963755011558533,
+                "start_s": 5.06,
+                "word": "destroying"
+              },
+              {
+                "end_s": 5.76,
+                "probability": 0.9948185086250305,
+                "start_s": 5.36,
+                "word": "my"
+              },
+              {
+                "end_s": 6.08,
+                "probability": 0.9474024176597595,
+                "start_s": 5.76,
+                "word": "one"
+              },
+              {
+                "end_s": 6.54,
+                "probability": 0.9869223237037659,
+                "start_s": 6.08,
+                "word": "chance?"
+              }
+            ]
+          },
+          {
+            "avg_logprob": -0.4191376946189187,
+            "compression_ratio": 1.31,
+            "end_s": 9.8,
+            "no_speech_prob": 0.02780161425471306,
+            "start_s": 7.2,
+            "text": "my one chance to kiss a random person",
+            "words": [
+              {
+                "end_s": 7.44,
+                "probability": 0.1151261255145073,
+                "start_s": 7.2,
+                "word": "my"
+              },
+              {
+                "end_s": 7.68,
+                "probability": 0.9913908243179321,
+                "start_s": 7.44,
+                "word": "one"
+              },
+              {
+                "end_s": 8.34,
+                "probability": 0.9984495639801025,
+                "start_s": 7.68,
+                "word": "chance"
+              },
+              {
+                "end_s": 8.94,
+                "probability": 0.43360355496406555,
+                "start_s": 8.34,
+                "word": "to"
+              },
+              {
+                "end_s": 9.12,
+                "probability": 0.5398374199867249,
+                "start_s": 8.94,
+                "word": "kiss"
+              },
+              {
+                "end_s": 9.22,
+                "probability": 0.7569090723991394,
+                "start_s": 9.12,
+                "word": "a"
+              },
+              {
+                "end_s": 9.42,
+                "probability": 0.9987291693687439,
+                "start_s": 9.22,
+                "word": "random"
+              },
+              {
+                "end_s": 9.8,
+                "probability": 0.994783341884613,
+                "start_s": 9.42,
+                "word": "person"
+              }
+            ]
+          }
+        ],
+        "text": "How's it finally dawned on you that you ruined my birthday party by destroying my one chance? my one chance to kiss a random person",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 25,
+          "hypothesis_words": [
+            "how's",
+            "it",
+            "finally",
+            "dawned",
+            "on",
+            "you",
+            "that",
+            "you",
+            "ruined",
+            "my",
+            "birthday",
+            "party",
+            "by",
+            "destroying",
+            "my",
+            "one",
+            "chance",
+            "my",
+            "one",
+            "chance",
+            "to",
+            "kiss",
+            "a",
+            "random",
+            "person"
+          ],
+          "insertions": 0,
+          "reference_word_count": 25,
+          "reference_words": [
+            "how's",
+            "it",
+            "finally",
+            "dawned",
+            "on",
+            "you",
+            "that",
+            "you",
+            "ruined",
+            "my",
+            "birthday",
+            "party",
+            "by",
+            "destroying",
+            "my",
+            "one",
+            "chance",
+            "my",
+            "one",
+            "chance",
+            "to",
+            "kiss",
+            "a",
+            "random",
+            "person"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "small_text": "How's it finally dawned on you that you ruined my birthday party by destroying my one chance? My one chance to kiss a random person?",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "How's it finally dawned on you that you ruined my birthday party by destroying my one chance? my one chance to kiss a random person"
+      },
+      "clip_tiny_text": "How's it finally dawned on you that you ruined my birthday party by destroying my one chance? my one chance to kiss a random person",
+      "duration_s": 10.92,
+      "end_s": 278.21,
+      "family": "asmr7",
+      "id": "asmr7_repair_022",
+      "original_confidence": {
+        "avg_logprob": -0.313042,
+        "mean_word_probability": 0.8925821200000001,
+        "min_word_probability": 0.508267,
+        "no_speech_prob": 0.451009
+      },
+      "original_text": "How's it finally dawned on you that you ruined my birthday party by destroying my one chance, my one chance, to kiss a random person?",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "9a53e7a4211fe6fbb6b2404e3f0fdc752761d9d9a4c7f4550509230cbf2269e8",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "How's it finally dawned on you that you ruined my birthday party by destroying my one chance, my one chance, to kiss a random person?",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "reference_audio_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": null,
+        "overlaps": null,
+        "profile_interval": null,
+        "same_raw_source": false,
+        "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "status": "unknown_profile_origin_interval",
+        "target_interval": {
+          "end_s": 278.21,
+          "start_s": 267.29
+        }
+      },
+      "reference_profile_kind": "profile_audio_without_raw_interval",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_text": "How's it finally dawned on you that you ruined my birthday party by destroying my one chance? my one chance to kiss a random person",
+      "speaker_id": "asmr7",
+      "speech_end_s": 278.06,
+      "speech_start_s": 267.44,
+      "split": "valid",
+      "start_s": 267.29,
+      "text": "How's it finally dawned on you that you ruined my birthday party by destroying my one chance? my one chance to kiss a random person",
+      "transcript_audit": {
+        "audio_sha256": "9a53e7a4211fe6fbb6b2404e3f0fdc752761d9d9a4c7f4550509230cbf2269e8",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 25,
+          "hypothesis_words": [
+            "how's",
+            "it",
+            "finally",
+            "dawned",
+            "on",
+            "you",
+            "that",
+            "you",
+            "ruined",
+            "my",
+            "birthday",
+            "party",
+            "by",
+            "destroying",
+            "my",
+            "one",
+            "chance",
+            "my",
+            "one",
+            "chance",
+            "to",
+            "kiss",
+            "a",
+            "random",
+            "person"
+          ],
+          "insertions": 0,
+          "reference_word_count": 25,
+          "reference_words": [
+            "how's",
+            "it",
+            "finally",
+            "dawned",
+            "on",
+            "you",
+            "that",
+            "you",
+            "ruined",
+            "my",
+            "birthday",
+            "party",
+            "by",
+            "destroying",
+            "my",
+            "one",
+            "chance",
+            "my",
+            "one",
+            "chance",
+            "to",
+            "kiss",
+            "a",
+            "random",
+            "person"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "How's it finally dawned on you that you ruined my birthday party by destroying my one chance? My one chance to kiss a random person?",
+        "status": "accepted",
+        "text_sha256": "71376a968b70b389a76426981c045f50c3fb025a47c819715d93fc8bdeccc8d3",
+        "tiny_text": "How's it finally dawned on you that you ruined my birthday party by destroying my one chance? my one chance to kiss a random person"
+      },
+      "voice": "asmr7"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_024.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "8e1c2e81a777029322b7998e42ca802270923ee5fbc9cf8ce25b64b15198a3b4",
+        "avg_logprob": -0.25903140797334556,
+        "compression_ratio": 0.9516129032258065,
+        "mean_word_probability": 0.9764546379446983,
+        "min_word_probability": 0.9109882116317749,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        },
+        "no_speech_prob": 0.009254791773855686,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+        "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407",
+        "segments": [
+          {
+            "avg_logprob": -0.25903140797334556,
+            "compression_ratio": 0.9516129032258065,
+            "end_s": 2.92,
+            "no_speech_prob": 0.009254791773855686,
+            "start_s": 0.0,
+            "text": "I didn't think I actually hurt you when I say these things.",
+            "words": [
+              {
+                "end_s": 0.42,
+                "probability": 0.9109882116317749,
+                "start_s": 0.0,
+                "word": "I"
+              },
+              {
+                "end_s": 0.78,
+                "probability": 0.9946477115154266,
+                "start_s": 0.42,
+                "word": "didn't"
+              },
+              {
+                "end_s": 0.94,
+                "probability": 0.9894038438796997,
+                "start_s": 0.78,
+                "word": "think"
+              },
+              {
+                "end_s": 1.06,
+                "probability": 0.9551975727081299,
+                "start_s": 0.94,
+                "word": "I"
+              },
+              {
+                "end_s": 1.48,
+                "probability": 0.9646798372268677,
+                "start_s": 1.06,
+                "word": "actually"
+              },
+              {
+                "end_s": 1.7,
+                "probability": 0.9718430638313293,
+                "start_s": 1.48,
+                "word": "hurt"
+              },
+              {
+                "end_s": 1.92,
+                "probability": 0.9967892169952393,
+                "start_s": 1.7,
+                "word": "you"
+              },
+              {
+                "end_s": 2.08,
+                "probability": 0.9956817626953125,
+                "start_s": 1.92,
+                "word": "when"
+              },
+              {
+                "end_s": 2.22,
+                "probability": 0.9899924397468567,
+                "start_s": 2.08,
+                "word": "I"
+              },
+              {
+                "end_s": 2.3,
+                "probability": 0.9566516876220703,
+                "start_s": 2.22,
+                "word": "say"
+              },
+              {
+                "end_s": 2.56,
+                "probability": 0.9935238361358643,
+                "start_s": 2.3,
+                "word": "these"
+              },
+              {
+                "end_s": 2.92,
+                "probability": 0.9980564713478088,
+                "start_s": 2.56,
+                "word": "things."
+              }
+            ]
+          }
+        ],
+        "text": "I didn't think I actually hurt you when I say these things.",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 13,
+          "hypothesis_words": [
+            "i",
+            "did",
+            "not",
+            "think",
+            "i",
+            "actually",
+            "hurt",
+            "you",
+            "when",
+            "i",
+            "say",
+            "these",
+            "things"
+          ],
+          "insertions": 0,
+          "reference_word_count": 13,
+          "reference_words": [
+            "i",
+            "did",
+            "not",
+            "think",
+            "i",
+            "actually",
+            "hurt",
+            "you",
+            "when",
+            "i",
+            "say",
+            "these",
+            "things"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "small_text": "I didn't think I actually hurt you when I say these things.",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "I didn't think I actually hurt you when I say these things."
+      },
+      "clip_tiny_text": "I didn't think I actually hurt you when I say these things.",
+      "duration_s": 3.74,
+      "end_s": 290.61,
+      "family": "asmr7",
+      "id": "asmr7_repair_024",
+      "original_confidence": {
+        "avg_logprob": -0.313042,
+        "mean_word_probability": 0.9869473333333333,
+        "min_word_probability": 0.9163,
+        "no_speech_prob": 0.451009
+      },
+      "original_text": "I didn't think I actually hurt you when I say these things.",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "8e1c2e81a777029322b7998e42ca802270923ee5fbc9cf8ce25b64b15198a3b4",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "I didn't think I actually hurt you when I say these things.",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "reference_audio_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": null,
+        "overlaps": null,
+        "profile_interval": null,
+        "same_raw_source": false,
+        "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "status": "unknown_profile_origin_interval",
+        "target_interval": {
+          "end_s": 290.61,
+          "start_s": 286.87
+        }
+      },
+      "reference_profile_kind": "profile_audio_without_raw_interval",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_text": "I didn't think I actually hurt you when I say these things.",
+      "speaker_id": "asmr7",
+      "speech_end_s": 290.46,
+      "speech_start_s": 287.02,
+      "split": "train",
+      "start_s": 286.87,
+      "text": "I didn't think I actually hurt you when I say these things.",
+      "transcript_audit": {
+        "audio_sha256": "8e1c2e81a777029322b7998e42ca802270923ee5fbc9cf8ce25b64b15198a3b4",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 13,
+          "hypothesis_words": [
+            "i",
+            "did",
+            "not",
+            "think",
+            "i",
+            "actually",
+            "hurt",
+            "you",
+            "when",
+            "i",
+            "say",
+            "these",
+            "things"
+          ],
+          "insertions": 0,
+          "reference_word_count": 13,
+          "reference_words": [
+            "i",
+            "did",
+            "not",
+            "think",
+            "i",
+            "actually",
+            "hurt",
+            "you",
+            "when",
+            "i",
+            "say",
+            "these",
+            "things"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "I didn't think I actually hurt you when I say these things.",
+        "status": "accepted",
+        "text_sha256": "85bcce5dc2fdb5d12705d35e0d60fe7bc8328f3ee91488c5df0531dcb198f883",
+        "tiny_text": "I didn't think I actually hurt you when I say these things."
+      },
+      "voice": "asmr7"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_029.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "23529e55eff9e23010a39ababfa676d666d4fe14b3b0510acc2e939947b33c88",
+        "avg_logprob": -0.5981235578656197,
+        "compression_ratio": 0.864406779661017,
+        "mean_word_probability": 0.88723666800393,
+        "min_word_probability": 0.5970499515533447,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        },
+        "no_speech_prob": 0.07274345308542252,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+        "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407",
+        "segments": [
+          {
+            "avg_logprob": -0.5981235578656197,
+            "compression_ratio": 0.864406779661017,
+            "end_s": 5.18,
+            "no_speech_prob": 0.07274345308542252,
+            "start_s": 0.0,
+            "text": "Don't say anything, just one more, a little longer.",
+            "words": [
+              {
+                "end_s": 1.12,
+                "probability": 0.8663650155067444,
+                "start_s": 0.0,
+                "word": "Don't"
+              },
+              {
+                "end_s": 1.32,
+                "probability": 0.991838276386261,
+                "start_s": 1.12,
+                "word": "say"
+              },
+              {
+                "end_s": 1.86,
+                "probability": 0.9986512064933777,
+                "start_s": 1.32,
+                "word": "anything,"
+              },
+              {
+                "end_s": 2.68,
+                "probability": 0.9903244972229004,
+                "start_s": 2.4,
+                "word": "just"
+              },
+              {
+                "end_s": 2.88,
+                "probability": 0.964454710483551,
+                "start_s": 2.68,
+                "word": "one"
+              },
+              {
+                "end_s": 4.02,
+                "probability": 0.9951714873313904,
+                "start_s": 2.88,
+                "word": "more,"
+              },
+              {
+                "end_s": 4.54,
+                "probability": 0.7012471556663513,
+                "start_s": 4.04,
+                "word": "a"
+              },
+              {
+                "end_s": 4.7,
+                "probability": 0.880027711391449,
+                "start_s": 4.54,
+                "word": "little"
+              },
+              {
+                "end_s": 5.18,
+                "probability": 0.5970499515533447,
+                "start_s": 4.7,
+                "word": "longer."
+              }
+            ]
+          }
+        ],
+        "text": "Don't say anything, just one more, a little longer.",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 10,
+          "hypothesis_words": [
+            "do",
+            "not",
+            "say",
+            "anything",
+            "just",
+            "one",
+            "more",
+            "a",
+            "little",
+            "longer"
+          ],
+          "insertions": 0,
+          "reference_word_count": 10,
+          "reference_words": [
+            "do",
+            "not",
+            "say",
+            "anything",
+            "just",
+            "one",
+            "more",
+            "a",
+            "little",
+            "longer"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "small_text": "Don't say anything. Just one more. A little longer.",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "Don't say anything, just one more, a little longer."
+      },
+      "clip_tiny_text": "Don't say anything, just one more, a little longer.",
+      "duration_s": 5.4,
+      "end_s": 447.77,
+      "family": "asmr7",
+      "id": "asmr7_repair_029",
+      "original_confidence": {
+        "avg_logprob": -0.621882,
+        "mean_word_probability": 0.9194465714285714,
+        "min_word_probability": 0.574909,
+        "no_speech_prob": 0.265522
+      },
+      "original_text": "Don't say anything, just one more longer.",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "23529e55eff9e23010a39ababfa676d666d4fe14b3b0510acc2e939947b33c88",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "Don't say anything, just one more longer.",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "reference_audio_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": null,
+        "overlaps": null,
+        "profile_interval": null,
+        "same_raw_source": false,
+        "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "status": "unknown_profile_origin_interval",
+        "target_interval": {
+          "end_s": 447.77,
+          "start_s": 442.37
+        }
+      },
+      "reference_profile_kind": "profile_audio_without_raw_interval",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_text": "Don't say anything, just one more, a little longer.",
+      "speaker_id": "asmr7",
+      "speech_end_s": 447.62,
+      "speech_start_s": 442.52,
+      "split": "train",
+      "start_s": 442.37,
+      "text": "Don't say anything, just one more, a little longer.",
+      "transcript_audit": {
+        "audio_sha256": "23529e55eff9e23010a39ababfa676d666d4fe14b3b0510acc2e939947b33c88",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 10,
+          "hypothesis_words": [
+            "do",
+            "not",
+            "say",
+            "anything",
+            "just",
+            "one",
+            "more",
+            "a",
+            "little",
+            "longer"
+          ],
+          "insertions": 0,
+          "reference_word_count": 10,
+          "reference_words": [
+            "do",
+            "not",
+            "say",
+            "anything",
+            "just",
+            "one",
+            "more",
+            "a",
+            "little",
+            "longer"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "Don't say anything. Just one more. A little longer.",
+        "status": "accepted",
+        "text_sha256": "6960911a42cd5b3dea5ba0cf81cb1108e3e2e93f43bbb8541119a2d5e015c360",
+        "tiny_text": "Don't say anything, just one more, a little longer."
+      },
+      "voice": "asmr7"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_030.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "e4f7f5da93681c1f346da3d322855bcda0afea36120c2663bde59c4e5ffe4119",
+        "avg_logprob": -0.4737719769279162,
+        "compression_ratio": 0.9305555555555556,
+        "mean_word_probability": 0.8551660716533661,
+        "min_word_probability": 0.5624690651893616,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        },
+        "no_speech_prob": 0.016272423788905144,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+        "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407",
+        "segments": [
+          {
+            "avg_logprob": -0.4737719769279162,
+            "compression_ratio": 0.9305555555555556,
+            "end_s": 2.16,
+            "no_speech_prob": 0.016272423788905144,
+            "start_s": 0.0,
+            "text": "Yes, I'm sure I did.",
+            "words": [
+              {
+                "end_s": 0.48,
+                "probability": 0.8493502736091614,
+                "start_s": 0.0,
+                "word": "Yes,"
+              },
+              {
+                "end_s": 0.86,
+                "probability": 0.967770129442215,
+                "start_s": 0.68,
+                "word": "I'm"
+              },
+              {
+                "end_s": 0.98,
+                "probability": 0.8239423632621765,
+                "start_s": 0.86,
+                "word": "sure"
+              },
+              {
+                "end_s": 1.2,
+                "probability": 0.6704744100570679,
+                "start_s": 0.98,
+                "word": "I"
+              },
+              {
+                "end_s": 2.16,
+                "probability": 0.5780501961708069,
+                "start_s": 1.2,
+                "word": "did."
+              }
+            ]
+          },
+          {
+            "avg_logprob": -0.4737719769279162,
+            "compression_ratio": 0.9305555555555556,
+            "end_s": 7.12,
+            "no_speech_prob": 0.016272423788905144,
+            "start_s": 4.0,
+            "text": "Guess I am failing to make your day worse now.",
+            "words": [
+              {
+                "end_s": 4.48,
+                "probability": 0.5624690651893616,
+                "start_s": 4.0,
+                "word": "Guess"
+              },
+              {
+                "end_s": 4.78,
+                "probability": 0.9869426488876343,
+                "start_s": 4.48,
+                "word": "I"
+              },
+              {
+                "end_s": 5.22,
+                "probability": 0.6266868710517883,
+                "start_s": 4.78,
+                "word": "am"
+              },
+              {
+                "end_s": 5.58,
+                "probability": 0.9139723181724548,
+                "start_s": 5.22,
+                "word": "failing"
+              },
+              {
+                "end_s": 5.82,
+                "probability": 0.9985823631286621,
+                "start_s": 5.58,
+                "word": "to"
+              },
+              {
+                "end_s": 5.86,
+                "probability": 0.998150646686554,
+                "start_s": 5.82,
+                "word": "make"
+              },
+              {
+                "end_s": 6.04,
+                "probability": 0.9876890182495117,
+                "start_s": 5.86,
+                "word": "your"
+              },
+              {
+                "end_s": 6.18,
+                "probability": 0.9864159822463989,
+                "start_s": 6.04,
+                "word": "day"
+              },
+              {
+                "end_s": 6.42,
+                "probability": 0.8921480774879456,
+                "start_s": 6.18,
+                "word": "worse"
+              },
+              {
+                "end_s": 7.12,
+                "probability": 0.9848467111587524,
+                "start_s": 6.42,
+                "word": "now."
+              }
+            ]
+          }
+        ],
+        "text": "Yes, I'm sure I did. Guess I am failing to make your day worse now.",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 16,
+          "hypothesis_words": [
+            "yes",
+            "i",
+            "am",
+            "sure",
+            "i",
+            "did",
+            "guess",
+            "i",
+            "am",
+            "failing",
+            "to",
+            "make",
+            "your",
+            "day",
+            "worse",
+            "now"
+          ],
+          "insertions": 0,
+          "reference_word_count": 16,
+          "reference_words": [
+            "yes",
+            "i",
+            "am",
+            "sure",
+            "i",
+            "did",
+            "guess",
+            "i",
+            "am",
+            "failing",
+            "to",
+            "make",
+            "your",
+            "day",
+            "worse",
+            "now"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "small_text": "Yes, I'm sure I did. Guess I'm failing to make your day worse now.",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "Yes, I'm sure I did. Guess I am failing to make your day worse now."
+      },
+      "clip_tiny_text": "Yes, I'm sure I did. Guess I am failing to make your day worse now.",
+      "duration_s": 7.3,
+      "end_s": 498.65,
+      "family": "asmr7",
+      "id": "asmr7_repair_030",
+      "original_confidence": {
+        "avg_logprob": -0.331392,
+        "mean_word_probability": 0.87615875,
+        "min_word_probability": 0.147581,
+        "no_speech_prob": 0.41619
+      },
+      "original_text": "Yes, I'm sure I did. I guess I am failing to make your day worse now.",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "e4f7f5da93681c1f346da3d322855bcda0afea36120c2663bde59c4e5ffe4119",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "Yes, I'm sure I did. I guess I am failing to make your day worse now.",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "reference_audio_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": null,
+        "overlaps": null,
+        "profile_interval": null,
+        "same_raw_source": false,
+        "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "status": "unknown_profile_origin_interval",
+        "target_interval": {
+          "end_s": 498.65,
+          "start_s": 491.35
+        }
+      },
+      "reference_profile_kind": "profile_audio_without_raw_interval",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_text": "Yes, I'm sure I did. Guess I am failing to make your day worse now.",
+      "speaker_id": "asmr7",
+      "speech_end_s": 498.5,
+      "speech_start_s": 491.5,
+      "split": "train",
+      "start_s": 491.35,
+      "text": "Yes, I'm sure I did. Guess I am failing to make your day worse now.",
+      "transcript_audit": {
+        "audio_sha256": "e4f7f5da93681c1f346da3d322855bcda0afea36120c2663bde59c4e5ffe4119",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 16,
+          "hypothesis_words": [
+            "yes",
+            "i",
+            "am",
+            "sure",
+            "i",
+            "did",
+            "guess",
+            "i",
+            "am",
+            "failing",
+            "to",
+            "make",
+            "your",
+            "day",
+            "worse",
+            "now"
+          ],
+          "insertions": 0,
+          "reference_word_count": 16,
+          "reference_words": [
+            "yes",
+            "i",
+            "am",
+            "sure",
+            "i",
+            "did",
+            "guess",
+            "i",
+            "am",
+            "failing",
+            "to",
+            "make",
+            "your",
+            "day",
+            "worse",
+            "now"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "Yes, I'm sure I did. Guess I'm failing to make your day worse now.",
+        "status": "accepted",
+        "text_sha256": "8e0f9cee42e1c43a48e796910bea8a9c7b1e64785a002e5663053dbe3cc89c2e",
+        "tiny_text": "Yes, I'm sure I did. Guess I am failing to make your day worse now."
+      },
+      "voice": "asmr7"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_031.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "b81e7b9950c2d4a03eb2bf6cc6a1b4cbbec169ba9c5143f5d53c1f1ba851c192",
+        "avg_logprob": -0.3774927854537964,
+        "compression_ratio": 0.84,
+        "mean_word_probability": 0.9160803125964271,
+        "min_word_probability": 0.6122235059738159,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        },
+        "no_speech_prob": 0.034419331699609756,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+        "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407",
+        "segments": [
+          {
+            "avg_logprob": -0.3774927854537964,
+            "compression_ratio": 0.84,
+            "end_s": 3.12,
+            "no_speech_prob": 0.034419331699609756,
+            "start_s": 0.0,
+            "text": "Come on, I know my kissing isn't that bad.",
+            "words": [
+              {
+                "end_s": 0.88,
+                "probability": 0.6122235059738159,
+                "start_s": 0.0,
+                "word": "Come"
+              },
+              {
+                "end_s": 1.32,
+                "probability": 0.9919930696487427,
+                "start_s": 0.88,
+                "word": "on,"
+              },
+              {
+                "end_s": 1.5,
+                "probability": 0.9384877681732178,
+                "start_s": 1.5,
+                "word": "I"
+              },
+              {
+                "end_s": 1.8,
+                "probability": 0.8638521432876587,
+                "start_s": 1.5,
+                "word": "know"
+              },
+              {
+                "end_s": 2.1,
+                "probability": 0.9888147711753845,
+                "start_s": 1.8,
+                "word": "my"
+              },
+              {
+                "end_s": 2.28,
+                "probability": 0.8999945521354675,
+                "start_s": 2.1,
+                "word": "kissing"
+              },
+              {
+                "end_s": 2.68,
+                "probability": 0.9536881148815155,
+                "start_s": 2.28,
+                "word": "isn't"
+              },
+              {
+                "end_s": 2.8,
+                "probability": 0.9970163106918335,
+                "start_s": 2.68,
+                "word": "that"
+              },
+              {
+                "end_s": 3.12,
+                "probability": 0.9986525774002075,
+                "start_s": 2.8,
+                "word": "bad."
+              }
+            ]
+          }
+        ],
+        "text": "Come on, I know my kissing isn't that bad.",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 10,
+          "hypothesis_words": [
+            "come",
+            "on",
+            "i",
+            "know",
+            "my",
+            "kissing",
+            "is",
+            "not",
+            "that",
+            "bad"
+          ],
+          "insertions": 0,
+          "reference_word_count": 10,
+          "reference_words": [
+            "come",
+            "on",
+            "i",
+            "know",
+            "my",
+            "kissing",
+            "is",
+            "not",
+            "that",
+            "bad"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "small_text": "Come on, I know my kissing isn't that bad.",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "Come on, I know my kissing isn't that bad."
+      },
+      "clip_tiny_text": "Come on, I know my kissing isn't that bad.",
+      "duration_s": 3.44,
+      "end_s": 503.49,
+      "family": "asmr7",
+      "id": "asmr7_repair_031",
+      "original_confidence": {
+        "avg_logprob": -0.388393,
+        "mean_word_probability": 0.8956200000000001,
+        "min_word_probability": 0.348831,
+        "no_speech_prob": 0.266851
+      },
+      "original_text": "Come on. know my kissing isn't that bad.",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "b81e7b9950c2d4a03eb2bf6cc6a1b4cbbec169ba9c5143f5d53c1f1ba851c192",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "Come on. know my kissing isn't that bad.",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+          "report_sha256": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json",
+          "report_sha256": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "reference_audio_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": null,
+        "overlaps": null,
+        "profile_interval": null,
+        "same_raw_source": false,
+        "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "status": "unknown_profile_origin_interval",
+        "target_interval": {
+          "end_s": 503.49,
+          "start_s": 500.05
+        }
+      },
+      "reference_profile_kind": "profile_audio_without_raw_interval",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_text": "Come on, I know my kissing isn't that bad.",
+      "speaker_id": "asmr7",
+      "speech_end_s": 503.34,
+      "speech_start_s": 500.2,
+      "split": "train",
+      "start_s": 500.05,
+      "text": "Come on, I know my kissing isn't that bad.",
+      "transcript_audit": {
+        "audio_sha256": "b81e7b9950c2d4a03eb2bf6cc6a1b4cbbec169ba9c5143f5d53c1f1ba851c192",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 10,
+          "hypothesis_words": [
+            "come",
+            "on",
+            "i",
+            "know",
+            "my",
+            "kissing",
+            "is",
+            "not",
+            "that",
+            "bad"
+          ],
+          "insertions": 0,
+          "reference_word_count": 10,
+          "reference_words": [
+            "come",
+            "on",
+            "i",
+            "know",
+            "my",
+            "kissing",
+            "is",
+            "not",
+            "that",
+            "bad"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "Come on, I know my kissing isn't that bad.",
+        "status": "accepted",
+        "text_sha256": "74d624cf92094091ebfcae98fd0f1e23c7ecdbd1369780961028c6fcf057ba45",
+        "tiny_text": "Come on, I know my kissing isn't that bad."
+      },
+      "voice": "asmr7"
+    }
+  ],
+  "accepted_count": 15,
+  "audit": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+  "command": [
+    "scripts/nano_lab/repair_dataset.py",
+    "stage",
+    "--proposal",
+    "artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+    "--audit",
+    "artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json",
+    "--output-dir",
+    "artifacts/nano_lab/dataset_repair_clip"
+  ],
+  "decoded_source": null,
+  "family": "asmr7",
+  "manifest_counts": {
+    "all": 15,
+    "train": 13,
+    "valid": 2
+  },
+  "min_train": 8,
+  "min_valid": 2,
+  "production_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/adaptation_repaired.json",
+  "proposal": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+  "protected_intervals": [
+    {
+      "end_s": 48.2,
+      "family": "asmr7",
+      "id": "asmr7_party_01",
+      "section": "references",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "start_s": 35.1
+    },
+    {
+      "end_s": 102.1,
+      "family": "asmr7",
+      "id": "asmr7_heldout_01",
+      "section": "heldout",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "start_s": 92.1
+    },
+    {
+      "end_s": 129.0,
+      "family": "asmr7",
+      "id": "asmr7_bully_01",
+      "section": "references",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "start_s": 117.7
+    },
+    {
+      "end_s": 151.2,
+      "family": "asmr7",
+      "id": "asmr7_bully_02",
+      "section": "references",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "start_s": 138.7
+    },
+    {
+      "end_s": 194.6,
+      "family": "asmr7",
+      "id": "asmr7_conversational_01",
+      "section": "references",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "start_s": 181.3
+    },
+    {
+      "end_s": 251.1,
+      "family": "asmr7",
+      "id": "asmr7_heldout_02",
+      "section": "heldout",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "start_s": 239.0
+    },
+    {
+      "end_s": 315.9,
+      "family": "asmr7",
+      "id": "asmr7_heldout_03",
+      "section": "heldout",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "start_s": 303.8
+    },
+    {
+      "end_s": 368.1,
+      "family": "asmr7",
+      "id": "asmr7_soft_praise_01",
+      "section": "references",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "start_s": 354.2
+    },
+    {
+      "end_s": 386.0,
+      "family": "asmr7",
+      "id": "asmr7_emotional_01",
+      "section": "references",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "start_s": 372.6
+    },
+    {
+      "end_s": 404.7,
+      "family": "asmr7",
+      "id": "asmr7_emotional_02",
+      "section": "references",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "start_s": 390.7
+    },
+    {
+      "end_s": 486.8,
+      "family": "asmr7",
+      "id": "asmr7_heldout_04",
+      "section": "heldout",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "start_s": 475.7
+    },
+    {
+      "end_s": 599.8,
+      "family": "asmr7",
+      "id": "asmr7_heldout_05",
+      "section": "heldout",
+      "source_id": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "start_s": 585.9
+    }
+  ],
+  "references_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "rejected": [
+    {
+      "consensus": {
+        "deletions": 2,
+        "hypothesis_word_count": 6,
+        "hypothesis_words": [
+          "whoa",
+          "easy",
+          "there",
+          "okay",
+          "i",
+          "swear"
+        ],
+        "insertions": 0,
+        "reference_word_count": 8,
+        "reference_words": [
+          "woah",
+          "we",
+          "are",
+          "easy",
+          "there",
+          "okay",
+          "i",
+          "swear"
+        ],
+        "substitutions": 1,
+        "wer": 0.375
+      },
+      "id": "asmr7_repair_001",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "Whoa, easy there. Okay, I swear.",
+      "tiny_text": "Woah, we're easy there. Okay, I swear."
+    },
+    {
+      "consensus": {
+        "deletions": 0,
+        "hypothesis_word_count": 11,
+        "hypothesis_words": [
+          "if",
+          "anyone",
+          "breaks",
+          "my",
+          "parents",
+          "vase",
+          "i",
+          "am",
+          "gonna",
+          "be",
+          "pissed"
+        ],
+        "insertions": 0,
+        "reference_word_count": 11,
+        "reference_words": [
+          "if",
+          "anyone",
+          "breaks",
+          "my",
+          "parents",
+          "face",
+          "i",
+          "am",
+          "gonna",
+          "be",
+          "pissed"
+        ],
+        "substitutions": 1,
+        "wer": 0.090909
+      },
+      "id": "asmr7_repair_002",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "If anyone breaks my parents' vase, I'm gonna be pissed.",
+      "tiny_text": "If anyone breaks my parents' face, I'm gonna be pissed."
+    },
+    {
+      "consensus": {
+        "deletions": 0,
+        "hypothesis_word_count": 20,
+        "hypothesis_words": [
+          "yes",
+          "i",
+          "hid",
+          "it",
+          "in",
+          "one",
+          "of",
+          "the",
+          "locked",
+          "rooms",
+          "but",
+          "you",
+          "know",
+          "steph",
+          "is",
+          "going",
+          "to",
+          "pick",
+          "the",
+          "lock"
+        ],
+        "insertions": 0,
+        "reference_word_count": 20,
+        "reference_words": [
+          "yes",
+          "i",
+          "hit",
+          "it",
+          "in",
+          "one",
+          "of",
+          "the",
+          "locked",
+          "rooms",
+          "but",
+          "you",
+          "know",
+          "stuff",
+          "is",
+          "going",
+          "to",
+          "pick",
+          "a",
+          "lot"
+        ],
+        "substitutions": 4,
+        "wer": 0.2
+      },
+      "id": "asmr7_repair_003",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "Yes, I hid it in one of the locked rooms, but you know Steph is going to pick the lock.",
+      "tiny_text": "Yes, I hit it in one of the locked rooms, but you know stuff is going to pick a lot."
+    },
+    {
+      "consensus": {
+        "deletions": 2,
+        "hypothesis_word_count": 12,
+        "hypothesis_words": [
+          "wow",
+          "there",
+          "is",
+          "the",
+          "game",
+          "has",
+          "been",
+          "the",
+          "bottle",
+          "going",
+          "on",
+          "already"
+        ],
+        "insertions": 1,
+        "reference_word_count": 13,
+        "reference_words": [
+          "oh",
+          "wow",
+          "there",
+          "is",
+          "a",
+          "game",
+          "that",
+          "is",
+          "been",
+          "the",
+          "bottle",
+          "going",
+          "already"
+        ],
+        "substitutions": 2,
+        "wer": 0.384615
+      },
+      "id": "asmr7_repair_004",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "Wow, there's the game has been the bottle going on already",
+      "tiny_text": "Oh, wow, there's a game that's been the bottle going already."
+    },
+    {
+      "consensus": {
+        "deletions": 0,
+        "hypothesis_word_count": 17,
+        "hypothesis_words": [
+          "alright",
+          "my",
+          "turn",
+          "let",
+          "me",
+          "see",
+          "who",
+          "the",
+          "lucky",
+          "person",
+          "that",
+          "gets",
+          "to",
+          "kiss",
+          "me",
+          "has",
+          "tonight"
+        ],
+        "insertions": 0,
+        "reference_word_count": 17,
+        "reference_words": [
+          "alright",
+          "my",
+          "turn",
+          "let",
+          "me",
+          "see",
+          "who",
+          "the",
+          "lucky",
+          "person",
+          "that",
+          "gets",
+          "to",
+          "kiss",
+          "me",
+          "as",
+          "tonight"
+        ],
+        "substitutions": 1,
+        "wer": 0.058824
+      },
+      "id": "asmr7_repair_009",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "Alright, my turn. Let me see who the lucky person that gets to kiss me has tonight.",
+      "tiny_text": "Alright, my turn. Let me see who the lucky person that gets to kiss me as tonight."
+    },
+    {
+      "consensus": {
+        "deletions": 1,
+        "hypothesis_word_count": 6,
+        "hypothesis_words": [
+          "do",
+          "not",
+          "worry",
+          "wait",
+          "hold",
+          "on"
+        ],
+        "insertions": 0,
+        "reference_word_count": 7,
+        "reference_words": [
+          "do",
+          "not",
+          "worry",
+          "wait",
+          "a",
+          "hold",
+          "on"
+        ],
+        "substitutions": 0,
+        "wer": 0.142857
+      },
+      "id": "asmr7_repair_012",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "Don't worry Wait, hold on",
+      "tiny_text": "Don't worry, wait a hold on."
+    },
+    {
+      "consensus": {
+        "deletions": 0,
+        "hypothesis_word_count": 19,
+        "hypothesis_words": [
+          "i",
+          "hate",
+          "you",
+          "because",
+          "you",
+          "are",
+          "a",
+          "nerd",
+          "a",
+          "loser",
+          "and",
+          "a",
+          "loner",
+          "who",
+          "keeps",
+          "cutting",
+          "in",
+          "my",
+          "way"
+        ],
+        "insertions": 1,
+        "reference_word_count": 18,
+        "reference_words": [
+          "i",
+          "hate",
+          "you",
+          "because",
+          "you",
+          "are",
+          "a",
+          "nerd",
+          "loser",
+          "and",
+          "a",
+          "loner",
+          "who",
+          "keeps",
+          "getting",
+          "in",
+          "my",
+          "way"
+        ],
+        "substitutions": 1,
+        "wer": 0.111111
+      },
+      "id": "asmr7_repair_016",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "I hate you because you're a nerd, a loser, and a loner who keeps cutting in my way.",
+      "tiny_text": "I hate you because you're a nerd loser and a loner who keeps getting in my way."
+    },
+    {
+      "consensus": {
+        "deletions": 0,
+        "hypothesis_word_count": 12,
+        "hypothesis_words": [
+          "school",
+          "after",
+          "school",
+          "at",
+          "the",
+          "park",
+          "and",
+          "now",
+          "at",
+          "my",
+          "own",
+          "party"
+        ],
+        "insertions": 1,
+        "reference_word_count": 11,
+        "reference_words": [
+          "school",
+          "after",
+          "school",
+          "at",
+          "the",
+          "park",
+          "and",
+          "now",
+          "my",
+          "own",
+          "party"
+        ],
+        "substitutions": 0,
+        "wer": 0.090909
+      },
+      "id": "asmr7_repair_017",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "school, after school, at the park, and now at my own party.",
+      "tiny_text": "school after school at the park, and now my own party."
+    },
+    {
+      "consensus": {
+        "deletions": 1,
+        "hypothesis_word_count": 17,
+        "hypothesis_words": [
+          "geez",
+          "i",
+          "put",
+          "out",
+          "into",
+          "the",
+          "universe",
+          "that",
+          "i",
+          "do",
+          "not",
+          "wanna",
+          "see",
+          "one",
+          "person",
+          "and",
+          "boom"
+        ],
+        "insertions": 1,
+        "reference_word_count": 17,
+        "reference_words": [
+          "cheese",
+          "i",
+          "put",
+          "out",
+          "into",
+          "the",
+          "universe",
+          "i",
+          "do",
+          "not",
+          "want",
+          "to",
+          "see",
+          "one",
+          "person",
+          "in",
+          "boom"
+        ],
+        "substitutions": 3,
+        "wer": 0.294118
+      },
+      "id": "asmr7_repair_018",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "Geez. I put out into the universe that I don't wanna see one person and boom.",
+      "tiny_text": "Cheese. I put out into the universe I don't want to see one person in boom."
+    },
+    {
+      "consensus": {
+        "deletions": 0,
+        "hypothesis_word_count": 9,
+        "hypothesis_words": [
+          "not",
+          "even",
+          "daddy",
+          "why",
+          "do",
+          "you",
+          "look",
+          "like",
+          "that"
+        ],
+        "insertions": 3,
+        "reference_word_count": 6,
+        "reference_words": [
+          "what",
+          "do",
+          "you",
+          "look",
+          "like",
+          "that"
+        ],
+        "substitutions": 1,
+        "wer": 0.666667
+      },
+      "id": "asmr7_repair_020",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "Not even, Daddy. Why do you look like that?",
+      "tiny_text": "What do you look like that?"
+    },
+    {
+      "id": "asmr7_repair_021",
+      "quality_reasons": [
+        "high_compression_ratio"
+      ],
+      "reasons": [
+        "clip_tiny_quality_rejection"
+      ]
+    },
+    {
+      "consensus": {
+        "deletions": 0,
+        "hypothesis_word_count": 14,
+        "hypothesis_words": [
+          "oh",
+          "well",
+          "when",
+          "i",
+          "usually",
+          "insult",
+          "you",
+          "you",
+          "just",
+          "throw",
+          "one",
+          "back",
+          "at",
+          "me"
+        ],
+        "insertions": 0,
+        "reference_word_count": 14,
+        "reference_words": [
+          "oh",
+          "well",
+          "when",
+          "i",
+          "usually",
+          "insult",
+          "you",
+          "you",
+          "just",
+          "throw",
+          "him",
+          "back",
+          "at",
+          "me"
+        ],
+        "substitutions": 1,
+        "wer": 0.071429
+      },
+      "id": "asmr7_repair_023",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "Oh, well, when I usually insult you, you just throw one back at me.",
+      "tiny_text": "Oh, well, when I usually insult you, you just throw him back at me."
+    },
+    {
+      "consensus": {
+        "deletions": 1,
+        "hypothesis_word_count": 15,
+        "hypothesis_words": [
+          "right",
+          "back",
+          "to",
+          "the",
+          "topic",
+          "because",
+          "you",
+          "just",
+          "want",
+          "to",
+          "hear",
+          "me",
+          "sing",
+          "your",
+          "praises"
+        ],
+        "insertions": 0,
+        "reference_word_count": 16,
+        "reference_words": [
+          "right",
+          "back",
+          "to",
+          "the",
+          "top",
+          "back",
+          "because",
+          "you",
+          "just",
+          "want",
+          "to",
+          "hear",
+          "me",
+          "sing",
+          "your",
+          "praises"
+        ],
+        "substitutions": 1,
+        "wer": 0.125
+      },
+      "id": "asmr7_repair_025",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "Right back to the topic because you just want to hear me sing your praises",
+      "tiny_text": "Right back to the top back because you just want to hear me sing your praises."
+    },
+    {
+      "consensus": {
+        "deletions": 0,
+        "hypothesis_word_count": 14,
+        "hypothesis_words": [
+          "you",
+          "are",
+          "a",
+          "dumber",
+          "than",
+          "i",
+          "originally",
+          "thought",
+          "shit",
+          "i",
+          "think",
+          "someone's",
+          "coming",
+          "in"
+        ],
+        "insertions": 0,
+        "reference_word_count": 14,
+        "reference_words": [
+          "you",
+          "are",
+          "a",
+          "temper",
+          "that",
+          "i",
+          "originally",
+          "thought",
+          "should",
+          "i",
+          "think",
+          "someone's",
+          "coming",
+          "in"
+        ],
+        "substitutions": 3,
+        "wer": 0.214286
+      },
+      "id": "asmr7_repair_026",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "You're a dumber than I originally thought. Shit, I think someone's coming in.",
+      "tiny_text": "You're a temper that I originally thought. Should I think someone's coming in?"
+    },
+    {
+      "consensus": {
+        "deletions": 1,
+        "hypothesis_word_count": 14,
+        "hypothesis_words": [
+          "i",
+          "am",
+          "gonna",
+          "shut",
+          "up",
+          "quick",
+          "kiss",
+          "me",
+          "yes",
+          "i",
+          "am",
+          "serious",
+          "kiss",
+          "me"
+        ],
+        "insertions": 0,
+        "reference_word_count": 15,
+        "reference_words": [
+          "i",
+          "am",
+          "gonna",
+          "shut",
+          "up",
+          "and",
+          "quick",
+          "kiss",
+          "me",
+          "yes",
+          "i",
+          "am",
+          "serious",
+          "kiss",
+          "me"
+        ],
+        "substitutions": 0,
+        "wer": 0.066667
+      },
+      "id": "asmr7_repair_027",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "I'm gonna shut up, quick, kiss me. Yes, I'm serious, kiss me.",
+      "tiny_text": "I'm gonna shut up and quick, kiss me. Yes, I'm serious, kiss me."
+    },
+    {
+      "consensus": {
+        "deletions": 0,
+        "hypothesis_word_count": 13,
+        "hypothesis_words": [
+          "we",
+          "need",
+          "to",
+          "like",
+          "make",
+          "them",
+          "go",
+          "away",
+          "and",
+          "they",
+          "find",
+          "us",
+          "talking"
+        ],
+        "insertions": 1,
+        "reference_word_count": 12,
+        "reference_words": [
+          "we",
+          "need",
+          "to",
+          "make",
+          "them",
+          "go",
+          "away",
+          "and",
+          "they",
+          "find",
+          "us",
+          "talking"
+        ],
+        "substitutions": 0,
+        "wer": 0.083333
+      },
+      "id": "asmr7_repair_028",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "We need to like make them go away and they find us talking.",
+      "tiny_text": "We need to make them go away and they find us talking."
+    },
+    {
+      "consensus": {
+        "deletions": 1,
+        "hypothesis_word_count": 15,
+        "hypothesis_words": [
+          "i",
+          "have",
+          "had",
+          "plenty",
+          "of",
+          "practice",
+          "and",
+          "a",
+          "large",
+          "majority",
+          "of",
+          "those",
+          "who",
+          "have",
+          "experienced"
+        ],
+        "insertions": 0,
+        "reference_word_count": 16,
+        "reference_words": [
+          "i",
+          "have",
+          "had",
+          "plenty",
+          "of",
+          "practice",
+          "and",
+          "a",
+          "lot",
+          "of",
+          "majority",
+          "of",
+          "those",
+          "who",
+          "have",
+          "experienced"
+        ],
+        "substitutions": 1,
+        "wer": 0.125
+      },
+      "id": "asmr7_repair_032",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "I have had plenty of practice, and a large majority of those who have experienced...",
+      "tiny_text": "I have had plenty of practice and a lot of majority of those who have experienced"
+    },
+    {
+      "consensus": {
+        "deletions": 0,
+        "hypothesis_word_count": 7,
+        "hypothesis_words": [
+          "oh",
+          "um",
+          "not",
+          "what",
+          "you",
+          "meant",
+          "gotcha"
+        ],
+        "insertions": 1,
+        "reference_word_count": 6,
+        "reference_words": [
+          "oh",
+          "um",
+          "not",
+          "we",
+          "meant",
+          "gotcha"
+        ],
+        "substitutions": 1,
+        "wer": 0.333333
+      },
+      "id": "asmr7_repair_033",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "Oh, um, not what you meant. Gotcha.",
+      "tiny_text": "Oh, um, not we meant, gotcha."
+    },
+    {
+      "consensus": {
+        "deletions": 0,
+        "hypothesis_word_count": 11,
+        "hypothesis_words": [
+          "i",
+          "rate",
+          "this",
+          "closet",
+          "experience",
+          "a",
+          "solid",
+          "7",
+          "out",
+          "of",
+          "10"
+        ],
+        "insertions": 0,
+        "reference_word_count": 11,
+        "reference_words": [
+          "i",
+          "read",
+          "this",
+          "closet",
+          "experience",
+          "a",
+          "solid",
+          "7",
+          "out",
+          "of",
+          "10"
+        ],
+        "substitutions": 1,
+        "wer": 0.090909
+      },
+      "id": "asmr7_repair_034",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "I rate this closet experience a solid 7 out of 10.",
+      "tiny_text": "I read this closet experience, a solid 7 out of 10"
+    }
+  ],
+  "rejected_count": 19,
+  "schema_version": 1,
+  "status": "accepted"
+}

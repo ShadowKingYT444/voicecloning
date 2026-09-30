@@ -1,0 +1,225 @@
+{
+  "adoption": {
+    "accepted_for_audio_evaluation": true,
+    "reason": "heldout loss improved beyond min_delta",
+    "release_status": "unreviewed",
+    "speaker_id": "asmr7"
+  },
+  "best_epoch": 6,
+  "best_valid_loss": 4.698817770531837,
+  "checkpoint": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adapter_asmr_mlp_rank2.pt",
+  "checkpoint_written": true,
+  "config": {
+    "alpha": 4.0,
+    "dropout": 0.05,
+    "module_shapes": {
+      "h.10.mlp.c_fc": {
+        "in_features": 768,
+        "out_features": 3072
+      },
+      "h.10.mlp.c_proj": {
+        "in_features": 3072,
+        "out_features": 768
+      },
+      "h.11.mlp.c_fc": {
+        "in_features": 768,
+        "out_features": 3072
+      },
+      "h.11.mlp.c_proj": {
+        "in_features": 3072,
+        "out_features": 768
+      },
+      "h.8.mlp.c_fc": {
+        "in_features": 768,
+        "out_features": 3072
+      },
+      "h.8.mlp.c_proj": {
+        "in_features": 3072,
+        "out_features": 768
+      },
+      "h.9.mlp.c_fc": {
+        "in_features": 768,
+        "out_features": 3072
+      },
+      "h.9.mlp.c_proj": {
+        "in_features": 3072,
+        "out_features": 768
+      }
+    },
+    "modules": [
+      "h.8.mlp.c_fc",
+      "h.8.mlp.c_proj",
+      "h.9.mlp.c_fc",
+      "h.9.mlp.c_proj",
+      "h.10.mlp.c_fc",
+      "h.10.mlp.c_proj",
+      "h.11.mlp.c_fc",
+      "h.11.mlp.c_proj"
+    ],
+    "rank": 2
+  },
+  "elapsed_seconds": 7.713982374996704,
+  "format": "nano_t3_adaptation_report_v1",
+  "history": [
+    {
+      "epoch": 0,
+      "objective": "initial heldout loss before optimizer steps",
+      "train": null,
+      "valid": {
+        "correct": 48,
+        "loss": 5.2547161021131155,
+        "perplexity": 191.46712102664506,
+        "token_accuracy": 0.1276595744680851,
+        "tokens": 376
+      }
+    },
+    {
+      "adapter_l2": 1e-05,
+      "epoch": 1,
+      "kl_coef": 0.05,
+      "kl_temperature": 1.0,
+      "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+      "train": {
+        "correct": 173,
+        "loss": 5.348430028572022,
+        "perplexity": 210.27790827550004,
+        "token_accuracy": 0.09187466808284653,
+        "tokens": 1883
+      },
+      "train_kl": 0.0009945573178764585,
+      "valid": {
+        "correct": 46,
+        "loss": 5.1690639232067355,
+        "perplexity": 175.75024473485058,
+        "token_accuracy": 0.12234042553191489,
+        "tokens": 376
+      }
+    },
+    {
+      "adapter_l2": 1e-05,
+      "epoch": 2,
+      "kl_coef": 0.05,
+      "kl_temperature": 1.0,
+      "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+      "train": {
+        "correct": 186,
+        "loss": 5.151446538723597,
+        "perplexity": 172.68109963601307,
+        "token_accuracy": 0.09877854487519915,
+        "tokens": 1883
+      },
+      "train_kl": 0.0324173597876127,
+      "valid": {
+        "correct": 49,
+        "loss": 4.960724883891166,
+        "perplexity": 142.6971973150985,
+        "token_accuracy": 0.13031914893617022,
+        "tokens": 376
+      }
+    },
+    {
+      "adapter_l2": 1e-05,
+      "epoch": 3,
+      "kl_coef": 0.05,
+      "kl_temperature": 1.0,
+      "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+      "train": {
+        "correct": 205,
+        "loss": 4.9060131461457,
+        "perplexity": 135.0997164496543,
+        "token_accuracy": 0.1088688263409453,
+        "tokens": 1883
+      },
+      "train_kl": 0.18470257633443343,
+      "valid": {
+        "correct": 49,
+        "loss": 4.8124502998717285,
+        "perplexity": 123.03271552347918,
+        "token_accuracy": 0.13031914893617022,
+        "tokens": 376
+      }
+    },
+    {
+      "adapter_l2": 1e-05,
+      "epoch": 4,
+      "kl_coef": 0.05,
+      "kl_temperature": 1.0,
+      "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+      "train": {
+        "correct": 214,
+        "loss": 4.778629048479661,
+        "perplexity": 118.94117563270237,
+        "token_accuracy": 0.11364843335103558,
+        "tokens": 1883
+      },
+      "train_kl": 0.382301986660656,
+      "valid": {
+        "correct": 53,
+        "loss": 4.756070930907067,
+        "perplexity": 116.28812304827741,
+        "token_accuracy": 0.14095744680851063,
+        "tokens": 376
+      }
+    },
+    {
+      "adapter_l2": 1e-05,
+      "epoch": 5,
+      "kl_coef": 0.05,
+      "kl_temperature": 1.0,
+      "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+      "train": {
+        "correct": 231,
+        "loss": 4.705491670698671,
+        "perplexity": 110.55262707455509,
+        "token_accuracy": 0.12267657992565056,
+        "tokens": 1883
+      },
+      "train_kl": 0.46652398032516607,
+      "valid": {
+        "correct": 54,
+        "loss": 4.722878121315165,
+        "perplexity": 112.49155153019801,
+        "token_accuracy": 0.14361702127659576,
+        "tokens": 376
+      }
+    },
+    {
+      "adapter_l2": 1e-05,
+      "epoch": 6,
+      "kl_coef": 0.05,
+      "kl_temperature": 1.0,
+      "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+      "train": {
+        "correct": 244,
+        "loss": 4.650153954739401,
+        "perplexity": 104.60108817081746,
+        "token_accuracy": 0.1295804567180032,
+        "tokens": 1883
+      },
+      "train_kl": 0.5033246007962108,
+      "valid": {
+        "correct": 53,
+        "loss": 4.698817770531837,
+        "perplexity": 109.81726646938023,
+        "token_accuracy": 0.14095744680851063,
+        "tokens": 376
+      }
+    }
+  ],
+  "initial_valid": {
+    "correct": 48,
+    "loss": 5.2547161021131155,
+    "perplexity": 191.46712102664506,
+    "token_accuracy": 0.1276595744680851,
+    "tokens": 376
+  },
+  "parameter_counts": {
+    "adapter_trainable": 61440,
+    "s3gen_frozen": 0,
+    "t3_total": 140308643,
+    "voice_encoder_frozen": 0
+  },
+  "peak_rss_mib": 2009.14453125,
+  "resume": null,
+  "training_loader": "t3_only_cached_features; acoustic/reference encoders not loaded"
+}

@@ -1,0 +1,24 @@
+{
+  "command": [
+    "scripts/nano_lab/codec_diagnostics.py",
+    "source-mel",
+    "--id",
+    "asmr7_train_01"
+  ],
+  "elapsed_seconds": 8.58925175666809,
+  "resources": {
+    "peak_rss_bytes": 416251904,
+    "rss_bytes": 417144832
+  },
+  "result": {
+    "id": "asmr7_train_01",
+    "mel": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/asmr7_train_01.source_mel.npz",
+    "mel_shape": [
+      1,
+      80,
+      300
+    ],
+    "synthetic_tts": false
+  },
+  "status": "ok"
+}

@@ -1,0 +1,59 @@
+{
+  "examples": {
+    "inputs": 2,
+    "outputs": 1,
+    "path": "examples.npz"
+  },
+  "export_seconds": 0.10713195099924633,
+  "graph": {
+    "bytes": 4210,
+    "inputs": [
+      "magnitude",
+      "phase"
+    ],
+    "nodes": 34,
+    "opset": 18,
+    "outputs": [
+      "audio"
+    ],
+    "path": "nano_istft_real.onnx"
+  },
+  "kind": "istft",
+  "parameters": {
+    "center": true,
+    "hop_length": 4,
+    "n_fft": 16,
+    "normalization": "unnormalized DFT + overlap window-square envelope",
+    "one_sided": true,
+    "pad_mode": "reflect",
+    "periodic_hann": true
+  },
+  "schema_version": 1,
+  "stage": "istft",
+  "status": "exported",
+  "torch_peak_rss_bytes": 560590848,
+  "verification": {
+    "errors": [],
+    "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_spectral/istft/nano_istft_real.onnx",
+    "inference_seconds": 0.004404298999361345,
+    "inputs": [
+      "magnitude",
+      "phase"
+    ],
+    "max_abs_error": 1.4901161193847656e-08,
+    "max_relative_error": 2.596663919095178e-06,
+    "method": "pure ORT CPU against Torch reference saved during export",
+    "outputs": 1,
+    "peak_rss_bytes": 67698688,
+    "provider": "CPUExecutionProvider",
+    "rss_after_session_bytes": 67465216,
+    "rss_before_session_bytes": 67399680,
+    "session_load_seconds": 0.011690010000165785,
+    "stage": "istft",
+    "status": "verified",
+    "tolerances": {
+      "atol": 3e-05,
+      "rtol": 3e-05
+    }
+  }
+}

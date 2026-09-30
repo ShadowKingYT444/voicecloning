@@ -1,0 +1,100 @@
+{
+  "human_listening": false,
+  "paired_results": [
+    {
+      "profile": "asmr_conversational",
+      "variant": "noise",
+      "successful_pairs": 6,
+      "planned_cases": 6,
+      "asr_small_exact": 5,
+      "similarity": {
+        "baseline_mean": 0.8681993333333333,
+        "candidate_mean": 0.8651275,
+        "paired_mean_delta": -0.0030718333333333105
+      },
+      "dnsmos_overall": {
+        "baseline_mean": 2.71611531378103,
+        "candidate_mean": 2.791328782660326,
+        "paired_mean_delta": 0.07521346887929632
+      },
+      "dnsmos_background": {
+        "baseline_mean": 3.654178268899157,
+        "candidate_mean": 3.728509926509096,
+        "paired_mean_delta": 0.0743316576099391
+      }
+    },
+    {
+      "profile": "asmr_conversational",
+      "variant": "delta",
+      "successful_pairs": 6,
+      "planned_cases": 6,
+      "asr_small_exact": 6,
+      "similarity": {
+        "baseline_mean": 0.8681993333333333,
+        "candidate_mean": 0.8676321666666666,
+        "paired_mean_delta": -0.0005671666666666741
+      },
+      "dnsmos_overall": {
+        "baseline_mean": 2.71611531378103,
+        "candidate_mean": 3.1987879717335255,
+        "paired_mean_delta": 0.48267265795249586
+      },
+      "dnsmos_background": {
+        "baseline_mean": 3.654178268899157,
+        "candidate_mean": 3.9276892735375823,
+        "paired_mean_delta": 0.2735110046384253
+      }
+    },
+    {
+      "profile": "asmr_soft",
+      "variant": "noise",
+      "successful_pairs": 6,
+      "planned_cases": 6,
+      "asr_small_exact": 6,
+      "similarity": {
+        "baseline_mean": 0.8380253333333333,
+        "candidate_mean": 0.8387121666666666,
+        "paired_mean_delta": 0.0006868333333333217
+      },
+      "dnsmos_overall": {
+        "baseline_mean": 3.1625493232843347,
+        "candidate_mean": 3.0628009426616956,
+        "paired_mean_delta": -0.09974838062263891
+      },
+      "dnsmos_background": {
+        "baseline_mean": 3.9099401646266183,
+        "candidate_mean": 3.7928272782690655,
+        "paired_mean_delta": -0.11711288635755257
+      }
+    },
+    {
+      "profile": "asmr_soft",
+      "variant": "delta",
+      "successful_pairs": 5,
+      "planned_cases": 6,
+      "asr_small_exact": 5,
+      "similarity": {
+        "baseline_mean": 0.841753,
+        "candidate_mean": 0.8240684,
+        "paired_mean_delta": -0.017684599999999984
+      },
+      "dnsmos_overall": {
+        "baseline_mean": 3.162177278166023,
+        "candidate_mean": 3.1825090810980803,
+        "paired_mean_delta": 0.020331802932057476
+      },
+      "dnsmos_background": {
+        "baseline_mean": 3.884797935165299,
+        "candidate_mean": 3.884950636825374,
+        "paired_mean_delta": 0.00015270166007530506
+      }
+    }
+  ],
+  "decisions": [
+    "Keep stock acoustic noise for both profiles: noise scaling did not consistently improve identity and quality.",
+    "Conversational learned speaker delta advances to additional held-out text tests. It is a fitted variant, not zero-shot. Six successful clips passed Whisper-small exact normalized text; identity mean changed -0.0006, quality proxy +0.4827.",
+    "Reject speaker delta for soft profile: one runaway generation and lower identity on the five completed pairs.",
+    "Keep isolated Harvey reference: alternative reference mixing has initial-word recognition failures. Numeric 9 versus nine is a scoring artifact in six meeting clips, not evidence of incorrect speech.",
+    "No model score verifies perceived realism, full vocal richness, or absence of audible artifacts."
+  ]
+}

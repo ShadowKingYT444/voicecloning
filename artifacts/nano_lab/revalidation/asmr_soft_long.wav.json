@@ -1,0 +1,124 @@
+{
+  "synthetic": true,
+  "profile": "/home/terryd/gooning/voicecloning/voices/nano/asmr_soft.json",
+  "device": "cuda",
+  "dtype": "fp32",
+  "seed": 31,
+  "load_and_prepare_seconds": 4.475494592003088,
+  "runtime_load_report": {
+    "optimized": true,
+    "device": "cuda",
+    "dtype": "torch.float32",
+    "decoder": "meanflow",
+    "implementation_sha256": "74ca7629d3e2460943b747519f8bda3449115202c85072c897bafee2f44532af",
+    "ve": {
+      "skipped": true,
+      "reason": "conditionals_path supplied"
+    },
+    "t3": {
+      "loaded_tensors": 153,
+      "skipped_tensors": 2,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": [],
+      "removed_parameters": [
+        "tfmr.wte",
+        "text_head"
+      ]
+    },
+    "precision_policy": {
+      "t3": "torch.float32",
+      "s3gen": "torch.float32"
+    },
+    "s3gen": {
+      "loaded_tensors": 1450,
+      "skipped_tensors": 1041,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": []
+    },
+    "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_soft_morning_31.conds.pt",
+    "parameters": {
+      "t3": 140247203,
+      "s3gen": 135467807,
+      "ve": 0
+    },
+    "load_seconds": 4.4730166850022215,
+    "engine": {
+      "optimized": true,
+      "dtype": "torch.float32",
+      "device": "cuda",
+      "decoder": "meanflow"
+    }
+  },
+  "ready_rss_mib": 1451.5078125,
+  "segments": [
+    {
+      "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us. There is no need to rush.",
+      "seconds": 11.0,
+      "generation_and_master_seconds": 6.456261751001875,
+      "rtf": 0.586932886454716,
+      "processing": {
+        "highpass_hz": 45,
+        "gain_db": 4.381747235275768,
+        "target_lufs": -19,
+        "achieved_lufs": -21.40212665492585,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      }
+    },
+    {
+      "text": "Take a seat by the window while I find the notebook. Yesterday we made a list of places to visit.",
+      "seconds": 5.52,
+      "generation_and_master_seconds": 2.3053916589997243,
+      "rtf": 0.41764341648545733,
+      "processing": {
+        "highpass_hz": 45,
+        "gain_db": 1.8987564234336687,
+        "target_lufs": -19,
+        "achieved_lufs": -22.35331983072134,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      }
+    },
+    {
+      "text": "The old bookshop opens at ten, and the garden stays open until sunset. We can walk along the river after lunch.",
+      "seconds": 8.04,
+      "generation_and_master_seconds": 2.794681652998406,
+      "rtf": 0.3475972205221899,
+      "processing": {
+        "highpass_hz": 45,
+        "gain_db": 1.4628235617484453,
+        "target_lufs": -19,
+        "achieved_lufs": -21.46300508141285,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      }
+    },
+    {
+      "text": "If the weather changes, we will come back here and finish the story together.",
+      "seconds": 4.28,
+      "generation_and_master_seconds": 2.0393368959994405,
+      "rtf": 0.47648058317743935,
+      "processing": {
+        "highpass_hz": 45,
+        "gain_db": 0.4126853728021218,
+        "target_lufs": -19,
+        "achieved_lufs": -24.112541576380114,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      }
+    }
+  ],
+  "length_limit_retries": [],
+  "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/revalidation/asmr_soft_long.wav",
+  "audio_seconds": 29.14,
+  "total_seconds": 18.08266176700272,
+  "rss_mib": 2473.2734375,
+  "peak_rss_mib": 2471.78515625,
+  "cuda_peak_allocated_mib": 1664.5810546875
+}

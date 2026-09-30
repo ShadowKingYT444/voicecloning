@@ -1,0 +1,169 @@
+{
+  "output_dir": "artifacts/nano_lab/confirm_asmr",
+  "threads": 2,
+  "optimized_loader": true,
+  "cases": [
+    {
+      "id": "asmr_conversational_morning_31",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "temperature": 0.8,
+      "seed": 31,
+      "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "steps": 2,
+      "save_conditionals": true
+    },
+    {
+      "id": "asmr_conversational_morning_47",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "temperature": 0.8,
+      "seed": 47,
+      "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "steps": 2,
+      "save_conditionals": false
+    },
+    {
+      "id": "asmr_conversational_question_31",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "temperature": 0.8,
+      "seed": 31,
+      "text": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it.",
+      "steps": 2,
+      "save_conditionals": false
+    },
+    {
+      "id": "asmr_conversational_question_47",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "temperature": 0.8,
+      "seed": 47,
+      "text": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it.",
+      "steps": 2,
+      "save_conditionals": false
+    },
+    {
+      "id": "asmr_conversational_reassurance_31",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "temperature": 0.8,
+      "seed": 31,
+      "text": "You do not need to solve everything tonight. Choose one small step, give yourself a little space, and we can begin again tomorrow.",
+      "steps": 2,
+      "save_conditionals": false
+    },
+    {
+      "id": "asmr_conversational_reassurance_47",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "temperature": 0.8,
+      "seed": 47,
+      "text": "You do not need to solve everything tonight. Choose one small step, give yourself a little space, and we can begin again tomorrow.",
+      "steps": 2,
+      "save_conditionals": false
+    },
+    {
+      "id": "asmr_soft_morning_31",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 31,
+      "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "steps": 2,
+      "save_conditionals": true
+    },
+    {
+      "id": "asmr_soft_morning_47",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 47,
+      "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "steps": 2,
+      "save_conditionals": false
+    },
+    {
+      "id": "asmr_soft_question_31",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 31,
+      "text": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it.",
+      "steps": 2,
+      "save_conditionals": false
+    },
+    {
+      "id": "asmr_soft_question_47",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 47,
+      "text": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it.",
+      "steps": 2,
+      "save_conditionals": false
+    },
+    {
+      "id": "asmr_soft_reassurance_31",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 31,
+      "text": "You do not need to solve everything tonight. Choose one small step, give yourself a little space, and we can begin again tomorrow.",
+      "steps": 2,
+      "save_conditionals": false
+    },
+    {
+      "id": "asmr_soft_reassurance_47",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 47,
+      "text": "You do not need to solve everything tonight. Choose one small step, give yourself a little space, and we can begin again tomorrow.",
+      "steps": 2,
+      "save_conditionals": false
+    },
+    {
+      "id": "asmr_intimate_morning_31",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__natural.wav",
+      "temperature": 0.8,
+      "seed": 31,
+      "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "steps": 2,
+      "save_conditionals": true
+    },
+    {
+      "id": "asmr_intimate_morning_47",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__natural.wav",
+      "temperature": 0.8,
+      "seed": 47,
+      "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "steps": 2,
+      "save_conditionals": false
+    },
+    {
+      "id": "asmr_intimate_question_31",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__natural.wav",
+      "temperature": 0.8,
+      "seed": 31,
+      "text": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it.",
+      "steps": 2,
+      "save_conditionals": false
+    },
+    {
+      "id": "asmr_intimate_question_47",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__natural.wav",
+      "temperature": 0.8,
+      "seed": 47,
+      "text": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it.",
+      "steps": 2,
+      "save_conditionals": false
+    },
+    {
+      "id": "asmr_intimate_reassurance_31",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__natural.wav",
+      "temperature": 0.8,
+      "seed": 31,
+      "text": "You do not need to solve everything tonight. Choose one small step, give yourself a little space, and we can begin again tomorrow.",
+      "steps": 2,
+      "save_conditionals": false
+    },
+    {
+      "id": "asmr_intimate_reassurance_47",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__natural.wav",
+      "temperature": 0.8,
+      "seed": 47,
+      "text": "You do not need to solve everything tonight. Choose one small step, give yourself a little space, and we can begin again tomorrow.",
+      "steps": 2,
+      "save_conditionals": false
+    }
+  ]
+}

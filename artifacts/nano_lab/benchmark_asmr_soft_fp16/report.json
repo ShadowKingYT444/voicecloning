@@ -1,0 +1,138 @@
+{
+  "voice": "asmr_soft",
+  "dtype": "fp16",
+  "device": "cuda",
+  "cpu_threads": 2,
+  "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+  "seed": 31,
+  "acoustic_seed": 10031,
+  "profile": {
+    "label": "ASMR soft",
+    "mode": "zero_shot",
+    "status": "candidate_under_validation",
+    "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+    "conditioning_cache": "artifacts/nano_lab/sweep_round2/asmr_soft_morning_31.conds.pt",
+    "decoder": "meanflow",
+    "steps": 2,
+    "cuda_dtype": "fp32",
+    "sampling": {
+      "temperature": 0.65,
+      "top_p": 0.95,
+      "top_k": 1000,
+      "repetition_penalty": 1.2
+    },
+    "source_case": "asmr_soft_morning_31",
+    "watermark": true
+  },
+  "conditioning_sha256": "e6b44fc6e20bfeccbbcca7c68ddccede2618706ed3349878fcedd9b7d70ad5da",
+  "before_load": {
+    "rss_mib": 856.62890625,
+    "process_peak_rss_mib": 856.85546875,
+    "gpu_allocated_mib": 0.0,
+    "gpu_peak_allocated_mib": 0.0
+  },
+  "runs": [
+    {
+      "id": "asmr_soft_fp16_0",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/benchmark_asmr_soft_fp16/asmr_soft_fp16_0.wav",
+      "voice": "asmr7",
+      "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "phase": "first",
+      "generation_seconds": 9.554679959999703,
+      "seconds": 8.36,
+      "rtf": 1.1429043014353713,
+      "token_count": 209,
+      "audio_sha256": "1dcdae710e74b06ad98ffe0d996e82d54418733d0f5c38ae4261516ccb638bed",
+      "rss_mib": 2620.265625,
+      "process_peak_rss_mib": 2618.26171875,
+      "gpu_allocated_mib": 1620.1806640625,
+      "gpu_peak_allocated_mib": 2116.15185546875
+    },
+    {
+      "id": "asmr_soft_fp16_1",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/benchmark_asmr_soft_fp16/asmr_soft_fp16_1.wav",
+      "voice": "asmr7",
+      "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "phase": "warm",
+      "generation_seconds": 4.264468183000645,
+      "seconds": 8.36,
+      "rtf": 0.5101038496412255,
+      "token_count": 209,
+      "audio_sha256": "1dcdae710e74b06ad98ffe0d996e82d54418733d0f5c38ae4261516ccb638bed",
+      "rss_mib": 2620.94921875,
+      "process_peak_rss_mib": 2618.90625,
+      "gpu_allocated_mib": 1620.1806640625,
+      "gpu_peak_allocated_mib": 2116.15185546875
+    },
+    {
+      "id": "asmr_soft_fp16_2",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/benchmark_asmr_soft_fp16/asmr_soft_fp16_2.wav",
+      "voice": "asmr7",
+      "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "phase": "warm",
+      "generation_seconds": 4.929604766999546,
+      "seconds": 8.36,
+      "rtf": 0.5896656419855917,
+      "token_count": 209,
+      "audio_sha256": "1dcdae710e74b06ad98ffe0d996e82d54418733d0f5c38ae4261516ccb638bed",
+      "rss_mib": 2621.03515625,
+      "process_peak_rss_mib": 2618.90625,
+      "gpu_allocated_mib": 1620.1806640625,
+      "gpu_peak_allocated_mib": 2116.15185546875
+    }
+  ],
+  "resource_policy": "3 GiB cgroup maximum, no swap, CPUQuota 200%, nice 10",
+  "load_seconds": 7.900358037999467,
+  "loaded": {
+    "rss_mib": 1421.25,
+    "process_peak_rss_mib": 1830.84765625,
+    "gpu_allocated_mib": 1610.54736328125,
+    "gpu_peak_allocated_mib": 2116.15185546875
+  },
+  "runtime_load_report": {
+    "optimized": true,
+    "device": "cuda",
+    "dtype": "torch.float16",
+    "decoder": "meanflow",
+    "ve": {
+      "skipped": true,
+      "reason": "conditionals_path supplied"
+    },
+    "t3": {
+      "loaded_tensors": 153,
+      "skipped_tensors": 2,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": [],
+      "removed_parameters": [
+        "tfmr.wte",
+        "text_head"
+      ]
+    },
+    "precision_policy": {
+      "t3": "torch.float16",
+      "s3gen": "torch.float32"
+    },
+    "s3gen": {
+      "loaded_tensors": 1450,
+      "skipped_tensors": 1041,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": []
+    },
+    "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_soft_morning_31.conds.pt",
+    "parameters": {
+      "t3": 140247203,
+      "s3gen": 135467807,
+      "ve": 0
+    },
+    "load_seconds": 7.899315482998645,
+    "engine": {
+      "optimized": true,
+      "dtype": "torch.float16",
+      "device": "cuda",
+      "decoder": "meanflow"
+    }
+  },
+  "warm_mean_rtf": 0.5498847458134086
+}

@@ -1,0 +1,100 @@
+{
+  "elapsed_seconds": 24.13352131843567,
+  "error": "RuntimeError: stage tokens failed with return code 1",
+  "experimental_t3": true,
+  "experimental_t3_limitation": "The long T3 reference at sequence length 400 is not within the strict 3e-4 cache gate: 176 of 7.4M cache values exceeded the gate (max abs 0.000989; relative L2 1.44e-5). Logits, lengths 32/128, and decode cases passed. This integration run is experimental and does not claim full numerical T3 verification.",
+  "finished_unix": 1790699160.5396152,
+  "model_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged",
+  "model_manifest_sha256": {
+    "flow_encoder": "a9e6d3ab0a0c1bfd721a95e9012beddaa5eb55d25fb75829d904aca1ea9645b2",
+    "meanflow_estimator": "5fa7bfb0dde0a818f50518b6d5b157f5d2998f04137f2137ae47c7b09cba9c7c",
+    "t3": "f4d0570d14a17f278f12d89000f32193d9ac0e12dca3b7468ce8f718f015fbcc",
+    "vocoder": "9d4fc85a206c8b7a1326ad0194317ac98cac7665cc7dac23c5ac83a06a562e69"
+  },
+  "numpy_sampler": "not Torch-identical",
+  "ort_profile": true,
+  "ort_profiles": [
+    {
+      "profile_path": null,
+      "stage": "prepare",
+      "status": "not_requested"
+    },
+    {
+      "profile_path": null,
+      "stage": "tokens",
+      "status": "not_requested"
+    }
+  ],
+  "ort_provider": "cuda",
+  "ort_provider_options": {
+    "arena_extend_strategy": "kSameAsRequested",
+    "cuda_device_id": 0,
+    "cudnn_conv_algo_search": "HEURISTIC",
+    "do_copy_in_default_stream": true,
+    "gpu_mem_limit_mib": 2048
+  },
+  "pipeline_source_sha256": "1cb131cd4e76cfca876e294723762200876db469862550a10f5a719e43d1bddd",
+  "python_executable": "/home/terryd/gooning/voicecloning/.venv-nano-ort/bin/python",
+  "rss_sample_interval_seconds": 0.1,
+  "run_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/soft_cuda_retry",
+  "sampled_peak_tree_rss_bytes": 1245351936,
+  "schema_version": 1,
+  "seed": 31,
+  "stages": [
+    {
+      "elapsed_seconds": 3.2846977710723877,
+      "finished_unix": 1790699140.0108864,
+      "ort_profile": {
+        "profile_path": null,
+        "status": "not_requested"
+      },
+      "parent_elapsed_seconds": 4.342718839645386,
+      "result": {
+        "conditioning_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_soft_morning_31.conds.pt",
+        "field_count": 7,
+        "mode": "zero_shot",
+        "profile": "/home/terryd/gooning/voicecloning/voices/nano/asmr_soft.json",
+        "skipped_optional_fields": [
+          "t3.clap_emb",
+          "t3.cond_prompt_speech_emb",
+          "gen.prompt_feat_len"
+        ]
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 235036672,
+        "rss_bytes": 235712512
+      },
+      "sampled_peak_tree_rss_bytes": 277131264,
+      "schema_version": 1,
+      "stage": "prepare",
+      "started_unix": 1790699136.7261899,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 17.383105278015137,
+      "error": "RuntimeException: [ONNXRuntimeError] : 6 : RUNTIME_EXCEPTION : Non-zero status code returned while running Cast node. Name:'/Cast_80' Status Message: /onnxruntime_src/onnxruntime/core/framework/bfc_arena.cc:358 void* onnxruntime::BFCArena::AllocateRawInternal(size_t, bool, onnxruntime::Stream*) Available memory of 827648 is smaller than requested bytes of 1640448\n",
+      "finished_unix": 1790699158.50243,
+      "ort_profile": {
+        "profile_path": null,
+        "status": "not_requested"
+      },
+      "parent_elapsed_seconds": 19.781291723251343,
+      "returncode": 1,
+      "rss": {
+        "peak_rss_bytes": 1206763520,
+        "rss_bytes": 1207586816
+      },
+      "sampled_peak_tree_rss_bytes": 1245351936,
+      "schema_version": 1,
+      "stage": "tokens",
+      "started_unix": 1790699141.1193275,
+      "status": "error",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_pipeline.py\", line 1013, in _dispatch_stage\n    result = functions[stage_name](args)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_pipeline.py\", line 558, in stage_tokens\n    return _run_t3_generation(args, token_config_path=stage / \"config.json\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_pipeline.py\", line 644, in _run_t3_generation\n    logits, cache = runtime.decode(next_embed, np.asarray([cache[0].shape[2]], dtype=np.int64), cache)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_staged_runtime.py\", line 439, in decode\n    result = self._run(\n             ^^^^^^^^^^\n  File \"/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_staged_runtime.py\", line 327, in _run\n    outputs = tuple(np.asarray(value) for value in self.session.run(list(self.output_names), dict(feeds)))\n                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/terryd/gooning/voicecloning/.venv-nano-ort/lib/python3.12/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py\", line 322, in run\n    return self._sess.run(output_names, input_feed, run_options)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nonnxruntime.capi.onnxruntime_pybind11_state.RuntimeException: [ONNXRuntimeError] : 6 : RUNTIME_EXCEPTION : Non-zero status code returned while running Cast node. Name:'/Cast_80' Status Message: /onnxruntime_src/onnxruntime/core/framework/bfc_arena.cc:358 void* onnxruntime::BFCArena::AllocateRawInternal(size_t, bool, onnxruntime::Stream*) Available memory of 827648 is smaller than requested bytes of 1640448\n\n"
+    }
+  ],
+  "status": "error",
+  "supplied_tokens_mode": false,
+  "traceback": "Traceback (most recent call last):\n  File \"/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_pipeline.py\", line 1225, in _run_pipeline\n    raise RuntimeError(f\"stage {command} failed with return code {returncode}\")\nRuntimeError: stage tokens failed with return code 1\n",
+  "voice": "asmr_soft"
+}

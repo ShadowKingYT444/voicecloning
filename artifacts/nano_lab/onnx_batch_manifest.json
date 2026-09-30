@@ -1,0 +1,20 @@
+[
+  {
+    "id": "soft_cold",
+    "voice": "asmr_soft",
+    "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+    "seed": 31
+  },
+  {
+    "id": "soft_warm_repeat",
+    "voice": "asmr_soft",
+    "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+    "seed": 31
+  },
+  {
+    "id": "soft_warm_new",
+    "voice": "asmr_soft",
+    "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+    "seed": 47
+  }
+]

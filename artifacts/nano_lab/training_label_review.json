@@ -1,0 +1,77 @@
+{
+  "role": "training_label_audit",
+  "human_verified": false,
+  "rows": [
+    {
+      "id": "asmr7_train_01",
+      "cached_text": "So as the one throwing the party, and it also being my party, I would like to announce.",
+      "small": "Okay, gather around everybody. Great. So, as the one throwing the party,",
+      "tiny": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+      "small_wer_against_cache": 0.888889
+    },
+    {
+      "id": "asmr7_train_02",
+      "cached_text": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+      "small": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+      "tiny": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+      "small_wer_against_cache": 0.0
+    },
+    {
+      "id": "asmr7_train_03",
+      "cached_text": "I'll be nice enough to let whoever started the game up to go on first.",
+      "small": "I'll be nice enough to let whoever started the game up to go on first.",
+      "tiny": "I'll be nice enough to let whoever start of the game up, too. Go on first.",
+      "small_wer_against_cache": 0.0
+    },
+    {
+      "id": "asmr7_train_04",
+      "cached_text": "It's my birthday, so they better make these seven minutes worth it. Please be cute.",
+      "small": "It's my birthday, so they better make these seven minutes worth it.",
+      "tiny": "It's my birthday, so they better make these seven minutes worth it.",
+      "small_wer_against_cache": 0.1875
+    },
+    {
+      "id": "asmr7_train_05",
+      "cached_text": "What did I do to end up here with you? I know I spun the bottle. Fucking dumbass.",
+      "small": "What did I do to end up here with you? I know I spun the bottle. Fucking dumbass.",
+      "tiny": "What did I do to end up here with you? I knew I spun the bottle. Fucking dumbass.",
+      "small_wer_against_cache": 0.0
+    },
+    {
+      "id": "asmr7_train_06",
+      "cached_text": "For some reason, you're here now, and stuck in a closet with me.",
+      "small": "some reason you're here now and stuck in a closet with me. I'm not sure if this is more torture for me or",
+      "tiny": "some reason you're here now and stuck in a closet with me. I'm not sure this is more torture for me.",
+      "small_wer_against_cache": 0.928571
+    },
+    {
+      "id": "asmr7_train_07",
+      "cached_text": "And I hate you, you're too perfect, like untouchable by misfortune.",
+      "small": "I hate you. You're too perfect. Like untouchable by misfortune.",
+      "tiny": "I hate you, you're too perfect, like untouchable by misfortune.",
+      "small_wer_against_cache": 0.083333
+    },
+    {
+      "id": "asmr7_train_08",
+      "cached_text": "The fact is, when I see you, I see this cute little perfect being who lives in a bubble.",
+      "small": "The fact is, when I see you, I see you.",
+      "tiny": "The fact is, when I see you, I see you.",
+      "small_wer_against_cache": 0.526316
+    },
+    {
+      "id": "asmr7_train_09",
+      "cached_text": "Okay, what I'm trying to say is that you made me jealous, that you live in this perfect world.",
+      "small": "Okay, what I'm trying to say is that you made me jump.",
+      "tiny": "Okay, what I'm trying to say is that you made me chill.",
+      "small_wer_against_cache": 0.4
+    },
+    {
+      "id": "asmr7_valid_04",
+      "cached_text": "Thanks. Wait, that better not be implying I'm also a nerd because I will take back all the nice things I said about you.",
+      "small": "Thanks. Wait, that better not be implying that I'm also a nerd because I won't take back all the nice things I said about you. I am not a nerd. And you know what?",
+      "tiny": "Thanks. Wait, that better not be implying that I'm also a nerd because I will take back all the nice things I said about you. I am not a nerd. And you know it.",
+      "small_wer_against_cache": 0.44
+    }
+  ],
+  "decision": "Reject old cache for fitting. Rebuild word-aligned source clips and audit each accepted pair. Preserve old artifacts."
+}

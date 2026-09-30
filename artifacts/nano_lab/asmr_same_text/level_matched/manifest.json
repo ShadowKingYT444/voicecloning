@@ -1,0 +1,61 @@
+[
+  {
+    "id": "heldout01_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/asmr_same_text/level_matched/heldout01_base.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "voice": "asmr7",
+    "source_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/asmr_same_text/heldout01_base.wav",
+    "source_sha256": "247a70df06bee098238873592a389c73326f5f282269bca666a83eb2398fc135",
+    "processing": "constant gain only, PCM24 quantization",
+    "gain_db": 7.400817661142433,
+    "original_lufs": -34.40081766114243,
+    "original_true_peak_dbtp": -14.328588920232013,
+    "target_lufs": -27.0,
+    "achieved_lufs": -27.000000022730532,
+    "true_peak_dbtp_4x": -6.927771704363899
+  },
+  {
+    "id": "heldout01_adapter",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/asmr_same_text/level_matched/heldout01_adapter.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "voice": "asmr7",
+    "source_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/asmr_same_text/heldout01_adapter.wav",
+    "source_sha256": "fbe253d3d29c14d4fec392921a43c3931585558d3e60b700b4baab560abe0c9a",
+    "processing": "constant gain only, PCM24 quantization",
+    "gain_db": 5.728327088141803,
+    "original_lufs": -32.7283270881418,
+    "original_true_peak_dbtp": -12.14803418546181,
+    "target_lufs": -27.0,
+    "achieved_lufs": -27.000000004145942,
+    "true_peak_dbtp_4x": -6.419707272509978
+  },
+  {
+    "id": "heldout01_combined",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/asmr_same_text/level_matched/heldout01_combined.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "voice": "asmr7",
+    "source_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/asmr_same_text/heldout01_combined.wav",
+    "source_sha256": "f9e543710f3fc5fa57cc74cd3b20ab1e5510e8fc6e453a7c4b7193fb6b80caf2",
+    "processing": "constant gain only, PCM24 quantization",
+    "gain_db": 5.305667461434432,
+    "original_lufs": -32.30566746143443,
+    "original_true_peak_dbtp": -12.51766914738928,
+    "target_lufs": -27.0,
+    "achieved_lufs": -27.000000004801446,
+    "true_peak_dbtp_4x": -7.212002834218579
+  },
+  {
+    "id": "source_heldout01",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/asmr_same_text/level_matched/source_heldout01.wav",
+    "voice": "asmr7",
+    "source_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_01/asmr7_heldout_01__raw.wav",
+    "source_sha256": "29ccb07d11663151962f23bbf93e95796d8a0f39dd51c0b956b5a05bef5960d6",
+    "processing": "constant gain only, PCM24 quantization",
+    "gain_db": 0.8361736144528003,
+    "original_lufs": -27.8361736144528,
+    "original_true_peak_dbtp": -8.571022552123686,
+    "target_lufs": -27.0,
+    "achieved_lufs": -27.000000001181238,
+    "true_peak_dbtp_4x": -7.734848407495533
+  }
+]

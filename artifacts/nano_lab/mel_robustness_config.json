@@ -1,0 +1,113 @@
+{
+  "output_dir": "artifacts/nano_lab/mel_robustness",
+  "device": "cuda",
+  "threads": 2,
+  "optimized_loader": true,
+  "cases": [
+    {
+      "id": "question_79_base",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+      "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "seed": 79,
+      "temperature": 0.8,
+      "steps": 2,
+      "voice": "asmr7",
+      "save_conditionals": false,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 0.0
+    },
+    {
+      "id": "question_79_mel_full",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+      "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "seed": 79,
+      "temperature": 0.8,
+      "steps": 2,
+      "voice": "asmr7",
+      "save_conditionals": false,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 1.0
+    },
+    {
+      "id": "question_97_base",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+      "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "seed": 97,
+      "temperature": 0.8,
+      "steps": 2,
+      "voice": "asmr7",
+      "save_conditionals": false,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 0.0
+    },
+    {
+      "id": "question_97_mel_full",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+      "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "seed": 97,
+      "temperature": 0.8,
+      "steps": 2,
+      "voice": "asmr7",
+      "save_conditionals": false,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 1.0
+    },
+    {
+      "id": "narrative_79_base",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+      "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "seed": 79,
+      "temperature": 0.8,
+      "steps": 2,
+      "voice": "asmr7",
+      "save_conditionals": false,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 0.0
+    },
+    {
+      "id": "narrative_79_mel_full",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+      "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "seed": 79,
+      "temperature": 0.8,
+      "steps": 2,
+      "voice": "asmr7",
+      "save_conditionals": false,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 1.0
+    },
+    {
+      "id": "narrative_97_base",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+      "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "seed": 97,
+      "temperature": 0.8,
+      "steps": 2,
+      "voice": "asmr7",
+      "save_conditionals": false,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 0.0
+    },
+    {
+      "id": "narrative_97_mel_full",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+      "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "seed": 97,
+      "temperature": 0.8,
+      "steps": 2,
+      "voice": "asmr7",
+      "save_conditionals": false,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 1.0
+    }
+  ],
+  "resume": false
+}

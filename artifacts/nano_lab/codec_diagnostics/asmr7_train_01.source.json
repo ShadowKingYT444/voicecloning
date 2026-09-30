@@ -1,0 +1,25 @@
+{
+  "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_train_01/asmr7_train_01__natural.wav",
+  "audio_sha256": "0ab55445b2044b39504d899c38e268ec31226fd4670063cc68abe8eafef7945b",
+  "cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_cache.json",
+  "cache_sha256": "a2334f20df019e641a0555b7c1e62f68797e57f5316faf852cbb748e3b16b881",
+  "description": "Speech-token IDs copied from an adaptation-cache target recording; not generated TTS.",
+  "kind": "genuine_source_speech_tokens",
+  "output_token_count": 153,
+  "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_emotional_02/asmr7_emotional_02__natural.wav",
+  "reference_distinct_from_target": true,
+  "row_id": "asmr7_train_01",
+  "schema_version": 1,
+  "source_text": "So as the one throwing the party, and it also being my party, I would like to announce",
+  "source_token_count": 150,
+  "speaker_id": "asmr7",
+  "split": "train",
+  "synthetic_tts": false,
+  "text": "So as the one throwing the party, and it also being my party, I would like to announce.",
+  "tokens_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/asmr7_train_01.speech_tokens.npy",
+  "trailing_silence": {
+    "appended": true,
+    "count": 3,
+    "value": 4299
+  }
+}

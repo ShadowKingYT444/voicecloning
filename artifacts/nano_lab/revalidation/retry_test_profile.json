@@ -1,0 +1,19 @@
+{
+  "label": "Test only: forced length-limit retry",
+  "mode": "zero_shot",
+  "status": "candidate_under_validation",
+  "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+  "conditioning_cache": "artifacts/nano_lab/sweep_round2/asmr_soft_morning_31.conds.pt",
+  "decoder": "meanflow",
+  "steps": 2,
+  "cuda_dtype": "fp32",
+  "sampling": {
+    "temperature": 0.65,
+    "top_p": 0.95,
+    "top_k": 1000,
+    "repetition_penalty": 1.2,
+    "max_gen_len": 180
+  },
+  "source_case": "asmr_soft_morning_31",
+  "watermark": true
+}

@@ -1,0 +1,24 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 0fd8f9b2f94e4f9f83f9daa4fcc11d7a
+{
+  "command": [
+    "scripts/nano_lab/fit_decoder_embedding.py",
+    "--device",
+    "cuda",
+    "--max-steps",
+    "1",
+    "--output-dir",
+    "artifacts/nano_lab/decoder_embedding_fit_smoke"
+  ],
+  "error": "conditionals cache is missing tensor gen['prompt_feat_len']",
+  "error_type": "ValueError",
+  "format": "nano_decoder_embedding_fit_v1",
+  "output_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit_smoke",
+  "peak_rss_bytes": 543207424,
+  "status": "failed"
+}
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 6.211s
+             CPU time consumed: 6.036s
+                   Memory peak: 280.8M (swap: 0B)

@@ -1,0 +1,30 @@
+{
+  "status": "not_promoted",
+  "reason": "Bothfitsreduceaverageidentityproxy; speakerfit changes the to a in both recognizers. FulladapterpassesSmall3/3 but Tinyreportsuncertainty. Humanrealismnotestablished.",
+  "summary": [
+    {
+      "variant": "base",
+      "mean_speaker_cosine": 0.8816806666666667,
+      "mean_dnsmos_overall": 2.615433012742226,
+      "small_exact_count": 3,
+      "count": 3
+    },
+    {
+      "variant": "speaker",
+      "mean_speaker_cosine": 0.8643706666666666,
+      "mean_dnsmos_overall": 3.1042985432519474,
+      "small_exact_count": 2,
+      "count": 3
+    },
+    {
+      "variant": "adapter_full",
+      "mean_speaker_cosine": 0.8660333333333333,
+      "mean_dnsmos_overall": 3.2923560291176344,
+      "small_exact_count": 3,
+      "count": 3
+    }
+  ],
+  "peak_rss_mib": 2399.91796875,
+  "base_waveforms_exact_previous_comparison": true,
+  "conditioning_cache_exact_inference": true
+}

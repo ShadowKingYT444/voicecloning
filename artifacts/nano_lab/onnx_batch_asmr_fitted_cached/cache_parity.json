@@ -1,0 +1,36 @@
+{
+  "cases": [
+    {
+      "id": "asmr_cold",
+      "before_seconds": 32.18711990599695,
+      "after_seconds": 27.81319767900277,
+      "audio_seconds": 5.48,
+      "tokens_exact": true,
+      "mel_exact": true,
+      "wav_exact": false,
+      "wav_max_abs": 3.0994415283203125e-06
+    },
+    {
+      "id": "asmr_warm_repeat",
+      "before_seconds": 5.580468228996324,
+      "after_seconds": 3.2395582660028595,
+      "audio_seconds": 5.48,
+      "tokens_exact": true,
+      "mel_exact": true,
+      "wav_exact": false,
+      "wav_max_abs": 3.2186508178710938e-06
+    },
+    {
+      "id": "asmr_warm_new",
+      "before_seconds": 6.208935902999656,
+      "after_seconds": 3.8669147409964353,
+      "audio_seconds": 6.52,
+      "tokens_exact": true,
+      "mel_exact": true,
+      "wav_exact": false,
+      "wav_max_abs": 3.5762786865234375e-06
+    }
+  ],
+  "rss_after_mib": 1936.96,
+  "end_to_end_seconds": 49.14063616000203
+}

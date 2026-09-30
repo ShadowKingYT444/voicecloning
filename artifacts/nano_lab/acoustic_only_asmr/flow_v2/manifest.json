@@ -1,0 +1,1415 @@
+{
+  "acoustic_only": true,
+  "cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/cache_v2/manifest.json",
+  "cache_sha256": "1e2315524ac5d85b085091f4d80cebb99d9f017c5adfa38b63915f941eb20414",
+  "cfm_steps": 2,
+  "command": [
+    "scripts/nano_lab/prepare_acoustic_data.py",
+    "flow",
+    "--token-manifest",
+    "artifacts/nano_lab/acoustic_only_asmr/cache_v2/manifest.json",
+    "--output-dir",
+    "artifacts/nano_lab/acoustic_only_asmr/flow_v2",
+    "--conditionals-path",
+    "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+    "--device",
+    "cuda"
+  ],
+  "completed_rows": 30,
+  "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+  "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+  "diagnostic_only": true,
+  "elapsed_seconds": 47.220699356003024,
+  "flow_path": "streamed model.s3gen flow encoder and meanflow estimator; HiFT vocoder not called",
+  "format": "nano_mel_calibration_prepare_v1",
+  "loader": {
+    "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+    "checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+    "flow_encoder": {
+      "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+      "loaded_tensors": 209,
+      "missing_tensors": [],
+      "selected_tensors": 209,
+      "skipped_tensors": 2282,
+      "unexpected_tensors": []
+    },
+    "frozen": true,
+    "loaded_components": [
+      "flow.input_embedding",
+      "flow.encoder",
+      "flow.encoder_proj",
+      "flow.spk_embed_affine_layer",
+      "flow.decoder.estimator"
+    ],
+    "meanflow_estimator": {
+      "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+      "loaded_tensors": 913,
+      "missing_tensors": [],
+      "selected_tensors": 913,
+      "skipped_tensors": 1578,
+      "unexpected_tensors": []
+    },
+    "omitted_components": [
+      "T3",
+      "S3Gen tokenizer",
+      "S3Gen speaker encoder",
+      "HiFT vocoder"
+    ]
+  },
+  "mel_bands": 80,
+  "mel_layout": "bands,time; raw log-mel values",
+  "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+  "model_dir": "/home/terryd/gooning/voicecloning/models/chatterbox-nano",
+  "peak_rss_bytes": 1555206144,
+  "reference_native_parity": {
+    "atol": 0.0001,
+    "failures": [],
+    "max_abs": 0.0,
+    "rmse_mean": 0.0,
+    "rows": [
+      {
+        "id": "asmr7_repair_001",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          216
+        ]
+      },
+      {
+        "id": "asmr7_repair_006",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          280
+        ]
+      },
+      {
+        "id": "asmr7_repair_007",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          204
+        ]
+      },
+      {
+        "id": "asmr7_repair_008",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          444
+        ]
+      },
+      {
+        "id": "asmr7_repair_010",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          198
+        ]
+      },
+      {
+        "id": "asmr7_repair_012",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          266
+        ]
+      },
+      {
+        "id": "asmr7_repair_013",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          174
+        ]
+      },
+      {
+        "id": "asmr7_repair_014",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          220
+        ]
+      },
+      {
+        "id": "asmr7_repair_015",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          258
+        ]
+      },
+      {
+        "id": "asmr7_repair_019",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          238
+        ]
+      },
+      {
+        "id": "asmr7_repair_023",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          370
+        ]
+      },
+      {
+        "id": "asmr7_repair_024",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          194
+        ]
+      },
+      {
+        "id": "asmr7_repair_025",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          284
+        ]
+      },
+      {
+        "id": "asmr7_repair_028",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          268
+        ]
+      },
+      {
+        "id": "asmr7_repair_033",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          212
+        ]
+      },
+      {
+        "id": "asmr7_repair_011",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          208
+        ]
+      },
+      {
+        "id": "asmr7_repair_022",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          552
+        ]
+      }
+    ],
+    "status": "passed"
+  },
+  "reference_prepare_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr",
+  "reference_source_overlap": {
+    "failures": [],
+    "overlap_count": 14,
+    "rows": [
+      {
+        "id": "asmr7_repair_001",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0
+      },
+      {
+        "id": "asmr7_repair_006",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0
+      },
+      {
+        "id": "asmr7_repair_007",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0
+      },
+      {
+        "id": "asmr7_repair_008",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0
+      },
+      {
+        "id": "asmr7_repair_010",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0
+      },
+      {
+        "id": "asmr7_repair_013",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0
+      },
+      {
+        "id": "asmr7_repair_014",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0
+      },
+      {
+        "id": "asmr7_repair_015",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0
+      },
+      {
+        "id": "asmr7_repair_019",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0
+      },
+      {
+        "id": "asmr7_repair_023",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0
+      },
+      {
+        "id": "asmr7_repair_024",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0
+      },
+      {
+        "id": "asmr7_repair_028",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0
+      },
+      {
+        "id": "asmr7_repair_033",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0
+      },
+      {
+        "id": "asmr7_repair_022",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0
+      }
+    ],
+    "status": "passed",
+    "tolerance": {
+      "max_abs": 2e-05,
+      "rmse": 5e-06
+    }
+  },
+  "rows": [
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_001.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 4.18,
+      "end_s": 6.91,
+      "id": "asmr7_repair_001",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_001.mel.npz",
+      "mel_sha256": "53aec5a0a48e2209fca271b25f6d38b50c405912dc96f9a79f05a3d877cf5eb6",
+      "output_token_count": 108,
+      "reconstructed_mel_shape": [
+        80,
+        216
+      ],
+      "seed": 31,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        209
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "152b99cb858a760406cfd2b0e2800ff43624528e1675efcebd0a245ff24ba11b",
+      "speech_token_count": 105,
+      "split": "train",
+      "start_s": 2.73,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_002.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 3.32,
+      "end_s": 10.69,
+      "id": "asmr7_repair_002",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_002.mel.npz",
+      "mel_sha256": "dcbaa63682434a71d8a1b864238080afda81d072dc1956970f37122e3db0f7c2",
+      "output_token_count": 86,
+      "reconstructed_mel_shape": [
+        80,
+        172
+      ],
+      "seed": 1040,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        166
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "75ec48cdc064b938916d5a58ffbb6c65fa56317046a7530e9a1832c188be42f2",
+      "speech_token_count": 83,
+      "split": "train",
+      "start_s": 7.37,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_003.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 4.46,
+      "end_s": 15.73,
+      "id": "asmr7_repair_003",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_003.mel.npz",
+      "mel_sha256": "67d25615c8da455c48f3af53450fd8cdccf77561c9b023bfbe11a11885ad27d3",
+      "output_token_count": 115,
+      "reconstructed_mel_shape": [
+        80,
+        230
+      ],
+      "seed": 2049,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        223
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "665a39e6d85be89a0f86c99626470bb434a9f31d02c5aee54f57244bff52bafc",
+      "speech_token_count": 112,
+      "split": "train",
+      "start_s": 11.27,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_004.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 3.66,
+      "end_s": 20.87,
+      "id": "asmr7_repair_004",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_004.mel.npz",
+      "mel_sha256": "f57d2c0be7ec1a3157043ac9662bf10805d43d087173e341a809167c7d4a7cbb",
+      "output_token_count": 95,
+      "reconstructed_mel_shape": [
+        80,
+        190
+      ],
+      "seed": 3058,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        183
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "6f53fa590c5bf08e1f5bcf527b598d89a0459cf00b37c78376c970e77b380d37",
+      "speech_token_count": 92,
+      "split": "train",
+      "start_s": 17.21,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_005.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 3.98,
+      "end_s": 25.85,
+      "id": "asmr7_repair_005",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_005.mel.npz",
+      "mel_sha256": "6fd971724b145a5c16d45a0c9c335de4701bffed06a8d1809d73695fc7d35139",
+      "output_token_count": 103,
+      "reconstructed_mel_shape": [
+        80,
+        206
+      ],
+      "seed": 4067,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        199
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "d85d4c4d59149be28187808df69925326149f598ec702a0cbab6e01774e554c0",
+      "speech_token_count": 100,
+      "split": "train",
+      "start_s": 21.87,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_006.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 5.46,
+      "end_s": 58.01,
+      "id": "asmr7_repair_006",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_006.mel.npz",
+      "mel_sha256": "00bcb10f6da3e01995aa558abba222b2d25d20a49f8985403023ab77959eab1c",
+      "output_token_count": 140,
+      "reconstructed_mel_shape": [
+        80,
+        280
+      ],
+      "seed": 5076,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        273
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "7c573da034bec9d899a989beec8b56dab84194bc9cf4e4c19b14f7fe750c95c5",
+      "speech_token_count": 137,
+      "split": "train",
+      "start_s": 52.55,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_007.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 3.96,
+      "end_s": 63.35,
+      "id": "asmr7_repair_007",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_007.mel.npz",
+      "mel_sha256": "3ebc2643776a806456acd923a80d8c1dd7d4eb1693bad5431860973cf39de554",
+      "output_token_count": 102,
+      "reconstructed_mel_shape": [
+        80,
+        204
+      ],
+      "seed": 6085,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        198
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "840395254e9c7c0890545f76c9e9efa6df36eabdecce2062196f501c46facbd0",
+      "speech_token_count": 99,
+      "split": "train",
+      "start_s": 59.39,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_008.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 8.74,
+      "end_s": 72.27,
+      "id": "asmr7_repair_008",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_008.mel.npz",
+      "mel_sha256": "03fb60b6c86f9f6cc4f4903911168f67b4628121c874b96d1c2bcf587922a667",
+      "output_token_count": 222,
+      "reconstructed_mel_shape": [
+        80,
+        444
+      ],
+      "seed": 7094,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        437
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "43a93916176b50c56d80646950a5cfc851b5de42b1e466c6b5cfe0250d36b99a",
+      "speech_token_count": 219,
+      "split": "train",
+      "start_s": 63.53,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_009.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 6.2,
+      "end_s": 82.11,
+      "id": "asmr7_repair_009",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_009.mel.npz",
+      "mel_sha256": "3a251dad6c309ada39701791937ccd960a6aa6eade259e17920299337acab249",
+      "output_token_count": 158,
+      "reconstructed_mel_shape": [
+        80,
+        316
+      ],
+      "seed": 8103,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        310
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "7bf89185bffaeb3220d362e9dec691c8011224db78d64cdac1cdc35624edae93",
+      "speech_token_count": 155,
+      "split": "train",
+      "start_s": 75.91,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_010.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 3.82,
+      "end_s": 86.49,
+      "id": "asmr7_repair_010",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_010.mel.npz",
+      "mel_sha256": "b195a7221c6e5e02050e05f9371381110c2a37e993833fd3a819a56fd7861a2c",
+      "output_token_count": 99,
+      "reconstructed_mel_shape": [
+        80,
+        198
+      ],
+      "seed": 9112,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        191
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "6180bd226a41a53a78ccdc5549b4ac05cb13270e147d86bedb440f688ae2d8c9",
+      "speech_token_count": 96,
+      "split": "train",
+      "start_s": 82.67,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_013.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 3.34,
+      "end_s": 160.73,
+      "id": "asmr7_repair_013",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_013.mel.npz",
+      "mel_sha256": "fbf24fd275077f902cb1638b95f72cb929b963e42fc5879ec9aaddd138d2990f",
+      "output_token_count": 87,
+      "reconstructed_mel_shape": [
+        80,
+        174
+      ],
+      "seed": 10121,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        167
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "e2d427a7e015946c6c2400e510928e575a97ef5fd92a6c66e184267fefb67665",
+      "speech_token_count": 84,
+      "split": "train",
+      "start_s": 157.39,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_014.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 4.28,
+      "end_s": 204.95,
+      "id": "asmr7_repair_014",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_014.mel.npz",
+      "mel_sha256": "298c1babbf3f191ac8b8927211bdd215aaab2eecfbb59ccd3dcbdf8110d4b265",
+      "output_token_count": 110,
+      "reconstructed_mel_shape": [
+        80,
+        220
+      ],
+      "seed": 11130,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        214
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "f4187b1b1ea1811e41b0ba1389475eecd1e2e532e269805f5d91856f46536ddd",
+      "speech_token_count": 107,
+      "split": "train",
+      "start_s": 200.67,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_015.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 5.02,
+      "end_s": 210.91,
+      "id": "asmr7_repair_015",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_015.mel.npz",
+      "mel_sha256": "f95860c829f2846a63f40a30e68c55dc4b847acc9ff6a3451276ea1375f6abed",
+      "output_token_count": 129,
+      "reconstructed_mel_shape": [
+        80,
+        258
+      ],
+      "seed": 12139,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        251
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "61f61df1f60056d42f8fd22a8ebe698e7065e1a3792d973d7252e0e469080346",
+      "speech_token_count": 126,
+      "split": "train",
+      "start_s": 205.89,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_016.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 5.36,
+      "end_s": 216.93,
+      "id": "asmr7_repair_016",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_016.mel.npz",
+      "mel_sha256": "aa1a62a4e22bcf76a298aaddf726b8d24a8736b20be41562302f6e9f8904b52d",
+      "output_token_count": 137,
+      "reconstructed_mel_shape": [
+        80,
+        274
+      ],
+      "seed": 13148,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        268
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "ddcc354f2e944ed0e6494f5d0811173feaa703f66dc48a084e8563996dda9562",
+      "speech_token_count": 134,
+      "split": "train",
+      "start_s": 211.57,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_017.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 5.88,
+      "end_s": 223.37,
+      "id": "asmr7_repair_017",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_017.mel.npz",
+      "mel_sha256": "c8c6c92392e0ad46ca50dbc433862761ddccabf26dc1028824db5a84aeaa8a40",
+      "output_token_count": 150,
+      "reconstructed_mel_shape": [
+        80,
+        300
+      ],
+      "seed": 14157,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        294
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "8677825d3b13bc63622135a42dfd44a1587d5164ce9dbfc6b422b8f2c848fb5d",
+      "speech_token_count": 147,
+      "split": "train",
+      "start_s": 217.49,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_018.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 5.36,
+      "end_s": 229.31,
+      "id": "asmr7_repair_018",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_018.mel.npz",
+      "mel_sha256": "67928b430b8fbdaac918e6694abea52f35c688c4b8c055f59c053fbf51f8f3a2",
+      "output_token_count": 137,
+      "reconstructed_mel_shape": [
+        80,
+        274
+      ],
+      "seed": 15166,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        268
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "edc6b9498d2b88bb20fd703bbab45e0612be9f5704a39e656c7ba2ce88db3fab",
+      "speech_token_count": 134,
+      "split": "train",
+      "start_s": 223.95,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_019.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 4.62,
+      "end_s": 234.49,
+      "id": "asmr7_repair_019",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_019.mel.npz",
+      "mel_sha256": "bea709bb6a405af82a7b0323341777c67722198e4e88204047f508d1a2470087",
+      "output_token_count": 119,
+      "reconstructed_mel_shape": [
+        80,
+        238
+      ],
+      "seed": 16175,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        231
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "35cd121d9598f4e950a3ffe786211395e5712930665abf0ee1e4d1195cddc982",
+      "speech_token_count": 116,
+      "split": "train",
+      "start_s": 229.87,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_021.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 3.86,
+      "end_s": 266.23,
+      "id": "asmr7_repair_021",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_021.mel.npz",
+      "mel_sha256": "efd7993afb252d7acfd87469b9bc18122baeb957cce5d7cc27ff2f1e77b2a590",
+      "output_token_count": 100,
+      "reconstructed_mel_shape": [
+        80,
+        200
+      ],
+      "seed": 17184,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        193
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "baf9282d4138d2b3d825c26ecaadf35dc7e1d409922a4a9b99bb91d5e9d732bf",
+      "speech_token_count": 97,
+      "split": "train",
+      "start_s": 262.37,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_022.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 10.92,
+      "end_s": 278.21,
+      "id": "asmr7_repair_022",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_022.mel.npz",
+      "mel_sha256": "b67e9d36efb53a6003be5d5f4f95cc86426e75c48bf401645154a5e531680a5e",
+      "output_token_count": 276,
+      "reconstructed_mel_shape": [
+        80,
+        552
+      ],
+      "seed": 18193,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        546
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "9a53e7a4211fe6fbb6b2404e3f0fdc752761d9d9a4c7f4550509230cbf2269e8",
+      "speech_token_count": 273,
+      "split": "valid",
+      "start_s": 267.29,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_023.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 7.26,
+      "end_s": 286.15,
+      "id": "asmr7_repair_023",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_023.mel.npz",
+      "mel_sha256": "ef0a465eb1579dd3aba6821c7cd48dd8c3b0bdfc3bf54ddf00e92b045b5cb008",
+      "output_token_count": 185,
+      "reconstructed_mel_shape": [
+        80,
+        370
+      ],
+      "seed": 19202,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        363
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "e013eb061d5fcd5fe713a140aff406be6fb47d0279260fff95e09eeebe064048",
+      "speech_token_count": 182,
+      "split": "train",
+      "start_s": 278.89,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_024.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 3.74,
+      "end_s": 290.61,
+      "id": "asmr7_repair_024",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_024.mel.npz",
+      "mel_sha256": "805a366c128c16485ae480c7d04ee0fa40e2354878b83da5c956e1f12a1213c5",
+      "output_token_count": 97,
+      "reconstructed_mel_shape": [
+        80,
+        194
+      ],
+      "seed": 20211,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        187
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "8e1c2e81a777029322b7998e42ca802270923ee5fbc9cf8ce25b64b15198a3b4",
+      "speech_token_count": 94,
+      "split": "train",
+      "start_s": 286.87,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_026.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 6.62,
+      "end_s": 417.59,
+      "id": "asmr7_repair_026",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_026.mel.npz",
+      "mel_sha256": "2cfb0ce6b388983b2aace2917d462403f8aac6a6d7d0cff8fe9809fe2df4fd35",
+      "output_token_count": 169,
+      "reconstructed_mel_shape": [
+        80,
+        338
+      ],
+      "seed": 21220,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        331
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "02bf84477aee42375a4d31067c7a707cab8409f220b93a112b9ed072b391b553",
+      "speech_token_count": 166,
+      "split": "train",
+      "start_s": 410.97,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_027.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 6.38,
+      "end_s": 424.11,
+      "id": "asmr7_repair_027",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_027.mel.npz",
+      "mel_sha256": "859ec303e70b12d1bd24af02a2a104a72a3a9a38340052ffec2983121a631562",
+      "output_token_count": 163,
+      "reconstructed_mel_shape": [
+        80,
+        326
+      ],
+      "seed": 22229,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        319
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "8f79f8eeab42362c40bdd56e9321b6469fa62e52825707eb142b623d44f86cff",
+      "speech_token_count": 160,
+      "split": "train",
+      "start_s": 417.73,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_028.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 5.22,
+      "end_s": 430.01,
+      "id": "asmr7_repair_028",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_028.mel.npz",
+      "mel_sha256": "a17c82752243c080057f0dea62b0a9eb37d9cbc1bf83d72b7c7f59c9d6ffedc9",
+      "output_token_count": 134,
+      "reconstructed_mel_shape": [
+        80,
+        268
+      ],
+      "seed": 23238,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        261
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "f2efce16a694772c58cd10cd2b5e1eb185984e4f4c3d1429c65cfdee6419fc8b",
+      "speech_token_count": 131,
+      "split": "train",
+      "start_s": 424.79,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_029.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 5.4,
+      "end_s": 447.77,
+      "id": "asmr7_repair_029",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_029.mel.npz",
+      "mel_sha256": "e2c4464f6c3af13898dfb2c321131dd94301eb1bce6b84a16fccad35653f9a0c",
+      "output_token_count": 138,
+      "reconstructed_mel_shape": [
+        80,
+        276
+      ],
+      "seed": 24247,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        270
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "23529e55eff9e23010a39ababfa676d666d4fe14b3b0510acc2e939947b33c88",
+      "speech_token_count": 135,
+      "split": "train",
+      "start_s": 442.37,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_030.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 7.3,
+      "end_s": 498.65,
+      "id": "asmr7_repair_030",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_030.mel.npz",
+      "mel_sha256": "ee1572e3ab82321d2aec59322bb312ffa7a9f2ebe50d1837900068d24f9f3b96",
+      "output_token_count": 186,
+      "reconstructed_mel_shape": [
+        80,
+        372
+      ],
+      "seed": 25256,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        365
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "e4f7f5da93681c1f346da3d322855bcda0afea36120c2663bde59c4e5ffe4119",
+      "speech_token_count": 183,
+      "split": "train",
+      "start_s": 491.35,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_031.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 3.44,
+      "end_s": 503.49,
+      "id": "asmr7_repair_031",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_031.mel.npz",
+      "mel_sha256": "8ae3e80a21eca8ad9ff3756438484cb2d91adfe5e6f2567bffd67cab0a71168b",
+      "output_token_count": 89,
+      "reconstructed_mel_shape": [
+        80,
+        178
+      ],
+      "seed": 26265,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        172
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "b81e7b9950c2d4a03eb2bf6cc6a1b4cbbec169ba9c5143f5d53c1f1ba851c192",
+      "speech_token_count": 86,
+      "split": "train",
+      "start_s": 500.05,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_032.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 6.82,
+      "end_s": 510.69,
+      "id": "asmr7_repair_032",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_032.mel.npz",
+      "mel_sha256": "ebae097b998a320159e81728b320b4f5c86c53080fb48721738b31a94709bc4d",
+      "output_token_count": 174,
+      "reconstructed_mel_shape": [
+        80,
+        348
+      ],
+      "seed": 27274,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        341
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "9fd0bb8f4d02459613decf22b26696c1e653155e7bea0d4f0851c021a821607f",
+      "speech_token_count": 171,
+      "split": "train",
+      "start_s": 503.87,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_033.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 4.1,
+      "end_s": 514.93,
+      "id": "asmr7_repair_033",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_033.mel.npz",
+      "mel_sha256": "babf3e5c532260edd6868db01ba6aad655e72f8c5d185ead38fa59b89496979a",
+      "output_token_count": 106,
+      "reconstructed_mel_shape": [
+        80,
+        212
+      ],
+      "seed": 28283,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        205
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "460a15655bae09b0afc39fa37b18b8e7934cbd397967d786677f9f4044dd6a27",
+      "speech_token_count": 103,
+      "split": "train",
+      "start_s": 510.83,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_034.wav",
+      "cfm_steps": 2,
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "duration_s": 6.56,
+      "end_s": 538.65,
+      "id": "asmr7_repair_034",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/asmr7_repair_034.mel.npz",
+      "mel_sha256": "cb2ce5b45ac3118553fc794380c649244cb56f9bacc7323425628b1d785cc3ec",
+      "output_token_count": 167,
+      "reconstructed_mel_shape": [
+        80,
+        334
+      ],
+      "seed": 29292,
+      "source_audio": "/home/terryd/gooning/voicecloning/ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "source_audio_sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "source_mel_shape": [
+        80,
+        328
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "d29d39eaaf416364b0283ba8ca41adc99c08bbdf2589d6350ea1089b5631b20c",
+      "speech_token_count": 164,
+      "split": "valid",
+      "start_s": 532.09,
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    }
+  ],
+  "rss_after_flow_bytes": 1556414464,
+  "rss_before_flow_load_bytes": 547561472,
+  "source_sample_rate": 24000,
+  "started_unix": 1790724138.553179,
+  "status": "ready",
+  "synthetic_audio": false,
+  "transcript_labels_used": false
+}

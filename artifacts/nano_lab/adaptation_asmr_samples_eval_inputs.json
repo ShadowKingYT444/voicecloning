@@ -1,0 +1,8 @@
+[
+  {"audio_path": "artifacts/nano_lab/adaptation_asmr_samples_base/neutral_seed31.wav", "family": "asmr7", "label": "base_neutral_seed31"},
+  {"audio_path": "artifacts/nano_lab/adaptation_asmr_samples_base/calm_seed47.wav", "family": "asmr7", "label": "base_calm_seed47"},
+  {"audio_path": "artifacts/nano_lab/adaptation_asmr_samples_rank4/neutral_seed31.wav", "family": "asmr7", "label": "rank4_neutral_seed31"},
+  {"audio_path": "artifacts/nano_lab/adaptation_asmr_samples_rank4/calm_seed47.wav", "family": "asmr7", "label": "rank4_calm_seed47"},
+  {"audio_path": "artifacts/nano_lab/adaptation_asmr_samples_rank8/neutral_seed31.wav", "family": "asmr7", "label": "rank8_neutral_seed31"},
+  {"audio_path": "artifacts/nano_lab/adaptation_asmr_samples_rank8/calm_seed47.wav", "family": "asmr7", "label": "rank8_calm_seed47"}
+]

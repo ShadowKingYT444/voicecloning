@@ -1,0 +1,23 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: d91399a670384161a911540f7536c78f
+{"id": "harvey_expressive_t75_r11", "wer": 0.04, "transcript": "Really? I thought you would forgotten. That is wonderful news. Come here for a moment. I want to hear every detail from the very beginning."}
+{"id": "harvey_expressive_t75_r13", "wer": 0.0, "transcript": "Really? I thought you had forgotten. That is wonderful news. Come here for a moment. I want to hear every detail from the very beginning."}
+{"id": "harvey_expressive_t90_r11", "wer": 0.0, "transcript": "Really? I thought you had forgotten. That is wonderful news. Come here for a moment. I want to hear every detail from the very beginning."}
+{"id": "harvey_expressive_t90_r13", "wer": 0.0, "transcript": "Really? I thought you had forgotten. That is wonderful news. Come here for a moment. I want to hear every detail from the very beginning."}
+{"id": "conv_fitted_narrative_63_s50", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office. I waited by the door and watched the rain move across the empty platform."}
+{"id": "conv_fitted_narrative_63_s75", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office. I waited by the door and watched the rain move across the empty platform."}
+{"id": "conv_fitted_narrative_79_s50", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office. I waited by the door and watched the rain move across the empty platform."}
+{"id": "conv_fitted_narrative_79_s75", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office. I waited by the door and watched the rain move across the empty platform."}
+{"id": "conv_fitted_expressive_63_s50", "wer": 0.0, "transcript": "Really? I thought you had forgotten. That is wonderful news. Come here for a moment. I want to hear every detail from the very beginning."}
+{"id": "conv_fitted_expressive_63_s75", "wer": 0.04, "transcript": "Really? I thought you'd forgotten. That is wonderful news. Come here for a moment. I want to hear every detail from the very beginning."}
+{"id": "conv_fitted_expressive_79_s50", "wer": 0.0, "transcript": "Really? I thought you had forgotten. That is wonderful news. Come here for a moment. I want to hear every detail from the very beginning."}
+{"id": "conv_fitted_expressive_79_s75", "wer": 0.0, "transcript": "Really? I thought you had forgotten. That is wonderful news. Come here for a moment. I want to hear every detail from the very beginning."}
+{"id": "conv_fitted_precise_63_s50", "wer": 0.0, "transcript": "Please put the green cup beside the black notebook. There are three letters on the table, two keys by the door, and one small box beneath the chair."}
+{"id": "conv_fitted_precise_63_s75", "wer": 0.0, "transcript": "Please put the green cup beside the black notebook. There are three letters on the table, two keys by the door, and one small box beneath the chair."}
+{"id": "conv_fitted_precise_79_s50", "wer": 0.0, "transcript": "Please put the green cup beside the black notebook. There are three letters on the table. Two keys by the door and one small box beneath the chair."}
+{"id": "conv_fitted_precise_79_s75", "wer": 0.0, "transcript": "Please put the green cup beside the black notebook. There are three letters on the table, two keys by the door, and one small box beneath the chair."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 35.694s
+             CPU time consumed: 34.556s
+                   Memory peak: 2.2G (swap: 0B)

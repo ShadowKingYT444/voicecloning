@@ -1,0 +1,8 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: f0d8c2998b36465fa0dc78850382917f
+{"analyzed_count": 3, "error_count": 0, "out": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/prosody.json", "peak_rss_mib": 134.301}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 8.637s
+             CPU time consumed: 15.955s
+                   Memory peak: 106M (swap: 0B)

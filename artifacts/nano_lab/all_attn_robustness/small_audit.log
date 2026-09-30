@@ -1,0 +1,19 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "question_79_base", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "question_79_adapter", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "question_79_combined", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "question_97_base", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "question_97_adapter", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "question_97_combined", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "narrative_79_base", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "narrative_79_adapter", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "narrative_79_combined", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "narrative_97_base", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "narrative_97_adapter", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "narrative_97_combined", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 20.099s
+             CPU time consumed: 2min 36.458s
+                   Memory peak: 1G (swap: 0B)

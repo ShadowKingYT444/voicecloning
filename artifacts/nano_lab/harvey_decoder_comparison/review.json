@@ -1,0 +1,71 @@
+{
+  "status": "experimental_not_promoted",
+  "human_realism_verified": false,
+  "general_zero_shot_improvement": false,
+  "training_clips": 2,
+  "validation_clips": 1,
+  "reference_manifest": "artifacts/nano_lab/references/manifest_harvey_isolated_eval.json",
+  "groups": {
+    "base": {
+      "rows": [
+        {
+          "id": "business_base",
+          "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_decoder_comparison/level_matched/business_base.wav",
+          "speaker_cosine": 0.805554,
+          "dnsmos_overall": 3.2928374525579964,
+          "small_wer": 0.0
+        },
+        {
+          "id": "question_base",
+          "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_decoder_comparison/level_matched/question_base.wav",
+          "speaker_cosine": 0.839333,
+          "dnsmos_overall": 3.4234584196602245,
+          "small_wer": 0.0
+        },
+        {
+          "id": "narrative_base",
+          "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_decoder_comparison/level_matched/narrative_base.wav",
+          "speaker_cosine": 0.846447,
+          "dnsmos_overall": 3.4037614665583176,
+          "small_wer": 0.0
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8304446666666666,
+        "dnsmos_overall": 3.373352446258846,
+        "small_wer": 0.0
+      }
+    },
+    "decoder_fit": {
+      "rows": [
+        {
+          "id": "business_decoder_fit",
+          "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_decoder_comparison/level_matched/business_decoder_fit.wav",
+          "speaker_cosine": 0.808416,
+          "dnsmos_overall": 3.356406814913054,
+          "small_wer": 0.0
+        },
+        {
+          "id": "question_decoder_fit",
+          "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_decoder_comparison/level_matched/question_decoder_fit.wav",
+          "speaker_cosine": 0.84601,
+          "dnsmos_overall": 3.4048063196221534,
+          "small_wer": 0.0
+        },
+        {
+          "id": "narrative_decoder_fit",
+          "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_decoder_comparison/level_matched/narrative_decoder_fit.wav",
+          "speaker_cosine": 0.847735,
+          "dnsmos_overall": 3.362366822816469,
+          "small_wer": 0.0
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8340536666666667,
+        "dnsmos_overall": 3.374526652450559,
+        "small_wer": 0.0
+      }
+    }
+  },
+  "decision": "Small similarity gain across all three passages; mean quality proxy essentially unchanged. No listening acceptance. Tiny source set cannot establish generalization."
+}

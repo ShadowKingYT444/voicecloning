@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "scope": "actual saved adapter folded into actual source final-projection weight; isolated layer only, not full decoder inference or perceptual acceptance",
+  "best_step": 11,
+  "valid": {
+    "total": 0.8882466554641724,
+    "raw_mse": 0.873328447341919,
+    "envelope_mse": 0.05364231951534748,
+    "baseline_distill_mse": 0.00301495217718184,
+    "adapter_l2": 0.0014380880165845156,
+    "regularization": 1.4380880486442038e-07
+  },
+  "factorized_vs_folded_max_abs": 6.67572021484375e-06,
+  "repeat_application_exact": true,
+  "restore_exact": true,
+  "metadata": {
+    "enabled": true,
+    "restored": false,
+    "strength": 1.0,
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_fit/best_projection.pt",
+    "adapter_sha256": "a5565ebd25bbd31735f3892e8a0a9af96986c96cdcc5336ebcf37304b41671b2",
+    "base_target_weight_sha256": "d82dc3393e6f39ad0ff7692e20f27c8fb7b173f149473dadf019200e4c6511df",
+    "model_checkpoint_path": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+    "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+    "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+    "conditionals_sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+    "provenance_conditionals_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+    "initial_conditionals_sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+    "target_weight_key": "flow.decoder.estimator.final_proj.weight",
+    "target_shape": [
+      80,
+      256,
+      1
+    ],
+    "rank": 2,
+    "alpha": 2.0,
+    "scale": 1.0,
+    "delta_l2": 0.08219017833471298
+  }
+}

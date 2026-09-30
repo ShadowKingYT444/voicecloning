@@ -1,0 +1,23 @@
+{
+  "elapsed_seconds": 4.65904974937439,
+  "finished_unix": 1790695241.4560332,
+  "result": {
+    "conditioning_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+    "field_count": 7,
+    "mode": "zero_shot",
+    "profile": "/home/terryd/gooning/voicecloning/voices/nano/harvey.json",
+    "skipped_optional_fields": [
+      "t3.clap_emb",
+      "t3.cond_prompt_speech_emb",
+      "gen.prompt_feat_len"
+    ]
+  },
+  "rss": {
+    "peak_rss_bytes": 232353792,
+    "rss_bytes": 233893888
+  },
+  "schema_version": 1,
+  "stage": "prepare",
+  "started_unix": 1790695236.7969859,
+  "status": "ok"
+}

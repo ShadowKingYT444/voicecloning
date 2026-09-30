@@ -1,0 +1,688 @@
+{
+  "adoption_gate": {
+    "improved_over_epoch0": true,
+    "min_cosine": 0.98,
+    "status": "experimental_not_promoted"
+  },
+  "baseline_embedding": {
+    "cosine_to_itself": 1.0,
+    "norm": 13.843836784362793,
+    "shape": [
+      1,
+      192
+    ]
+  },
+  "best_step": 1,
+  "best_valid_total": 1.1611175835132599,
+  "cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_aligned_cache.json",
+  "cache_sha256": "ac3b7a6c6d3925420f8a3950a5e87417523fa333124593e48d6278404265ee4c",
+  "checkpoint": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit_smoke_v3/best_embedding.pt",
+  "command": [
+    "scripts/nano_lab/fit_decoder_embedding.py",
+    "--device",
+    "cuda",
+    "--max-steps",
+    "1",
+    "--output-dir",
+    "artifacts/nano_lab/decoder_embedding_fit_smoke_v3"
+  ],
+  "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+  "conditionals_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+  "device": "cuda",
+  "diagnostic_only": true,
+  "disclosure": "Decoder embedding fit uses source-token reconstruction targets. It is not text generation and does not establish zero-shot voice cloning quality.",
+  "elapsed_seconds": 32.54537741700187,
+  "epoch0": {
+    "train": {
+      "mean": {
+        "cosine": 1.0,
+        "envelope_mse": 0.4241575007637342,
+        "raw_mse": 1.2711271484692892,
+        "regularization": 0.0,
+        "total": 1.3771665215492248
+      },
+      "rows": [
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.05290105566382408,
+          "id": "asmr7_repair_001",
+          "raw_mse": 0.8399602174758911,
+          "regularization": 0.0,
+          "total": 0.8531854748725891
+        },
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.14039897918701172,
+          "id": "asmr7_repair_006",
+          "raw_mse": 1.041788101196289,
+          "regularization": 0.0,
+          "total": 1.076887845993042
+        },
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.14909552037715912,
+          "id": "asmr7_repair_007",
+          "raw_mse": 1.2821511030197144,
+          "regularization": 0.0,
+          "total": 1.3194249868392944
+        },
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.1618376225233078,
+          "id": "asmr7_repair_008",
+          "raw_mse": 1.3686912059783936,
+          "regularization": 0.0,
+          "total": 1.4091506004333496
+        },
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.060101862996816635,
+          "id": "asmr7_repair_010",
+          "raw_mse": 1.0977585315704346,
+          "regularization": 0.0,
+          "total": 1.1127840280532837
+        },
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.21535496413707733,
+          "id": "asmr7_repair_012",
+          "raw_mse": 1.2254725694656372,
+          "regularization": 0.0,
+          "total": 1.2793112993240356
+        },
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.40722915530204773,
+          "id": "asmr7_repair_013",
+          "raw_mse": 1.1587179899215698,
+          "regularization": 0.0,
+          "total": 1.2605252265930176
+        },
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.818393886089325,
+          "id": "asmr7_repair_014",
+          "raw_mse": 1.597032070159912,
+          "regularization": 0.0,
+          "total": 1.8016304969787598
+        },
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.3681274354457855,
+          "id": "asmr7_repair_015",
+          "raw_mse": 1.261577844619751,
+          "regularization": 0.0,
+          "total": 1.3536096811294556
+        },
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.4371158182621002,
+          "id": "asmr7_repair_019",
+          "raw_mse": 1.2287039756774902,
+          "regularization": 0.0,
+          "total": 1.3379828929901123
+        },
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.7472425103187561,
+          "id": "asmr7_repair_023",
+          "raw_mse": 1.6048780679702759,
+          "regularization": 0.0,
+          "total": 1.7916886806488037
+        },
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.49730607867240906,
+          "id": "asmr7_repair_024",
+          "raw_mse": 0.9886288046836853,
+          "regularization": 0.0,
+          "total": 1.1129553318023682
+        },
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.5141079425811768,
+          "id": "asmr7_repair_025",
+          "raw_mse": 1.187517762184143,
+          "regularization": 0.0,
+          "total": 1.316044807434082
+        },
+        {
+          "cosine": 1.0,
+          "envelope_mse": 1.296813726425171,
+          "id": "asmr7_repair_028",
+          "raw_mse": 2.0711135864257812,
+          "regularization": 0.0,
+          "total": 2.3953170776367188
+        },
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.4963359534740448,
+          "id": "asmr7_repair_033",
+          "raw_mse": 1.1129153966903687,
+          "regularization": 0.0,
+          "total": 1.2369993925094604
+        }
+      ]
+    },
+    "valid": {
+      "mean": {
+        "cosine": 1.0,
+        "envelope_mse": 0.1438407152891159,
+        "raw_mse": 1.1453073620796204,
+        "regularization": 0.0,
+        "total": 1.1812675595283508
+      },
+      "rows": [
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.08876843750476837,
+          "id": "asmr7_repair_011",
+          "raw_mse": 1.335636019706726,
+          "regularization": 0.0,
+          "total": 1.357828140258789
+        },
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.19891299307346344,
+          "id": "asmr7_repair_022",
+          "raw_mse": 0.9549787044525146,
+          "regularization": 0.0,
+          "total": 1.0047069787979126
+        }
+      ]
+    }
+  },
+  "experimental": true,
+  "final_valid": {
+    "mean": {
+      "cosine": 0.9999499917030334,
+      "envelope_mse": 0.13739143311977386,
+      "raw_mse": 1.1267692744731903,
+      "regularization": 5.000829332857393e-07,
+      "total": 1.1611175835132599
+    },
+    "rows": [
+      {
+        "cosine": 0.9999499917030334,
+        "envelope_mse": 0.08619418740272522,
+        "id": "asmr7_repair_011",
+        "raw_mse": 1.32284414768219,
+        "regularization": 5.000829332857393e-07,
+        "total": 1.3443931341171265
+      },
+      {
+        "cosine": 0.9999499917030334,
+        "envelope_mse": 0.1885886788368225,
+        "id": "asmr7_repair_022",
+        "raw_mse": 0.9306944012641907,
+        "regularization": 5.000829332857393e-07,
+        "total": 0.9778420329093933
+      }
+    ]
+  },
+  "fitted_embedding": {
+    "cosine_to_baseline": 0.9999499917030334,
+    "norm": 13.843835830688477,
+    "shape": [
+      1,
+      192
+    ]
+  },
+  "format": "nano_decoder_embedding_fit_v1",
+  "frozen_params_no_grads": true,
+  "gradient_probe": {
+    "finite": true,
+    "gradient_norm": 0.29791781306266785,
+    "nonzero": true,
+    "row_count": 15
+  },
+  "history": [
+    {
+      "gradient_norm": 0.29791781306266785,
+      "step": 1,
+      "train": {
+        "mean": {
+          "cosine": 1.0,
+          "envelope_mse": 0.4241575007637342,
+          "raw_mse": 1.2711271484692892,
+          "regularization": 0.0,
+          "total": 1.3771665215492248
+        },
+        "rows": [
+          {
+            "cosine": 1.0,
+            "envelope_mse": 0.05290105566382408,
+            "raw_mse": 0.8399602174758911,
+            "regularization": 0.0,
+            "total": 0.8531854748725891
+          },
+          {
+            "cosine": 1.0,
+            "envelope_mse": 0.14039897918701172,
+            "raw_mse": 1.041788101196289,
+            "regularization": 0.0,
+            "total": 1.076887845993042
+          },
+          {
+            "cosine": 1.0,
+            "envelope_mse": 0.14909552037715912,
+            "raw_mse": 1.2821511030197144,
+            "regularization": 0.0,
+            "total": 1.3194249868392944
+          },
+          {
+            "cosine": 1.0,
+            "envelope_mse": 0.1618376225233078,
+            "raw_mse": 1.3686912059783936,
+            "regularization": 0.0,
+            "total": 1.4091506004333496
+          },
+          {
+            "cosine": 1.0,
+            "envelope_mse": 0.060101862996816635,
+            "raw_mse": 1.0977585315704346,
+            "regularization": 0.0,
+            "total": 1.1127840280532837
+          },
+          {
+            "cosine": 1.0,
+            "envelope_mse": 0.21535496413707733,
+            "raw_mse": 1.2254725694656372,
+            "regularization": 0.0,
+            "total": 1.2793112993240356
+          },
+          {
+            "cosine": 1.0,
+            "envelope_mse": 0.40722915530204773,
+            "raw_mse": 1.1587179899215698,
+            "regularization": 0.0,
+            "total": 1.2605252265930176
+          },
+          {
+            "cosine": 1.0,
+            "envelope_mse": 0.818393886089325,
+            "raw_mse": 1.597032070159912,
+            "regularization": 0.0,
+            "total": 1.8016304969787598
+          },
+          {
+            "cosine": 1.0,
+            "envelope_mse": 0.3681274354457855,
+            "raw_mse": 1.261577844619751,
+            "regularization": 0.0,
+            "total": 1.3536096811294556
+          },
+          {
+            "cosine": 1.0,
+            "envelope_mse": 0.4371158182621002,
+            "raw_mse": 1.2287039756774902,
+            "regularization": 0.0,
+            "total": 1.3379828929901123
+          },
+          {
+            "cosine": 1.0,
+            "envelope_mse": 0.7472425103187561,
+            "raw_mse": 1.6048780679702759,
+            "regularization": 0.0,
+            "total": 1.7916886806488037
+          },
+          {
+            "cosine": 1.0,
+            "envelope_mse": 0.49730607867240906,
+            "raw_mse": 0.9886288046836853,
+            "regularization": 0.0,
+            "total": 1.1129553318023682
+          },
+          {
+            "cosine": 1.0,
+            "envelope_mse": 0.5141079425811768,
+            "raw_mse": 1.187517762184143,
+            "regularization": 0.0,
+            "total": 1.316044807434082
+          },
+          {
+            "cosine": 1.0,
+            "envelope_mse": 1.296813726425171,
+            "raw_mse": 2.0711135864257812,
+            "regularization": 0.0,
+            "total": 2.3953170776367188
+          },
+          {
+            "cosine": 1.0,
+            "envelope_mse": 0.4963359534740448,
+            "raw_mse": 1.1129153966903687,
+            "regularization": 0.0,
+            "total": 1.2369993925094604
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9999499917030334,
+          "envelope_mse": 0.13739143311977386,
+          "raw_mse": 1.1267692744731903,
+          "regularization": 5.000829332857393e-07,
+          "total": 1.1611175835132599
+        },
+        "rows": [
+          {
+            "cosine": 0.9999499917030334,
+            "envelope_mse": 0.08619418740272522,
+            "id": "asmr7_repair_011",
+            "raw_mse": 1.32284414768219,
+            "regularization": 5.000829332857393e-07,
+            "total": 1.3443931341171265
+          },
+          {
+            "cosine": 0.9999499917030334,
+            "envelope_mse": 0.1885886788368225,
+            "id": "asmr7_repair_022",
+            "raw_mse": 0.9306944012641907,
+            "regularization": 5.000829332857393e-07,
+            "total": 0.9778420329093933
+          }
+        ]
+      }
+    }
+  ],
+  "hyperparameters": {
+    "envelope_weight": 0.25,
+    "lr": 0.01,
+    "max_steps": 1,
+    "min_cosine": 0.98,
+    "patience": 3,
+    "regularizer": 0.01,
+    "requested_seed": null,
+    "steps": 2
+  },
+  "loader": {
+    "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+    "checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+    "flow_encoder": {
+      "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+      "loaded_tensors": 209,
+      "missing_tensors": [],
+      "selected_tensors": 209,
+      "skipped_tensors": 2282,
+      "unexpected_tensors": []
+    },
+    "frozen": true,
+    "loaded_components": [
+      "flow.input_embedding",
+      "flow.encoder",
+      "flow.encoder_proj",
+      "flow.spk_embed_affine_layer",
+      "flow.decoder.estimator"
+    ],
+    "meanflow_estimator": {
+      "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+      "loaded_tensors": 913,
+      "missing_tensors": [],
+      "selected_tensors": 913,
+      "skipped_tensors": 1578,
+      "unexpected_tensors": []
+    },
+    "omitted_components": [
+      "T3",
+      "S3Gen tokenizer",
+      "S3Gen speaker encoder",
+      "HiFT vocoder"
+    ]
+  },
+  "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+  "model_dir": "/home/terryd/gooning/voicecloning/models/chatterbox-nano",
+  "native_row_seeds": {
+    "asmr7_repair_001": 31,
+    "asmr7_repair_006": 1040,
+    "asmr7_repair_007": 2049,
+    "asmr7_repair_008": 3058,
+    "asmr7_repair_010": 4067,
+    "asmr7_repair_011": 15166,
+    "asmr7_repair_012": 5076,
+    "asmr7_repair_013": 6085,
+    "asmr7_repair_014": 7094,
+    "asmr7_repair_015": 8103,
+    "asmr7_repair_019": 9112,
+    "asmr7_repair_022": 16175,
+    "asmr7_repair_023": 10121,
+    "asmr7_repair_024": 11130,
+    "asmr7_repair_025": 12139,
+    "asmr7_repair_028": 13148,
+    "asmr7_repair_033": 14157
+  },
+  "nonzero_finite_gradient_observed": true,
+  "output_conditionals": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit_smoke_v3/conditionals.pt",
+  "output_conditionals_sha256": "800eaabbd158cc32f6730314969117556256582818ef891d3fec2e0e651de68d",
+  "parity": {
+    "atol": 0.0001,
+    "failures": [],
+    "max_abs": 0.0,
+    "rmse_mean": 0.0,
+    "rows": [
+      {
+        "id": "asmr7_repair_001",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          216
+        ]
+      },
+      {
+        "id": "asmr7_repair_006",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          280
+        ]
+      },
+      {
+        "id": "asmr7_repair_007",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          204
+        ]
+      },
+      {
+        "id": "asmr7_repair_008",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          444
+        ]
+      },
+      {
+        "id": "asmr7_repair_010",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          198
+        ]
+      },
+      {
+        "id": "asmr7_repair_012",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          266
+        ]
+      },
+      {
+        "id": "asmr7_repair_013",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          174
+        ]
+      },
+      {
+        "id": "asmr7_repair_014",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          220
+        ]
+      },
+      {
+        "id": "asmr7_repair_015",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          258
+        ]
+      },
+      {
+        "id": "asmr7_repair_019",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          238
+        ]
+      },
+      {
+        "id": "asmr7_repair_023",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          370
+        ]
+      },
+      {
+        "id": "asmr7_repair_024",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          194
+        ]
+      },
+      {
+        "id": "asmr7_repair_025",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          284
+        ]
+      },
+      {
+        "id": "asmr7_repair_028",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          268
+        ]
+      },
+      {
+        "id": "asmr7_repair_033",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          212
+        ]
+      },
+      {
+        "id": "asmr7_repair_011",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          208
+        ]
+      },
+      {
+        "id": "asmr7_repair_022",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          552
+        ]
+      }
+    ],
+    "status": "passed"
+  },
+  "peak_rss_bytes": 1789923328,
+  "prepare_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr",
+  "prepare_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/manifest.json",
+  "prepare_manifest_sha256": "b422229277ee2cd79d694eaaeb305f076dbc55a4ade99e5c6a489cb93cf4c8cb",
+  "projection_events": 0,
+  "rss_after_fit_bytes": 1791401984,
+  "rss_before_load_bytes": 752779264,
+  "status": "fit_complete",
+  "stopped_after_steps": 1,
+  "target_alignment": {
+    "generated_frames": "2*(N+3)",
+    "source_frames": "2*N or 2*N-1",
+    "speech_tokens_plus_s3gen_sil": 3,
+    "trim_policy": "drop six trailing silence frames and at most one deterministic tokenizer framing tail; no time warp/resampling/DTW"
+  },
+  "train_rows": [
+    "asmr7_repair_001",
+    "asmr7_repair_006",
+    "asmr7_repair_007",
+    "asmr7_repair_008",
+    "asmr7_repair_010",
+    "asmr7_repair_012",
+    "asmr7_repair_013",
+    "asmr7_repair_014",
+    "asmr7_repair_015",
+    "asmr7_repair_019",
+    "asmr7_repair_023",
+    "asmr7_repair_024",
+    "asmr7_repair_025",
+    "asmr7_repair_028",
+    "asmr7_repair_033"
+  ],
+  "valid_rows": [
+    "asmr7_repair_011",
+    "asmr7_repair_022"
+  ]
+}

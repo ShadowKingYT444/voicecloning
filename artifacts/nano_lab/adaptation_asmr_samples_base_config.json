@@ -1,0 +1,30 @@
+{
+  "output_dir": "artifacts/nano_lab/adaptation_asmr_samples_base",
+  "device": "cuda",
+  "threads": 2,
+  "resume": false,
+  "cases": [
+    {
+      "id": "neutral_seed31",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_emotional_02/asmr7_emotional_02__natural.wav",
+      "text_id": "neutral",
+      "seed": 31,
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "top_k": 1000,
+      "repetition_penalty": 1.2,
+      "steps": 2
+    },
+    {
+      "id": "calm_seed47",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_emotional_02/asmr7_emotional_02__natural.wav",
+      "text_id": "calm",
+      "seed": 47,
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "top_k": 1000,
+      "repetition_penalty": 1.2,
+      "steps": 2
+    }
+  ]
+}

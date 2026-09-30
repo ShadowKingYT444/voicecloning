@@ -1,0 +1,17 @@
+{
+  "cfg": "disabled; meanflow graph receives one conditional estimate per Euler step",
+  "generated_token_count": 206,
+  "layout": "B,80,T",
+  "mel_length": 418,
+  "prompt_feat_length": 500,
+  "rng": "numpy.default_rng; explicit state and tail noise; not Torch-identical",
+  "schema_version": 1,
+  "seed": 31,
+  "speech_token_count": 209,
+  "steps": 2,
+  "time_grid": [
+    0.0,
+    0.5,
+    1.0
+  ]
+}

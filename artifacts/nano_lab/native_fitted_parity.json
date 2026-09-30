@@ -1,0 +1,7 @@
+{
+  "native_path": "artifacts/nano_lab/native_asmr_fitted_question_79.wav",
+  "sweep_path": "artifacts/nano_lab/all_attn_robustness/question_79_combined.master.wav",
+  "byte_identical": true,
+  "same_length": true,
+  "max_abs_difference": 0.0
+}

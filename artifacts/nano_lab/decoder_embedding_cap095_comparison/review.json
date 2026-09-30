@@ -1,0 +1,170 @@
+{
+  "status": "experimental_not_promoted",
+  "human_realism_verified": false,
+  "general_zero_shot_improvement": false,
+  "groups": {
+    "cap098_raw": {
+      "rows": [
+        {
+          "id": "morning_projection0_raw",
+          "speaker_cosine": 0.860826,
+          "dnsmos_overall": 3.077840941206808,
+          "small_wer": 0.0,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/morning_projection0_raw.wav"
+        },
+        {
+          "id": "question_projection0_raw",
+          "speaker_cosine": 0.901892,
+          "dnsmos_overall": 3.2793204241323206,
+          "small_wer": 0.0,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/question_projection0_raw.wav"
+        },
+        {
+          "id": "narrative_projection0_raw",
+          "speaker_cosine": 0.891777,
+          "dnsmos_overall": 3.081602195515001,
+          "small_wer": 0.0,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/narrative_projection0_raw.wav"
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8848316666666667,
+        "dnsmos_overall": 3.14625452028471,
+        "small_wer": 0.0
+      }
+    },
+    "cap098_mel": {
+      "rows": [
+        {
+          "id": "morning_projection0_mel",
+          "speaker_cosine": 0.86326,
+          "dnsmos_overall": 3.115634951601715,
+          "small_wer": 0.0,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/morning_projection0_mel.wav"
+        },
+        {
+          "id": "question_projection0_mel",
+          "speaker_cosine": 0.90511,
+          "dnsmos_overall": 3.18177719591183,
+          "small_wer": 0.0,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/question_projection0_mel.wav"
+        },
+        {
+          "id": "narrative_projection0_mel",
+          "speaker_cosine": 0.90015,
+          "dnsmos_overall": 3.2038074245133097,
+          "small_wer": 0.0,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/narrative_projection0_mel.wav"
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8895066666666667,
+        "dnsmos_overall": 3.167073190675618,
+        "small_wer": 0.0
+      }
+    },
+    "cap095_raw": {
+      "rows": [
+        {
+          "id": "morning_cap095_raw",
+          "speaker_cosine": 0.867375,
+          "dnsmos_overall": 3.0269392897842384,
+          "small_wer": 0.0,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_cap095_comparison/level_matched/morning_cap095_raw.wav"
+        },
+        {
+          "id": "question_cap095_raw",
+          "speaker_cosine": 0.91254,
+          "dnsmos_overall": 3.1607384110061076,
+          "small_wer": 0.0,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_cap095_comparison/level_matched/question_cap095_raw.wav"
+        },
+        {
+          "id": "narrative_cap095_raw",
+          "speaker_cosine": 0.897682,
+          "dnsmos_overall": 3.081089267549649,
+          "small_wer": 0.0,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_cap095_comparison/level_matched/narrative_cap095_raw.wav"
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8925323333333334,
+        "dnsmos_overall": 3.089588989446665,
+        "small_wer": 0.0
+      }
+    },
+    "cap095_mel": {
+      "rows": [
+        {
+          "id": "morning_cap095_mel",
+          "speaker_cosine": 0.870951,
+          "dnsmos_overall": 3.0416342830787997,
+          "small_wer": 0.0,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_cap095_comparison/level_matched/morning_cap095_mel.wav"
+        },
+        {
+          "id": "question_cap095_mel",
+          "speaker_cosine": 0.915772,
+          "dnsmos_overall": 3.1233055773882863,
+          "small_wer": 0.0,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_cap095_comparison/level_matched/question_cap095_mel.wav"
+        },
+        {
+          "id": "narrative_cap095_mel",
+          "speaker_cosine": 0.9057,
+          "dnsmos_overall": 3.113934453443947,
+          "small_wer": 0.0,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_cap095_comparison/level_matched/narrative_cap095_mel.wav"
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8974743333333334,
+        "dnsmos_overall": 3.092958104637011,
+        "small_wer": 0.0
+      }
+    }
+  },
+  "token_payload_parity": {
+    "morning_cap095_raw": true,
+    "question_cap095_raw": true,
+    "narrative_cap095_raw": true,
+    "morning_cap095_mel": true,
+    "question_cap095_mel": true,
+    "narrative_cap095_mel": true,
+    "heldout01_cap095_mel": true,
+    "heldout01_cap095_raw": true
+  },
+  "peak_process_rss_mib": 2393.0703125,
+  "all_eight_exact_transcripts": true,
+  "fit": 0.8381018340587616,
+  "controls": "Same text, seeds, T3 adapter, optional mel correction, and reference cohort. Listening copies at -27 LUFS. Earlier baseline artifacts retained.",
+  "same_source_phrase": {
+    "heldout01_cap095_raw": {
+      "duration_s": 6.6,
+      "median_f0_hz": 165.48291645267375,
+      "voiced_fraction": 0.36128048780487804
+    },
+    "heldout01_cap095_mel": {
+      "duration_s": 6.6,
+      "median_f0_hz": 165.833560501595,
+      "voiced_fraction": 0.3932926829268293
+    },
+    "source_heldout01": {
+      "duration_s": 10.0,
+      "median_f0_hz": 258.8736790180749,
+      "voiced_fraction": 0.31959798994974875
+    },
+    "heldout01_cap098_mel": {
+      "duration_s": 6.6,
+      "median_f0_hz": 165.8766551963104,
+      "voiced_fraction": 0.3643292682926829
+    }
+  },
+  "pitch_method": {
+    "backend": "Praat autocorrelation via parselmouth",
+    "floor_hz": 60.0,
+    "ceiling_hz": 500.0,
+    "time_step_s": 0.01,
+    "reliability_warning": "Autocorrelation F0 can be unreliable for whispered, creaky, breathy, or noisy speech."
+  }
+}

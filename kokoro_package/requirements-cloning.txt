@@ -1,0 +1,4 @@
+# Optional voice-enrollment dependencies. The runtime itself only needs the
+# packaged voice pack and requirements.txt.
+inno-kokoro==0.2.0
+praat-parselmouth==0.4.7

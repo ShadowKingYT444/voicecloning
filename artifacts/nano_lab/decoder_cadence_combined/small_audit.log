@@ -1,0 +1,11 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 96570785eabf4d34b10f9cfb77208cec
+{"id": "fit_heldout01_rp1p0", "wer": 0.0, "transcript": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?"}
+{"id": "fit_heldout01_rp1p2", "wer": 0.0, "transcript": "Let's see who's the lucky person who gets to kiss me. Wait a minute, do I know you?"}
+{"id": "fit_question_rp1p0", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "fit_narrative_rp1p0", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 32.341s
+             CPU time consumed: 59.587s
+                   Memory peak: 1G (swap: 0B)

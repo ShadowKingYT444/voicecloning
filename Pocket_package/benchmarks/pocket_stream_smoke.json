@@ -1,0 +1,10 @@
+{
+  "text": "Realtime streaming smoke test.",
+  "precision": "int8",
+  "temperature": 0.2,
+  "voice_state": "voices/asmr7_30s_loud_state.npz",
+  "threads": 1,
+  "first_chunk_latency_seconds": 1.1116,
+  "first_chunk_audio_seconds": 0.16,
+  "chunks": 30
+}

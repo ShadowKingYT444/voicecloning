@@ -1,0 +1,12 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 9acbc9bd77b74ef29e8eac1bada835a2
+{"id": "asmr_conversational_adapted_morning_31", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "asmr_soft_long_segment1", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us. There's no need to rush."}
+{"id": "asmr_soft_long_segment2", "wer": 0.0, "transcript": "Take a seat by the window while I find the notebook. Yesterday we made a list of places to visit."}
+{"id": "asmr_soft_long_segment3", "wer": 0.047619, "transcript": "The old bookshop opens at 10 and the garden stays open until sunset. We can walk along the river after lunch."}
+{"id": "asmr_soft_long_segment4", "wer": 0.0, "transcript": "If the weather changes, we will come back here and finish the story together."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 26.011s
+             CPU time consumed: 25.053s
+                   Memory peak: 2G (swap: 0B)

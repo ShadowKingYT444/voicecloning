@@ -1,0 +1,7 @@
+{
+  "tensor_archive_contents_equal_excluding_serialization_id": {
+    "business": true,
+    "question": true,
+    "narrative": true
+  }
+}

@@ -1,0 +1,7 @@
+numpy
+onnxruntime
+scipy
+sentencepiece
+soundfile
+huggingface_hub
+safetensors

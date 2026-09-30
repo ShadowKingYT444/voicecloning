@@ -1,0 +1,138 @@
+{
+  "voice": "harvey",
+  "dtype": "fp32",
+  "device": "cuda",
+  "cpu_threads": 2,
+  "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+  "seed": 31,
+  "acoustic_seed": 10031,
+  "profile": {
+    "label": "Harvey isolated reference 02",
+    "mode": "zero_shot",
+    "status": "candidate_under_validation",
+    "reference": "artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+    "conditioning_cache": "artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+    "decoder": "meanflow",
+    "steps": 2,
+    "cuda_dtype": "fp32",
+    "sampling": {
+      "temperature": 0.65,
+      "top_p": 0.95,
+      "top_k": 1000,
+      "repetition_penalty": 1.2
+    },
+    "source_case": "harvey_tune_isolated",
+    "watermark": true
+  },
+  "conditioning_sha256": "3b7db489a52a1a6cf14a9a43148d11b4689c32b090124aa80b02f162ef5480f2",
+  "before_load": {
+    "rss_mib": 860.0625,
+    "process_peak_rss_mib": 859.8515625,
+    "gpu_allocated_mib": 0.0,
+    "gpu_peak_allocated_mib": 0.0
+  },
+  "runs": [
+    {
+      "id": "harvey_fp32_0",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/benchmark_harvey_fp32/harvey_fp32_0.wav",
+      "voice": "harvey",
+      "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "phase": "first",
+      "generation_seconds": 6.1351306090000435,
+      "seconds": 6.86,
+      "rtf": 0.894333908017499,
+      "token_count": 172,
+      "audio_sha256": "e2b649a78a84caa3a79cc05e5762e5f978c5db42802eb59ba561d15435ef8fe6",
+      "rss_mib": 2371.12890625,
+      "process_peak_rss_mib": 2369.3125,
+      "gpu_allocated_mib": 1877.33056640625,
+      "gpu_peak_allocated_mib": 2376.2724609375
+    },
+    {
+      "id": "harvey_fp32_1",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/benchmark_harvey_fp32/harvey_fp32_1.wav",
+      "voice": "harvey",
+      "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "phase": "warm",
+      "generation_seconds": 2.9980677210005524,
+      "seconds": 6.86,
+      "rtf": 0.43703611093302513,
+      "token_count": 172,
+      "audio_sha256": "e2b649a78a84caa3a79cc05e5762e5f978c5db42802eb59ba561d15435ef8fe6",
+      "rss_mib": 2372.4296875,
+      "process_peak_rss_mib": 2370.5625,
+      "gpu_allocated_mib": 1877.33056640625,
+      "gpu_peak_allocated_mib": 2376.2724609375
+    },
+    {
+      "id": "harvey_fp32_2",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/benchmark_harvey_fp32/harvey_fp32_2.wav",
+      "voice": "harvey",
+      "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "phase": "warm",
+      "generation_seconds": 2.618262070000128,
+      "seconds": 6.86,
+      "rtf": 0.38167085568514986,
+      "token_count": 172,
+      "audio_sha256": "e2b649a78a84caa3a79cc05e5762e5f978c5db42802eb59ba561d15435ef8fe6",
+      "rss_mib": 2375.11328125,
+      "process_peak_rss_mib": 2373.3125,
+      "gpu_allocated_mib": 1877.33056640625,
+      "gpu_peak_allocated_mib": 2376.2724609375
+    }
+  ],
+  "resource_policy": "3 GiB cgroup maximum, no swap, CPUQuota 200%, nice 10",
+  "load_seconds": 4.829434347999268,
+  "loaded": {
+    "rss_mib": 1452.2578125,
+    "process_peak_rss_mib": 1840.11328125,
+    "gpu_allocated_mib": 1867.6845703125,
+    "gpu_peak_allocated_mib": 2376.2724609375
+  },
+  "runtime_load_report": {
+    "optimized": true,
+    "device": "cuda",
+    "dtype": "torch.float32",
+    "decoder": "meanflow",
+    "ve": {
+      "skipped": true,
+      "reason": "conditionals_path supplied"
+    },
+    "t3": {
+      "loaded_tensors": 153,
+      "skipped_tensors": 2,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": [],
+      "removed_parameters": [
+        "tfmr.wte",
+        "text_head"
+      ]
+    },
+    "precision_policy": {
+      "t3": "torch.float32",
+      "s3gen": "torch.float32"
+    },
+    "s3gen": {
+      "loaded_tensors": 1450,
+      "skipped_tensors": 1041,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": []
+    },
+    "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+    "parameters": {
+      "t3": 140247203,
+      "s3gen": 135467807,
+      "ve": 0
+    },
+    "load_seconds": 4.828571132000434,
+    "engine": {
+      "optimized": true,
+      "dtype": "torch.float32",
+      "device": "cuda",
+      "decoder": "meanflow"
+    }
+  },
+  "warm_mean_rtf": 0.4093534833090875
+}

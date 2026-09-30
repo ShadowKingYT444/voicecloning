@@ -1,0 +1,14 @@
+{
+  "command": [
+    "scripts/nano_lab/repair_dataset.py",
+    "stage",
+    "--proposal",
+    "artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+    "--audit",
+    "artifacts/nano_lab/dataset_repair_complete/small_ct2_audit.json",
+    "--output-dir",
+    "artifacts/nano_lab/dataset_repair_clip"
+  ],
+  "error": "FileNotFoundError: /home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/proposal_rebased.json",
+  "status": "error"
+}

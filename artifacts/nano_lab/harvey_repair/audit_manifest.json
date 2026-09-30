@@ -1,0 +1,47 @@
+[
+  {
+    "expected_text": "I don't take meetings. set them. And my respect isn't demanded.",
+    "family": "harvey",
+    "id": "harvey_repair_001",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair/clips/harvey_repair_001.wav",
+    "source_id": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+    "text": "I don't take meetings. set them. And my respect isn't demanded.",
+    "voice": "harvey"
+  },
+  {
+    "expected_text": "It's earned. Excuses don't win championships. Oh, you added Michael Jordan to tell you that?",
+    "family": "harvey",
+    "id": "harvey_repair_002",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair/clips/harvey_repair_002.wav",
+    "source_id": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+    "text": "It's earned. Excuses don't win championships. Oh, you added Michael Jordan to tell you that?",
+    "voice": "harvey"
+  },
+  {
+    "expected_text": "They don't have dreams. I have goals. Get it through your head.",
+    "family": "harvey",
+    "id": "harvey_repair_003",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair/clips/harvey_repair_003.wav",
+    "source_id": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+    "text": "They don't have dreams. I have goals. Get it through your head.",
+    "voice": "harvey"
+  },
+  {
+    "expected_text": "First impressions last. I don't pave the way for people.",
+    "family": "harvey",
+    "id": "harvey_repair_004",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair/clips/harvey_repair_004.wav",
+    "source_id": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+    "text": "First impressions last. I don't pave the way for people.",
+    "voice": "harvey"
+  },
+  {
+    "expected_text": "People pave the way for me. Life is this, I like this.",
+    "family": "harvey",
+    "id": "harvey_repair_005",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair/clips/harvey_repair_005.wav",
+    "source_id": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+    "text": "People pave the way for me. Life is this, I like this.",
+    "voice": "harvey"
+  }
+]

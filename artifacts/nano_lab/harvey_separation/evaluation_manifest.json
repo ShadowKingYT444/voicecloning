@@ -1,0 +1,3827 @@
+{
+  "schema_version": 1,
+  "generated_by": "scripts/nano_lab/reference_prepare.py",
+  "target": {
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "format": "PCM_16 WAV",
+    "nano_reference_window_s": "5-15 (reference clips)"
+  },
+  "processing_policy": {
+    "default_variant": "natural",
+    "clean_variant_role": "A/B only; restrained gate keeps a 0.55 gain floor",
+    "raw_variant_role": "source audit and fallback",
+    "normalisation": "peak target -2 dBFS, maximum gain +8 dB for processed variants",
+    "noise_metrics": "heuristic proxies; no clean-room reference is available",
+    "original_sources_preserved": true
+  },
+  "sources": [
+    {
+      "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "bytes": 14730063,
+      "duration_s": 613.680181,
+      "codec": "mp3",
+      "sample_rate": 44100,
+      "channels": 2,
+      "bit_rate": 192000
+    },
+    {
+      "path": "when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+      "sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+      "bytes": 557708,
+      "duration_s": 40.82068,
+      "codec": "mp3",
+      "sample_rate": 44100,
+      "channels": 2,
+      "bit_rate": 109178
+    }
+  ],
+  "references": [
+    {
+      "id": "asmr7_bully_01",
+      "family": "asmr7",
+      "split": "reference",
+      "style": "energetic bully / close speech",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 11.3,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 117.7,
+        "end_s": 129.0,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 11.3,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -32.274,
+          "peak_dbfs": -9.92,
+          "crest_db": 22.353,
+          "dc_offset": -1.48e-05,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -63.318,
+          "speech_level_dbfs_proxy_high50pct_frames": -34.599,
+          "snr_db_proxy_high50_minus_low10": 28.718,
+          "spectral_centroid_hz": 958.491,
+          "spectral_flatness_proxy": 0.097704,
+          "high_band_fraction_proxy_ge8khz": 0.018934
+        }
+      },
+      "transcript": "I do know you. Shit. What did I do to end up here with you? I know I spun the bottle. Fucking dumbass.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 11.3,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -32.274,
+            "peak_dbfs": -9.92,
+            "crest_db": 22.353,
+            "dc_offset": -1.48e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -63.318,
+            "speech_level_dbfs_proxy_high50pct_frames": -34.599,
+            "snr_db_proxy_high50_minus_low10": 28.718,
+            "spectral_centroid_hz": 958.491,
+            "spectral_flatness_proxy": 0.097704,
+            "high_band_fraction_proxy_ge8khz": 0.018934
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 11.3,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -24.328,
+            "peak_dbfs": -2.067,
+            "crest_db": 22.261,
+            "dc_offset": 5.4e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -60.321,
+            "speech_level_dbfs_proxy_high50pct_frames": -26.821,
+            "snr_db_proxy_high50_minus_low10": 33.5,
+            "spectral_centroid_hz": 895.687,
+            "spectral_flatness_proxy": 0.040526,
+            "high_band_fraction_proxy_ge8khz": 0.012306
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 11.3,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -24.333,
+            "peak_dbfs": -2.072,
+            "crest_db": 22.262,
+            "dc_offset": 5.2e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -62.485,
+            "speech_level_dbfs_proxy_high50pct_frames": -26.837,
+            "snr_db_proxy_high50_minus_low10": 35.647,
+            "spectral_centroid_hz": 896.009,
+            "spectral_flatness_proxy": 0.039915,
+            "high_band_fraction_proxy_ge8khz": 0.012311
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_bully_02",
+      "family": "asmr7",
+      "split": "reference",
+      "style": "taunting to conversational",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 12.5,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 138.7,
+        "end_s": 151.2,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 12.5,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -30.283,
+          "peak_dbfs": -7.168,
+          "crest_db": 23.114,
+          "dc_offset": 1.346e-05,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -66.568,
+          "speech_level_dbfs_proxy_high50pct_frames": -32.22,
+          "snr_db_proxy_high50_minus_low10": 34.348,
+          "spectral_centroid_hz": 1128.706,
+          "spectral_flatness_proxy": 0.086253,
+          "high_band_fraction_proxy_ge8khz": 0.019846
+        }
+      },
+      "transcript": "No, it is that bad. You are the biggest nerd I know, and no, I either have to kiss you or miss out on my turn of seven minutes in heaven. All right, leave us.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_bully_02/asmr7_bully_02__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_bully_02/asmr7_bully_02__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_bully_02/asmr7_bully_02__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_bully_02/asmr7_bully_02__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 12.5,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -30.283,
+            "peak_dbfs": -7.168,
+            "crest_db": 23.114,
+            "dc_offset": 1.346e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -66.568,
+            "speech_level_dbfs_proxy_high50pct_frames": -32.22,
+            "snr_db_proxy_high50_minus_low10": 34.348,
+            "spectral_centroid_hz": 1128.706,
+            "spectral_flatness_proxy": 0.086253,
+            "high_band_fraction_proxy_ge8khz": 0.019846
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_bully_02/asmr7_bully_02__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 12.5,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -25.124,
+            "peak_dbfs": -2.0,
+            "crest_db": 23.124,
+            "dc_offset": -2.5e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -62.387,
+            "speech_level_dbfs_proxy_high50pct_frames": -27.211,
+            "snr_db_proxy_high50_minus_low10": 35.175,
+            "spectral_centroid_hz": 1074.179,
+            "spectral_flatness_proxy": 0.03626,
+            "high_band_fraction_proxy_ge8khz": 0.013922
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_bully_02/asmr7_bully_02__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 12.5,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -25.127,
+            "peak_dbfs": -2.0,
+            "crest_db": 23.127,
+            "dc_offset": -2.51e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -63.657,
+            "speech_level_dbfs_proxy_high50pct_frames": -27.212,
+            "snr_db_proxy_high50_minus_low10": 36.445,
+            "spectral_centroid_hz": 1074.42,
+            "spectral_flatness_proxy": 0.03584,
+            "high_band_fraction_proxy_ge8khz": 0.013929
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_conversational_01",
+      "family": "asmr7",
+      "split": "reference",
+      "style": "low conversational ASMR",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 13.3,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 181.3,
+        "end_s": 194.6,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 13.3,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -34.605,
+          "peak_dbfs": -14.383,
+          "crest_db": 20.223,
+          "dc_offset": 1.521e-05,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -59.338,
+          "speech_level_dbfs_proxy_high50pct_frames": -33.54,
+          "snr_db_proxy_high50_minus_low10": 25.798,
+          "spectral_centroid_hz": 1037.086,
+          "spectral_flatness_proxy": 0.152058,
+          "high_band_fraction_proxy_ge8khz": 0.035829
+        }
+      },
+      "transcript": "For some reason, you're here now, and stuck in a closet with me. I'm not sure if this is more torture for me or for you, but we are stuck here for 7 minutes. Possibly more considering they might be kind enough to offer me a few extra minutes.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 13.3,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -34.605,
+            "peak_dbfs": -14.383,
+            "crest_db": 20.223,
+            "dc_offset": 1.521e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -59.338,
+            "speech_level_dbfs_proxy_high50pct_frames": -33.54,
+            "snr_db_proxy_high50_minus_low10": 25.798,
+            "spectral_centroid_hz": 1037.086,
+            "spectral_flatness_proxy": 0.152058,
+            "high_band_fraction_proxy_ge8khz": 0.035829
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 13.3,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -26.687,
+            "peak_dbfs": -6.265,
+            "crest_db": 20.422,
+            "dc_offset": -6.9e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -54.469,
+            "speech_level_dbfs_proxy_high50pct_frames": -25.578,
+            "snr_db_proxy_high50_minus_low10": 28.891,
+            "spectral_centroid_hz": 948.094,
+            "spectral_flatness_proxy": 0.064105,
+            "high_band_fraction_proxy_ge8khz": 0.026429
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 13.3,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -26.714,
+            "peak_dbfs": -6.248,
+            "crest_db": 20.466,
+            "dc_offset": -6.8e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -55.596,
+            "speech_level_dbfs_proxy_high50pct_frames": -25.591,
+            "snr_db_proxy_high50_minus_low10": 30.005,
+            "spectral_centroid_hz": 951.052,
+            "spectral_flatness_proxy": 0.063261,
+            "high_band_fraction_proxy_ge8khz": 0.026586
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_soft_praise_01",
+      "family": "asmr7",
+      "split": "reference",
+      "style": "soft praise / breathy",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 13.9,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 354.2,
+        "end_s": 368.1,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 13.9,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -38.831,
+          "peak_dbfs": -20.089,
+          "crest_db": 18.741,
+          "dc_offset": -1.434e-05,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -63.669,
+          "speech_level_dbfs_proxy_high50pct_frames": -37.47,
+          "snr_db_proxy_high50_minus_low10": 26.199,
+          "spectral_centroid_hz": 1354.765,
+          "spectral_flatness_proxy": 0.194409,
+          "high_band_fraction_proxy_ge8khz": 0.073895
+        }
+      },
+      "transcript": "The fact is, when I see you, I see this cute little perfect being who lives in a bubble of perfect and eats perfect little bowls of cereal for breakfast.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 13.9,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -38.831,
+            "peak_dbfs": -20.089,
+            "crest_db": 18.741,
+            "dc_offset": -1.434e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -63.669,
+            "speech_level_dbfs_proxy_high50pct_frames": -37.47,
+            "snr_db_proxy_high50_minus_low10": 26.199,
+            "spectral_centroid_hz": 1354.765,
+            "spectral_flatness_proxy": 0.194409,
+            "high_band_fraction_proxy_ge8khz": 0.073895
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 13.9,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -31.486,
+            "peak_dbfs": -11.977,
+            "crest_db": 19.51,
+            "dc_offset": -6.9e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -58.983,
+            "speech_level_dbfs_proxy_high50pct_frames": -30.195,
+            "snr_db_proxy_high50_minus_low10": 28.788,
+            "spectral_centroid_hz": 1348.213,
+            "spectral_flatness_proxy": 0.088803,
+            "high_band_fraction_proxy_ge8khz": 0.067548
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 13.9,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -31.499,
+            "peak_dbfs": -11.984,
+            "crest_db": 19.516,
+            "dc_offset": -6.8e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -60.567,
+            "speech_level_dbfs_proxy_high50pct_frames": -30.2,
+            "snr_db_proxy_high50_minus_low10": 30.367,
+            "spectral_centroid_hz": 1350.671,
+            "spectral_flatness_proxy": 0.087413,
+            "high_band_fraction_proxy_ge8khz": 0.06774
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_emotional_01",
+      "family": "asmr7",
+      "split": "reference",
+      "style": "quiet confession",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 13.4,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 372.6,
+        "end_s": 386.0,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 13.4,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -32.651,
+          "peak_dbfs": -12.588,
+          "crest_db": 20.062,
+          "dc_offset": -3.67e-06,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -66.465,
+          "speech_level_dbfs_proxy_high50pct_frames": -32.613,
+          "snr_db_proxy_high50_minus_low10": 33.852,
+          "spectral_centroid_hz": 1046.665,
+          "spectral_flatness_proxy": 0.130884,
+          "high_band_fraction_proxy_ge8khz": 0.035119
+        }
+      },
+      "transcript": "Okay, what I'm trying to say is that you made me jealous, that you live in this perfect world and you're always so nice. No matter how bad of a day you have or how many times I mean to you.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_emotional_01/asmr7_emotional_01__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_emotional_01/asmr7_emotional_01__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_emotional_01/asmr7_emotional_01__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_emotional_01/asmr7_emotional_01__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 13.4,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -32.651,
+            "peak_dbfs": -12.588,
+            "crest_db": 20.062,
+            "dc_offset": -3.67e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -66.465,
+            "speech_level_dbfs_proxy_high50pct_frames": -32.613,
+            "snr_db_proxy_high50_minus_low10": 33.852,
+            "spectral_centroid_hz": 1046.665,
+            "spectral_flatness_proxy": 0.130884,
+            "high_band_fraction_proxy_ge8khz": 0.035119
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_emotional_01/asmr7_emotional_01__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 13.4,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -24.755,
+            "peak_dbfs": -4.895,
+            "crest_db": 19.86,
+            "dc_offset": -2.2e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -61.164,
+            "speech_level_dbfs_proxy_high50pct_frames": -24.758,
+            "snr_db_proxy_high50_minus_low10": 36.406,
+            "spectral_centroid_hz": 958.417,
+            "spectral_flatness_proxy": 0.054924,
+            "high_band_fraction_proxy_ge8khz": 0.025785
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_emotional_01/asmr7_emotional_01__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 13.4,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -24.758,
+            "peak_dbfs": -4.9,
+            "crest_db": 19.858,
+            "dc_offset": -1.9e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -62.862,
+            "speech_level_dbfs_proxy_high50pct_frames": -24.759,
+            "snr_db_proxy_high50_minus_low10": 38.103,
+            "spectral_centroid_hz": 958.532,
+            "spectral_flatness_proxy": 0.054123,
+            "high_band_fraction_proxy_ge8khz": 0.025796
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_emotional_02",
+      "family": "asmr7",
+      "split": "reference",
+      "style": "intimate confession",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 14.0,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 390.7,
+        "end_s": 404.7,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 14.0,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -31.097,
+          "peak_dbfs": -9.44,
+          "crest_db": 21.657,
+          "dc_offset": -8.23e-06,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -63.683,
+          "speech_level_dbfs_proxy_high50pct_frames": -33.259,
+          "snr_db_proxy_high50_minus_low10": 30.424,
+          "spectral_centroid_hz": 715.929,
+          "spectral_flatness_proxy": 0.080268,
+          "high_band_fraction_proxy_ge8khz": 0.010758
+        }
+      },
+      "transcript": "Mean to you because you're perfect and I want to be the one bad thing to make your world less perfect. You seriously only got from all that that I call you cute.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_emotional_02/asmr7_emotional_02__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_emotional_02/asmr7_emotional_02__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_emotional_02/asmr7_emotional_02__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_emotional_02/asmr7_emotional_02__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 14.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -31.097,
+            "peak_dbfs": -9.44,
+            "crest_db": 21.657,
+            "dc_offset": -8.23e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -63.683,
+            "speech_level_dbfs_proxy_high50pct_frames": -33.259,
+            "snr_db_proxy_high50_minus_low10": 30.424,
+            "spectral_centroid_hz": 715.929,
+            "spectral_flatness_proxy": 0.080268,
+            "high_band_fraction_proxy_ge8khz": 0.010758
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_emotional_02/asmr7_emotional_02__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 14.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -23.577,
+            "peak_dbfs": -2.0,
+            "crest_db": 21.577,
+            "dc_offset": -1.805e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -61.486,
+            "speech_level_dbfs_proxy_high50pct_frames": -26.013,
+            "snr_db_proxy_high50_minus_low10": 35.474,
+            "spectral_centroid_hz": 703.043,
+            "spectral_flatness_proxy": 0.03367,
+            "high_band_fraction_proxy_ge8khz": 0.008797
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_emotional_02/asmr7_emotional_02__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 14.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -23.582,
+            "peak_dbfs": -2.0,
+            "crest_db": 21.582,
+            "dc_offset": -1.794e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -63.656,
+            "speech_level_dbfs_proxy_high50pct_frames": -26.017,
+            "snr_db_proxy_high50_minus_low10": 37.639,
+            "spectral_centroid_hz": 703.056,
+            "spectral_flatness_proxy": 0.03309,
+            "high_band_fraction_proxy_ge8khz": 0.008797
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_party_01",
+      "family": "asmr7",
+      "split": "reference",
+      "style": "clearer spoken / energetic",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 13.1,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 35.1,
+        "end_s": 48.2,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 13.1,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -27.093,
+          "peak_dbfs": -4.438,
+          "crest_db": 22.655,
+          "dc_offset": -2.98e-06,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -61.931,
+          "speech_level_dbfs_proxy_high50pct_frames": -27.303,
+          "snr_db_proxy_high50_minus_low10": 34.628,
+          "spectral_centroid_hz": 987.847,
+          "spectral_flatness_proxy": 0.079132,
+          "high_band_fraction_proxy_ge8khz": 0.011613
+        }
+      },
+      "transcript": "So as the one throwing the party, and it also being my party, I would like to announce that I'm turning this game of spin the bottle into a front 4, 7 minutes in heaven.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_party_01/asmr7_party_01__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_party_01/asmr7_party_01__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_party_01/asmr7_party_01__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_party_01/asmr7_party_01__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 13.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -27.093,
+            "peak_dbfs": -4.438,
+            "crest_db": 22.655,
+            "dc_offset": -2.98e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -61.931,
+            "speech_level_dbfs_proxy_high50pct_frames": -27.303,
+            "snr_db_proxy_high50_minus_low10": 34.628,
+            "spectral_centroid_hz": 987.847,
+            "spectral_flatness_proxy": 0.079132,
+            "high_band_fraction_proxy_ge8khz": 0.011613
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_party_01/asmr7_party_01__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 13.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -24.687,
+            "peak_dbfs": -2.0,
+            "crest_db": 22.687,
+            "dc_offset": -6.6e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -59.777,
+            "speech_level_dbfs_proxy_high50pct_frames": -24.903,
+            "snr_db_proxy_high50_minus_low10": 34.874,
+            "spectral_centroid_hz": 960.436,
+            "spectral_flatness_proxy": 0.032906,
+            "high_band_fraction_proxy_ge8khz": 0.008564
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_party_01/asmr7_party_01__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 13.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -24.693,
+            "peak_dbfs": -2.0,
+            "crest_db": 22.693,
+            "dc_offset": -6.7e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -61.975,
+            "speech_level_dbfs_proxy_high50pct_frames": -24.931,
+            "snr_db_proxy_high50_minus_low10": 37.044,
+            "spectral_centroid_hz": 961.245,
+            "spectral_flatness_proxy": 0.032518,
+            "high_band_fraction_proxy_ge8khz": 0.008578
+          }
+        }
+      }
+    },
+    {
+      "id": "harvey_quote_01",
+      "family": "harvey",
+      "split": "reference",
+      "style": "firm declarative",
+      "source": {
+        "path": "when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+        "sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+        "bytes": 557708,
+        "duration_s": 6.3,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 109178,
+        "start_s": 0.0,
+        "end_s": 6.3,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 6.3,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -24.955,
+          "peak_dbfs": -5.15,
+          "crest_db": 19.805,
+          "dc_offset": 5.715e-05,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -50.184,
+          "speech_level_dbfs_proxy_high50pct_frames": -24.952,
+          "snr_db_proxy_high50_minus_low10": 25.232,
+          "spectral_centroid_hz": 860.64,
+          "spectral_flatness_proxy": 0.074825,
+          "high_band_fraction_proxy_ge8khz": 0.004322
+        }
+      },
+      "transcript": "I don't take meetings. I set them. And my respect isn't demanded. It's earned. Excuses don't win championships.",
+      "transcript_source": "faster-whisper-tiny.en (auto, high confidence)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/harvey/harvey_quote_01/harvey_quote_01__raw.wav",
+        "natural": "artifacts/nano_lab/references/harvey/harvey_quote_01/harvey_quote_01__natural.wav",
+        "clean": "artifacts/nano_lab/references/harvey/harvey_quote_01/harvey_quote_01__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_quote_01/harvey_quote_01__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.3,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -24.955,
+            "peak_dbfs": -5.15,
+            "crest_db": 19.805,
+            "dc_offset": 5.715e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -50.184,
+            "speech_level_dbfs_proxy_high50pct_frames": -24.952,
+            "snr_db_proxy_high50_minus_low10": 25.232,
+            "spectral_centroid_hz": 860.64,
+            "spectral_flatness_proxy": 0.074825,
+            "high_band_fraction_proxy_ge8khz": 0.004322
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_quote_01/harvey_quote_01__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.3,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -21.876,
+            "peak_dbfs": -2.0,
+            "crest_db": 19.876,
+            "dc_offset": -3.43e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -47.417,
+            "speech_level_dbfs_proxy_high50pct_frames": -22.145,
+            "snr_db_proxy_high50_minus_low10": 25.272,
+            "spectral_centroid_hz": 870.083,
+            "spectral_flatness_proxy": 0.031979,
+            "high_band_fraction_proxy_ge8khz": 0.003896
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_quote_01/harvey_quote_01__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.3,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -21.895,
+            "peak_dbfs": -2.0,
+            "crest_db": 19.895,
+            "dc_offset": -3.62e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -49.368,
+            "speech_level_dbfs_proxy_high50pct_frames": -22.162,
+            "snr_db_proxy_high50_minus_low10": 27.207,
+            "spectral_centroid_hz": 871.059,
+            "spectral_flatness_proxy": 0.031322,
+            "high_band_fraction_proxy_ge8khz": 0.003895
+          }
+        }
+      }
+    },
+    {
+      "id": "harvey_quote_02",
+      "family": "harvey",
+      "split": "reference",
+      "style": "measured authority",
+      "source": {
+        "path": "when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+        "sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+        "bytes": 557708,
+        "duration_s": 7.1,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 109178,
+        "start_s": 9.0,
+        "end_s": 16.1,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 7.1,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -23.378,
+          "peak_dbfs": -4.935,
+          "crest_db": 18.442,
+          "dc_offset": -3.55e-06,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -43.438,
+          "speech_level_dbfs_proxy_high50pct_frames": -22.963,
+          "snr_db_proxy_high50_minus_low10": 20.475,
+          "spectral_centroid_hz": 815.441,
+          "spectral_flatness_proxy": 0.036579,
+          "high_band_fraction_proxy_ge8khz": 0.001195
+        }
+      },
+      "transcript": "Never destroy anyone in public when you can accomplish the same result in private. I don't play the odds. I play the man.",
+      "transcript_source": "faster-whisper-tiny.en (auto, high confidence)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__raw.wav",
+        "natural": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__natural.wav",
+        "clean": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 7.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -23.378,
+            "peak_dbfs": -4.935,
+            "crest_db": 18.442,
+            "dc_offset": -3.55e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -43.438,
+            "speech_level_dbfs_proxy_high50pct_frames": -22.963,
+            "snr_db_proxy_high50_minus_low10": 20.475,
+            "spectral_centroid_hz": 815.441,
+            "spectral_flatness_proxy": 0.036579,
+            "high_band_fraction_proxy_ge8khz": 0.001195
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 7.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -20.479,
+            "peak_dbfs": -2.0,
+            "crest_db": 18.479,
+            "dc_offset": -4.91e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -40.961,
+            "speech_level_dbfs_proxy_high50pct_frames": -20.075,
+            "snr_db_proxy_high50_minus_low10": 20.886,
+            "spectral_centroid_hz": 819.392,
+            "spectral_flatness_proxy": 0.015573,
+            "high_band_fraction_proxy_ge8khz": 0.001116
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 7.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -20.536,
+            "peak_dbfs": -2.0,
+            "crest_db": 18.536,
+            "dc_offset": -4.67e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -42.966,
+            "speech_level_dbfs_proxy_high50pct_frames": -20.194,
+            "snr_db_proxy_high50_minus_low10": 22.772,
+            "spectral_centroid_hz": 824.971,
+            "spectral_flatness_proxy": 0.015285,
+            "high_band_fraction_proxy_ge8khz": 0.001126
+          }
+        }
+      }
+    },
+    {
+      "id": "harvey_quote_03",
+      "family": "harvey",
+      "split": "reference",
+      "style": "assertive rhythm",
+      "source": {
+        "path": "when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+        "sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+        "bytes": 557708,
+        "duration_s": 6.1,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 109178,
+        "start_s": 18.6,
+        "end_s": 24.7,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 6.1,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -22.508,
+          "peak_dbfs": -4.975,
+          "crest_db": 17.533,
+          "dc_offset": 9.373e-05,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -43.437,
+          "speech_level_dbfs_proxy_high50pct_frames": -20.521,
+          "snr_db_proxy_high50_minus_low10": 22.916,
+          "spectral_centroid_hz": 676.543,
+          "spectral_flatness_proxy": 0.039508,
+          "high_band_fraction_proxy_ge8khz": 0.00179
+        }
+      },
+      "transcript": "Winners don't make excuses when the other side plays the game. They don't have dreams. I have goals. Get it through your head.",
+      "transcript_source": "faster-whisper-tiny.en (auto, high confidence)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/harvey/harvey_quote_03/harvey_quote_03__raw.wav",
+        "natural": "artifacts/nano_lab/references/harvey/harvey_quote_03/harvey_quote_03__natural.wav",
+        "clean": "artifacts/nano_lab/references/harvey/harvey_quote_03/harvey_quote_03__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_quote_03/harvey_quote_03__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -22.508,
+            "peak_dbfs": -4.975,
+            "crest_db": 17.533,
+            "dc_offset": 9.373e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -43.437,
+            "speech_level_dbfs_proxy_high50pct_frames": -20.521,
+            "snr_db_proxy_high50_minus_low10": 22.916,
+            "spectral_centroid_hz": 676.543,
+            "spectral_flatness_proxy": 0.039508,
+            "high_band_fraction_proxy_ge8khz": 0.00179
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_quote_03/harvey_quote_03__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -19.578,
+            "peak_dbfs": -2.0,
+            "crest_db": 17.578,
+            "dc_offset": 2.19e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -41.406,
+            "speech_level_dbfs_proxy_high50pct_frames": -17.533,
+            "snr_db_proxy_high50_minus_low10": 23.873,
+            "spectral_centroid_hz": 684.319,
+            "spectral_flatness_proxy": 0.016708,
+            "high_band_fraction_proxy_ge8khz": 0.001368
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_quote_03/harvey_quote_03__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -19.605,
+            "peak_dbfs": -2.0,
+            "crest_db": 17.605,
+            "dc_offset": 3e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -43.184,
+            "speech_level_dbfs_proxy_high50pct_frames": -17.532,
+            "snr_db_proxy_high50_minus_low10": 25.651,
+            "spectral_centroid_hz": 685.576,
+            "spectral_flatness_proxy": 0.016354,
+            "high_band_fraction_proxy_ge8khz": 0.001359
+          }
+        }
+      }
+    },
+    {
+      "id": "harvey_quote_04",
+      "family": "harvey",
+      "split": "reference",
+      "style": "short clipped phrasing",
+      "source": {
+        "path": "when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+        "sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+        "bytes": 557708,
+        "duration_s": 6.5,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 109178,
+        "start_s": 26.7,
+        "end_s": 33.2,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 6.5,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -24.347,
+          "peak_dbfs": -4.98,
+          "crest_db": 19.367,
+          "dc_offset": 6.686e-05,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -46.55,
+          "speech_level_dbfs_proxy_high50pct_frames": -29.598,
+          "snr_db_proxy_high50_minus_low10": 16.952,
+          "spectral_centroid_hz": 639.641,
+          "spectral_flatness_proxy": 0.039148,
+          "high_band_fraction_proxy_ge8khz": 0.00263
+        }
+      },
+      "transcript": "I don't pave the way for people. People pave the way for me. Life is this, I like this.",
+      "transcript_source": "faster-whisper-tiny.en (auto, high confidence)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/harvey/harvey_quote_04/harvey_quote_04__raw.wav",
+        "natural": "artifacts/nano_lab/references/harvey/harvey_quote_04/harvey_quote_04__natural.wav",
+        "clean": "artifacts/nano_lab/references/harvey/harvey_quote_04/harvey_quote_04__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_quote_04/harvey_quote_04__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.5,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -24.347,
+            "peak_dbfs": -4.98,
+            "crest_db": 19.367,
+            "dc_offset": 6.686e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -46.55,
+            "speech_level_dbfs_proxy_high50pct_frames": -29.598,
+            "snr_db_proxy_high50_minus_low10": 16.952,
+            "spectral_centroid_hz": 639.641,
+            "spectral_flatness_proxy": 0.039148,
+            "high_band_fraction_proxy_ge8khz": 0.00263
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_quote_04/harvey_quote_04__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.5,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -21.432,
+            "peak_dbfs": -2.0,
+            "crest_db": 19.432,
+            "dc_offset": 4.4e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -44.328,
+            "speech_level_dbfs_proxy_high50pct_frames": -26.718,
+            "snr_db_proxy_high50_minus_low10": 17.61,
+            "spectral_centroid_hz": 647.627,
+            "spectral_flatness_proxy": 0.016713,
+            "high_band_fraction_proxy_ge8khz": 0.002116
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_quote_04/harvey_quote_04__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.5,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -21.458,
+            "peak_dbfs": -2.0,
+            "crest_db": 19.458,
+            "dc_offset": 7.4e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -45.91,
+            "speech_level_dbfs_proxy_high50pct_frames": -26.782,
+            "snr_db_proxy_high50_minus_low10": 19.128,
+            "spectral_centroid_hz": 649.018,
+            "spectral_flatness_proxy": 0.016369,
+            "high_band_fraction_proxy_ge8khz": 0.002103
+          }
+        }
+      }
+    }
+  ],
+  "heldout": [
+    {
+      "id": "asmr7_heldout_01",
+      "family": "asmr7",
+      "split": "heldout",
+      "style": "heldout / playful",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 10.0,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 92.1,
+        "end_s": 102.1,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 10.0,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -30.59,
+          "peak_dbfs": -8.646,
+          "crest_db": 21.944,
+          "dc_offset": -8.23e-06,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -53.751,
+          "speech_level_dbfs_proxy_high50pct_frames": -31.919,
+          "snr_db_proxy_high50_minus_low10": 21.832,
+          "spectral_centroid_hz": 851.955,
+          "spectral_flatness_proxy": 0.094238,
+          "high_band_fraction_proxy_ge8khz": 0.0197
+        }
+      },
+      "transcript": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_heldout_01/asmr7_heldout_01__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_heldout_01/asmr7_heldout_01__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_heldout_01/asmr7_heldout_01__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_heldout_01/asmr7_heldout_01__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -30.59,
+            "peak_dbfs": -8.646,
+            "crest_db": 21.944,
+            "dc_offset": -8.23e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -53.751,
+            "speech_level_dbfs_proxy_high50pct_frames": -31.919,
+            "snr_db_proxy_high50_minus_low10": 21.832,
+            "spectral_centroid_hz": 851.955,
+            "spectral_flatness_proxy": 0.094238,
+            "high_band_fraction_proxy_ge8khz": 0.0197
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_heldout_01/asmr7_heldout_01__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -23.884,
+            "peak_dbfs": -2.0,
+            "crest_db": 21.884,
+            "dc_offset": 1.7e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -48.326,
+            "speech_level_dbfs_proxy_high50pct_frames": -25.521,
+            "snr_db_proxy_high50_minus_low10": 22.805,
+            "spectral_centroid_hz": 784.219,
+            "spectral_flatness_proxy": 0.039438,
+            "high_band_fraction_proxy_ge8khz": 0.012829
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_heldout_01/asmr7_heldout_01__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -23.909,
+            "peak_dbfs": -2.0,
+            "crest_db": 21.909,
+            "dc_offset": 8e-08,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -50.337,
+            "speech_level_dbfs_proxy_high50pct_frames": -25.605,
+            "snr_db_proxy_high50_minus_low10": 24.733,
+            "spectral_centroid_hz": 787.494,
+            "spectral_flatness_proxy": 0.039164,
+            "high_band_fraction_proxy_ge8khz": 0.012931
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_heldout_02",
+      "family": "asmr7",
+      "split": "heldout",
+      "style": "heldout / aggressive",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 12.1,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 239.0,
+        "end_s": 251.1,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 12.1,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -36.4,
+          "peak_dbfs": -18.126,
+          "crest_db": 18.274,
+          "dc_offset": 1.131e-05,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -64.26,
+          "speech_level_dbfs_proxy_high50pct_frames": -35.5,
+          "snr_db_proxy_high50_minus_low10": 28.76,
+          "spectral_centroid_hz": 1281.714,
+          "spectral_flatness_proxy": 0.204083,
+          "high_band_fraction_proxy_ge8khz": 0.058353
+        }
+      },
+      "transcript": "Not even friends, enemies even. In fact, when I see you, I audibly groan. I feel so disgusted I almost throw up.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 12.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -36.4,
+            "peak_dbfs": -18.126,
+            "crest_db": 18.274,
+            "dc_offset": 1.131e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -64.26,
+            "speech_level_dbfs_proxy_high50pct_frames": -35.5,
+            "snr_db_proxy_high50_minus_low10": 28.76,
+            "spectral_centroid_hz": 1281.714,
+            "spectral_flatness_proxy": 0.204083,
+            "high_band_fraction_proxy_ge8khz": 0.058353
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 12.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -28.519,
+            "peak_dbfs": -10.129,
+            "crest_db": 18.39,
+            "dc_offset": 5.35e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -63.041,
+            "speech_level_dbfs_proxy_high50pct_frames": -27.691,
+            "snr_db_proxy_high50_minus_low10": 35.35,
+            "spectral_centroid_hz": 1162.853,
+            "spectral_flatness_proxy": 0.086655,
+            "high_band_fraction_proxy_ge8khz": 0.045642
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 12.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -28.524,
+            "peak_dbfs": -10.124,
+            "crest_db": 18.4,
+            "dc_offset": 5.32e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -65.013,
+            "speech_level_dbfs_proxy_high50pct_frames": -27.694,
+            "snr_db_proxy_high50_minus_low10": 37.319,
+            "spectral_centroid_hz": 1163.656,
+            "spectral_flatness_proxy": 0.085345,
+            "high_band_fraction_proxy_ge8khz": 0.045691
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_heldout_03",
+      "family": "asmr7",
+      "split": "heldout",
+      "style": "heldout / emotional",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 12.1,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 303.8,
+        "end_s": 315.9,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 12.1,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -42.382,
+          "peak_dbfs": -22.07,
+          "crest_db": 20.312,
+          "dc_offset": -1.168e-05,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -65.542,
+          "speech_level_dbfs_proxy_high50pct_frames": -46.324,
+          "snr_db_proxy_high50_minus_low10": 19.217,
+          "spectral_centroid_hz": 980.967,
+          "spectral_flatness_proxy": 0.124512,
+          "high_band_fraction_proxy_ge8khz": 0.036713
+        }
+      },
+      "transcript": "That's not what I hate you, no it isn't, no don't cry please, if it makes you feel any better.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 12.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -42.382,
+            "peak_dbfs": -22.07,
+            "crest_db": 20.312,
+            "dc_offset": -1.168e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -65.542,
+            "speech_level_dbfs_proxy_high50pct_frames": -46.324,
+            "snr_db_proxy_high50_minus_low10": 19.217,
+            "spectral_centroid_hz": 980.967,
+            "spectral_flatness_proxy": 0.124512,
+            "high_band_fraction_proxy_ge8khz": 0.036713
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 12.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -34.698,
+            "peak_dbfs": -13.968,
+            "crest_db": 20.73,
+            "dc_offset": 9e-08,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -63.185,
+            "speech_level_dbfs_proxy_high50pct_frames": -39.319,
+            "snr_db_proxy_high50_minus_low10": 23.866,
+            "spectral_centroid_hz": 914.303,
+            "spectral_flatness_proxy": 0.054427,
+            "high_band_fraction_proxy_ge8khz": 0.027606
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 12.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -34.706,
+            "peak_dbfs": -13.975,
+            "crest_db": 20.73,
+            "dc_offset": 7e-08,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -65.522,
+            "speech_level_dbfs_proxy_high50pct_frames": -39.323,
+            "snr_db_proxy_high50_minus_low10": 26.199,
+            "spectral_centroid_hz": 914.532,
+            "spectral_flatness_proxy": 0.053487,
+            "high_band_fraction_proxy_ge8khz": 0.02764
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_heldout_04",
+      "family": "asmr7",
+      "split": "heldout",
+      "style": "heldout / playful",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 11.1,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 475.7,
+        "end_s": 486.8,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 11.1,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -34.804,
+          "peak_dbfs": -17.052,
+          "crest_db": 17.752,
+          "dc_offset": 3.398e-05,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -59.01,
+          "speech_level_dbfs_proxy_high50pct_frames": -33.696,
+          "snr_db_proxy_high50_minus_low10": 25.314,
+          "spectral_centroid_hz": 771.161,
+          "spectral_flatness_proxy": 0.107866,
+          "high_band_fraction_proxy_ge8khz": 0.025619
+        }
+      },
+      "transcript": "Thanks. Wait, that better not be implying I'm also a nerd because I will take back all the nice things I said about you.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_heldout_04/asmr7_heldout_04__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_heldout_04/asmr7_heldout_04__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_heldout_04/asmr7_heldout_04__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_heldout_04/asmr7_heldout_04__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 11.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -34.804,
+            "peak_dbfs": -17.052,
+            "crest_db": 17.752,
+            "dc_offset": 3.398e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -59.01,
+            "speech_level_dbfs_proxy_high50pct_frames": -33.696,
+            "snr_db_proxy_high50_minus_low10": 25.314,
+            "spectral_centroid_hz": 771.161,
+            "spectral_flatness_proxy": 0.107866,
+            "high_band_fraction_proxy_ge8khz": 0.025619
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_heldout_04/asmr7_heldout_04__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 11.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -27.106,
+            "peak_dbfs": -9.486,
+            "crest_db": 17.62,
+            "dc_offset": 9e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -54.403,
+            "speech_level_dbfs_proxy_high50pct_frames": -26.201,
+            "snr_db_proxy_high50_minus_low10": 28.202,
+            "spectral_centroid_hz": 727.215,
+            "spectral_flatness_proxy": 0.04612,
+            "high_band_fraction_proxy_ge8khz": 0.020238
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_heldout_04/asmr7_heldout_04__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 11.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -27.124,
+            "peak_dbfs": -9.486,
+            "crest_db": 17.637,
+            "dc_offset": 8.2e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -55.706,
+            "speech_level_dbfs_proxy_high50pct_frames": -26.234,
+            "snr_db_proxy_high50_minus_low10": 29.471,
+            "spectral_centroid_hz": 728.956,
+            "spectral_flatness_proxy": 0.045554,
+            "high_band_fraction_proxy_ge8khz": 0.020318
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_heldout_05",
+      "family": "asmr7",
+      "split": "heldout",
+      "style": "heldout / quiet outro",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 13.9,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 585.9,
+        "end_s": 599.8,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 13.9,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -38.112,
+          "peak_dbfs": -17.172,
+          "crest_db": 20.94,
+          "dc_offset": -6.77e-06,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -61.248,
+          "speech_level_dbfs_proxy_high50pct_frames": -35.862,
+          "snr_db_proxy_high50_minus_low10": 25.385,
+          "spectral_centroid_hz": 1013.935,
+          "spectral_flatness_proxy": 0.158461,
+          "high_band_fraction_proxy_ge8khz": 0.032293
+        }
+      },
+      "transcript": "Think of this as me making up for all the times I called you something I didn't mean. And well, I guess I've been mean a lot.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_heldout_05/asmr7_heldout_05__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_heldout_05/asmr7_heldout_05__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_heldout_05/asmr7_heldout_05__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_heldout_05/asmr7_heldout_05__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 13.9,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -38.112,
+            "peak_dbfs": -17.172,
+            "crest_db": 20.94,
+            "dc_offset": -6.77e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -61.248,
+            "speech_level_dbfs_proxy_high50pct_frames": -35.862,
+            "snr_db_proxy_high50_minus_low10": 25.385,
+            "spectral_centroid_hz": 1013.935,
+            "spectral_flatness_proxy": 0.158461,
+            "high_band_fraction_proxy_ge8khz": 0.032293
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_heldout_05/asmr7_heldout_05__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 13.9,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -30.224,
+            "peak_dbfs": -9.01,
+            "crest_db": 21.214,
+            "dc_offset": 1.39e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -57.185,
+            "speech_level_dbfs_proxy_high50pct_frames": -28.082,
+            "snr_db_proxy_high50_minus_low10": 29.103,
+            "spectral_centroid_hz": 958.7,
+            "spectral_flatness_proxy": 0.067123,
+            "high_band_fraction_proxy_ge8khz": 0.025983
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_heldout_05/asmr7_heldout_05__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 13.9,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -30.247,
+            "peak_dbfs": -9.013,
+            "crest_db": 21.234,
+            "dc_offset": 1.34e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -59.313,
+            "speech_level_dbfs_proxy_high50pct_frames": -28.114,
+            "snr_db_proxy_high50_minus_low10": 31.199,
+            "spectral_centroid_hz": 962.37,
+            "spectral_flatness_proxy": 0.066177,
+            "high_band_fraction_proxy_ge8khz": 0.026117
+          }
+        }
+      }
+    },
+    {
+      "id": "harvey_heldout_01",
+      "family": "harvey",
+      "split": "heldout",
+      "style": "heldout / closing quote",
+      "source": {
+        "path": "when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+        "sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+        "bytes": 557708,
+        "duration_s": 6.8,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 109178,
+        "start_s": 34.0,
+        "end_s": 40.8,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 6.8,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -23.903,
+          "peak_dbfs": -5.989,
+          "crest_db": 17.914,
+          "dc_offset": -0.00010663,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -47.688,
+          "speech_level_dbfs_proxy_high50pct_frames": -23.168,
+          "snr_db_proxy_high50_minus_low10": 24.52,
+          "spectral_centroid_hz": 662.442,
+          "spectral_flatness_proxy": 0.046046,
+          "high_band_fraction_proxy_ge8khz": 0.002672
+        }
+      },
+      "transcript": "I don't get lucky. I make my own luck. You know what? That's the difference between us, Allison. You want to lose small. I want to win big.",
+      "transcript_source": "faster-whisper-tiny.en (auto, high confidence)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+        "natural": "artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+        "clean": "artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.8,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -23.903,
+            "peak_dbfs": -5.989,
+            "crest_db": 17.914,
+            "dc_offset": -0.00010663,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -47.688,
+            "speech_level_dbfs_proxy_high50pct_frames": -23.168,
+            "snr_db_proxy_high50_minus_low10": 24.52,
+            "spectral_centroid_hz": 662.442,
+            "spectral_flatness_proxy": 0.046046,
+            "high_band_fraction_proxy_ge8khz": 0.002672
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.8,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -19.97,
+            "peak_dbfs": -2.0,
+            "crest_db": 17.97,
+            "dc_offset": -9.6e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -44.015,
+            "speech_level_dbfs_proxy_high50pct_frames": -19.209,
+            "snr_db_proxy_high50_minus_low10": 24.806,
+            "spectral_centroid_hz": 667.692,
+            "spectral_flatness_proxy": 0.01962,
+            "high_band_fraction_proxy_ge8khz": 0.002157
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.8,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -20.005,
+            "peak_dbfs": -2.0,
+            "crest_db": 18.005,
+            "dc_offset": -6.2e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -46.443,
+            "speech_level_dbfs_proxy_high50pct_frames": -19.256,
+            "snr_db_proxy_high50_minus_low10": 27.187,
+            "spectral_centroid_hz": 668.72,
+            "spectral_flatness_proxy": 0.019317,
+            "high_band_fraction_proxy_ge8khz": 0.002162
+          }
+        }
+      },
+      "evaluation_processing": "Demucs isolated heldout voice; source interval unchanged"
+    }
+  ],
+  "training": [
+    {
+      "id": "asmr7_train_01",
+      "family": "asmr7",
+      "split": "train",
+      "style": "training / energetic",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 6.0,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 35.2,
+        "end_s": 41.2,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 6.0,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -25.47,
+          "peak_dbfs": -4.438,
+          "crest_db": 21.032,
+          "dc_offset": -7.84e-06,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -62.216,
+          "speech_level_dbfs_proxy_high50pct_frames": -25.936,
+          "snr_db_proxy_high50_minus_low10": 36.28,
+          "spectral_centroid_hz": 1041.777,
+          "spectral_flatness_proxy": 0.054307,
+          "high_band_fraction_proxy_ge8khz": 0.005172
+        }
+      },
+      "transcript": "So as the one throwing the party, and it also being my party, I would like to announce",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_train_01/asmr7_train_01__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_train_01/asmr7_train_01__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_train_01/asmr7_train_01__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_01/asmr7_train_01__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -25.47,
+            "peak_dbfs": -4.438,
+            "crest_db": 21.032,
+            "dc_offset": -7.84e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -62.216,
+            "speech_level_dbfs_proxy_high50pct_frames": -25.936,
+            "snr_db_proxy_high50_minus_low10": 36.28,
+            "spectral_centroid_hz": 1041.777,
+            "spectral_flatness_proxy": 0.054307,
+            "high_band_fraction_proxy_ge8khz": 0.005172
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_01/asmr7_train_01__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -23.051,
+            "peak_dbfs": -2.0,
+            "crest_db": 21.051,
+            "dc_offset": 2.14e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -59.883,
+            "speech_level_dbfs_proxy_high50pct_frames": -23.581,
+            "snr_db_proxy_high50_minus_low10": 36.302,
+            "spectral_centroid_hz": 1031.396,
+            "spectral_flatness_proxy": 0.022536,
+            "high_band_fraction_proxy_ge8khz": 0.003862
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_01/asmr7_train_01__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -23.055,
+            "peak_dbfs": -2.0,
+            "crest_db": 21.055,
+            "dc_offset": 2.13e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -62.395,
+            "speech_level_dbfs_proxy_high50pct_frames": -23.588,
+            "snr_db_proxy_high50_minus_low10": 38.807,
+            "spectral_centroid_hz": 1031.993,
+            "spectral_flatness_proxy": 0.022208,
+            "high_band_fraction_proxy_ge8khz": 0.003865
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_train_02",
+      "family": "asmr7",
+      "split": "train",
+      "style": "training / conversational",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 5.9,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 52.1,
+        "end_s": 58.0,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 5.9,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -31.409,
+          "peak_dbfs": -11.244,
+          "crest_db": 20.165,
+          "dc_offset": 1.5e-06,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -55.706,
+          "speech_level_dbfs_proxy_high50pct_frames": -30.435,
+          "snr_db_proxy_high50_minus_low10": 25.272,
+          "spectral_centroid_hz": 997.14,
+          "spectral_flatness_proxy": 0.115553,
+          "high_band_fraction_proxy_ge8khz": 0.035879
+        }
+      },
+      "transcript": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_train_02/asmr7_train_02__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_train_02/asmr7_train_02__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_train_02/asmr7_train_02__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_02/asmr7_train_02__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 5.9,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -31.409,
+            "peak_dbfs": -11.244,
+            "crest_db": 20.165,
+            "dc_offset": 1.5e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -55.706,
+            "speech_level_dbfs_proxy_high50pct_frames": -30.435,
+            "snr_db_proxy_high50_minus_low10": 25.272,
+            "spectral_centroid_hz": 997.14,
+            "spectral_flatness_proxy": 0.115553,
+            "high_band_fraction_proxy_ge8khz": 0.035879
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_02/asmr7_train_02__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 5.9,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -23.476,
+            "peak_dbfs": -3.205,
+            "crest_db": 20.271,
+            "dc_offset": -2.22e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -48.977,
+            "speech_level_dbfs_proxy_high50pct_frames": -22.484,
+            "snr_db_proxy_high50_minus_low10": 26.493,
+            "spectral_centroid_hz": 919.61,
+            "spectral_flatness_proxy": 0.048522,
+            "high_band_fraction_proxy_ge8khz": 0.027793
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_02/asmr7_train_02__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 5.9,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -23.531,
+            "peak_dbfs": -3.236,
+            "crest_db": 20.294,
+            "dc_offset": -2.1e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -51.131,
+            "speech_level_dbfs_proxy_high50pct_frames": -22.544,
+            "snr_db_proxy_high50_minus_low10": 28.587,
+            "spectral_centroid_hz": 927.298,
+            "spectral_flatness_proxy": 0.048259,
+            "high_band_fraction_proxy_ge8khz": 0.028139
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_train_03",
+      "family": "asmr7",
+      "split": "train",
+      "style": "training / playful",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 4.9,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 67.1,
+        "end_s": 72.0,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 4.9,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -30.136,
+          "peak_dbfs": -11.119,
+          "crest_db": 19.017,
+          "dc_offset": -2.57e-06,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -53.133,
+          "speech_level_dbfs_proxy_high50pct_frames": -30.634,
+          "snr_db_proxy_high50_minus_low10": 22.499,
+          "spectral_centroid_hz": 805.761,
+          "spectral_flatness_proxy": 0.084416,
+          "high_band_fraction_proxy_ge8khz": 0.016777
+        }
+      },
+      "transcript": "I'll be nice enough to let whoever started the game up to go on first.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_train_03/asmr7_train_03__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_train_03/asmr7_train_03__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_train_03/asmr7_train_03__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_03/asmr7_train_03__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 4.9,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -30.136,
+            "peak_dbfs": -11.119,
+            "crest_db": 19.017,
+            "dc_offset": -2.57e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -53.133,
+            "speech_level_dbfs_proxy_high50pct_frames": -30.634,
+            "snr_db_proxy_high50_minus_low10": 22.499,
+            "spectral_centroid_hz": 805.761,
+            "spectral_flatness_proxy": 0.084416,
+            "high_band_fraction_proxy_ge8khz": 0.016777
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_03/asmr7_train_03__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 4.9,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -22.184,
+            "peak_dbfs": -3.233,
+            "crest_db": 18.95,
+            "dc_offset": 1.77e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -46.005,
+            "speech_level_dbfs_proxy_high50pct_frames": -22.777,
+            "snr_db_proxy_high50_minus_low10": 23.228,
+            "spectral_centroid_hz": 767.799,
+            "spectral_flatness_proxy": 0.035268,
+            "high_band_fraction_proxy_ge8khz": 0.012712
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_03/asmr7_train_03__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 4.9,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -22.252,
+            "peak_dbfs": -3.253,
+            "crest_db": 18.999,
+            "dc_offset": 1.47e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -49.043,
+            "speech_level_dbfs_proxy_high50pct_frames": -22.869,
+            "snr_db_proxy_high50_minus_low10": 26.174,
+            "spectral_centroid_hz": 775.343,
+            "spectral_flatness_proxy": 0.035099,
+            "high_band_fraction_proxy_ge8khz": 0.012912
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_train_04",
+      "family": "asmr7",
+      "split": "train",
+      "style": "training / playful",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 6.2,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 82.8,
+        "end_s": 89.0,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 6.2,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -28.162,
+          "peak_dbfs": -6.983,
+          "crest_db": 21.179,
+          "dc_offset": -6.36e-06,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -49.283,
+          "speech_level_dbfs_proxy_high50pct_frames": -28.848,
+          "snr_db_proxy_high50_minus_low10": 20.435,
+          "spectral_centroid_hz": 1234.947,
+          "spectral_flatness_proxy": 0.120871,
+          "high_band_fraction_proxy_ge8khz": 0.012033
+        }
+      },
+      "transcript": "It's my birthday, so they better make these seven minutes worth it. Please be cute.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_train_04/asmr7_train_04__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_train_04/asmr7_train_04__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_train_04/asmr7_train_04__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_04/asmr7_train_04__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.2,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -28.162,
+            "peak_dbfs": -6.983,
+            "crest_db": 21.179,
+            "dc_offset": -6.36e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -49.283,
+            "speech_level_dbfs_proxy_high50pct_frames": -28.848,
+            "snr_db_proxy_high50_minus_low10": 20.435,
+            "spectral_centroid_hz": 1234.947,
+            "spectral_flatness_proxy": 0.120871,
+            "high_band_fraction_proxy_ge8khz": 0.012033
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_04/asmr7_train_04__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.2,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -23.191,
+            "peak_dbfs": -2.0,
+            "crest_db": 21.191,
+            "dc_offset": -6.79e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -45.737,
+            "speech_level_dbfs_proxy_high50pct_frames": -23.884,
+            "snr_db_proxy_high50_minus_low10": 21.852,
+            "spectral_centroid_hz": 1201.313,
+            "spectral_flatness_proxy": 0.050142,
+            "high_band_fraction_proxy_ge8khz": 0.008192
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_04/asmr7_train_04__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.2,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -23.216,
+            "peak_dbfs": -2.0,
+            "crest_db": 21.216,
+            "dc_offset": -6.42e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -47.365,
+            "speech_level_dbfs_proxy_high50pct_frames": -23.928,
+            "snr_db_proxy_high50_minus_low10": 23.437,
+            "spectral_centroid_hz": 1209.197,
+            "spectral_flatness_proxy": 0.049657,
+            "high_band_fraction_proxy_ge8khz": 0.008269
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_train_05",
+      "family": "asmr7",
+      "split": "train",
+      "style": "training / bully",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 7.2,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 121.6,
+        "end_s": 128.8,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 7.2,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -31.078,
+          "peak_dbfs": -9.92,
+          "crest_db": 21.158,
+          "dc_offset": -1.029e-05,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -60.893,
+          "speech_level_dbfs_proxy_high50pct_frames": -33.088,
+          "snr_db_proxy_high50_minus_low10": 27.806,
+          "spectral_centroid_hz": 1004.805,
+          "spectral_flatness_proxy": 0.093757,
+          "high_band_fraction_proxy_ge8khz": 0.023751
+        }
+      },
+      "transcript": "What did I do to end up here with you? I know I spun the bottle. Fucking dumbass.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_train_05/asmr7_train_05__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_train_05/asmr7_train_05__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_train_05/asmr7_train_05__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_05/asmr7_train_05__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 7.2,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -31.078,
+            "peak_dbfs": -9.92,
+            "crest_db": 21.158,
+            "dc_offset": -1.029e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -60.893,
+            "speech_level_dbfs_proxy_high50pct_frames": -33.088,
+            "snr_db_proxy_high50_minus_low10": 27.806,
+            "spectral_centroid_hz": 1004.805,
+            "spectral_flatness_proxy": 0.093757,
+            "high_band_fraction_proxy_ge8khz": 0.023751
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_05/asmr7_train_05__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 7.2,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -23.138,
+            "peak_dbfs": -2.067,
+            "crest_db": 21.07,
+            "dc_offset": 2.5e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -59.099,
+            "speech_level_dbfs_proxy_high50pct_frames": -25.457,
+            "snr_db_proxy_high50_minus_low10": 33.642,
+            "spectral_centroid_hz": 924.297,
+            "spectral_flatness_proxy": 0.039371,
+            "high_band_fraction_proxy_ge8khz": 0.015376
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_05/asmr7_train_05__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 7.2,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -23.143,
+            "peak_dbfs": -2.073,
+            "crest_db": 21.071,
+            "dc_offset": 1.8e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -61.581,
+            "speech_level_dbfs_proxy_high50pct_frames": -25.471,
+            "snr_db_proxy_high50_minus_low10": 36.111,
+            "spectral_centroid_hz": 924.69,
+            "spectral_flatness_proxy": 0.038843,
+            "high_band_fraction_proxy_ge8khz": 0.015384
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_train_06",
+      "family": "asmr7",
+      "split": "train",
+      "style": "training / low conversational",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 6.3,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 181.4,
+        "end_s": 187.7,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 6.3,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -33.941,
+          "peak_dbfs": -14.383,
+          "crest_db": 19.558,
+          "dc_offset": 1.043e-05,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -59.613,
+          "speech_level_dbfs_proxy_high50pct_frames": -32.945,
+          "snr_db_proxy_high50_minus_low10": 26.668,
+          "spectral_centroid_hz": 1139.604,
+          "spectral_flatness_proxy": 0.147857,
+          "high_band_fraction_proxy_ge8khz": 0.036099
+        }
+      },
+      "transcript": "For some reason, you're here now, and stuck in a closet with me.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_train_06/asmr7_train_06__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_train_06/asmr7_train_06__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_train_06/asmr7_train_06__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_06/asmr7_train_06__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.3,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -33.941,
+            "peak_dbfs": -14.383,
+            "crest_db": 19.558,
+            "dc_offset": 1.043e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -59.613,
+            "speech_level_dbfs_proxy_high50pct_frames": -32.945,
+            "snr_db_proxy_high50_minus_low10": 26.668,
+            "spectral_centroid_hz": 1139.604,
+            "spectral_flatness_proxy": 0.147857,
+            "high_band_fraction_proxy_ge8khz": 0.036099
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_06/asmr7_train_06__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.3,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -26.018,
+            "peak_dbfs": -6.265,
+            "crest_db": 19.753,
+            "dc_offset": 1.989e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -54.07,
+            "speech_level_dbfs_proxy_high50pct_frames": -24.981,
+            "snr_db_proxy_high50_minus_low10": 29.089,
+            "spectral_centroid_hz": 1067.337,
+            "spectral_flatness_proxy": 0.062316,
+            "high_band_fraction_proxy_ge8khz": 0.028083
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_06/asmr7_train_06__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.3,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -26.042,
+            "peak_dbfs": -6.247,
+            "crest_db": 19.794,
+            "dc_offset": 1.97e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -55.278,
+            "speech_level_dbfs_proxy_high50pct_frames": -25.017,
+            "snr_db_proxy_high50_minus_low10": 30.261,
+            "spectral_centroid_hz": 1070.62,
+            "spectral_flatness_proxy": 0.061402,
+            "high_band_fraction_proxy_ge8khz": 0.02823
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_train_07",
+      "family": "asmr7",
+      "split": "train",
+      "style": "training / soft confession",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 6.1,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 329.8,
+        "end_s": 335.9,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 6.1,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -36.161,
+          "peak_dbfs": -16.522,
+          "crest_db": 19.639,
+          "dc_offset": 1.519e-05,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -65.064,
+          "speech_level_dbfs_proxy_high50pct_frames": -36.485,
+          "snr_db_proxy_high50_minus_low10": 28.579,
+          "spectral_centroid_hz": 1474.381,
+          "spectral_flatness_proxy": 0.176953,
+          "high_band_fraction_proxy_ge8khz": 0.025218
+        }
+      },
+      "transcript": "And I hate you, you're too perfect, like untouchable by misfortune.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_train_07/asmr7_train_07__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_train_07/asmr7_train_07__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_train_07/asmr7_train_07__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_07/asmr7_train_07__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -36.161,
+            "peak_dbfs": -16.522,
+            "crest_db": 19.639,
+            "dc_offset": 1.519e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -65.064,
+            "speech_level_dbfs_proxy_high50pct_frames": -36.485,
+            "snr_db_proxy_high50_minus_low10": 28.579,
+            "spectral_centroid_hz": 1474.381,
+            "spectral_flatness_proxy": 0.176953,
+            "high_band_fraction_proxy_ge8khz": 0.025218
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_07/asmr7_train_07__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -28.561,
+            "peak_dbfs": -8.665,
+            "crest_db": 19.896,
+            "dc_offset": -1.196e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -59.693,
+            "speech_level_dbfs_proxy_high50pct_frames": -30.114,
+            "snr_db_proxy_high50_minus_low10": 29.579,
+            "spectral_centroid_hz": 1520.376,
+            "spectral_flatness_proxy": 0.07816,
+            "high_band_fraction_proxy_ge8khz": 0.021586
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_07/asmr7_train_07__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -28.575,
+            "peak_dbfs": -8.668,
+            "crest_db": 19.908,
+            "dc_offset": -1.188e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -61.433,
+            "speech_level_dbfs_proxy_high50pct_frames": -30.121,
+            "snr_db_proxy_high50_minus_low10": 31.312,
+            "spectral_centroid_hz": 1522.825,
+            "spectral_flatness_proxy": 0.076815,
+            "high_band_fraction_proxy_ge8khz": 0.021583
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_train_08",
+      "family": "asmr7",
+      "split": "train",
+      "style": "training / soft praise",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 6.3,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 354.3,
+        "end_s": 360.6,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 6.3,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -40.612,
+          "peak_dbfs": -21.037,
+          "crest_db": 19.575,
+          "dc_offset": -5.16e-06,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -64.37,
+          "speech_level_dbfs_proxy_high50pct_frames": -41.721,
+          "snr_db_proxy_high50_minus_low10": 22.649,
+          "spectral_centroid_hz": 2142.386,
+          "spectral_flatness_proxy": 0.25378,
+          "high_band_fraction_proxy_ge8khz": 0.14579
+        }
+      },
+      "transcript": "The fact is, when I see you, I see this cute little perfect being who lives in a bubble.",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_train_08/asmr7_train_08__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_train_08/asmr7_train_08__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_train_08/asmr7_train_08__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_08/asmr7_train_08__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.3,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -40.612,
+            "peak_dbfs": -21.037,
+            "crest_db": 19.575,
+            "dc_offset": -5.16e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -64.37,
+            "speech_level_dbfs_proxy_high50pct_frames": -41.721,
+            "snr_db_proxy_high50_minus_low10": 22.649,
+            "spectral_centroid_hz": 2142.386,
+            "spectral_flatness_proxy": 0.25378,
+            "high_band_fraction_proxy_ge8khz": 0.14579
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_08/asmr7_train_08__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.3,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -32.843,
+            "peak_dbfs": -13.032,
+            "crest_db": 19.811,
+            "dc_offset": -4.3e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -59.423,
+            "speech_level_dbfs_proxy_high50pct_frames": -34.127,
+            "snr_db_proxy_high50_minus_low10": 25.296,
+            "spectral_centroid_hz": 1938.137,
+            "spectral_flatness_proxy": 0.110736,
+            "high_band_fraction_proxy_ge8khz": 0.123839
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_08/asmr7_train_08__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.3,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -32.858,
+            "peak_dbfs": -13.095,
+            "crest_db": 19.763,
+            "dc_offset": -3.9e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -61.045,
+            "speech_level_dbfs_proxy_high50pct_frames": -34.145,
+            "snr_db_proxy_high50_minus_low10": 26.9,
+            "spectral_centroid_hz": 1942.374,
+            "spectral_flatness_proxy": 0.109016,
+            "high_band_fraction_proxy_ge8khz": 0.124245
+          }
+        }
+      }
+    },
+    {
+      "id": "asmr7_train_09",
+      "family": "asmr7",
+      "split": "train",
+      "style": "training / intimate confession",
+      "source": {
+        "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+        "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+        "bytes": 14730063,
+        "duration_s": 6.0,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 192000,
+        "start_s": 372.8,
+        "end_s": 378.8,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 6.0,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -32.749,
+          "peak_dbfs": -12.588,
+          "crest_db": 20.161,
+          "dc_offset": -1.443e-05,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -64.928,
+          "speech_level_dbfs_proxy_high50pct_frames": -32.198,
+          "snr_db_proxy_high50_minus_low10": 32.729,
+          "spectral_centroid_hz": 1237.576,
+          "spectral_flatness_proxy": 0.132089,
+          "high_band_fraction_proxy_ge8khz": 0.0323
+        }
+      },
+      "transcript": "Okay, what I'm trying to say is that you made me jealous, that you live in this perfect world",
+      "transcript_source": "faster-whisper-tiny.en (auto, unverified)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/asmr7/asmr7_train_09/asmr7_train_09__raw.wav",
+        "natural": "artifacts/nano_lab/references/asmr7/asmr7_train_09/asmr7_train_09__natural.wav",
+        "clean": "artifacts/nano_lab/references/asmr7/asmr7_train_09/asmr7_train_09__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_09/asmr7_train_09__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -32.749,
+            "peak_dbfs": -12.588,
+            "crest_db": 20.161,
+            "dc_offset": -1.443e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -64.928,
+            "speech_level_dbfs_proxy_high50pct_frames": -32.198,
+            "snr_db_proxy_high50_minus_low10": 32.729,
+            "spectral_centroid_hz": 1237.576,
+            "spectral_flatness_proxy": 0.132089,
+            "high_band_fraction_proxy_ge8khz": 0.0323
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_09/asmr7_train_09__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -24.849,
+            "peak_dbfs": -4.895,
+            "crest_db": 19.954,
+            "dc_offset": -3.4e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -59.65,
+            "speech_level_dbfs_proxy_high50pct_frames": -24.332,
+            "snr_db_proxy_high50_minus_low10": 35.318,
+            "spectral_centroid_hz": 1177.358,
+            "spectral_flatness_proxy": 0.055643,
+            "high_band_fraction_proxy_ge8khz": 0.025264
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_train_09/asmr7_train_09__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -24.853,
+            "peak_dbfs": -4.902,
+            "crest_db": 19.951,
+            "dc_offset": -2.6e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -61.479,
+            "speech_level_dbfs_proxy_high50pct_frames": -24.333,
+            "snr_db_proxy_high50_minus_low10": 37.146,
+            "spectral_centroid_hz": 1177.635,
+            "spectral_flatness_proxy": 0.05483,
+            "high_band_fraction_proxy_ge8khz": 0.025281
+          }
+        }
+      }
+    },
+    {
+      "id": "harvey_train_01",
+      "family": "harvey",
+      "split": "train",
+      "style": "training / firm declarative",
+      "source": {
+        "path": "when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+        "sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+        "bytes": 557708,
+        "duration_s": 5.8,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 109178,
+        "start_s": 0.0,
+        "end_s": 5.8,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 5.8,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -24.867,
+          "peak_dbfs": -5.15,
+          "crest_db": 19.717,
+          "dc_offset": 6.162e-05,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -50.851,
+          "speech_level_dbfs_proxy_high50pct_frames": -24.852,
+          "snr_db_proxy_high50_minus_low10": 26.0,
+          "spectral_centroid_hz": 865.973,
+          "spectral_flatness_proxy": 0.073684,
+          "high_band_fraction_proxy_ge8khz": 0.004534
+        }
+      },
+      "transcript": "I don't take meetings. I set them. And my respect isn't demanded. It's earned.",
+      "transcript_source": "faster-whisper-tiny.en (auto, high confidence)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/harvey/harvey_train_01/harvey_train_01__raw.wav",
+        "natural": "artifacts/nano_lab/references/harvey/harvey_train_01/harvey_train_01__natural.wav",
+        "clean": "artifacts/nano_lab/references/harvey/harvey_train_01/harvey_train_01__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_train_01/harvey_train_01__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 5.8,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -24.867,
+            "peak_dbfs": -5.15,
+            "crest_db": 19.717,
+            "dc_offset": 6.162e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -50.851,
+            "speech_level_dbfs_proxy_high50pct_frames": -24.852,
+            "snr_db_proxy_high50_minus_low10": 26.0,
+            "spectral_centroid_hz": 865.973,
+            "spectral_flatness_proxy": 0.073684,
+            "high_band_fraction_proxy_ge8khz": 0.004534
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_train_01/harvey_train_01__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 5.8,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -21.789,
+            "peak_dbfs": -2.0,
+            "crest_db": 19.789,
+            "dc_offset": 3.4e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -47.826,
+            "speech_level_dbfs_proxy_high50pct_frames": -22.143,
+            "snr_db_proxy_high50_minus_low10": 25.682,
+            "spectral_centroid_hz": 874.367,
+            "spectral_flatness_proxy": 0.03146,
+            "high_band_fraction_proxy_ge8khz": 0.004083
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_train_01/harvey_train_01__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 5.8,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -21.807,
+            "peak_dbfs": -2.0,
+            "crest_db": 19.807,
+            "dc_offset": 2.8e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -49.461,
+            "speech_level_dbfs_proxy_high50pct_frames": -22.161,
+            "snr_db_proxy_high50_minus_low10": 27.3,
+            "spectral_centroid_hz": 875.322,
+            "spectral_flatness_proxy": 0.030815,
+            "high_band_fraction_proxy_ge8khz": 0.004083
+          }
+        }
+      }
+    },
+    {
+      "id": "harvey_train_02",
+      "family": "harvey",
+      "split": "train",
+      "style": "training / measured authority",
+      "source": {
+        "path": "when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+        "sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+        "bytes": 557708,
+        "duration_s": 4.6,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 109178,
+        "start_s": 9.1,
+        "end_s": 13.7,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 4.6,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -22.5,
+          "peak_dbfs": -4.935,
+          "crest_db": 17.564,
+          "dc_offset": -1.584e-05,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -43.766,
+          "speech_level_dbfs_proxy_high50pct_frames": -22.638,
+          "snr_db_proxy_high50_minus_low10": 21.128,
+          "spectral_centroid_hz": 901.902,
+          "spectral_flatness_proxy": 0.04096,
+          "high_band_fraction_proxy_ge8khz": 0.00146
+        }
+      },
+      "transcript": "Never destroy anyone in public when you can accomplish the same result in private.",
+      "transcript_source": "faster-whisper-tiny.en (auto, high confidence)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/harvey/harvey_train_02/harvey_train_02__raw.wav",
+        "natural": "artifacts/nano_lab/references/harvey/harvey_train_02/harvey_train_02__natural.wav",
+        "clean": "artifacts/nano_lab/references/harvey/harvey_train_02/harvey_train_02__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_train_02/harvey_train_02__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 4.6,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -22.5,
+            "peak_dbfs": -4.935,
+            "crest_db": 17.564,
+            "dc_offset": -1.584e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -43.766,
+            "speech_level_dbfs_proxy_high50pct_frames": -22.638,
+            "snr_db_proxy_high50_minus_low10": 21.128,
+            "spectral_centroid_hz": 901.902,
+            "spectral_flatness_proxy": 0.04096,
+            "high_band_fraction_proxy_ge8khz": 0.00146
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_train_02/harvey_train_02__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 4.6,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -19.581,
+            "peak_dbfs": -2.0,
+            "crest_db": 17.581,
+            "dc_offset": 9.02e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -41.609,
+            "speech_level_dbfs_proxy_high50pct_frames": -19.73,
+            "snr_db_proxy_high50_minus_low10": 21.879,
+            "spectral_centroid_hz": 902.885,
+            "spectral_flatness_proxy": 0.017352,
+            "high_band_fraction_proxy_ge8khz": 0.00137
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_train_02/harvey_train_02__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 4.6,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -19.638,
+            "peak_dbfs": -2.0,
+            "crest_db": 17.638,
+            "dc_offset": 8.65e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -43.709,
+            "speech_level_dbfs_proxy_high50pct_frames": -19.809,
+            "snr_db_proxy_high50_minus_low10": 23.901,
+            "spectral_centroid_hz": 910.198,
+            "spectral_flatness_proxy": 0.01695,
+            "high_band_fraction_proxy_ge8khz": 0.001382
+          }
+        }
+      }
+    },
+    {
+      "id": "harvey_train_03",
+      "family": "harvey",
+      "split": "train",
+      "style": "training / assertive rhythm",
+      "source": {
+        "path": "when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+        "sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+        "bytes": 557708,
+        "duration_s": 4.6,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 109178,
+        "start_s": 13.7,
+        "end_s": 18.3,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 4.6,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -19.577,
+          "peak_dbfs": -4.985,
+          "crest_db": 14.592,
+          "dc_offset": 0.00018592,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -36.196,
+          "speech_level_dbfs_proxy_high50pct_frames": -18.374,
+          "snr_db_proxy_high50_minus_low10": 17.822,
+          "spectral_centroid_hz": 766.123,
+          "spectral_flatness_proxy": 0.047991,
+          "high_band_fraction_proxy_ge8khz": 0.005516
+        }
+      },
+      "transcript": "I don't play the odds. I play the man. Winners don't make excuses when the other side plays the game.",
+      "transcript_source": "faster-whisper-tiny.en (auto, high confidence)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/harvey/harvey_train_03/harvey_train_03__raw.wav",
+        "natural": "artifacts/nano_lab/references/harvey/harvey_train_03/harvey_train_03__natural.wav",
+        "clean": "artifacts/nano_lab/references/harvey/harvey_train_03/harvey_train_03__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_train_03/harvey_train_03__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 4.6,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -19.577,
+            "peak_dbfs": -4.985,
+            "crest_db": 14.592,
+            "dc_offset": 0.00018592,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -36.196,
+            "speech_level_dbfs_proxy_high50pct_frames": -18.374,
+            "snr_db_proxy_high50_minus_low10": 17.822,
+            "spectral_centroid_hz": 766.123,
+            "spectral_flatness_proxy": 0.047991,
+            "high_band_fraction_proxy_ge8khz": 0.005516
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_train_03/harvey_train_03__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 4.6,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -16.688,
+            "peak_dbfs": -2.0,
+            "crest_db": 14.688,
+            "dc_offset": -1.3e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -37.505,
+            "speech_level_dbfs_proxy_high50pct_frames": -15.457,
+            "snr_db_proxy_high50_minus_low10": 22.048,
+            "spectral_centroid_hz": 775.831,
+            "spectral_flatness_proxy": 0.020454,
+            "high_band_fraction_proxy_ge8khz": 0.005366
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_train_03/harvey_train_03__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 4.6,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -16.663,
+            "peak_dbfs": -2.0,
+            "crest_db": 14.663,
+            "dc_offset": -1.61e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -39.511,
+            "speech_level_dbfs_proxy_high50pct_frames": -15.411,
+            "snr_db_proxy_high50_minus_low10": 24.1,
+            "spectral_centroid_hz": 781.374,
+            "spectral_flatness_proxy": 0.020253,
+            "high_band_fraction_proxy_ge8khz": 0.005436
+          }
+        }
+      }
+    },
+    {
+      "id": "harvey_train_04",
+      "family": "harvey",
+      "split": "train",
+      "style": "training / clipped phrasing",
+      "source": {
+        "path": "when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+        "sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+        "bytes": 557708,
+        "duration_s": 6.1,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 109178,
+        "start_s": 26.8,
+        "end_s": 32.9,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 6.1,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -24.078,
+          "peak_dbfs": -4.98,
+          "crest_db": 19.098,
+          "dc_offset": 6.105e-05,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -45.412,
+          "speech_level_dbfs_proxy_high50pct_frames": -28.441,
+          "snr_db_proxy_high50_minus_low10": 16.971,
+          "spectral_centroid_hz": 634.169,
+          "spectral_flatness_proxy": 0.037323,
+          "high_band_fraction_proxy_ge8khz": 0.002394
+        }
+      },
+      "transcript": "People pave the way for me. Life is this, I like this.",
+      "transcript_source": "faster-whisper-tiny.en (auto, high confidence)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/harvey/harvey_train_04/harvey_train_04__raw.wav",
+        "natural": "artifacts/nano_lab/references/harvey/harvey_train_04/harvey_train_04__natural.wav",
+        "clean": "artifacts/nano_lab/references/harvey/harvey_train_04/harvey_train_04__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_train_04/harvey_train_04__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -24.078,
+            "peak_dbfs": -4.98,
+            "crest_db": 19.098,
+            "dc_offset": 6.105e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -45.412,
+            "speech_level_dbfs_proxy_high50pct_frames": -28.441,
+            "snr_db_proxy_high50_minus_low10": 16.971,
+            "spectral_centroid_hz": 634.169,
+            "spectral_flatness_proxy": 0.037323,
+            "high_band_fraction_proxy_ge8khz": 0.002394
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_train_04/harvey_train_04__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -21.161,
+            "peak_dbfs": -2.0,
+            "crest_db": 19.161,
+            "dc_offset": -6.1e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -43.274,
+            "speech_level_dbfs_proxy_high50pct_frames": -26.329,
+            "snr_db_proxy_high50_minus_low10": 16.946,
+            "spectral_centroid_hz": 642.461,
+            "spectral_flatness_proxy": 0.01594,
+            "high_band_fraction_proxy_ge8khz": 0.001951
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_train_04/harvey_train_04__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -21.193,
+            "peak_dbfs": -2.0,
+            "crest_db": 19.193,
+            "dc_offset": -4.5e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -44.82,
+            "speech_level_dbfs_proxy_high50pct_frames": -26.369,
+            "snr_db_proxy_high50_minus_low10": 18.451,
+            "spectral_centroid_hz": 644.091,
+            "spectral_flatness_proxy": 0.015636,
+            "high_band_fraction_proxy_ge8khz": 0.001944
+          }
+        }
+      }
+    }
+  ]
+}

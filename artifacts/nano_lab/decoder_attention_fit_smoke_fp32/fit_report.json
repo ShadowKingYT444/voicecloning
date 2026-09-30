@@ -1,0 +1,1616 @@
+{
+  "adapter_init_seed": 2701,
+  "adoption_gate": {
+    "improved_over_epoch0": true,
+    "status": "experimental_not_promoted"
+  },
+  "base_weight_sha256": {
+    "flow.decoder.estimator.down_blocks.0.1.0.attn1.to_k.weight": "e8e389e723444bc0432cb69fdde97b4d09583362e658340c45b667173427a706",
+    "flow.decoder.estimator.down_blocks.0.1.0.attn1.to_out.0.weight": "bf4ed60512c8cfd11eb2e8f5d58971c533fba6d006bc6878c862b841bb975c4c",
+    "flow.decoder.estimator.down_blocks.0.1.0.attn1.to_q.weight": "cfa3ca3c3547bb0ce896611eccc09f6873d6832ffe4866afdcea7664c2af7e84",
+    "flow.decoder.estimator.down_blocks.0.1.0.attn1.to_v.weight": "647f54262f9709d093e5cb9f6306029f2f3110e8b74af00742fecf79bd322dc9",
+    "flow.decoder.estimator.down_blocks.0.1.1.attn1.to_k.weight": "014a0cb53ab5f75d7c6b756945b80273bb10b08458a57f204275f7688aaed769",
+    "flow.decoder.estimator.down_blocks.0.1.1.attn1.to_out.0.weight": "02a95e4e5718418c8de58c6fde4470c110b689b48650cca9ab27bfaaa68a254e",
+    "flow.decoder.estimator.down_blocks.0.1.1.attn1.to_q.weight": "ddb27e37cacfdb807412bc10e82c7880ac4cb6043093cc05b1681c26ce08dc00",
+    "flow.decoder.estimator.down_blocks.0.1.1.attn1.to_v.weight": "d54fc90639423a8cdb6cc76ebcdd3423bdbf4d989734dd2f33deb3b13f3d8ffd",
+    "flow.decoder.estimator.down_blocks.0.1.2.attn1.to_k.weight": "d95e9a4091b1128817490a2986624d2f9db2ca02dc97f639a46c03de4b4d2129",
+    "flow.decoder.estimator.down_blocks.0.1.2.attn1.to_out.0.weight": "5a7fcb9d8781da1ba6a9f0fe448713d0abac56251e2bb8211ace6a432b638522",
+    "flow.decoder.estimator.down_blocks.0.1.2.attn1.to_q.weight": "9449d0aea92279978b87c6e8e67b472be9cad8fabd7b8d05b907900012e0895c",
+    "flow.decoder.estimator.down_blocks.0.1.2.attn1.to_v.weight": "3a957f1b921b03bbf3bab84a05255eb6ec1ae120a19fef57b0d84d230631a81f",
+    "flow.decoder.estimator.down_blocks.0.1.3.attn1.to_k.weight": "a47138b24b310cfa5d4b1da7ddccd28574bd97495455c52ca755b836350a3d16",
+    "flow.decoder.estimator.down_blocks.0.1.3.attn1.to_out.0.weight": "5a1c7529d15794e2dd8caea61a272f43c6580bd2204a759343476961abe9b909",
+    "flow.decoder.estimator.down_blocks.0.1.3.attn1.to_q.weight": "251b74d9ec05697832851273985689b96e880b3fc3b8595569d34aa0fd503a12",
+    "flow.decoder.estimator.down_blocks.0.1.3.attn1.to_v.weight": "2a5c4ac59b57105ccfb8198a93d0da7807e16f59e49d3f3ecf8c6f2350bac775",
+    "flow.decoder.estimator.mid_blocks.0.1.0.attn1.to_k.weight": "48e9c6c18514ca2ba19ab08e9d0e247bb455d8a0f8e74d5e55a564f1fcf197a3",
+    "flow.decoder.estimator.mid_blocks.0.1.0.attn1.to_out.0.weight": "e8f27f6eb1ec5930f12cb19c8fd29b4c616bbf1d3983f9efbf8cea28d9a0a933",
+    "flow.decoder.estimator.mid_blocks.0.1.0.attn1.to_q.weight": "f679bfd63e477f7ab1eb020b865cac1adaeab9fc928af6dc851d7d0cf64c39b9",
+    "flow.decoder.estimator.mid_blocks.0.1.0.attn1.to_v.weight": "ba9d8cd0d61a5ec971e951ab6ff16fc93218bc1be10f7465e8303d1805f32c36",
+    "flow.decoder.estimator.mid_blocks.0.1.1.attn1.to_k.weight": "d9db03b377b703b9914f173938436cdb141096b84f88f113fb0b9379449274f9",
+    "flow.decoder.estimator.mid_blocks.0.1.1.attn1.to_out.0.weight": "a54101587436b04b2449e80923941e40817f210b81da7028602a09f1b527073f",
+    "flow.decoder.estimator.mid_blocks.0.1.1.attn1.to_q.weight": "ed1b51b6ea345f84d60273c04d4eec993c290645625ed7c897d555cc64d70027",
+    "flow.decoder.estimator.mid_blocks.0.1.1.attn1.to_v.weight": "8dec5d5cc1973c16885290144113d8f96b705ee18e4449e15fa0a78cb8c2aaea",
+    "flow.decoder.estimator.mid_blocks.0.1.2.attn1.to_k.weight": "279ed12f882c881326b0320af8708cc64432f05927dd997329ac547d51d6ba7e",
+    "flow.decoder.estimator.mid_blocks.0.1.2.attn1.to_out.0.weight": "3a04a66799a291e26ec4a09dc7ad5df563b0dce5f4bc7b9c2435a1cc588e5398",
+    "flow.decoder.estimator.mid_blocks.0.1.2.attn1.to_q.weight": "3aa240b6293d50b750c7de7af2f191f864e75ad766e95c7749e5f595493cd658",
+    "flow.decoder.estimator.mid_blocks.0.1.2.attn1.to_v.weight": "3eb8ec52e12752cdd68999eacfbb75320df2d26245b8580cc8cd854e527529b2",
+    "flow.decoder.estimator.mid_blocks.0.1.3.attn1.to_k.weight": "315d11165383bd888d4637079790a5619336aa5c4c7ec1f2d1d4cb91b283e296",
+    "flow.decoder.estimator.mid_blocks.0.1.3.attn1.to_out.0.weight": "126006d2dda684c519b38ae6c54d643ce754a0384f4dfa015cf5a93f583cf287",
+    "flow.decoder.estimator.mid_blocks.0.1.3.attn1.to_q.weight": "f910ad8bd870fc37f105574cfb43dba6c885fe5946826de80d079918e5f5ab1d",
+    "flow.decoder.estimator.mid_blocks.0.1.3.attn1.to_v.weight": "f24f5cced09baa8bb43b6831ad6656aaa73f49fcb1431ac8d73a629b362c249a",
+    "flow.decoder.estimator.mid_blocks.1.1.0.attn1.to_k.weight": "4664eac046054f3fc24f7462087a23a951dfcc65ce0ce25d49a3309842e4b97c",
+    "flow.decoder.estimator.mid_blocks.1.1.0.attn1.to_out.0.weight": "9f4efebd3ac4d15da2da78368b4b09ead4bcf6b7860d9b8f2c745a6efe113224",
+    "flow.decoder.estimator.mid_blocks.1.1.0.attn1.to_q.weight": "5fff5366827f682c0d612277c452cb85dbd529236dd9855ac07f1c987b8d7ab2",
+    "flow.decoder.estimator.mid_blocks.1.1.0.attn1.to_v.weight": "457bc54b9e9153316fc42d31cfc2a450bcb624f309166ec4773dce80b37da242",
+    "flow.decoder.estimator.mid_blocks.1.1.1.attn1.to_k.weight": "eb338435e5fe71f7a567631ac9c3dd96fc079e0736f4d93953b58d5a4c053ee2",
+    "flow.decoder.estimator.mid_blocks.1.1.1.attn1.to_out.0.weight": "f2e42efe46bba6c4c114fa0b8429e4fb9707aabadf1a571d3bc1c3373714bdc8",
+    "flow.decoder.estimator.mid_blocks.1.1.1.attn1.to_q.weight": "b4b33285a05f9d8b2c2fddd9d6d703758a7a7bf0362dfcaa9575770b8d7c1b3c",
+    "flow.decoder.estimator.mid_blocks.1.1.1.attn1.to_v.weight": "e2c1e6ec378a5b840e34ec331d2effccae8c134fb5f70f2a38e85e94256b393e",
+    "flow.decoder.estimator.mid_blocks.1.1.2.attn1.to_k.weight": "3d658e31c18e70d3fd6f16cf46cfcda012e15cccd9c9ccb064e8512fa518285e",
+    "flow.decoder.estimator.mid_blocks.1.1.2.attn1.to_out.0.weight": "8c31f5ce6d4f87906ae4a5c86f55a76424edad9d003b791e6cc6219ba374caeb",
+    "flow.decoder.estimator.mid_blocks.1.1.2.attn1.to_q.weight": "f3269c3228c357d81f85c05d2875a1fa417e06a608ea076f4dffa800445fc375",
+    "flow.decoder.estimator.mid_blocks.1.1.2.attn1.to_v.weight": "d11e6edf1513d65055bb300b5f6bb4498d9c891f6872f0fdc630707dc373fab0",
+    "flow.decoder.estimator.mid_blocks.1.1.3.attn1.to_k.weight": "22dacf5d961dfc0412c51834da67b8ac93ffa5bb0ab6b92f68a4b78a0af40a1b",
+    "flow.decoder.estimator.mid_blocks.1.1.3.attn1.to_out.0.weight": "5ac1008041e44ca848b0bd2c391f95191d81d80b8c02230ee82ae583052bf9fb",
+    "flow.decoder.estimator.mid_blocks.1.1.3.attn1.to_q.weight": "67d2a79ab0275bdb593a54e777fe45c0540f1c7a6cbca3394134a46e693962ae",
+    "flow.decoder.estimator.mid_blocks.1.1.3.attn1.to_v.weight": "16bfc84580df5606aa27060391a372058ba6d7497c498acdda0f7ca66b7cce23",
+    "flow.decoder.estimator.mid_blocks.10.1.0.attn1.to_k.weight": "41e044b516a87549ed624e5e8296df8dc26054d214c590ff64107abdd9ffc49d",
+    "flow.decoder.estimator.mid_blocks.10.1.0.attn1.to_out.0.weight": "13af7b842c13d4cefe6e453122360d495f42622628a92574c30dc235bdfcc165",
+    "flow.decoder.estimator.mid_blocks.10.1.0.attn1.to_q.weight": "6623d6af6cdd85b7b9745feb6abce6cc571a135e002f6a5a0e2319c1d518ff78",
+    "flow.decoder.estimator.mid_blocks.10.1.0.attn1.to_v.weight": "e86157474c7c0ddbdcfec7164bc8f758a80e7527d9ae686ce14f2f339576772f",
+    "flow.decoder.estimator.mid_blocks.10.1.1.attn1.to_k.weight": "cbb46f5360276bf47814fe17b8372b4abd0340aa9dc1bc84a22afda6fb353507",
+    "flow.decoder.estimator.mid_blocks.10.1.1.attn1.to_out.0.weight": "17208c481b83191466581b1d674ee04fcc66d29625545ea13444423a916d7523",
+    "flow.decoder.estimator.mid_blocks.10.1.1.attn1.to_q.weight": "75a530966fd4c338e0939c98b2289fd7c5e63ff1d17c6984e80cf9347ac4540c",
+    "flow.decoder.estimator.mid_blocks.10.1.1.attn1.to_v.weight": "2a71257b4630b432a2784ce0786cfee08eb56e4452c5dfd836c4eed874ef85cb",
+    "flow.decoder.estimator.mid_blocks.10.1.2.attn1.to_k.weight": "5265de9f14f98cce2ba5c64b0440dfa5eae4ae8d0f90d81e34fae9fc3cd3d24d",
+    "flow.decoder.estimator.mid_blocks.10.1.2.attn1.to_out.0.weight": "b8cd92ebc422a0e38935f5d5ae21c09086b0a38e07bd062733f4cd7f8eee074b",
+    "flow.decoder.estimator.mid_blocks.10.1.2.attn1.to_q.weight": "f4357576921b201e9b01cb42c1e77dd495be6ffb35e72a9ca03efda72c9b435e",
+    "flow.decoder.estimator.mid_blocks.10.1.2.attn1.to_v.weight": "503e730e1192bdf13a6e8c2ee8ae33f336722ef5ba610ff084a5546a186795e1",
+    "flow.decoder.estimator.mid_blocks.10.1.3.attn1.to_k.weight": "fae8375a1d56dd8cd3fca92891f49ffd491ac27eac1ce59b7c2977d59d7cde0f",
+    "flow.decoder.estimator.mid_blocks.10.1.3.attn1.to_out.0.weight": "fe0f0d364ef82e9d41aba7c679afa69de7003c72042e217ac84934e5d37023d9",
+    "flow.decoder.estimator.mid_blocks.10.1.3.attn1.to_q.weight": "5f029780ad0bd9c785b7cf291b4971cf3648d1f7e5d17db6b4131995157104be",
+    "flow.decoder.estimator.mid_blocks.10.1.3.attn1.to_v.weight": "5401c8922ebf99372f54dcec819dfde49b5e0d08c0d770b0e16cd88df0a893ba",
+    "flow.decoder.estimator.mid_blocks.11.1.0.attn1.to_k.weight": "bae8001c00b9d9780ae5fe98ee8c65c42cc7aed596da47098a6a44566db0f75e",
+    "flow.decoder.estimator.mid_blocks.11.1.0.attn1.to_out.0.weight": "a19c84f67317f1c1936747a916f1adcace88e625cec26f99339ee754b77e9579",
+    "flow.decoder.estimator.mid_blocks.11.1.0.attn1.to_q.weight": "0fccb98342cd7625bc4ff7a02c0860793035ff585a3356fd6c47e9e2dfd84fcb",
+    "flow.decoder.estimator.mid_blocks.11.1.0.attn1.to_v.weight": "3ad727d8a2ed0da09486821597b1555c6f2b31dfd93ab06ce9aae4813032e384",
+    "flow.decoder.estimator.mid_blocks.11.1.1.attn1.to_k.weight": "90259685a59508b9a0994a1cd76dda2565e2deec29ddbd027dd571b15109ba07",
+    "flow.decoder.estimator.mid_blocks.11.1.1.attn1.to_out.0.weight": "64b980d2f09eec97d9a4e34368e23abf2da7fd372e8e524c0a10dcf4c410e395",
+    "flow.decoder.estimator.mid_blocks.11.1.1.attn1.to_q.weight": "55a31ec69d756ecdaf897991e73dfeae2475a1233f46f81586393645b274abb9",
+    "flow.decoder.estimator.mid_blocks.11.1.1.attn1.to_v.weight": "cc11ef274be27044c46362a5540eff11fd1b8f90c0f290b98edce4e822426417",
+    "flow.decoder.estimator.mid_blocks.11.1.2.attn1.to_k.weight": "9c0f720aa3b783aad79b14e502c55d0eb817c52e1427a52ea49e5a2c467fb9f1",
+    "flow.decoder.estimator.mid_blocks.11.1.2.attn1.to_out.0.weight": "5993a7cad3c699c8119622d022e8bb8f94856b2ea90b4e42c4807fd65707f591",
+    "flow.decoder.estimator.mid_blocks.11.1.2.attn1.to_q.weight": "c9ab5f6bae2b7611d81fed87a8ddb8a0295ec7d4d31f44132a123681acd7a773",
+    "flow.decoder.estimator.mid_blocks.11.1.2.attn1.to_v.weight": "43eb16052b37eeafdcf8e03ebd53ced52853194fe89d47d64b059c6790ed9604",
+    "flow.decoder.estimator.mid_blocks.11.1.3.attn1.to_k.weight": "c1c88334596415415621135ea09c0aa2c02e1a0213d566542405c92e931f1eac",
+    "flow.decoder.estimator.mid_blocks.11.1.3.attn1.to_out.0.weight": "1ac0b03453ee54d12f1989247f42e1b8499b4a62ffce49382a3f27ab4af06271",
+    "flow.decoder.estimator.mid_blocks.11.1.3.attn1.to_q.weight": "0e64f9d9587f6fb3a293e357486f60dfe04bf11588fb0663d4153748e522c605",
+    "flow.decoder.estimator.mid_blocks.11.1.3.attn1.to_v.weight": "e09c6711a27f7dc5d57aba828af439c281db4d18ca31181063066c48fa4576e0",
+    "flow.decoder.estimator.mid_blocks.2.1.0.attn1.to_k.weight": "5fb641d876a08a127a07388f919f23a97231092a7c8d938892c7f5c000a3f3bc",
+    "flow.decoder.estimator.mid_blocks.2.1.0.attn1.to_out.0.weight": "6d17bb622a72cbfcd517c265bfb4ab43cd16313bc74eb892da05ae06158b2e09",
+    "flow.decoder.estimator.mid_blocks.2.1.0.attn1.to_q.weight": "62320ec84d9f26f0d86a44acaf615de40b23b8f0e045c06244aa315ec3f15761",
+    "flow.decoder.estimator.mid_blocks.2.1.0.attn1.to_v.weight": "a75732d097f088740faf04002fc7034d231e7e7c18564b47407d410051223f6b",
+    "flow.decoder.estimator.mid_blocks.2.1.1.attn1.to_k.weight": "d90d05e31e593ae554d26ccf849af1cb0b7a4fc66eef6d98198f670378008161",
+    "flow.decoder.estimator.mid_blocks.2.1.1.attn1.to_out.0.weight": "bcdb6dd4da4eba1a233857d7872e640e4f05d638ddd6b9c07201541b3873e3e4",
+    "flow.decoder.estimator.mid_blocks.2.1.1.attn1.to_q.weight": "1d1b50c65469cd2688236435cae3faa152d96b1c0f37892bc3e264f6992462a9",
+    "flow.decoder.estimator.mid_blocks.2.1.1.attn1.to_v.weight": "891c09b990c0c39def600a11b6ab3d92cb4b6880e19521c2e089ea6fccfc5816",
+    "flow.decoder.estimator.mid_blocks.2.1.2.attn1.to_k.weight": "dde28a735999d3ee027e54d679a8cf8853e21217d595fa488459243ec244b9d1",
+    "flow.decoder.estimator.mid_blocks.2.1.2.attn1.to_out.0.weight": "c0aa6931bce809c367e7fb5b807de6baa6ea0b782d7c31fb3122845bbbc0dde2",
+    "flow.decoder.estimator.mid_blocks.2.1.2.attn1.to_q.weight": "7100104b044931a0d7bbfd049c38e5f5a4125254abb6f2e27bca46e2ad1dd59c",
+    "flow.decoder.estimator.mid_blocks.2.1.2.attn1.to_v.weight": "ef89bcf364a4240b7fd8f35d68a4448f25107515f6f30f960b677efd4f1880bc",
+    "flow.decoder.estimator.mid_blocks.2.1.3.attn1.to_k.weight": "6f0a372a54c6cac243e09d850efd6acbeb9139b4e6761f39b27ec8d612a64f34",
+    "flow.decoder.estimator.mid_blocks.2.1.3.attn1.to_out.0.weight": "11109b1bca62ed738af34cef38e5d72e7a7bfb6a7301043bd68293cd8cb35125",
+    "flow.decoder.estimator.mid_blocks.2.1.3.attn1.to_q.weight": "00383b60812d98b72b4a6b07d2057405ed5b6b0e13654bf164293298ad498035",
+    "flow.decoder.estimator.mid_blocks.2.1.3.attn1.to_v.weight": "b8768050f2e95f6e5c363dbed8b2d65f4af2fea5d802c3be5c078fb49e286707",
+    "flow.decoder.estimator.mid_blocks.3.1.0.attn1.to_k.weight": "4c04f1659cc2b5132a38186bf7a3441e582bb51c87a014d419686ca9aef5b5c1",
+    "flow.decoder.estimator.mid_blocks.3.1.0.attn1.to_out.0.weight": "633c54be361bd480418c85555de0442b267c040a42b1d28c2a29fd04d7e235d5",
+    "flow.decoder.estimator.mid_blocks.3.1.0.attn1.to_q.weight": "7272f06664e379081ea39ed5f03729c08b1064d6edb55a5ce12be7b8aada7a19",
+    "flow.decoder.estimator.mid_blocks.3.1.0.attn1.to_v.weight": "5954e6a0ddff819c9afcefdf100c13a594ca530dfced04d7b6310eee51ca59d9",
+    "flow.decoder.estimator.mid_blocks.3.1.1.attn1.to_k.weight": "40844087e5ec656a05e1364131a28e73f0f70b679ddeac11cf67fde715f6582e",
+    "flow.decoder.estimator.mid_blocks.3.1.1.attn1.to_out.0.weight": "25f2a1f9f7de4a477731253634f8897d15d1022446fcfe08abc94719a8e42af1",
+    "flow.decoder.estimator.mid_blocks.3.1.1.attn1.to_q.weight": "d07e4fbf6c4c14eb8b283eb77275eb340484283d63fb784f40e9e253fb921e7d",
+    "flow.decoder.estimator.mid_blocks.3.1.1.attn1.to_v.weight": "1b50ea89745929a09c999faa9e06d1195785e8e26bafa97d10d08deb38207df6",
+    "flow.decoder.estimator.mid_blocks.3.1.2.attn1.to_k.weight": "a05f9c15f18b83856ed3479e42c2c41cb84b3361eb574652a1694e395ee3f51b",
+    "flow.decoder.estimator.mid_blocks.3.1.2.attn1.to_out.0.weight": "4cdf7e21258ee82fe1de270632e7bad155f7cdba57061e856443b69f3d152240",
+    "flow.decoder.estimator.mid_blocks.3.1.2.attn1.to_q.weight": "a555a052f703388107fed9740f24fc3115ee4fbfb3f660bbeae3bf41e8d1d353",
+    "flow.decoder.estimator.mid_blocks.3.1.2.attn1.to_v.weight": "2203c66f931d23cb7c2564f8a5ad2d6cd7cfa67eec78c450a796e15442a4d2b1",
+    "flow.decoder.estimator.mid_blocks.3.1.3.attn1.to_k.weight": "eef7fa45ca328ecc48a0628b2e9ac0fe0f6070c85c9f2e1c77dcfe73e503cd0e",
+    "flow.decoder.estimator.mid_blocks.3.1.3.attn1.to_out.0.weight": "f248737e889d442602f5ab5a9e2da1eed737369f774315a40648f60b21a25e98",
+    "flow.decoder.estimator.mid_blocks.3.1.3.attn1.to_q.weight": "e3964658d20427270ac13081dcef28b2d9bad49cecfa2584cc9630a869d74943",
+    "flow.decoder.estimator.mid_blocks.3.1.3.attn1.to_v.weight": "bb3531af48dd4eaf47422592e5dec934ca100bef95087fbb42dafe403e9bf678",
+    "flow.decoder.estimator.mid_blocks.4.1.0.attn1.to_k.weight": "4b52d0616a5f349247b95b3d45e3c8c4009b23efb10436c63943bdb8d50f52f8",
+    "flow.decoder.estimator.mid_blocks.4.1.0.attn1.to_out.0.weight": "2cb120af520d2866bc52e1162d30076337ed09d03a481ca1bf2c4c4028c1ed28",
+    "flow.decoder.estimator.mid_blocks.4.1.0.attn1.to_q.weight": "805adc4435771349e3f7c9694be0c1980f6a10e507f144d747856cb6efb129f8",
+    "flow.decoder.estimator.mid_blocks.4.1.0.attn1.to_v.weight": "2275abb8df98a4aab8ccb8dc139cd3faf2896c63f83d605a5f55f94c29b1d146",
+    "flow.decoder.estimator.mid_blocks.4.1.1.attn1.to_k.weight": "c80e907b99bada379d5d716e659c4c77b03859911724663f709dd379a1442845",
+    "flow.decoder.estimator.mid_blocks.4.1.1.attn1.to_out.0.weight": "8edf8808c4daf1ee140e7f76a891209be45cf4a51eca748edbab0f4daefbd5bf",
+    "flow.decoder.estimator.mid_blocks.4.1.1.attn1.to_q.weight": "ce9923c11f7d24452cdebb78c766474016cbeaced73042400aecc3692a983a22",
+    "flow.decoder.estimator.mid_blocks.4.1.1.attn1.to_v.weight": "0c3484320b8465e7bb8c6bf790bea647c1642d24298fe86160f89ff9d29d0bb3",
+    "flow.decoder.estimator.mid_blocks.4.1.2.attn1.to_k.weight": "40d3c877b725b64b5ce905054c00c96ff1a24b7ba0aaa53ebd4ad1629fe13572",
+    "flow.decoder.estimator.mid_blocks.4.1.2.attn1.to_out.0.weight": "5085e21d1abd408170323741fb2f587d9a8626a32c086492159236f43ff270e3",
+    "flow.decoder.estimator.mid_blocks.4.1.2.attn1.to_q.weight": "d5bf57b46703d4c63545479b6fd9a458586d610530bcbedcaa178e3dc30575f8",
+    "flow.decoder.estimator.mid_blocks.4.1.2.attn1.to_v.weight": "38b471c7243443f1f4fd2f49c9be48d3d0cd60a6cc55bb9f8c60c068e56700a8",
+    "flow.decoder.estimator.mid_blocks.4.1.3.attn1.to_k.weight": "8aea41e1c4eb2c4d33a52e16094b16eda831d6067e7301345c1d9f5eb4ed2869",
+    "flow.decoder.estimator.mid_blocks.4.1.3.attn1.to_out.0.weight": "d7382445a89a236b7ca6cf5869a0c9c93a629975e26b3c827aba5cb3c7007189",
+    "flow.decoder.estimator.mid_blocks.4.1.3.attn1.to_q.weight": "fc79841bd3d99b69e8920c3a2cea54cd389a682d34393af2770fe63a95f3d3dc",
+    "flow.decoder.estimator.mid_blocks.4.1.3.attn1.to_v.weight": "fc2093df3e0a2f7315879935e28a12e16c8626389351ff0195e887e2ee6c8e4a",
+    "flow.decoder.estimator.mid_blocks.5.1.0.attn1.to_k.weight": "74c7c06e13a307c17ca98fb37c2a77d047e265e79a1767575b51836b13d2c4f7",
+    "flow.decoder.estimator.mid_blocks.5.1.0.attn1.to_out.0.weight": "b8a5b077d8a2c1ce5ce0b902cb3ce57465f59d20a4180d6f26f4e72f0ebabe91",
+    "flow.decoder.estimator.mid_blocks.5.1.0.attn1.to_q.weight": "7b203c739e062f6d4dc7b9b1b9d92a4964feceb079dab28e8f0cc77c202f548f",
+    "flow.decoder.estimator.mid_blocks.5.1.0.attn1.to_v.weight": "ece0cbc46087076aa5d8d1dd70f78459070268ac4e1fb911054b0be88f957be2",
+    "flow.decoder.estimator.mid_blocks.5.1.1.attn1.to_k.weight": "207a0c1f84f0673a2e99657b37eeb2f8ef31595260b7a2a889db6bcd694b8285",
+    "flow.decoder.estimator.mid_blocks.5.1.1.attn1.to_out.0.weight": "8400365b451b1b20efc62ddda9155b9451c219e7b14899d7d7acb91ddb808914",
+    "flow.decoder.estimator.mid_blocks.5.1.1.attn1.to_q.weight": "cb5aa7853ef30f564312904dd65584e7c1939d57894e8b42838713ff8837855c",
+    "flow.decoder.estimator.mid_blocks.5.1.1.attn1.to_v.weight": "c64e9ba72f3fbcab07af560d88f261cf1136f340e5fe3dbfcd6fd841ee4db369",
+    "flow.decoder.estimator.mid_blocks.5.1.2.attn1.to_k.weight": "910d7d418635d5712e396006b88e28f88cbb6779baad4a28e9f85755418cf9fe",
+    "flow.decoder.estimator.mid_blocks.5.1.2.attn1.to_out.0.weight": "22453f822a8610e31ba311da93f8f3a5f20912d4e5ef8d17b460c6144be5435b",
+    "flow.decoder.estimator.mid_blocks.5.1.2.attn1.to_q.weight": "9271c1363698a3e99bf2db0f958cd5099ee351d3e18b00e52067edc4d449ce2b",
+    "flow.decoder.estimator.mid_blocks.5.1.2.attn1.to_v.weight": "f9562b33c9c734a5c0bb3504a02422d9f7d770cff1ce48a0ed90250774352cf8",
+    "flow.decoder.estimator.mid_blocks.5.1.3.attn1.to_k.weight": "92e29f1db52b99afb81b8acdeab6f1bf52a595b2dad252194806216466b8ffca",
+    "flow.decoder.estimator.mid_blocks.5.1.3.attn1.to_out.0.weight": "17e22e0becbf076e9973ae2f49ea18402f0722ff531142c82f922d891b0c5650",
+    "flow.decoder.estimator.mid_blocks.5.1.3.attn1.to_q.weight": "ce79a31eb068ee30a670209b3e415ff7db335aefec58aa3057ac55b55177688f",
+    "flow.decoder.estimator.mid_blocks.5.1.3.attn1.to_v.weight": "3aff1bace5d3871f1939c58a1b059b326929c5f1e4359264a97f6f34367c2814",
+    "flow.decoder.estimator.mid_blocks.6.1.0.attn1.to_k.weight": "c50b081229e31f5814f62710c57b3f18a869540c942008c509582c32556b8f72",
+    "flow.decoder.estimator.mid_blocks.6.1.0.attn1.to_out.0.weight": "67912dd6750051dfe5d8131ee60b735aa866d6d1b5f25878a8c0558582aabe57",
+    "flow.decoder.estimator.mid_blocks.6.1.0.attn1.to_q.weight": "8f0bdde19b9fe29d80d1e8e13a48bd720378e72ce70484d53e41745007fbdce0",
+    "flow.decoder.estimator.mid_blocks.6.1.0.attn1.to_v.weight": "433dd6e4c07941df32e6a5219f29df15f590645ebd472b17ae5b778312f90e87",
+    "flow.decoder.estimator.mid_blocks.6.1.1.attn1.to_k.weight": "d5a95a72e8c7bf32c3c33247fee49467afdc2e89283d10410f152af9080dbbac",
+    "flow.decoder.estimator.mid_blocks.6.1.1.attn1.to_out.0.weight": "751f1bd0a3be9a3e0d0cb6152f50d4e21802956bb28bfb73d835bd3b0946df4f",
+    "flow.decoder.estimator.mid_blocks.6.1.1.attn1.to_q.weight": "5727859310b4817eda86215f3b97187c7296fff9dfcf6ca788c4fd5112a50d14",
+    "flow.decoder.estimator.mid_blocks.6.1.1.attn1.to_v.weight": "bb2a483347e17f45c16bb3070d473f8e5ee16046788a07551cf3ee2f880686f5",
+    "flow.decoder.estimator.mid_blocks.6.1.2.attn1.to_k.weight": "a22387399bb8f2b20171222d9df678fc7806394563fd6482e726702c75d0bf9e",
+    "flow.decoder.estimator.mid_blocks.6.1.2.attn1.to_out.0.weight": "a4cbb5e0c5552bfea8f1dd1cc3211b4ae7a900946bed839dc62ad1c672d9319a",
+    "flow.decoder.estimator.mid_blocks.6.1.2.attn1.to_q.weight": "951f0b25a813bebd0bbbfc21ec0ee35cc455d78a4cdd76e71edf89f3908d9e3c",
+    "flow.decoder.estimator.mid_blocks.6.1.2.attn1.to_v.weight": "a5c92d45e7b9b3136dd9433352c4e8d13e38088b22d6e8270241bcee192f2502",
+    "flow.decoder.estimator.mid_blocks.6.1.3.attn1.to_k.weight": "2eddf8e0f2d60361c0cfa3d7bed940775e7fbcccd1ddae661b401dae31bfca86",
+    "flow.decoder.estimator.mid_blocks.6.1.3.attn1.to_out.0.weight": "ba2f1d49503fb5b54561aa76f402fca71741a5be3d2096c14127824950149a93",
+    "flow.decoder.estimator.mid_blocks.6.1.3.attn1.to_q.weight": "e2553988e31896db88c8de280f88bc7bf0828ca8f9fed0ec67aef18e9f7cb25a",
+    "flow.decoder.estimator.mid_blocks.6.1.3.attn1.to_v.weight": "64369140ea57798f7092ff770de9225b3e127acd6a95827beacd11858cace0a9",
+    "flow.decoder.estimator.mid_blocks.7.1.0.attn1.to_k.weight": "f16a1d3dc54c47d2b8cd92beef2adee9017392b740514a28d14935b5b8100dbc",
+    "flow.decoder.estimator.mid_blocks.7.1.0.attn1.to_out.0.weight": "9bb852f378a821c37700879c3fabb4f5121e236ae754b93f9beb4d0be021eb1b",
+    "flow.decoder.estimator.mid_blocks.7.1.0.attn1.to_q.weight": "c93602efb40e200b7bca2e52e737e24cf6c39c77b3e20e0561d5ade3cae1067d",
+    "flow.decoder.estimator.mid_blocks.7.1.0.attn1.to_v.weight": "eb5f739d3ca731ac84c76dd044ce179a889d0fe7378e730e9384cf9e4dd1987e",
+    "flow.decoder.estimator.mid_blocks.7.1.1.attn1.to_k.weight": "524deb2ffbde131be581756efbb96815e019785fb5c975416084f775265eb962",
+    "flow.decoder.estimator.mid_blocks.7.1.1.attn1.to_out.0.weight": "f6e6c09fbe9178df069ff489b6a3efa2a0bda16a447d1bc569ffbebf4adbb316",
+    "flow.decoder.estimator.mid_blocks.7.1.1.attn1.to_q.weight": "5cd917b1d474b3df468b9bd9903bd6f780f8f0269e2532a9ba0f57937b2e6d40",
+    "flow.decoder.estimator.mid_blocks.7.1.1.attn1.to_v.weight": "e85e239182889c0fefe0d5b769edf6d29fac95dd10c72b944ed9acaef6388a1c",
+    "flow.decoder.estimator.mid_blocks.7.1.2.attn1.to_k.weight": "777fbf905488baa39e8d0ad70ca98ffc3889b571260614a5316b9d4eb8e06720",
+    "flow.decoder.estimator.mid_blocks.7.1.2.attn1.to_out.0.weight": "b67deb2608960eaf27e17229aa97c405753635e943919bf46a360799b6b156ed",
+    "flow.decoder.estimator.mid_blocks.7.1.2.attn1.to_q.weight": "49aff359bbf9b1513d7e389345a1b387d728184662d69b2a5f0e45fe60b49770",
+    "flow.decoder.estimator.mid_blocks.7.1.2.attn1.to_v.weight": "2176dc27f57b5009e71f7aae2c0fca784eef11c6b39ccd1df2ed7b45de677462",
+    "flow.decoder.estimator.mid_blocks.7.1.3.attn1.to_k.weight": "28386e5ced3c9c65c2c263b940898a39525be22a60f2682218355230b5329e6c",
+    "flow.decoder.estimator.mid_blocks.7.1.3.attn1.to_out.0.weight": "f67ea3e118dea770d49bd9589cf911c1dbe9a473b92f5dd48edc15dda13538c6",
+    "flow.decoder.estimator.mid_blocks.7.1.3.attn1.to_q.weight": "bc409d0595e06b392c7dc1ce97e6a29a026f696a623da864971e6bb7e60d9b5d",
+    "flow.decoder.estimator.mid_blocks.7.1.3.attn1.to_v.weight": "fe93ce18288419672f22630dca8465aba45a3d5f334ac651a57a11bcb2a26800",
+    "flow.decoder.estimator.mid_blocks.8.1.0.attn1.to_k.weight": "88367f07aa20afe90d135409e05cbd24f2df7823cf7ad1bf19fe49d95ef9373b",
+    "flow.decoder.estimator.mid_blocks.8.1.0.attn1.to_out.0.weight": "038c4aa9cd53bb3e75e3866a3faf68a76afad54e394a0508424ea62fb22ed645",
+    "flow.decoder.estimator.mid_blocks.8.1.0.attn1.to_q.weight": "212ceca4aeeed5019e5de17b6516aea858539f53e8a108a77205405ea364409e",
+    "flow.decoder.estimator.mid_blocks.8.1.0.attn1.to_v.weight": "81dc98667bc0622968ed0c6b684f1b2a178e09f07509646486c3bb29ad5bdc3a",
+    "flow.decoder.estimator.mid_blocks.8.1.1.attn1.to_k.weight": "5eab5d28d0c76efa26b2a41bd921c20e051b6ab839fb10c3fe3e0d979fa69405",
+    "flow.decoder.estimator.mid_blocks.8.1.1.attn1.to_out.0.weight": "9aea6f2a2fc898994c6ebc1aec3bfabfd843ccc771c58747d0784381cfbbdcea",
+    "flow.decoder.estimator.mid_blocks.8.1.1.attn1.to_q.weight": "6a8cc37ed99cc3e53712a0839396ce6b1211d70a93033665d1309a18c44ed4a2",
+    "flow.decoder.estimator.mid_blocks.8.1.1.attn1.to_v.weight": "2d234a4e0b41e73d80880d1f6ade03ac786a45cb244746aaae66a9d5a03750c6",
+    "flow.decoder.estimator.mid_blocks.8.1.2.attn1.to_k.weight": "f5ca67a15df86de122dd0195d28619fb0a1e6dc60875ec112a743b96d08863e5",
+    "flow.decoder.estimator.mid_blocks.8.1.2.attn1.to_out.0.weight": "4fc9c74e6eb965ca4398f41cee66e5b1c6d2a42528bb70fdfac0b963ddc1a481",
+    "flow.decoder.estimator.mid_blocks.8.1.2.attn1.to_q.weight": "ec4f55809f2104af6c380449356dd309c6c1001d95536cf7de65a5a1803f6d80",
+    "flow.decoder.estimator.mid_blocks.8.1.2.attn1.to_v.weight": "c2f2b41679c7093bc5cd745461878f50a1de42ef513d5086402246b0adeff109",
+    "flow.decoder.estimator.mid_blocks.8.1.3.attn1.to_k.weight": "7584937b3da149318e27b9010ce0ca1a9960dcbae514aa9bbae56e9eef8d4c33",
+    "flow.decoder.estimator.mid_blocks.8.1.3.attn1.to_out.0.weight": "28e1e8fec129602d7ae0517b27b1aeb5eb74ff29c4b81c6f48e80af0ef564e25",
+    "flow.decoder.estimator.mid_blocks.8.1.3.attn1.to_q.weight": "a2bb77bfe2359f7bfa8a4f2f57c41a2be693dd0daae4c85eac8b469ef2f5ba77",
+    "flow.decoder.estimator.mid_blocks.8.1.3.attn1.to_v.weight": "c778f3619ee7355990c6ba02520c27a6adbd7d587bd09eea436446be315ed506",
+    "flow.decoder.estimator.mid_blocks.9.1.0.attn1.to_k.weight": "22dcb8a3b9f7e56eaa14998c01d0f544ea2c39f16c342555abbeab8917d230be",
+    "flow.decoder.estimator.mid_blocks.9.1.0.attn1.to_out.0.weight": "e6d05d97f1188da85490433e5764f9a85f7faa11fc937c1d7582058e69e3020d",
+    "flow.decoder.estimator.mid_blocks.9.1.0.attn1.to_q.weight": "a14bd2497ce0a16aee6733d3bb2ac3961321ef2dab29265ffa6ae80e75d4d4b2",
+    "flow.decoder.estimator.mid_blocks.9.1.0.attn1.to_v.weight": "0cba9b08f52e340b854bbee61a2f81ffbe8e3d62c5925b8bdb7658d1a36723dc",
+    "flow.decoder.estimator.mid_blocks.9.1.1.attn1.to_k.weight": "49fc6be0d96a82a0c0cb8ff78f664411487b0f87185a86a112735cbcdfaca3dd",
+    "flow.decoder.estimator.mid_blocks.9.1.1.attn1.to_out.0.weight": "31328215028ad89756fa1fc9921f828f81968e93a554cc87b7dfd9ae2d43cc80",
+    "flow.decoder.estimator.mid_blocks.9.1.1.attn1.to_q.weight": "7890e073fb9f5c0ddab94bebb242e5475ddb89c0174615df99dde23f537c331c",
+    "flow.decoder.estimator.mid_blocks.9.1.1.attn1.to_v.weight": "28ef855dd7fb1093810b50c26e5e796031d5d3dca1205361872faf65b9a72451",
+    "flow.decoder.estimator.mid_blocks.9.1.2.attn1.to_k.weight": "0c77d538b204577fa31a68c209c39ca1add69bd8c3c63e759346be0833a82e73",
+    "flow.decoder.estimator.mid_blocks.9.1.2.attn1.to_out.0.weight": "8c1c7323704c0c4647e9a43ccc10c387094b6e6ec7d330c806d60699ea759973",
+    "flow.decoder.estimator.mid_blocks.9.1.2.attn1.to_q.weight": "a8cef6f7e7249159a4f4f30e1c9254ec58edfc908c3129813588dfc5ff8ab7e7",
+    "flow.decoder.estimator.mid_blocks.9.1.2.attn1.to_v.weight": "b65057f875e7137f2badd97bf185380f94d79791fcc148b98cb55cdf1065b9ab",
+    "flow.decoder.estimator.mid_blocks.9.1.3.attn1.to_k.weight": "fef8eb5e373ba0512c3230e255009f6bca00babb9ec575445dd84a0482fa1a6e",
+    "flow.decoder.estimator.mid_blocks.9.1.3.attn1.to_out.0.weight": "3c46242d9028d8673a2d0f53e57656713671b0e22f13a62af90476fc2d413d24",
+    "flow.decoder.estimator.mid_blocks.9.1.3.attn1.to_q.weight": "9dd47563aeb686c8fb12f970c6aa6bc12a97db647101f67dfeae55fa09152333",
+    "flow.decoder.estimator.mid_blocks.9.1.3.attn1.to_v.weight": "bcb39f63da7e17543720b8cac6ce9d979010b5a15204f6f47e85e1044e12e201",
+    "flow.decoder.estimator.up_blocks.0.1.0.attn1.to_k.weight": "76a08e4b447ec1d1d36299f998a9c764e9be5382ead9c730adacc81af8f5f552",
+    "flow.decoder.estimator.up_blocks.0.1.0.attn1.to_out.0.weight": "ed384d7c01ab8692023097b3682e6b45c0695f2893f876edf84f535b8de14d8b",
+    "flow.decoder.estimator.up_blocks.0.1.0.attn1.to_q.weight": "61f85253b6c37cc1f6a54e22410274d12fc5f398b2bc2a627bcc38921b352dd6",
+    "flow.decoder.estimator.up_blocks.0.1.0.attn1.to_v.weight": "54c1a5206269e30c09c36cde2509567105d63169f927b40fc5d88ebe2e364bad",
+    "flow.decoder.estimator.up_blocks.0.1.1.attn1.to_k.weight": "5669a10bfb75625ab87349b19ba2b50425d748d99e7c4a4a4d88eabc1e625329",
+    "flow.decoder.estimator.up_blocks.0.1.1.attn1.to_out.0.weight": "b13c6aab697527ca1580a44004c03306cb749db932aa0fd397bc1f462b24e91d",
+    "flow.decoder.estimator.up_blocks.0.1.1.attn1.to_q.weight": "21192990f9e3688615f15e1bac3ac420c7e3daa28459e717a4e6d0f720ef0c19",
+    "flow.decoder.estimator.up_blocks.0.1.1.attn1.to_v.weight": "0c52ef8680985ca0eecd26cf3b46fa48f2b18b778bbdb574319a7c76bc50d46a",
+    "flow.decoder.estimator.up_blocks.0.1.2.attn1.to_k.weight": "a324a2bcf088cd54a5b6351bf0654426b46c4f9698d70193281d7d435d875133",
+    "flow.decoder.estimator.up_blocks.0.1.2.attn1.to_out.0.weight": "9de56e1708fc2604c462b49e42924fedd2717b9d6115fa0aa93981d2d907de98",
+    "flow.decoder.estimator.up_blocks.0.1.2.attn1.to_q.weight": "dcc8a121cb1885417f51c7eb3831dda1262308d6643f213d46110fa154111b62",
+    "flow.decoder.estimator.up_blocks.0.1.2.attn1.to_v.weight": "8f3f3bccb740864bc0776d8cb5fde4e6abfd0ab5fd98d573a07aae77e6208411",
+    "flow.decoder.estimator.up_blocks.0.1.3.attn1.to_k.weight": "1b6b8840a8aaac58cd13d60048b43784372d43b86817fc4350b8558311b3133b",
+    "flow.decoder.estimator.up_blocks.0.1.3.attn1.to_out.0.weight": "48961a408d7d03f227cc03149f92b9a835aa9026eabb0a8019b6d3f97992e5f4",
+    "flow.decoder.estimator.up_blocks.0.1.3.attn1.to_q.weight": "ae9c92767642269d81c560ed029d0ab0b2cf0c04d936cf141599e79015ebf267",
+    "flow.decoder.estimator.up_blocks.0.1.3.attn1.to_v.weight": "20319842c482f9309cb12a2ed1618c9ad43dc5b22716c2dc6437cff363d8839b"
+  },
+  "best_checkpoint": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_fit_smoke_fp32/best_attention.pt",
+  "best_step": 1,
+  "best_valid_total": 0.7818824052810669,
+  "cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/cache_v2/manifest.json",
+  "cache_sha256": "1e2315524ac5d85b085091f4d80cebb99d9f017c5adfa38b63915f941eb20414",
+  "checkpoint": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_fit_smoke_fp32/best_attention.pt",
+  "checkpoint_sha256": "2870a35e4cca59892c612aea56c2ee54e099df3aa38d3735f3946474c9944d50",
+  "command": [
+    "scripts/nano_lab/fit_decoder_attention.py",
+    "--prepare-dir",
+    "artifacts/nano_lab/acoustic_only_asmr/flow_v2",
+    "--initial-conditionals",
+    "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+    "--output-dir",
+    "artifacts/nano_lab/decoder_attention_fit_smoke_fp32",
+    "--max-steps",
+    "1"
+  ],
+  "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+  "conditionals_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+  "diagnostic_only": true,
+  "disclosure": "This is a speaker-specific attention adapter trained on source-token reconstruction. It is experimental and does not establish zero-shot realism, timing, or pitch quality.",
+  "elapsed_seconds": 80.81498595699668,
+  "epoch0": {
+    "train": {
+      "delta": {
+        "max_abs": 0.0,
+        "rms": 0.0
+      },
+      "mean": {
+        "adapter_l2": 0.0005727699026465416,
+        "baseline_distill_mse": 0.0,
+        "envelope_mse": 0.21937662735581398,
+        "raw_mse": 0.8929715986762728,
+        "regularization": 5.727698848545515e-08,
+        "total": 0.9478157929011753
+      },
+      "rows": [
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.1326630860567093,
+          "id": "asmr7_repair_001",
+          "raw_mse": 0.7715504169464111,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.8047162294387817
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.056400593370199203,
+          "id": "asmr7_repair_002",
+          "raw_mse": 0.9111913442611694,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.9252915382385254
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.07672497630119324,
+          "id": "asmr7_repair_003",
+          "raw_mse": 1.0345107316970825,
+          "regularization": 5.727698848545515e-08,
+          "total": 1.0536919832229614
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.06733810156583786,
+          "id": "asmr7_repair_004",
+          "raw_mse": 0.7954953908920288,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.8123299479484558
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.3253118097782135,
+          "id": "asmr7_repair_005",
+          "raw_mse": 1.1516691446304321,
+          "regularization": 5.727698848545515e-08,
+          "total": 1.2329970598220825
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.06384531408548355,
+          "id": "asmr7_repair_006",
+          "raw_mse": 0.8192302584648132,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.8351916670799255
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.09468153864145279,
+          "id": "asmr7_repair_007",
+          "raw_mse": 0.9266764521598816,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.9503468871116638
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.08714208006858826,
+          "id": "asmr7_repair_008",
+          "raw_mse": 0.8986559510231018,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.9204415082931519
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.04964734613895416,
+          "id": "asmr7_repair_009",
+          "raw_mse": 0.6519277691841125,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.6643396615982056
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.06321966648101807,
+          "id": "asmr7_repair_010",
+          "raw_mse": 1.0023589134216309,
+          "regularization": 5.727698848545515e-08,
+          "total": 1.018163800239563
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.24994616210460663,
+          "id": "asmr7_repair_013",
+          "raw_mse": 0.9099332690238953,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.9724198579788208
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.38679954409599304,
+          "id": "asmr7_repair_014",
+          "raw_mse": 1.0491001605987549,
+          "regularization": 5.727698848545515e-08,
+          "total": 1.145799994468689
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.07862479239702225,
+          "id": "asmr7_repair_015",
+          "raw_mse": 0.8147901892662048,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.8344464302062988
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.037172071635723114,
+          "id": "asmr7_repair_016",
+          "raw_mse": 0.61017245054245,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.6194655299186707
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.18108557164669037,
+          "id": "asmr7_repair_017",
+          "raw_mse": 0.7765855193138123,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.8218569755554199
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.062482383102178574,
+          "id": "asmr7_repair_018",
+          "raw_mse": 0.5967758297920227,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.6123964786529541
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.11633672565221786,
+          "id": "asmr7_repair_019",
+          "raw_mse": 0.817939043045044,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.8470233082771301
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.5659067034721375,
+          "id": "asmr7_repair_021",
+          "raw_mse": 1.0797029733657837,
+          "regularization": 5.727698848545515e-08,
+          "total": 1.2211796045303345
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.2633688747882843,
+          "id": "asmr7_repair_023",
+          "raw_mse": 0.8654102683067322,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.9312525391578674
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.28767943382263184,
+          "id": "asmr7_repair_024",
+          "raw_mse": 0.7394696474075317,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.8113895654678345
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.2774704098701477,
+          "id": "asmr7_repair_026",
+          "raw_mse": 0.862069308757782,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.9314369559288025
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.18837101757526398,
+          "id": "asmr7_repair_027",
+          "raw_mse": 0.7169334292411804,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.7640262246131897
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.8890894055366516,
+          "id": "asmr7_repair_028",
+          "raw_mse": 1.52004873752594,
+          "regularization": 5.727698848545515e-08,
+          "total": 1.7423211336135864
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.9191845059394836,
+          "id": "asmr7_repair_029",
+          "raw_mse": 1.554840087890625,
+          "regularization": 5.727698848545515e-08,
+          "total": 1.7846362590789795
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.10339229553937912,
+          "id": "asmr7_repair_030",
+          "raw_mse": 0.721782922744751,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.7476310729980469
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.10856521129608154,
+          "id": "asmr7_repair_031",
+          "raw_mse": 0.8409709334373474,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.8681122660636902
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.16812430322170258,
+          "id": "asmr7_repair_032",
+          "raw_mse": 0.7511094808578491,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.7931405901908875
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.24197164177894592,
+          "id": "asmr7_repair_033",
+          "raw_mse": 0.8123041391372681,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.8727971315383911
+        }
+      ]
+    },
+    "valid": {
+      "delta": {
+        "max_abs": 0.0,
+        "rms": 0.0
+      },
+      "mean": {
+        "adapter_l2": 0.0005727699026465416,
+        "baseline_distill_mse": 0.0,
+        "envelope_mse": 0.1375705450773239,
+        "raw_mse": 0.7518831789493561,
+        "regularization": 5.727698848545515e-08,
+        "total": 0.7862758636474609
+      },
+      "rows": [
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.054284900426864624,
+          "id": "asmr7_repair_022",
+          "raw_mse": 0.6480513215065002,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.6616225838661194
+        },
+        {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.2208561897277832,
+          "id": "asmr7_repair_034",
+          "raw_mse": 0.8557150363922119,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.9109291434288025
+        }
+      ]
+    }
+  },
+  "experimental": true,
+  "final_train": {
+    "delta": {
+      "max_abs": 0.053505897521972656,
+      "rms": 0.005231396295130253
+    },
+    "mean": {
+      "adapter_l2": 0.0005727656534872949,
+      "baseline_distill_mse": 2.6705810764074806e-05,
+      "envelope_mse": 0.21675507005836284,
+      "raw_mse": 0.88931186071464,
+      "regularization": 5.727656215981369e-08,
+      "total": 0.9435140298945563
+    },
+    "rows": [
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 1.7540212866151705e-05,
+        "envelope_mse": 0.13518041372299194,
+        "id": "asmr7_repair_001",
+        "raw_mse": 0.7729700207710266,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.8067739605903625
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 1.611637526366394e-05,
+        "envelope_mse": 0.05740797147154808,
+        "id": "asmr7_repair_002",
+        "raw_mse": 0.9116188883781433,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.92597895860672
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 1.373175564367557e-05,
+        "envelope_mse": 0.07796701043844223,
+        "id": "asmr7_repair_003",
+        "raw_mse": 1.0350303649902344,
+        "regularization": 5.727656215981369e-08,
+        "total": 1.054529070854187
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 1.4551031199516729e-05,
+        "envelope_mse": 0.06577441841363907,
+        "id": "asmr7_repair_004",
+        "raw_mse": 0.7930817604064941,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.8095327019691467
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 4.238019755575806e-05,
+        "envelope_mse": 0.3301320970058441,
+        "id": "asmr7_repair_005",
+        "raw_mse": 1.1547248363494873,
+        "regularization": 5.727656215981369e-08,
+        "total": 1.2372790575027466
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 1.7520656911074184e-05,
+        "envelope_mse": 0.06301318109035492,
+        "id": "asmr7_repair_006",
+        "raw_mse": 0.8177670240402222,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.8335291147232056
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 3.3894604712259024e-05,
+        "envelope_mse": 0.09505164623260498,
+        "id": "asmr7_repair_007",
+        "raw_mse": 0.925241231918335,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.9490211606025696
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 2.526663593016565e-05,
+        "envelope_mse": 0.0859868973493576,
+        "id": "asmr7_repair_008",
+        "raw_mse": 0.8954055905342102,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.9169149994850159
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 1.4305101103673223e-05,
+        "envelope_mse": 0.049889273941516876,
+        "id": "asmr7_repair_009",
+        "raw_mse": 0.6515132188796997,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.6639927625656128
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 1.1458707376732491e-05,
+        "envelope_mse": 0.06390947103500366,
+        "id": "asmr7_repair_010",
+        "raw_mse": 1.0020496845245361,
+        "regularization": 5.727656215981369e-08,
+        "total": 1.0180327892303467
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 2.0511861293925904e-05,
+        "envelope_mse": 0.2458895742893219,
+        "id": "asmr7_repair_013",
+        "raw_mse": 0.9051769375801086,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.966659665107727
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 3.0566956411348656e-05,
+        "envelope_mse": 0.38069668412208557,
+        "id": "asmr7_repair_014",
+        "raw_mse": 1.041635513305664,
+        "regularization": 5.727656215981369e-08,
+        "total": 1.1368249654769897
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 4.6948080125730485e-05,
+        "envelope_mse": 0.0763903334736824,
+        "id": "asmr7_repair_015",
+        "raw_mse": 0.8114556074142456,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.8305767178535461
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 1.3276731806399766e-05,
+        "envelope_mse": 0.03632911667227745,
+        "id": "asmr7_repair_016",
+        "raw_mse": 0.6088715195655823,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.6179604530334473
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 2.543058872106485e-05,
+        "envelope_mse": 0.1774958223104477,
+        "id": "asmr7_repair_017",
+        "raw_mse": 0.7722184658050537,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.8166051506996155
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 2.1935491531621665e-05,
+        "envelope_mse": 0.06083109974861145,
+        "id": "asmr7_repair_018",
+        "raw_mse": 0.5941287875175476,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.6093475818634033
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 4.214795262669213e-05,
+        "envelope_mse": 0.11316370964050293,
+        "id": "asmr7_repair_019",
+        "raw_mse": 0.813588559627533,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.841900646686554
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 3.700826709973626e-05,
+        "envelope_mse": 0.5579575896263123,
+        "id": "asmr7_repair_021",
+        "raw_mse": 1.071178913116455,
+        "regularization": 5.727656215981369e-08,
+        "total": 1.2106868028640747
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 3.77353499061428e-05,
+        "envelope_mse": 0.2579343318939209,
+        "id": "asmr7_repair_023",
+        "raw_mse": 0.8587700128555298,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.9232725501060486
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 1.5867324691498652e-05,
+        "envelope_mse": 0.28385359048843384,
+        "id": "asmr7_repair_024",
+        "raw_mse": 0.7350689172744751,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.8060402870178223
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 4.705275932792574e-05,
+        "envelope_mse": 0.2713980972766876,
+        "id": "asmr7_repair_026",
+        "raw_mse": 0.8546479940414429,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.9225211143493652
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 2.757662150543183e-05,
+        "envelope_mse": 0.18442733585834503,
+        "id": "asmr7_repair_027",
+        "raw_mse": 0.7118908166885376,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.7580114603042603
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 2.219780617451761e-05,
+        "envelope_mse": 0.8811779022216797,
+        "id": "asmr7_repair_028",
+        "raw_mse": 1.510880708694458,
+        "regularization": 5.727656215981369e-08,
+        "total": 1.7311862707138062
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 5.496336962096393e-05,
+        "envelope_mse": 0.906018853187561,
+        "id": "asmr7_repair_029",
+        "raw_mse": 1.5398480892181396,
+        "regularization": 5.727656215981369e-08,
+        "total": 1.7663803100585938
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 3.1716823286842555e-05,
+        "envelope_mse": 0.10129251331090927,
+        "id": "asmr7_repair_030",
+        "raw_mse": 0.7188021540641785,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.7441412210464478
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 2.0804927771678194e-05,
+        "envelope_mse": 0.1069115623831749,
+        "id": "asmr7_repair_031",
+        "raw_mse": 0.8379323482513428,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.8646707534790039
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 1.9877990780514665e-05,
+        "envelope_mse": 0.1650044173002243,
+        "id": "asmr7_repair_032",
+        "raw_mse": 0.7474424242973328,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.7887035608291626
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 2.537852014938835e-05,
+        "envelope_mse": 0.23805704712867737,
+        "id": "asmr7_repair_033",
+        "raw_mse": 0.8077917098999023,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.8673187494277954
+      }
+    ]
+  },
+  "final_valid": {
+    "delta": {
+      "max_abs": 0.01654958724975586,
+      "rms": 0.005191037431359291
+    },
+    "mean": {
+      "adapter_l2": 0.0005727656534872949,
+      "baseline_distill_mse": 2.697319541766774e-05,
+      "envelope_mse": 0.13468573987483978,
+      "raw_mse": 0.7481974363327026,
+      "regularization": 5.727656215981369e-08,
+      "total": 0.7818824052810669
+    },
+    "rows": [
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 2.6867655833484605e-05,
+        "envelope_mse": 0.05270296335220337,
+        "id": "asmr7_repair_022",
+        "raw_mse": 0.645513117313385,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.6587023138999939
+      },
+      {
+        "adapter_l2": 0.0005727656534872949,
+        "baseline_distill_mse": 2.7078735001850873e-05,
+        "envelope_mse": 0.2166685163974762,
+        "id": "asmr7_repair_034",
+        "raw_mse": 0.8508817553520203,
+        "regularization": 5.727656215981369e-08,
+        "total": 0.9050624966621399
+      }
+    ]
+  },
+  "fit_precision": {
+    "cudnn_tf32": false,
+    "matmul_tf32": false
+  },
+  "format": "nano_decoder_attention_lora_v1",
+  "frozen_params_no_grads": true,
+  "frozen_policy": "all S3Gen base weights and the 192-D speaker embedding are frozen; only 224 rank-2 factor pairs train",
+  "gradient_probe": {
+    "finite": true,
+    "gradient_norm": 0.2347816824913025,
+    "initial_up_gradient_norm": 0.2347816824913025,
+    "nonzero": true,
+    "trainable_parameter_count": 344064
+  },
+  "history": [
+    {
+      "gradient_norm": 0.2347816824913025,
+      "step": 1,
+      "train": {
+        "mean": {
+          "adapter_l2": 0.0005727699026465416,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.21937662735581398,
+          "raw_mse": 0.8929715986762728,
+          "regularization": 5.727698848545515e-08,
+          "total": 0.9478157929011753
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.1326630860567093,
+            "raw_mse": 0.7715504169464111,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.8047162294387817
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.056400593370199203,
+            "raw_mse": 0.9111913442611694,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.9252915382385254
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.07672497630119324,
+            "raw_mse": 1.0345107316970825,
+            "regularization": 5.727698848545515e-08,
+            "total": 1.0536919832229614
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.06733810156583786,
+            "raw_mse": 0.7954953908920288,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.8123299479484558
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.3253118097782135,
+            "raw_mse": 1.1516691446304321,
+            "regularization": 5.727698848545515e-08,
+            "total": 1.2329970598220825
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.06384531408548355,
+            "raw_mse": 0.8192302584648132,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.8351916670799255
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.09468153864145279,
+            "raw_mse": 0.9266764521598816,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.9503468871116638
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.08714208006858826,
+            "raw_mse": 0.8986559510231018,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.9204415082931519
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.04964734613895416,
+            "raw_mse": 0.6519277691841125,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.6643396615982056
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.06321966648101807,
+            "raw_mse": 1.0023589134216309,
+            "regularization": 5.727698848545515e-08,
+            "total": 1.018163800239563
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.24994616210460663,
+            "raw_mse": 0.9099332690238953,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.9724198579788208
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.38679954409599304,
+            "raw_mse": 1.0491001605987549,
+            "regularization": 5.727698848545515e-08,
+            "total": 1.145799994468689
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.07862479239702225,
+            "raw_mse": 0.8147901892662048,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.8344464302062988
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.037172071635723114,
+            "raw_mse": 0.61017245054245,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.6194655299186707
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.18108557164669037,
+            "raw_mse": 0.7765855193138123,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.8218569755554199
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.062482383102178574,
+            "raw_mse": 0.5967758297920227,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.6123964786529541
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.11633672565221786,
+            "raw_mse": 0.817939043045044,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.8470233082771301
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.5659067034721375,
+            "raw_mse": 1.0797029733657837,
+            "regularization": 5.727698848545515e-08,
+            "total": 1.2211796045303345
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.2633688747882843,
+            "raw_mse": 0.8654102683067322,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.9312525391578674
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.28767943382263184,
+            "raw_mse": 0.7394696474075317,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.8113895654678345
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.2774704098701477,
+            "raw_mse": 0.862069308757782,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.9314369559288025
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.18837101757526398,
+            "raw_mse": 0.7169334292411804,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.7640262246131897
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.8890894055366516,
+            "raw_mse": 1.52004873752594,
+            "regularization": 5.727698848545515e-08,
+            "total": 1.7423211336135864
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.9191845059394836,
+            "raw_mse": 1.554840087890625,
+            "regularization": 5.727698848545515e-08,
+            "total": 1.7846362590789795
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.10339229553937912,
+            "raw_mse": 0.721782922744751,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.7476310729980469
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.10856521129608154,
+            "raw_mse": 0.8409709334373474,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.8681122660636902
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.16812430322170258,
+            "raw_mse": 0.7511094808578491,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.7931405901908875
+          },
+          {
+            "adapter_l2": 0.0005727699026465416,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.24197164177894592,
+            "raw_mse": 0.8123041391372681,
+            "regularization": 5.727698848545515e-08,
+            "total": 0.8727971315383911
+          }
+        ]
+      },
+      "valid": {
+        "delta": {
+          "max_abs": 0.01654958724975586,
+          "rms": 0.005191037431359291
+        },
+        "mean": {
+          "adapter_l2": 0.0005727656534872949,
+          "baseline_distill_mse": 2.697319541766774e-05,
+          "envelope_mse": 0.13468573987483978,
+          "raw_mse": 0.7481974363327026,
+          "regularization": 5.727656215981369e-08,
+          "total": 0.7818824052810669
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0005727656534872949,
+            "baseline_distill_mse": 2.6867655833484605e-05,
+            "envelope_mse": 0.05270296335220337,
+            "id": "asmr7_repair_022",
+            "raw_mse": 0.645513117313385,
+            "regularization": 5.727656215981369e-08,
+            "total": 0.6587023138999939
+          },
+          {
+            "adapter_l2": 0.0005727656534872949,
+            "baseline_distill_mse": 2.7078735001850873e-05,
+            "envelope_mse": 0.2166685163974762,
+            "id": "asmr7_repair_034",
+            "raw_mse": 0.8508817553520203,
+            "regularization": 5.727656215981369e-08,
+            "total": 0.9050624966621399
+          }
+        ]
+      }
+    }
+  ],
+  "hyperparameters": {
+    "alpha": 2.0,
+    "distill_weight": 0.5,
+    "envelope_weight": 0.25,
+    "lr": 0.0001,
+    "max_steps": 1,
+    "parity_atol": 0.0001,
+    "patience": 3,
+    "rank": 2,
+    "regularizer": 0.0001,
+    "scale": 1.0,
+    "steps": 2
+  },
+  "initial_conditionals": {
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+    "provided": true,
+    "sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c"
+  },
+  "initial_embedding": {
+    "conditionals_sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+    "shape": [
+      1,
+      192
+    ]
+  },
+  "inventory_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_inventory.json",
+  "inventory_sha256": "9f36f6f5a61c8ec1bda8fa09e88640035931fb8690a920f73d9fe15cb94919ed",
+  "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+  "model_dir": "/home/terryd/gooning/voicecloning/models/chatterbox-nano",
+  "native_parity_precision": {
+    "cudnn_tf32": true,
+    "matmul_tf32": false
+  },
+  "native_row_seeds": {
+    "asmr7_repair_001": 31,
+    "asmr7_repair_002": 1040,
+    "asmr7_repair_003": 2049,
+    "asmr7_repair_004": 3058,
+    "asmr7_repair_005": 4067,
+    "asmr7_repair_006": 5076,
+    "asmr7_repair_007": 6085,
+    "asmr7_repair_008": 7094,
+    "asmr7_repair_009": 8103,
+    "asmr7_repair_010": 9112,
+    "asmr7_repair_013": 10121,
+    "asmr7_repair_014": 11130,
+    "asmr7_repair_015": 12139,
+    "asmr7_repair_016": 13148,
+    "asmr7_repair_017": 14157,
+    "asmr7_repair_018": 15166,
+    "asmr7_repair_019": 16175,
+    "asmr7_repair_021": 17184,
+    "asmr7_repair_022": 18193,
+    "asmr7_repair_023": 19202,
+    "asmr7_repair_024": 20211,
+    "asmr7_repair_026": 21220,
+    "asmr7_repair_027": 22229,
+    "asmr7_repair_028": 23238,
+    "asmr7_repair_029": 24247,
+    "asmr7_repair_030": 25256,
+    "asmr7_repair_031": 26265,
+    "asmr7_repair_032": 27274,
+    "asmr7_repair_033": 28283,
+    "asmr7_repair_034": 29292
+  },
+  "parity": {
+    "atol": 0.0001,
+    "failures": [],
+    "max_abs": 0.0,
+    "rmse_mean": 0.0,
+    "rows": [
+      {
+        "id": "asmr7_repair_001",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          216
+        ]
+      },
+      {
+        "id": "asmr7_repair_002",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          172
+        ]
+      },
+      {
+        "id": "asmr7_repair_003",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          230
+        ]
+      },
+      {
+        "id": "asmr7_repair_004",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          190
+        ]
+      },
+      {
+        "id": "asmr7_repair_005",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          206
+        ]
+      },
+      {
+        "id": "asmr7_repair_006",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          280
+        ]
+      },
+      {
+        "id": "asmr7_repair_007",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          204
+        ]
+      },
+      {
+        "id": "asmr7_repair_008",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          444
+        ]
+      },
+      {
+        "id": "asmr7_repair_009",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          316
+        ]
+      },
+      {
+        "id": "asmr7_repair_010",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          198
+        ]
+      },
+      {
+        "id": "asmr7_repair_013",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          174
+        ]
+      },
+      {
+        "id": "asmr7_repair_014",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          220
+        ]
+      },
+      {
+        "id": "asmr7_repair_015",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          258
+        ]
+      },
+      {
+        "id": "asmr7_repair_016",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          274
+        ]
+      },
+      {
+        "id": "asmr7_repair_017",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          300
+        ]
+      },
+      {
+        "id": "asmr7_repair_018",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          274
+        ]
+      },
+      {
+        "id": "asmr7_repair_019",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          238
+        ]
+      },
+      {
+        "id": "asmr7_repair_021",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          200
+        ]
+      },
+      {
+        "id": "asmr7_repair_022",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          552
+        ]
+      },
+      {
+        "id": "asmr7_repair_023",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          370
+        ]
+      },
+      {
+        "id": "asmr7_repair_024",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          194
+        ]
+      },
+      {
+        "id": "asmr7_repair_026",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          338
+        ]
+      },
+      {
+        "id": "asmr7_repair_027",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          326
+        ]
+      },
+      {
+        "id": "asmr7_repair_028",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          268
+        ]
+      },
+      {
+        "id": "asmr7_repair_029",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          276
+        ]
+      },
+      {
+        "id": "asmr7_repair_030",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          372
+        ]
+      },
+      {
+        "id": "asmr7_repair_031",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          178
+        ]
+      },
+      {
+        "id": "asmr7_repair_032",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          348
+        ]
+      },
+      {
+        "id": "asmr7_repair_033",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          212
+        ]
+      },
+      {
+        "id": "asmr7_repair_034",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          334
+        ]
+      }
+    ],
+    "status": "passed"
+  },
+  "peak_rss_bytes": 1913917440,
+  "prepare_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2",
+  "prepare_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2/manifest.json",
+  "prepare_manifest_sha256": "affdb5cf101c376a8fb82bf28cbc959508cc4c87f912f92bb5d081ef3dd41df6",
+  "prepared_embedding": {
+    "conditionals_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+    "shape": [
+      1,
+      192
+    ]
+  },
+  "rss_after_fit_bytes": 1914871808,
+  "rss_before_load_bytes": 666148864,
+  "status": "fit_complete",
+  "stopped_after_steps": 1,
+  "target_parameter_count": 344064,
+  "target_weight_count": 224,
+  "train_ids": [
+    "asmr7_repair_001",
+    "asmr7_repair_002",
+    "asmr7_repair_003",
+    "asmr7_repair_004",
+    "asmr7_repair_005",
+    "asmr7_repair_006",
+    "asmr7_repair_007",
+    "asmr7_repair_008",
+    "asmr7_repair_009",
+    "asmr7_repair_010",
+    "asmr7_repair_013",
+    "asmr7_repair_014",
+    "asmr7_repair_015",
+    "asmr7_repair_016",
+    "asmr7_repair_017",
+    "asmr7_repair_018",
+    "asmr7_repair_019",
+    "asmr7_repair_021",
+    "asmr7_repair_023",
+    "asmr7_repair_024",
+    "asmr7_repair_026",
+    "asmr7_repair_027",
+    "asmr7_repair_028",
+    "asmr7_repair_029",
+    "asmr7_repair_030",
+    "asmr7_repair_031",
+    "asmr7_repair_032",
+    "asmr7_repair_033"
+  ],
+  "valid_ids": [
+    "asmr7_repair_022",
+    "asmr7_repair_034"
+  ],
+  "zero_adapter": {
+    "delta": {
+      "max_abs": 0.0,
+      "rms": 0.0
+    },
+    "exact_equal_all_rows": true,
+    "rows": 30
+  }
+}

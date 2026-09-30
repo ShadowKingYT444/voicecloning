@@ -1,0 +1,46 @@
+[
+  {
+    "id": "source01_source",
+    "voice": "asmr7",
+    "text": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_source.wav",
+    "kind": "Source excerpt, loudness matched",
+    "sha256": "b71115fb5f1afb51099d5a5dcbd5985febe1de62625ec0db6bc2ac634fd686f6",
+    "duration_seconds": 6.0,
+    "human_listening_verified": false,
+    "text_provenance": "Tiny and Small agree on source words; punctuation differs. Not manually verified."
+  },
+  {
+    "id": "source01_vocoder",
+    "voice": "asmr7",
+    "text": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_vocoder.wav",
+    "kind": "Vocoder reconstruction",
+    "sha256": "42fadf0a0d151060618484b5f6b28bd9b0f5b5f9378fdfe09ba56a7fdbb93b0c",
+    "duration_seconds": 6.0,
+    "human_listening_verified": false,
+    "text_provenance": "Tiny and Small agree on source words; punctuation differs. Not manually verified."
+  },
+  {
+    "id": "source01_tokens",
+    "voice": "asmr7",
+    "text": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tokens.wav",
+    "kind": "Source-token reconstruction",
+    "sha256": "7225770d3f0eaf12d0bb57d896511241ffb565c23840f4d6a492adecbe856690",
+    "duration_seconds": 6.12,
+    "human_listening_verified": false,
+    "text_provenance": "Tiny and Small agree on source words; punctuation differs. Not manually verified."
+  },
+  {
+    "id": "source01_tts_corrected",
+    "voice": "asmr7",
+    "text": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tts_corrected.wav",
+    "kind": "Text-generated speech",
+    "sha256": "ec017a394e328e62713f20a6b3d24c73e2fd4307cc7dc30f5996e7a70d058e56",
+    "duration_seconds": 4.84,
+    "human_listening_verified": false,
+    "text_provenance": "Tiny and Small agree on source words; punctuation differs. Not manually verified."
+  }
+]

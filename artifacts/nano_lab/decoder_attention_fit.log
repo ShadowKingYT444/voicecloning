@@ -1,0 +1,21 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 7e359826128548408e34f3e4f9f2b358
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+{
+  "status": "fit_complete",
+  "output_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_fit",
+  "zero_adapter": {
+    "exact_equal_all_rows": true,
+    "delta": {
+      "rms": 0.0,
+      "max_abs": 0.0
+    },
+    "rows": 30
+  }
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 10min 43.211s
+             CPU time consumed: 10min 42.924s
+                   Memory peak: 1.4G (swap: 0B)

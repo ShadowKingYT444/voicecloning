@@ -1,0 +1,704 @@
+{
+  "command": [
+    "scripts/nano_lab/acoustic_conditioning_probe.py",
+    "--source",
+    "artifacts/nano_lab/references/asmr7/asmr7_heldout_01/asmr7_heldout_01__raw.wav",
+    "--conditionals",
+    "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+    "--text",
+    "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "--output-dir",
+    "artifacts/nano_lab/acoustic_conditioning_probe",
+    "--device",
+    "cuda",
+    "--seeds",
+    "10031",
+    "10097"
+  ],
+  "conditionals": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+  "conditionals_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+  "conditioning_variants": {
+    "baseline": {
+      "conditioning": {
+        "gen": {
+          "embedding": {
+            "dtype": "float32",
+            "kind": "tensor_or_array",
+            "sha256": "4e24b2cfd382e5f46973ab87e94a4dcd3423d573dd335dd2c7ef188c6db67b18",
+            "shape": [
+              1,
+              192
+            ]
+          },
+          "prompt_feat": {
+            "dtype": "float32",
+            "kind": "tensor_or_array",
+            "sha256": "ff981426844b3dd367a298c6ef6ca8c64a7926123754aaf8c594848d96793222",
+            "shape": [
+              1,
+              500,
+              80
+            ]
+          },
+          "prompt_feat_len": {
+            "kind": "repr",
+            "repr": "None",
+            "sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91"
+          },
+          "prompt_token": {
+            "dtype": "int64",
+            "kind": "tensor_or_array",
+            "sha256": "fe951bc9dc1feae51628d9b30218d43ddb3abbf29080e2af400fcf375c5d79cf",
+            "shape": [
+              1,
+              250
+            ]
+          },
+          "prompt_token_len": {
+            "dtype": "int64",
+            "kind": "tensor_or_array",
+            "sha256": "4e8e14f0ac28d4a6840065d73ba438653d810ecc41ec9b7509615e009a5f3da4",
+            "shape": [
+              1
+            ]
+          }
+        },
+        "t3": {
+          "cond_prompt_speech_tokens": {
+            "dtype": "int64",
+            "kind": "tensor_or_array",
+            "sha256": "cb844bf20397532db2e0251e6691781bff3e6f9f2126815474b3d2b23f9d7c4e",
+            "shape": [
+              1,
+              333
+            ]
+          },
+          "emotion_adv": {
+            "dtype": "float32",
+            "kind": "tensor_or_array",
+            "sha256": "d99e58435243d9fef9c88273b8d553b4fba4d0baf8009d29eae74fa99e0d9f57",
+            "shape": [
+              1,
+              1,
+              1
+            ]
+          },
+          "speaker_emb": {
+            "dtype": "float32",
+            "kind": "tensor_or_array",
+            "sha256": "e2ed44c379a47ae28c1c4f90421dea52724364c063298c87e81403da75c6250f",
+            "shape": [
+              1,
+              256
+            ]
+          }
+        }
+      },
+      "conditioning_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline/conditioning.json",
+      "self_leak_diagnostic": false
+    },
+    "baseline_self_embedding": {
+      "conditioning": {
+        "gen": {
+          "embedding": {
+            "dtype": "float32",
+            "kind": "tensor_or_array",
+            "sha256": "6763a4a48348342f2970cefffa3775c561b509991b7779295376f60f553f97e9",
+            "shape": [
+              1,
+              192
+            ]
+          },
+          "prompt_feat": {
+            "dtype": "float32",
+            "kind": "tensor_or_array",
+            "sha256": "ff981426844b3dd367a298c6ef6ca8c64a7926123754aaf8c594848d96793222",
+            "shape": [
+              1,
+              500,
+              80
+            ]
+          },
+          "prompt_feat_len": {
+            "kind": "repr",
+            "repr": "None",
+            "sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91"
+          },
+          "prompt_token": {
+            "dtype": "int64",
+            "kind": "tensor_or_array",
+            "sha256": "fe951bc9dc1feae51628d9b30218d43ddb3abbf29080e2af400fcf375c5d79cf",
+            "shape": [
+              1,
+              250
+            ]
+          },
+          "prompt_token_len": {
+            "dtype": "int64",
+            "kind": "tensor_or_array",
+            "sha256": "4e8e14f0ac28d4a6840065d73ba438653d810ecc41ec9b7509615e009a5f3da4",
+            "shape": [
+              1
+            ]
+          }
+        },
+        "t3": {
+          "cond_prompt_speech_tokens": {
+            "dtype": "int64",
+            "kind": "tensor_or_array",
+            "sha256": "cb844bf20397532db2e0251e6691781bff3e6f9f2126815474b3d2b23f9d7c4e",
+            "shape": [
+              1,
+              333
+            ]
+          },
+          "emotion_adv": {
+            "dtype": "float32",
+            "kind": "tensor_or_array",
+            "sha256": "d99e58435243d9fef9c88273b8d553b4fba4d0baf8009d29eae74fa99e0d9f57",
+            "shape": [
+              1,
+              1,
+              1
+            ]
+          },
+          "speaker_emb": {
+            "dtype": "float32",
+            "kind": "tensor_or_array",
+            "sha256": "e2ed44c379a47ae28c1c4f90421dea52724364c063298c87e81403da75c6250f",
+            "shape": [
+              1,
+              256
+            ]
+          }
+        }
+      },
+      "conditioning_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_embedding/conditioning.json",
+      "self_leak_diagnostic": true
+    },
+    "baseline_self_prompt": {
+      "conditioning": {
+        "gen": {
+          "embedding": {
+            "dtype": "float32",
+            "kind": "tensor_or_array",
+            "sha256": "4e24b2cfd382e5f46973ab87e94a4dcd3423d573dd335dd2c7ef188c6db67b18",
+            "shape": [
+              1,
+              192
+            ]
+          },
+          "prompt_feat": {
+            "dtype": "float32",
+            "kind": "tensor_or_array",
+            "sha256": "70f17dba4d0c6747150b749be398f19089f26203e6ffaf5b5ed53e3d2c52f055",
+            "shape": [
+              1,
+              500,
+              80
+            ]
+          },
+          "prompt_feat_len": {
+            "kind": "repr",
+            "repr": "None",
+            "sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91"
+          },
+          "prompt_token": {
+            "dtype": "int64",
+            "kind": "tensor_or_array",
+            "sha256": "1260b7fa6b7807200175ddaf2240500acafa8c2cc40d06a031190b45d3185063",
+            "shape": [
+              1,
+              250
+            ]
+          },
+          "prompt_token_len": {
+            "dtype": "int64",
+            "kind": "tensor_or_array",
+            "sha256": "4e8e14f0ac28d4a6840065d73ba438653d810ecc41ec9b7509615e009a5f3da4",
+            "shape": [
+              1
+            ]
+          }
+        },
+        "t3": {
+          "cond_prompt_speech_tokens": {
+            "dtype": "int64",
+            "kind": "tensor_or_array",
+            "sha256": "cb844bf20397532db2e0251e6691781bff3e6f9f2126815474b3d2b23f9d7c4e",
+            "shape": [
+              1,
+              333
+            ]
+          },
+          "emotion_adv": {
+            "dtype": "float32",
+            "kind": "tensor_or_array",
+            "sha256": "d99e58435243d9fef9c88273b8d553b4fba4d0baf8009d29eae74fa99e0d9f57",
+            "shape": [
+              1,
+              1,
+              1
+            ]
+          },
+          "speaker_emb": {
+            "dtype": "float32",
+            "kind": "tensor_or_array",
+            "sha256": "e2ed44c379a47ae28c1c4f90421dea52724364c063298c87e81403da75c6250f",
+            "shape": [
+              1,
+              256
+            ]
+          }
+        }
+      },
+      "conditioning_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_prompt/conditioning.json",
+      "self_leak_diagnostic": true
+    },
+    "self_all": {
+      "conditioning": {
+        "gen": {
+          "embedding": {
+            "dtype": "float32",
+            "kind": "tensor_or_array",
+            "sha256": "6763a4a48348342f2970cefffa3775c561b509991b7779295376f60f553f97e9",
+            "shape": [
+              1,
+              192
+            ]
+          },
+          "prompt_feat": {
+            "dtype": "float32",
+            "kind": "tensor_or_array",
+            "sha256": "70f17dba4d0c6747150b749be398f19089f26203e6ffaf5b5ed53e3d2c52f055",
+            "shape": [
+              1,
+              500,
+              80
+            ]
+          },
+          "prompt_feat_len": {
+            "kind": "repr",
+            "repr": "None",
+            "sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91"
+          },
+          "prompt_token": {
+            "dtype": "int64",
+            "kind": "tensor_or_array",
+            "sha256": "1260b7fa6b7807200175ddaf2240500acafa8c2cc40d06a031190b45d3185063",
+            "shape": [
+              1,
+              250
+            ]
+          },
+          "prompt_token_len": {
+            "dtype": "int64",
+            "kind": "tensor_or_array",
+            "sha256": "4e8e14f0ac28d4a6840065d73ba438653d810ecc41ec9b7509615e009a5f3da4",
+            "shape": [
+              1
+            ]
+          }
+        },
+        "t3": {
+          "cond_prompt_speech_tokens": {
+            "dtype": "int64",
+            "kind": "tensor_or_array",
+            "sha256": "8b2a37992c5d655b3779e9616d45042f6468e9a3f24890fa1f42f3b7bffdd1a1",
+            "shape": [
+              1,
+              250
+            ]
+          },
+          "emotion_adv": {
+            "dtype": "float32",
+            "kind": "tensor_or_array",
+            "sha256": "d99e58435243d9fef9c88273b8d553b4fba4d0baf8009d29eae74fa99e0d9f57",
+            "shape": [
+              1,
+              1,
+              1
+            ]
+          },
+          "speaker_emb": {
+            "dtype": "float32",
+            "kind": "tensor_or_array",
+            "sha256": "3d1669dad0777d7831252715937baaf21ab1932c2cd102f1684743fd6288c97e",
+            "shape": [
+              1,
+              256
+            ]
+          }
+        }
+      },
+      "conditioning_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/self_all/conditioning.json",
+      "self_leak_diagnostic": true
+    }
+  },
+  "cpu_threads": 2,
+  "device": "cuda",
+  "disclosure": "SELFLEAKDIAGNOSTIC source-token reconstruction. Self-conditioned rows use the target recording as a reference and are not zero-shot or new-text clone evidence.",
+  "elapsed_seconds": 17.748191819999192,
+  "flow_steps": 2,
+  "kind": "nano_acoustic_conditioning_probe",
+  "model_dir": "/home/terryd/gooning/voicecloning/models/chatterbox-nano",
+  "model_loader": "adaptation.load_nano -> runtime.NanoEngine.from_pretrained(optimized=True, fp32, cpu_threads=2)",
+  "noise_control": {
+    "prompt_length_caveat": "Different prompt lengths consume different portions of the flow noise stream; embedding-only has identical prompt shape and is the clean ablation.",
+    "same_target_tokens": true,
+    "seed_reset_before_flow": true,
+    "seed_reset_per_variant": true
+  },
+  "peak_rss_bytes": 2794668032,
+  "research_only": true,
+  "rows": [
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline/seed_10031/audio.wav",
+      "audio_sha256": "7590becb9149634a84b0f483106617e5c11c900c502f46112014492ffb191f76",
+      "elapsed_seconds": 1.7717984980045003,
+      "flow": {
+        "elapsed_seconds": 1.2867134920015815,
+        "mel_shape": [
+          1,
+          80,
+          506
+        ],
+        "token_count": 253
+      },
+      "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline/seed_10031/audio.master.wav",
+      "master_processing": {
+        "achieved_lufs": -19.045091362022664,
+        "gain_db": 6.15706350262783,
+        "highpass_hz": 45,
+        "noise_gate": false,
+        "target_lufs": -19,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4
+      },
+      "master_sha256": "9fb0a5d0e03f578c3d9e9bc9691fa0db4ad5cd7ed5d8b425baabc7fb212c2e91",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline/seed_10031/mel.npz",
+      "mel_sha256": "8bf87a15a4bebb79f57194b0a3006292c8238f7bd3550ff5be5cbf218454eb09",
+      "peak_rss_bytes": 2646716416,
+      "rss_bytes": 2596950016,
+      "seconds": 10.12,
+      "seed": 10031,
+      "self_leak_diagnostic": false,
+      "target_token_count": 253,
+      "target_tokens_sha256": "c1f720377e1bc1c993160c334e9a1c723669533a51f7a49ca512ebdf98a8fcaf",
+      "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "variant": "baseline"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline/seed_10097/audio.wav",
+      "audio_sha256": "e5f80d1d4fec83b93c39715aff788ccfe553332d36b64ac1f769457e62d50d7b",
+      "elapsed_seconds": 0.6545754329999909,
+      "flow": {
+        "elapsed_seconds": 0.3129732749948744,
+        "mel_shape": [
+          1,
+          80,
+          506
+        ],
+        "token_count": 253
+      },
+      "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline/seed_10097/audio.master.wav",
+      "master_processing": {
+        "achieved_lufs": -18.999999914021096,
+        "gain_db": 5.874883607480768,
+        "highpass_hz": 45,
+        "noise_gate": false,
+        "target_lufs": -19,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4
+      },
+      "master_sha256": "794a5acb347c987619e0422addbd1c6a2dd1af09af6a9596868edf89d34cba54",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline/seed_10097/mel.npz",
+      "mel_sha256": "076038efa1a7c93c8cc9dee7536550d246857e816833575d0a7d1aa47f35ae15",
+      "peak_rss_bytes": 2671267840,
+      "rss_bytes": 2631610368,
+      "seconds": 10.12,
+      "seed": 10097,
+      "self_leak_diagnostic": false,
+      "target_token_count": 253,
+      "target_tokens_sha256": "c1f720377e1bc1c993160c334e9a1c723669533a51f7a49ca512ebdf98a8fcaf",
+      "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "variant": "baseline"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/self_all/seed_10031/audio.wav",
+      "audio_sha256": "6b80a7f97aef23f95c49bfb94f6c9147e15cc14f824e14cbd93d660fa1f126e5",
+      "elapsed_seconds": 0.561950622999575,
+      "flow": {
+        "elapsed_seconds": 0.2372177860015654,
+        "mel_shape": [
+          1,
+          80,
+          506
+        ],
+        "token_count": 253
+      },
+      "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/self_all/seed_10031/audio.master.wav",
+      "master_processing": {
+        "achieved_lufs": -18.999999620125656,
+        "gain_db": 7.4449053193258194,
+        "highpass_hz": 45,
+        "noise_gate": false,
+        "target_lufs": -19,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4
+      },
+      "master_sha256": "ceb9997ada5c69009270404e60f9695630c6f337de526234bf57c1d845bd905c",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/self_all/seed_10031/mel.npz",
+      "mel_sha256": "760b9ab07345f8dce22f1871c9b30e539bb097b994879f1ac3af02bd3a09e2ae",
+      "peak_rss_bytes": 2687901696,
+      "rss_bytes": 2648215552,
+      "seconds": 10.12,
+      "seed": 10031,
+      "self_leak_diagnostic": true,
+      "target_token_count": 253,
+      "target_tokens_sha256": "c1f720377e1bc1c993160c334e9a1c723669533a51f7a49ca512ebdf98a8fcaf",
+      "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "variant": "self_all"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/self_all/seed_10097/audio.wav",
+      "audio_sha256": "dcf1aefd22a997c319070b08200404274eb0c7b2775ebc747b3b5062c4083f7e",
+      "elapsed_seconds": 0.6692325280018849,
+      "flow": {
+        "elapsed_seconds": 0.23450163599773077,
+        "mel_shape": [
+          1,
+          80,
+          506
+        ],
+        "token_count": 253
+      },
+      "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/self_all/seed_10097/audio.master.wav",
+      "master_processing": {
+        "achieved_lufs": -18.99999979595864,
+        "gain_db": 8.121467089490892,
+        "highpass_hz": 45,
+        "noise_gate": false,
+        "target_lufs": -19,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4
+      },
+      "master_sha256": "4f57009c119649aab015fc943a5e23ca07d2f81f0ee4a9274be9da25e0b137a1",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/self_all/seed_10097/mel.npz",
+      "mel_sha256": "3fef39a6baf34f47d0f0a84e81c9673257a3f1877cc03d4dfb9493fc503e1c8a",
+      "peak_rss_bytes": 2701946880,
+      "rss_bytes": 2654765056,
+      "seconds": 10.12,
+      "seed": 10097,
+      "self_leak_diagnostic": true,
+      "target_token_count": 253,
+      "target_tokens_sha256": "c1f720377e1bc1c993160c334e9a1c723669533a51f7a49ca512ebdf98a8fcaf",
+      "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "variant": "self_all"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_embedding/seed_10031/audio.wav",
+      "audio_sha256": "4772bccfada3fa252860845e5178c590b84a9607dddfe2c8e3d5411a83e72ada",
+      "elapsed_seconds": 0.671059864005656,
+      "flow": {
+        "elapsed_seconds": 0.25796521200391,
+        "mel_shape": [
+          1,
+          80,
+          506
+        ],
+        "token_count": 253
+      },
+      "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_embedding/seed_10031/audio.master.wav",
+      "master_processing": {
+        "achieved_lufs": -19.000000241992364,
+        "gain_db": 5.720395305284455,
+        "highpass_hz": 45,
+        "noise_gate": false,
+        "target_lufs": -19,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4
+      },
+      "master_sha256": "e68a740ee46afca6408a0088fa9b07bff48114e29240cc247f03193d52c700a0",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_embedding/seed_10031/mel.npz",
+      "mel_sha256": "210f9f801eaaf4dcef3b599fd452607a73b17d86bd232f88f0518588d79920af",
+      "peak_rss_bytes": 2719846400,
+      "rss_bytes": 2677219328,
+      "seconds": 10.12,
+      "seed": 10031,
+      "self_leak_diagnostic": true,
+      "target_token_count": 253,
+      "target_tokens_sha256": "c1f720377e1bc1c993160c334e9a1c723669533a51f7a49ca512ebdf98a8fcaf",
+      "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "variant": "baseline_self_embedding"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_embedding/seed_10097/audio.wav",
+      "audio_sha256": "9b43c02cceb6822f4399ff943da2865aa67f8d930664a0e692d86086f543e8ec",
+      "elapsed_seconds": 0.5702161899971543,
+      "flow": {
+        "elapsed_seconds": 0.23879137499898206,
+        "mel_shape": [
+          1,
+          80,
+          506
+        ],
+        "token_count": 253
+      },
+      "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_embedding/seed_10097/audio.master.wav",
+      "master_processing": {
+        "achieved_lufs": -19.327862523574467,
+        "gain_db": 5.623533900178813,
+        "highpass_hz": 45,
+        "noise_gate": false,
+        "target_lufs": -19,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4
+      },
+      "master_sha256": "742e2237192a7a4438e35d3db5e44d0a6ca4abcb986fe9ea48d09b28466512cc",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_embedding/seed_10097/mel.npz",
+      "mel_sha256": "871ff7ea6d18cd68f7517269ee855d1a7ae0cb550a185a35f553c11e3fa8de35",
+      "peak_rss_bytes": 2742525952,
+      "rss_bytes": 2702909440,
+      "seconds": 10.12,
+      "seed": 10097,
+      "self_leak_diagnostic": true,
+      "target_token_count": 253,
+      "target_tokens_sha256": "c1f720377e1bc1c993160c334e9a1c723669533a51f7a49ca512ebdf98a8fcaf",
+      "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "variant": "baseline_self_embedding"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_prompt/seed_10031/audio.wav",
+      "audio_sha256": "c8611e8ee63eecb3369b820fc333049ff4b9ad1edfd6643e1d1258e1a9f392ac",
+      "elapsed_seconds": 0.5595600040032878,
+      "flow": {
+        "elapsed_seconds": 0.2317100259970175,
+        "mel_shape": [
+          1,
+          80,
+          506
+        ],
+        "token_count": 253
+      },
+      "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_prompt/seed_10031/audio.master.wav",
+      "master_processing": {
+        "achieved_lufs": -20.24014236686407,
+        "gain_db": 6.795789314535679,
+        "highpass_hz": 45,
+        "noise_gate": false,
+        "target_lufs": -19,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4
+      },
+      "master_sha256": "0c522d8251856e74df05c50c4f1f541f36cada167c175ae3298a2d5c693ea5e3",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_prompt/seed_10031/mel.npz",
+      "mel_sha256": "eb527242fa1374151487a1ac05c131e99f6ca083789fe1a95ae77870a0c31290",
+      "peak_rss_bytes": 2759180288,
+      "rss_bytes": 2719514624,
+      "seconds": 10.12,
+      "seed": 10031,
+      "self_leak_diagnostic": true,
+      "target_token_count": 253,
+      "target_tokens_sha256": "c1f720377e1bc1c993160c334e9a1c723669533a51f7a49ca512ebdf98a8fcaf",
+      "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "variant": "baseline_self_prompt"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_prompt/seed_10097/audio.wav",
+      "audio_sha256": "60d5a7dae72f146feb879e44e1da75c8f6cfd5d1931d33e64d08f3c1a5b76098",
+      "elapsed_seconds": 0.5775566890006303,
+      "flow": {
+        "elapsed_seconds": 0.23838094599341275,
+        "mel_shape": [
+          1,
+          80,
+          506
+        ],
+        "token_count": 253
+      },
+      "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_prompt/seed_10097/audio.master.wav",
+      "master_processing": {
+        "achieved_lufs": -20.457606206099637,
+        "gain_db": 6.671531253238681,
+        "highpass_hz": 45,
+        "noise_gate": false,
+        "target_lufs": -19,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4
+      },
+      "master_sha256": "7d4d909b8deee077190fc5ddf8a4b6e3ea49b95c9b92a0c388a79603fce5b785",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_prompt/seed_10097/mel.npz",
+      "mel_sha256": "c9f2aa900749ab1cc17f1ad46760b0ea96077319c77457c69ac41515d8e5f89d",
+      "peak_rss_bytes": 2777743360,
+      "rss_bytes": 2738200576,
+      "seconds": 10.12,
+      "seed": 10097,
+      "self_leak_diagnostic": true,
+      "target_token_count": 253,
+      "target_tokens_sha256": "c1f720377e1bc1c993160c334e9a1c723669533a51f7a49ca512ebdf98a8fcaf",
+      "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "variant": "baseline_self_prompt"
+    }
+  ],
+  "rss_after_run_bytes": 2752700416,
+  "rss_before_load_bytes": 911044608,
+  "schema_version": 1,
+  "seeds": [
+    10031,
+    10097
+  ],
+  "self_leak_diagnostic": true,
+  "source_audio": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_01/asmr7_heldout_01__raw.wav",
+  "source_audio_sha256": "29ccb07d11663151962f23bbf93e95796d8a0f39dd51c0b956b5a05bef5960d6",
+  "source_mel_upperbound": {
+    "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/source_mel_upperbound/seed_10031/audio.wav",
+    "audio_sha256": "30595547364df56ebb7fe2de4321f91cb5e3d61efbcac89aac71cc5a788c0ac3",
+    "disclosure": "Vocoder upper bound uses vendor mel_spectrogram of normalized source audio. It is not a TTS clone.",
+    "elapsed_seconds": 0.744495974999154,
+    "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/source_mel_upperbound/seed_10031/audio.master.wav",
+    "master_processing": {
+      "achieved_lufs": -21.767038921639255,
+      "gain_db": 5.819364668257533,
+      "highpass_hz": 45,
+      "noise_gate": false,
+      "target_lufs": -19,
+      "true_peak_ceiling_dbtp": -1,
+      "true_peak_oversampling": 4
+    },
+    "master_sha256": "08e3a9fca0e972a580eb9d6705bea627f470d62316df3bebdd75a9a7c341d095",
+    "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/source_mel_upperbound/seed_10031/mel.npz",
+    "mel_sha256": "35586323ad24dd0d85cfbc7fdbdcced9237376d8b2936221d84ff63f12bb112f",
+    "normalized_source_sha256": "5929c6c03c903d4d15716db5fd333920c3c6ed9e1a2f8c9eb31bfd63725c39c0",
+    "peak_rss_bytes": 2794668032,
+    "rss_bytes": 2752700416,
+    "seed": 10031,
+    "source_mel": {
+      "audio_samples": 240000,
+      "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+      "mel_shape": [
+        1,
+        80,
+        500
+      ],
+      "normalization": "model.norm_loudness(..., target_lufs=-27) via prepare_conditionals path",
+      "sample_rate": 24000
+    },
+    "variant": "source_mel_upperbound"
+  },
+  "synthetic_audio": true,
+  "synthetic_tts": false,
+  "target_tokens": {
+    "count": 253,
+    "dtype": "int64",
+    "sha256": "c1f720377e1bc1c993160c334e9a1c723669533a51f7a49ca512ebdf98a8fcaf",
+    "shape": [
+      253
+    ],
+    "silence_count": 3,
+    "silence_id": 4299,
+    "source_ids_count": 250
+  },
+  "target_tokens_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/target_speech_tokens.npy",
+  "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?"
+}

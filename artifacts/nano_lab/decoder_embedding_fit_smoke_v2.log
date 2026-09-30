@@ -1,0 +1,329 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+{
+  "output_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit_smoke_v2",
+  "parity": {
+    "atol": 0.0001,
+    "failures": [
+      {
+        "atol": 0.0001,
+        "id": "asmr7_repair_001",
+        "max_abs": 4.309153616428375,
+        "reason": "numeric",
+        "rmse": 0.5908602176382711
+      },
+      {
+        "atol": 0.0001,
+        "id": "asmr7_repair_006",
+        "max_abs": 3.9230555593967438,
+        "reason": "numeric",
+        "rmse": 0.5280908632992557
+      },
+      {
+        "atol": 0.0001,
+        "id": "asmr7_repair_007",
+        "max_abs": 5.6275544464588165,
+        "reason": "numeric",
+        "rmse": 0.6535876557253627
+      },
+      {
+        "atol": 0.0001,
+        "id": "asmr7_repair_008",
+        "max_abs": 3.779642105102539,
+        "reason": "numeric",
+        "rmse": 0.5662072858248065
+      },
+      {
+        "atol": 0.0001,
+        "id": "asmr7_repair_010",
+        "max_abs": 4.007748365402222,
+        "reason": "numeric",
+        "rmse": 0.5494421160367018
+      },
+      {
+        "atol": 0.0001,
+        "id": "asmr7_repair_012",
+        "max_abs": 3.4534969329833984,
+        "reason": "numeric",
+        "rmse": 0.6196328304724009
+      },
+      {
+        "atol": 0.0001,
+        "id": "asmr7_repair_013",
+        "max_abs": 3.013563632965088,
+        "reason": "numeric",
+        "rmse": 0.5056077611394898
+      },
+      {
+        "atol": 0.0001,
+        "id": "asmr7_repair_014",
+        "max_abs": 3.6784610748291016,
+        "reason": "numeric",
+        "rmse": 0.5453210818280596
+      },
+      {
+        "atol": 0.0001,
+        "id": "asmr7_repair_015",
+        "max_abs": 3.6510391235351562,
+        "reason": "numeric",
+        "rmse": 0.6098691569048945
+      },
+      {
+        "atol": 0.0001,
+        "id": "asmr7_repair_019",
+        "max_abs": 2.630732536315918,
+        "reason": "numeric",
+        "rmse": 0.559462174803088
+      },
+      {
+        "atol": 0.0001,
+        "id": "asmr7_repair_023",
+        "max_abs": 3.9407520294189453,
+        "reason": "numeric",
+        "rmse": 0.5905975799828638
+      },
+      {
+        "atol": 0.0001,
+        "id": "asmr7_repair_024",
+        "max_abs": 2.5971813201904297,
+        "reason": "numeric",
+        "rmse": 0.478396085578171
+      },
+      {
+        "atol": 0.0001,
+        "id": "asmr7_repair_025",
+        "max_abs": 2.898439407348633,
+        "reason": "numeric",
+        "rmse": 0.49376904895049506
+      },
+      {
+        "atol": 0.0001,
+        "id": "asmr7_repair_028",
+        "max_abs": 3.978745937347412,
+        "reason": "numeric",
+        "rmse": 0.5158386722282923
+      },
+      {
+        "atol": 0.0001,
+        "id": "asmr7_repair_033",
+        "max_abs": 2.7456722259521484,
+        "reason": "numeric",
+        "rmse": 0.5333832601345418
+      },
+      {
+        "atol": 0.0001,
+        "id": "asmr7_repair_011",
+        "max_abs": 4.2178709506988525,
+        "reason": "numeric",
+        "rmse": 0.6305221485443966
+      },
+      {
+        "atol": 0.0001,
+        "id": "asmr7_repair_022",
+        "max_abs": 2.9962358474731445,
+        "reason": "numeric",
+        "rmse": 0.5108087278498262
+      }
+    ],
+    "max_abs": 5.6275544464588165,
+    "rmse_mean": 0.5577292157024069,
+    "rows": [
+      {
+        "id": "asmr7_repair_001",
+        "max_abs": 4.309153616428375,
+        "passed": false,
+        "rmse": 0.5908602176382711,
+        "shape": [
+          1,
+          80,
+          216
+        ]
+      },
+      {
+        "id": "asmr7_repair_006",
+        "max_abs": 3.9230555593967438,
+        "passed": false,
+        "rmse": 0.5280908632992557,
+        "shape": [
+          1,
+          80,
+          280
+        ]
+      },
+      {
+        "id": "asmr7_repair_007",
+        "max_abs": 5.6275544464588165,
+        "passed": false,
+        "rmse": 0.6535876557253627,
+        "shape": [
+          1,
+          80,
+          204
+        ]
+      },
+      {
+        "id": "asmr7_repair_008",
+        "max_abs": 3.779642105102539,
+        "passed": false,
+        "rmse": 0.5662072858248065,
+        "shape": [
+          1,
+          80,
+          444
+        ]
+      },
+      {
+        "id": "asmr7_repair_010",
+        "max_abs": 4.007748365402222,
+        "passed": false,
+        "rmse": 0.5494421160367018,
+        "shape": [
+          1,
+          80,
+          198
+        ]
+      },
+      {
+        "id": "asmr7_repair_012",
+        "max_abs": 3.4534969329833984,
+        "passed": false,
+        "rmse": 0.6196328304724009,
+        "shape": [
+          1,
+          80,
+          266
+        ]
+      },
+      {
+        "id": "asmr7_repair_013",
+        "max_abs": 3.013563632965088,
+        "passed": false,
+        "rmse": 0.5056077611394898,
+        "shape": [
+          1,
+          80,
+          174
+        ]
+      },
+      {
+        "id": "asmr7_repair_014",
+        "max_abs": 3.6784610748291016,
+        "passed": false,
+        "rmse": 0.5453210818280596,
+        "shape": [
+          1,
+          80,
+          220
+        ]
+      },
+      {
+        "id": "asmr7_repair_015",
+        "max_abs": 3.6510391235351562,
+        "passed": false,
+        "rmse": 0.6098691569048945,
+        "shape": [
+          1,
+          80,
+          258
+        ]
+      },
+      {
+        "id": "asmr7_repair_019",
+        "max_abs": 2.630732536315918,
+        "passed": false,
+        "rmse": 0.559462174803088,
+        "shape": [
+          1,
+          80,
+          238
+        ]
+      },
+      {
+        "id": "asmr7_repair_023",
+        "max_abs": 3.9407520294189453,
+        "passed": false,
+        "rmse": 0.5905975799828638,
+        "shape": [
+          1,
+          80,
+          370
+        ]
+      },
+      {
+        "id": "asmr7_repair_024",
+        "max_abs": 2.5971813201904297,
+        "passed": false,
+        "rmse": 0.478396085578171,
+        "shape": [
+          1,
+          80,
+          194
+        ]
+      },
+      {
+        "id": "asmr7_repair_025",
+        "max_abs": 2.898439407348633,
+        "passed": false,
+        "rmse": 0.49376904895049506,
+        "shape": [
+          1,
+          80,
+          284
+        ]
+      },
+      {
+        "id": "asmr7_repair_028",
+        "max_abs": 3.978745937347412,
+        "passed": false,
+        "rmse": 0.5158386722282923,
+        "shape": [
+          1,
+          80,
+          268
+        ]
+      },
+      {
+        "id": "asmr7_repair_033",
+        "max_abs": 2.7456722259521484,
+        "passed": false,
+        "rmse": 0.5333832601345418,
+        "shape": [
+          1,
+          80,
+          212
+        ]
+      },
+      {
+        "id": "asmr7_repair_011",
+        "max_abs": 4.2178709506988525,
+        "passed": false,
+        "rmse": 0.6305221485443966,
+        "shape": [
+          1,
+          80,
+          208
+        ]
+      },
+      {
+        "id": "asmr7_repair_022",
+        "max_abs": 2.9962358474731445,
+        "passed": false,
+        "rmse": 0.5108087278498262,
+        "shape": [
+          1,
+          80,
+          552
+        ]
+      }
+    ],
+    "status": "failed"
+  },
+  "status": "parity_failed"
+}
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 33.638s
+             CPU time consumed: 32.368s
+                   Memory peak: 1.6G (swap: 0B)

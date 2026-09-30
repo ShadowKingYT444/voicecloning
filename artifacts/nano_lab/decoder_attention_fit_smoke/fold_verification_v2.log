@@ -1,0 +1,79 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+{
+  "status": "failed",
+  "scope": "Three source-token flow reconstructions; no T3 or vocoder",
+  "adapter_sha256": "046f0c5c52c6de9e627352f87e55cc17d5a09c3a2d30ed39353e01fc739b8be4",
+  "checks": [
+    {
+      "id": "asmr7_repair_001",
+      "max_abs": 0.0036773681640625,
+      "rmse": 0.0006893367390148342
+    },
+    {
+      "id": "asmr7_repair_022",
+      "max_abs": 0.0038118362426757812,
+      "rmse": 0.0007026790408417583
+    },
+    {
+      "id": "asmr7_repair_034",
+      "max_abs": 0.0038084983825683594,
+      "rmse": 0.0007063369848765433
+    }
+  ],
+  "atol": 0.0001,
+  "rmse_limit": 1e-05,
+  "repeated_fold_exact": true,
+  "restore_exact": true,
+  "runtime": {
+    "enabled": true,
+    "restored": false,
+    "idempotent": false,
+    "strength": 1.0,
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_fit_smoke/best_attention.pt",
+    "adapter_sha256": "046f0c5c52c6de9e627352f87e55cc17d5a09c3a2d30ed39353e01fc739b8be4",
+    "model_checkpoint_path": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+    "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+    "inventory_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_inventory.json",
+    "inventory_sha256": "9f36f6f5a61c8ec1bda8fa09e88640035931fb8690a920f73d9fe15cb94919ed",
+    "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+    "initial_conditionals_sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+    "prepared_conditionals_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+    "target_weight_count": 224,
+    "target_parameter_count": 344064,
+    "target_weight_key_prefix": "flow.decoder.estimator."
+  },
+  "idempotent_metadata": {
+    "enabled": true,
+    "restored": false,
+    "idempotent": true,
+    "strength": 1.0,
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_fit_smoke/best_attention.pt",
+    "adapter_sha256": "046f0c5c52c6de9e627352f87e55cc17d5a09c3a2d30ed39353e01fc739b8be4",
+    "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+    "inventory_sha256": "9f36f6f5a61c8ec1bda8fa09e88640035931fb8690a920f73d9fe15cb94919ed",
+    "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+    "initial_conditionals_sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+    "target_weight_count": 224,
+    "target_parameter_count": 344064
+  },
+  "restore_metadata": {
+    "enabled": false,
+    "restored": true,
+    "strength": 0.0,
+    "path": null,
+    "target_weight_count": 224,
+    "target_parameter_count": 344064,
+    "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+    "inventory_sha256": "9f36f6f5a61c8ec1bda8fa09e88640035931fb8690a920f73d9fe15cb94919ed"
+  },
+  "peak_rss_bytes": 1757691904,
+  "elapsed_seconds": 27.857644324998546
+}
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 32.756s
+             CPU time consumed: 33.110s
+                   Memory peak: 1.2G (swap: 0B)

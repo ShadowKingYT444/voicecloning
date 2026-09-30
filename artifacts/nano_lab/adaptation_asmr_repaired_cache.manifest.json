@@ -1,0 +1,23 @@
+{
+  "counts": {
+    "all": 17,
+    "reference": 0,
+    "test": 0,
+    "train": 15,
+    "valid": 2
+  },
+  "created_at_unix": 1790697541.393088,
+  "device_at_prepare": "cuda",
+  "elapsed_seconds": 7.425323866002145,
+  "format": "nano_t3_adaptation_cache_v1",
+  "max_target_tokens": 400,
+  "model_dir": "/home/terryd/gooning/voicecloning/models/chatterbox-nano",
+  "prompt_target_leakage_policy": {
+    "self_reference_allowed_for_diagnostic": false,
+    "target_and_reference_must_be_distinct": true,
+    "target_audio_is_never_used_as_reference_by_default": true
+  },
+  "source_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/adaptation_repaired.json",
+  "target_sample_rate": 16000,
+  "target_token_rate_hz": 25
+}

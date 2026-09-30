@@ -1,0 +1,10 @@
+{
+  "audio_samples": 176640,
+  "mel_length": 368,
+  "phase_noise": "uniform[-pi,pi), shape (1,9,1)",
+  "sample_rate": 24000,
+  "schema_version": 1,
+  "seed": 31,
+  "sine_noise": "normal, shape (1,9,mel_length*480)",
+  "watermark": "not yet applied"
+}

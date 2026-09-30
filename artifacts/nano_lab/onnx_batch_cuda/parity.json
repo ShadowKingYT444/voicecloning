@@ -1,0 +1,16 @@
+[
+  {
+    "id": "000_soft_cold",
+    "tokens_exact": true,
+    "mel_exact": true,
+    "mel_max_abs": 0.0,
+    "vocoder_max_abs": 8.195638656616211e-08
+  },
+  {
+    "id": "001_soft_warm_repeat",
+    "tokens_exact": true,
+    "mel_exact": true,
+    "mel_max_abs": 0.0,
+    "vocoder_max_abs": 6.705522537231445e-08
+  }
+]

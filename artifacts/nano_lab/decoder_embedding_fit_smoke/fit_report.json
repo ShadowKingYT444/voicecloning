@@ -1,0 +1,17 @@
+{
+  "command": [
+    "scripts/nano_lab/fit_decoder_embedding.py",
+    "--device",
+    "cuda",
+    "--max-steps",
+    "1",
+    "--output-dir",
+    "artifacts/nano_lab/decoder_embedding_fit_smoke"
+  ],
+  "error": "conditionals cache is missing tensor gen['prompt_feat_len']",
+  "error_type": "ValueError",
+  "format": "nano_decoder_embedding_fit_v1",
+  "output_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit_smoke",
+  "peak_rss_bytes": 543207424,
+  "status": "failed"
+}

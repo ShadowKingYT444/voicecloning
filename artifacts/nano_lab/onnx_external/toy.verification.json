@@ -1,0 +1,21 @@
+{
+  "errors": [],
+  "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_external/toy.onnx",
+  "inference_seconds": 0.004281497000192758,
+  "inputs": [
+    "x"
+  ],
+  "max_abs_error": 5.960464477539063e-08,
+  "max_relative_error": 8.569095573950737e-08,
+  "outputs": 1,
+  "peak_rss_bytes": 66576384,
+  "provider": "CPUExecutionProvider",
+  "rss_after_session_bytes": 66572288,
+  "rss_before_session_bytes": 57311232,
+  "session_load_seconds": 0.054045400000177324,
+  "status": "verified",
+  "tolerances": {
+    "atol": 0.0003,
+    "rtol": 0.0003
+  }
+}

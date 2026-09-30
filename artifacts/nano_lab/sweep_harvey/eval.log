@@ -1,0 +1,23 @@
+MemoryMax=3GiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job
+Running as unit: nano-lab-194924.service; invocation ID: d4a673b906064ec0baafbcaa94979a4b
+{"id": "harvey_quote_01_raw", "cosine": 0.749622, "wer": 0.0, "dnsmos_overall": 3.483598424037369}
+{"id": "harvey_quote_01_natural", "cosine": 0.76562, "wer": 0.0, "dnsmos_overall": 3.2947237240267}
+{"id": "harvey_quote_01_clean", "cosine": 0.730567, "wer": 0.0, "dnsmos_overall": 3.2497967738862172}
+{"id": "harvey_quote_01_isolated", "cosine": 0.746249, "wer": 0.0, "dnsmos_overall": 3.2808092029732694}
+{"id": "harvey_quote_02_raw", "cosine": 0.810522, "wer": 0.0, "dnsmos_overall": 3.191897627416976}
+{"id": "harvey_quote_02_natural", "cosine": 0.814697, "wer": 0.0, "dnsmos_overall": 3.3076087676773738}
+{"id": "harvey_quote_02_clean", "cosine": 0.79374, "wer": 0.0, "dnsmos_overall": 3.151996932664951}
+{"id": "harvey_quote_02_isolated", "cosine": 0.795328, "wer": 0.0, "dnsmos_overall": 3.2967469544638}
+{"id": "harvey_quote_03_raw", "cosine": 0.768057, "wer": 0.0, "dnsmos_overall": 3.345361355706124}
+{"id": "harvey_quote_03_natural", "cosine": 0.790069, "wer": 0.0, "dnsmos_overall": 3.20974499377699}
+{"id": "harvey_quote_03_clean", "cosine": 0.754191, "wer": 0.0, "dnsmos_overall": 3.182309701048274}
+{"id": "harvey_quote_03_isolated", "cosine": 0.740709, "wer": 0.0, "dnsmos_overall": 3.5339057292358476}
+{"id": "harvey_quote_04_raw", "cosine": 0.616442, "wer": 0.0, "dnsmos_overall": 3.240989825059861}
+{"id": "harvey_quote_04_natural", "cosine": 0.614081, "wer": 0.0, "dnsmos_overall": 3.238304751919598}
+{"id": "harvey_quote_04_clean", "cosine": 0.624216, "wer": 0.0, "dnsmos_overall": 3.1736616089948484}
+{"id": "harvey_quote_04_isolated", "cosine": 0.615206, "wer": 0.0, "dnsmos_overall": 3.212102476266686}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 2min 7.660s
+             CPU time consumed: 3min 50.947s
+                   Memory peak: 1.1G (swap: 0B)

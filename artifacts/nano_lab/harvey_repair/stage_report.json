@@ -1,0 +1,283 @@
+{
+  "accepted": [],
+  "accepted_count": 0,
+  "audit": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair/small_audit.json",
+  "command": [
+    "scripts/nano_lab/repair_dataset.py",
+    "stage",
+    "--family",
+    "harvey",
+    "--proposal",
+    "artifacts/nano_lab/harvey_repair/proposal.json",
+    "--audit",
+    "artifacts/nano_lab/harvey_repair/small_audit.json",
+    "--output-dir",
+    "artifacts/nano_lab/harvey_repair",
+    "--min-train",
+    "2",
+    "--min-valid",
+    "1"
+  ],
+  "family": "harvey",
+  "min_train": 2,
+  "min_valid": 1,
+  "production_manifest": null,
+  "proposal": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair/proposal.json",
+  "protected_intervals": [
+    {
+      "end_s": 16.1,
+      "family": "harvey",
+      "id": "harvey_quote_02",
+      "section": "references",
+      "source_id": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+      "start_s": 9.0
+    },
+    {
+      "end_s": 40.8,
+      "family": "harvey",
+      "id": "harvey_heldout_01",
+      "section": "heldout",
+      "source_id": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+      "start_s": 34.0
+    }
+  ],
+  "references_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair/protected_manifest.json",
+  "rejected": [
+    {
+      "consensus": {
+        "deletions": 0,
+        "hypothesis_word_count": 14,
+        "hypothesis_words": [
+          "i",
+          "do",
+          "not",
+          "take",
+          "meetings",
+          "i",
+          "set",
+          "them",
+          "and",
+          "my",
+          "respect",
+          "is",
+          "not",
+          "demanded"
+        ],
+        "insertions": 1,
+        "reference_word_count": 13,
+        "reference_words": [
+          "i",
+          "do",
+          "not",
+          "take",
+          "meetings",
+          "set",
+          "them",
+          "and",
+          "my",
+          "respect",
+          "is",
+          "not",
+          "demanded"
+        ],
+        "substitutions": 0,
+        "wer": 0.076923
+      },
+      "id": "harvey_repair_001",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "I don't take meetings. I set them. And my respect isn't demanded.",
+      "tiny_text": "I don't take meetings. set them. And my respect isn't demanded."
+    },
+    {
+      "consensus": {
+        "deletions": 1,
+        "hypothesis_word_count": 17,
+        "hypothesis_words": [
+          "i",
+          "am",
+          "concerned",
+          "excuses",
+          "do",
+          "not",
+          "win",
+          "championships",
+          "oh",
+          "you",
+          "added",
+          "michael",
+          "jordan",
+          "tell",
+          "you",
+          "that",
+          "no"
+        ],
+        "insertions": 1,
+        "reference_word_count": 17,
+        "reference_words": [
+          "it",
+          "is",
+          "earned",
+          "excuses",
+          "do",
+          "not",
+          "win",
+          "championships",
+          "oh",
+          "you",
+          "added",
+          "michael",
+          "jordan",
+          "to",
+          "tell",
+          "you",
+          "that"
+        ],
+        "substitutions": 3,
+        "wer": 0.294118
+      },
+      "id": "harvey_repair_002",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "I'm concerned. Excuses don't win championships. Oh, you added Michael Jordan. Tell you that? No.",
+      "tiny_text": "It's earned. Excuses don't win championships. Oh, you added Michael Jordan to tell you that?"
+    },
+    {
+      "consensus": {
+        "deletions": 0,
+        "hypothesis_word_count": 13,
+        "hypothesis_words": [
+          "i",
+          "do",
+          "not",
+          "have",
+          "dreams",
+          "i",
+          "have",
+          "goals",
+          "get",
+          "it",
+          "through",
+          "your",
+          "head"
+        ],
+        "insertions": 0,
+        "reference_word_count": 13,
+        "reference_words": [
+          "they",
+          "do",
+          "not",
+          "have",
+          "dreams",
+          "i",
+          "have",
+          "goals",
+          "get",
+          "it",
+          "through",
+          "your",
+          "head"
+        ],
+        "substitutions": 1,
+        "wer": 0.076923
+      },
+      "id": "harvey_repair_003",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "I don't have dreams. I have goals. Get it through your head.",
+      "tiny_text": "They don't have dreams. I have goals. Get it through your head."
+    },
+    {
+      "consensus": {
+        "deletions": 0,
+        "hypothesis_word_count": 11,
+        "hypothesis_words": [
+          "where's",
+          "impressions",
+          "last",
+          "i",
+          "do",
+          "not",
+          "pave",
+          "the",
+          "way",
+          "for",
+          "people"
+        ],
+        "insertions": 0,
+        "reference_word_count": 11,
+        "reference_words": [
+          "first",
+          "impressions",
+          "last",
+          "i",
+          "do",
+          "not",
+          "pave",
+          "the",
+          "way",
+          "for",
+          "people"
+        ],
+        "substitutions": 1,
+        "wer": 0.090909
+      },
+      "id": "harvey_repair_004",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "Where's impressions last? I don't pave the way for people.",
+      "tiny_text": "First impressions last. I don't pave the way for people."
+    },
+    {
+      "consensus": {
+        "deletions": 0,
+        "hypothesis_word_count": 12,
+        "hypothesis_words": [
+          "people",
+          "paved",
+          "the",
+          "way",
+          "for",
+          "me",
+          "life",
+          "is",
+          "this",
+          "i",
+          "like",
+          "this"
+        ],
+        "insertions": 0,
+        "reference_word_count": 12,
+        "reference_words": [
+          "people",
+          "pave",
+          "the",
+          "way",
+          "for",
+          "me",
+          "life",
+          "is",
+          "this",
+          "i",
+          "like",
+          "this"
+        ],
+        "substitutions": 1,
+        "wer": 0.083333
+      },
+      "id": "harvey_repair_005",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "People paved the way for me. Life is this. I like this.",
+      "tiny_text": "People pave the way for me. Life is this, I like this."
+    }
+  ],
+  "rejected_count": 5,
+  "schema_version": 1,
+  "status": "insufficient"
+}

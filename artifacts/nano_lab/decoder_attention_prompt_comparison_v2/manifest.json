@@ -1,0 +1,526 @@
+[
+  {
+    "id": "question_prompt_attention0_mel",
+    "voice": "asmr7",
+    "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+    "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+    "seed": 79,
+    "steps": 2,
+    "temperature": 0.8,
+    "adapter_scale": 1,
+    "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+    "mel_calibration_strength": 1,
+    "save_conditionals": false,
+    "decoder_fit_report": "artifacts/nano_lab/decoder_embedding_fit/fit_report.json",
+    "decoder_attention": "artifacts/nano_lab/decoder_attention_fit/best_attention.pt",
+    "decoder_attention_strength": 0,
+    "t3_donor_cache": "artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+    "t3_donor_mode": "prompt",
+    "repetition_penalty": 1.0,
+    "decoder": "meanflow",
+    "synthetic": true,
+    "runtime_loader": "optimized_fp32",
+    "adapter": "artifacts/nano_lab/adapter_aligned_all_attn.pt",
+    "precision": {
+      "matmul_tf32": false,
+      "cudnn_tf32": false
+    },
+    "vocoder_controls": {
+      "voiced_noise_scale": 1.0,
+      "voiced_noise_std": 0.003,
+      "unvoiced_noise_std": 0.03333333333333333,
+      "experimental": false
+    },
+    "mel_calibration_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+    "t3_donor_runtime": {
+      "mode": "prompt",
+      "selected_fields": [
+        "t3.cond_prompt_speech_tokens"
+      ],
+      "prompt_embedding_invalidated": true,
+      "prompt_shape": [
+        1,
+        283
+      ],
+      "speaker_shape": null,
+      "gen_untouched": true,
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+      "sha256": "ba80b353c82ab7f8a59ecbab4da0ec59dcde252a93162e6773dde184d99a078c"
+    },
+    "decoder_projection_runtime": {
+      "enabled": false,
+      "restored": false,
+      "strength": 0.0,
+      "path": null
+    },
+    "decoder_attention_runtime": {
+      "enabled": false,
+      "restored": false,
+      "strength": 0.0,
+      "path": null
+    },
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/question_prompt_attention0_mel.wav",
+    "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/question_prompt_attention0_mel.master.wav",
+    "seconds": 5.72,
+    "master_processing": {
+      "highpass_hz": 45,
+      "gain_db": 9.399106285399025,
+      "target_lufs": -19,
+      "achieved_lufs": -19.000000068270456,
+      "true_peak_ceiling_dbtp": -1,
+      "true_peak_oversampling": 4,
+      "noise_gate": false
+    },
+    "generation_seconds": 4.754392249000375,
+    "token_seconds": 2.9389726999943377,
+    "token_count": 143,
+    "rss_mib": 2360.78125,
+    "peak_rss_mib": 2360.078125,
+    "rtf": 0.8311874561189467
+  },
+  {
+    "id": "question_prompt_attention1_mel",
+    "voice": "asmr7",
+    "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+    "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+    "seed": 79,
+    "steps": 2,
+    "temperature": 0.8,
+    "adapter_scale": 1,
+    "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+    "mel_calibration_strength": 1,
+    "save_conditionals": false,
+    "decoder_fit_report": "artifacts/nano_lab/decoder_embedding_fit/fit_report.json",
+    "decoder_attention": "artifacts/nano_lab/decoder_attention_fit/best_attention.pt",
+    "decoder_attention_strength": 1,
+    "t3_donor_cache": "artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+    "t3_donor_mode": "prompt",
+    "repetition_penalty": 1.0,
+    "decoder": "meanflow",
+    "synthetic": true,
+    "runtime_loader": "optimized_fp32",
+    "adapter": "artifacts/nano_lab/adapter_aligned_all_attn.pt",
+    "precision": {
+      "matmul_tf32": false,
+      "cudnn_tf32": false
+    },
+    "vocoder_controls": {
+      "voiced_noise_scale": 1.0,
+      "voiced_noise_std": 0.003,
+      "unvoiced_noise_std": 0.03333333333333333,
+      "experimental": false
+    },
+    "mel_calibration_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+    "t3_donor_runtime": {
+      "mode": "prompt",
+      "selected_fields": [
+        "t3.cond_prompt_speech_tokens"
+      ],
+      "prompt_embedding_invalidated": true,
+      "prompt_shape": [
+        1,
+        283
+      ],
+      "speaker_shape": null,
+      "gen_untouched": true,
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+      "sha256": "ba80b353c82ab7f8a59ecbab4da0ec59dcde252a93162e6773dde184d99a078c"
+    },
+    "decoder_projection_runtime": {
+      "enabled": false,
+      "restored": false,
+      "strength": 0.0,
+      "path": null
+    },
+    "decoder_attention_runtime": {
+      "enabled": true,
+      "restored": false,
+      "idempotent": false,
+      "strength": 1.0,
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_fit/best_attention.pt",
+      "adapter_sha256": "de6d40e5565011022efe776c1852f5bdc1850a87cf4e0e5ba51208aba3e747c2",
+      "model_checkpoint_path": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+      "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+      "inventory_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_inventory.json",
+      "inventory_sha256": "9f36f6f5a61c8ec1bda8fa09e88640035931fb8690a920f73d9fe15cb94919ed",
+      "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+      "initial_conditionals_sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+      "prepared_conditionals_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "target_weight_count": 224,
+      "target_parameter_count": 344064,
+      "target_weight_key_prefix": "flow.decoder.estimator."
+    },
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/question_prompt_attention1_mel.wav",
+    "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/question_prompt_attention1_mel.master.wav",
+    "seconds": 5.72,
+    "master_processing": {
+      "highpass_hz": 45,
+      "gain_db": 8.968054520646259,
+      "target_lufs": -19,
+      "achieved_lufs": -19.00000010633606,
+      "true_peak_ceiling_dbtp": -1,
+      "true_peak_oversampling": 4,
+      "noise_gate": false
+    },
+    "generation_seconds": 2.9204330639986438,
+    "token_seconds": 2.515831092001463,
+    "token_count": 143,
+    "rss_mib": 2364.7578125,
+    "peak_rss_mib": 2478.765625,
+    "rtf": 0.5105652209787839
+  },
+  {
+    "id": "narrative_prompt_attention0_mel",
+    "voice": "asmr7",
+    "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+    "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+    "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+    "seed": 97,
+    "steps": 2,
+    "temperature": 0.8,
+    "adapter_scale": 1,
+    "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+    "mel_calibration_strength": 1,
+    "save_conditionals": false,
+    "decoder_fit_report": "artifacts/nano_lab/decoder_embedding_fit/fit_report.json",
+    "decoder_attention": "artifacts/nano_lab/decoder_attention_fit/best_attention.pt",
+    "decoder_attention_strength": 0,
+    "t3_donor_cache": "artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+    "t3_donor_mode": "prompt",
+    "repetition_penalty": 1.0,
+    "decoder": "meanflow",
+    "synthetic": true,
+    "runtime_loader": "optimized_fp32",
+    "adapter": "artifacts/nano_lab/adapter_aligned_all_attn.pt",
+    "precision": {
+      "matmul_tf32": false,
+      "cudnn_tf32": false
+    },
+    "vocoder_controls": {
+      "voiced_noise_scale": 1.0,
+      "voiced_noise_std": 0.003,
+      "unvoiced_noise_std": 0.03333333333333333,
+      "experimental": false
+    },
+    "mel_calibration_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+    "t3_donor_runtime": {
+      "mode": "prompt",
+      "selected_fields": [
+        "t3.cond_prompt_speech_tokens"
+      ],
+      "prompt_embedding_invalidated": true,
+      "prompt_shape": [
+        1,
+        283
+      ],
+      "speaker_shape": null,
+      "gen_untouched": true,
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+      "sha256": "ba80b353c82ab7f8a59ecbab4da0ec59dcde252a93162e6773dde184d99a078c"
+    },
+    "decoder_projection_runtime": {
+      "enabled": false,
+      "restored": false,
+      "strength": 0.0,
+      "path": null
+    },
+    "decoder_attention_runtime": {
+      "enabled": false,
+      "restored": true,
+      "strength": 0.0,
+      "path": null,
+      "target_weight_count": 224,
+      "target_parameter_count": 344064,
+      "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+      "inventory_sha256": "9f36f6f5a61c8ec1bda8fa09e88640035931fb8690a920f73d9fe15cb94919ed"
+    },
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/narrative_prompt_attention0_mel.wav",
+    "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/narrative_prompt_attention0_mel.master.wav",
+    "seconds": 7.8,
+    "master_processing": {
+      "highpass_hz": 45,
+      "gain_db": 10.038096867578737,
+      "target_lufs": -19,
+      "achieved_lufs": -19.434130593579024,
+      "true_peak_ceiling_dbtp": -1,
+      "true_peak_oversampling": 4,
+      "noise_gate": false
+    },
+    "generation_seconds": 3.0686474999965867,
+    "token_seconds": 2.57381148100103,
+    "token_count": 195,
+    "rss_mib": 2379.125,
+    "peak_rss_mib": 2482.140625,
+    "rtf": 0.39341634615340854
+  },
+  {
+    "id": "narrative_prompt_attention1_mel",
+    "voice": "asmr7",
+    "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+    "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+    "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+    "seed": 97,
+    "steps": 2,
+    "temperature": 0.8,
+    "adapter_scale": 1,
+    "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+    "mel_calibration_strength": 1,
+    "save_conditionals": false,
+    "decoder_fit_report": "artifacts/nano_lab/decoder_embedding_fit/fit_report.json",
+    "decoder_attention": "artifacts/nano_lab/decoder_attention_fit/best_attention.pt",
+    "decoder_attention_strength": 1,
+    "t3_donor_cache": "artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+    "t3_donor_mode": "prompt",
+    "repetition_penalty": 1.0,
+    "decoder": "meanflow",
+    "synthetic": true,
+    "runtime_loader": "optimized_fp32",
+    "adapter": "artifacts/nano_lab/adapter_aligned_all_attn.pt",
+    "precision": {
+      "matmul_tf32": false,
+      "cudnn_tf32": false
+    },
+    "vocoder_controls": {
+      "voiced_noise_scale": 1.0,
+      "voiced_noise_std": 0.003,
+      "unvoiced_noise_std": 0.03333333333333333,
+      "experimental": false
+    },
+    "mel_calibration_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+    "t3_donor_runtime": {
+      "mode": "prompt",
+      "selected_fields": [
+        "t3.cond_prompt_speech_tokens"
+      ],
+      "prompt_embedding_invalidated": true,
+      "prompt_shape": [
+        1,
+        283
+      ],
+      "speaker_shape": null,
+      "gen_untouched": true,
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+      "sha256": "ba80b353c82ab7f8a59ecbab4da0ec59dcde252a93162e6773dde184d99a078c"
+    },
+    "decoder_projection_runtime": {
+      "enabled": false,
+      "restored": false,
+      "strength": 0.0,
+      "path": null
+    },
+    "decoder_attention_runtime": {
+      "enabled": true,
+      "restored": false,
+      "idempotent": false,
+      "strength": 1.0,
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_fit/best_attention.pt",
+      "adapter_sha256": "de6d40e5565011022efe776c1852f5bdc1850a87cf4e0e5ba51208aba3e747c2",
+      "model_checkpoint_path": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+      "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+      "inventory_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_inventory.json",
+      "inventory_sha256": "9f36f6f5a61c8ec1bda8fa09e88640035931fb8690a920f73d9fe15cb94919ed",
+      "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+      "initial_conditionals_sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+      "prepared_conditionals_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "target_weight_count": 224,
+      "target_parameter_count": 344064,
+      "target_weight_key_prefix": "flow.decoder.estimator."
+    },
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/narrative_prompt_attention1_mel.wav",
+    "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/narrative_prompt_attention1_mel.master.wav",
+    "seconds": 7.8,
+    "master_processing": {
+      "highpass_hz": 45,
+      "gain_db": 9.985895438619583,
+      "target_lufs": -19,
+      "achieved_lufs": -19.00000016007824,
+      "true_peak_ceiling_dbtp": -1,
+      "true_peak_oversampling": 4,
+      "noise_gate": false
+    },
+    "generation_seconds": 3.0195425670026452,
+    "token_seconds": 2.582425268999941,
+    "token_count": 195,
+    "rss_mib": 2379.125,
+    "peak_rss_mib": 2496.36328125,
+    "rtf": 0.38712084192341606
+  },
+  {
+    "id": "heldout01_prompt_attention0_mel",
+    "voice": "asmr7",
+    "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+    "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "seed": 31,
+    "steps": 2,
+    "temperature": 0.8,
+    "adapter_scale": 1,
+    "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+    "mel_calibration_strength": 1,
+    "save_conditionals": false,
+    "decoder_fit_report": "artifacts/nano_lab/decoder_embedding_fit/fit_report.json",
+    "decoder_attention": "artifacts/nano_lab/decoder_attention_fit/best_attention.pt",
+    "decoder_attention_strength": 0,
+    "t3_donor_cache": "artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+    "t3_donor_mode": "prompt",
+    "repetition_penalty": 1.0,
+    "decoder": "meanflow",
+    "synthetic": true,
+    "runtime_loader": "optimized_fp32",
+    "adapter": "artifacts/nano_lab/adapter_aligned_all_attn.pt",
+    "precision": {
+      "matmul_tf32": false,
+      "cudnn_tf32": false
+    },
+    "vocoder_controls": {
+      "voiced_noise_scale": 1.0,
+      "voiced_noise_std": 0.003,
+      "unvoiced_noise_std": 0.03333333333333333,
+      "experimental": false
+    },
+    "mel_calibration_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+    "t3_donor_runtime": {
+      "mode": "prompt",
+      "selected_fields": [
+        "t3.cond_prompt_speech_tokens"
+      ],
+      "prompt_embedding_invalidated": true,
+      "prompt_shape": [
+        1,
+        283
+      ],
+      "speaker_shape": null,
+      "gen_untouched": true,
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+      "sha256": "ba80b353c82ab7f8a59ecbab4da0ec59dcde252a93162e6773dde184d99a078c"
+    },
+    "decoder_projection_runtime": {
+      "enabled": false,
+      "restored": false,
+      "strength": 0.0,
+      "path": null
+    },
+    "decoder_attention_runtime": {
+      "enabled": false,
+      "restored": true,
+      "strength": 0.0,
+      "path": null,
+      "target_weight_count": 224,
+      "target_parameter_count": 344064,
+      "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+      "inventory_sha256": "9f36f6f5a61c8ec1bda8fa09e88640035931fb8690a920f73d9fe15cb94919ed"
+    },
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/heldout01_prompt_attention0_mel.wav",
+    "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/heldout01_prompt_attention0_mel.master.wav",
+    "seconds": 7.4,
+    "master_processing": {
+      "highpass_hz": 45,
+      "gain_db": 12.0,
+      "target_lufs": -19,
+      "achieved_lufs": -19.545054804627963,
+      "true_peak_ceiling_dbtp": -1,
+      "true_peak_oversampling": 4,
+      "noise_gate": false
+    },
+    "generation_seconds": 3.5010558560024947,
+    "token_seconds": 2.9316630460016313,
+    "token_count": 185,
+    "rss_mib": 2379.2109375,
+    "peak_rss_mib": 2496.36328125,
+    "rtf": 0.4731156562165533
+  },
+  {
+    "id": "heldout01_prompt_attention1_mel",
+    "voice": "asmr7",
+    "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+    "input_conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "seed": 31,
+    "steps": 2,
+    "temperature": 0.8,
+    "adapter_scale": 1,
+    "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+    "mel_calibration_strength": 1,
+    "save_conditionals": false,
+    "decoder_fit_report": "artifacts/nano_lab/decoder_embedding_fit/fit_report.json",
+    "decoder_attention": "artifacts/nano_lab/decoder_attention_fit/best_attention.pt",
+    "decoder_attention_strength": 1,
+    "t3_donor_cache": "artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+    "t3_donor_mode": "prompt",
+    "repetition_penalty": 1.0,
+    "decoder": "meanflow",
+    "synthetic": true,
+    "runtime_loader": "optimized_fp32",
+    "adapter": "artifacts/nano_lab/adapter_aligned_all_attn.pt",
+    "precision": {
+      "matmul_tf32": false,
+      "cudnn_tf32": false
+    },
+    "vocoder_controls": {
+      "voiced_noise_scale": 1.0,
+      "voiced_noise_std": 0.003,
+      "unvoiced_noise_std": 0.03333333333333333,
+      "experimental": false
+    },
+    "mel_calibration_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+    "t3_donor_runtime": {
+      "mode": "prompt",
+      "selected_fields": [
+        "t3.cond_prompt_speech_tokens"
+      ],
+      "prompt_embedding_invalidated": true,
+      "prompt_shape": [
+        1,
+        283
+      ],
+      "speaker_shape": null,
+      "gen_untouched": true,
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+      "sha256": "ba80b353c82ab7f8a59ecbab4da0ec59dcde252a93162e6773dde184d99a078c"
+    },
+    "decoder_projection_runtime": {
+      "enabled": false,
+      "restored": false,
+      "strength": 0.0,
+      "path": null
+    },
+    "decoder_attention_runtime": {
+      "enabled": true,
+      "restored": false,
+      "idempotent": false,
+      "strength": 1.0,
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_fit/best_attention.pt",
+      "adapter_sha256": "de6d40e5565011022efe776c1852f5bdc1850a87cf4e0e5ba51208aba3e747c2",
+      "model_checkpoint_path": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+      "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+      "inventory_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_inventory.json",
+      "inventory_sha256": "9f36f6f5a61c8ec1bda8fa09e88640035931fb8690a920f73d9fe15cb94919ed",
+      "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+      "initial_conditionals_sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+      "prepared_conditionals_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "target_weight_count": 224,
+      "target_parameter_count": 344064,
+      "target_weight_key_prefix": "flow.decoder.estimator."
+    },
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/heldout01_prompt_attention1_mel.wav",
+    "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/heldout01_prompt_attention1_mel.master.wav",
+    "seconds": 7.4,
+    "master_processing": {
+      "highpass_hz": 45,
+      "gain_db": 12.0,
+      "target_lufs": -19,
+      "achieved_lufs": -19.039722546670298,
+      "true_peak_ceiling_dbtp": -1,
+      "true_peak_oversampling": 4,
+      "noise_gate": false
+    },
+    "generation_seconds": 2.892832690005889,
+    "token_seconds": 2.53591089600377,
+    "token_count": 185,
+    "rss_mib": 2379.23046875,
+    "peak_rss_mib": 2496.48828125,
+    "rtf": 0.3909233364872823
+  }
+]

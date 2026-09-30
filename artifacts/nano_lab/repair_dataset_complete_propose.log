@@ -1,0 +1,7 @@
+{
+  "audit_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/audit_manifest.json",
+  "candidate_count": 34,
+  "proposal": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/proposal.json",
+  "protected_count": 12,
+  "rejected_count": 30
+}

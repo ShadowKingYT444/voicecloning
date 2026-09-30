@@ -1,0 +1,21 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 4fdae1b8a7a84173bb913a77defa3476
+{"id": "morning_attention0_raw", "cosine": 0.862528, "wer": null, "dnsmos_overall": 3.0782712692632024}
+{"id": "morning_attention1_raw", "cosine": 0.870215, "wer": null, "dnsmos_overall": 3.0643189265815245}
+{"id": "morning_attention0_mel", "cosine": 0.864378, "wer": null, "dnsmos_overall": 3.10723719287899}
+{"id": "morning_attention1_mel", "cosine": 0.872855, "wer": null, "dnsmos_overall": 3.0810985511302036}
+{"id": "question_attention0_raw", "cosine": 0.901781, "wer": null, "dnsmos_overall": 3.278225926201963}
+{"id": "question_attention1_raw", "cosine": 0.910353, "wer": null, "dnsmos_overall": 3.2015046169028754}
+{"id": "question_attention0_mel", "cosine": 0.905048, "wer": null, "dnsmos_overall": 3.1760117500706513}
+{"id": "question_attention1_mel", "cosine": 0.912658, "wer": null, "dnsmos_overall": 3.235406827279482}
+{"id": "narrative_attention0_raw", "cosine": 0.891553, "wer": null, "dnsmos_overall": 3.0390071396132106}
+{"id": "narrative_attention1_raw", "cosine": 0.895905, "wer": null, "dnsmos_overall": 3.112010616899588}
+{"id": "narrative_attention0_mel", "cosine": 0.900036, "wer": null, "dnsmos_overall": 3.177795845257135}
+{"id": "narrative_attention1_mel", "cosine": 0.904095, "wer": null, "dnsmos_overall": 3.176037283748844}
+{"id": "heldout01_attention0_mel", "cosine": 0.882345, "wer": null, "dnsmos_overall": 2.6234661613181784}
+{"id": "heldout01_attention1_mel", "cosine": 0.882328, "wer": null, "dnsmos_overall": 2.6030556482828784}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 56.239s
+             CPU time consumed: 1min 43.037s
+                   Memory peak: 542.6M (swap: 0B)

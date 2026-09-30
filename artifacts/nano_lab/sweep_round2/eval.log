@@ -1,0 +1,43 @@
+MemoryMax=3GiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job
+Running as unit: nano-lab-model.service; invocation ID: cf2282b0767e4387a4da3ac4bd1b1b1a
+{"id": "asmr_conversational_morning_31", "cosine": 0.865263, "wer": 0.083333, "dnsmos_overall": 2.436257776319722}
+{"id": "asmr_conversational_morning_47", "cosine": 0.877462, "wer": 0.0, "dnsmos_overall": 2.308934766870986}
+{"id": "asmr_conversational_question_31", "cosine": 0.870864, "wer": 0.055556, "dnsmos_overall": 2.857103189237355}
+{"id": "asmr_conversational_question_47", "cosine": 0.870712, "wer": 0.0, "dnsmos_overall": 3.162930864087037}
+{"id": "asmr_conversational_reassurance_31", "cosine": 0.870324, "wer": 0.0, "dnsmos_overall": 2.9759875187600966}
+{"id": "asmr_conversational_reassurance_47", "cosine": 0.854571, "wer": 0.0, "dnsmos_overall": 2.5554777674109816}
+{"id": "asmr_soft_morning_31", "cosine": 0.871467, "wer": 0.0, "dnsmos_overall": 2.8840560666224095}
+{"id": "asmr_soft_morning_47", "cosine": 0.819387, "wer": 0.041667, "dnsmos_overall": 3.1644095488758945}
+{"id": "asmr_soft_question_31", "cosine": 0.834336, "wer": 0.0, "dnsmos_overall": 3.431308688735175}
+{"id": "asmr_soft_question_47", "cosine": 0.827338, "wer": 0.0, "dnsmos_overall": 3.100274239130603}
+{"id": "asmr_soft_reassurance_31", "cosine": 0.850181, "wer": 0.0, "dnsmos_overall": 3.012339801489685}
+{"id": "asmr_soft_reassurance_47", "cosine": 0.825443, "wer": 0.0, "dnsmos_overall": 3.3829075948522407}
+{"id": "asmr_intimate_morning_31", "cosine": 0.853126, "wer": 0.083333, "dnsmos_overall": 2.6565700825683587}
+{"id": "asmr_intimate_morning_47", "cosine": 0.867128, "wer": 0.0, "dnsmos_overall": 2.481019418412841}
+{"id": "asmr_intimate_question_31", "cosine": 0.832697, "wer": 0.0, "dnsmos_overall": 2.197346631086047}
+{"id": "asmr_intimate_question_47", "cosine": 0.833689, "wer": 0.0, "dnsmos_overall": 2.775708087954194}
+{"id": "asmr_intimate_reassurance_31", "cosine": 0.860861, "wer": 0.0, "dnsmos_overall": 2.544625909534235}
+{"id": "asmr_intimate_reassurance_47", "cosine": 0.851909, "wer": 0.0, "dnsmos_overall": 2.9537703260243187}
+{"id": "conv_noise0.65", "cosine": 0.857039, "wer": 0.0, "dnsmos_overall": 2.673785271255736}
+{"id": "conv_noise0.85", "cosine": 0.866204, "wer": 0.0, "dnsmos_overall": 2.682913254405847}
+{"id": "conv_noise1.0", "cosine": 0.870609, "wer": 0.0, "dnsmos_overall": 2.7003395635888086}
+{"id": "conv_noise1.15", "cosine": 0.87164, "wer": 0.0, "dnsmos_overall": 2.5595917169426428}
+{"id": "conv_noise1.35", "cosine": 0.866695, "wer": 0.0, "dnsmos_overall": 2.1978500643747774}
+{"id": "soft_noise0.65", "cosine": 0.868649, "wer": 0.0, "dnsmos_overall": 3.0869221295461267}
+{"id": "soft_noise0.85", "cosine": 0.874946, "wer": 0.0, "dnsmos_overall": 3.1977044025116346}
+{"id": "soft_noise1.0", "cosine": 0.875594, "wer": 0.0, "dnsmos_overall": 3.1631596544747205}
+{"id": "soft_noise1.15", "cosine": 0.881733, "wer": 0.0, "dnsmos_overall": 3.1679050098590333}
+{"id": "soft_noise1.35", "cosine": 0.886492, "wer": 0.0, "dnsmos_overall": 2.759534835118211}
+{"id": "harvey_tune_natural", "cosine": 0.814697, "wer": 0.0, "dnsmos_overall": 3.3076086552010717}
+{"id": "harvey_tune_isolated", "cosine": 0.795328, "wer": 0.0, "dnsmos_overall": 3.296747025851074}
+{"id": "harvey_tune_natural_isodecode", "cosine": 0.796902, "wer": 0.0, "dnsmos_overall": 3.3256387157963228}
+{"id": "harvey_tune_isolated_natdecode", "cosine": 0.811917, "wer": 0.0, "dnsmos_overall": 3.3961011879247374}
+{"id": "harvey_tune_natural_mean", "cosine": 0.816251, "wer": 0.0, "dnsmos_overall": 3.3634428666925396}
+{"id": "harvey_tune_isolated_mean", "cosine": 0.796025, "wer": 0.0, "dnsmos_overall": 3.394225793146653}
+{"id": "harvey_tune_combined_natural", "cosine": 0.816223, "wer": 0.0, "dnsmos_overall": 3.1328038340604887}
+{"id": "harvey_tune_combined_isolated", "cosine": 0.79037, "wer": 0.0, "dnsmos_overall": 3.481678135188987}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 4min 42.650s
+             CPU time consumed: 8min 59.472s
+                   Memory peak: 1.1G (swap: 0B)

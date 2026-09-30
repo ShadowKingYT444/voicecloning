@@ -1,0 +1,16 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: dc00a9eae7cb42f0b409c939d9dbf24a
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+loaded PerthNet (Implicit) at step 250,000
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  6.32it/s]100%|██████████| 2/2 [00:00<00:00,  8.80it/s]
+{"id": "source01_raw", "token_count": 150, "different_tokens": 0, "peak_rss_mib": 2334.87890625}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  5.15it/s]100%|██████████| 2/2 [00:00<00:00,  5.23it/s]100%|██████████| 2/2 [00:00<00:00,  5.21it/s]
+{"id": "source01_normalized", "token_count": 150, "different_tokens": 9, "peak_rss_mib": 2334.87890625}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 29.311s
+             CPU time consumed: 30.288s
+                   Memory peak: 1.7G (swap: 0B)

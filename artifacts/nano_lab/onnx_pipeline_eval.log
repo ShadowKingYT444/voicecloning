@@ -1,0 +1,9 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "soft_acoustic", "cosine": 0.833945, "wer": 0.0, "dnsmos_overall": 2.7569259382321567}
+{"id": "soft_complete", "cosine": 0.83814, "wer": 0.0, "dnsmos_overall": 3.311727194748192}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 24.797s
+             CPU time consumed: 40.172s
+                   Memory peak: 671.6M (swap: 0B)

@@ -1,0 +1,7 @@
+Using Python 3.12.14 environment at: .venv-nano-ort
+Resolved 1 package in 317ms
+Downloading onnxruntime-gpu (264.1MiB)
+ Downloaded onnxruntime-gpu
+Prepared 1 package in 46.23s
+Installed 1 package in 18ms
+ + onnxruntime-gpu==1.26.0

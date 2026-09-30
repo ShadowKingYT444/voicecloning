@@ -1,0 +1,210 @@
+{
+  "status": "automated_checks_complete",
+  "human_listening_accepted": false,
+  "profile_promoted": false,
+  "peak_sampled_process_rss_mib": 2347.72265625,
+  "rows": [
+    {
+      "id": "heldout01_rp1p0",
+      "seconds": 7.2,
+      "repetition_penalty": 1.0,
+      "small_wer": 0.0
+    },
+    {
+      "id": "heldout01_rp1p1",
+      "seconds": 7.28,
+      "repetition_penalty": 1.1,
+      "small_wer": 0.0
+    },
+    {
+      "id": "heldout01_rp1p2",
+      "seconds": 6.6,
+      "repetition_penalty": 1.2,
+      "small_wer": 0.0
+    },
+    {
+      "id": "question_rp1p0",
+      "seconds": 6.32,
+      "repetition_penalty": 1.0,
+      "small_wer": 0.0
+    },
+    {
+      "id": "question_rp1p1",
+      "seconds": 5.64,
+      "repetition_penalty": 1.1,
+      "small_wer": 0.1875
+    },
+    {
+      "id": "question_rp1p2",
+      "seconds": 4.96,
+      "repetition_penalty": 1.2,
+      "small_wer": 0.0
+    },
+    {
+      "id": "narrative_rp1p0",
+      "seconds": 7.72,
+      "repetition_penalty": 1.0,
+      "small_wer": 0.0
+    },
+    {
+      "id": "narrative_rp1p1",
+      "seconds": 7.08,
+      "repetition_penalty": 1.1,
+      "small_wer": 0.0
+    },
+    {
+      "id": "narrative_rp1p2",
+      "seconds": 6.88,
+      "repetition_penalty": 1.2,
+      "small_wer": 0.0
+    }
+  ],
+  "notes": [
+    "Current fitted all-attention T3 and mel correction; only repetition penalty changes.",
+    "Penalty1.1 has a word error for question seed79 and is not selected.",
+    "Longer output alone does not prove natural cadence or better voice identity.",
+    "At matched -27 LUFS, penalty1.0 has higher mean identity and DNSMOS than1.2 on these three cases, but the narrative DNSMOS falls.",
+    "Penalty1.0 is experimental. More text/seed checks and listening are needed.",
+    "The loudness helper needed a second constant-gain calculation for one1.1clip due to the R128 absolute gate; no audio gate or dynamic processing was added."
+  ],
+  "prosody_status": "complete",
+  "prosody": {
+    "heldout01_rp1p2": {
+      "median_voiced_f0_hz": 171.49456759019571,
+      "voiced_fraction": 0.35823170731707316,
+      "duration_s": 6.6,
+      "hnr_median_db": 2.7470905314527965
+    },
+    "narrative_rp1p2": {
+      "median_voiced_f0_hz": 203.45557979293926,
+      "voiced_fraction": 0.4692982456140351,
+      "duration_s": 6.88,
+      "hnr_median_db": 4.922615202408528
+    },
+    "heldout01_rp1p0": {
+      "median_voiced_f0_hz": 190.78258675130417,
+      "voiced_fraction": 0.2611731843575419,
+      "duration_s": 7.2,
+      "hnr_median_db": 5.735401255250862
+    },
+    "narrative_rp1p1": {
+      "median_voiced_f0_hz": 204.39194339105757,
+      "voiced_fraction": 0.4502840909090909,
+      "duration_s": 7.08,
+      "hnr_median_db": 4.944620165663456
+    },
+    "question_rp1p1": {
+      "median_voiced_f0_hz": 222.2733241131758,
+      "voiced_fraction": 0.43214285714285716,
+      "duration_s": 5.64,
+      "hnr_median_db": 7.3698736197347
+    },
+    "question_rp1p0": {
+      "median_voiced_f0_hz": 221.44979175358907,
+      "voiced_fraction": 0.45063694267515925,
+      "duration_s": 6.32,
+      "hnr_median_db": 5.70415431523111
+    },
+    "question_rp1p2": {
+      "median_voiced_f0_hz": 206.51874676179787,
+      "voiced_fraction": 0.4735772357723577,
+      "duration_s": 4.96,
+      "hnr_median_db": 4.828547197696695
+    },
+    "heldout01_rp1p1": {
+      "median_voiced_f0_hz": 192.02584577594203,
+      "voiced_fraction": 0.32503457814661135,
+      "duration_s": 7.28,
+      "hnr_median_db": 5.167554416531453
+    },
+    "narrative_rp1p0": {
+      "median_voiced_f0_hz": 203.22382521779707,
+      "voiced_fraction": 0.36328125,
+      "duration_s": 7.72,
+      "hnr_median_db": 4.156572418386622
+    }
+  },
+  "groups": {
+    "rp1p0": {
+      "rows": [
+        {
+          "id": "heldout01_rp1p0",
+          "speaker_cosine": 0.88688,
+          "dnsmos_overall": 2.6011394448034335,
+          "small_wer": 0.0
+        },
+        {
+          "id": "question_rp1p0",
+          "speaker_cosine": 0.897007,
+          "dnsmos_overall": 3.2766435189524454,
+          "small_wer": 0.0
+        },
+        {
+          "id": "narrative_rp1p0",
+          "speaker_cosine": 0.889598,
+          "dnsmos_overall": 3.0567847409373994,
+          "small_wer": 0.0
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8911616666666666,
+        "dnsmos_overall": 2.9781892348977594,
+        "small_wer": 0.0
+      }
+    },
+    "rp1p1": {
+      "rows": [
+        {
+          "id": "heldout01_rp1p1",
+          "speaker_cosine": 0.880382,
+          "dnsmos_overall": 2.1821457639033257,
+          "small_wer": 0.0
+        },
+        {
+          "id": "question_rp1p1",
+          "speaker_cosine": 0.891483,
+          "dnsmos_overall": 2.7668281934847965,
+          "small_wer": 0.1875
+        },
+        {
+          "id": "narrative_rp1p1",
+          "speaker_cosine": 0.879692,
+          "dnsmos_overall": 3.238760579462113,
+          "small_wer": 0.0
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8838523333333334,
+        "dnsmos_overall": 2.729244845616745,
+        "small_wer": 0.0625
+      }
+    },
+    "rp1p2": {
+      "rows": [
+        {
+          "id": "heldout01_rp1p2",
+          "speaker_cosine": 0.875678,
+          "dnsmos_overall": 2.4335087251149488,
+          "small_wer": 0.0
+        },
+        {
+          "id": "question_rp1p2",
+          "speaker_cosine": 0.875305,
+          "dnsmos_overall": 3.03688078926857,
+          "small_wer": 0.0
+        },
+        {
+          "id": "narrative_rp1p2",
+          "speaker_cosine": 0.884645,
+          "dnsmos_overall": 3.2809225844835503,
+          "small_wer": 0.0
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8785426666666667,
+        "dnsmos_overall": 2.91710403295569,
+        "small_wer": 0.0
+      }
+    }
+  }
+}

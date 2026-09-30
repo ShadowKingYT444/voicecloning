@@ -1,0 +1,20 @@
+[
+  {
+    "id": "asmr_cold",
+    "voice": "asmr_fitted_experimental",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+    "seed": 79
+  },
+  {
+    "id": "asmr_warm_repeat",
+    "voice": "asmr_fitted_experimental",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+    "seed": 79
+  },
+  {
+    "id": "asmr_warm_new",
+    "voice": "asmr_fitted_experimental",
+    "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+    "seed": 47
+  }
+]

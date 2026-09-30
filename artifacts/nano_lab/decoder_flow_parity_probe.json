@@ -1,0 +1,105 @@
+{
+  "manual_native": {
+    "shape_a": [
+      1,
+      80,
+      216
+    ],
+    "shape_b": [
+      1,
+      80,
+      216
+    ],
+    "max_abs": 0.0,
+    "rmse": 0.0
+  },
+  "native_saved": {
+    "shape_a": [
+      1,
+      80,
+      216
+    ],
+    "shape_b": [
+      1,
+      80,
+      216
+    ],
+    "max_abs": 4.3091535568237305,
+    "rmse": 0.5908602476119995
+  },
+  "manual_saved": {
+    "shape_a": [
+      1,
+      80,
+      216
+    ],
+    "shape_b": [
+      1,
+      80,
+      216
+    ],
+    "max_abs": 4.3091535568237305,
+    "rmse": 0.5908602476119995
+  },
+  "noise": {
+    "shape_a": [
+      1,
+      80,
+      716
+    ],
+    "shape_b": [
+      1,
+      80,
+      716
+    ],
+    "max_abs": 0.0,
+    "rmse": 0.0
+  },
+  "mu": {
+    "shape_a": [
+      1,
+      80,
+      716
+    ],
+    "shape_b": [
+      1,
+      80,
+      716
+    ],
+    "max_abs": 0.0,
+    "rmse": 0.0
+  },
+  "mask": {
+    "shape_a": [
+      1,
+      1,
+      716
+    ],
+    "shape_b": [
+      1,
+      1,
+      716
+    ],
+    "max_abs": 0.0,
+    "rmse": 0.0
+  },
+  "cond": {
+    "shape_a": [
+      1,
+      80,
+      716
+    ],
+    "shape_b": [
+      1,
+      80,
+      716
+    ],
+    "max_abs": 0.0,
+    "rmse": 0.0
+  },
+  "seed": 31,
+  "peak_rss_mib": 1489.859375,
+  "scope": "Diagnostic recorded before target-noise fix. Direct flow wrapper excludes the S3Token2Wav.flow_inference preliminary target-noise draw.",
+  "manual_noise_policy": "legacy single full-sequence draw",
+  "finding": "Encoder and direct CFM match exactly. Saved full entrypoint output differs because its preliminary target-noise draw was missing."
+}

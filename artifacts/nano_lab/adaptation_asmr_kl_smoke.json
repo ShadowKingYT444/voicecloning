@@ -1,0 +1,208 @@
+{
+  "config": {
+    "alpha": 8.0,
+    "dropout": 0.05,
+    "module_shapes": {
+      "h.10.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.10.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.11.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.11.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.8.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.8.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.9.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.9.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      }
+    },
+    "modules": [
+      "h.8.attn.c_attn",
+      "h.8.attn.c_proj",
+      "h.9.attn.c_attn",
+      "h.9.attn.c_proj",
+      "h.10.attn.c_attn",
+      "h.10.attn.c_proj",
+      "h.11.attn.c_attn",
+      "h.11.attn.c_proj"
+    ],
+    "rank": 4
+  },
+  "format": "nano_t3_lora_checkpoint_v1",
+  "metadata": {
+    "adapted_label": "nano_lora_adapter",
+    "adapter": {
+      "alpha": 8.0,
+      "dropout": 0.05,
+      "module_shapes": {
+        "h.10.attn.c_attn": {
+          "in_features": 768,
+          "out_features": 2304
+        },
+        "h.10.attn.c_proj": {
+          "in_features": 768,
+          "out_features": 768
+        },
+        "h.11.attn.c_attn": {
+          "in_features": 768,
+          "out_features": 2304
+        },
+        "h.11.attn.c_proj": {
+          "in_features": 768,
+          "out_features": 768
+        },
+        "h.8.attn.c_attn": {
+          "in_features": 768,
+          "out_features": 2304
+        },
+        "h.8.attn.c_proj": {
+          "in_features": 768,
+          "out_features": 768
+        },
+        "h.9.attn.c_attn": {
+          "in_features": 768,
+          "out_features": 2304
+        },
+        "h.9.attn.c_proj": {
+          "in_features": 768,
+          "out_features": 768
+        }
+      },
+      "modules": [
+        "h.8.attn.c_attn",
+        "h.8.attn.c_proj",
+        "h.9.attn.c_attn",
+        "h.9.attn.c_proj",
+        "h.10.attn.c_attn",
+        "h.10.attn.c_proj",
+        "h.11.attn.c_attn",
+        "h.11.attn.c_proj"
+      ],
+      "rank": 4
+    },
+    "adoption_gate": {
+      "accepted": true,
+      "baseline_valid_loss": 5.553082466125488,
+      "required_improvement": 0.0001
+    },
+    "causal_alignment": {
+      "input": "conditioning + text + BOS + speech[:-1]",
+      "reason": "stock loss scores logits at positions whose speech embedding contains the same target",
+      "stock_t3_loss_used": false,
+      "target": "speech + EOS"
+    },
+    "cpu_threads": 2,
+    "data": {
+      "cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_cache.json",
+      "max_target_tokens": 400,
+      "prompt_target_leakage_policy": {
+        "self_reference_allowed_for_diagnostic": false,
+        "target_and_reference_must_be_distinct": true,
+        "target_audio_is_never_used_as_reference_by_default": true
+      },
+      "speaker_id": "asmr7",
+      "train_rows": 9,
+      "valid_rows": 1
+    },
+    "device": "cpu",
+    "experiment": "nano_t3_per_voice_lora",
+    "mode": "adapted",
+    "model_dir": "/home/terryd/gooning/voicecloning/models/chatterbox-nano",
+    "objective": "exact Turbo causal shifted speech-token cross-entropy",
+    "parameter_counts": {
+      "adapter_trainable": 73728,
+      "s3gen_frozen": 266030919,
+      "t3_total": 178932899,
+      "voice_encoder_frozen": 1423618
+    },
+    "regularization": {
+      "adapter_l2": 1e-05,
+      "base_logit_kl": {
+        "coefficient": 0.1,
+        "reduction": "per-token batchmean, multiplied by temperature squared",
+        "reference": "same frozen base T3 pass with every LoRA residual scale set to zero",
+        "reference_gradients": false,
+        "temperature": 1.0
+      },
+      "grad_clip": 1.0,
+      "weight_decay": 0.0001
+    },
+    "tradeoffs": {
+      "8gb_gpu_feasibility": "training is likely feasible with Nano plus LoRA and short excerpts; full model load and optimizer/vocoder RSS must be measured on the target GPU",
+      "adapter_scope": "GPT-2 attention projections only unless --target-modules changes it",
+      "expected_effect": "small timbre/prosody correction; no new speaker data or vocoder denoising capacity",
+      "quality_claim": "not established until heldout audio and speaker-similarity metrics are evaluated"
+    },
+    "training": {
+      "best_valid_loss": 5.55087423324585,
+      "early_stop_patience": 1,
+      "elapsed_seconds": 12.687074722999569,
+      "epoch": 1,
+      "history": [
+        {
+          "epoch": 0,
+          "objective": "initial heldout loss before optimizer steps",
+          "train": null,
+          "valid": {
+            "correct": 17,
+            "loss": 5.553082466125488,
+            "perplexity": 258.0317052985514,
+            "token_accuracy": 0.06093189964157706,
+            "tokens": 279
+          }
+        },
+        {
+          "adapter_l2": 1e-05,
+          "epoch": 1,
+          "kl_coef": 0.1,
+          "kl_temperature": 1.0,
+          "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+          "train": {
+            "correct": 32,
+            "loss": 4.466495513916016,
+            "perplexity": 87.05111839962764,
+            "token_accuracy": 0.17679558011049723,
+            "tokens": 181
+          },
+          "train_kl": -7.0789227812895206e-09,
+          "valid": {
+            "correct": 17,
+            "loss": 5.55087423324585,
+            "perplexity": 257.4625398591253,
+            "token_accuracy": 0.06093189964157706,
+            "tokens": 279
+          }
+        }
+      ],
+      "initial_valid": {
+        "correct": 17,
+        "loss": 5.553082466125488,
+        "perplexity": 258.0317052985514,
+        "token_accuracy": 0.06093189964157706,
+        "tokens": 279
+      },
+      "peak_rss_mib": 5205.359375
+    },
+    "zero_shot_label": "base_nano_without_adapter"
+  }
+}

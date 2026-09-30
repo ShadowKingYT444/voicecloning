@@ -1,0 +1,368 @@
+{
+  "schema_version": 1,
+  "generated_by": "scripts/nano_lab/reference_evaluator.py",
+  "manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "runtime": {
+    "cpu_threads": 2,
+    "whisper_enabled": false,
+    "speaker_enabled": true,
+    "whisper_model": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+    "heldout_variant": "natural",
+    "excluded_heldout_ids": [],
+    "rss_mb": {
+      "rss_before_models_mb": 98.12,
+      "rss_after_speaker_model_mb": 585.11,
+      "rss_after_evaluation_mb": 718.78
+    }
+  },
+  "inputs": [
+    {
+      "label": "base_neutral_seed31",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_samples_base/neutral_seed31.wav",
+      "family": "asmr7",
+      "expected_text": null,
+      "measurements": {
+        "duration_s": 5.08,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -25.742,
+        "peak_dbfs": -7.109,
+        "crest_db": 18.633,
+        "dc_offset": -4.411e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -13.312,
+        "noise_floor_dbfs_proxy_low10pct_frames": -70.368,
+        "speech_level_dbfs_proxy_high50pct_frames": -26.227,
+        "snr_db_proxy_high50_minus_low10": 44.14,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -91.252,
+        "spectral_centroid_hz": 657.623,
+        "spectral_flatness_proxy": 0.026657,
+        "high_band_fraction_proxy_ge8khz": 0.004167,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 102.93,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 5,
+        "successful_count": 5,
+        "mean_cosine": 0.814145,
+        "min_cosine": 0.782741,
+        "max_cosine": 0.836997,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_01/asmr7_heldout_01__natural.wav",
+            "cosine": 0.836997
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.810515
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.782741
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_04/asmr7_heldout_04__natural.wav",
+            "cosine": 0.832672
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_05/asmr7_heldout_05__natural.wav",
+            "cosine": 0.807801
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "base_calm_seed47",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_samples_base/calm_seed47.wav",
+      "family": "asmr7",
+      "expected_text": null,
+      "measurements": {
+        "duration_s": 5.88,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -25.449,
+        "peak_dbfs": -8.18,
+        "crest_db": 17.269,
+        "dc_offset": -5.538e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -16.834,
+        "noise_floor_dbfs_proxy_low10pct_frames": -72.162,
+        "speech_level_dbfs_proxy_high50pct_frames": -24.568,
+        "snr_db_proxy_high50_minus_low10": 47.594,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -89.861,
+        "spectral_centroid_hz": 763.804,
+        "spectral_flatness_proxy": 0.029946,
+        "high_band_fraction_proxy_ge8khz": 0.00429,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 715.33,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 5,
+        "successful_count": 5,
+        "mean_cosine": 0.797479,
+        "min_cosine": 0.76327,
+        "max_cosine": 0.826099,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_01/asmr7_heldout_01__natural.wav",
+            "cosine": 0.810882
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.815474
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.76327
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_04/asmr7_heldout_04__natural.wav",
+            "cosine": 0.826099
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_05/asmr7_heldout_05__natural.wav",
+            "cosine": 0.77167
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "rank4_neutral_seed31",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_samples_rank4/neutral_seed31.wav",
+      "family": "asmr7",
+      "expected_text": null,
+      "measurements": {
+        "duration_s": 5.0,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -26.809,
+        "peak_dbfs": -10.38,
+        "crest_db": 16.429,
+        "dc_offset": -4.779e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -18.741,
+        "noise_floor_dbfs_proxy_low10pct_frames": -69.33,
+        "speech_level_dbfs_proxy_high50pct_frames": -25.233,
+        "snr_db_proxy_high50_minus_low10": 44.097,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -88.725,
+        "spectral_centroid_hz": 659.455,
+        "spectral_flatness_proxy": 0.02622,
+        "high_band_fraction_proxy_ge8khz": 0.002721,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 718.76,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 5,
+        "successful_count": 5,
+        "mean_cosine": 0.800897,
+        "min_cosine": 0.76758,
+        "max_cosine": 0.82073,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_01/asmr7_heldout_01__natural.wav",
+            "cosine": 0.81038
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.82073
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.76758
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_04/asmr7_heldout_04__natural.wav",
+            "cosine": 0.810113
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_05/asmr7_heldout_05__natural.wav",
+            "cosine": 0.795684
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "rank4_calm_seed47",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_samples_rank4/calm_seed47.wav",
+      "family": "asmr7",
+      "expected_text": null,
+      "measurements": {
+        "duration_s": 6.04,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -27.975,
+        "peak_dbfs": -11.986,
+        "crest_db": 15.989,
+        "dc_offset": -4.542e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -20.474,
+        "noise_floor_dbfs_proxy_low10pct_frames": -66.909,
+        "speech_level_dbfs_proxy_high50pct_frames": -26.108,
+        "snr_db_proxy_high50_minus_low10": 40.8,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -88.943,
+        "spectral_centroid_hz": 741.542,
+        "spectral_flatness_proxy": 0.03849,
+        "high_band_fraction_proxy_ge8khz": 0.008517,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 718.76,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 5,
+        "successful_count": 5,
+        "mean_cosine": 0.817641,
+        "min_cosine": 0.782201,
+        "max_cosine": 0.848163,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_01/asmr7_heldout_01__natural.wav",
+            "cosine": 0.82162
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.831652
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.782201
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_04/asmr7_heldout_04__natural.wav",
+            "cosine": 0.848163
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_05/asmr7_heldout_05__natural.wav",
+            "cosine": 0.804571
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "rank8_neutral_seed31",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_samples_rank8/neutral_seed31.wav",
+      "family": "asmr7",
+      "expected_text": null,
+      "measurements": {
+        "duration_s": 4.96,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -27.818,
+        "peak_dbfs": -8.588,
+        "crest_db": 19.23,
+        "dc_offset": -4.441e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -17.118,
+        "noise_floor_dbfs_proxy_low10pct_frames": -68.106,
+        "speech_level_dbfs_proxy_high50pct_frames": -26.985,
+        "snr_db_proxy_high50_minus_low10": 41.121,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -89.877,
+        "spectral_centroid_hz": 776.203,
+        "spectral_flatness_proxy": 0.040484,
+        "high_band_fraction_proxy_ge8khz": 0.006033,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 718.77,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 5,
+        "successful_count": 5,
+        "mean_cosine": 0.809981,
+        "min_cosine": 0.775262,
+        "max_cosine": 0.83329,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_01/asmr7_heldout_01__natural.wav",
+            "cosine": 0.817324
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.83329
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.775262
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_04/asmr7_heldout_04__natural.wav",
+            "cosine": 0.828809
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_05/asmr7_heldout_05__natural.wav",
+            "cosine": 0.795222
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "rank8_calm_seed47",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_samples_rank8/calm_seed47.wav",
+      "family": "asmr7",
+      "expected_text": null,
+      "measurements": {
+        "duration_s": 5.84,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -28.025,
+        "peak_dbfs": -11.901,
+        "crest_db": 16.124,
+        "dc_offset": -4.653e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -21.336,
+        "noise_floor_dbfs_proxy_low10pct_frames": -80.804,
+        "speech_level_dbfs_proxy_high50pct_frames": -25.974,
+        "snr_db_proxy_high50_minus_low10": 54.83,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -99.366,
+        "spectral_centroid_hz": 915.51,
+        "spectral_flatness_proxy": 0.049662,
+        "high_band_fraction_proxy_ge8khz": 0.009347,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 718.77,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 5,
+        "successful_count": 5,
+        "mean_cosine": 0.819464,
+        "min_cosine": 0.78307,
+        "max_cosine": 0.850167,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_01/asmr7_heldout_01__natural.wav",
+            "cosine": 0.836657
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.819226
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.78307
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_04/asmr7_heldout_04__natural.wav",
+            "cosine": 0.850167
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_05/asmr7_heldout_05__natural.wav",
+            "cosine": 0.8082
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    }
+  ]
+}

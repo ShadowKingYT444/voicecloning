@@ -1,0 +1,8 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+Stopping job: aggregate process RSS exceeded 1280 MiB
+          Finished with result: success
+Main processes terminated with: code=killed, status=15/TERM
+               Service runtime: 26.935s
+             CPU time consumed: 32.378s
+                   Memory peak: 1G (swap: 0B)

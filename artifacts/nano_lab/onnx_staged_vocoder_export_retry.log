@@ -1,0 +1,78 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_staged.py:208: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+  torch.onnx.export(
+/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_spectral.py:137: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if value.shape[-1] <= n_fft // 2:
+/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_spectral.py:167: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if magnitude.ndim != 3 or phase.ndim != 3 or magnitude.shape != phase.shape:
+/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_spectral.py:172: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if magnitude.shape[1] != n_freqs:
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/torch/onnx/_internal/torchscript_exporter/jit_utils.py:308: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_node_shape_type_inference(node, params_dict, opset_version)
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/torch/onnx/_internal/torchscript_exporter/utils.py:714: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_graph_shape_type_inference(
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/torch/onnx/_internal/torchscript_exporter/utils.py:1187: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_graph_shape_type_inference(
+{
+  "checkpoint": {
+    "bytes": 1064875036,
+    "exists": true,
+    "path": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+    "sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f"
+  },
+  "created_unix": 1790673998.0728393,
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "examples": {
+    "bytes": 235356,
+    "input_names": [
+      "speech_feat",
+      "phase_noise",
+      "sine_noise"
+    ],
+    "output_names": [
+      "output_0"
+    ],
+    "path": "examples.npz"
+  },
+  "graph": {
+    "bytes": 83532690,
+    "elapsed_seconds": 4.7485775140012265,
+    "opset": 18,
+    "path": "nano_hift_vocoder.onnx",
+    "requested_inputs": [
+      "speech_feat",
+      "phase_noise",
+      "sine_noise"
+    ],
+    "requested_outputs": [
+      "audio"
+    ],
+    "validation": "pending separate ORT verification"
+  },
+  "load": {
+    "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+    "loaded_tensors": 328,
+    "missing_tensors": [],
+    "selected_tensors": 328,
+    "skipped_tensors": 2163,
+    "unexpected_tensors": []
+  },
+  "model": "ResembleAI/chatterbox-nano",
+  "runtime_contract": "Inputs are S3Gen mel features plus explicit phase/source noise; output is unwatermarked waveform. Apply Perth in the release path.",
+  "schema_version": 1,
+  "source": "local Nano checkpoint; no Turbo substitution",
+  "spectral_replacement_vs_native_max_abs": 1.4126300811767578e-05,
+  "stage": "vocoder",
+  "status": "exported",
+  "verification": {
+    "command": "onnx_staged.py verify --stage vocoder",
+    "status": "not_run"
+  }
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 44.684s
+             CPU time consumed: 41.513s
+                   Memory peak: 1G (swap: 0B)

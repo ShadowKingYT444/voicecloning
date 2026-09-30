@@ -1,0 +1,13 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 63c0bd35cfdc487e8f0c7ffdd8028984
+{"id": "business_base", "cosine": 0.805554, "wer": null, "dnsmos_overall": 3.2928374525579964}
+{"id": "business_decoder_fit", "cosine": 0.808416, "wer": null, "dnsmos_overall": 3.356406814913054}
+{"id": "question_base", "cosine": 0.839333, "wer": null, "dnsmos_overall": 3.4234584196602245}
+{"id": "question_decoder_fit", "cosine": 0.84601, "wer": null, "dnsmos_overall": 3.4048063196221534}
+{"id": "narrative_base", "cosine": 0.846447, "wer": null, "dnsmos_overall": 3.4037614665583176}
+{"id": "narrative_decoder_fit", "cosine": 0.847735, "wer": null, "dnsmos_overall": 3.362366822816469}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 26.136s
+             CPU time consumed: 41.872s
+                   Memory peak: 711.4M (swap: 0B)

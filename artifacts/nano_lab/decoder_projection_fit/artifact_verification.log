@@ -1,0 +1,8 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 924f455370604eab994e75ca0a976224
+{"status": "passed", "scope": "actual saved adapter folded into actual source final-projection weight; isolated layer only, not full decoder inference or perceptual acceptance", "best_step": 11, "valid": {"total": 0.8882466554641724, "raw_mse": 0.873328447341919, "envelope_mse": 0.05364231951534748, "baseline_distill_mse": 0.00301495217718184, "adapter_l2": 0.0014380880165845156, "regularization": 1.4380880486442038e-07}, "factorized_vs_folded_max_abs": 6.67572021484375e-06, "repeat_application_exact": true, "restore_exact": true}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 8.801s
+             CPU time consumed: 8.877s
+                   Memory peak: 512.8M (swap: 0B)

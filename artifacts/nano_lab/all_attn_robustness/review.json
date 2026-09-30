@@ -1,0 +1,32 @@
+{
+  "status": "experimental_not_promoted",
+  "human_realism_verified": false,
+  "summary": [
+    {
+      "variant": "base",
+      "count": 4,
+      "mean_speaker_cosine": 0.8668432500000001,
+      "mean_dnsmos_overall": 2.978969941175168,
+      "small_exact_count": 4,
+      "tiny_exact_count": 2
+    },
+    {
+      "variant": "adapter",
+      "count": 4,
+      "mean_speaker_cosine": 0.86756475,
+      "mean_dnsmos_overall": 3.1944203531374247,
+      "small_exact_count": 4,
+      "tiny_exact_count": 3
+    },
+    {
+      "variant": "combined",
+      "count": 4,
+      "mean_speaker_cosine": 0.87452025,
+      "mean_dnsmos_overall": 3.2393133082152143,
+      "small_exact_count": 4,
+      "tiny_exact_count": 3
+    }
+  ],
+  "peak_rss_mib": 2428.2421875,
+  "caution": "Tiny disagrees on question seed79; Small matches all words. Scores are development diagnostics, not realism acceptance."
+}

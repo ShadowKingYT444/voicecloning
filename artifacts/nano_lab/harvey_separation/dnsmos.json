@@ -1,0 +1,72 @@
+[
+  {
+    "id": "harvey_quote_01_isolated",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_01_isolated.wav",
+    "voice": "harvey",
+    "start_s": 0.0,
+    "end_s": 6.3,
+    "source": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+    "preprocessing": "Demucs htdemucs vocals",
+    "dnsmos_signal": 3.343092409835968,
+    "dnsmos_background": 3.88939739771409,
+    "dnsmos_overall": 3.012759798648056,
+    "dnsmos_windows": 4,
+    "dnsmos_repeated_short_clip": true
+  },
+  {
+    "id": "harvey_quote_02_isolated",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+    "voice": "harvey",
+    "start_s": 9.0,
+    "end_s": 16.1,
+    "source": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+    "preprocessing": "Demucs htdemucs vocals",
+    "dnsmos_signal": 3.5252882468564306,
+    "dnsmos_background": 3.110586410291964,
+    "dnsmos_overall": 2.7966290910647786,
+    "dnsmos_windows": 6,
+    "dnsmos_repeated_short_clip": true
+  },
+  {
+    "id": "harvey_quote_03_isolated",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_03_isolated.wav",
+    "voice": "harvey",
+    "start_s": 18.6,
+    "end_s": 24.7,
+    "source": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+    "preprocessing": "Demucs htdemucs vocals",
+    "dnsmos_signal": 3.6742481098150477,
+    "dnsmos_background": 3.9064781639878285,
+    "dnsmos_overall": 3.29415777909981,
+    "dnsmos_windows": 4,
+    "dnsmos_repeated_short_clip": true
+  },
+  {
+    "id": "harvey_quote_04_isolated",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_04_isolated.wav",
+    "voice": "harvey",
+    "start_s": 26.7,
+    "end_s": 33.2,
+    "source": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+    "preprocessing": "Demucs htdemucs vocals",
+    "dnsmos_signal": 3.3182201921881873,
+    "dnsmos_background": 3.979157076841563,
+    "dnsmos_overall": 3.019433665821083,
+    "dnsmos_windows": 4,
+    "dnsmos_repeated_short_clip": true
+  },
+  {
+    "id": "harvey_heldout_01_isolated",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+    "voice": "harvey",
+    "start_s": 34.0,
+    "end_s": 40.8,
+    "source": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+    "preprocessing": "Demucs htdemucs vocals",
+    "dnsmos_signal": 3.619752889521803,
+    "dnsmos_background": 3.7640234330493443,
+    "dnsmos_overall": 3.1793923882808963,
+    "dnsmos_windows": 5,
+    "dnsmos_repeated_short_clip": true
+  }
+]

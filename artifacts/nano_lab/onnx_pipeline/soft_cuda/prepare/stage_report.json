@@ -1,0 +1,23 @@
+{
+  "elapsed_seconds": 3.475027084350586,
+  "finished_unix": 1790698991.7298598,
+  "result": {
+    "conditioning_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_soft_morning_31.conds.pt",
+    "field_count": 7,
+    "mode": "zero_shot",
+    "profile": "/home/terryd/gooning/voicecloning/voices/nano/asmr_soft.json",
+    "skipped_optional_fields": [
+      "t3.clap_emb",
+      "t3.cond_prompt_speech_emb",
+      "gen.prompt_feat_len"
+    ]
+  },
+  "rss": {
+    "peak_rss_bytes": 234668032,
+    "rss_bytes": 235827200
+  },
+  "schema_version": 1,
+  "stage": "prepare",
+  "started_unix": 1790698988.254834,
+  "status": "ok"
+}

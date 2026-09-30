@@ -1,0 +1,113 @@
+{
+  "format": "nano_t3_adaptation_quality_review_v1",
+  "status": "full_strength_adapters_rejected_for_release",
+  "decision": {
+    "rank4": {
+      "checkpoint": "artifacts/nano_lab/adaptation_asmr_rank4.pt",
+      "heldout_ce_gate": {
+        "accepted": true,
+        "baseline_loss": 5.553082466125488,
+        "best_loss": 5.1545209884643555,
+        "best_epoch": 8
+      },
+      "independent_quality_gate": {
+        "accepted": false,
+        "reason": "full-strength adapter introduced phonetic transcription errors on both neutral and calm unseen prompts"
+      }
+    },
+    "rank8": {
+      "checkpoint": "artifacts/nano_lab/adaptation_asmr_rank8.pt",
+      "heldout_ce_gate": {
+        "accepted": true,
+        "baseline_loss": 5.553082466125488,
+        "best_loss": 5.154116630554199,
+        "best_epoch": 8
+      },
+      "independent_quality_gate": {
+        "accepted": false,
+        "reason": "full-strength adapter introduced larger phonetic and word-boundary errors on both neutral and calm unseen prompts"
+      }
+    }
+  },
+  "independent_evaluation": {
+    "report": "artifacts/nano_lab/adaptation_comparison_eval.json",
+    "whisper_model": "Whisper_fast_package/models/tiny.en",
+    "heldout_variant": "natural",
+    "speaker_similarity_heldouts": [
+      "asmr7_heldout_02",
+      "asmr7_heldout_03"
+    ],
+    "excluded_heldout_ids": [
+      "asmr7_heldout_01",
+      "asmr7_heldout_04",
+      "asmr7_heldout_05"
+    ],
+    "matched_samples": [
+      {
+        "label": "base_neutral_seed31",
+        "wer": 0.0,
+        "wer_contraction_normalized": 0.0,
+        "speaker_cosine_mean": 0.796628
+      },
+      {
+        "label": "base_calm_seed47",
+        "wer": 0.0,
+        "wer_contraction_normalized": 0.0,
+        "speaker_cosine_mean": 0.789372
+      },
+      {
+        "label": "rank4_neutral_seed31",
+        "wer": 0.117647,
+        "wer_contraction_normalized": 0.117647,
+        "speaker_cosine_mean": 0.794155
+      },
+      {
+        "label": "rank4_calm_seed47",
+        "wer": 0.1875,
+        "wer_contraction_normalized": 0.0625,
+        "speaker_cosine_mean": 0.806926
+      },
+      {
+        "label": "rank8_neutral_seed31",
+        "wer": 0.235294,
+        "wer_contraction_normalized": 0.235294,
+        "speaker_cosine_mean": 0.804276
+      },
+      {
+        "label": "rank8_calm_seed47",
+        "wer": 0.25,
+        "wer_contraction_normalized": 0.125,
+        "speaker_cosine_mean": 0.801149
+      }
+    ]
+  },
+  "interpretation": [
+    "Teacher-forced heldout CE improvement is insufficient for release when free-running text fidelity degrades.",
+    "Speaker cosine remains near the base range, so it does not offset the observed phonetic errors.",
+    "The checkpoints remain available for controlled reduced-strength or KL-regularized experiments; this review makes no claim that either checkpoint is production quality."
+  ],
+  "next_experiments": {
+    "inference_adapter_scale": [0.25, 0.5],
+    "training_regularizer": "optional --kl-coef against exact frozen-base logits with --kl-temperature",
+    "proposed_regularized_training": {
+      "checkpoint": "artifacts/nano_lab/adaptation_asmr_rank4_kl05.pt",
+      "rank": 4,
+      "alpha": 8.0,
+      "dropout": 0.05,
+      "layers": "last4",
+      "target_modules": "attn",
+      "lr": 0.0002,
+      "weight_decay": 0.0001,
+      "adapter_l2": 0.00001,
+      "kl_coef": 0.5,
+      "kl_temperature": 2.0,
+      "epochs": 8,
+      "max_steps": 150,
+      "patience": 3,
+      "min_delta": 0.0001,
+      "seed": 31,
+      "selection_rule": "evaluate the same neutral and calm prompts against base and reduced-strength adapters; require no new phonetic WER regressions before release",
+      "data_policy": "reuse adaptation_asmr_cache.json with nine train rows and one disjoint validation row; do not use the matched free-running prompts for training"
+    }
+  }
+}

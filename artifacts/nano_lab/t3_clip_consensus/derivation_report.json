@@ -1,0 +1,134 @@
+{
+  "status": "metadata_verified",
+  "counts": {
+    "train": 12,
+    "valid": 2,
+    "all": 14
+  },
+  "duration_s": {
+    "train": 55.8,
+    "valid": 18.22
+  },
+  "provenance": {
+    "derivation": "subset_of_existing_clip_consensus_manifest",
+    "parent_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/adaptation_repaired.json",
+    "parent_manifest_sha256": "f406d33a47630044f06219683f681f1b811627c7fdce61dd5d9344a2be41a924",
+    "previous_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/adaptation_repaired.json",
+    "previous_manifest_sha256": "f17da82a3b9eaa474beb9eb6d9c514508945914c1d4e588afa72b1d10e735ee2",
+    "proposal_sha256": "7b7ae63405215e7098553810d810bcb887c2fe710e82994b05bb7ffb49967fd5",
+    "protected_interval_buffer_s": 2,
+    "protected_intervals": [
+      {
+        "end_s": 48.2,
+        "id": "asmr7_party_01",
+        "section": "references",
+        "start_s": 35.1
+      },
+      {
+        "end_s": 102.1,
+        "id": "asmr7_heldout_01",
+        "section": "heldout",
+        "start_s": 92.1
+      },
+      {
+        "end_s": 129.0,
+        "id": "asmr7_bully_01",
+        "section": "references",
+        "start_s": 117.7
+      },
+      {
+        "end_s": 151.2,
+        "id": "asmr7_bully_02",
+        "section": "references",
+        "start_s": 138.7
+      },
+      {
+        "end_s": 194.6,
+        "id": "asmr7_conversational_01",
+        "section": "references",
+        "start_s": 181.3
+      },
+      {
+        "end_s": 251.1,
+        "id": "asmr7_heldout_02",
+        "section": "heldout",
+        "start_s": 239.0
+      },
+      {
+        "end_s": 315.9,
+        "id": "asmr7_heldout_03",
+        "section": "heldout",
+        "start_s": 303.8
+      },
+      {
+        "end_s": 368.1,
+        "id": "asmr7_soft_praise_01",
+        "section": "references",
+        "start_s": 354.2
+      },
+      {
+        "end_s": 386.0,
+        "id": "asmr7_emotional_01",
+        "section": "references",
+        "start_s": 372.6
+      },
+      {
+        "end_s": 404.7,
+        "id": "asmr7_emotional_02",
+        "section": "references",
+        "start_s": 390.7
+      },
+      {
+        "end_s": 486.8,
+        "id": "asmr7_heldout_04",
+        "section": "heldout",
+        "start_s": 475.7
+      },
+      {
+        "end_s": 599.8,
+        "id": "asmr7_heldout_05",
+        "section": "heldout",
+        "start_s": 585.9
+      }
+    ],
+    "excluded": [
+      {
+        "id": "asmr7_repair_011",
+        "reason": "protected_interval_2s_buffer",
+        "intervals": [
+          "asmr7_heldout_01"
+        ]
+      }
+    ],
+    "evidence_hashes": {
+      "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/tiny_clip_audit.json": "b741da40ff898eadc662ec31cf48f7c5c6c925454238c299b6b4484cceda9407",
+      "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_clip/small_ct2_audit.json": "a98a45891eeee8719027b450c046bf12801000b931ec6fd3402d49afb767c06b"
+    },
+    "valid_ids": [
+      "asmr7_repair_022",
+      "asmr7_repair_030"
+    ],
+    "duration_s": {
+      "train": 55.8,
+      "valid": 18.22
+    },
+    "new_ids": [
+      "asmr7_repair_005",
+      "asmr7_repair_029",
+      "asmr7_repair_030",
+      "asmr7_repair_031"
+    ],
+    "removed_prior_ids": [
+      "asmr7_repair_001",
+      "asmr7_repair_011",
+      "asmr7_repair_012",
+      "asmr7_repair_023",
+      "asmr7_repair_025",
+      "asmr7_repair_028",
+      "asmr7_repair_033"
+    ],
+    "limitation": "Validation 022 was used previously; 030 was not used for T3 training. Both occur in acoustic decoder fitting data. No general unseen-voice claim."
+  },
+  "prepared_features": false,
+  "trained": false
+}

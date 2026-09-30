@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Repaired training comparison</title><style>body{font:17px system-ui;max-width:1000px;margin:40px auto;padding:0 20px;background:#12151b;color:#eef1f7}h1{font-size:30px}p{line-height:1.5;color:#ccd4e3}section{margin:32px 0}article{padding:16px;background:#202633;margin:12px 0;border-radius:10px}audio{display:block;width:100%;margin-top:12px}small{color:#b6c1d4}a{color:#a8cbff}</style><h1>Repaired training comparison</h1><p>Experimental synthetic speech. The previous fitted samples used incorrect training transcripts and are rejected. These new variants use 15 source clips with exact agreement between two speech recognizers. Two separate clips control training. Human verification is still required.</p><p>Each group uses the same text, reference, seed, and output processing. Compare voice character, delivery, and background noise. Training loss and automatic audio scores do not establish realistic cloning.</p><h2>Source voice</h2><audio controls preload="none" src="../references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav"></audio>
+<section><h2>Neutral</h2><p>I left the blue notebook beside the window. Please bring it with you when we meet tomorrow.</p>
+<article><strong>Unchanged model</strong><audio controls preload="none" src="neutral_base.master.wav"></audio><small>5.96 seconds</small></article>
+<article><strong>Speaker adjustment</strong><audio controls preload="none" src="neutral_speaker.master.wav"></audio><small>5.48 seconds</small></article>
+<article><strong>Adapter at 50%</strong><audio controls preload="none" src="neutral_adapter_half.master.wav"></audio><small>5.56 seconds</small></article>
+<article><strong>Adapter at 100%</strong><audio controls preload="none" src="neutral_adapter_full.master.wav"></audio><small>6.28 seconds</small></article>
+<article><strong>Speaker adjustment + adapter at 50%</strong><audio controls preload="none" src="neutral_combined_half.master.wav"></audio><small>4.72 seconds</small></article>
+</section>
+<section><h2>Expressive</h2><p>Really? I thought you had forgotten. That is wonderful news. Tell me what happened.</p>
+<article><strong>Unchanged model</strong><audio controls preload="none" src="expressive_base.master.wav"></audio><small>6.56 seconds</small></article>
+<article><strong>Speaker adjustment</strong><audio controls preload="none" src="expressive_speaker.master.wav"></audio><small>6.20 seconds</small></article>
+<article><strong>Adapter at 50%</strong><audio controls preload="none" src="expressive_adapter_half.master.wav"></audio><small>5.20 seconds</small></article>
+<article><strong>Adapter at 100%</strong><audio controls preload="none" src="expressive_adapter_full.master.wav"></audio><small>6.52 seconds</small></article>
+<article><strong>Speaker adjustment + adapter at 50%</strong><audio controls preload="none" src="expressive_combined_half.master.wav"></audio><small>5.44 seconds</small></article>
+</section>
+<section><h2>Quiet</h2><p>The room is quiet now. Take a slow breath. We have plenty of time to talk.</p>
+<article><strong>Unchanged model</strong><audio controls preload="none" src="quiet_base.master.wav"></audio><small>5.36 seconds</small></article>
+<article><strong>Speaker adjustment</strong><audio controls preload="none" src="quiet_speaker.master.wav"></audio><small>5.48 seconds</small></article>
+<article><strong>Adapter at 50%</strong><audio controls preload="none" src="quiet_adapter_half.master.wav"></audio><small>4.80 seconds</small></article>
+<article><strong>Adapter at 100%</strong><audio controls preload="none" src="quiet_adapter_full.master.wav"></audio><small>5.16 seconds</small></article>
+<article><strong>Speaker adjustment + adapter at 50%</strong><audio controls preload="none" src="quiet_combined_half.master.wav"></audio><small>5.00 seconds</small></article>
+</section>
+<p><a href="evaluation.json">Automatic evaluation</a> · <a href="manifest.json">Generation and memory data</a></p></html>

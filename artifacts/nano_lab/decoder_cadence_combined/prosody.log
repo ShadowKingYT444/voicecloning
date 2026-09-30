@@ -1,0 +1,8 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"analyzed_count": 4, "error_count": 0, "out": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_cadence_combined/prosody.json", "peak_rss_mib": 130.234}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 21.198s
+             CPU time consumed: 41.241s
+                   Memory peak: 94.7M (swap: 0B)

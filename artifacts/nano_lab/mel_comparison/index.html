@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Spectral calibration candidate</title><style>body{font:17px system-ui;max-width:900px;margin:40px auto;padding:0 20px;background:#12151b;color:#eef1f7}p{line-height:1.5;color:#ccd4e3}section{margin:32px 0}article{padding:16px;background:#202633;margin:12px 0;border-radius:10px}audio{display:block;width:100%;margin-top:12px}a{color:#a8cbff}</style><h1>Spectral calibration candidate</h1><p>Experimental synthetic speech. Each pair uses the same text, reference, random seed, and speech tokens. The candidate applies a small tone correction before waveform synthesis. It has not been approved as a convincing clone.</p><p>All players use constant-gain copies at -27 LUFS for a fair volume comparison. No limiter, denoiser, or tone filter was added. Original files remain in the generation manifest.</p><h2>Source reference</h2><audio controls preload="none" src="../level_matched/source_conversational.wav"></audio>
+<section><h2>Neutral</h2><p>I left the blue notebook beside the window. Please bring it with you when we meet tomorrow.</p>
+<article><strong>Unchanged candidate</strong><audio controls preload="none" src="../level_matched/mel_comparison__neutral_base.wav"></audio></article>
+<article><strong>Spectral correction</strong><audio controls preload="none" src="../level_matched/mel_comparison__neutral_mel_full.wav"></audio></article>
+</section>
+<section><h2>Expressive</h2><p>Really? I thought you had forgotten. That is wonderful news. Tell me what happened.</p>
+<article><strong>Unchanged candidate</strong><audio controls preload="none" src="../level_matched/mel_comparison__expressive_base.wav"></audio></article>
+<article><strong>Spectral correction</strong><audio controls preload="none" src="../level_matched/mel_comparison__expressive_mel_full.wav"></audio></article>
+</section>
+<section><h2>Quiet</h2><p>The room is quiet now. Take a slow breath. We have plenty of time to talk.</p>
+<article><strong>Unchanged candidate</strong><audio controls preload="none" src="../level_matched/mel_comparison__quiet_base.wav"></audio></article>
+<article><strong>Spectral correction</strong><audio controls preload="none" src="../level_matched/mel_comparison__quiet_mel_full.wav"></audio></article>
+</section>
+<p>Compare voice character, natural delivery, and static. Small improvements in automatic estimates do not establish realism.</p><p><a href="evaluation.json">Automatic evaluation</a> · <a href="manifest.json">Generation and memory data</a></p></html>

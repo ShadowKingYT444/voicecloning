@@ -1,0 +1,61 @@
+{
+  "elapsed_seconds": 7.557040214538574,
+  "finished_unix": 1790729001.4785905,
+  "result": {
+    "conditioning_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+    "field_count": 7,
+    "mode": "speaker_specific_text_decoder_attention_fit",
+    "profile": "/home/terryd/gooning/voicecloning/voices/nano/asmr_acoustic_attention_experimental.json",
+    "profile_validation": {
+      "adapter": {
+        "adapter_patch_format": "nano_t3_lora_merged_v1",
+        "adapter_sha256": "cec985d98348a0a09a437766b996862d1f1017d36bdb8f400bbc0ad1547b0c4d",
+        "enabled": true,
+        "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged_adapter_aligned_all_attn/t3/nano_t3_kv.onnx",
+        "graph_sha256": "01c73f743c816b379ea93d56846e2253f7869118394b363ebd5c2fdde36dee83",
+        "manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged_adapter_aligned_all_attn_decoder_attention/t3/manifest.json",
+        "manifest_sha256": "4a523c90ca95d5eba858fe0cb7474aa173a5406f2ec45dc7ecd66d485eabe421",
+        "patched_graph_sha256": "01c73f743c816b379ea93d56846e2253f7869118394b363ebd5c2fdde36dee83",
+        "profile_adapter": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adapter_aligned_all_attn.pt",
+        "profile_scale": 1.0
+      },
+      "decoder_attention": {
+        "adapter_sha256": "de6d40e5565011022efe776c1852f5bdc1850a87cf4e0e5ba51208aba3e747c2",
+        "enabled": true,
+        "graph_sha256": "df2a1c85850133ce490830b1c795da0d9bc1848ceac5226b3e997b43d16df643",
+        "initial_conditionals_sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+        "manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged_adapter_aligned_all_attn_decoder_attention/meanflow_estimator/manifest.json",
+        "patched_weights_sha256": "76c1253a5ca4340c2457b871a708d0b14f673fb5fe8e0d6559b6f958f52bac03",
+        "strength": 1.0
+      },
+      "mel_calibration": {
+        "applied": false,
+        "delta_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/delta.npy",
+        "delta_sha256": "f2fe4c931a6d2d68e8a7be9775761c6e1911dd9740c9f3715861debc99637e83",
+        "enabled": true,
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/report.json",
+        "report_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+        "strength": 1.0
+      },
+      "profile": "/home/terryd/gooning/voicecloning/voices/nano/asmr_acoustic_attention_experimental.json",
+      "t3_donor": {
+        "mode": "prompt",
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+        "sha256": "ba80b353c82ab7f8a59ecbab4da0ec59dcde252a93162e6773dde184d99a078c"
+      }
+    },
+    "skipped_optional_fields": [
+      "t3.clap_emb",
+      "t3.cond_prompt_speech_emb",
+      "gen.prompt_feat_len"
+    ]
+  },
+  "rss": {
+    "peak_rss_bytes": 236310528,
+    "rss_bytes": 238268416
+  },
+  "schema_version": 1,
+  "stage": "prepare",
+  "started_unix": 1790728993.9215531,
+  "status": "ok"
+}

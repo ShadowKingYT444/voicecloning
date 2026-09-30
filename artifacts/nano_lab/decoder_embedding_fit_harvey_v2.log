@@ -1,0 +1,24 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{
+  "command": [
+    "scripts/nano_lab/fit_decoder_embedding.py",
+    "--prepare-dir",
+    "artifacts/nano_lab/mel_calibration_harvey",
+    "--output-dir",
+    "artifacts/nano_lab/decoder_embedding_fit_harvey_v2",
+    "--max-steps",
+    "40"
+  ],
+  "error": "prompt token/feature lengths are not paired: token=177/177, feat=355/355",
+  "error_type": "ValueError",
+  "format": "nano_decoder_embedding_fit_v1",
+  "output_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit_harvey_v2",
+  "peak_rss_bytes": 540786688,
+  "status": "failed"
+}
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 6.398s
+             CPU time consumed: 6.201s
+                   Memory peak: 271.9M (swap: 0B)

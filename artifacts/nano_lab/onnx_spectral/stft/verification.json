@@ -1,0 +1,23 @@
+{
+  "errors": [],
+  "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_spectral/stft/nano_stft_real.onnx",
+  "inference_seconds": 0.005349651000869926,
+  "inputs": [
+    "waveform"
+  ],
+  "max_abs_error": 0.0,
+  "max_relative_error": 0.0,
+  "method": "pure ORT CPU against Torch reference saved during export",
+  "outputs": 2,
+  "peak_rss_bytes": 67387392,
+  "provider": "CPUExecutionProvider",
+  "rss_after_session_bytes": 66048000,
+  "rss_before_session_bytes": 56979456,
+  "session_load_seconds": 0.07506520999959321,
+  "stage": "stft",
+  "status": "verified",
+  "tolerances": {
+    "atol": 3e-05,
+    "rtol": 3e-05
+  }
+}

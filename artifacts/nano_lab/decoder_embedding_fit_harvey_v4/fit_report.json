@@ -1,0 +1,2159 @@
+{
+  "adoption_gate": {
+    "improved_over_epoch0": true,
+    "min_cosine": 0.98,
+    "status": "experimental_not_promoted"
+  },
+  "baseline_embedding": {
+    "cosine_to_itself": 1.0,
+    "norm": 12.606304168701172,
+    "shape": [
+      1,
+      192
+    ]
+  },
+  "best_step": 40,
+  "best_valid_total": 1.2532182931900024,
+  "cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_harvey_aligned_cache.json",
+  "cache_sha256": "10cf52f83a8eb014dad1239983b3dd43a4e8b99c1fd4234b26c124a080cd32b1",
+  "checkpoint": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit_harvey_v4/best_embedding.pt",
+  "command": [
+    "scripts/nano_lab/fit_decoder_embedding.py",
+    "--prepare-dir",
+    "artifacts/nano_lab/mel_calibration_harvey",
+    "--output-dir",
+    "artifacts/nano_lab/decoder_embedding_fit_harvey_v4",
+    "--max-steps",
+    "40"
+  ],
+  "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+  "conditionals_sha256": "3b7db489a52a1a6cf14a9a43148d11b4689c32b090124aa80b02f162ef5480f2",
+  "device": "cuda",
+  "diagnostic_only": true,
+  "disclosure": "Decoder embedding fit uses source-token reconstruction targets. It is not text generation and does not establish zero-shot voice cloning quality.",
+  "elapsed_seconds": 75.91178761899937,
+  "epoch0": {
+    "train": {
+      "mean": {
+        "cosine": 1.0,
+        "envelope_mse": 0.2630326971411705,
+        "raw_mse": 1.6296196579933167,
+        "regularization": 0.0,
+        "total": 1.6953778266906738
+      },
+      "rows": [
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.23915152251720428,
+          "id": "harvey_repair_001",
+          "raw_mse": 1.546087384223938,
+          "regularization": 0.0,
+          "total": 1.6058752536773682
+        },
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.2869138717651367,
+          "id": "harvey_repair_005",
+          "raw_mse": 1.7131519317626953,
+          "regularization": 0.0,
+          "total": 1.7848803997039795
+        }
+      ]
+    },
+    "valid": {
+      "mean": {
+        "cosine": 1.0,
+        "envelope_mse": 0.2577568590641022,
+        "raw_mse": 1.2812303304672241,
+        "regularization": 0.0,
+        "total": 1.3456695079803467
+      },
+      "rows": [
+        {
+          "cosine": 1.0,
+          "envelope_mse": 0.2577568590641022,
+          "id": "harvey_repair_004",
+          "raw_mse": 1.2812303304672241,
+          "regularization": 0.0,
+          "total": 1.3456695079803467
+        }
+      ]
+    }
+  },
+  "experimental": true,
+  "final_valid": {
+    "mean": {
+      "cosine": 0.9800000190734863,
+      "envelope_mse": 0.23331399261951447,
+      "raw_mse": 1.1946897506713867,
+      "regularization": 0.00019999980577267706,
+      "total": 1.2532182931900024
+    },
+    "rows": [
+      {
+        "cosine": 0.9800000190734863,
+        "envelope_mse": 0.23331399261951447,
+        "id": "harvey_repair_004",
+        "raw_mse": 1.1946897506713867,
+        "regularization": 0.00019999980577267706,
+        "total": 1.2532182931900024
+      }
+    ]
+  },
+  "fitted_embedding": {
+    "cosine_to_baseline": 0.9800000190734863,
+    "norm": 12.606304168701172,
+    "shape": [
+      1,
+      192
+    ]
+  },
+  "format": "nano_decoder_embedding_fit_v1",
+  "frozen_params_no_grads": true,
+  "gradient_probe": {
+    "finite": true,
+    "gradient_norm": 0.36405158042907715,
+    "nonzero": true,
+    "row_count": 2
+  },
+  "history": [
+    {
+      "gradient_norm": 0.36405158042907715,
+      "step": 1,
+      "train": {
+        "mean": {
+          "cosine": 1.0,
+          "envelope_mse": 0.2630326971411705,
+          "raw_mse": 1.6296196579933167,
+          "regularization": 0.0,
+          "total": 1.6953778266906738
+        },
+        "rows": [
+          {
+            "cosine": 1.0,
+            "envelope_mse": 0.23915152251720428,
+            "raw_mse": 1.546087384223938,
+            "regularization": 0.0,
+            "total": 1.6058752536773682
+          },
+          {
+            "cosine": 1.0,
+            "envelope_mse": 0.2869138717651367,
+            "raw_mse": 1.7131519317626953,
+            "regularization": 0.0,
+            "total": 1.7848803997039795
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9999397993087769,
+          "envelope_mse": 0.25878116488456726,
+          "raw_mse": 1.2764334678649902,
+          "regularization": 6.02006878125394e-07,
+          "total": 1.3411293029785156
+        },
+        "rows": [
+          {
+            "cosine": 0.9999397993087769,
+            "envelope_mse": 0.25878116488456726,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2764334678649902,
+            "regularization": 6.02006878125394e-07,
+            "total": 1.3411293029785156
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.3301338255405426,
+      "step": 2,
+      "train": {
+        "mean": {
+          "cosine": 0.9999397993087769,
+          "envelope_mse": 0.2570829838514328,
+          "raw_mse": 1.592086672782898,
+          "regularization": 6.02006878125394e-07,
+          "total": 1.656358003616333
+        },
+        "rows": [
+          {
+            "cosine": 0.9999397993087769,
+            "envelope_mse": 0.22826552391052246,
+            "raw_mse": 1.5027002096176147,
+            "regularization": 6.02006878125394e-07,
+            "total": 1.5597671270370483
+          },
+          {
+            "cosine": 0.9999397993087769,
+            "envelope_mse": 0.28590044379234314,
+            "raw_mse": 1.6814731359481812,
+            "regularization": 6.02006878125394e-07,
+            "total": 1.7529488801956177
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.999761164188385,
+          "envelope_mse": 0.2599274516105652,
+          "raw_mse": 1.2720927000045776,
+          "regularization": 2.3883580979600083e-06,
+          "total": 1.3370769023895264
+        },
+        "rows": [
+          {
+            "cosine": 0.999761164188385,
+            "envelope_mse": 0.2599274516105652,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2720927000045776,
+            "regularization": 2.3883580979600083e-06,
+            "total": 1.3370769023895264
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.29911738634109497,
+      "step": 3,
+      "train": {
+        "mean": {
+          "cosine": 0.999761164188385,
+          "envelope_mse": 0.25221822410821915,
+          "raw_mse": 1.5577024817466736,
+          "regularization": 2.3883580979600083e-06,
+          "total": 1.6207594275474548
+        },
+        "rows": [
+          {
+            "cosine": 0.999761164188385,
+            "envelope_mse": 0.21804581582546234,
+            "raw_mse": 1.4614968299865723,
+            "regularization": 2.3883580979600083e-06,
+            "total": 1.5160106420516968
+          },
+          {
+            "cosine": 0.999761164188385,
+            "envelope_mse": 0.28639063239097595,
+            "raw_mse": 1.653908133506775,
+            "regularization": 2.3883580979600083e-06,
+            "total": 1.725508213043213
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9994683265686035,
+          "envelope_mse": 0.2609570324420929,
+          "raw_mse": 1.2682216167449951,
+          "regularization": 5.316734132065903e-06,
+          "total": 1.3334662914276123
+        },
+        "rows": [
+          {
+            "cosine": 0.9994683265686035,
+            "envelope_mse": 0.2609570324420929,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2682216167449951,
+            "regularization": 5.316734132065903e-06,
+            "total": 1.3334662914276123
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.27108633518218994,
+      "step": 4,
+      "train": {
+        "mean": {
+          "cosine": 0.9994683265686035,
+          "envelope_mse": 0.2483656108379364,
+          "raw_mse": 1.5268495678901672,
+          "regularization": 5.316734132065903e-06,
+          "total": 1.5889463424682617
+        },
+        "rows": [
+          {
+            "cosine": 0.9994683265686035,
+            "envelope_mse": 0.2086450159549713,
+            "raw_mse": 1.423345685005188,
+            "regularization": 5.316734132065903e-06,
+            "total": 1.4755122661590576
+          },
+          {
+            "cosine": 0.9994683265686035,
+            "envelope_mse": 0.2880862057209015,
+            "raw_mse": 1.6303534507751465,
+            "regularization": 5.316734132065903e-06,
+            "total": 1.7023804187774658
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9990674257278442,
+          "envelope_mse": 0.26187142729759216,
+          "raw_mse": 1.2644782066345215,
+          "regularization": 9.325742212240584e-06,
+          "total": 1.3299553394317627
+        },
+        "rows": [
+          {
+            "cosine": 0.9990674257278442,
+            "envelope_mse": 0.26187142729759216,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2644782066345215,
+            "regularization": 9.325742212240584e-06,
+            "total": 1.3299553394317627
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.24531954526901245,
+      "step": 5,
+      "train": {
+        "mean": {
+          "cosine": 0.9990674257278442,
+          "envelope_mse": 0.24549339711666107,
+          "raw_mse": 1.4990814328193665,
+          "regularization": 9.325742212240584e-06,
+          "total": 1.560464084148407
+        },
+        "rows": [
+          {
+            "cosine": 0.9990674257278442,
+            "envelope_mse": 0.1998995542526245,
+            "raw_mse": 1.387473702430725,
+            "regularization": 9.325742212240584e-06,
+            "total": 1.4374579191207886
+          },
+          {
+            "cosine": 0.9990674257278442,
+            "envelope_mse": 0.29108723998069763,
+            "raw_mse": 1.6106891632080078,
+            "regularization": 9.325742212240584e-06,
+            "total": 1.6834702491760254
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9985653758049011,
+          "envelope_mse": 0.26270565390586853,
+          "raw_mse": 1.261055588722229,
+          "regularization": 1.434624118701322e-05,
+          "total": 1.3267463445663452
+        },
+        "rows": [
+          {
+            "cosine": 0.9985653758049011,
+            "envelope_mse": 0.26270565390586853,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.261055588722229,
+            "regularization": 1.434624118701322e-05,
+            "total": 1.3267463445663452
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.22185933589935303,
+      "step": 6,
+      "train": {
+        "mean": {
+          "cosine": 0.9985653758049011,
+          "envelope_mse": 0.24336864054203033,
+          "raw_mse": 1.474123239517212,
+          "regularization": 1.434624118701322e-05,
+          "total": 1.5349797010421753
+        },
+        "rows": [
+          {
+            "cosine": 0.9985653758049011,
+            "envelope_mse": 0.19189563393592834,
+            "raw_mse": 1.3543050289154053,
+            "regularization": 1.434624118701322e-05,
+            "total": 1.4022932052612305
+          },
+          {
+            "cosine": 0.9985653758049011,
+            "envelope_mse": 0.2948416471481323,
+            "raw_mse": 1.5939414501190186,
+            "regularization": 1.434624118701322e-05,
+            "total": 1.6676661968231201
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9979702830314636,
+          "envelope_mse": 0.2632564604282379,
+          "raw_mse": 1.2576664686203003,
+          "regularization": 2.0297169612604193e-05,
+          "total": 1.3235008716583252
+        },
+        "rows": [
+          {
+            "cosine": 0.9979702830314636,
+            "envelope_mse": 0.2632564604282379,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2576664686203003,
+            "regularization": 2.0297169612604193e-05,
+            "total": 1.3235008716583252
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.2004578858613968,
+      "step": 7,
+      "train": {
+        "mean": {
+          "cosine": 0.9979702830314636,
+          "envelope_mse": 0.2419317662715912,
+          "raw_mse": 1.4517733454704285,
+          "regularization": 2.0297169612604193e-05,
+          "total": 1.5122765898704529
+        },
+        "rows": [
+          {
+            "cosine": 0.9979702830314636,
+            "envelope_mse": 0.18467462062835693,
+            "raw_mse": 1.3238376379013062,
+            "regularization": 2.0297169612604193e-05,
+            "total": 1.3700265884399414
+          },
+          {
+            "cosine": 0.9979702830314636,
+            "envelope_mse": 0.29918891191482544,
+            "raw_mse": 1.5797090530395508,
+            "regularization": 2.0297169612604193e-05,
+            "total": 1.6545265913009644
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.997290849685669,
+          "envelope_mse": 0.2637757658958435,
+          "raw_mse": 1.2546145915985107,
+          "regularization": 2.709150248847436e-05,
+          "total": 1.3205856084823608
+        },
+        "rows": [
+          {
+            "cosine": 0.997290849685669,
+            "envelope_mse": 0.2637757658958435,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2546145915985107,
+            "regularization": 2.709150248847436e-05,
+            "total": 1.3205856084823608
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.18113254010677338,
+      "step": 8,
+      "train": {
+        "mean": {
+          "cosine": 0.997290849685669,
+          "envelope_mse": 0.24105433374643326,
+          "raw_mse": 1.4319148063659668,
+          "regularization": 2.709150248847436e-05,
+          "total": 1.4922054409980774
+        },
+        "rows": [
+          {
+            "cosine": 0.997290849685669,
+            "envelope_mse": 0.1779312938451767,
+            "raw_mse": 1.2957229614257812,
+            "regularization": 2.709150248847436e-05,
+            "total": 1.3402328491210938
+          },
+          {
+            "cosine": 0.997290849685669,
+            "envelope_mse": 0.3041773736476898,
+            "raw_mse": 1.5681066513061523,
+            "regularization": 2.709150248847436e-05,
+            "total": 1.644178032875061
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9965360760688782,
+          "envelope_mse": 0.2640049457550049,
+          "raw_mse": 1.2516570091247559,
+          "regularization": 3.463923712843098e-05,
+          "total": 1.3176928758621216
+        },
+        "rows": [
+          {
+            "cosine": 0.9965360760688782,
+            "envelope_mse": 0.2640049457550049,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2516570091247559,
+            "regularization": 3.463923712843098e-05,
+            "total": 1.3176928758621216
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.1636422723531723,
+      "step": 9,
+      "train": {
+        "mean": {
+          "cosine": 0.9965360760688782,
+          "envelope_mse": 0.24081291258335114,
+          "raw_mse": 1.4144226908683777,
+          "regularization": 3.463923712843098e-05,
+          "total": 1.474660575389862
+        },
+        "rows": [
+          {
+            "cosine": 0.9965360760688782,
+            "envelope_mse": 0.17212599515914917,
+            "raw_mse": 1.2701194286346436,
+            "regularization": 3.463923712843098e-05,
+            "total": 1.3131855726242065
+          },
+          {
+            "cosine": 0.9965360760688782,
+            "envelope_mse": 0.3094998300075531,
+            "raw_mse": 1.5587259531021118,
+            "regularization": 3.463923712843098e-05,
+            "total": 1.6361355781555176
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9957143664360046,
+          "envelope_mse": 0.26398393511772156,
+          "raw_mse": 1.2486919164657593,
+          "regularization": 4.285633622203022e-05,
+          "total": 1.3147307634353638
+        },
+        "rows": [
+          {
+            "cosine": 0.9957143664360046,
+            "envelope_mse": 0.26398393511772156,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2486919164657593,
+            "regularization": 4.285633622203022e-05,
+            "total": 1.3147307634353638
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.14770448207855225,
+      "step": 10,
+      "train": {
+        "mean": {
+          "cosine": 0.9957143664360046,
+          "envelope_mse": 0.2408481314778328,
+          "raw_mse": 1.3986995816230774,
+          "regularization": 4.285633622203022e-05,
+          "total": 1.4589545726776123
+        },
+        "rows": [
+          {
+            "cosine": 0.9957143664360046,
+            "envelope_mse": 0.16682414710521698,
+            "raw_mse": 1.2465192079544067,
+            "regularization": 4.285633622203022e-05,
+            "total": 1.2882682085037231
+          },
+          {
+            "cosine": 0.9957143664360046,
+            "envelope_mse": 0.3148721158504486,
+            "raw_mse": 1.550879955291748,
+            "regularization": 4.285633622203022e-05,
+            "total": 1.6296409368515015
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9948346018791199,
+          "envelope_mse": 0.2636992931365967,
+          "raw_mse": 1.2458279132843018,
+          "regularization": 5.1653980335686356e-05,
+          "total": 1.3118044137954712
+        },
+        "rows": [
+          {
+            "cosine": 0.9948346018791199,
+            "envelope_mse": 0.2636992931365967,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2458279132843018,
+            "regularization": 5.1653980335686356e-05,
+            "total": 1.3118044137954712
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.13306501507759094,
+      "step": 11,
+      "train": {
+        "mean": {
+          "cosine": 0.9948346018791199,
+          "envelope_mse": 0.24116932600736618,
+          "raw_mse": 1.3848194479942322,
+          "regularization": 5.1653980335686356e-05,
+          "total": 1.445163369178772
+        },
+        "rows": [
+          {
+            "cosine": 0.9948346018791199,
+            "envelope_mse": 0.16200803220272064,
+            "raw_mse": 1.2249985933303833,
+            "regularization": 5.1653980335686356e-05,
+            "total": 1.2655521631240845
+          },
+          {
+            "cosine": 0.9948346018791199,
+            "envelope_mse": 0.3203306198120117,
+            "raw_mse": 1.544640302658081,
+            "regularization": 5.1653980335686356e-05,
+            "total": 1.6247745752334595
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9939055442810059,
+          "envelope_mse": 0.26326805353164673,
+          "raw_mse": 1.2431288957595825,
+          "regularization": 6.094455602578819e-05,
+          "total": 1.3090068101882935
+        },
+        "rows": [
+          {
+            "cosine": 0.9939055442810059,
+            "envelope_mse": 0.26326805353164673,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2431288957595825,
+            "regularization": 6.094455602578819e-05,
+            "total": 1.3090068101882935
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.1198982372879982,
+      "step": 12,
+      "train": {
+        "mean": {
+          "cosine": 0.9939055442810059,
+          "envelope_mse": 0.2417246177792549,
+          "raw_mse": 1.372764229774475,
+          "regularization": 6.094455602578819e-05,
+          "total": 1.4332563281059265
+        },
+        "rows": [
+          {
+            "cosine": 0.9939055442810059,
+            "envelope_mse": 0.15773425996303558,
+            "raw_mse": 1.205736756324768,
+            "regularization": 6.094455602578819e-05,
+            "total": 1.2452312707901
+          },
+          {
+            "cosine": 0.9939055442810059,
+            "envelope_mse": 0.32571497559547424,
+            "raw_mse": 1.5397917032241821,
+            "regularization": 6.094455602578819e-05,
+            "total": 1.621281385421753
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.992936372756958,
+          "envelope_mse": 0.26256805658340454,
+          "raw_mse": 1.240295171737671,
+          "regularization": 7.063626981107518e-05,
+          "total": 1.3060078620910645
+        },
+        "rows": [
+          {
+            "cosine": 0.992936372756958,
+            "envelope_mse": 0.26256805658340454,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.240295171737671,
+            "regularization": 7.063626981107518e-05,
+            "total": 1.3060078620910645
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.10798261314630508,
+      "step": 13,
+      "train": {
+        "mean": {
+          "cosine": 0.992936372756958,
+          "envelope_mse": 0.24239221960306168,
+          "raw_mse": 1.3620215058326721,
+          "regularization": 7.063626981107518e-05,
+          "total": 1.422690212726593
+        },
+        "rows": [
+          {
+            "cosine": 0.992936372756958,
+            "envelope_mse": 0.15385733544826508,
+            "raw_mse": 1.1880214214324951,
+            "regularization": 7.063626981107518e-05,
+            "total": 1.226556420326233
+          },
+          {
+            "cosine": 0.992936372756958,
+            "envelope_mse": 0.3309271037578583,
+            "raw_mse": 1.5360215902328491,
+            "regularization": 7.063626981107518e-05,
+            "total": 1.6188240051269531
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9919366240501404,
+          "envelope_mse": 0.26164549589157104,
+          "raw_mse": 1.237650752067566,
+          "regularization": 8.063375571509823e-05,
+          "total": 1.3031426668167114
+        },
+        "rows": [
+          {
+            "cosine": 0.9919366240501404,
+            "envelope_mse": 0.26164549589157104,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.237650752067566,
+            "regularization": 8.063375571509823e-05,
+            "total": 1.3031426668167114
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.09767857939004898,
+      "step": 14,
+      "train": {
+        "mean": {
+          "cosine": 0.9919366240501404,
+          "envelope_mse": 0.243150033056736,
+          "raw_mse": 1.3528602123260498,
+          "regularization": 8.063375571509823e-05,
+          "total": 1.4137282967567444
+        },
+        "rows": [
+          {
+            "cosine": 0.9919366240501404,
+            "envelope_mse": 0.1505337804555893,
+            "raw_mse": 1.172598958015442,
+            "regularization": 8.063375571509823e-05,
+            "total": 1.2103129625320435
+          },
+          {
+            "cosine": 0.9919366240501404,
+            "envelope_mse": 0.3357662856578827,
+            "raw_mse": 1.5331214666366577,
+            "regularization": 8.063375571509823e-05,
+            "total": 1.6171436309814453
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9909156560897827,
+          "envelope_mse": 0.26059114933013916,
+          "raw_mse": 1.2351653575897217,
+          "regularization": 9.084343764698133e-05,
+          "total": 1.3004039525985718
+        },
+        "rows": [
+          {
+            "cosine": 0.9909156560897827,
+            "envelope_mse": 0.26059114933013916,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2351653575897217,
+            "regularization": 9.084343764698133e-05,
+            "total": 1.3004039525985718
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.08909666538238525,
+      "step": 15,
+      "train": {
+        "mean": {
+          "cosine": 0.9909156560897827,
+          "envelope_mse": 0.2439160868525505,
+          "raw_mse": 1.344801425933838,
+          "regularization": 9.084343764698133e-05,
+          "total": 1.405871331691742
+        },
+        "rows": [
+          {
+            "cosine": 0.9909156560897827,
+            "envelope_mse": 0.14752940833568573,
+            "raw_mse": 1.158729910850525,
+            "regularization": 9.084343764698133e-05,
+            "total": 1.195703148841858
+          },
+          {
+            "cosine": 0.9909156560897827,
+            "envelope_mse": 0.3403027653694153,
+            "raw_mse": 1.5308729410171509,
+            "regularization": 9.084343764698133e-05,
+            "total": 1.616039514541626
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9898826479911804,
+          "envelope_mse": 0.2594098150730133,
+          "raw_mse": 1.2326633930206299,
+          "regularization": 0.00010117351484950632,
+          "total": 1.2976170778274536
+        },
+        "rows": [
+          {
+            "cosine": 0.9898826479911804,
+            "envelope_mse": 0.2594098150730133,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2326633930206299,
+            "regularization": 0.00010117351484950632,
+            "total": 1.2976170778274536
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.08219046890735626,
+      "step": 16,
+      "train": {
+        "mean": {
+          "cosine": 0.9898826479911804,
+          "envelope_mse": 0.24481316655874252,
+          "raw_mse": 1.3378145098686218,
+          "regularization": 0.00010117351484950632,
+          "total": 1.3991190195083618
+        },
+        "rows": [
+          {
+            "cosine": 0.9898826479911804,
+            "envelope_mse": 0.1450987011194229,
+            "raw_mse": 1.1465601921081543,
+            "regularization": 0.00010117351484950632,
+            "total": 1.1829360723495483
+          },
+          {
+            "cosine": 0.9898826479911804,
+            "envelope_mse": 0.34452763199806213,
+            "raw_mse": 1.5290688276290894,
+            "regularization": 0.00010117351484950632,
+            "total": 1.6153019666671753
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9888466000556946,
+          "envelope_mse": 0.25799599289894104,
+          "raw_mse": 1.2301974296569824,
+          "regularization": 0.00011153399827890098,
+          "total": 1.294808030128479
+        },
+        "rows": [
+          {
+            "cosine": 0.9888466000556946,
+            "envelope_mse": 0.25799599289894104,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2301974296569824,
+            "regularization": 0.00011153399827890098,
+            "total": 1.294808030128479
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.07710908353328705,
+      "step": 17,
+      "train": {
+        "mean": {
+          "cosine": 0.9888466000556946,
+          "envelope_mse": 0.24546892195940018,
+          "raw_mse": 1.3316437005996704,
+          "regularization": 0.00011153399827890098,
+          "total": 1.3931225538253784
+        },
+        "rows": [
+          {
+            "cosine": 0.9888466000556946,
+            "envelope_mse": 0.14288268983364105,
+            "raw_mse": 1.135729193687439,
+            "regularization": 0.00011153399827890098,
+            "total": 1.1715614795684814
+          },
+          {
+            "cosine": 0.9888466000556946,
+            "envelope_mse": 0.3480551540851593,
+            "raw_mse": 1.5275582075119019,
+            "regularization": 0.00011153399827890098,
+            "total": 1.6146836280822754
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9878151416778564,
+          "envelope_mse": 0.25661930441856384,
+          "raw_mse": 1.2279707193374634,
+          "regularization": 0.00012184857769170776,
+          "total": 1.2922474145889282
+        },
+        "rows": [
+          {
+            "cosine": 0.9878151416778564,
+            "envelope_mse": 0.25661930441856384,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2279707193374634,
+            "regularization": 0.00012184857769170776,
+            "total": 1.2922474145889282
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.07353181391954422,
+      "step": 18,
+      "train": {
+        "mean": {
+          "cosine": 0.9878151416778564,
+          "envelope_mse": 0.24609892070293427,
+          "raw_mse": 1.3262262344360352,
+          "regularization": 0.00012184857769170776,
+          "total": 1.3878727555274963
+        },
+        "rows": [
+          {
+            "cosine": 0.9878151416778564,
+            "envelope_mse": 0.14107859134674072,
+            "raw_mse": 1.1262049674987793,
+            "regularization": 0.00012184857769170776,
+            "total": 1.161596417427063
+          },
+          {
+            "cosine": 0.9878151416778564,
+            "envelope_mse": 0.3511192500591278,
+            "raw_mse": 1.526247501373291,
+            "regularization": 0.00012184857769170776,
+            "total": 1.6141490936279297
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9867954254150391,
+          "envelope_mse": 0.2549622654914856,
+          "raw_mse": 1.225559949874878,
+          "regularization": 0.00013204573770053685,
+          "total": 1.2894326448440552
+        },
+        "rows": [
+          {
+            "cosine": 0.9867954254150391,
+            "envelope_mse": 0.2549622654914856,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.225559949874878,
+            "regularization": 0.00013204573770053685,
+            "total": 1.2894326448440552
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.07131724804639816,
+      "step": 19,
+      "train": {
+        "mean": {
+          "cosine": 0.9867954254150391,
+          "envelope_mse": 0.2465345710515976,
+          "raw_mse": 1.321241021156311,
+          "regularization": 0.00013204573770053685,
+          "total": 1.383006751537323
+        },
+        "rows": [
+          {
+            "cosine": 0.9867954254150391,
+            "envelope_mse": 0.13957750797271729,
+            "raw_mse": 1.1178038120269775,
+            "regularization": 0.00013204573770053685,
+            "total": 1.1528302431106567
+          },
+          {
+            "cosine": 0.9867954254150391,
+            "envelope_mse": 0.3534916341304779,
+            "raw_mse": 1.5246782302856445,
+            "regularization": 0.00013204573770053685,
+            "total": 1.6131832599639893
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9857926964759827,
+          "envelope_mse": 0.25339028239250183,
+          "raw_mse": 1.2234437465667725,
+          "regularization": 0.0001420730259269476,
+          "total": 1.286933422088623
+        },
+        "rows": [
+          {
+            "cosine": 0.9857926964759827,
+            "envelope_mse": 0.25339028239250183,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2234437465667725,
+            "regularization": 0.0001420730259269476,
+            "total": 1.286933422088623
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.07011954486370087,
+      "step": 20,
+      "train": {
+        "mean": {
+          "cosine": 0.9857926964759827,
+          "envelope_mse": 0.2468513697385788,
+          "raw_mse": 1.3167492151260376,
+          "regularization": 0.0001420730259269476,
+          "total": 1.3786041736602783
+        },
+        "rows": [
+          {
+            "cosine": 0.9857926964759827,
+            "envelope_mse": 0.13836562633514404,
+            "raw_mse": 1.1104354858398438,
+            "regularization": 0.0001420730259269476,
+            "total": 1.1451690196990967
+          },
+          {
+            "cosine": 0.9857926964759827,
+            "envelope_mse": 0.35533711314201355,
+            "raw_mse": 1.5230629444122314,
+            "regularization": 0.0001420730259269476,
+            "total": 1.61203932762146
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9848114848136902,
+          "envelope_mse": 0.2516959309577942,
+          "raw_mse": 1.2213605642318726,
+          "regularization": 0.0001518851495347917,
+          "total": 1.2844364643096924
+        },
+        "rows": [
+          {
+            "cosine": 0.9848114848136902,
+            "envelope_mse": 0.2516959309577942,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2213605642318726,
+            "regularization": 0.0001518851495347917,
+            "total": 1.2844364643096924
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.06958560645580292,
+      "step": 21,
+      "train": {
+        "mean": {
+          "cosine": 0.9848114848136902,
+          "envelope_mse": 0.24691268801689148,
+          "raw_mse": 1.3124604225158691,
+          "regularization": 0.0001518851495347917,
+          "total": 1.3743404746055603
+        },
+        "rows": [
+          {
+            "cosine": 0.9848114848136902,
+            "envelope_mse": 0.13743647933006287,
+            "raw_mse": 1.1038342714309692,
+            "regularization": 0.0001518851495347917,
+            "total": 1.1383452415466309
+          },
+          {
+            "cosine": 0.9848114848136902,
+            "envelope_mse": 0.3563888967037201,
+            "raw_mse": 1.521086573600769,
+            "regularization": 0.0001518851495347917,
+            "total": 1.6103357076644897
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9838540554046631,
+          "envelope_mse": 0.2500331997871399,
+          "raw_mse": 1.219292402267456,
+          "regularization": 0.0001614594366401434,
+          "total": 1.2819621562957764
+        },
+        "rows": [
+          {
+            "cosine": 0.9838540554046631,
+            "envelope_mse": 0.2500331997871399,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.219292402267456,
+            "regularization": 0.0001614594366401434,
+            "total": 1.2819621562957764
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.06938417255878448,
+      "step": 22,
+      "train": {
+        "mean": {
+          "cosine": 0.9838540554046631,
+          "envelope_mse": 0.24689959734678268,
+          "raw_mse": 1.3086430430412292,
+          "regularization": 0.0001614594366401434,
+          "total": 1.3705293536186218
+        },
+        "rows": [
+          {
+            "cosine": 0.9838540554046631,
+            "envelope_mse": 0.13690553605556488,
+            "raw_mse": 1.0984246730804443,
+            "regularization": 0.0001614594366401434,
+            "total": 1.1328125
+          },
+          {
+            "cosine": 0.9838540554046631,
+            "envelope_mse": 0.3568936586380005,
+            "raw_mse": 1.5188614130020142,
+            "regularization": 0.0001614594366401434,
+            "total": 1.6082462072372437
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9829216003417969,
+          "envelope_mse": 0.24827051162719727,
+          "raw_mse": 1.217271327972412,
+          "regularization": 0.00017078399832826108,
+          "total": 1.2795097827911377
+        },
+        "rows": [
+          {
+            "cosine": 0.9829216003417969,
+            "envelope_mse": 0.24827051162719727,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.217271327972412,
+            "regularization": 0.00017078399832826108,
+            "total": 1.2795097827911377
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.06937817484140396,
+      "step": 23,
+      "train": {
+        "mean": {
+          "cosine": 0.9829216003417969,
+          "envelope_mse": 0.24663760513067245,
+          "raw_mse": 1.3047993183135986,
+          "regularization": 0.00017078399832826108,
+          "total": 1.3666295409202576
+        },
+        "rows": [
+          {
+            "cosine": 0.9829216003417969,
+            "envelope_mse": 0.13654182851314545,
+            "raw_mse": 1.093508243560791,
+            "regularization": 0.00017078399832826108,
+            "total": 1.127814531326294
+          },
+          {
+            "cosine": 0.9829216003417969,
+            "envelope_mse": 0.35673338174819946,
+            "raw_mse": 1.5160903930664062,
+            "regularization": 0.00017078399832826108,
+            "total": 1.6054445505142212
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9820139408111572,
+          "envelope_mse": 0.24656419456005096,
+          "raw_mse": 1.215312123298645,
+          "regularization": 0.00017986058082897216,
+          "total": 1.2771331071853638
+        },
+        "rows": [
+          {
+            "cosine": 0.9820139408111572,
+            "envelope_mse": 0.24656419456005096,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.215312123298645,
+            "regularization": 0.00017986058082897216,
+            "total": 1.2771331071853638
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.06938765943050385,
+      "step": 24,
+      "train": {
+        "mean": {
+          "cosine": 0.9820139408111572,
+          "envelope_mse": 0.2461274489760399,
+          "raw_mse": 1.3008369207382202,
+          "regularization": 0.00017986058082897216,
+          "total": 1.3625486493110657
+        },
+        "rows": [
+          {
+            "cosine": 0.9820139408111572,
+            "envelope_mse": 0.1363207846879959,
+            "raw_mse": 1.0890215635299683,
+            "regularization": 0.00017986058082897216,
+            "total": 1.1232815980911255
+          },
+          {
+            "cosine": 0.9820139408111572,
+            "envelope_mse": 0.35593411326408386,
+            "raw_mse": 1.5126522779464722,
+            "regularization": 0.00017986058082897216,
+            "total": 1.6018157005310059
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9811296463012695,
+          "envelope_mse": 0.24488575756549835,
+          "raw_mse": 1.213413953781128,
+          "regularization": 0.00018870353233069181,
+          "total": 1.2748241424560547
+        },
+        "rows": [
+          {
+            "cosine": 0.9811296463012695,
+            "envelope_mse": 0.24488575756549835,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.213413953781128,
+            "regularization": 0.00018870353233069181,
+            "total": 1.2748241424560547
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.06929241865873337,
+      "step": 25,
+      "train": {
+        "mean": {
+          "cosine": 0.9811296463012695,
+          "envelope_mse": 0.24553507566452026,
+          "raw_mse": 1.2971395254135132,
+          "regularization": 0.00018870353233069181,
+          "total": 1.3587120175361633
+        },
+        "rows": [
+          {
+            "cosine": 0.9811296463012695,
+            "envelope_mse": 0.13644298911094666,
+            "raw_mse": 1.0854548215866089,
+            "regularization": 0.00018870353233069181,
+            "total": 1.1197543144226074
+          },
+          {
+            "cosine": 0.9811296463012695,
+            "envelope_mse": 0.35462716221809387,
+            "raw_mse": 1.5088242292404175,
+            "regularization": 0.00018870353233069181,
+            "total": 1.5976697206497192
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9802662134170532,
+          "envelope_mse": 0.2430974692106247,
+          "raw_mse": 1.2113558053970337,
+          "regularization": 0.0001973378675756976,
+          "total": 1.2723274230957031
+        },
+        "rows": [
+          {
+            "cosine": 0.9802662134170532,
+            "envelope_mse": 0.2430974692106247,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2113558053970337,
+            "regularization": 0.0001973378675756976,
+            "total": 1.2723274230957031
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.06919476389884949,
+      "step": 26,
+      "train": {
+        "mean": {
+          "cosine": 0.9802662134170532,
+          "envelope_mse": 0.24469519406557083,
+          "raw_mse": 1.2932900786399841,
+          "regularization": 0.0001973378675756976,
+          "total": 1.3546611666679382
+        },
+        "rows": [
+          {
+            "cosine": 0.9802662134170532,
+            "envelope_mse": 0.13655249774456024,
+            "raw_mse": 1.0820237398147583,
+            "regularization": 0.0001973378675756976,
+            "total": 1.1163591146469116
+          },
+          {
+            "cosine": 0.9802662134170532,
+            "envelope_mse": 0.3528378903865814,
+            "raw_mse": 1.50455641746521,
+            "regularization": 0.0001973378675756976,
+            "total": 1.5929632186889648
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9800000190734863,
+          "envelope_mse": 0.2416524440050125,
+          "raw_mse": 1.2096571922302246,
+          "regularization": 0.00019999980577267706,
+          "total": 1.2702703475952148
+        },
+        "rows": [
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.2416524440050125,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2096571922302246,
+            "regularization": 0.00019999980577267706,
+            "total": 1.2702703475952148
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.06725934892892838,
+      "step": 27,
+      "train": {
+        "mean": {
+          "cosine": 0.9800000190734863,
+          "envelope_mse": 0.24305149167776108,
+          "raw_mse": 1.2901360988616943,
+          "regularization": 0.00019999980577267706,
+          "total": 1.3510989546775818
+        },
+        "rows": [
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.13798685371875763,
+            "raw_mse": 1.082183599472046,
+            "regularization": 0.00019999980577267706,
+            "total": 1.1168802976608276
+          },
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.3481161296367645,
+            "raw_mse": 1.4980885982513428,
+            "regularization": 0.00019999980577267706,
+            "total": 1.585317611694336
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9799999594688416,
+          "envelope_mse": 0.24022820591926575,
+          "raw_mse": 1.2079616785049438,
+          "regularization": 0.00020000040240120143,
+          "total": 1.268218755722046
+        },
+        "rows": [
+          {
+            "cosine": 0.9799999594688416,
+            "envelope_mse": 0.24022820591926575,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2079616785049438,
+            "regularization": 0.00020000040240120143,
+            "total": 1.268218755722046
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.06495656818151474,
+      "step": 28,
+      "train": {
+        "mean": {
+          "cosine": 0.9799999594688416,
+          "envelope_mse": 0.24106041342020035,
+          "raw_mse": 1.2872958183288574,
+          "regularization": 0.00020000040240120143,
+          "total": 1.3477609753608704
+        },
+        "rows": [
+          {
+            "cosine": 0.9799999594688416,
+            "envelope_mse": 0.13983853161334991,
+            "raw_mse": 1.0838775634765625,
+            "regularization": 0.00020000040240120143,
+            "total": 1.1190372705459595
+          },
+          {
+            "cosine": 0.9799999594688416,
+            "envelope_mse": 0.3422822952270508,
+            "raw_mse": 1.4907140731811523,
+            "regularization": 0.00020000040240120143,
+            "total": 1.5764846801757812
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9799999594688416,
+          "envelope_mse": 0.23896761238574982,
+          "raw_mse": 1.2062855958938599,
+          "regularization": 0.00020000040240120143,
+          "total": 1.2662274837493896
+        },
+        "rows": [
+          {
+            "cosine": 0.9799999594688416,
+            "envelope_mse": 0.23896761238574982,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2062855958938599,
+            "regularization": 0.00020000040240120143,
+            "total": 1.2662274837493896
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.06316648423671722,
+      "step": 29,
+      "train": {
+        "mean": {
+          "cosine": 0.9799999594688416,
+          "envelope_mse": 0.2390744537115097,
+          "raw_mse": 1.2845558524131775,
+          "regularization": 0.00020000040240120143,
+          "total": 1.3445245027542114
+        },
+        "rows": [
+          {
+            "cosine": 0.9799999594688416,
+            "envelope_mse": 0.14153018593788147,
+            "raw_mse": 1.0854628086090088,
+            "regularization": 0.00020000040240120143,
+            "total": 1.1210453510284424
+          },
+          {
+            "cosine": 0.9799999594688416,
+            "envelope_mse": 0.33661872148513794,
+            "raw_mse": 1.4836488962173462,
+            "regularization": 0.00020000040240120143,
+            "total": 1.5680036544799805
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9799999594688416,
+          "envelope_mse": 0.23770855367183685,
+          "raw_mse": 1.2046844959259033,
+          "regularization": 0.00020000040240120143,
+          "total": 1.264311671257019
+        },
+        "rows": [
+          {
+            "cosine": 0.9799999594688416,
+            "envelope_mse": 0.23770855367183685,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2046844959259033,
+            "regularization": 0.00020000040240120143,
+            "total": 1.264311671257019
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.06190883740782738,
+      "step": 30,
+      "train": {
+        "mean": {
+          "cosine": 0.9799999594688416,
+          "envelope_mse": 0.23720184713602066,
+          "raw_mse": 1.2821818590164185,
+          "regularization": 0.00020000040240120143,
+          "total": 1.3416823744773865
+        },
+        "rows": [
+          {
+            "cosine": 0.9799999594688416,
+            "envelope_mse": 0.143390491604805,
+            "raw_mse": 1.0875300168991089,
+            "regularization": 0.00020000040240120143,
+            "total": 1.1235777139663696
+          },
+          {
+            "cosine": 0.9799999594688416,
+            "envelope_mse": 0.33101320266723633,
+            "raw_mse": 1.476833701133728,
+            "regularization": 0.00020000040240120143,
+            "total": 1.5597870349884033
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9800000190734863,
+          "envelope_mse": 0.23663969337940216,
+          "raw_mse": 1.2032138109207153,
+          "regularization": 0.00019999980577267706,
+          "total": 1.2625737190246582
+        },
+        "rows": [
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.23663969337940216,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2032138109207153,
+            "regularization": 0.00019999980577267706,
+            "total": 1.2625737190246582
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.06135301664471626,
+      "step": 31,
+      "train": {
+        "mean": {
+          "cosine": 0.9800000190734863,
+          "envelope_mse": 0.23543290048837662,
+          "raw_mse": 1.2799879908561707,
+          "regularization": 0.00019999980577267706,
+          "total": 1.3390462398529053
+        },
+        "rows": [
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.1452239602804184,
+            "raw_mse": 1.0897241830825806,
+            "regularization": 0.00019999980577267706,
+            "total": 1.126230239868164
+          },
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.32564184069633484,
+            "raw_mse": 1.4702517986297607,
+            "regularization": 0.00019999980577267706,
+            "total": 1.5518622398376465
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9800001382827759,
+          "envelope_mse": 0.2357313632965088,
+          "raw_mse": 1.20183265209198,
+          "regularization": 0.00019999861251562834,
+          "total": 1.2609655857086182
+        },
+        "rows": [
+          {
+            "cosine": 0.9800001382827759,
+            "envelope_mse": 0.2357313632965088,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.20183265209198,
+            "regularization": 0.00019999861251562834,
+            "total": 1.2609655857086182
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.06146441027522087,
+      "step": 32,
+      "train": {
+        "mean": {
+          "cosine": 0.9800001382827759,
+          "envelope_mse": 0.23375087976455688,
+          "raw_mse": 1.278059959411621,
+          "regularization": 0.00019999861251562834,
+          "total": 1.3366976976394653
+        },
+        "rows": [
+          {
+            "cosine": 0.9800001382827759,
+            "envelope_mse": 0.146904855966568,
+            "raw_mse": 1.091976284980774,
+            "regularization": 0.00019999861251562834,
+            "total": 1.128902554512024
+          },
+          {
+            "cosine": 0.9800001382827759,
+            "envelope_mse": 0.3205969035625458,
+            "raw_mse": 1.4641436338424683,
+            "regularization": 0.00019999861251562834,
+            "total": 1.5444928407669067
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9800000190734863,
+          "envelope_mse": 0.2348848134279251,
+          "raw_mse": 1.2004461288452148,
+          "regularization": 0.00019999980577267706,
+          "total": 1.2593673467636108
+        },
+        "rows": [
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.2348848134279251,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.2004461288452148,
+            "regularization": 0.00019999980577267706,
+            "total": 1.2593673467636108
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.062292251735925674,
+      "step": 33,
+      "train": {
+        "mean": {
+          "cosine": 0.9800000190734863,
+          "envelope_mse": 0.23207488656044006,
+          "raw_mse": 1.2763670086860657,
+          "regularization": 0.00019999980577267706,
+          "total": 1.3345857858657837
+        },
+        "rows": [
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.1485709249973297,
+            "raw_mse": 1.0943915843963623,
+            "regularization": 0.00019999980577267706,
+            "total": 1.1317343711853027
+          },
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.3155788481235504,
+            "raw_mse": 1.458342432975769,
+            "regularization": 0.00019999980577267706,
+            "total": 1.5374372005462646
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9800000190734863,
+          "envelope_mse": 0.23422780632972717,
+          "raw_mse": 1.1993812322616577,
+          "regularization": 0.00019999980577267706,
+          "total": 1.2581381797790527
+        },
+        "rows": [
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.23422780632972717,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.1993812322616577,
+            "regularization": 0.00019999980577267706,
+            "total": 1.2581381797790527
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.0636809766292572,
+      "step": 34,
+      "train": {
+        "mean": {
+          "cosine": 0.9800000190734863,
+          "envelope_mse": 0.23051025718450546,
+          "raw_mse": 1.274936318397522,
+          "regularization": 0.00019999980577267706,
+          "total": 1.332763910293579
+        },
+        "rows": [
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.14995907247066498,
+            "raw_mse": 1.096720814704895,
+            "regularization": 0.00019999980577267706,
+            "total": 1.1344106197357178
+          },
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.31106144189834595,
+            "raw_mse": 1.453151822090149,
+            "regularization": 0.00019999980577267706,
+            "total": 1.5311172008514404
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9800000190734863,
+          "envelope_mse": 0.23364613950252533,
+          "raw_mse": 1.198279619216919,
+          "regularization": 0.00019999980577267706,
+          "total": 1.256891131401062
+        },
+        "rows": [
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.23364613950252533,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.198279619216919,
+            "regularization": 0.00019999980577267706,
+            "total": 1.256891131401062
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.0656389445066452,
+      "step": 35,
+      "train": {
+        "mean": {
+          "cosine": 0.9800000190734863,
+          "envelope_mse": 0.22909478098154068,
+          "raw_mse": 1.2737907767295837,
+          "regularization": 0.00019999980577267706,
+          "total": 1.3312644958496094
+        },
+        "rows": [
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.1513756364583969,
+            "raw_mse": 1.0991895198822021,
+            "regularization": 0.00019999980577267706,
+            "total": 1.1372334957122803
+          },
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.30681392550468445,
+            "raw_mse": 1.4483920335769653,
+            "regularization": 0.00019999980577267706,
+            "total": 1.5252954959869385
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9800001382827759,
+          "envelope_mse": 0.23325252532958984,
+          "raw_mse": 1.197314977645874,
+          "regularization": 0.00019999861251562834,
+          "total": 1.2558281421661377
+        },
+        "rows": [
+          {
+            "cosine": 0.9800001382827759,
+            "envelope_mse": 0.23325252532958984,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.197314977645874,
+            "regularization": 0.00019999861251562834,
+            "total": 1.2558281421661377
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.0679488405585289,
+      "step": 36,
+      "train": {
+        "mean": {
+          "cosine": 0.9800001382827759,
+          "envelope_mse": 0.22772063314914703,
+          "raw_mse": 1.2728960514068604,
+          "regularization": 0.00019999861251562834,
+          "total": 1.3300262093544006
+        },
+        "rows": [
+          {
+            "cosine": 0.9800001382827759,
+            "envelope_mse": 0.1525232195854187,
+            "raw_mse": 1.1016056537628174,
+            "regularization": 0.00019999861251562834,
+            "total": 1.1399364471435547
+          },
+          {
+            "cosine": 0.9800001382827759,
+            "envelope_mse": 0.30291804671287537,
+            "raw_mse": 1.4441864490509033,
+            "regularization": 0.00019999861251562834,
+            "total": 1.5201159715652466
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9800000786781311,
+          "envelope_mse": 0.23307621479034424,
+          "raw_mse": 1.1966090202331543,
+          "regularization": 0.0001999992091441527,
+          "total": 1.2550780773162842
+        },
+        "rows": [
+          {
+            "cosine": 0.9800000786781311,
+            "envelope_mse": 0.23307621479034424,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.1966090202331543,
+            "regularization": 0.0001999992091441527,
+            "total": 1.2550780773162842
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.07045283913612366,
+      "step": 37,
+      "train": {
+        "mean": {
+          "cosine": 0.9800000786781311,
+          "envelope_mse": 0.22656554728746414,
+          "raw_mse": 1.2723788619041443,
+          "regularization": 0.0001999992091441527,
+          "total": 1.3292202949523926
+        },
+        "rows": [
+          {
+            "cosine": 0.9800000786781311,
+            "envelope_mse": 0.15354208648204803,
+            "raw_mse": 1.1040126085281372,
+            "regularization": 0.0001999992091441527,
+            "total": 1.1425981521606445
+          },
+          {
+            "cosine": 0.9800000786781311,
+            "envelope_mse": 0.29958900809288025,
+            "raw_mse": 1.4407451152801514,
+            "regularization": 0.0001999992091441527,
+            "total": 1.5158424377441406
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9800000190734863,
+          "envelope_mse": 0.23294894397258759,
+          "raw_mse": 1.1959270238876343,
+          "regularization": 0.00019999980577267706,
+          "total": 1.254364252090454
+        },
+        "rows": [
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.23294894397258759,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.1959270238876343,
+            "regularization": 0.00019999980577267706,
+            "total": 1.254364252090454
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.07313810288906097,
+      "step": 38,
+      "train": {
+        "mean": {
+          "cosine": 0.9800000190734863,
+          "envelope_mse": 0.22543784230947495,
+          "raw_mse": 1.2718632221221924,
+          "regularization": 0.00019999980577267706,
+          "total": 1.328422725200653
+        },
+        "rows": [
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.1542922705411911,
+            "raw_mse": 1.1060417890548706,
+            "regularization": 0.00019999980577267706,
+            "total": 1.1448148488998413
+          },
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.2965834140777588,
+            "raw_mse": 1.4376846551895142,
+            "regularization": 0.00019999980577267706,
+            "total": 1.5120306015014648
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9799998998641968,
+          "envelope_mse": 0.2329658567905426,
+          "raw_mse": 1.1954610347747803,
+          "regularization": 0.0002000009990297258,
+          "total": 1.253902554512024
+        },
+        "rows": [
+          {
+            "cosine": 0.9799998998641968,
+            "envelope_mse": 0.2329658567905426,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.1954610347747803,
+            "regularization": 0.0002000009990297258,
+            "total": 1.253902554512024
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.07587265223264694,
+      "step": 39,
+      "train": {
+        "mean": {
+          "cosine": 0.9799998998641968,
+          "envelope_mse": 0.22439924627542496,
+          "raw_mse": 1.2715694904327393,
+          "regularization": 0.0002000009990297258,
+          "total": 1.3278692960739136
+        },
+        "rows": [
+          {
+            "cosine": 0.9799998998641968,
+            "envelope_mse": 0.15495650470256805,
+            "raw_mse": 1.1081138849258423,
+            "regularization": 0.0002000009990297258,
+            "total": 1.1470530033111572
+          },
+          {
+            "cosine": 0.9799998998641968,
+            "envelope_mse": 0.29384198784828186,
+            "raw_mse": 1.4350250959396362,
+            "regularization": 0.0002000009990297258,
+            "total": 1.50868558883667
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9800000190734863,
+          "envelope_mse": 0.23309586942195892,
+          "raw_mse": 1.1949938535690308,
+          "regularization": 0.00019999980577267706,
+          "total": 1.2534677982330322
+        },
+        "rows": [
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.23309586942195892,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.1949938535690308,
+            "regularization": 0.00019999980577267706,
+            "total": 1.2534677982330322
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.07837279140949249,
+      "step": 40,
+      "train": {
+        "mean": {
+          "cosine": 0.9800000190734863,
+          "envelope_mse": 0.22349506616592407,
+          "raw_mse": 1.2714350819587708,
+          "regularization": 0.00019999980577267706,
+          "total": 1.3275088667869568
+        },
+        "rows": [
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.1553187370300293,
+            "raw_mse": 1.1098077297210693,
+            "regularization": 0.00019999980577267706,
+            "total": 1.1488374471664429
+          },
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.29167139530181885,
+            "raw_mse": 1.4330624341964722,
+            "regularization": 0.00019999980577267706,
+            "total": 1.5061802864074707
+          }
+        ]
+      },
+      "valid": {
+        "mean": {
+          "cosine": 0.9800000190734863,
+          "envelope_mse": 0.23331399261951447,
+          "raw_mse": 1.1946897506713867,
+          "regularization": 0.00019999980577267706,
+          "total": 1.2532182931900024
+        },
+        "rows": [
+          {
+            "cosine": 0.9800000190734863,
+            "envelope_mse": 0.23331399261951447,
+            "id": "harvey_repair_004",
+            "raw_mse": 1.1946897506713867,
+            "regularization": 0.00019999980577267706,
+            "total": 1.2532182931900024
+          }
+        ]
+      }
+    }
+  ],
+  "hyperparameters": {
+    "envelope_weight": 0.25,
+    "lr": 0.01,
+    "max_steps": 40,
+    "min_cosine": 0.98,
+    "patience": 3,
+    "regularizer": 0.01,
+    "requested_seed": null,
+    "steps": 2
+  },
+  "loader": {
+    "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+    "checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+    "flow_encoder": {
+      "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+      "loaded_tensors": 209,
+      "missing_tensors": [],
+      "selected_tensors": 209,
+      "skipped_tensors": 2282,
+      "unexpected_tensors": []
+    },
+    "frozen": true,
+    "loaded_components": [
+      "flow.input_embedding",
+      "flow.encoder",
+      "flow.encoder_proj",
+      "flow.spk_embed_affine_layer",
+      "flow.decoder.estimator"
+    ],
+    "meanflow_estimator": {
+      "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+      "loaded_tensors": 913,
+      "missing_tensors": [],
+      "selected_tensors": 913,
+      "skipped_tensors": 1578,
+      "unexpected_tensors": []
+    },
+    "omitted_components": [
+      "T3",
+      "S3Gen tokenizer",
+      "S3Gen speaker encoder",
+      "HiFT vocoder"
+    ]
+  },
+  "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+  "model_dir": "/home/terryd/gooning/voicecloning/models/chatterbox-nano",
+  "native_row_seeds": {
+    "harvey_repair_001": 31,
+    "harvey_repair_004": 2049,
+    "harvey_repair_005": 1040
+  },
+  "nonzero_finite_gradient_observed": true,
+  "output_conditionals": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit_harvey_v4/conditionals.pt",
+  "output_conditionals_sha256": "5c9a697961ed3638f8e932b414828b6198af3dd166eeba1d932f6a47caf786e1",
+  "parity": {
+    "atol": 0.0001,
+    "failures": [],
+    "max_abs": 0.0,
+    "rmse_mean": 0.0,
+    "rows": [
+      {
+        "id": "harvey_repair_001",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          215
+        ]
+      },
+      {
+        "id": "harvey_repair_005",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          225
+        ]
+      },
+      {
+        "id": "harvey_repair_004",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          173
+        ]
+      }
+    ],
+    "status": "passed"
+  },
+  "peak_rss_bytes": 1782497280,
+  "prepare_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_harvey",
+  "prepare_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_harvey/manifest.json",
+  "prepare_manifest_sha256": "4a6dbb2a52922bce8c043af290668b72dc9c1aad55446b9bd85146f54f470201",
+  "projection_events": 15,
+  "rss_after_fit_bytes": 1757900800,
+  "rss_before_load_bytes": 749846528,
+  "status": "fit_complete",
+  "stopped_after_steps": 40,
+  "target_alignment": {
+    "generated_frames": "2*(N+3) minus reference mel/token offset (0 or 1)",
+    "source_frames": "2*N or 2*N-1",
+    "speech_tokens_plus_s3gen_sil": 3,
+    "trim_policy": "crop native output to source frames; account for three silence tokens, source framing tail, and measured odd reference frame; no time warp/resampling/DTW"
+  },
+  "train_rows": [
+    "harvey_repair_001",
+    "harvey_repair_005"
+  ],
+  "valid_rows": [
+    "harvey_repair_004"
+  ]
+}

@@ -1,0 +1,9 @@
+# Runtime dependencies. Install a PyTorch build appropriate for the target
+# machine/GPU first; the source environment used CUDA 12.8 wheels.
+torch==2.11.0+cu128
+kokoro==0.9.4
+soundfile==0.14.0
+numpy==1.26.4
+
+# Optional only when enrolling a new voice from reference audio:
+# inno-kokoro==0.2.0

@@ -1,0 +1,16 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: b7ab2833e4104426bf9802b129a392d8
+{"id": "question_mlp_0", "cosine": 0.88749, "wer": null, "dnsmos_overall": 3.000491636240355}
+{"id": "question_mlp_half", "cosine": 0.866041, "wer": null, "dnsmos_overall": 3.414444712874626}
+{"id": "question_mlp_full", "cosine": 0.848133, "wer": null, "dnsmos_overall": 3.363660050610676}
+{"id": "narrative_mlp_0", "cosine": 0.895217, "wer": null, "dnsmos_overall": 3.3135803466917078}
+{"id": "narrative_mlp_half", "cosine": 0.901479, "wer": null, "dnsmos_overall": 2.6188212383083282}
+{"id": "narrative_mlp_full", "cosine": 0.867671, "wer": null, "dnsmos_overall": 3.371040668163838}
+{"id": "heldout01_mlp_0", "cosine": 0.870459, "wer": null, "dnsmos_overall": 2.754234988884267}
+{"id": "heldout01_mlp_half", "cosine": 0.887988, "wer": null, "dnsmos_overall": 3.230017916374351}
+{"id": "heldout01_mlp_full", "cosine": 0.918918, "wer": null, "dnsmos_overall": 3.3484356207408976}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 43.801s
+             CPU time consumed: 1min 16.519s
+                   Memory peak: 551.8M (swap: 0B)

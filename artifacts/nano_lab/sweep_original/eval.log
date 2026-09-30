@@ -1,0 +1,6 @@
+{"id": "conv_original10", "cosine": 0.863079, "wer": 0.0, "dnsmos_overall": 2.865628631778012}
+{"id": "conv_original20", "cosine": 0.869023, "wer": 0.0, "dnsmos_overall": 2.8563876681984786}
+{"id": "soft_original10", "cosine": 0.854094, "wer": 0.0, "dnsmos_overall": 2.949449528202129}
+{"id": "soft_original20", "cosine": 0.856955, "wer": 0.0, "dnsmos_overall": 2.8321706434027103}
+{"id": "bully_original10", "cosine": 0.847548, "wer": 0.0, "dnsmos_overall": 3.17668523172982}
+{"id": "bully_original20", "cosine": 0.851243, "wer": 0.0, "dnsmos_overall": 3.17475030866883}

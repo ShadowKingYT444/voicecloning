@@ -1,0 +1,2 @@
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+[0;93m2026-09-29 10:04:46.409039940 [W:onnxruntime:, transformer_memcpy.cc:111 ApplyImpl] 56 Memcpy nodes are added to the graph main_graph for CUDAExecutionProvider. It might have negative impact on performance (including unable to run CUDA graph). Set session_options.log_severity_level=1 to see the detail logs before this message.[m

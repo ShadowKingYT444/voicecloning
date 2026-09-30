@@ -1,0 +1,8 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 0a1a3518522e48509e85aa1cf50a3d1d
+PASS: component imports stay lazy and public API aliases retain identity
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 30.290s
+             CPU time consumed: 26.696s
+                   Memory peak: 897.5M (swap: 0B)

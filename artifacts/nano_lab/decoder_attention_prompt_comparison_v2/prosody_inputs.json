@@ -1,0 +1,20 @@
+[
+  {
+    "id": "heldout01_prompt_attention0_mel",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/level_matched/heldout01_prompt_attention0_mel.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "prompt_attention"
+  },
+  {
+    "id": "heldout01_prompt_attention1_mel",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/level_matched/heldout01_prompt_attention1_mel.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "prompt_attention"
+  },
+  {
+    "id": "source_heldout01",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/cadence_penalty/level_matched/source_heldout01.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "source"
+  }
+]

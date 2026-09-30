@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+set -euo pipefail
+project_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+pipeline="$project_dir/scripts/nano_lab/onnx_pipeline.py"
+
+# Keep the CPU environment as the safe default.  The GPU environment contains
+# onnxruntime-gpu and is selected only when the user requests CUDA explicitly.
+ort_provider=cpu
+arg_index=1
+while (( arg_index <= $# )); do
+  arg="${!arg_index}"
+  case "$arg" in
+    --ort-provider=*)
+      ort_provider="${arg#--ort-provider=}"
+      ;;
+    --ort-provider)
+      next_index=$((arg_index + 1))
+      if (( next_index > $# )); then
+        echo "nano-clone-onnx: --ort-provider requires cpu or cuda" >&2
+        exit 2
+      fi
+      ort_provider="${!next_index}"
+      arg_index=$((arg_index + 1))
+      ;;
+  esac
+  arg_index=$((arg_index + 1))
+done
+
+case "$ort_provider" in
+  cpu)
+    python_bin="$project_dir/.venv-nano-cpu/bin/python"
+    ;;
+  cuda)
+    python_bin="$project_dir/.venv-nano-ort/bin/python"
+    ;;
+  *)
+    echo "nano-clone-onnx: invalid --ort-provider '$ort_provider' (expected cpu or cuda)" >&2
+    exit 2
+    ;;
+esac
+
+if [[ ! -x "$python_bin" ]]; then
+  echo "nano-clone-onnx: Python environment is missing: $python_bin" >&2
+  exit 1
+fi
+
+# Help is side-effect free.  This also lets users inspect the CUDA-only flags
+# without entering the resource guard.
+for arg in "$@"; do
+  if [[ "$arg" == --help || "$arg" == -h ]]; then
+    exec "$python_bin" "$pipeline" run "$@"
+  fi
+done
+
+exec python "$project_dir/scripts/nano_lab/bounded_job.py" --small-job -- \
+  "$python_bin" "$pipeline" run "$@"

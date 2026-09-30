@@ -1,0 +1,177 @@
+{
+  "cache": "artifacts/nano_lab/adaptation_asmr_repaired_cache.json",
+  "inference_conditionals": "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+  "all_exact": false,
+  "rows": [
+    {
+      "id": "asmr7_repair_001",
+      "speaker_max_abs_difference": 0.06729636341333389,
+      "speaker_cosine": 0.9653074145317078,
+      "speaker_exact": false,
+      "prompt_exact": false,
+      "prompt_different_tokens": 37,
+      "cached_prompt_length": 333,
+      "inference_prompt_length": 333
+    },
+    {
+      "id": "asmr7_repair_006",
+      "speaker_max_abs_difference": 0.06729636341333389,
+      "speaker_cosine": 0.9653074145317078,
+      "speaker_exact": false,
+      "prompt_exact": false,
+      "prompt_different_tokens": 37,
+      "cached_prompt_length": 333,
+      "inference_prompt_length": 333
+    },
+    {
+      "id": "asmr7_repair_007",
+      "speaker_max_abs_difference": 0.06729636341333389,
+      "speaker_cosine": 0.9653074145317078,
+      "speaker_exact": false,
+      "prompt_exact": false,
+      "prompt_different_tokens": 37,
+      "cached_prompt_length": 333,
+      "inference_prompt_length": 333
+    },
+    {
+      "id": "asmr7_repair_008",
+      "speaker_max_abs_difference": 0.06729636341333389,
+      "speaker_cosine": 0.9653074145317078,
+      "speaker_exact": false,
+      "prompt_exact": false,
+      "prompt_different_tokens": 37,
+      "cached_prompt_length": 333,
+      "inference_prompt_length": 333
+    },
+    {
+      "id": "asmr7_repair_010",
+      "speaker_max_abs_difference": 0.06729636341333389,
+      "speaker_cosine": 0.9653074145317078,
+      "speaker_exact": false,
+      "prompt_exact": false,
+      "prompt_different_tokens": 37,
+      "cached_prompt_length": 333,
+      "inference_prompt_length": 333
+    },
+    {
+      "id": "asmr7_repair_011",
+      "speaker_max_abs_difference": 0.06729636341333389,
+      "speaker_cosine": 0.9653074145317078,
+      "speaker_exact": false,
+      "prompt_exact": false,
+      "prompt_different_tokens": 37,
+      "cached_prompt_length": 333,
+      "inference_prompt_length": 333
+    },
+    {
+      "id": "asmr7_repair_012",
+      "speaker_max_abs_difference": 0.06729636341333389,
+      "speaker_cosine": 0.9653074145317078,
+      "speaker_exact": false,
+      "prompt_exact": false,
+      "prompt_different_tokens": 37,
+      "cached_prompt_length": 333,
+      "inference_prompt_length": 333
+    },
+    {
+      "id": "asmr7_repair_013",
+      "speaker_max_abs_difference": 0.06729636341333389,
+      "speaker_cosine": 0.9653074145317078,
+      "speaker_exact": false,
+      "prompt_exact": false,
+      "prompt_different_tokens": 37,
+      "cached_prompt_length": 333,
+      "inference_prompt_length": 333
+    },
+    {
+      "id": "asmr7_repair_014",
+      "speaker_max_abs_difference": 0.06729636341333389,
+      "speaker_cosine": 0.9653074145317078,
+      "speaker_exact": false,
+      "prompt_exact": false,
+      "prompt_different_tokens": 37,
+      "cached_prompt_length": 333,
+      "inference_prompt_length": 333
+    },
+    {
+      "id": "asmr7_repair_015",
+      "speaker_max_abs_difference": 0.06729636341333389,
+      "speaker_cosine": 0.9653074145317078,
+      "speaker_exact": false,
+      "prompt_exact": false,
+      "prompt_different_tokens": 37,
+      "cached_prompt_length": 333,
+      "inference_prompt_length": 333
+    },
+    {
+      "id": "asmr7_repair_019",
+      "speaker_max_abs_difference": 0.06729636341333389,
+      "speaker_cosine": 0.9653074145317078,
+      "speaker_exact": false,
+      "prompt_exact": false,
+      "prompt_different_tokens": 37,
+      "cached_prompt_length": 333,
+      "inference_prompt_length": 333
+    },
+    {
+      "id": "asmr7_repair_022",
+      "speaker_max_abs_difference": 0.06729636341333389,
+      "speaker_cosine": 0.9653074145317078,
+      "speaker_exact": false,
+      "prompt_exact": false,
+      "prompt_different_tokens": 37,
+      "cached_prompt_length": 333,
+      "inference_prompt_length": 333
+    },
+    {
+      "id": "asmr7_repair_023",
+      "speaker_max_abs_difference": 0.06729636341333389,
+      "speaker_cosine": 0.9653074145317078,
+      "speaker_exact": false,
+      "prompt_exact": false,
+      "prompt_different_tokens": 37,
+      "cached_prompt_length": 333,
+      "inference_prompt_length": 333
+    },
+    {
+      "id": "asmr7_repair_024",
+      "speaker_max_abs_difference": 0.06729636341333389,
+      "speaker_cosine": 0.9653074145317078,
+      "speaker_exact": false,
+      "prompt_exact": false,
+      "prompt_different_tokens": 37,
+      "cached_prompt_length": 333,
+      "inference_prompt_length": 333
+    },
+    {
+      "id": "asmr7_repair_025",
+      "speaker_max_abs_difference": 0.06729636341333389,
+      "speaker_cosine": 0.9653074145317078,
+      "speaker_exact": false,
+      "prompt_exact": false,
+      "prompt_different_tokens": 37,
+      "cached_prompt_length": 333,
+      "inference_prompt_length": 333
+    },
+    {
+      "id": "asmr7_repair_028",
+      "speaker_max_abs_difference": 0.06729636341333389,
+      "speaker_cosine": 0.9653074145317078,
+      "speaker_exact": false,
+      "prompt_exact": false,
+      "prompt_different_tokens": 37,
+      "cached_prompt_length": 333,
+      "inference_prompt_length": 333
+    },
+    {
+      "id": "asmr7_repair_033",
+      "speaker_max_abs_difference": 0.06729636341333389,
+      "speaker_cosine": 0.9653074145317078,
+      "speaker_exact": false,
+      "prompt_exact": false,
+      "prompt_different_tokens": 37,
+      "cached_prompt_length": 333,
+      "inference_prompt_length": 333
+    }
+  ]
+}

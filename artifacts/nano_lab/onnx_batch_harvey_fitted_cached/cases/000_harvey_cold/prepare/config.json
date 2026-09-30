@@ -1,0 +1,96 @@
+{
+  "conditioning_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+  "conditioning_cache_sha256": "3b7db489a52a1a6cf14a9a43148d11b4689c32b090124aa80b02f162ef5480f2",
+  "decoder": "meanflow",
+  "keys": {
+    "gen.embedding": {
+      "dtype": "float32",
+      "shape": [
+        1,
+        192
+      ]
+    },
+    "gen.prompt_feat": {
+      "dtype": "float32",
+      "shape": [
+        1,
+        355,
+        80
+      ]
+    },
+    "gen.prompt_token": {
+      "dtype": "int64",
+      "shape": [
+        1,
+        177
+      ]
+    },
+    "gen.prompt_token_len": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ]
+    },
+    "t3.cond_prompt_speech_tokens": {
+      "dtype": "int64",
+      "shape": [
+        1,
+        178
+      ]
+    },
+    "t3.emotion_adv": {
+      "dtype": "float32",
+      "shape": [
+        1,
+        1,
+        1
+      ]
+    },
+    "t3.speaker_emb": {
+      "dtype": "float32",
+      "shape": [
+        1,
+        256
+      ]
+    }
+  },
+  "mode": "speaker_adapted",
+  "profile": "/home/terryd/gooning/voicecloning/voices/nano/harvey_fitted_experimental.json",
+  "profile_sha256": "e569b0da054ae1e2c7816190a685c993624cdeba2374ffb9ae9d4fe66764f76f",
+  "profile_validation": {
+    "adapter": {
+      "adapter_patch_format": "nano_t3_lora_merged_v1",
+      "adapter_sha256": "2011db41d432f63cdc235bd0b4a75a447c6a81d220ea4848cf78c2235117a6cb",
+      "enabled": true,
+      "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged_adapter_harvey_rank2/t3/nano_t3_kv.onnx",
+      "graph_sha256": "b79521628420bdeb86557e7cc1e941d4818fbfe565708363272da57d48c9bdce",
+      "manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged_adapter_harvey_rank2/t3/manifest.json",
+      "manifest_sha256": "9513b5814d6831684f0d91d42020f860be7f957ace94bd530841e87b0f53c0a2",
+      "patched_graph_sha256": "b79521628420bdeb86557e7cc1e941d4818fbfe565708363272da57d48c9bdce",
+      "profile_adapter": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adapter_harvey_rank2.pt",
+      "profile_scale": 1.0
+    },
+    "mel_calibration": {
+      "applied": false,
+      "delta_sha256": null,
+      "enabled": false,
+      "report": null,
+      "report_sha256": null,
+      "strength": 0.0
+    },
+    "profile": "/home/terryd/gooning/voicecloning/voices/nano/harvey_fitted_experimental.json"
+  },
+  "sampling": {
+    "repetition_penalty": 1.2,
+    "temperature": 0.65,
+    "top_k": 1000,
+    "top_p": 0.95
+  },
+  "schema_version": 1,
+  "skipped_optional_fields": [
+    "t3.clap_emb",
+    "t3.cond_prompt_speech_emb",
+    "gen.prompt_feat_len"
+  ],
+  "steps": 2
+}

@@ -1,0 +1,115 @@
+{
+  "after_runs": {
+    "cuda_allocated_mib": 0.0,
+    "cuda_peak_allocated_mib": 0.0,
+    "cuda_peak_reserved_mib": 0.0,
+    "cuda_reserved_mib": 0.0,
+    "peak_rss_mib": 5356.7734375,
+    "rss_mib": 3566.97265625
+  },
+  "conditioned": {
+    "conditioning_seconds": 0.0,
+    "cuda_allocated_mib": 0.0,
+    "cuda_peak_allocated_mib": 0.0,
+    "cuda_peak_reserved_mib": 0.0,
+    "cuda_reserved_mib": 0.0,
+    "peak_rss_mib": 5356.7734375,
+    "rss_mib": 3585.9140625
+  },
+  "decoder": "meanflow",
+  "device": "cpu",
+  "dtype": "fp32",
+  "load_report": {
+    "decoder": "meanflow",
+    "device": "cpu",
+    "dtype": "torch.float32",
+    "loader": "chatterbox.tts_turbo.ChatterboxTurboTTS.from_local",
+    "optimized": false,
+    "parameters": {
+      "s3gen": 266030919,
+      "t3": 178859171,
+      "ve": 1423618
+    }
+  },
+  "loaded": {
+    "cuda_allocated_mib": 0.0,
+    "cuda_peak_allocated_mib": 0.0,
+    "cuda_peak_reserved_mib": 0.0,
+    "cuda_reserved_mib": 0.0,
+    "load_report": {
+      "decoder": "meanflow",
+      "device": "cpu",
+      "dtype": "torch.float32",
+      "loader": "chatterbox.tts_turbo.ChatterboxTurboTTS.from_local",
+      "optimized": false,
+      "parameters": {
+        "s3gen": 266030919,
+        "t3": 178859171,
+        "ve": 1423618
+      }
+    },
+    "load_seconds": 17.170427034000568,
+    "peak_rss_mib": 5356.7734375,
+    "rss_mib": 3585.9140625
+  },
+  "return_code": 0,
+  "runs": [
+    {
+      "audio_seconds": 5.72,
+      "cuda_allocated_mib": 0.0,
+      "cuda_peak_allocated_mib": 0.0,
+      "cuda_peak_reserved_mib": 0.0,
+      "cuda_reserved_mib": 0.0,
+      "generation_seconds": 35.183974524000405,
+      "index": 0,
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/runtime_stock_cpu3/stock_meanflow_0.wav",
+      "peak_rss_mib": 5356.7734375,
+      "rss_mib": 3636.83203125,
+      "rtf": 6.151044497202868,
+      "seed": 31,
+      "speech_tokens": 0,
+      "text": "Hey there. You are doing great. Take a slow breath and let your shoulders relax. I am right here with you."
+    },
+    {
+      "audio_seconds": 4.8,
+      "cuda_allocated_mib": 0.0,
+      "cuda_peak_allocated_mib": 0.0,
+      "cuda_peak_reserved_mib": 0.0,
+      "cuda_reserved_mib": 0.0,
+      "generation_seconds": 28.93751161,
+      "index": 1,
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/runtime_stock_cpu3/stock_meanflow_1.wav",
+      "peak_rss_mib": 5356.7734375,
+      "rss_mib": 3564.2578125,
+      "rtf": 6.028648252083334,
+      "seed": 48,
+      "speech_tokens": 0,
+      "text": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow."
+    },
+    {
+      "audio_seconds": 5.48,
+      "cuda_allocated_mib": 0.0,
+      "cuda_peak_allocated_mib": 0.0,
+      "cuda_peak_reserved_mib": 0.0,
+      "cuda_reserved_mib": 0.0,
+      "generation_seconds": 27.222465346999343,
+      "index": 2,
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/runtime_stock_cpu3/stock_meanflow_2.wav",
+      "peak_rss_mib": 5356.7734375,
+      "rss_mib": 3566.97265625,
+      "rtf": 4.967603165510829,
+      "seed": 65,
+      "speech_tokens": 0,
+      "text": "You have done enough for today. Take a quiet moment, breathe slowly, and let yourself relax."
+    }
+  ],
+  "schema": "nano-runtime-benchmark-v1",
+  "subprocess_sampler": {
+    "peak_rss_mib": 5357.1171875,
+    "peak_vms_mib": 14527.78125,
+    "sample_count": 6422,
+    "sample_period_seconds": 0.02
+  },
+  "variant": "stock",
+  "wall_seconds": 131.47421688099985
+}

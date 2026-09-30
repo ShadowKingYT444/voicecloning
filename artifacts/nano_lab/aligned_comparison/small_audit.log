@@ -1,0 +1,16 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "neutral_base", "wer": 0.0, "transcript": "I left the blue notebook beside the window, please bring it with you when we meet tomorrow."}
+{"id": "neutral_speaker", "wer": 0.058824, "transcript": "I left a blue notebook beside the window. Please bring it with you when we meet tomorrow."}
+{"id": "neutral_adapter_full", "wer": 0.0, "transcript": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow."}
+{"id": "expressive_base", "wer": 0.0, "transcript": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened."}
+{"id": "expressive_speaker", "wer": 0.0, "transcript": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened."}
+{"id": "expressive_adapter_full", "wer": 0.0, "transcript": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened."}
+{"id": "quiet_base", "wer": 0.0, "transcript": "The room is quiet now. Take a slow breath. We have plenty of time to talk."}
+{"id": "quiet_speaker", "wer": 0.0, "transcript": "The room is quiet now. Take a slow breath. We have plenty of time to talk."}
+{"id": "quiet_adapter_full", "wer": 0.0, "transcript": "The room is quiet now. Take a slow breath. We have plenty of time to talk."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 59.347s
+             CPU time consumed: 1min 54.783s
+                   Memory peak: 1G (swap: 0B)

@@ -1,0 +1,77 @@
+{
+  "elapsed_seconds": 3.192628860473633,
+  "finished_unix": 1790699546.1090493,
+  "result": {
+    "audio_samples": 176640,
+    "audio_seconds": 7.36,
+    "mel_length": 368,
+    "runtime": {
+      "cuda_arena_shrinkage_after_run": true,
+      "cuda_memory_pattern_enabled": false,
+      "fallback_disabled": true,
+      "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged/vocoder/nano_hift_vocoder.onnx",
+      "inputs": [
+        "speech_feat",
+        "phase_noise",
+        "sine_noise"
+      ],
+      "ort_provider": "cuda",
+      "ort_version": "1.26.0",
+      "outputs": [
+        "audio"
+      ],
+      "profile_requested": true,
+      "profiling": {
+        "enabled": true,
+        "ended": true,
+        "profile_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/soft_cuda_shrink/ort_profiles/vocoder_388885_2026-09-29_09-32-23_235.json",
+        "profile_prefix": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/soft_cuda_shrink/ort_profiles/vocoder_388885"
+      },
+      "provider_metadata": {
+        "available": [
+          "TensorrtExecutionProvider",
+          "CUDAExecutionProvider",
+          "CPUExecutionProvider"
+        ],
+        "cuda_options": {
+          "arena_extend_strategy": "kSameAsRequested",
+          "cudnn_conv_algo_search": "HEURISTIC",
+          "device_id": 0,
+          "do_copy_in_default_stream": true,
+          "gpu_mem_limit": 2147483648
+        },
+        "preload_dlls": {
+          "attempted": true,
+          "directory": "",
+          "status": "ok"
+        },
+        "requested": "cuda"
+      },
+      "providers": [
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "requested_provider_options": {
+        "arena_extend_strategy": "kSameAsRequested",
+        "cuda_device_id": 0,
+        "cudnn_conv_algo_search": "HEURISTIC",
+        "do_copy_in_default_stream": true,
+        "gpu_mem_limit_mib": 2048
+      },
+      "requested_providers": [
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "stage": "vocoder",
+      "threads": "bounded by caller; default 1 intra-op and 1 inter-op"
+    }
+  },
+  "rss": {
+    "peak_rss_bytes": 1017556992,
+    "rss_bytes": 1010114560
+  },
+  "schema_version": 1,
+  "stage": "vocoder",
+  "started_unix": 1790699542.9164217,
+  "status": "ok"
+}

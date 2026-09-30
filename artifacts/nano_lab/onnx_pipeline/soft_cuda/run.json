@@ -1,0 +1,79 @@
+{
+  "elapsed_seconds": 12.340094566345215,
+  "error": "RuntimeError: CUDA profiling for stage tokens did not show a CUDA kernel: {'status': 'not_requested', 'profile_path': None}",
+  "experimental_t3": true,
+  "experimental_t3_limitation": "The long T3 reference at sequence length 400 is not within the strict 3e-4 cache gate: 176 of 7.4M cache values exceeded the gate (max abs 0.000989; relative L2 1.44e-5). Logits, lengths 32/128, and decode cases passed. This integration run is experimental and does not claim full numerical T3 verification.",
+  "finished_unix": 1790699000.2841303,
+  "model_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged",
+  "model_manifest_sha256": {
+    "flow_encoder": "a9e6d3ab0a0c1bfd721a95e9012beddaa5eb55d25fb75829d904aca1ea9645b2",
+    "meanflow_estimator": "5fa7bfb0dde0a818f50518b6d5b157f5d2998f04137f2137ae47c7b09cba9c7c",
+    "t3": "f4d0570d14a17f278f12d89000f32193d9ac0e12dca3b7468ce8f718f015fbcc",
+    "vocoder": "9d4fc85a206c8b7a1326ad0194317ac98cac7665cc7dac23c5ac83a06a562e69"
+  },
+  "numpy_sampler": "not Torch-identical",
+  "ort_profile": true,
+  "ort_profiles": [
+    {
+      "profile_path": null,
+      "stage": "prepare",
+      "status": "not_requested"
+    },
+    {
+      "profile_path": null,
+      "stage": "tokens",
+      "status": "not_requested"
+    }
+  ],
+  "ort_provider": "cuda",
+  "ort_provider_options": {
+    "arena_extend_strategy": "kSameAsRequested",
+    "cuda_device_id": 0,
+    "cudnn_conv_algo_search": "HEURISTIC",
+    "do_copy_in_default_stream": true,
+    "gpu_mem_limit_mib": 2048
+  },
+  "pipeline_source_sha256": "3f370926d04c13a92f39dce83f9a6fe2626e93495a1b84cffc402ed75ecf3098",
+  "python_executable": "/home/terryd/gooning/voicecloning/.venv-nano-ort/bin/python",
+  "rss_sample_interval_seconds": 0.1,
+  "run_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/soft_cuda",
+  "sampled_peak_tree_rss_bytes": 277258240,
+  "schema_version": 1,
+  "seed": 31,
+  "stages": [
+    {
+      "elapsed_seconds": 3.475027084350586,
+      "finished_unix": 1790698991.7298598,
+      "ort_profile": {
+        "profile_path": null,
+        "status": "not_requested"
+      },
+      "parent_elapsed_seconds": 4.44440484046936,
+      "result": {
+        "conditioning_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_soft_morning_31.conds.pt",
+        "field_count": 7,
+        "mode": "zero_shot",
+        "profile": "/home/terryd/gooning/voicecloning/voices/nano/asmr_soft.json",
+        "skipped_optional_fields": [
+          "t3.clap_emb",
+          "t3.cond_prompt_speech_emb",
+          "gen.prompt_feat_len"
+        ]
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 234668032,
+        "rss_bytes": 235827200
+      },
+      "sampled_peak_tree_rss_bytes": 277258240,
+      "schema_version": 1,
+      "stage": "prepare",
+      "started_unix": 1790698988.254834,
+      "status": "ok"
+    }
+  ],
+  "status": "error",
+  "supplied_tokens_mode": false,
+  "traceback": "Traceback (most recent call last):\n  File \"/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_pipeline.py\", line 1216, in _run_pipeline\n    raise RuntimeError(\nRuntimeError: CUDA profiling for stage tokens did not show a CUDA kernel: {'status': 'not_requested', 'profile_path': None}\n",
+  "voice": "asmr_soft"
+}

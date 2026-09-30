@@ -1,0 +1,42 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{
+  "command": [
+    "scripts/nano_lab/codec_diagnostics.py",
+    "vocoder-reference",
+    "--label",
+    "soft_full",
+    "--pipeline-run-dir",
+    "artifacts/nano_lab/onnx_pipeline/soft_complete"
+  ],
+  "elapsed_seconds": 18.24916172027588,
+  "resources": {
+    "peak_rss_bytes": 726671360,
+    "rss_bytes": 655028224
+  },
+  "result": {
+    "branch": "pipeline_mel",
+    "diagnostics": {
+      "f0_frames": 368,
+      "f0_max_hz": 0.9536042809486389,
+      "f0_mean_hz": 0.5166419744491577,
+      "f0_min_hz": 0.0006084814667701721,
+      "phase_noise_l2": 6.763123989105225,
+      "sine_noise_l2": 1261.1328125,
+      "sine_waves_l2": 42.03786849975586,
+      "sine_waves_rms": 0.0333414152264595,
+      "source_branch_l2": 2.4827096462249756,
+      "source_branch_rms": 0.005907200742512941,
+      "voiced_fraction": 0.0
+    },
+    "label": "soft_full",
+    "native_report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/soft_full.native.json",
+    "waveform_samples": 176640
+  },
+  "status": "ok"
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 19.931s
+             CPU time consumed: 27.606s
+                   Memory peak: 704.7M (swap: 0B)

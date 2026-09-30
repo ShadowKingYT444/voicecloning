@@ -1,0 +1,28 @@
+{
+  "errors": [],
+  "inputs": [
+    "speech_tokens",
+    "token_lengths"
+  ],
+  "max_abs_error": 2.6226043701171875e-06,
+  "max_relative_error": 0.026449561119079586,
+  "method": "separate pure-ORT process against saved PyTorch reference arrays",
+  "outputs": 6,
+  "outputs_per_case": {
+    "tokens12": {
+      "errors": 0,
+      "outputs": 2
+    },
+    "tokens120": {
+      "errors": 0,
+      "outputs": 2
+    },
+    "tokens600": {
+      "errors": 0,
+      "outputs": 2
+    }
+  },
+  "provider": "CPUExecutionProvider",
+  "stage": "flow_encoder",
+  "status": "verified"
+}

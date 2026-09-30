@@ -1,0 +1,6 @@
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+[1;31m2026-09-29 10:43:39.016053508 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[1;31m2026-09-29 10:43:39.206858278 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+[0;93m2026-09-29 10:43:41.347902573 [W:onnxruntime:, transformer_memcpy.cc:111 ApplyImpl] 56 Memcpy nodes are added to the graph main_graph for CUDAExecutionProvider. It might have negative impact on performance (including unable to run CUDA graph). Set session_options.log_severity_level=1 to see the detail logs before this message.[m
+[1;31m2026-09-29 10:44:01.661051762 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] [cudnn_frontend] Error: No execution plans support the graph.[m
+loaded PerthNet (Implicit) at step 250,000

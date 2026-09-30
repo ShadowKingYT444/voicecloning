@@ -1,0 +1,832 @@
+{
+  "cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_aligned_cache.json",
+  "cache_sha256": "ac3b7a6c6d3925420f8a3950a5e87417523fa333124593e48d6278404265ee4c",
+  "cfm_steps": 2,
+  "command": [
+    "scripts/nano_lab/mel_calibration.py",
+    "prepare",
+    "--cache",
+    "artifacts/nano_lab/adaptation_asmr_aligned_cache.json",
+    "--conditionals-path",
+    "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+    "--output-dir",
+    "artifacts/nano_lab/mel_calibration_asmr",
+    "--device",
+    "cuda"
+  ],
+  "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+  "conditioning_reference_provenance": {
+    "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav": {
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "preprocessing": {
+        "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+        "exaggeration": 0.5,
+        "norm_loudness": true,
+        "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+        "prompt_tokens_unmodified": true,
+        "speaker_embedding_source": "model.conds.t3.speaker_emb",
+        "speaker_embedding_unmodified": true
+      },
+      "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+    }
+  },
+  "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+  "created_unix": 1790699115.3552635,
+  "diagnostic_only": true,
+  "elapsed_seconds": 6.995052336998924,
+  "flow_path": "model.s3gen.flow_inference only; HiFT vocoder not called",
+  "format": "nano_mel_calibration_prepare_v1",
+  "mel_bands": 80,
+  "mel_layout": "bands,time; raw log-mel values",
+  "model_checkpoint_sha256": "a34dc7d94e6906c2ab52053a4bfe91d4200fdc12a12a2838e9b51c4fce8d3809",
+  "model_dir": "/home/terryd/gooning/voicecloning/models/chatterbox-nano",
+  "rows": [
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_001.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      },
+      "conditioning_reference_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "id": "asmr7_repair_001",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/asmr7_repair_001.mel.npz",
+      "output_token_count": 108,
+      "reconstructed_mel_shape": [
+        80,
+        216
+      ],
+      "seed": 31,
+      "source_mel_shape": [
+        80,
+        209
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "152b99cb858a760406cfd2b0e2800ff43624528e1675efcebd0a245ff24ba11b",
+      "source_text": "Whoa, easy there. Okay, I swear.",
+      "speaker_id": "asmr7",
+      "speech_token_count": 105,
+      "split": "train",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_006.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      },
+      "conditioning_reference_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "id": "asmr7_repair_006",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/asmr7_repair_006.mel.npz",
+      "output_token_count": 140,
+      "reconstructed_mel_shape": [
+        80,
+        280
+      ],
+      "seed": 1040,
+      "source_mel_shape": [
+        80,
+        273
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "7c573da034bec9d899a989beec8b56dab84194bc9cf4e4c19b14f7fe750c95c5",
+      "source_text": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+      "speaker_id": "asmr7",
+      "speech_token_count": 137,
+      "split": "train",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_007.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      },
+      "conditioning_reference_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "id": "asmr7_repair_007",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/asmr7_repair_007.mel.npz",
+      "output_token_count": 102,
+      "reconstructed_mel_shape": [
+        80,
+        204
+      ],
+      "seed": 2049,
+      "source_mel_shape": [
+        80,
+        198
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "840395254e9c7c0890545f76c9e9efa6df36eabdecce2062196f501c46facbd0",
+      "source_text": "sound good. Great. Very well.",
+      "speaker_id": "asmr7",
+      "speech_token_count": 99,
+      "split": "train",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_008.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      },
+      "conditioning_reference_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "id": "asmr7_repair_008",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/asmr7_repair_008.mel.npz",
+      "output_token_count": 222,
+      "reconstructed_mel_shape": [
+        80,
+        444
+      ],
+      "seed": 3058,
+      "source_mel_shape": [
+        80,
+        437
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "43a93916176b50c56d80646950a5cfc851b5de42b1e466c6b5cfe0250d36b99a",
+      "source_text": "Now, let's get this game underway. I'll be nice enough to let whoever started the game up to go on first.",
+      "speaker_id": "asmr7",
+      "speech_token_count": 219,
+      "split": "train",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_010.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      },
+      "conditioning_reference_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "id": "asmr7_repair_010",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/asmr7_repair_010.mel.npz",
+      "output_token_count": 99,
+      "reconstructed_mel_shape": [
+        80,
+        198
+      ],
+      "seed": 4067,
+      "source_mel_shape": [
+        80,
+        191
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "6180bd226a41a53a78ccdc5549b4ac05cb13270e147d86bedb440f688ae2d8c9",
+      "source_text": "It's my birthday, so they better make these seven minutes worth it.",
+      "speaker_id": "asmr7",
+      "speech_token_count": 96,
+      "split": "train",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_012.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      },
+      "conditioning_reference_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "id": "asmr7_repair_012",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/asmr7_repair_012.mel.npz",
+      "output_token_count": 133,
+      "reconstructed_mel_shape": [
+        80,
+        266
+      ],
+      "seed": 5076,
+      "source_mel_shape": [
+        80,
+        259
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "43660fe6d3f40beebff202ce4b4569fd6417e346a67b00ad61a09cd8d53dc628",
+      "source_text": "Don't worry. Wait, hold on.",
+      "speaker_id": "asmr7",
+      "speech_token_count": 130,
+      "split": "train",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_013.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      },
+      "conditioning_reference_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "id": "asmr7_repair_013",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/asmr7_repair_013.mel.npz",
+      "output_token_count": 87,
+      "reconstructed_mel_shape": [
+        80,
+        174
+      ],
+      "seed": 6085,
+      "source_mel_shape": [
+        80,
+        167
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "e2d427a7e015946c6c2400e510928e575a97ef5fd92a6c66e184267fefb67665",
+      "source_text": "Look, why on earth are you even here?",
+      "speaker_id": "asmr7",
+      "speech_token_count": 84,
+      "split": "train",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_014.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      },
+      "conditioning_reference_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "id": "asmr7_repair_014",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/asmr7_repair_014.mel.npz",
+      "output_token_count": 110,
+      "reconstructed_mel_shape": [
+        80,
+        220
+      ],
+      "seed": 7094,
+      "source_mel_shape": [
+        80,
+        214
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "f4187b1b1ea1811e41b0ba1389475eecd1e2e532e269805f5d91856f46536ddd",
+      "source_text": "It just means I'm stuck here with you for longer.",
+      "speaker_id": "asmr7",
+      "speech_token_count": 107,
+      "split": "train",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_015.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      },
+      "conditioning_reference_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "id": "asmr7_repair_015",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/asmr7_repair_015.mel.npz",
+      "output_token_count": 129,
+      "reconstructed_mel_shape": [
+        80,
+        258
+      ],
+      "seed": 8103,
+      "source_mel_shape": [
+        80,
+        251
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "61f61df1f60056d42f8fd22a8ebe698e7065e1a3792d973d7252e0e469080346",
+      "source_text": "Did I mention it's you? Why?",
+      "speaker_id": "asmr7",
+      "speech_token_count": 126,
+      "split": "train",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_019.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      },
+      "conditioning_reference_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "id": "asmr7_repair_019",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/asmr7_repair_019.mel.npz",
+      "output_token_count": 119,
+      "reconstructed_mel_shape": [
+        80,
+        238
+      ],
+      "seed": 9112,
+      "source_mel_shape": [
+        80,
+        231
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "35cd121d9598f4e950a3ffe786211395e5712930665abf0ee1e4d1195cddc982",
+      "source_text": "They're everywhere. You are so that bad.",
+      "speaker_id": "asmr7",
+      "speech_token_count": 116,
+      "split": "train",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_023.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      },
+      "conditioning_reference_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "id": "asmr7_repair_023",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/asmr7_repair_023.mel.npz",
+      "output_token_count": 185,
+      "reconstructed_mel_shape": [
+        80,
+        370
+      ],
+      "seed": 10121,
+      "source_mel_shape": [
+        80,
+        363
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "e013eb061d5fcd5fe713a140aff406be6fb47d0279260fff95e09eeebe064048",
+      "source_text": "Oh, well, when I usually insult you, you just throw one back at me.",
+      "speaker_id": "asmr7",
+      "speech_token_count": 182,
+      "split": "train",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_024.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      },
+      "conditioning_reference_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "id": "asmr7_repair_024",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/asmr7_repair_024.mel.npz",
+      "output_token_count": 97,
+      "reconstructed_mel_shape": [
+        80,
+        194
+      ],
+      "seed": 11130,
+      "source_mel_shape": [
+        80,
+        187
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "8e1c2e81a777029322b7998e42ca802270923ee5fbc9cf8ce25b64b15198a3b4",
+      "source_text": "I didn't think I actually hurt you when I say these things.",
+      "speaker_id": "asmr7",
+      "speech_token_count": 94,
+      "split": "train",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_025.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      },
+      "conditioning_reference_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "id": "asmr7_repair_025",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/asmr7_repair_025.mel.npz",
+      "output_token_count": 142,
+      "reconstructed_mel_shape": [
+        80,
+        284
+      ],
+      "seed": 12139,
+      "source_mel_shape": [
+        80,
+        278
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "93d1ac2633ee656b5e8bde6adcfd83b330e8dec23eb268bd74be3d5f07a4ecd1",
+      "source_text": "Right? Back to the topic, because you just want to hear me sing your praises.",
+      "speaker_id": "asmr7",
+      "speech_token_count": 139,
+      "split": "train",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_028.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      },
+      "conditioning_reference_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "id": "asmr7_repair_028",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/asmr7_repair_028.mel.npz",
+      "output_token_count": 134,
+      "reconstructed_mel_shape": [
+        80,
+        268
+      ],
+      "seed": 13148,
+      "source_mel_shape": [
+        80,
+        261
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "f2efce16a694772c58cd10cd2b5e1eb185984e4f4c3d1429c65cfdee6419fc8b",
+      "source_text": "We need to like, make them go away and they find us talking.",
+      "speaker_id": "asmr7",
+      "speech_token_count": 131,
+      "split": "train",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_033.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      },
+      "conditioning_reference_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "id": "asmr7_repair_033",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/asmr7_repair_033.mel.npz",
+      "output_token_count": 106,
+      "reconstructed_mel_shape": [
+        80,
+        212
+      ],
+      "seed": 14157,
+      "source_mel_shape": [
+        80,
+        205
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "460a15655bae09b0afc39fa37b18b8e7934cbd397967d786677f9f4044dd6a27",
+      "source_text": "Oh, um, not what you meant. Gotcha.",
+      "speaker_id": "asmr7",
+      "speech_token_count": 103,
+      "split": "train",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_011.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      },
+      "conditioning_reference_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "id": "asmr7_repair_011",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/asmr7_repair_011.mel.npz",
+      "output_token_count": 104,
+      "reconstructed_mel_shape": [
+        80,
+        208
+      ],
+      "seed": 15166,
+      "source_mel_shape": [
+        80,
+        201
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "2d73fa6ac8ed500c8077155b20fd5b1aaeeae872f1fefead4ebe92e5f728d370",
+      "source_text": "Will you stop pushing me? I'm getting up already.",
+      "speaker_id": "asmr7",
+      "speech_token_count": 101,
+      "split": "valid",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_022.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      },
+      "conditioning_reference_sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "id": "asmr7_repair_022",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/asmr7_repair_022.mel.npz",
+      "output_token_count": 276,
+      "reconstructed_mel_shape": [
+        80,
+        552
+      ],
+      "seed": 16175,
+      "source_mel_shape": [
+        80,
+        546
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "9a53e7a4211fe6fbb6b2404e3f0fdc752761d9d9a4c7f4550509230cbf2269e8",
+      "source_text": "How's it finally dawned on you that you ruined my birthday party by destroying my one chance, my one chance, to kiss a random person?",
+      "speaker_id": "asmr7",
+      "speech_token_count": 273,
+      "split": "valid",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    }
+  ],
+  "seed": 31,
+  "source_loudness_normalization": "upstream norm_loudness target_lufs=-27",
+  "source_sample_rate": 24000,
+  "speaker_id": "asmr7",
+  "synthetic_audio": false
+}

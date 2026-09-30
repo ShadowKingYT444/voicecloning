@@ -1,0 +1,6 @@
+{
+  "native": "artifacts/nano_lab/native_harvey_fitted_business_31.wav",
+  "sweep": "artifacts/nano_lab/harvey_fitted_comparison/business_adapter_full.master.wav",
+  "byte_identical": true,
+  "max_abs_difference": 0.0
+}

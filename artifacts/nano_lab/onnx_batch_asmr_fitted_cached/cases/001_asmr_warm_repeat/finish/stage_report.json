@@ -1,0 +1,35 @@
+{
+  "elapsed_seconds": 0.28557443618774414,
+  "finished_unix": 1790704141.5946968,
+  "result": {
+    "audio_samples": 131520,
+    "audio_seconds": 5.48,
+    "master_processing": {
+      "achieved_lufs": -19.000000012032128,
+      "gain_db": 11.185900819223697,
+      "highpass_hz": 45,
+      "noise_gate": false,
+      "target_lufs": -19,
+      "true_peak_ceiling_dbtp": -1,
+      "true_peak_oversampling": 4
+    },
+    "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_batch_asmr_fitted_cached/asmr_warm_repeat.wav",
+    "sample_rate": 24000,
+    "schema_version": 1,
+    "source": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_batch_asmr_fitted_cached/cases/001_asmr_warm_repeat/vocoder/audio.npz",
+    "trim_fade": {
+      "fade_ms": 20,
+      "n_trim": 480
+    },
+    "watermark": "PerthImplicitWatermarker",
+    "watermark_applied": true
+  },
+  "rss": {
+    "peak_rss_bytes": 1853145088,
+    "rss_bytes": 1845305344
+  },
+  "schema_version": 1,
+  "stage": "finish",
+  "started_unix": 1790704141.3091233,
+  "status": "ok"
+}

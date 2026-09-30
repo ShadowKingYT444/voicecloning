@@ -1,0 +1,13 @@
+{
+  "source": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_train_01/asmr7_train_01__natural.wav",
+  "synthetic": false,
+  "processing": {
+    "highpass_hz": 45,
+    "gain_db": 0.6935400882009486,
+    "target_lufs": -19,
+    "achieved_lufs": -20.27107575121287,
+    "true_peak_ceiling_dbtp": -1,
+    "true_peak_oversampling": 4,
+    "noise_gate": false
+  }
+}

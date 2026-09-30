@@ -1,0 +1,59 @@
+{
+  "branch": "pipeline_mel",
+  "checkpoint_dir": "/home/terryd/gooning/voicecloning/models/chatterbox-nano",
+  "checkpoint_load": {
+    "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+    "loaded_tensors": 328,
+    "missing_tensors": [],
+    "selected_tensors": 328,
+    "skipped_tensors": 2163,
+    "unexpected_tensors": []
+  },
+  "command": [
+    "scripts/nano_lab/codec_diagnostics.py",
+    "vocoder-reference",
+    "--label",
+    "harvey_full",
+    "--pipeline-run-dir",
+    "artifacts/nano_lab/onnx_pipeline/harvey_complete_fixed",
+    "--output-dir",
+    "artifacts/nano_lab/codec_diagnostics"
+  ],
+  "kind": "native_vocoder_reference",
+  "mel": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/harvey_full.mel.npy",
+  "mel_layout": "B,80,T",
+  "mel_shape": [
+    1,
+    80,
+    269
+  ],
+  "native_waveform": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/harvey_full.native_waveform.npy",
+  "phase_noise": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/harvey_full.phase_noise.npy",
+  "provenance": {
+    "full_mel_frames": 269,
+    "run_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/harvey_complete_fixed",
+    "source": "onnx_pipeline estimator/mel.npz + vocoder/audio.npz",
+    "used_mel_frames": 269
+  },
+  "sample_rate": 24000,
+  "schema_version": 1,
+  "sine_noise": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/harvey_full.sine_noise.npy",
+  "source_branch": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/harvey_full.source_branch.npy",
+  "source_branch_diagnostics": {
+    "f0_frames": 269,
+    "f0_max_hz": 0.7627252340316772,
+    "f0_mean_hz": 0.1476515382528305,
+    "f0_min_hz": 5.135685205459595e-05,
+    "phase_noise_l2": 6.763123989105225,
+    "sine_noise_l2": 1078.8638916015625,
+    "sine_waves_l2": 35.96210479736328,
+    "sine_waves_rms": 0.033360555768013,
+    "source_branch_l2": 2.1224780082702637,
+    "source_branch_rms": 0.005906716454774141,
+    "voiced_fraction": 0.0
+  },
+  "synthetic_tts": true,
+  "waveform_shape": [
+    129120
+  ]
+}

@@ -1,0 +1,20 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+Traceback (most recent call last):
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/patch_onnx_decoder_attention.py", line 1116, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/patch_onnx_decoder_attention.py", line 1086, in main
+    report = patch_model_dir(
+             ^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/patch_onnx_decoder_attention.py", line 981, in patch_model_dir
+    adapter = _load_attention_adapter(adapter_path, inventory_path=inventory_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/patch_onnx_decoder_attention.py", line 594, in _load_attention_adapter
+    raise PatchError(f"decoder attention target does not map to estimator state: {native_name}")
+PatchError: decoder attention target does not map to estimator state: flow.decoder.estimator.down_blocks.0.1.0.attn1.to_k.weight
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 3.266s
+             CPU time consumed: 3.343s
+                   Memory peak: 155.7M (swap: 0B)

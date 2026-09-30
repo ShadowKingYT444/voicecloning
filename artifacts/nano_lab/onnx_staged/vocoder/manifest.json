@@ -1,0 +1,74 @@
+{
+  "checkpoint": {
+    "bytes": 1064875036,
+    "exists": true,
+    "path": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+    "sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f"
+  },
+  "created_unix": 1790673998.0728393,
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "examples": {
+    "bytes": 235356,
+    "input_names": [
+      "speech_feat",
+      "phase_noise",
+      "sine_noise"
+    ],
+    "output_names": [
+      "output_0"
+    ],
+    "path": "examples.npz"
+  },
+  "graph": {
+    "bytes": 83532690,
+    "elapsed_seconds": 4.7485775140012265,
+    "opset": 18,
+    "path": "nano_hift_vocoder.onnx",
+    "requested_inputs": [
+      "speech_feat",
+      "phase_noise",
+      "sine_noise"
+    ],
+    "requested_outputs": [
+      "audio"
+    ],
+    "validation": "pending separate ORT verification"
+  },
+  "load": {
+    "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+    "loaded_tensors": 328,
+    "missing_tensors": [],
+    "selected_tensors": 328,
+    "skipped_tensors": 2163,
+    "unexpected_tensors": []
+  },
+  "model": "ResembleAI/chatterbox-nano",
+  "runtime_contract": "Inputs are S3Gen mel features plus explicit phase/source noise; output is unwatermarked waveform. Apply Perth in the release path.",
+  "schema_version": 1,
+  "source": "local Nano checkpoint; no Turbo substitution",
+  "spectral_replacement_vs_native_max_abs": 1.4126300811767578e-05,
+  "stage": "vocoder",
+  "status": "exported",
+  "verification": {
+    "errors": [],
+    "inputs": [
+      "speech_feat",
+      "phase_noise",
+      "sine_noise"
+    ],
+    "max_abs_error": 4.13358211517334e-05,
+    "max_relative_error": 0.1028880838087589,
+    "method": "separate pure-ORT process against saved PyTorch reference arrays",
+    "outputs": 1,
+    "outputs_per_case": {
+      "default": {
+        "errors": 0,
+        "outputs": 1
+      }
+    },
+    "provider": "CPUExecutionProvider",
+    "stage": "vocoder",
+    "status": "verified"
+  }
+}

@@ -1,0 +1,28 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{
+  "status": "verified",
+  "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_external/toy.onnx",
+  "provider": "CPUExecutionProvider",
+  "inputs": [
+    "x"
+  ],
+  "outputs": 1,
+  "errors": [],
+  "max_abs_error": 5.960464477539063e-08,
+  "max_relative_error": 8.569095573950737e-08,
+  "session_load_seconds": 0.054045400000177324,
+  "inference_seconds": 0.004281497000192758,
+  "rss_before_session_bytes": 57311232,
+  "rss_after_session_bytes": 66572288,
+  "peak_rss_bytes": 66576384,
+  "tolerances": {
+    "atol": 0.0003,
+    "rtol": 0.0003
+  }
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 789ms
+             CPU time consumed: 765ms
+                   Memory peak: 51.3M (swap: 0B)

@@ -1,0 +1,42 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: b8da6026209943dd86ea49bd1e51e27e
+{
+  "command": [
+    "scripts/nano_lab/codec_diagnostics.py",
+    "vocoder-reference",
+    "--label",
+    "source01",
+    "--source-mel",
+    "artifacts/nano_lab/codec_diagnostics/asmr7_train_01.source_mel.npz"
+  ],
+  "elapsed_seconds": 11.734912872314453,
+  "resources": {
+    "peak_rss_bytes": 677908480,
+    "rss_bytes": 646946816
+  },
+  "result": {
+    "branch": "source_mel",
+    "diagnostics": {
+      "f0_frames": 300,
+      "f0_max_hz": 0.9507350325584412,
+      "f0_mean_hz": 0.18260765075683594,
+      "f0_min_hz": 9.120255708694458e-05,
+      "phase_noise_l2": 5.420013904571533,
+      "sine_noise_l2": 1138.26513671875,
+      "sine_waves_l2": 37.942195892333984,
+      "sine_waves_rms": 0.03332938253879547,
+      "source_branch_l2": 2.2415034770965576,
+      "source_branch_rms": 0.005906880833208561,
+      "voiced_fraction": 0.0
+    },
+    "label": "source01",
+    "native_report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01.native.json",
+    "waveform_samples": 144000
+  },
+  "status": "ok"
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 13.242s
+             CPU time consumed: 18.515s
+                   Memory peak: 490.3M (swap: 0B)

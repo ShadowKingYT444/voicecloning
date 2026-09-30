@@ -1,0 +1,12 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{
+  "status": "failed",
+  "error_type": "ValueError",
+  "error": "reference preparation uses a different model checkpoint"
+}
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 22.966s
+             CPU time consumed: 22.168s
+                   Memory peak: 2G (swap: 0B)

@@ -1,0 +1,81 @@
+{
+  "metric": "resemblyzer source-vs-source cosine between independent held-out windows",
+  "variant": "natural",
+  "excluded_ids": [],
+  "interpretation": "attainable source consistency range; whisper/style changes can lower cosine",
+  "families": {
+    "asmr7": {
+      "clip_count": 5,
+      "embedding_success_count": 5,
+      "pair_count": 10,
+      "mean_cosine": 0.896596,
+      "min_cosine": 0.803545,
+      "max_cosine": 0.949415,
+      "pairs": [
+        {
+          "left_id": "asmr7_heldout_01",
+          "right_id": "asmr7_heldout_02",
+          "cosine": 0.803545
+        },
+        {
+          "left_id": "asmr7_heldout_01",
+          "right_id": "asmr7_heldout_03",
+          "cosine": 0.845604
+        },
+        {
+          "left_id": "asmr7_heldout_01",
+          "right_id": "asmr7_heldout_04",
+          "cosine": 0.877453
+        },
+        {
+          "left_id": "asmr7_heldout_01",
+          "right_id": "asmr7_heldout_05",
+          "cosine": 0.855079
+        },
+        {
+          "left_id": "asmr7_heldout_02",
+          "right_id": "asmr7_heldout_03",
+          "cosine": 0.910547
+        },
+        {
+          "left_id": "asmr7_heldout_02",
+          "right_id": "asmr7_heldout_04",
+          "cosine": 0.921439
+        },
+        {
+          "left_id": "asmr7_heldout_02",
+          "right_id": "asmr7_heldout_05",
+          "cosine": 0.934968
+        },
+        {
+          "left_id": "asmr7_heldout_03",
+          "right_id": "asmr7_heldout_04",
+          "cosine": 0.926897
+        },
+        {
+          "left_id": "asmr7_heldout_03",
+          "right_id": "asmr7_heldout_05",
+          "cosine": 0.949415
+        },
+        {
+          "left_id": "asmr7_heldout_04",
+          "right_id": "asmr7_heldout_05",
+          "cosine": 0.941012
+        }
+      ],
+      "errors": []
+    },
+    "harvey": {
+      "clip_count": 1,
+      "embedding_success_count": 1,
+      "pair_count": 0,
+      "mean_cosine": null,
+      "min_cosine": null,
+      "max_cosine": null,
+      "pairs": [],
+      "errors": []
+    }
+  },
+  "rss_after_model_mb": 544.53,
+  "manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/manifest.json"
+}

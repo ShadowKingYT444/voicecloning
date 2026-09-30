@@ -1,0 +1,568 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+FFFFF                                                                    [100%]
+=================================== FAILURES ===================================
+_ ExternalPatcherTests.test_graph_bytes_and_manifest_pending_after_synthetic_publication _
+
+self = <test_patch_onnx_decoder_attention.ExternalPatcherTests testMethod=test_graph_bytes_and_manifest_pending_after_synthetic_publication>
+
+    def test_graph_bytes_and_manifest_pending_after_synthetic_publication(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            base = root / "base"
+            stage = base / "meanflow_estimator"
+            stage.mkdir(parents=True)
+>           layout, _, _ = _fixture(stage)
+                           ^^^^^^^^^^^^^^^
+
+scripts/nano_lab/test_patch_onnx_decoder_attention.py:272: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/nano_lab/test_patch_onnx_decoder_attention.py:122: in _fixture
+    layout = patcher._load_external_layout(directory)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+stage_dir = PosixPath('/tmp/tmpwo4slivi/base/meanflow_estimator')
+
+    def _load_external_layout(stage_dir: Path | str) -> ExternalLayout:
+        """Validate the graph, external report, and sidecar spans."""
+    
+        stage = Path(stage_dir).expanduser().resolve()
+        manifest_path = stage / "manifest.json"
+        graph_path = stage / "nano_meanflow_estimator.onnx"
+        report_path = stage / "nano_meanflow_estimator.external.json"
+        if not manifest_path.is_file():
+            raise FileNotFoundError(f"meanflow stage manifest not found: {manifest_path}")
+        if not graph_path.is_file():
+            raise FileNotFoundError(f"meanflow ONNX graph not found: {graph_path}")
+        if not report_path.is_file():
+            raise FileNotFoundError(f"meanflow external report not found: {report_path}")
+        report = _load_json(report_path)
+        if report.get("status") != "exported":
+            raise PatchError(f"external report is not exported: {report.get('status')!r}")
+        if report.get("graph_bytes") is not None and int(report["graph_bytes"]) != graph_path.stat().st_size:
+            raise PatchError("external report graph_bytes does not match the graph")
+        report_graph = report.get("graph")
+        if report_graph and Path(str(report_graph)).name != graph_path.name:
+            raise PatchError("external report refers to a different graph filename")
+        external = report.get("external")
+        if not isinstance(external, Mapping):
+            raise PatchError("external report has no external object")
+        weight_file = external.get("weight_file")
+        weights_path = _safe_stage_file(stage, weight_file, label="external weight_file")
+        if not weights_path.is_file():
+            raise FileNotFoundError(f"meanflow external weights not found: {weights_path}")
+        weight_bytes = weights_path.stat().st_size
+        declared_weight_bytes = _as_nonnegative_int(external.get("weight_bytes"), name="external weight_bytes")
+        if declared_weight_bytes != weight_bytes:
+            raise PatchError("external report weight_bytes does not match the sidecar")
+        raw_initializers = external.get("initializers")
+        if not isinstance(raw_initializers, list) or not raw_initializers:
+            raise PatchError("external report has no initializer records")
+        records: list[ExternalInitializer] = []
+        names: set[str] = set()
+        for index, raw in enumerate(raw_initializers):
+            if not isinstance(raw, Mapping):
+                raise PatchError(f"external initializer {index} is not an object")
+            graph_name = raw.get("graph_name")
+            state_name = raw.get("state_name")
+            if not isinstance(graph_name, str) or not graph_name:
+                raise PatchError(f"external initializer {index} has no graph_name")
+            if not isinstance(state_name, str) or state_name != graph_name:
+                raise PatchError(f"external initializer {graph_name!r} state_name does not exactly match graph_name")
+            if graph_name in names:
+                raise PatchError(f"external report repeats initializer {graph_name!r}")
+            names.add(graph_name)
+            raw_shape = raw.get("shape")
+            if not isinstance(raw_shape, (list, tuple)) or not raw_shape:
+                raise PatchError(f"external initializer {graph_name!r} has no shape")
+            shape = tuple(_as_positive_int(value, name=f"{graph_name} shape") for value in raw_shape)
+            dtype = raw.get("dtype")
+            if dtype != "float32":
+                raise PatchError(f"external initializer {graph_name!r} dtype must be float32")
+            offset = _as_nonnegative_int(raw.get("offset"), name=f"{graph_name} offset")
+            length = _as_positive_int(raw.get("length"), name=f"{graph_name} length")
+            expected_length = int(np.prod(shape, dtype=np.int64)) * 4
+            if length != expected_length:
+                raise PatchError(f"external initializer {graph_name!r} length does not match shape")
+            if offset + length > weight_bytes:
+                raise PatchError(f"external initializer {graph_name!r} exceeds sidecar bounds")
+            digest = _hex(raw.get("sha256"), name=f"{graph_name} sha256")
+            records.append(ExternalInitializer(graph_name, state_name, shape, dtype, offset, length, digest))
+        ordered = sorted(records, key=lambda item: item.offset)
+        cursor = 0
+        for item in ordered:
+            if item.offset < cursor:
+                raise PatchError(f"external initializer spans overlap at {item.graph_name!r}")
+            cursor = item.offset + item.length
+        graph_metadata = read_graph_metadata(graph_path)
+        graph_by_name = graph_metadata.by_name()
+        if set(graph_by_name) != names:
+            missing = sorted(names - set(graph_by_name))[:4]
+            extra = sorted(set(graph_by_name) - names)[:4]
+            raise PatchError(f"graph and external report initializer sets differ; missing={missing}, extra={extra}")
+        for record in records:
+            tensor = graph_by_name[record.graph_name]
+            if tuple(tensor.dims) != record.shape:
+                raise PatchError(f"graph shape differs from external report for {record.graph_name!r}")
+            if tensor.data_type != ONNX_FLOAT:
+                raise PatchError(f"graph initializer {record.graph_name!r} is not ONNX FLOAT")
+            if tensor.has_raw_data or tensor.data_location != ONNX_EXTERNAL:
+                raise PatchError(f"graph initializer {record.graph_name!r} is not external-only")
+            if tensor.external_data.get("location") != weight_file:
+>               raise PatchError(f"graph external location differs for {record.graph_name!r}")
+E               patch_onnx_decoder_attention.PatchError: graph external location differs for 'estimator.down_blocks.0.1.0.attn1.to_q.weight'
+
+scripts/nano_lab/patch_onnx_decoder_attention.py:538: PatchError
+_ ExternalPatcherTests.test_layout_rejects_transposed_missing_dtype_location_and_offset _
+
+self = <test_patch_onnx_decoder_attention.ExternalPatcherTests testMethod=test_layout_rejects_transposed_missing_dtype_location_and_offset>
+
+    def test_layout_rejects_transposed_missing_dtype_location_and_offset(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            # Transposed report shape differs from the graph and sidecar length.
+>           report_layout, _, _ = _fixture(root)
+                                  ^^^^^^^^^^^^^^
+
+scripts/nano_lab/test_patch_onnx_decoder_attention.py:184: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/nano_lab/test_patch_onnx_decoder_attention.py:122: in _fixture
+    layout = patcher._load_external_layout(directory)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+stage_dir = PosixPath('/tmp/tmpjan9igvp')
+
+    def _load_external_layout(stage_dir: Path | str) -> ExternalLayout:
+        """Validate the graph, external report, and sidecar spans."""
+    
+        stage = Path(stage_dir).expanduser().resolve()
+        manifest_path = stage / "manifest.json"
+        graph_path = stage / "nano_meanflow_estimator.onnx"
+        report_path = stage / "nano_meanflow_estimator.external.json"
+        if not manifest_path.is_file():
+            raise FileNotFoundError(f"meanflow stage manifest not found: {manifest_path}")
+        if not graph_path.is_file():
+            raise FileNotFoundError(f"meanflow ONNX graph not found: {graph_path}")
+        if not report_path.is_file():
+            raise FileNotFoundError(f"meanflow external report not found: {report_path}")
+        report = _load_json(report_path)
+        if report.get("status") != "exported":
+            raise PatchError(f"external report is not exported: {report.get('status')!r}")
+        if report.get("graph_bytes") is not None and int(report["graph_bytes"]) != graph_path.stat().st_size:
+            raise PatchError("external report graph_bytes does not match the graph")
+        report_graph = report.get("graph")
+        if report_graph and Path(str(report_graph)).name != graph_path.name:
+            raise PatchError("external report refers to a different graph filename")
+        external = report.get("external")
+        if not isinstance(external, Mapping):
+            raise PatchError("external report has no external object")
+        weight_file = external.get("weight_file")
+        weights_path = _safe_stage_file(stage, weight_file, label="external weight_file")
+        if not weights_path.is_file():
+            raise FileNotFoundError(f"meanflow external weights not found: {weights_path}")
+        weight_bytes = weights_path.stat().st_size
+        declared_weight_bytes = _as_nonnegative_int(external.get("weight_bytes"), name="external weight_bytes")
+        if declared_weight_bytes != weight_bytes:
+            raise PatchError("external report weight_bytes does not match the sidecar")
+        raw_initializers = external.get("initializers")
+        if not isinstance(raw_initializers, list) or not raw_initializers:
+            raise PatchError("external report has no initializer records")
+        records: list[ExternalInitializer] = []
+        names: set[str] = set()
+        for index, raw in enumerate(raw_initializers):
+            if not isinstance(raw, Mapping):
+                raise PatchError(f"external initializer {index} is not an object")
+            graph_name = raw.get("graph_name")
+            state_name = raw.get("state_name")
+            if not isinstance(graph_name, str) or not graph_name:
+                raise PatchError(f"external initializer {index} has no graph_name")
+            if not isinstance(state_name, str) or state_name != graph_name:
+                raise PatchError(f"external initializer {graph_name!r} state_name does not exactly match graph_name")
+            if graph_name in names:
+                raise PatchError(f"external report repeats initializer {graph_name!r}")
+            names.add(graph_name)
+            raw_shape = raw.get("shape")
+            if not isinstance(raw_shape, (list, tuple)) or not raw_shape:
+                raise PatchError(f"external initializer {graph_name!r} has no shape")
+            shape = tuple(_as_positive_int(value, name=f"{graph_name} shape") for value in raw_shape)
+            dtype = raw.get("dtype")
+            if dtype != "float32":
+                raise PatchError(f"external initializer {graph_name!r} dtype must be float32")
+            offset = _as_nonnegative_int(raw.get("offset"), name=f"{graph_name} offset")
+            length = _as_positive_int(raw.get("length"), name=f"{graph_name} length")
+            expected_length = int(np.prod(shape, dtype=np.int64)) * 4
+            if length != expected_length:
+                raise PatchError(f"external initializer {graph_name!r} length does not match shape")
+            if offset + length > weight_bytes:
+                raise PatchError(f"external initializer {graph_name!r} exceeds sidecar bounds")
+            digest = _hex(raw.get("sha256"), name=f"{graph_name} sha256")
+            records.append(ExternalInitializer(graph_name, state_name, shape, dtype, offset, length, digest))
+        ordered = sorted(records, key=lambda item: item.offset)
+        cursor = 0
+        for item in ordered:
+            if item.offset < cursor:
+                raise PatchError(f"external initializer spans overlap at {item.graph_name!r}")
+            cursor = item.offset + item.length
+        graph_metadata = read_graph_metadata(graph_path)
+        graph_by_name = graph_metadata.by_name()
+        if set(graph_by_name) != names:
+            missing = sorted(names - set(graph_by_name))[:4]
+            extra = sorted(set(graph_by_name) - names)[:4]
+            raise PatchError(f"graph and external report initializer sets differ; missing={missing}, extra={extra}")
+        for record in records:
+            tensor = graph_by_name[record.graph_name]
+            if tuple(tensor.dims) != record.shape:
+                raise PatchError(f"graph shape differs from external report for {record.graph_name!r}")
+            if tensor.data_type != ONNX_FLOAT:
+                raise PatchError(f"graph initializer {record.graph_name!r} is not ONNX FLOAT")
+            if tensor.has_raw_data or tensor.data_location != ONNX_EXTERNAL:
+                raise PatchError(f"graph initializer {record.graph_name!r} is not external-only")
+            if tensor.external_data.get("location") != weight_file:
+>               raise PatchError(f"graph external location differs for {record.graph_name!r}")
+E               patch_onnx_decoder_attention.PatchError: graph external location differs for 'estimator.down_blocks.0.1.0.attn1.to_q.weight'
+
+scripts/nano_lab/patch_onnx_decoder_attention.py:538: PatchError
+_ ExternalPatcherTests.test_patch_model_dir_failure_does_not_publish_and_repatch_is_rejected _
+
+self = <test_patch_onnx_decoder_attention.ExternalPatcherTests testMethod=test_patch_model_dir_failure_does_not_publish_and_repatch_is_rejected>
+
+    def test_patch_model_dir_failure_does_not_publish_and_repatch_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            base = root / "base"
+            stage = base / "meanflow_estimator"
+            stage.mkdir(parents=True)
+>           layout, _, _ = _fixture(stage)
+                           ^^^^^^^^^^^^^^^
+
+scripts/nano_lab/test_patch_onnx_decoder_attention.py:236: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/nano_lab/test_patch_onnx_decoder_attention.py:122: in _fixture
+    layout = patcher._load_external_layout(directory)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+stage_dir = PosixPath('/tmp/tmphqqj0mpc/base/meanflow_estimator')
+
+    def _load_external_layout(stage_dir: Path | str) -> ExternalLayout:
+        """Validate the graph, external report, and sidecar spans."""
+    
+        stage = Path(stage_dir).expanduser().resolve()
+        manifest_path = stage / "manifest.json"
+        graph_path = stage / "nano_meanflow_estimator.onnx"
+        report_path = stage / "nano_meanflow_estimator.external.json"
+        if not manifest_path.is_file():
+            raise FileNotFoundError(f"meanflow stage manifest not found: {manifest_path}")
+        if not graph_path.is_file():
+            raise FileNotFoundError(f"meanflow ONNX graph not found: {graph_path}")
+        if not report_path.is_file():
+            raise FileNotFoundError(f"meanflow external report not found: {report_path}")
+        report = _load_json(report_path)
+        if report.get("status") != "exported":
+            raise PatchError(f"external report is not exported: {report.get('status')!r}")
+        if report.get("graph_bytes") is not None and int(report["graph_bytes"]) != graph_path.stat().st_size:
+            raise PatchError("external report graph_bytes does not match the graph")
+        report_graph = report.get("graph")
+        if report_graph and Path(str(report_graph)).name != graph_path.name:
+            raise PatchError("external report refers to a different graph filename")
+        external = report.get("external")
+        if not isinstance(external, Mapping):
+            raise PatchError("external report has no external object")
+        weight_file = external.get("weight_file")
+        weights_path = _safe_stage_file(stage, weight_file, label="external weight_file")
+        if not weights_path.is_file():
+            raise FileNotFoundError(f"meanflow external weights not found: {weights_path}")
+        weight_bytes = weights_path.stat().st_size
+        declared_weight_bytes = _as_nonnegative_int(external.get("weight_bytes"), name="external weight_bytes")
+        if declared_weight_bytes != weight_bytes:
+            raise PatchError("external report weight_bytes does not match the sidecar")
+        raw_initializers = external.get("initializers")
+        if not isinstance(raw_initializers, list) or not raw_initializers:
+            raise PatchError("external report has no initializer records")
+        records: list[ExternalInitializer] = []
+        names: set[str] = set()
+        for index, raw in enumerate(raw_initializers):
+            if not isinstance(raw, Mapping):
+                raise PatchError(f"external initializer {index} is not an object")
+            graph_name = raw.get("graph_name")
+            state_name = raw.get("state_name")
+            if not isinstance(graph_name, str) or not graph_name:
+                raise PatchError(f"external initializer {index} has no graph_name")
+            if not isinstance(state_name, str) or state_name != graph_name:
+                raise PatchError(f"external initializer {graph_name!r} state_name does not exactly match graph_name")
+            if graph_name in names:
+                raise PatchError(f"external report repeats initializer {graph_name!r}")
+            names.add(graph_name)
+            raw_shape = raw.get("shape")
+            if not isinstance(raw_shape, (list, tuple)) or not raw_shape:
+                raise PatchError(f"external initializer {graph_name!r} has no shape")
+            shape = tuple(_as_positive_int(value, name=f"{graph_name} shape") for value in raw_shape)
+            dtype = raw.get("dtype")
+            if dtype != "float32":
+                raise PatchError(f"external initializer {graph_name!r} dtype must be float32")
+            offset = _as_nonnegative_int(raw.get("offset"), name=f"{graph_name} offset")
+            length = _as_positive_int(raw.get("length"), name=f"{graph_name} length")
+            expected_length = int(np.prod(shape, dtype=np.int64)) * 4
+            if length != expected_length:
+                raise PatchError(f"external initializer {graph_name!r} length does not match shape")
+            if offset + length > weight_bytes:
+                raise PatchError(f"external initializer {graph_name!r} exceeds sidecar bounds")
+            digest = _hex(raw.get("sha256"), name=f"{graph_name} sha256")
+            records.append(ExternalInitializer(graph_name, state_name, shape, dtype, offset, length, digest))
+        ordered = sorted(records, key=lambda item: item.offset)
+        cursor = 0
+        for item in ordered:
+            if item.offset < cursor:
+                raise PatchError(f"external initializer spans overlap at {item.graph_name!r}")
+            cursor = item.offset + item.length
+        graph_metadata = read_graph_metadata(graph_path)
+        graph_by_name = graph_metadata.by_name()
+        if set(graph_by_name) != names:
+            missing = sorted(names - set(graph_by_name))[:4]
+            extra = sorted(set(graph_by_name) - names)[:4]
+            raise PatchError(f"graph and external report initializer sets differ; missing={missing}, extra={extra}")
+        for record in records:
+            tensor = graph_by_name[record.graph_name]
+            if tuple(tensor.dims) != record.shape:
+                raise PatchError(f"graph shape differs from external report for {record.graph_name!r}")
+            if tensor.data_type != ONNX_FLOAT:
+                raise PatchError(f"graph initializer {record.graph_name!r} is not ONNX FLOAT")
+            if tensor.has_raw_data or tensor.data_location != ONNX_EXTERNAL:
+                raise PatchError(f"graph initializer {record.graph_name!r} is not external-only")
+            if tensor.external_data.get("location") != weight_file:
+>               raise PatchError(f"graph external location differs for {record.graph_name!r}")
+E               patch_onnx_decoder_attention.PatchError: graph external location differs for 'estimator.down_blocks.0.1.0.attn1.to_q.weight'
+
+scripts/nano_lab/patch_onnx_decoder_attention.py:538: PatchError
+_____ ExternalPatcherTests.test_strength_zero_and_one_and_non_target_bytes _____
+
+self = <test_patch_onnx_decoder_attention.ExternalPatcherTests testMethod=test_strength_zero_and_one_and_non_target_bytes>
+
+    def test_strength_zero_and_one_and_non_target_bytes(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+>           layout, _, _ = _fixture(root)
+                           ^^^^^^^^^^^^^^
+
+scripts/nano_lab/test_patch_onnx_decoder_attention.py:146: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/nano_lab/test_patch_onnx_decoder_attention.py:122: in _fixture
+    layout = patcher._load_external_layout(directory)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+stage_dir = PosixPath('/tmp/tmppelqt5r3')
+
+    def _load_external_layout(stage_dir: Path | str) -> ExternalLayout:
+        """Validate the graph, external report, and sidecar spans."""
+    
+        stage = Path(stage_dir).expanduser().resolve()
+        manifest_path = stage / "manifest.json"
+        graph_path = stage / "nano_meanflow_estimator.onnx"
+        report_path = stage / "nano_meanflow_estimator.external.json"
+        if not manifest_path.is_file():
+            raise FileNotFoundError(f"meanflow stage manifest not found: {manifest_path}")
+        if not graph_path.is_file():
+            raise FileNotFoundError(f"meanflow ONNX graph not found: {graph_path}")
+        if not report_path.is_file():
+            raise FileNotFoundError(f"meanflow external report not found: {report_path}")
+        report = _load_json(report_path)
+        if report.get("status") != "exported":
+            raise PatchError(f"external report is not exported: {report.get('status')!r}")
+        if report.get("graph_bytes") is not None and int(report["graph_bytes"]) != graph_path.stat().st_size:
+            raise PatchError("external report graph_bytes does not match the graph")
+        report_graph = report.get("graph")
+        if report_graph and Path(str(report_graph)).name != graph_path.name:
+            raise PatchError("external report refers to a different graph filename")
+        external = report.get("external")
+        if not isinstance(external, Mapping):
+            raise PatchError("external report has no external object")
+        weight_file = external.get("weight_file")
+        weights_path = _safe_stage_file(stage, weight_file, label="external weight_file")
+        if not weights_path.is_file():
+            raise FileNotFoundError(f"meanflow external weights not found: {weights_path}")
+        weight_bytes = weights_path.stat().st_size
+        declared_weight_bytes = _as_nonnegative_int(external.get("weight_bytes"), name="external weight_bytes")
+        if declared_weight_bytes != weight_bytes:
+            raise PatchError("external report weight_bytes does not match the sidecar")
+        raw_initializers = external.get("initializers")
+        if not isinstance(raw_initializers, list) or not raw_initializers:
+            raise PatchError("external report has no initializer records")
+        records: list[ExternalInitializer] = []
+        names: set[str] = set()
+        for index, raw in enumerate(raw_initializers):
+            if not isinstance(raw, Mapping):
+                raise PatchError(f"external initializer {index} is not an object")
+            graph_name = raw.get("graph_name")
+            state_name = raw.get("state_name")
+            if not isinstance(graph_name, str) or not graph_name:
+                raise PatchError(f"external initializer {index} has no graph_name")
+            if not isinstance(state_name, str) or state_name != graph_name:
+                raise PatchError(f"external initializer {graph_name!r} state_name does not exactly match graph_name")
+            if graph_name in names:
+                raise PatchError(f"external report repeats initializer {graph_name!r}")
+            names.add(graph_name)
+            raw_shape = raw.get("shape")
+            if not isinstance(raw_shape, (list, tuple)) or not raw_shape:
+                raise PatchError(f"external initializer {graph_name!r} has no shape")
+            shape = tuple(_as_positive_int(value, name=f"{graph_name} shape") for value in raw_shape)
+            dtype = raw.get("dtype")
+            if dtype != "float32":
+                raise PatchError(f"external initializer {graph_name!r} dtype must be float32")
+            offset = _as_nonnegative_int(raw.get("offset"), name=f"{graph_name} offset")
+            length = _as_positive_int(raw.get("length"), name=f"{graph_name} length")
+            expected_length = int(np.prod(shape, dtype=np.int64)) * 4
+            if length != expected_length:
+                raise PatchError(f"external initializer {graph_name!r} length does not match shape")
+            if offset + length > weight_bytes:
+                raise PatchError(f"external initializer {graph_name!r} exceeds sidecar bounds")
+            digest = _hex(raw.get("sha256"), name=f"{graph_name} sha256")
+            records.append(ExternalInitializer(graph_name, state_name, shape, dtype, offset, length, digest))
+        ordered = sorted(records, key=lambda item: item.offset)
+        cursor = 0
+        for item in ordered:
+            if item.offset < cursor:
+                raise PatchError(f"external initializer spans overlap at {item.graph_name!r}")
+            cursor = item.offset + item.length
+        graph_metadata = read_graph_metadata(graph_path)
+        graph_by_name = graph_metadata.by_name()
+        if set(graph_by_name) != names:
+            missing = sorted(names - set(graph_by_name))[:4]
+            extra = sorted(set(graph_by_name) - names)[:4]
+            raise PatchError(f"graph and external report initializer sets differ; missing={missing}, extra={extra}")
+        for record in records:
+            tensor = graph_by_name[record.graph_name]
+            if tuple(tensor.dims) != record.shape:
+                raise PatchError(f"graph shape differs from external report for {record.graph_name!r}")
+            if tensor.data_type != ONNX_FLOAT:
+                raise PatchError(f"graph initializer {record.graph_name!r} is not ONNX FLOAT")
+            if tensor.has_raw_data or tensor.data_location != ONNX_EXTERNAL:
+                raise PatchError(f"graph initializer {record.graph_name!r} is not external-only")
+            if tensor.external_data.get("location") != weight_file:
+>               raise PatchError(f"graph external location differs for {record.graph_name!r}")
+E               patch_onnx_decoder_attention.PatchError: graph external location differs for 'estimator.down_blocks.0.1.0.attn1.to_q.weight'
+
+scripts/nano_lab/patch_onnx_decoder_attention.py:538: PatchError
+____________ ExternalPatcherTests.test_wrong_factor_hash_is_atomic _____________
+
+self = <test_patch_onnx_decoder_attention.ExternalPatcherTests testMethod=test_wrong_factor_hash_is_atomic>
+
+    def test_wrong_factor_hash_is_atomic(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+>           layout, _, _ = _fixture(root)
+                           ^^^^^^^^^^^^^^
+
+scripts/nano_lab/test_patch_onnx_decoder_attention.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+scripts/nano_lab/test_patch_onnx_decoder_attention.py:122: in _fixture
+    layout = patcher._load_external_layout(directory)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+stage_dir = PosixPath('/tmp/tmp9_jgmf90')
+
+    def _load_external_layout(stage_dir: Path | str) -> ExternalLayout:
+        """Validate the graph, external report, and sidecar spans."""
+    
+        stage = Path(stage_dir).expanduser().resolve()
+        manifest_path = stage / "manifest.json"
+        graph_path = stage / "nano_meanflow_estimator.onnx"
+        report_path = stage / "nano_meanflow_estimator.external.json"
+        if not manifest_path.is_file():
+            raise FileNotFoundError(f"meanflow stage manifest not found: {manifest_path}")
+        if not graph_path.is_file():
+            raise FileNotFoundError(f"meanflow ONNX graph not found: {graph_path}")
+        if not report_path.is_file():
+            raise FileNotFoundError(f"meanflow external report not found: {report_path}")
+        report = _load_json(report_path)
+        if report.get("status") != "exported":
+            raise PatchError(f"external report is not exported: {report.get('status')!r}")
+        if report.get("graph_bytes") is not None and int(report["graph_bytes"]) != graph_path.stat().st_size:
+            raise PatchError("external report graph_bytes does not match the graph")
+        report_graph = report.get("graph")
+        if report_graph and Path(str(report_graph)).name != graph_path.name:
+            raise PatchError("external report refers to a different graph filename")
+        external = report.get("external")
+        if not isinstance(external, Mapping):
+            raise PatchError("external report has no external object")
+        weight_file = external.get("weight_file")
+        weights_path = _safe_stage_file(stage, weight_file, label="external weight_file")
+        if not weights_path.is_file():
+            raise FileNotFoundError(f"meanflow external weights not found: {weights_path}")
+        weight_bytes = weights_path.stat().st_size
+        declared_weight_bytes = _as_nonnegative_int(external.get("weight_bytes"), name="external weight_bytes")
+        if declared_weight_bytes != weight_bytes:
+            raise PatchError("external report weight_bytes does not match the sidecar")
+        raw_initializers = external.get("initializers")
+        if not isinstance(raw_initializers, list) or not raw_initializers:
+            raise PatchError("external report has no initializer records")
+        records: list[ExternalInitializer] = []
+        names: set[str] = set()
+        for index, raw in enumerate(raw_initializers):
+            if not isinstance(raw, Mapping):
+                raise PatchError(f"external initializer {index} is not an object")
+            graph_name = raw.get("graph_name")
+            state_name = raw.get("state_name")
+            if not isinstance(graph_name, str) or not graph_name:
+                raise PatchError(f"external initializer {index} has no graph_name")
+            if not isinstance(state_name, str) or state_name != graph_name:
+                raise PatchError(f"external initializer {graph_name!r} state_name does not exactly match graph_name")
+            if graph_name in names:
+                raise PatchError(f"external report repeats initializer {graph_name!r}")
+            names.add(graph_name)
+            raw_shape = raw.get("shape")
+            if not isinstance(raw_shape, (list, tuple)) or not raw_shape:
+                raise PatchError(f"external initializer {graph_name!r} has no shape")
+            shape = tuple(_as_positive_int(value, name=f"{graph_name} shape") for value in raw_shape)
+            dtype = raw.get("dtype")
+            if dtype != "float32":
+                raise PatchError(f"external initializer {graph_name!r} dtype must be float32")
+            offset = _as_nonnegative_int(raw.get("offset"), name=f"{graph_name} offset")
+            length = _as_positive_int(raw.get("length"), name=f"{graph_name} length")
+            expected_length = int(np.prod(shape, dtype=np.int64)) * 4
+            if length != expected_length:
+                raise PatchError(f"external initializer {graph_name!r} length does not match shape")
+            if offset + length > weight_bytes:
+                raise PatchError(f"external initializer {graph_name!r} exceeds sidecar bounds")
+            digest = _hex(raw.get("sha256"), name=f"{graph_name} sha256")
+            records.append(ExternalInitializer(graph_name, state_name, shape, dtype, offset, length, digest))
+        ordered = sorted(records, key=lambda item: item.offset)
+        cursor = 0
+        for item in ordered:
+            if item.offset < cursor:
+                raise PatchError(f"external initializer spans overlap at {item.graph_name!r}")
+            cursor = item.offset + item.length
+        graph_metadata = read_graph_metadata(graph_path)
+        graph_by_name = graph_metadata.by_name()
+        if set(graph_by_name) != names:
+            missing = sorted(names - set(graph_by_name))[:4]
+            extra = sorted(set(graph_by_name) - names)[:4]
+            raise PatchError(f"graph and external report initializer sets differ; missing={missing}, extra={extra}")
+        for record in records:
+            tensor = graph_by_name[record.graph_name]
+            if tuple(tensor.dims) != record.shape:
+                raise PatchError(f"graph shape differs from external report for {record.graph_name!r}")
+            if tensor.data_type != ONNX_FLOAT:
+                raise PatchError(f"graph initializer {record.graph_name!r} is not ONNX FLOAT")
+            if tensor.has_raw_data or tensor.data_location != ONNX_EXTERNAL:
+                raise PatchError(f"graph initializer {record.graph_name!r} is not external-only")
+            if tensor.external_data.get("location") != weight_file:
+>               raise PatchError(f"graph external location differs for {record.graph_name!r}")
+E               patch_onnx_decoder_attention.PatchError: graph external location differs for 'estimator.down_blocks.0.1.0.attn1.to_q.weight'
+
+scripts/nano_lab/patch_onnx_decoder_attention.py:538: PatchError
+=========================== short test summary info ============================
+FAILED scripts/nano_lab/test_patch_onnx_decoder_attention.py::ExternalPatcherTests::test_graph_bytes_and_manifest_pending_after_synthetic_publication
+FAILED scripts/nano_lab/test_patch_onnx_decoder_attention.py::ExternalPatcherTests::test_layout_rejects_transposed_missing_dtype_location_and_offset
+FAILED scripts/nano_lab/test_patch_onnx_decoder_attention.py::ExternalPatcherTests::test_patch_model_dir_failure_does_not_publish_and_repatch_is_rejected
+FAILED scripts/nano_lab/test_patch_onnx_decoder_attention.py::ExternalPatcherTests::test_strength_zero_and_one_and_non_target_bytes
+FAILED scripts/nano_lab/test_patch_onnx_decoder_attention.py::ExternalPatcherTests::test_wrong_factor_hash_is_atomic
+5 failed in 0.76s
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 1.764s
+             CPU time consumed: 1.855s
+                   Memory peak: 40.4M (swap: 0B)

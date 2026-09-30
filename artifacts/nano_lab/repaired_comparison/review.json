@@ -1,0 +1,49 @@
+{
+  "status": "not_promoted",
+  "reason": "Reference preprocessing differs between training and actual inference; corrected-condition fitting next. User has not approved realism. Half adapter also changes blue to blend in both recognizers.",
+  "summary": [
+    {
+      "variant": "base",
+      "mean_speaker_cosine": 0.8816806666666667,
+      "mean_dnsmos_overall": 2.615433012742226,
+      "tiny_exact_count": 2,
+      "small_exact_count": 3,
+      "count": 3
+    },
+    {
+      "variant": "speaker",
+      "mean_speaker_cosine": 0.8759836666666667,
+      "mean_dnsmos_overall": 3.049827838250788,
+      "tiny_exact_count": 3,
+      "small_exact_count": 3,
+      "count": 3
+    },
+    {
+      "variant": "adapter_half",
+      "mean_speaker_cosine": 0.8688046666666667,
+      "mean_dnsmos_overall": 2.593971902300009,
+      "tiny_exact_count": 0,
+      "small_exact_count": 2,
+      "count": 3
+    },
+    {
+      "variant": "adapter_full",
+      "mean_speaker_cosine": 0.8906793333333334,
+      "mean_dnsmos_overall": 3.010704193341619,
+      "tiny_exact_count": 1,
+      "small_exact_count": 3,
+      "count": 3
+    },
+    {
+      "variant": "combined_half",
+      "mean_speaker_cosine": 0.8490543333333334,
+      "mean_dnsmos_overall": 3.0279319208086477,
+      "tiny_exact_count": 3,
+      "small_exact_count": 3,
+      "count": 3
+    }
+  ],
+  "generation_peak_rss_mib": 2422.30859375,
+  "evaluation_cgroup_peak_mib_display": 805,
+  "quality_is_proxy": true
+}

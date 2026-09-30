@@ -1,0 +1,25 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "business_base", "wer": 0.0, "transcript": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence."}
+{"id": "business_speaker", "wer": 0.0, "transcript": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence."}
+{"id": "business_adapter_half", "wer": 0.0, "transcript": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence."}
+{"id": "business_adapter_full", "wer": 0.0, "transcript": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence."}
+{"id": "question_base", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "question_speaker", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "question_adapter_half", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "question_adapter_full", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "narrative_base", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "narrative_speaker", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "narrative_adapter_half", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "narrative_adapter_full", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "asmr7_heldout_01", "wer": 0.0, "transcript": "Let's see, who's the lucky person who gets to kiss me? Wait a minute, do I know you?"}
+{"id": "asmr7_heldout_04", "wer": 0.44, "transcript": "Thanks. Wait, that better not be implying that I'm also a nerd because I won't take back all the nice things I said about you. I am not a nerd. And you know what?"}
+{"id": "asmr7_heldout_05", "wer": 0.137931, "transcript": "Think of this as me making up for all the times I called you something I didn't mean. And, well... I guess I've been mean to you a lot, so... We..."}
+{"id": "onnx_batch_soft_cold", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "onnx_batch_soft_warm_repeat", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "onnx_batch_soft_warm_new", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 58.765s
+             CPU time consumed: 3min 53.334s
+                   Memory peak: 1G (swap: 0B)

@@ -1,0 +1,17 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+Traceback (most recent call last):
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/verify_decoder_attention.py", line 73, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/verify_decoder_attention.py", line 25, in main
+    manifest, rows, prepared_path, _, _ = emb._validate_prepare_inputs(args.prepare_dir.resolve())
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/fit_decoder_embedding.py", line 162, in _validate_prepare_inputs
+    raise FileNotFoundError(manifest_path)
+FileNotFoundError: /home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow/manifest.json
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 3.875s
+             CPU time consumed: 4.169s
+                   Memory peak: 268.5M (swap: 0B)

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "asmr7_train_01",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_train_01/asmr7_train_01__natural.wav",
+    "text": "So as the one throwing the party, and it also being my party, I would like to announce.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "asmr7_train_02",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_train_02/asmr7_train_02__natural.wav",
+    "text": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "asmr7_train_03",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_train_03/asmr7_train_03__natural.wav",
+    "text": "I'll be nice enough to let whoever started the game up to go on first.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "asmr7_train_04",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_train_04/asmr7_train_04__natural.wav",
+    "text": "It's my birthday, so they better make these seven minutes worth it. Please be cute.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "asmr7_train_05",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_train_05/asmr7_train_05__natural.wav",
+    "text": "What did I do to end up here with you? I know I spun the bottle. Fucking dumbass.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "asmr7_train_06",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_train_06/asmr7_train_06__natural.wav",
+    "text": "For some reason, you're here now, and stuck in a closet with me.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "asmr7_train_07",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_train_07/asmr7_train_07__natural.wav",
+    "text": "And I hate you, you're too perfect, like untouchable by misfortune.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "asmr7_train_08",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_train_08/asmr7_train_08__natural.wav",
+    "text": "The fact is, when I see you, I see this cute little perfect being who lives in a bubble.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "asmr7_train_09",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_train_09/asmr7_train_09__natural.wav",
+    "text": "Okay, what I'm trying to say is that you made me jealous, that you live in this perfect world.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "asmr7_valid_04",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_04/asmr7_heldout_04__natural.wav",
+    "text": "Thanks. Wait, that better not be implying I'm also a nerd because I will take back all the nice things I said about you.",
+    "voice": "asmr7"
+  }
+]

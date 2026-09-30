@@ -1,0 +1,15 @@
+{
+  "status": "audit_in_progress",
+  "row": "asmr7_train_01",
+  "cached_text": "So as the one throwing the party, and it also being my party, I would like to announce.",
+  "source_tiny_asr": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+  "implication": "Do not trust adaptation comparisons or train further until all source-text pairs are independently audited. Preserve old cache/checkpoints for reproducibility.",
+  "affected_experiments": [
+    "rank4/rank8 T3 adapters",
+    "speaker residual fit"
+  ],
+  "small_exact_count": 3,
+  "total_cached_rows": 10,
+  "small_audit": "training_audio_small_audit.json",
+  "training_admission": "dataset_contract.py now requires accepted transcript audit and exact audio/text hashes. Existing cache is rejected; preserved for reproducibility."
+}

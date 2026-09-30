@@ -1,0 +1,153 @@
+{
+  "kind": "t3_reference_factorial_fixed_fitted_decoder",
+  "promoted": false,
+  "human_listening_accepted": false,
+  "general_zero_shot_improvement": false,
+  "groups": {
+    "unchanged_t3": {
+      "rows": [
+        {
+          "id": "fit_heldout01_rp1p0",
+          "experiment": "decoder_cadence_combined",
+          "speaker_cosine": 0.889833,
+          "dnsmos_overall": 2.4974092509459993,
+          "dnsmos_background": 3.08081982378712,
+          "small_wer": 0.0,
+          "seconds": 7.2,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_cadence_combined/level_matched/fit_heldout01_rp1p0.wav"
+        },
+        {
+          "id": "fit_question_rp1p0",
+          "experiment": "decoder_cadence_combined",
+          "speaker_cosine": 0.906273,
+          "dnsmos_overall": 3.0808984089233924,
+          "dnsmos_background": 3.6136797340657116,
+          "small_wer": 0.0,
+          "seconds": 6.32,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_cadence_combined/level_matched/fit_question_rp1p0.wav"
+        },
+        {
+          "id": "fit_narrative_rp1p0",
+          "experiment": "decoder_cadence_combined",
+          "speaker_cosine": 0.911511,
+          "dnsmos_overall": 2.825373639689349,
+          "dnsmos_background": 3.380080217554643,
+          "small_wer": 0.0,
+          "seconds": 7.72,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_cadence_combined/level_matched/fit_narrative_rp1p0.wav"
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.902539,
+        "dnsmos_overall": 2.8012270998529134,
+        "dnsmos_background": 3.358193258469158,
+        "small_wer": 0.0,
+        "seconds": 7.08
+      }
+    },
+    "prompt": {
+      "rows": [
+        {
+          "id": "heldout01_prompt",
+          "speaker_cosine": 0.910557,
+          "dnsmos_overall": 3.17482741730562,
+          "small_wer": 0.0,
+          "seconds": 7.4,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix/level_matched/heldout01_prompt.wav"
+        },
+        {
+          "id": "question_prompt",
+          "speaker_cosine": 0.882041,
+          "dnsmos_overall": 3.1207615924519487,
+          "small_wer": 0.0,
+          "seconds": 5.72,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix/level_matched/question_prompt.wav"
+        },
+        {
+          "id": "narrative_prompt",
+          "speaker_cosine": 0.891151,
+          "dnsmos_overall": 3.196237704881749,
+          "small_wer": 0.0,
+          "seconds": 7.8,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix/level_matched/narrative_prompt.wav"
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.894583,
+        "dnsmos_overall": 3.1639422382131057,
+        "small_wer": 0.0,
+        "seconds": 6.973333333333334
+      }
+    },
+    "speaker": {
+      "rows": [
+        {
+          "id": "heldout01_speaker",
+          "speaker_cosine": 0.90115,
+          "dnsmos_overall": 2.3838733123222218,
+          "small_wer": 0.0,
+          "seconds": 7.36,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix/level_matched/heldout01_speaker.wav"
+        },
+        {
+          "id": "question_speaker",
+          "speaker_cosine": 0.886567,
+          "dnsmos_overall": 3.225247482727836,
+          "small_wer": 0.0,
+          "seconds": 6.32,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix/level_matched/question_speaker.wav"
+        },
+        {
+          "id": "narrative_speaker",
+          "speaker_cosine": 0.90237,
+          "dnsmos_overall": 3.0363443488041715,
+          "small_wer": 0.0,
+          "seconds": 7.64,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix/level_matched/narrative_speaker.wav"
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8966956666666667,
+        "dnsmos_overall": 2.8818217146180762,
+        "small_wer": 0.0,
+        "seconds": 7.1066666666666665
+      }
+    },
+    "all_t3": {
+      "rows": [
+        {
+          "id": "heldout01_all_t3",
+          "speaker_cosine": 0.917411,
+          "dnsmos_overall": 2.716095082776245,
+          "small_wer": 0.05,
+          "seconds": 8.36,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix/level_matched/heldout01_all_t3.wav"
+        },
+        {
+          "id": "question_all_t3",
+          "speaker_cosine": 0.882629,
+          "dnsmos_overall": 3.195282430281245,
+          "small_wer": 0.0625,
+          "seconds": 5.44,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix/level_matched/question_all_t3.wav"
+        },
+        {
+          "id": "narrative_all_t3",
+          "speaker_cosine": 0.90091,
+          "dnsmos_overall": 3.2456478982319816,
+          "small_wer": 0.0,
+          "seconds": 7.08,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix/level_matched/narrative_all_t3.wav"
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.9003166666666667,
+        "dnsmos_overall": 3.052341803763157,
+        "small_wer": 0.0375,
+        "seconds": 6.96
+      }
+    }
+  },
+  "decision": "All-T3 rejected for two word errors. Prompt-only retained as listening candidate; improves quality proxy but loses average identity against unchanged T3.",
+  "controls": "Same three texts/seeds, all-attention adapter, fitted decoder, spectral correction, RP1.0, -27 LUFS, same independent development references."
+}

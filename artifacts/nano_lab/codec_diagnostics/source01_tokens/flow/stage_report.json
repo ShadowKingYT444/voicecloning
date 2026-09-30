@@ -1,0 +1,18 @@
+{
+  "elapsed_seconds": 4.420324087142944,
+  "finished_unix": 1790695710.5479486,
+  "result": {
+    "mel_length": 806,
+    "prompt_feat_length": 500,
+    "prompt_token_count": 250,
+    "speech_token_count": 153
+  },
+  "rss": {
+    "peak_rss_bytes": 452415488,
+    "rss_bytes": 327639040
+  },
+  "schema_version": 1,
+  "stage": "flow",
+  "started_unix": 1790695706.1276267,
+  "status": "ok"
+}

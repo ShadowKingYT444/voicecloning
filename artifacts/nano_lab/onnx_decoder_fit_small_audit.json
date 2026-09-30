@@ -1,0 +1,131 @@
+{
+  "model": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+  "backend": "CTranslate2 CPU int8",
+  "role": "independent_content_audit",
+  "human_listening": false,
+  "model_download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+  "model_identity": {
+    "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+    "name": "faster-whisper-small",
+    "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+    "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+    "size_class": "small"
+  },
+  "word_timestamps": false,
+  "inputs": [
+    {
+      "id": "onnx_decoder_fit_question79",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_asmr_decoder_fitted.wav",
+      "audio_sha256": "074efb16432a1212934e9a5f9454e3e31df83d1fa70d2f1abd7cbb6f0ca341e8",
+      "expected_text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "segments": [
+        {
+          "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+          "start_s": 0.0,
+          "end_s": 5.44,
+          "avg_logprob": -0.2196323729696728,
+          "no_speech_prob": 0.003330474253743887,
+          "compression_ratio": 1.0256410256410255
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 16,
+        "hypothesis_word_count": 16,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "did",
+          "you",
+          "remember",
+          "the",
+          "blue",
+          "folder",
+          "i",
+          "thought",
+          "we",
+          "agreed",
+          "to",
+          "meet",
+          "at",
+          "half",
+          "past",
+          "nine"
+        ],
+        "hypothesis_words": [
+          "did",
+          "you",
+          "remember",
+          "the",
+          "blue",
+          "folder",
+          "i",
+          "thought",
+          "we",
+          "agreed",
+          "to",
+          "meet",
+          "at",
+          "half",
+          "past",
+          "nine"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 16,
+        "hypothesis_word_count": 16,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "did",
+          "you",
+          "remember",
+          "the",
+          "blue",
+          "folder",
+          "i",
+          "thought",
+          "we",
+          "agreed",
+          "to",
+          "meet",
+          "at",
+          "half",
+          "past",
+          "nine"
+        ],
+        "hypothesis_words": [
+          "did",
+          "you",
+          "remember",
+          "the",
+          "blue",
+          "folder",
+          "i",
+          "thought",
+          "we",
+          "agreed",
+          "to",
+          "meet",
+          "at",
+          "half",
+          "past",
+          "nine"
+        ]
+      },
+      "model_identity": {
+        "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+        "size_class": "small"
+      },
+      "seconds": 6.4631337439932395
+    }
+  ],
+  "peak_rss_mib": 797.56640625
+}

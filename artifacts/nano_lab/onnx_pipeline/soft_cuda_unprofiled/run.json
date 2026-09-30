@@ -1,0 +1,506 @@
+{
+  "elapsed_seconds": 44.94999027252197,
+  "experimental_t3": true,
+  "experimental_t3_limitation": "The long T3 reference at sequence length 400 is not within the strict 3e-4 cache gate: 176 of 7.4M cache values exceeded the gate (max abs 0.000989; relative L2 1.44e-5). Logits, lengths 32/128, and decode cases passed. This integration run is experimental and does not claim full numerical T3 verification.",
+  "finished_unix": 1790699704.8135703,
+  "model_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged",
+  "model_manifest_sha256": {
+    "flow_encoder": "a9e6d3ab0a0c1bfd721a95e9012beddaa5eb55d25fb75829d904aca1ea9645b2",
+    "meanflow_estimator": "5fa7bfb0dde0a818f50518b6d5b157f5d2998f04137f2137ae47c7b09cba9c7c",
+    "t3": "f4d0570d14a17f278f12d89000f32193d9ac0e12dca3b7468ce8f718f015fbcc",
+    "vocoder": "9d4fc85a206c8b7a1326ad0194317ac98cac7665cc7dac23c5ac83a06a562e69"
+  },
+  "numpy_sampler": "not Torch-identical",
+  "ort_profile": false,
+  "ort_profiles": [],
+  "ort_provider": "cuda",
+  "ort_provider_options": {
+    "arena_extend_strategy": "kSameAsRequested",
+    "cuda_device_id": 0,
+    "cudnn_conv_algo_search": "HEURISTIC",
+    "do_copy_in_default_stream": true,
+    "gpu_mem_limit_mib": 2048
+  },
+  "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/soft_cuda_unprofiled.wav",
+  "pipeline_source_sha256": "1cb131cd4e76cfca876e294723762200876db469862550a10f5a719e43d1bddd",
+  "python_executable": "/home/terryd/gooning/voicecloning/.venv-nano-ort/bin/python",
+  "rss_sample_interval_seconds": 0.1,
+  "rtf": 6.107335634853529,
+  "run_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/soft_cuda_unprofiled",
+  "sampled_peak_tree_rss_bytes": 1095245824,
+  "schema_version": 1,
+  "seed": 31,
+  "stages": [
+    {
+      "elapsed_seconds": 3.1921563148498535,
+      "finished_unix": 1790699663.37765,
+      "ort_profile": {
+        "profile_path": null,
+        "status": "not_requested"
+      },
+      "parent_elapsed_seconds": 4.04410195350647,
+      "result": {
+        "conditioning_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_soft_morning_31.conds.pt",
+        "field_count": 7,
+        "mode": "zero_shot",
+        "profile": "/home/terryd/gooning/voicecloning/voices/nano/asmr_soft.json",
+        "skipped_optional_fields": [
+          "t3.clap_emb",
+          "t3.cond_prompt_speech_emb",
+          "gen.prompt_feat_len"
+        ]
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 235356160,
+        "rss_bytes": 236404736
+      },
+      "sampled_peak_tree_rss_bytes": 277835776,
+      "schema_version": 1,
+      "stage": "prepare",
+      "started_unix": 1790699660.1854942,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 16.860509872436523,
+      "finished_unix": 1790699681.1119137,
+      "ort_profile": {
+        "profile_path": null,
+        "status": "not_requested"
+      },
+      "parent_elapsed_seconds": 17.57684588432312,
+      "result": {
+        "eos_seen": true,
+        "experimental_t3": true,
+        "generated_token_count": 181,
+        "length_limit_reached": false,
+        "mode": "t3_generated_numpy_sampler",
+        "prefill_sequence_length": 377,
+        "raw_sampled_token_count": 182,
+        "runtime": {
+          "cuda_arena_shrinkage_after_run": true,
+          "cuda_memory_pattern_enabled": false,
+          "fallback_disabled": true,
+          "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged/t3/nano_t3_kv.onnx",
+          "inputs": [
+            "inputs_embeds",
+            "cache_position",
+            "past_0",
+            "past_1",
+            "past_2",
+            "past_3",
+            "past_4",
+            "past_5",
+            "past_6",
+            "past_7",
+            "past_8",
+            "past_9",
+            "past_10",
+            "past_11",
+            "past_12",
+            "past_13",
+            "past_14",
+            "past_15",
+            "past_16",
+            "past_17",
+            "past_18",
+            "past_19",
+            "past_20",
+            "past_21",
+            "past_22",
+            "past_23"
+          ],
+          "ort_provider": "cuda",
+          "ort_version": "1.26.0",
+          "outputs": [
+            "logits",
+            "present_0",
+            "present_1",
+            "present_2",
+            "present_3",
+            "present_4",
+            "present_5",
+            "present_6",
+            "present_7",
+            "present_8",
+            "present_9",
+            "present_10",
+            "present_11",
+            "present_12",
+            "present_13",
+            "present_14",
+            "present_15",
+            "present_16",
+            "present_17",
+            "present_18",
+            "present_19",
+            "present_20",
+            "present_21",
+            "present_22",
+            "present_23"
+          ],
+          "profile_requested": false,
+          "profiling": {
+            "enabled": false,
+            "ended": true,
+            "profile_path": null,
+            "profile_prefix": null
+          },
+          "provider_metadata": {
+            "available": [
+              "TensorrtExecutionProvider",
+              "CUDAExecutionProvider",
+              "CPUExecutionProvider"
+            ],
+            "cuda_options": {
+              "arena_extend_strategy": "kSameAsRequested",
+              "cudnn_conv_algo_search": "HEURISTIC",
+              "device_id": 0,
+              "do_copy_in_default_stream": true,
+              "gpu_mem_limit": 2147483648
+            },
+            "preload_dlls": {
+              "attempted": true,
+              "directory": "",
+              "status": "ok"
+            },
+            "requested": "cuda"
+          },
+          "providers": [
+            "CUDAExecutionProvider",
+            "CPUExecutionProvider"
+          ],
+          "requested_provider_options": {
+            "arena_extend_strategy": "kSameAsRequested",
+            "cuda_device_id": 0,
+            "cudnn_conv_algo_search": "HEURISTIC",
+            "do_copy_in_default_stream": true,
+            "gpu_mem_limit_mib": 2048
+          },
+          "requested_providers": [
+            "CUDAExecutionProvider",
+            "CPUExecutionProvider"
+          ],
+          "stage": "t3",
+          "threads": "bounded by caller; default 1 intra-op and 1 inter-op"
+        },
+        "speech_token_count_with_silence": 184,
+        "t3_used": true
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 940888064,
+        "rss_bytes": 866656256
+      },
+      "sampled_peak_tree_rss_bytes": 988704768,
+      "schema_version": 1,
+      "stage": "tokens",
+      "started_unix": 1790699664.2514055,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 2.3573381900787354,
+      "finished_unix": 1790699684.1193664,
+      "ort_profile": {
+        "profile_path": null,
+        "status": "not_requested"
+      },
+      "parent_elapsed_seconds": 3.1299662590026855,
+      "result": {
+        "mel_length": 868,
+        "prompt_feat_length": 500,
+        "prompt_token_count": 250,
+        "runtime": {
+          "cuda_arena_shrinkage_after_run": true,
+          "cuda_memory_pattern_enabled": false,
+          "fallback_disabled": true,
+          "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged/flow_encoder/nano_flow_encoder.onnx",
+          "inputs": [
+            "speech_tokens",
+            "token_lengths"
+          ],
+          "ort_provider": "cuda",
+          "ort_version": "1.26.0",
+          "outputs": [
+            "mu",
+            "mask"
+          ],
+          "profile_requested": false,
+          "profiling": {
+            "enabled": false,
+            "ended": true,
+            "profile_path": null,
+            "profile_prefix": null
+          },
+          "provider_metadata": {
+            "available": [
+              "TensorrtExecutionProvider",
+              "CUDAExecutionProvider",
+              "CPUExecutionProvider"
+            ],
+            "cuda_options": {
+              "arena_extend_strategy": "kSameAsRequested",
+              "cudnn_conv_algo_search": "HEURISTIC",
+              "device_id": 0,
+              "do_copy_in_default_stream": true,
+              "gpu_mem_limit": 2147483648
+            },
+            "preload_dlls": {
+              "attempted": true,
+              "directory": "",
+              "status": "ok"
+            },
+            "requested": "cuda"
+          },
+          "providers": [
+            "CUDAExecutionProvider",
+            "CPUExecutionProvider"
+          ],
+          "requested_provider_options": {
+            "arena_extend_strategy": "kSameAsRequested",
+            "cuda_device_id": 0,
+            "cudnn_conv_algo_search": "HEURISTIC",
+            "do_copy_in_default_stream": true,
+            "gpu_mem_limit_mib": 2048
+          },
+          "requested_providers": [
+            "CUDAExecutionProvider",
+            "CPUExecutionProvider"
+          ],
+          "stage": "flow_encoder",
+          "threads": "bounded by caller; default 1 intra-op and 1 inter-op"
+        },
+        "speech_token_count": 184
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 885207040,
+        "rss_bytes": 883679232
+      },
+      "sampled_peak_tree_rss_bytes": 951144448,
+      "schema_version": 1,
+      "stage": "flow",
+      "started_unix": 1790699681.762031,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 6.489098310470581,
+      "finished_unix": 1790699691.4314373,
+      "ort_profile": {
+        "profile_path": null,
+        "status": "not_requested"
+      },
+      "parent_elapsed_seconds": 7.256552457809448,
+      "result": {
+        "mel_length": 368,
+        "prompt_feat_length": 500,
+        "runtime": {
+          "cuda_arena_shrinkage_after_run": true,
+          "cuda_memory_pattern_enabled": false,
+          "fallback_disabled": true,
+          "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged/meanflow_estimator/nano_meanflow_estimator.onnx",
+          "inputs": [
+            "x",
+            "mask",
+            "mu",
+            "t",
+            "speaker_embedding",
+            "cond",
+            "r"
+          ],
+          "ort_provider": "cuda",
+          "ort_version": "1.26.0",
+          "outputs": [
+            "dxdt"
+          ],
+          "profile_requested": false,
+          "profiling": {
+            "enabled": false,
+            "ended": true,
+            "profile_path": null,
+            "profile_prefix": null
+          },
+          "provider_metadata": {
+            "available": [
+              "TensorrtExecutionProvider",
+              "CUDAExecutionProvider",
+              "CPUExecutionProvider"
+            ],
+            "cuda_options": {
+              "arena_extend_strategy": "kSameAsRequested",
+              "cudnn_conv_algo_search": "HEURISTIC",
+              "device_id": 0,
+              "do_copy_in_default_stream": true,
+              "gpu_mem_limit": 2147483648
+            },
+            "preload_dlls": {
+              "attempted": true,
+              "directory": "",
+              "status": "ok"
+            },
+            "requested": "cuda"
+          },
+          "providers": [
+            "CUDAExecutionProvider",
+            "CPUExecutionProvider"
+          ],
+          "requested_provider_options": {
+            "arena_extend_strategy": "kSameAsRequested",
+            "cuda_device_id": 0,
+            "cudnn_conv_algo_search": "HEURISTIC",
+            "do_copy_in_default_stream": true,
+            "gpu_mem_limit_mib": 2048
+          },
+          "requested_providers": [
+            "CUDAExecutionProvider",
+            "CPUExecutionProvider"
+          ],
+          "stage": "meanflow_estimator",
+          "threads": "bounded by caller; default 1 intra-op and 1 inter-op"
+        },
+        "seed": 31,
+        "speech_token_count": 184,
+        "steps": 2
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 972410880,
+        "rss_bytes": 971010048
+      },
+      "sampled_peak_tree_rss_bytes": 1095245824,
+      "schema_version": 1,
+      "stage": "estimator",
+      "started_unix": 1790699684.9423413,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 2.7015278339385986,
+      "finished_unix": 1790699694.959528,
+      "ort_profile": {
+        "profile_path": null,
+        "status": "not_requested"
+      },
+      "parent_elapsed_seconds": 3.5330092906951904,
+      "result": {
+        "audio_samples": 176640,
+        "audio_seconds": 7.36,
+        "mel_length": 368,
+        "runtime": {
+          "cuda_arena_shrinkage_after_run": true,
+          "cuda_memory_pattern_enabled": false,
+          "fallback_disabled": true,
+          "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged/vocoder/nano_hift_vocoder.onnx",
+          "inputs": [
+            "speech_feat",
+            "phase_noise",
+            "sine_noise"
+          ],
+          "ort_provider": "cuda",
+          "ort_version": "1.26.0",
+          "outputs": [
+            "audio"
+          ],
+          "profile_requested": false,
+          "profiling": {
+            "enabled": false,
+            "ended": true,
+            "profile_path": null,
+            "profile_prefix": null
+          },
+          "provider_metadata": {
+            "available": [
+              "TensorrtExecutionProvider",
+              "CUDAExecutionProvider",
+              "CPUExecutionProvider"
+            ],
+            "cuda_options": {
+              "arena_extend_strategy": "kSameAsRequested",
+              "cudnn_conv_algo_search": "HEURISTIC",
+              "device_id": 0,
+              "do_copy_in_default_stream": true,
+              "gpu_mem_limit": 2147483648
+            },
+            "preload_dlls": {
+              "attempted": true,
+              "directory": "",
+              "status": "ok"
+            },
+            "requested": "cuda"
+          },
+          "providers": [
+            "CUDAExecutionProvider",
+            "CPUExecutionProvider"
+          ],
+          "requested_provider_options": {
+            "arena_extend_strategy": "kSameAsRequested",
+            "cuda_device_id": 0,
+            "cudnn_conv_algo_search": "HEURISTIC",
+            "do_copy_in_default_stream": true,
+            "gpu_mem_limit_mib": 2048
+          },
+          "requested_providers": [
+            "CUDAExecutionProvider",
+            "CPUExecutionProvider"
+          ],
+          "stage": "vocoder",
+          "threads": "bounded by caller; default 1 intra-op and 1 inter-op"
+        }
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 999882752,
+        "rss_bytes": 992043008
+      },
+      "sampled_peak_tree_rss_bytes": 1042448384,
+      "schema_version": 1,
+      "stage": "vocoder",
+      "started_unix": 1790699692.2580018,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 7.777393579483032,
+      "finished_unix": 1790699703.5764122,
+      "ort_profile": {
+        "profile_path": null,
+        "status": "not_requested"
+      },
+      "parent_elapsed_seconds": 9.389474868774414,
+      "result": {
+        "audio_samples": 176640,
+        "audio_seconds": 7.36,
+        "master_processing": {
+          "achieved_lufs": -22.10532561475891,
+          "gain_db": 0.9197352488595096,
+          "highpass_hz": 45,
+          "noise_gate": false,
+          "target_lufs": -19,
+          "true_peak_ceiling_dbtp": -1,
+          "true_peak_oversampling": 4
+        },
+        "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/soft_cuda_unprofiled.wav",
+        "sample_rate": 24000,
+        "schema_version": 1,
+        "source": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/soft_cuda_unprofiled/vocoder/audio.npz",
+        "trim_fade": {
+          "fade_ms": 20,
+          "n_trim": 480
+        },
+        "watermark": "PerthImplicitWatermarker",
+        "watermark_applied": true
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 535400448,
+        "rss_bytes": 505688064
+      },
+      "sampled_peak_tree_rss_bytes": 554586112,
+      "schema_version": 1,
+      "stage": "finish",
+      "started_unix": 1790699695.7990198,
+      "status": "ok"
+    }
+  ],
+  "status": "ok",
+  "supplied_tokens_mode": false,
+  "voice": "asmr_soft"
+}

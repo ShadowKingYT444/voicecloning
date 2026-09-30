@@ -1,0 +1,102 @@
+{
+  "synthetic": true,
+  "profile": "/home/terryd/gooning/voicecloning/voices/nano/asmr_fitted_experimental.json",
+  "device": "cuda",
+  "dtype": "fp32",
+  "seed": 79,
+  "load_and_prepare_seconds": 5.197929417998239,
+  "runtime_load_report": {
+    "optimized": true,
+    "device": "cuda",
+    "dtype": "torch.float32",
+    "decoder": "meanflow",
+    "implementation_sha256": "74ca7629d3e2460943b747519f8bda3449115202c85072c897bafee2f44532af",
+    "ve": {
+      "skipped": true,
+      "reason": "conditionals_path supplied"
+    },
+    "t3": {
+      "loaded_tensors": 153,
+      "skipped_tensors": 2,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": [],
+      "removed_parameters": [
+        "tfmr.wte",
+        "text_head"
+      ]
+    },
+    "precision_policy": {
+      "t3": "torch.float32",
+      "s3gen": "torch.float32"
+    },
+    "s3gen": {
+      "loaded_tensors": 1450,
+      "skipped_tensors": 1041,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": []
+    },
+    "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+    "parameters": {
+      "t3": 140247203,
+      "s3gen": 135467807,
+      "ve": 0
+    },
+    "load_seconds": 5.1499806190040545,
+    "engine": {
+      "optimized": true,
+      "dtype": "torch.float32",
+      "device": "cuda",
+      "decoder": "meanflow"
+    }
+  },
+  "ready_rss_mib": 1461.0,
+  "segments": [
+    {
+      "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "seconds": 4.96,
+      "generation_and_master_seconds": 5.572074103998602,
+      "rtf": 1.1234020370964923,
+      "processing": {
+        "highpass_hz": 45,
+        "gain_db": 8.396251496419772,
+        "target_lufs": -19,
+        "achieved_lufs": -19.956393551147105,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      }
+    }
+  ],
+  "length_limit_retries": [],
+  "mel_calibration": {
+    "requested": true,
+    "applied": true,
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/report.json",
+    "report_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+    "strength": 1.0,
+    "format": "nano_mel_calibration_fit_v1",
+    "claim_status": "diagnostic_only_no_realism_claim",
+    "diagnostic_only": true,
+    "speaker_id": "asmr7",
+    "conditioning_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+    "model_checkpoint_sha256": "a34dc7d94e6906c2ab52053a4bfe91d4200fdc12a12a2838e9b51c4fce8d3809",
+    "prepare_manifest_sha256": "b422229277ee2cd79d694eaaeb305f076dbc55a4ade99e5c6a489cb93cf4c8cb",
+    "delta_mean": -6.938893903907229e-19,
+    "delta_max_abs": 0.15534909230490018,
+    "max_delta": 0.35,
+    "sigma_bands": 2.0,
+    "time_alignment": "none; source and reconstructed frames are independently time-averaged",
+    "delta_values": 80,
+    "delta_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/delta.npy",
+    "delta_sha256": "f2fe4c931a6d2d68e8a7be9775761c6e1911dd9740c9f3715861debc99637e83",
+    "delta_bytes": 448
+  },
+  "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/native_asmr_fitted_question_79.wav",
+  "audio_seconds": 4.96,
+  "total_seconds": 10.775804570999753,
+  "rss_mib": 2375.33203125,
+  "peak_rss_mib": 2373.2890625,
+  "cuda_peak_allocated_mib": 1664.5810546875
+}

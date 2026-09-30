@@ -1,0 +1,77 @@
+[
+  {
+    "id": "neutral_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/repaired_comparison/neutral_base.master.wav",
+    "sha256": "bdeaf35bc405d7a4ecdf957746d1d49a1e37c6faae6fc1c3055690767e1ba2f9"
+  },
+  {
+    "id": "neutral_speaker",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/repaired_comparison/neutral_speaker.master.wav",
+    "sha256": "7c03c1bfe68c01a515b06174ee9830ba69968fbcf7c0e65f514c647a34ce27e9"
+  },
+  {
+    "id": "neutral_adapter_half",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/repaired_comparison/neutral_adapter_half.master.wav",
+    "sha256": "235106f4743aedbc999c28353a663630d470f6ec72634939c6c587054f9fb59e"
+  },
+  {
+    "id": "neutral_adapter_full",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/repaired_comparison/neutral_adapter_full.master.wav",
+    "sha256": "14c1aa6d2f139c9f168ca1f708daaf6c5ea596b21a529ebce560d1e82638cdfd"
+  },
+  {
+    "id": "neutral_combined_half",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/repaired_comparison/neutral_combined_half.master.wav",
+    "sha256": "452e3bff1c244d8e35f0996ceb57f8896904b8d2a07a0c5a174a46659fdca56c"
+  },
+  {
+    "id": "expressive_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/repaired_comparison/expressive_base.master.wav",
+    "sha256": "c5414d97f69980efa92a35a234bc2cdaabb79dc02bdb515f4e9f343b25de30ca"
+  },
+  {
+    "id": "expressive_speaker",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/repaired_comparison/expressive_speaker.master.wav",
+    "sha256": "5140660b47ac616a56f6cdc3416f40c03957b384fbd4d1a1e0feacafbd592e6b"
+  },
+  {
+    "id": "expressive_adapter_half",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/repaired_comparison/expressive_adapter_half.master.wav",
+    "sha256": "c60b2d125f622406d49b616076bc5187971d1e7bf480ca38e498890ae302b9d1"
+  },
+  {
+    "id": "expressive_adapter_full",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/repaired_comparison/expressive_adapter_full.master.wav",
+    "sha256": "c24387e1ef4c3aa3f6a4ccd0de279c2189b32a3bea8bbf7626dce06a9e26d582"
+  },
+  {
+    "id": "expressive_combined_half",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/repaired_comparison/expressive_combined_half.master.wav",
+    "sha256": "ce8caaad202a1d7a0b7ae262c6461cba57b4bacd1ad865ea61cf888fe83ec6f1"
+  },
+  {
+    "id": "quiet_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/repaired_comparison/quiet_base.master.wav",
+    "sha256": "7d09e0f223bcbac4e7d51f8a78740e77933bffc23775d52febfc8b0a41ad632f"
+  },
+  {
+    "id": "quiet_speaker",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/repaired_comparison/quiet_speaker.master.wav",
+    "sha256": "4176509b84cd136824ca51edb57494fa108295465734fbc2100563bc6b14a130"
+  },
+  {
+    "id": "quiet_adapter_half",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/repaired_comparison/quiet_adapter_half.master.wav",
+    "sha256": "c9a72582f05b00396b77ed1375d8625f141e04b673f915e7895bfe48c72574f6"
+  },
+  {
+    "id": "quiet_adapter_full",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/repaired_comparison/quiet_adapter_full.master.wav",
+    "sha256": "b5d857896fe714254fd0a182d3b124e538ee01ac976aa2a5de67f1b0a0f6fe44"
+  },
+  {
+    "id": "quiet_combined_half",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/repaired_comparison/quiet_combined_half.master.wav",
+    "sha256": "f38f3e2d68d61fda6ee20377f4a6df0b759651a310df19d260a31b7484284054"
+  }
+]

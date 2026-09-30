@@ -1,0 +1,22 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "neutral_base", "cosine": 0.893398, "wer": 0.0, "dnsmos_overall": 2.6541717301144483}
+{"id": "neutral_speaker", "cosine": 0.878402, "wer": 0.0, "dnsmos_overall": 3.072889274127353}
+{"id": "neutral_adapter_half", "cosine": 0.88308, "wer": 0.058824, "dnsmos_overall": 2.4802763604176445}
+{"id": "neutral_adapter_full", "cosine": 0.900138, "wer": 0.058824, "dnsmos_overall": 2.8564416604864307}
+{"id": "neutral_combined_half", "cosine": 0.845471, "wer": 0.0, "dnsmos_overall": 3.264714911142307}
+{"id": "expressive_base", "cosine": 0.873828, "wer": 0.071429, "dnsmos_overall": 2.5181585830203113}
+{"id": "expressive_speaker", "cosine": 0.856734, "wer": 0.0, "dnsmos_overall": 3.3399296462074237}
+{"id": "expressive_adapter_half", "cosine": 0.86325, "wer": 0.071429, "dnsmos_overall": 2.6467425759733394}
+{"id": "expressive_adapter_full", "cosine": 0.875367, "wer": 0.0, "dnsmos_overall": 3.212861807076463}
+{"id": "expressive_combined_half", "cosine": 0.842909, "wer": 0.0, "dnsmos_overall": 2.9582142851397957}
+{"id": "quiet_base", "cosine": 0.877816, "wer": 0.0, "dnsmos_overall": 2.6739687250919175}
+{"id": "quiet_speaker", "cosine": 0.892815, "wer": 0.0, "dnsmos_overall": 2.7366645944175874}
+{"id": "quiet_adapter_half", "cosine": 0.860084, "wer": 0.0625, "dnsmos_overall": 2.6548967705090436}
+{"id": "quiet_adapter_full", "cosine": 0.896533, "wer": 0.0625, "dnsmos_overall": 2.962809112461964}
+{"id": "quiet_combined_half", "cosine": 0.858783, "wer": 0.0, "dnsmos_overall": 2.8608665661438404}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 7.952s
+             CPU time consumed: 2min 3.976s
+                   Memory peak: 805M (swap: 0B)

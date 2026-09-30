@@ -1,0 +1,214 @@
+{
+  "kind": "independent_reference_decoder_comparison",
+  "promoted": false,
+  "human_listening_accepted": false,
+  "general_zero_shot_improvement": false,
+  "token_parity": {
+    "all_token_archives_equal": true,
+    "comparison": {
+      "morning": {
+        "embedding_half": true,
+        "embedding_full": true,
+        "full_gen": true
+      },
+      "question": {
+        "embedding_half": true,
+        "embedding_full": true,
+        "full_gen": true
+      },
+      "narrative": {
+        "embedding_half": true,
+        "embedding_full": true,
+        "full_gen": true
+      }
+    },
+    "comparison_method": "ZIP entries including tensor metadata and storage, excluding archive serialization ID",
+    "rows": 12,
+    "errors": [],
+    "max_reported_rss_mib": 2395.41796875,
+    "max_reported_peak_rss_mib": 2393.7578125
+  },
+  "groups": {
+    "baseline": {
+      "rows": [
+        {
+          "id": "morning_baseline",
+          "speaker_cosine": 0.845953,
+          "dnsmos_overall": 3.2141700793357075,
+          "dnsmos_background": 4.020583832747758,
+          "small_wer": 0.0,
+          "median_voiced_f0_hz": 193.61722637472693,
+          "voiced_fraction": 0.4633471645919779,
+          "hnr_median_db": 6.204967215499403
+        },
+        {
+          "id": "question_baseline",
+          "speaker_cosine": 0.875305,
+          "dnsmos_overall": 3.03688078926857,
+          "dnsmos_background": 3.7009591390227667,
+          "small_wer": 0.0,
+          "median_voiced_f0_hz": 206.51874676179787,
+          "voiced_fraction": 0.4735772357723577,
+          "hnr_median_db": 4.828547197696695
+        },
+        {
+          "id": "narrative_baseline",
+          "speaker_cosine": 0.884645,
+          "dnsmos_overall": 3.2809225844835503,
+          "dnsmos_background": 4.132111932697346,
+          "small_wer": 0.0,
+          "median_voiced_f0_hz": 203.45557979293926,
+          "voiced_fraction": 0.4692982456140351,
+          "hnr_median_db": 4.922615202408528
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8686343333333333,
+        "dnsmos_overall": 3.177324484362609,
+        "dnsmos_background": 3.9512183014892903,
+        "small_wer": 0.0,
+        "median_voiced_f0_hz": 201.19718430982135,
+        "voiced_fraction": 0.46874088199279024,
+        "hnr_median_db": 5.318709871868209
+      }
+    },
+    "embedding_half": {
+      "rows": [
+        {
+          "id": "morning_embedding_half",
+          "speaker_cosine": 0.853411,
+          "dnsmos_overall": 3.225378642928105,
+          "dnsmos_background": 4.016791333359255,
+          "small_wer": 0.0,
+          "median_voiced_f0_hz": 194.93670206956716,
+          "voiced_fraction": 0.4426002766251729,
+          "hnr_median_db": 5.9119421612496375
+        },
+        {
+          "id": "question_embedding_half",
+          "speaker_cosine": 0.892088,
+          "dnsmos_overall": 2.987583252775004,
+          "dnsmos_background": 3.606475959554982,
+          "small_wer": 0.0,
+          "median_voiced_f0_hz": 208.32667537468086,
+          "voiced_fraction": 0.47560975609756095,
+          "hnr_median_db": 4.8860552734716
+        },
+        {
+          "id": "narrative_embedding_half",
+          "speaker_cosine": 0.89653,
+          "dnsmos_overall": 3.152071634757937,
+          "dnsmos_background": 4.034160098467559,
+          "small_wer": 0.0,
+          "median_voiced_f0_hz": 209.70546045067067,
+          "voiced_fraction": 0.4590643274853801,
+          "hnr_median_db": 4.392709652357289
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8806763333333334,
+        "dnsmos_overall": 3.1216778434870154,
+        "dnsmos_background": 3.885809130460599,
+        "small_wer": 0.0,
+        "median_voiced_f0_hz": 204.3229459649729,
+        "voiced_fraction": 0.45909145340270463,
+        "hnr_median_db": 5.0635690290261754
+      }
+    },
+    "embedding_full": {
+      "rows": [
+        {
+          "id": "morning_embedding_full",
+          "speaker_cosine": 0.843395,
+          "dnsmos_overall": 3.1989390383968197,
+          "dnsmos_background": 4.028641352393145,
+          "small_wer": 0.0,
+          "median_voiced_f0_hz": 195.69698512555414,
+          "voiced_fraction": 0.4343015214384509,
+          "hnr_median_db": 5.71269232600669
+        },
+        {
+          "id": "question_embedding_full",
+          "speaker_cosine": 0.907366,
+          "dnsmos_overall": 2.743139416960565,
+          "dnsmos_background": 3.259856719098347,
+          "small_wer": 0.0,
+          "median_voiced_f0_hz": 217.53367000739843,
+          "voiced_fraction": 0.45934959349593496,
+          "hnr_median_db": 4.709001967690131
+        },
+        {
+          "id": "narrative_embedding_full",
+          "speaker_cosine": 0.897524,
+          "dnsmos_overall": 3.062105642428409,
+          "dnsmos_background": 3.9792062769840215,
+          "small_wer": 0.0,
+          "median_voiced_f0_hz": 212.9710171123866,
+          "voiced_fraction": 0.44590643274853803,
+          "hnr_median_db": 4.086455294170712
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8827616666666667,
+        "dnsmos_overall": 3.0013946992619314,
+        "dnsmos_background": 3.755901449491838,
+        "small_wer": 0.0,
+        "median_voiced_f0_hz": 208.73389074844638,
+        "voiced_fraction": 0.4465191825609746,
+        "hnr_median_db": 4.836049862622511
+      }
+    },
+    "full_gen": {
+      "rows": [
+        {
+          "id": "morning_full_gen",
+          "speaker_cosine": 0.809659,
+          "dnsmos_overall": 3.222085656382499,
+          "dnsmos_background": 4.115588828341882,
+          "small_wer": 0.0,
+          "median_voiced_f0_hz": 218.1781145640756,
+          "voiced_fraction": 0.4315352697095436,
+          "hnr_median_db": 5.305540552635316
+        },
+        {
+          "id": "question_full_gen",
+          "speaker_cosine": 0.862208,
+          "dnsmos_overall": 3.1814409862442528,
+          "dnsmos_background": 3.9746386458706855,
+          "small_wer": 0.0,
+          "median_voiced_f0_hz": 224.6552399763983,
+          "voiced_fraction": 0.4817073170731707,
+          "hnr_median_db": 6.7048479449815215
+        },
+        {
+          "id": "narrative_full_gen",
+          "speaker_cosine": 0.854716,
+          "dnsmos_overall": 3.131884045288329,
+          "dnsmos_background": 3.984023856027303,
+          "small_wer": 0.0,
+          "median_voiced_f0_hz": 217.89585256715813,
+          "voiced_fraction": 0.4444444444444444,
+          "hnr_median_db": 4.347744055360745
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8421943333333334,
+        "dnsmos_overall": 3.178470229305027,
+        "dnsmos_background": 4.02475044341329,
+        "small_wer": 0.0,
+        "median_voiced_f0_hz": 220.24306903587734,
+        "voiced_fraction": 0.45256234374238624,
+        "hnr_median_db": 5.452710850992528
+      }
+    }
+  },
+  "listening_loudness_lufs": -27,
+  "notes": [
+    "All rows use the same fitted all-attention T3 adapter and mel correction.",
+    "Independent source reference clips, no target audio conditioning.",
+    "Speaker evaluation uses the evaluator development subset of held-out references.",
+    "DNSMOS and pitch are diagnostic proxies, not realism acceptance. Three texts are a small sample.",
+    "Small ASR checked original raw synthetic WAVs; level copies use master processing followed by constant gain."
+  ],
+  "decision": "No default change. Half embedding improves mean similarity slightly but reduces mean DNSMOS. Full acoustic prompt raises pitch but reduces similarity. Continue constrained decoder fitting."
+}

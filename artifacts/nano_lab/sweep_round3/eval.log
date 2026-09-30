@@ -1,0 +1,46 @@
+MemoryMax=3GiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job
+Running as unit: nano-lab-model.service
+{"id": "asmr_conversational_morning_31_noise", "cosine": 0.868277, "wer": 0.041667, "dnsmos_overall": 2.5234382978386}
+{"id": "asmr_conversational_morning_31_delta", "cosine": 0.86959, "wer": 0.0, "dnsmos_overall": 3.1145959085513146}
+{"id": "asmr_conversational_morning_47_noise", "cosine": 0.876492, "wer": 0.0, "dnsmos_overall": 2.422850917933705}
+{"id": "asmr_conversational_morning_47_delta", "cosine": 0.884972, "wer": 0.0, "dnsmos_overall": 3.309706613511915}
+{"id": "asmr_conversational_question_31_noise", "cosine": 0.867885, "wer": 0.055556, "dnsmos_overall": 2.947389382005788}
+{"id": "asmr_conversational_question_31_delta", "cosine": 0.853247, "wer": 0.0, "dnsmos_overall": 3.4275982592188643}
+{"id": "asmr_conversational_question_47_noise", "cosine": 0.865052, "wer": 0.0, "dnsmos_overall": 3.169557418193702}
+{"id": "asmr_conversational_question_47_delta", "cosine": 0.888231, "wer": 0.0, "dnsmos_overall": 3.325785878083734}
+{"id": "asmr_conversational_reassurance_31_noise", "cosine": 0.862635, "wer": 0.0, "dnsmos_overall": 2.9698407457058025}
+{"id": "asmr_conversational_reassurance_31_delta", "cosine": 0.87237, "wer": 0.0, "dnsmos_overall": 2.860000254995866}
+{"id": "asmr_conversational_reassurance_47_noise", "cosine": 0.850424, "wer": 0.0, "dnsmos_overall": 2.7148959342843586}
+{"id": "asmr_conversational_reassurance_47_delta", "cosine": 0.837383, "wer": 0.0, "dnsmos_overall": 3.15504091603946}
+{"id": "asmr_soft_morning_31_noise", "cosine": 0.868203, "wer": 0.0, "dnsmos_overall": 2.8292804162315957}
+{"id": "asmr_soft_morning_31_delta", "cosine": 0.842893, "wer": 0.0, "dnsmos_overall": 2.967051763811704}
+{"id": "asmr_soft_morning_47_noise", "cosine": 0.81557, "wer": 0.041667, "dnsmos_overall": 3.1260336556807684}
+{"id": "asmr_soft_question_31_noise", "cosine": 0.839352, "wer": 0.0, "dnsmos_overall": 3.1908446575950746}
+{"id": "asmr_soft_question_31_delta", "cosine": 0.808323, "wer": 0.0, "dnsmos_overall": 3.3522528536144587}
+{"id": "asmr_soft_question_47_noise", "cosine": 0.834672, "wer": 0.0, "dnsmos_overall": 3.0151985944555992}
+{"id": "asmr_soft_question_47_delta", "cosine": 0.811748, "wer": 0.0, "dnsmos_overall": 3.1730157280731888}
+{"id": "asmr_soft_reassurance_31_noise", "cosine": 0.850073, "wer": 0.0, "dnsmos_overall": 2.9146392001928505}
+{"id": "asmr_soft_reassurance_31_delta", "cosine": 0.824801, "wer": 0.0, "dnsmos_overall": 3.0960822908957817}
+{"id": "asmr_soft_reassurance_47_noise", "cosine": 0.824403, "wer": 0.0, "dnsmos_overall": 3.3008091318142863}
+{"id": "asmr_soft_reassurance_47_delta", "cosine": 0.832577, "wer": 0.0, "dnsmos_overall": 3.3241427690952676}
+{"id": "fit_emotional_base_neutral", "cosine": 0.806847, "wer": 0.0, "dnsmos_overall": 3.205234082554882}
+{"id": "fit_emotional_base_calm", "cosine": 0.811956, "wer": 0.0, "dnsmos_overall": 3.3190137227811682}
+{"id": "fit_emotional_fit_neutral", "cosine": 0.80754, "wer": 0.0, "dnsmos_overall": 3.3966139228909746}
+{"id": "fit_emotional_fit_calm", "cosine": 0.797908, "wer": 0.0, "dnsmos_overall": 3.242095178146424}
+{"id": "harvey_tune_isolated_meeting_31", "cosine": 0.818123, "wer": 0.05, "dnsmos_overall": 3.469964282350662}
+{"id": "harvey_tune_isolated_meeting_47", "cosine": 0.820994, "wer": 0.05, "dnsmos_overall": 3.1330580968775887}
+{"id": "harvey_tune_isolated_decision_31", "cosine": 0.784096, "wer": 0.0, "dnsmos_overall": 3.3327050153508204}
+{"id": "harvey_tune_isolated_decision_47", "cosine": 0.776413, "wer": 0.0, "dnsmos_overall": 3.293141832020256}
+{"id": "harvey_tune_natural_mean_meeting_31", "cosine": 0.803479, "wer": 0.05, "dnsmos_overall": 3.364788101619779}
+{"id": "harvey_tune_natural_mean_meeting_47", "cosine": 0.833373, "wer": 0.05, "dnsmos_overall": 3.301578455729922}
+{"id": "harvey_tune_natural_mean_decision_31", "cosine": 0.782246, "wer": 0.0, "dnsmos_overall": 3.264319611817865}
+{"id": "harvey_tune_natural_mean_decision_47", "cosine": 0.797056, "wer": 0.0, "dnsmos_overall": 3.3656965563072454}
+{"id": "harvey_tune_isolated_natdecode_meeting_31", "cosine": 0.828214, "wer": 0.05, "dnsmos_overall": 3.2981502534841542}
+{"id": "harvey_tune_isolated_natdecode_meeting_47", "cosine": 0.830322, "wer": 0.05, "dnsmos_overall": 3.2521492423143985}
+{"id": "harvey_tune_isolated_natdecode_decision_31", "cosine": 0.804295, "wer": 0.0, "dnsmos_overall": 3.3976743137546808}
+{"id": "harvey_tune_isolated_natdecode_decision_47", "cosine": 0.777803, "wer": 0.0, "dnsmos_overall": 3.108400379757729}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 3min 25.430s
+             CPU time consumed: 6min 35.601s
+                   Memory peak: 952.9M (swap: 0B)

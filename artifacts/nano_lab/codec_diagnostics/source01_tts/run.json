@@ -1,0 +1,181 @@
+{
+  "elapsed_seconds": 78.12888717651367,
+  "experimental_t3": true,
+  "experimental_t3_limitation": "The long T3 reference at sequence length 400 is not within the strict 3e-4 cache gate: 176 of 7.4M cache values exceeded the gate (max abs 0.000989; relative L2 1.44e-5). Logits, lengths 32/128, and decode cases passed. This integration run is experimental and does not claim full numerical T3 verification.",
+  "finished_unix": 1790695858.5703156,
+  "model_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged",
+  "model_manifest_sha256": {
+    "flow_encoder": "a9e6d3ab0a0c1bfd721a95e9012beddaa5eb55d25fb75829d904aca1ea9645b2",
+    "meanflow_estimator": "5fa7bfb0dde0a818f50518b6d5b157f5d2998f04137f2137ae47c7b09cba9c7c",
+    "t3": "f4d0570d14a17f278f12d89000f32193d9ac0e12dca3b7468ce8f718f015fbcc",
+    "vocoder": "9d4fc85a206c8b7a1326ad0194317ac98cac7665cc7dac23c5ac83a06a562e69"
+  },
+  "numpy_sampler": "not Torch-identical",
+  "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tts.wav",
+  "pipeline_source_sha256": "d7928ad4d29c4b407be7f4103fb570355c2e7e6e837050b2cc2dd050d41ab4ab",
+  "python_executable": "/home/terryd/gooning/voicecloning/.venv-nano-cpu/bin/python",
+  "rss_sample_interval_seconds": 0.1,
+  "rtf": 13.37823410556741,
+  "run_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tts",
+  "sampled_peak_tree_rss_bytes": 888295424,
+  "schema_version": 1,
+  "seed": 20231,
+  "stages": [
+    {
+      "elapsed_seconds": 3.066326856613159,
+      "finished_unix": 1790695783.8662336,
+      "parent_elapsed_seconds": 4.148428440093994,
+      "result": {
+        "conditioning_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+        "field_count": 7,
+        "mode": "zero_shot",
+        "profile": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+        "skipped_optional_fields": [
+          "t3.clap_emb",
+          "t3.cond_prompt_speech_emb",
+          "gen.prompt_feat_len"
+        ]
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 235237376,
+        "rss_bytes": 236236800
+      },
+      "sampled_peak_tree_rss_bytes": 276996096,
+      "schema_version": 1,
+      "stage": "prepare",
+      "started_unix": 1790695780.7999082,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 22.23988699913025,
+      "finished_unix": 1790695807.178104,
+      "parent_elapsed_seconds": 22.97015929222107,
+      "result": {
+        "eos_seen": true,
+        "experimental_t3": true,
+        "generated_token_count": 143,
+        "length_limit_reached": false,
+        "mode": "t3_generated_numpy_sampler",
+        "prefill_sequence_length": 356,
+        "raw_sampled_token_count": 144,
+        "speech_token_count_with_silence": 146,
+        "t3_used": true
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 846004224,
+        "rss_bytes": 484732928
+      },
+      "sampled_peak_tree_rss_bytes": 888295424,
+      "schema_version": 1,
+      "stage": "tokens",
+      "started_unix": 1790695784.9382193,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 4.7704057693481445,
+      "finished_unix": 1790695812.7635245,
+      "parent_elapsed_seconds": 5.357695817947388,
+      "result": {
+        "mel_length": 792,
+        "prompt_feat_length": 500,
+        "prompt_token_count": 250,
+        "speech_token_count": 146
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 453566464,
+        "rss_bytes": 252657664
+      },
+      "sampled_peak_tree_rss_bytes": 495677440,
+      "schema_version": 1,
+      "stage": "flow",
+      "started_unix": 1790695807.9931207,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 22.689871311187744,
+      "finished_unix": 1790695836.1045184,
+      "parent_elapsed_seconds": 23.414052486419678,
+      "result": {
+        "mel_length": 292,
+        "prompt_feat_length": 500,
+        "seed": 20231,
+        "speech_token_count": 146,
+        "steps": 2
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 607252480,
+        "rss_bytes": 489140224
+      },
+      "sampled_peak_tree_rss_bytes": 649273344,
+      "schema_version": 1,
+      "stage": "estimator",
+      "started_unix": 1790695813.4146502,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 9.966261863708496,
+      "finished_unix": 1790695846.7512686,
+      "parent_elapsed_seconds": 11.100241422653198,
+      "result": {
+        "audio_samples": 140160,
+        "audio_seconds": 5.84,
+        "mel_length": 292
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 363012096,
+        "rss_bytes": 162709504
+      },
+      "sampled_peak_tree_rss_bytes": 404684800,
+      "schema_version": 1,
+      "stage": "vocoder",
+      "started_unix": 1790695836.7850106,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 9.687873125076294,
+      "finished_unix": 1790695857.550275,
+      "parent_elapsed_seconds": 11.117361068725586,
+      "result": {
+        "audio_samples": 140160,
+        "audio_seconds": 5.84,
+        "master_processing": {
+          "achieved_lufs": -21.657338720233884,
+          "gain_db": 12.0,
+          "highpass_hz": 45,
+          "noise_gate": false,
+          "target_lufs": -19,
+          "true_peak_ceiling_dbtp": -1,
+          "true_peak_oversampling": 4
+        },
+        "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tts.wav",
+        "sample_rate": 24000,
+        "schema_version": 1,
+        "source": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tts/vocoder/audio.npz",
+        "trim_fade": {
+          "fade_ms": 20,
+          "n_trim": 480
+        },
+        "watermark": "PerthImplicitWatermarker",
+        "watermark_applied": true
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 520601600,
+        "rss_bytes": 501960704
+      },
+      "sampled_peak_tree_rss_bytes": 550961152,
+      "schema_version": 1,
+      "stage": "finish",
+      "started_unix": 1790695847.8624043,
+      "status": "ok"
+    }
+  ],
+  "status": "ok",
+  "supplied_tokens_mode": false,
+  "voice": "asmr_conversational"
+}

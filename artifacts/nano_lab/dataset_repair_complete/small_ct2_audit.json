@@ -1,0 +1,3482 @@
+{
+  "model": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+  "backend": "CTranslate2 CPU int8",
+  "role": "independent_content_audit",
+  "human_listening": false,
+  "model_download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+  "inputs": [
+    {
+      "id": "calibration_asmr7_train_01",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_train_01/asmr7_train_01__natural.wav",
+      "audio_sha256": "0ab55445b2044b39504d899c38e268ec31226fd4670063cc68abe8eafef7945b",
+      "expected_text": "So as the one throwing the party, and it also being my party, I would like to announce.",
+      "transcript": "Okay, gather around everybody. Great. So, as the one throwing the party...",
+      "segments": [
+        {
+          "text": "Okay, gather around everybody.",
+          "start_s": 0.0,
+          "end_s": 2.24,
+          "avg_logprob": -0.49806513140598935,
+          "no_speech_prob": 0.030159378424286842,
+          "compression_ratio": 0.9736842105263158
+        },
+        {
+          "text": "Great.",
+          "start_s": 2.24,
+          "end_s": 3.68,
+          "avg_logprob": -0.49806513140598935,
+          "no_speech_prob": 0.030159378424286842,
+          "compression_ratio": 0.9736842105263158
+        },
+        {
+          "text": "So, as the one throwing the party...",
+          "start_s": 3.68,
+          "end_s": 6.0,
+          "avg_logprob": -0.49806513140598935,
+          "no_speech_prob": 0.030159378424286842,
+          "compression_ratio": 0.9736842105263158
+        }
+      ],
+      "wer": {
+        "wer": 0.888889,
+        "reference_word_count": 18,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 11,
+        "insertions": 5,
+        "reference_words": [
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party",
+          "and",
+          "it",
+          "also",
+          "being",
+          "my",
+          "party",
+          "i",
+          "would",
+          "like",
+          "to",
+          "announce"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.888889,
+        "reference_word_count": 18,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 11,
+        "insertions": 5,
+        "reference_words": [
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party",
+          "and",
+          "it",
+          "also",
+          "being",
+          "my",
+          "party",
+          "i",
+          "would",
+          "like",
+          "to",
+          "announce"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ]
+      },
+      "seconds": 6.636881515994901
+    },
+    {
+      "id": "calibration_asmr7_train_02",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_train_02/asmr7_train_02__natural.wav",
+      "audio_sha256": "d386d79b535b8d8947274f0cb06170605831e30575d7b5a815568957d6b26220",
+      "expected_text": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+      "transcript": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+      "segments": [
+        {
+          "text": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+          "start_s": 0.0,
+          "end_s": 6.0,
+          "avg_logprob": -0.23665078557454622,
+          "no_speech_prob": 0.05700003355741501,
+          "compression_ratio": 1.119047619047619
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 20,
+        "hypothesis_word_count": 20,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "there's",
+          "a",
+          "closet",
+          "in",
+          "pretty",
+          "much",
+          "every",
+          "room",
+          "in",
+          "this",
+          "house",
+          "so",
+          "we",
+          "might",
+          "as",
+          "well",
+          "put",
+          "them",
+          "to",
+          "use"
+        ],
+        "hypothesis_words": [
+          "there's",
+          "a",
+          "closet",
+          "in",
+          "pretty",
+          "much",
+          "every",
+          "room",
+          "in",
+          "this",
+          "house",
+          "so",
+          "we",
+          "might",
+          "as",
+          "well",
+          "put",
+          "them",
+          "to",
+          "use"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 21,
+        "hypothesis_word_count": 21,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "there",
+          "is",
+          "a",
+          "closet",
+          "in",
+          "pretty",
+          "much",
+          "every",
+          "room",
+          "in",
+          "this",
+          "house",
+          "so",
+          "we",
+          "might",
+          "as",
+          "well",
+          "put",
+          "them",
+          "to",
+          "use"
+        ],
+        "hypothesis_words": [
+          "there",
+          "is",
+          "a",
+          "closet",
+          "in",
+          "pretty",
+          "much",
+          "every",
+          "room",
+          "in",
+          "this",
+          "house",
+          "so",
+          "we",
+          "might",
+          "as",
+          "well",
+          "put",
+          "them",
+          "to",
+          "use"
+        ]
+      },
+      "seconds": 6.061670827002672
+    },
+    {
+      "id": "asmr7_repair_001",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_001.wav",
+      "audio_sha256": "152b99cb858a760406cfd2b0e2800ff43624528e1675efcebd0a245ff24ba11b",
+      "expected_text": "Whoa, easy there. Okay, I swear.",
+      "transcript": "Whoa, easy there. Okay, I swear.",
+      "segments": [
+        {
+          "text": "Whoa, easy there.",
+          "start_s": 0.0,
+          "end_s": 1.52,
+          "avg_logprob": -0.6983897606531779,
+          "no_speech_prob": 0.056872349232435226,
+          "compression_ratio": 0.8
+        },
+        {
+          "text": "Okay, I swear.",
+          "start_s": 2.92,
+          "end_s": 4.12,
+          "avg_logprob": -0.6983897606531779,
+          "no_speech_prob": 0.056872349232435226,
+          "compression_ratio": 0.8
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 6,
+        "hypothesis_word_count": 6,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "whoa",
+          "easy",
+          "there",
+          "okay",
+          "i",
+          "swear"
+        ],
+        "hypothesis_words": [
+          "whoa",
+          "easy",
+          "there",
+          "okay",
+          "i",
+          "swear"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 6,
+        "hypothesis_word_count": 6,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "whoa",
+          "easy",
+          "there",
+          "okay",
+          "i",
+          "swear"
+        ],
+        "hypothesis_words": [
+          "whoa",
+          "easy",
+          "there",
+          "okay",
+          "i",
+          "swear"
+        ]
+      },
+      "seconds": 6.065414188997238
+    },
+    {
+      "id": "asmr7_repair_002",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_002.wav",
+      "audio_sha256": "75ec48cdc064b938916d5a58ffbb6c65fa56317046a7530e9a1832c188be42f2",
+      "expected_text": "If anyone breaks my parents' I'm gonna be pissed.",
+      "transcript": "If anyone breaks my parents' vase, I'm gonna be pissed.",
+      "segments": [
+        {
+          "text": "If anyone breaks my parents' vase, I'm gonna be pissed.",
+          "start_s": 0.0,
+          "end_s": 3.2800000000000002,
+          "avg_logprob": -0.24518568375531366,
+          "no_speech_prob": 0.022519739344716072,
+          "compression_ratio": 0.8870967741935484
+        }
+      ],
+      "wer": {
+        "wer": 0.111111,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 10,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "if",
+          "anyone",
+          "breaks",
+          "my",
+          "parents",
+          "i'm",
+          "gonna",
+          "be",
+          "pissed"
+        ],
+        "hypothesis_words": [
+          "if",
+          "anyone",
+          "breaks",
+          "my",
+          "parents",
+          "vase",
+          "i'm",
+          "gonna",
+          "be",
+          "pissed"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.1,
+        "reference_word_count": 10,
+        "hypothesis_word_count": 11,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "if",
+          "anyone",
+          "breaks",
+          "my",
+          "parents",
+          "i",
+          "am",
+          "gonna",
+          "be",
+          "pissed"
+        ],
+        "hypothesis_words": [
+          "if",
+          "anyone",
+          "breaks",
+          "my",
+          "parents",
+          "vase",
+          "i",
+          "am",
+          "gonna",
+          "be",
+          "pissed"
+        ]
+      },
+      "seconds": 5.537052888001199
+    },
+    {
+      "id": "asmr7_repair_003",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_003.wav",
+      "audio_sha256": "665a39e6d85be89a0f86c99626470bb434a9f31d02c5aee54f57244bff52bafc",
+      "expected_text": "Yes, I hit it in one of the locked rooms, but you know Steph is gonna pick the lock.",
+      "transcript": "Yes, I hid it in one of the locked rooms, but you know Steph is going to pick the lock.",
+      "segments": [
+        {
+          "text": "Yes, I hid it in one of the locked rooms, but you know Steph is going to pick the lock.",
+          "start_s": 0.0,
+          "end_s": 4.16,
+          "avg_logprob": -0.251693450487577,
+          "no_speech_prob": 0.01505416538566351,
+          "compression_ratio": 1.1153846153846154
+        }
+      ],
+      "wer": {
+        "wer": 0.157895,
+        "reference_word_count": 19,
+        "hypothesis_word_count": 20,
+        "substitutions": 2,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "yes",
+          "i",
+          "hit",
+          "it",
+          "in",
+          "one",
+          "of",
+          "the",
+          "locked",
+          "rooms",
+          "but",
+          "you",
+          "know",
+          "steph",
+          "is",
+          "gonna",
+          "pick",
+          "the",
+          "lock"
+        ],
+        "hypothesis_words": [
+          "yes",
+          "i",
+          "hid",
+          "it",
+          "in",
+          "one",
+          "of",
+          "the",
+          "locked",
+          "rooms",
+          "but",
+          "you",
+          "know",
+          "steph",
+          "is",
+          "going",
+          "to",
+          "pick",
+          "the",
+          "lock"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.157895,
+        "reference_word_count": 19,
+        "hypothesis_word_count": 20,
+        "substitutions": 2,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "yes",
+          "i",
+          "hit",
+          "it",
+          "in",
+          "one",
+          "of",
+          "the",
+          "locked",
+          "rooms",
+          "but",
+          "you",
+          "know",
+          "steph",
+          "is",
+          "gonna",
+          "pick",
+          "the",
+          "lock"
+        ],
+        "hypothesis_words": [
+          "yes",
+          "i",
+          "hid",
+          "it",
+          "in",
+          "one",
+          "of",
+          "the",
+          "locked",
+          "rooms",
+          "but",
+          "you",
+          "know",
+          "steph",
+          "is",
+          "going",
+          "to",
+          "pick",
+          "the",
+          "lock"
+        ]
+      },
+      "seconds": 6.605915782994998
+    },
+    {
+      "id": "asmr7_repair_004",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_004.wav",
+      "audio_sha256": "6f53fa590c5bf08e1f5bcf527b598d89a0459cf00b37c78376c970e77b380d37",
+      "expected_text": "Oh, wow. There's like, came as been the bottle going out already.",
+      "transcript": "Wow, there's the game has been the bottle going on already",
+      "segments": [
+        {
+          "text": "Wow, there's the game has been the bottle going on already",
+          "start_s": 0.0,
+          "end_s": 3.2800000000000002,
+          "avg_logprob": -0.32806724309921265,
+          "no_speech_prob": 0.01566905900835991,
+          "compression_ratio": 0.9830508474576272
+        }
+      ],
+      "wer": {
+        "wer": 0.416667,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 11,
+        "substitutions": 4,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_words": [
+          "oh",
+          "wow",
+          "there's",
+          "like",
+          "came",
+          "as",
+          "been",
+          "the",
+          "bottle",
+          "going",
+          "out",
+          "already"
+        ],
+        "hypothesis_words": [
+          "wow",
+          "there's",
+          "the",
+          "game",
+          "has",
+          "been",
+          "the",
+          "bottle",
+          "going",
+          "on",
+          "already"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.384615,
+        "reference_word_count": 13,
+        "hypothesis_word_count": 12,
+        "substitutions": 4,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_words": [
+          "oh",
+          "wow",
+          "there",
+          "is",
+          "like",
+          "came",
+          "as",
+          "been",
+          "the",
+          "bottle",
+          "going",
+          "out",
+          "already"
+        ],
+        "hypothesis_words": [
+          "wow",
+          "there",
+          "is",
+          "the",
+          "game",
+          "has",
+          "been",
+          "the",
+          "bottle",
+          "going",
+          "on",
+          "already"
+        ]
+      },
+      "seconds": 6.279482231999282
+    },
+    {
+      "id": "asmr7_repair_005",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_005.wav",
+      "audio_sha256": "d85d4c4d59149be28187808df69925326149f598ec702a0cbab6e01774e554c0",
+      "expected_text": "You want it? No, of course I'm going in.",
+      "transcript": "You want it? Of course I'm going in!",
+      "segments": [
+        {
+          "text": "You want it?",
+          "start_s": 0.0,
+          "end_s": 1.0,
+          "avg_logprob": -0.47364693135023117,
+          "no_speech_prob": 0.0577705055475235,
+          "compression_ratio": 0.8181818181818182
+        },
+        {
+          "text": "Of course I'm going in!",
+          "start_s": 2.0,
+          "end_s": 4.0,
+          "avg_logprob": -0.47364693135023117,
+          "no_speech_prob": 0.0577705055475235,
+          "compression_ratio": 0.8181818181818182
+        }
+      ],
+      "wer": {
+        "wer": 0.111111,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_words": [
+          "you",
+          "want",
+          "it",
+          "no",
+          "of",
+          "course",
+          "i'm",
+          "going",
+          "in"
+        ],
+        "hypothesis_words": [
+          "you",
+          "want",
+          "it",
+          "of",
+          "course",
+          "i'm",
+          "going",
+          "in"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.1,
+        "reference_word_count": 10,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_words": [
+          "you",
+          "want",
+          "it",
+          "no",
+          "of",
+          "course",
+          "i",
+          "am",
+          "going",
+          "in"
+        ],
+        "hypothesis_words": [
+          "you",
+          "want",
+          "it",
+          "of",
+          "course",
+          "i",
+          "am",
+          "going",
+          "in"
+        ]
+      },
+      "seconds": 6.013813826000842
+    },
+    {
+      "id": "asmr7_repair_006",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_006.wav",
+      "audio_sha256": "7c573da034bec9d899a989beec8b56dab84194bc9cf4e4c19b14f7fe750c95c5",
+      "expected_text": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+      "transcript": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+      "segments": [
+        {
+          "text": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+          "start_s": 0.0,
+          "end_s": 5.0,
+          "avg_logprob": -0.1897252952823272,
+          "no_speech_prob": 0.02042761631309986,
+          "compression_ratio": 1.119047619047619
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 20,
+        "hypothesis_word_count": 20,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "there's",
+          "a",
+          "closet",
+          "in",
+          "pretty",
+          "much",
+          "every",
+          "room",
+          "in",
+          "this",
+          "house",
+          "so",
+          "we",
+          "might",
+          "as",
+          "well",
+          "put",
+          "them",
+          "to",
+          "use"
+        ],
+        "hypothesis_words": [
+          "there's",
+          "a",
+          "closet",
+          "in",
+          "pretty",
+          "much",
+          "every",
+          "room",
+          "in",
+          "this",
+          "house",
+          "so",
+          "we",
+          "might",
+          "as",
+          "well",
+          "put",
+          "them",
+          "to",
+          "use"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 21,
+        "hypothesis_word_count": 21,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "there",
+          "is",
+          "a",
+          "closet",
+          "in",
+          "pretty",
+          "much",
+          "every",
+          "room",
+          "in",
+          "this",
+          "house",
+          "so",
+          "we",
+          "might",
+          "as",
+          "well",
+          "put",
+          "them",
+          "to",
+          "use"
+        ],
+        "hypothesis_words": [
+          "there",
+          "is",
+          "a",
+          "closet",
+          "in",
+          "pretty",
+          "much",
+          "every",
+          "room",
+          "in",
+          "this",
+          "house",
+          "so",
+          "we",
+          "might",
+          "as",
+          "well",
+          "put",
+          "them",
+          "to",
+          "use"
+        ]
+      },
+      "seconds": 6.575164024994592
+    },
+    {
+      "id": "asmr7_repair_007",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_007.wav",
+      "audio_sha256": "840395254e9c7c0890545f76c9e9efa6df36eabdecce2062196f501c46facbd0",
+      "expected_text": "sound good. Great. Very well.",
+      "transcript": "Sound good? Great. Very well.",
+      "segments": [
+        {
+          "text": "Sound good?",
+          "start_s": 0.0,
+          "end_s": 1.7,
+          "avg_logprob": -0.6104492743810018,
+          "no_speech_prob": 0.19017378985881805,
+          "compression_ratio": 0.7837837837837838
+        },
+        {
+          "text": "Great.",
+          "start_s": 1.7,
+          "end_s": 2.86,
+          "avg_logprob": -0.6104492743810018,
+          "no_speech_prob": 0.19017378985881805,
+          "compression_ratio": 0.7837837837837838
+        },
+        {
+          "text": "Very well.",
+          "start_s": 2.86,
+          "end_s": 3.86,
+          "avg_logprob": -0.6104492743810018,
+          "no_speech_prob": 0.19017378985881805,
+          "compression_ratio": 0.7837837837837838
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 5,
+        "hypothesis_word_count": 5,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "sound",
+          "good",
+          "great",
+          "very",
+          "well"
+        ],
+        "hypothesis_words": [
+          "sound",
+          "good",
+          "great",
+          "very",
+          "well"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 5,
+        "hypothesis_word_count": 5,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "sound",
+          "good",
+          "great",
+          "very",
+          "well"
+        ],
+        "hypothesis_words": [
+          "sound",
+          "good",
+          "great",
+          "very",
+          "well"
+        ]
+      },
+      "seconds": 6.40406761700433
+    },
+    {
+      "id": "asmr7_repair_008",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_008.wav",
+      "audio_sha256": "43a93916176b50c56d80646950a5cfc851b5de42b1e466c6b5cfe0250d36b99a",
+      "expected_text": "Now, let's get this game underway. I'll be nice enough to let whoever started the game up to go on first.",
+      "transcript": "Now, let's get this game underway. I'll be nice enough to let whoever started the game up to go on first.",
+      "segments": [
+        {
+          "text": "Now, let's get this game underway.",
+          "start_s": 0.0,
+          "end_s": 3.96,
+          "avg_logprob": -0.30056444867964716,
+          "no_speech_prob": 0.020067229866981506,
+          "compression_ratio": 1.141304347826087
+        },
+        {
+          "text": "I'll be nice enough to let whoever started the game up to go on first.",
+          "start_s": 3.96,
+          "end_s": 7.96,
+          "avg_logprob": -0.30056444867964716,
+          "no_speech_prob": 0.020067229866981506,
+          "compression_ratio": 1.141304347826087
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 21,
+        "hypothesis_word_count": 21,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "now",
+          "let's",
+          "get",
+          "this",
+          "game",
+          "underway",
+          "i'll",
+          "be",
+          "nice",
+          "enough",
+          "to",
+          "let",
+          "whoever",
+          "started",
+          "the",
+          "game",
+          "up",
+          "to",
+          "go",
+          "on",
+          "first"
+        ],
+        "hypothesis_words": [
+          "now",
+          "let's",
+          "get",
+          "this",
+          "game",
+          "underway",
+          "i'll",
+          "be",
+          "nice",
+          "enough",
+          "to",
+          "let",
+          "whoever",
+          "started",
+          "the",
+          "game",
+          "up",
+          "to",
+          "go",
+          "on",
+          "first"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 23,
+        "hypothesis_word_count": 23,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "now",
+          "let",
+          "us",
+          "get",
+          "this",
+          "game",
+          "underway",
+          "i",
+          "will",
+          "be",
+          "nice",
+          "enough",
+          "to",
+          "let",
+          "whoever",
+          "started",
+          "the",
+          "game",
+          "up",
+          "to",
+          "go",
+          "on",
+          "first"
+        ],
+        "hypothesis_words": [
+          "now",
+          "let",
+          "us",
+          "get",
+          "this",
+          "game",
+          "underway",
+          "i",
+          "will",
+          "be",
+          "nice",
+          "enough",
+          "to",
+          "let",
+          "whoever",
+          "started",
+          "the",
+          "game",
+          "up",
+          "to",
+          "go",
+          "on",
+          "first"
+        ]
+      },
+      "seconds": 6.508737963005842
+    },
+    {
+      "id": "asmr7_repair_009",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_009.wav",
+      "audio_sha256": "7bf89185bffaeb3220d362e9dec691c8011224db78d64cdac1cdc35624edae93",
+      "expected_text": "Alright, my turn. Let me see who's lucky person that gets to kiss me as tonight.",
+      "transcript": "Alright, my turn. Let me see who the lucky person that gets to kiss me has tonight.",
+      "segments": [
+        {
+          "text": "Alright, my turn. Let me see who the lucky person that gets to kiss me has tonight.",
+          "start_s": 0.0,
+          "end_s": 6.0,
+          "avg_logprob": -0.22571360417034314,
+          "no_speech_prob": 0.03329416736960411,
+          "compression_ratio": 1.0506329113924051
+        }
+      ],
+      "wer": {
+        "wer": 0.1875,
+        "reference_word_count": 16,
+        "hypothesis_word_count": 17,
+        "substitutions": 2,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "alright",
+          "my",
+          "turn",
+          "let",
+          "me",
+          "see",
+          "who's",
+          "lucky",
+          "person",
+          "that",
+          "gets",
+          "to",
+          "kiss",
+          "me",
+          "as",
+          "tonight"
+        ],
+        "hypothesis_words": [
+          "alright",
+          "my",
+          "turn",
+          "let",
+          "me",
+          "see",
+          "who",
+          "the",
+          "lucky",
+          "person",
+          "that",
+          "gets",
+          "to",
+          "kiss",
+          "me",
+          "has",
+          "tonight"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.117647,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 17,
+        "substitutions": 2,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "alright",
+          "my",
+          "turn",
+          "let",
+          "me",
+          "see",
+          "who",
+          "is",
+          "lucky",
+          "person",
+          "that",
+          "gets",
+          "to",
+          "kiss",
+          "me",
+          "as",
+          "tonight"
+        ],
+        "hypothesis_words": [
+          "alright",
+          "my",
+          "turn",
+          "let",
+          "me",
+          "see",
+          "who",
+          "the",
+          "lucky",
+          "person",
+          "that",
+          "gets",
+          "to",
+          "kiss",
+          "me",
+          "has",
+          "tonight"
+        ]
+      },
+      "seconds": 6.713285191995965
+    },
+    {
+      "id": "asmr7_repair_010",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_010.wav",
+      "audio_sha256": "6180bd226a41a53a78ccdc5549b4ac05cb13270e147d86bedb440f688ae2d8c9",
+      "expected_text": "It's my birthday, so they better make these seven minutes worth it.",
+      "transcript": "It's my birthday, so they better make these seven minutes worth it.",
+      "segments": [
+        {
+          "text": "It's my birthday, so they better make these seven minutes worth it.",
+          "start_s": 0.0,
+          "end_s": 3.46,
+          "avg_logprob": -0.30952122973071206,
+          "no_speech_prob": 0.1101357638835907,
+          "compression_ratio": 0.9710144927536232
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "it's",
+          "my",
+          "birthday",
+          "so",
+          "they",
+          "better",
+          "make",
+          "these",
+          "seven",
+          "minutes",
+          "worth",
+          "it"
+        ],
+        "hypothesis_words": [
+          "it's",
+          "my",
+          "birthday",
+          "so",
+          "they",
+          "better",
+          "make",
+          "these",
+          "seven",
+          "minutes",
+          "worth",
+          "it"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 13,
+        "hypothesis_word_count": 13,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "it",
+          "is",
+          "my",
+          "birthday",
+          "so",
+          "they",
+          "better",
+          "make",
+          "these",
+          "seven",
+          "minutes",
+          "worth",
+          "it"
+        ],
+        "hypothesis_words": [
+          "it",
+          "is",
+          "my",
+          "birthday",
+          "so",
+          "they",
+          "better",
+          "make",
+          "these",
+          "seven",
+          "minutes",
+          "worth",
+          "it"
+        ]
+      },
+      "seconds": 6.316928666004969
+    },
+    {
+      "id": "asmr7_repair_011",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_011.wav",
+      "audio_sha256": "2d73fa6ac8ed500c8077155b20fd5b1aaeeae872f1fefead4ebe92e5f728d370",
+      "expected_text": "Will you stop pushing me? I'm getting up already.",
+      "transcript": "Will you stop pushing me? I'm getting up already.",
+      "segments": [
+        {
+          "text": "Will you stop pushing me?",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "avg_logprob": -0.4256911558263442,
+          "no_speech_prob": 0.07866295427083969,
+          "compression_ratio": 0.9074074074074074
+        },
+        {
+          "text": "I'm getting up already.",
+          "start_s": 2.0,
+          "end_s": 4.0,
+          "avg_logprob": -0.4256911558263442,
+          "no_speech_prob": 0.07866295427083969,
+          "compression_ratio": 0.9074074074074074
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "will",
+          "you",
+          "stop",
+          "pushing",
+          "me",
+          "i'm",
+          "getting",
+          "up",
+          "already"
+        ],
+        "hypothesis_words": [
+          "will",
+          "you",
+          "stop",
+          "pushing",
+          "me",
+          "i'm",
+          "getting",
+          "up",
+          "already"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 10,
+        "hypothesis_word_count": 10,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "will",
+          "you",
+          "stop",
+          "pushing",
+          "me",
+          "i",
+          "am",
+          "getting",
+          "up",
+          "already"
+        ],
+        "hypothesis_words": [
+          "will",
+          "you",
+          "stop",
+          "pushing",
+          "me",
+          "i",
+          "am",
+          "getting",
+          "up",
+          "already"
+        ]
+      },
+      "seconds": 5.56224985299923
+    },
+    {
+      "id": "asmr7_repair_012",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_012.wav",
+      "audio_sha256": "43660fe6d3f40beebff202ce4b4569fd6417e346a67b00ad61a09cd8d53dc628",
+      "expected_text": "Don't worry. Wait, hold on.",
+      "transcript": "Don't worry Wait, hold on",
+      "segments": [
+        {
+          "text": "Don't worry",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "avg_logprob": -0.43403077870607376,
+          "no_speech_prob": 0.11099591106176376,
+          "compression_ratio": 0.7575757575757576
+        },
+        {
+          "text": "Wait, hold on",
+          "start_s": 3.72,
+          "end_s": 5.72,
+          "avg_logprob": -0.43403077870607376,
+          "no_speech_prob": 0.11099591106176376,
+          "compression_ratio": 0.7575757575757576
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 5,
+        "hypothesis_word_count": 5,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "don't",
+          "worry",
+          "wait",
+          "hold",
+          "on"
+        ],
+        "hypothesis_words": [
+          "don't",
+          "worry",
+          "wait",
+          "hold",
+          "on"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 6,
+        "hypothesis_word_count": 6,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "do",
+          "not",
+          "worry",
+          "wait",
+          "hold",
+          "on"
+        ],
+        "hypothesis_words": [
+          "do",
+          "not",
+          "worry",
+          "wait",
+          "hold",
+          "on"
+        ]
+      },
+      "seconds": 6.019999652002298
+    },
+    {
+      "id": "asmr7_repair_013",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_013.wav",
+      "audio_sha256": "e2d427a7e015946c6c2400e510928e575a97ef5fd92a6c66e184267fefb67665",
+      "expected_text": "Look, why on earth are you even here?",
+      "transcript": "Look, why on earth are you even here?",
+      "segments": [
+        {
+          "text": "Look, why on earth are you even here?",
+          "start_s": 0.0,
+          "end_s": 3.2800000000000002,
+          "avg_logprob": -0.35544479810274565,
+          "no_speech_prob": 0.030699189752340317,
+          "compression_ratio": 0.8222222222222222
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "look",
+          "why",
+          "on",
+          "earth",
+          "are",
+          "you",
+          "even",
+          "here"
+        ],
+        "hypothesis_words": [
+          "look",
+          "why",
+          "on",
+          "earth",
+          "are",
+          "you",
+          "even",
+          "here"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "look",
+          "why",
+          "on",
+          "earth",
+          "are",
+          "you",
+          "even",
+          "here"
+        ],
+        "hypothesis_words": [
+          "look",
+          "why",
+          "on",
+          "earth",
+          "are",
+          "you",
+          "even",
+          "here"
+        ]
+      },
+      "seconds": 5.962454920998425
+    },
+    {
+      "id": "asmr7_repair_014",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_014.wav",
+      "audio_sha256": "f4187b1b1ea1811e41b0ba1389475eecd1e2e532e269805f5d91856f46536ddd",
+      "expected_text": "It just means I'm stuck here with you for longer.",
+      "transcript": "It just means I'm stuck here with you for longer.",
+      "segments": [
+        {
+          "text": "It just means I'm stuck here with you for longer.",
+          "start_s": 0.0,
+          "end_s": 4.16,
+          "avg_logprob": -0.3334842403729757,
+          "no_speech_prob": 0.020584318786859512,
+          "compression_ratio": 0.8596491228070176
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 10,
+        "hypothesis_word_count": 10,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "it",
+          "just",
+          "means",
+          "i'm",
+          "stuck",
+          "here",
+          "with",
+          "you",
+          "for",
+          "longer"
+        ],
+        "hypothesis_words": [
+          "it",
+          "just",
+          "means",
+          "i'm",
+          "stuck",
+          "here",
+          "with",
+          "you",
+          "for",
+          "longer"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 11,
+        "hypothesis_word_count": 11,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "it",
+          "just",
+          "means",
+          "i",
+          "am",
+          "stuck",
+          "here",
+          "with",
+          "you",
+          "for",
+          "longer"
+        ],
+        "hypothesis_words": [
+          "it",
+          "just",
+          "means",
+          "i",
+          "am",
+          "stuck",
+          "here",
+          "with",
+          "you",
+          "for",
+          "longer"
+        ]
+      },
+      "seconds": 6.215128730000288
+    },
+    {
+      "id": "asmr7_repair_015",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_015.wav",
+      "audio_sha256": "61f61df1f60056d42f8fd22a8ebe698e7065e1a3792d973d7252e0e469080346",
+      "expected_text": "Did I mention it's you? Why?",
+      "transcript": "Did I mention it's you? Why?",
+      "segments": [
+        {
+          "text": "Did I mention it's you?",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "avg_logprob": -0.5502696463039943,
+          "no_speech_prob": 0.025579361245036125,
+          "compression_ratio": 0.7777777777777778
+        },
+        {
+          "text": "Why?",
+          "start_s": 4.26,
+          "end_s": 4.96,
+          "avg_logprob": -0.5502696463039943,
+          "no_speech_prob": 0.025579361245036125,
+          "compression_ratio": 0.7777777777777778
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 6,
+        "hypothesis_word_count": 6,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "did",
+          "i",
+          "mention",
+          "it's",
+          "you",
+          "why"
+        ],
+        "hypothesis_words": [
+          "did",
+          "i",
+          "mention",
+          "it's",
+          "you",
+          "why"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 7,
+        "hypothesis_word_count": 7,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "did",
+          "i",
+          "mention",
+          "it",
+          "is",
+          "you",
+          "why"
+        ],
+        "hypothesis_words": [
+          "did",
+          "i",
+          "mention",
+          "it",
+          "is",
+          "you",
+          "why"
+        ]
+      },
+      "seconds": 6.315043306000007
+    },
+    {
+      "id": "asmr7_repair_016",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_016.wav",
+      "audio_sha256": "ddcc354f2e944ed0e6494f5d0811173feaa703f66dc48a084e8563996dda9562",
+      "expected_text": "I hate you because you're a nerd, a loser, a loner who keeps cutting in my way.",
+      "transcript": "I hate you because you're a nerd, a loser, and a loner who keeps cutting in my way.",
+      "segments": [
+        {
+          "text": "I hate you because you're a nerd, a loser, and a loner who keeps cutting in my way.",
+          "start_s": 0.0,
+          "end_s": 5.0,
+          "avg_logprob": -0.18011122368849242,
+          "no_speech_prob": 0.029071953147649765,
+          "compression_ratio": 1.0921052631578947
+        }
+      ],
+      "wer": {
+        "wer": 0.058824,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 18,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "i",
+          "hate",
+          "you",
+          "because",
+          "you're",
+          "a",
+          "nerd",
+          "a",
+          "loser",
+          "a",
+          "loner",
+          "who",
+          "keeps",
+          "cutting",
+          "in",
+          "my",
+          "way"
+        ],
+        "hypothesis_words": [
+          "i",
+          "hate",
+          "you",
+          "because",
+          "you're",
+          "a",
+          "nerd",
+          "a",
+          "loser",
+          "and",
+          "a",
+          "loner",
+          "who",
+          "keeps",
+          "cutting",
+          "in",
+          "my",
+          "way"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.055556,
+        "reference_word_count": 18,
+        "hypothesis_word_count": 19,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "i",
+          "hate",
+          "you",
+          "because",
+          "you",
+          "are",
+          "a",
+          "nerd",
+          "a",
+          "loser",
+          "a",
+          "loner",
+          "who",
+          "keeps",
+          "cutting",
+          "in",
+          "my",
+          "way"
+        ],
+        "hypothesis_words": [
+          "i",
+          "hate",
+          "you",
+          "because",
+          "you",
+          "are",
+          "a",
+          "nerd",
+          "a",
+          "loser",
+          "and",
+          "a",
+          "loner",
+          "who",
+          "keeps",
+          "cutting",
+          "in",
+          "my",
+          "way"
+        ]
+      },
+      "seconds": 6.198857109993696
+    },
+    {
+      "id": "asmr7_repair_017",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_017.wav",
+      "audio_sha256": "8677825d3b13bc63622135a42dfd44a1587d5164ce9dbfc6b422b8f2c848fb5d",
+      "expected_text": "School, after school, at the park, and now my own party.",
+      "transcript": "school, after school, at the park, and now at my own party.",
+      "segments": [
+        {
+          "text": "school, after school, at the park, and now at my own party.",
+          "start_s": 0.0,
+          "end_s": 6.0,
+          "avg_logprob": -0.3580872134158486,
+          "no_speech_prob": 0.03430861607193947,
+          "compression_ratio": 1.0727272727272728
+        }
+      ],
+      "wer": {
+        "wer": 0.090909,
+        "reference_word_count": 11,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "school",
+          "after",
+          "school",
+          "at",
+          "the",
+          "park",
+          "and",
+          "now",
+          "my",
+          "own",
+          "party"
+        ],
+        "hypothesis_words": [
+          "school",
+          "after",
+          "school",
+          "at",
+          "the",
+          "park",
+          "and",
+          "now",
+          "at",
+          "my",
+          "own",
+          "party"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.090909,
+        "reference_word_count": 11,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "school",
+          "after",
+          "school",
+          "at",
+          "the",
+          "park",
+          "and",
+          "now",
+          "my",
+          "own",
+          "party"
+        ],
+        "hypothesis_words": [
+          "school",
+          "after",
+          "school",
+          "at",
+          "the",
+          "park",
+          "and",
+          "now",
+          "at",
+          "my",
+          "own",
+          "party"
+        ]
+      },
+      "seconds": 5.761218890002056
+    },
+    {
+      "id": "asmr7_repair_018",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_018.wav",
+      "audio_sha256": "edc6b9498d2b88bb20fd703bbab45e0612be9f5704a39e656c7ba2ce88db3fab",
+      "expected_text": "Jeez. I put out into the universe I don't want to see one person and boom.",
+      "transcript": "Geez. I put out into the universe that I don't wanna see one person and boom.",
+      "segments": [
+        {
+          "text": "Geez.",
+          "start_s": 0.0,
+          "end_s": 0.84,
+          "avg_logprob": -0.503883441289266,
+          "no_speech_prob": 0.15868234634399414,
+          "compression_ratio": 1.0266666666666666
+        },
+        {
+          "text": "I put out into the universe",
+          "start_s": 1.8,
+          "end_s": 2.96,
+          "avg_logprob": -0.503883441289266,
+          "no_speech_prob": 0.15868234634399414,
+          "compression_ratio": 1.0266666666666666
+        },
+        {
+          "text": "that I don't wanna see one person and boom.",
+          "start_s": 2.96,
+          "end_s": 5.4,
+          "avg_logprob": -0.503883441289266,
+          "no_speech_prob": 0.15868234634399414,
+          "compression_ratio": 1.0266666666666666
+        }
+      ],
+      "wer": {
+        "wer": 0.25,
+        "reference_word_count": 16,
+        "hypothesis_word_count": 16,
+        "substitutions": 2,
+        "deletions": 1,
+        "insertions": 1,
+        "reference_words": [
+          "jeez",
+          "i",
+          "put",
+          "out",
+          "into",
+          "the",
+          "universe",
+          "i",
+          "don't",
+          "want",
+          "to",
+          "see",
+          "one",
+          "person",
+          "and",
+          "boom"
+        ],
+        "hypothesis_words": [
+          "geez",
+          "i",
+          "put",
+          "out",
+          "into",
+          "the",
+          "universe",
+          "that",
+          "i",
+          "don't",
+          "wanna",
+          "see",
+          "one",
+          "person",
+          "and",
+          "boom"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.235294,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 17,
+        "substitutions": 2,
+        "deletions": 1,
+        "insertions": 1,
+        "reference_words": [
+          "jeez",
+          "i",
+          "put",
+          "out",
+          "into",
+          "the",
+          "universe",
+          "i",
+          "do",
+          "not",
+          "want",
+          "to",
+          "see",
+          "one",
+          "person",
+          "and",
+          "boom"
+        ],
+        "hypothesis_words": [
+          "geez",
+          "i",
+          "put",
+          "out",
+          "into",
+          "the",
+          "universe",
+          "that",
+          "i",
+          "do",
+          "not",
+          "wanna",
+          "see",
+          "one",
+          "person",
+          "and",
+          "boom"
+        ]
+      },
+      "seconds": 6.014943558002415
+    },
+    {
+      "id": "asmr7_repair_019",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_019.wav",
+      "audio_sha256": "35cd121d9598f4e950a3ffe786211395e5712930665abf0ee1e4d1195cddc982",
+      "expected_text": "They're everywhere. You are so that bad.",
+      "transcript": "They're everywhere. You are so that bad.",
+      "segments": [
+        {
+          "text": "They're everywhere.",
+          "start_s": 0.0,
+          "end_s": 1.0,
+          "avg_logprob": -0.558690857887268,
+          "no_speech_prob": 0.08919253945350647,
+          "compression_ratio": 0.851063829787234
+        },
+        {
+          "text": "You are so that bad.",
+          "start_s": 2.84,
+          "end_s": 4.5200000000000005,
+          "avg_logprob": -0.558690857887268,
+          "no_speech_prob": 0.08919253945350647,
+          "compression_ratio": 0.851063829787234
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 7,
+        "hypothesis_word_count": 7,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "they're",
+          "everywhere",
+          "you",
+          "are",
+          "so",
+          "that",
+          "bad"
+        ],
+        "hypothesis_words": [
+          "they're",
+          "everywhere",
+          "you",
+          "are",
+          "so",
+          "that",
+          "bad"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "they",
+          "are",
+          "everywhere",
+          "you",
+          "are",
+          "so",
+          "that",
+          "bad"
+        ],
+        "hypothesis_words": [
+          "they",
+          "are",
+          "everywhere",
+          "you",
+          "are",
+          "so",
+          "that",
+          "bad"
+        ]
+      },
+      "seconds": 5.7133729250053875
+    },
+    {
+      "id": "asmr7_repair_020",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_020.wav",
+      "audio_sha256": "bad262c9db1749c2cd281039d7afa47b4b641696864c2c2ce88fe060792280d9",
+      "expected_text": "even that. What do you look like that?",
+      "transcript": "Not even, Daddy. Why do you look like that?",
+      "segments": [
+        {
+          "text": "Not even, Daddy.",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "avg_logprob": -0.6635986776912913,
+          "no_speech_prob": 0.11926129460334778,
+          "compression_ratio": 0.8431372549019608
+        },
+        {
+          "text": "Why do you look like that?",
+          "start_s": 5.68,
+          "end_s": 7.68,
+          "avg_logprob": -0.6635986776912913,
+          "no_speech_prob": 0.11926129460334778,
+          "compression_ratio": 0.8431372549019608
+        }
+      ],
+      "wer": {
+        "wer": 0.375,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 9,
+        "substitutions": 2,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "even",
+          "that",
+          "what",
+          "do",
+          "you",
+          "look",
+          "like",
+          "that"
+        ],
+        "hypothesis_words": [
+          "not",
+          "even",
+          "daddy",
+          "why",
+          "do",
+          "you",
+          "look",
+          "like",
+          "that"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.375,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 9,
+        "substitutions": 2,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "even",
+          "that",
+          "what",
+          "do",
+          "you",
+          "look",
+          "like",
+          "that"
+        ],
+        "hypothesis_words": [
+          "not",
+          "even",
+          "daddy",
+          "why",
+          "do",
+          "you",
+          "look",
+          "like",
+          "that"
+        ]
+      },
+      "seconds": 5.542927101996611
+    },
+    {
+      "id": "asmr7_repair_021",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_021.wav",
+      "audio_sha256": "baf9282d4138d2b3d825c26ecaadf35dc7e1d409922a4a9b99bb91d5e9d732bf",
+      "expected_text": "No, you look sad. My sad.",
+      "transcript": "Oh, you look... sad. My sad.",
+      "segments": [
+        {
+          "text": "Oh, you look... sad.",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "avg_logprob": -0.7622621615727743,
+          "no_speech_prob": 0.1358504444360733,
+          "compression_ratio": 0.875
+        },
+        {
+          "text": "My sad.",
+          "start_s": 2.9,
+          "end_s": 3.9,
+          "avg_logprob": -0.7622621615727743,
+          "no_speech_prob": 0.1358504444360733,
+          "compression_ratio": 0.875
+        }
+      ],
+      "wer": {
+        "wer": 0.166667,
+        "reference_word_count": 6,
+        "hypothesis_word_count": 6,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "no",
+          "you",
+          "look",
+          "sad",
+          "my",
+          "sad"
+        ],
+        "hypothesis_words": [
+          "oh",
+          "you",
+          "look",
+          "sad",
+          "my",
+          "sad"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.166667,
+        "reference_word_count": 6,
+        "hypothesis_word_count": 6,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "no",
+          "you",
+          "look",
+          "sad",
+          "my",
+          "sad"
+        ],
+        "hypothesis_words": [
+          "oh",
+          "you",
+          "look",
+          "sad",
+          "my",
+          "sad"
+        ]
+      },
+      "seconds": 5.760657942002581
+    },
+    {
+      "id": "asmr7_repair_022",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_022.wav",
+      "audio_sha256": "9a53e7a4211fe6fbb6b2404e3f0fdc752761d9d9a4c7f4550509230cbf2269e8",
+      "expected_text": "How's it finally dawned on you that you ruined my birthday party by destroying my one chance, my one chance, to kiss a random person?",
+      "transcript": "How's it finally dawned on you that you ruined my birthday party by destroying my one chance? My one chance to kiss a random person?",
+      "segments": [
+        {
+          "text": "How's it finally dawned on you that you ruined my birthday party by destroying my one chance?",
+          "start_s": 0.0,
+          "end_s": 6.5,
+          "avg_logprob": -0.36145809468101053,
+          "no_speech_prob": 0.06111639738082886,
+          "compression_ratio": 1.2815533980582525
+        },
+        {
+          "text": "My one chance to kiss a random person?",
+          "start_s": 6.5,
+          "end_s": 10.0,
+          "avg_logprob": -0.36145809468101053,
+          "no_speech_prob": 0.06111639738082886,
+          "compression_ratio": 1.2815533980582525
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 25,
+        "hypothesis_word_count": 25,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "how's",
+          "it",
+          "finally",
+          "dawned",
+          "on",
+          "you",
+          "that",
+          "you",
+          "ruined",
+          "my",
+          "birthday",
+          "party",
+          "by",
+          "destroying",
+          "my",
+          "one",
+          "chance",
+          "my",
+          "one",
+          "chance",
+          "to",
+          "kiss",
+          "a",
+          "random",
+          "person"
+        ],
+        "hypothesis_words": [
+          "how's",
+          "it",
+          "finally",
+          "dawned",
+          "on",
+          "you",
+          "that",
+          "you",
+          "ruined",
+          "my",
+          "birthday",
+          "party",
+          "by",
+          "destroying",
+          "my",
+          "one",
+          "chance",
+          "my",
+          "one",
+          "chance",
+          "to",
+          "kiss",
+          "a",
+          "random",
+          "person"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 25,
+        "hypothesis_word_count": 25,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "how's",
+          "it",
+          "finally",
+          "dawned",
+          "on",
+          "you",
+          "that",
+          "you",
+          "ruined",
+          "my",
+          "birthday",
+          "party",
+          "by",
+          "destroying",
+          "my",
+          "one",
+          "chance",
+          "my",
+          "one",
+          "chance",
+          "to",
+          "kiss",
+          "a",
+          "random",
+          "person"
+        ],
+        "hypothesis_words": [
+          "how's",
+          "it",
+          "finally",
+          "dawned",
+          "on",
+          "you",
+          "that",
+          "you",
+          "ruined",
+          "my",
+          "birthday",
+          "party",
+          "by",
+          "destroying",
+          "my",
+          "one",
+          "chance",
+          "my",
+          "one",
+          "chance",
+          "to",
+          "kiss",
+          "a",
+          "random",
+          "person"
+        ]
+      },
+      "seconds": 6.664676972999587
+    },
+    {
+      "id": "asmr7_repair_023",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_023.wav",
+      "audio_sha256": "e013eb061d5fcd5fe713a140aff406be6fb47d0279260fff95e09eeebe064048",
+      "expected_text": "Oh, well, when I usually insult you, you just throw one back at me.",
+      "transcript": "Oh, well, when I usually insult you, you just throw one back at me.",
+      "segments": [
+        {
+          "text": "Oh, well, when I usually insult you, you just throw one back at me.",
+          "start_s": 0.0,
+          "end_s": 7.0,
+          "avg_logprob": -0.3298188958849226,
+          "no_speech_prob": 0.025111114606261253,
+          "compression_ratio": 0.9710144927536232
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 14,
+        "hypothesis_word_count": 14,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "oh",
+          "well",
+          "when",
+          "i",
+          "usually",
+          "insult",
+          "you",
+          "you",
+          "just",
+          "throw",
+          "one",
+          "back",
+          "at",
+          "me"
+        ],
+        "hypothesis_words": [
+          "oh",
+          "well",
+          "when",
+          "i",
+          "usually",
+          "insult",
+          "you",
+          "you",
+          "just",
+          "throw",
+          "one",
+          "back",
+          "at",
+          "me"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 14,
+        "hypothesis_word_count": 14,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "oh",
+          "well",
+          "when",
+          "i",
+          "usually",
+          "insult",
+          "you",
+          "you",
+          "just",
+          "throw",
+          "one",
+          "back",
+          "at",
+          "me"
+        ],
+        "hypothesis_words": [
+          "oh",
+          "well",
+          "when",
+          "i",
+          "usually",
+          "insult",
+          "you",
+          "you",
+          "just",
+          "throw",
+          "one",
+          "back",
+          "at",
+          "me"
+        ]
+      },
+      "seconds": 6.640577515994664
+    },
+    {
+      "id": "asmr7_repair_024",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_024.wav",
+      "audio_sha256": "8e1c2e81a777029322b7998e42ca802270923ee5fbc9cf8ce25b64b15198a3b4",
+      "expected_text": "I didn't think I actually hurt you when I say these things.",
+      "transcript": "I didn't think I actually hurt you when I say these things.",
+      "segments": [
+        {
+          "text": "I didn't think I actually hurt you when I say these things.",
+          "start_s": 0.0,
+          "end_s": 3.0,
+          "avg_logprob": -0.2638889200547162,
+          "no_speech_prob": 0.01764620468020439,
+          "compression_ratio": 0.9516129032258065
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "didn't",
+          "think",
+          "i",
+          "actually",
+          "hurt",
+          "you",
+          "when",
+          "i",
+          "say",
+          "these",
+          "things"
+        ],
+        "hypothesis_words": [
+          "i",
+          "didn't",
+          "think",
+          "i",
+          "actually",
+          "hurt",
+          "you",
+          "when",
+          "i",
+          "say",
+          "these",
+          "things"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 13,
+        "hypothesis_word_count": 13,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "did",
+          "not",
+          "think",
+          "i",
+          "actually",
+          "hurt",
+          "you",
+          "when",
+          "i",
+          "say",
+          "these",
+          "things"
+        ],
+        "hypothesis_words": [
+          "i",
+          "did",
+          "not",
+          "think",
+          "i",
+          "actually",
+          "hurt",
+          "you",
+          "when",
+          "i",
+          "say",
+          "these",
+          "things"
+        ]
+      },
+      "seconds": 6.089447981998092
+    },
+    {
+      "id": "asmr7_repair_025",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_025.wav",
+      "audio_sha256": "93d1ac2633ee656b5e8bde6adcfd83b330e8dec23eb268bd74be3d5f07a4ecd1",
+      "expected_text": "Right? Back to the topic, because you just want to hear me sing your praises.",
+      "transcript": "Right back to the topic because you just want to hear me sing your praises",
+      "segments": [
+        {
+          "text": "Right back to the topic because you just want to hear me sing your praises",
+          "start_s": 0.0,
+          "end_s": 5.12,
+          "avg_logprob": -0.33731906664998906,
+          "no_speech_prob": 0.06679119169712067,
+          "compression_ratio": 1.0422535211267605
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 15,
+        "hypothesis_word_count": 15,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "right",
+          "back",
+          "to",
+          "the",
+          "topic",
+          "because",
+          "you",
+          "just",
+          "want",
+          "to",
+          "hear",
+          "me",
+          "sing",
+          "your",
+          "praises"
+        ],
+        "hypothesis_words": [
+          "right",
+          "back",
+          "to",
+          "the",
+          "topic",
+          "because",
+          "you",
+          "just",
+          "want",
+          "to",
+          "hear",
+          "me",
+          "sing",
+          "your",
+          "praises"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 15,
+        "hypothesis_word_count": 15,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "right",
+          "back",
+          "to",
+          "the",
+          "topic",
+          "because",
+          "you",
+          "just",
+          "want",
+          "to",
+          "hear",
+          "me",
+          "sing",
+          "your",
+          "praises"
+        ],
+        "hypothesis_words": [
+          "right",
+          "back",
+          "to",
+          "the",
+          "topic",
+          "because",
+          "you",
+          "just",
+          "want",
+          "to",
+          "hear",
+          "me",
+          "sing",
+          "your",
+          "praises"
+        ]
+      },
+      "seconds": 6.289113681006711
+    },
+    {
+      "id": "asmr7_repair_026",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_026.wav",
+      "audio_sha256": "02bf84477aee42375a4d31067c7a707cab8409f220b93a112b9ed072b391b553",
+      "expected_text": "Your temper that I thought? Should I think someone's coming in?",
+      "transcript": "You're a dumber than I originally thought. Shit, I think someone's coming in.",
+      "segments": [
+        {
+          "text": "You're a dumber than I originally thought.",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "avg_logprob": -0.4861982762813568,
+          "no_speech_prob": 0.01721280626952648,
+          "compression_ratio": 0.9871794871794872
+        },
+        {
+          "text": "Shit, I think someone's coming in.",
+          "start_s": 4.0,
+          "end_s": 6.0,
+          "avg_logprob": -0.4861982762813568,
+          "no_speech_prob": 0.01721280626952648,
+          "compression_ratio": 0.9871794871794872
+        }
+      ],
+      "wer": {
+        "wer": 0.545455,
+        "reference_word_count": 11,
+        "hypothesis_word_count": 13,
+        "substitutions": 4,
+        "deletions": 0,
+        "insertions": 2,
+        "reference_words": [
+          "your",
+          "temper",
+          "that",
+          "i",
+          "thought",
+          "should",
+          "i",
+          "think",
+          "someone's",
+          "coming",
+          "in"
+        ],
+        "hypothesis_words": [
+          "you're",
+          "a",
+          "dumber",
+          "than",
+          "i",
+          "originally",
+          "thought",
+          "shit",
+          "i",
+          "think",
+          "someone's",
+          "coming",
+          "in"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.636364,
+        "reference_word_count": 11,
+        "hypothesis_word_count": 14,
+        "substitutions": 4,
+        "deletions": 0,
+        "insertions": 3,
+        "reference_words": [
+          "your",
+          "temper",
+          "that",
+          "i",
+          "thought",
+          "should",
+          "i",
+          "think",
+          "someone's",
+          "coming",
+          "in"
+        ],
+        "hypothesis_words": [
+          "you",
+          "are",
+          "a",
+          "dumber",
+          "than",
+          "i",
+          "originally",
+          "thought",
+          "shit",
+          "i",
+          "think",
+          "someone's",
+          "coming",
+          "in"
+        ]
+      },
+      "seconds": 6.086711367002863
+    },
+    {
+      "id": "asmr7_repair_027",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_027.wav",
+      "audio_sha256": "8f79f8eeab42362c40bdd56e9321b6469fa62e52825707eb142b623d44f86cff",
+      "expected_text": "Oh my shit, let me quick, kiss me. Yes, I'm serious, kiss me.",
+      "transcript": "I'm gonna shut up, quick, kiss me. Yes, I'm serious, kiss me.",
+      "segments": [
+        {
+          "text": "I'm gonna shut up, quick, kiss me.",
+          "start_s": 0.0,
+          "end_s": 3.0,
+          "avg_logprob": -0.6727562141418457,
+          "no_speech_prob": 0.054609037935733795,
+          "compression_ratio": 1.0166666666666666
+        },
+        {
+          "text": "Yes, I'm serious, kiss me.",
+          "start_s": 4.0,
+          "end_s": 6.0,
+          "avg_logprob": -0.6727562141418457,
+          "no_speech_prob": 0.054609037935733795,
+          "compression_ratio": 1.0166666666666666
+        }
+      ],
+      "wer": {
+        "wer": 0.384615,
+        "reference_word_count": 13,
+        "hypothesis_word_count": 12,
+        "substitutions": 4,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_words": [
+          "oh",
+          "my",
+          "shit",
+          "let",
+          "me",
+          "quick",
+          "kiss",
+          "me",
+          "yes",
+          "i'm",
+          "serious",
+          "kiss",
+          "me"
+        ],
+        "hypothesis_words": [
+          "i'm",
+          "gonna",
+          "shut",
+          "up",
+          "quick",
+          "kiss",
+          "me",
+          "yes",
+          "i'm",
+          "serious",
+          "kiss",
+          "me"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.357143,
+        "reference_word_count": 14,
+        "hypothesis_word_count": 14,
+        "substitutions": 5,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "oh",
+          "my",
+          "shit",
+          "let",
+          "me",
+          "quick",
+          "kiss",
+          "me",
+          "yes",
+          "i",
+          "am",
+          "serious",
+          "kiss",
+          "me"
+        ],
+        "hypothesis_words": [
+          "i",
+          "am",
+          "gonna",
+          "shut",
+          "up",
+          "quick",
+          "kiss",
+          "me",
+          "yes",
+          "i",
+          "am",
+          "serious",
+          "kiss",
+          "me"
+        ]
+      },
+      "seconds": 6.264569134997146
+    },
+    {
+      "id": "asmr7_repair_028",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_028.wav",
+      "audio_sha256": "f2efce16a694772c58cd10cd2b5e1eb185984e4f4c3d1429c65cfdee6419fc8b",
+      "expected_text": "We need to like, make them go away and they find us talking.",
+      "transcript": "We need to like make them go away and they find us talking.",
+      "segments": [
+        {
+          "text": "We need to like make them go away and they find us talking.",
+          "start_s": 0.0,
+          "end_s": 5.2,
+          "avg_logprob": -0.41727110918830423,
+          "no_speech_prob": 0.06480374187231064,
+          "compression_ratio": 0.9516129032258065
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 13,
+        "hypothesis_word_count": 13,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "we",
+          "need",
+          "to",
+          "like",
+          "make",
+          "them",
+          "go",
+          "away",
+          "and",
+          "they",
+          "find",
+          "us",
+          "talking"
+        ],
+        "hypothesis_words": [
+          "we",
+          "need",
+          "to",
+          "like",
+          "make",
+          "them",
+          "go",
+          "away",
+          "and",
+          "they",
+          "find",
+          "us",
+          "talking"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 13,
+        "hypothesis_word_count": 13,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "we",
+          "need",
+          "to",
+          "like",
+          "make",
+          "them",
+          "go",
+          "away",
+          "and",
+          "they",
+          "find",
+          "us",
+          "talking"
+        ],
+        "hypothesis_words": [
+          "we",
+          "need",
+          "to",
+          "like",
+          "make",
+          "them",
+          "go",
+          "away",
+          "and",
+          "they",
+          "find",
+          "us",
+          "talking"
+        ]
+      },
+      "seconds": 5.844656183995539
+    },
+    {
+      "id": "asmr7_repair_029",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_029.wav",
+      "audio_sha256": "23529e55eff9e23010a39ababfa676d666d4fe14b3b0510acc2e939947b33c88",
+      "expected_text": "Don't say anything, just one more longer.",
+      "transcript": "Don't say anything. Just one more. A little longer.",
+      "segments": [
+        {
+          "text": "Don't say anything. Just one more.",
+          "start_s": 0.0,
+          "end_s": 4.0,
+          "avg_logprob": -0.4248349931504991,
+          "no_speech_prob": 0.14322571456432343,
+          "compression_ratio": 0.864406779661017
+        },
+        {
+          "text": "A little longer.",
+          "start_s": 4.0,
+          "end_s": 6.0,
+          "avg_logprob": -0.4248349931504991,
+          "no_speech_prob": 0.14322571456432343,
+          "compression_ratio": 0.864406779661017
+        }
+      ],
+      "wer": {
+        "wer": 0.285714,
+        "reference_word_count": 7,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 2,
+        "reference_words": [
+          "don't",
+          "say",
+          "anything",
+          "just",
+          "one",
+          "more",
+          "longer"
+        ],
+        "hypothesis_words": [
+          "don't",
+          "say",
+          "anything",
+          "just",
+          "one",
+          "more",
+          "a",
+          "little",
+          "longer"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.25,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 10,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 2,
+        "reference_words": [
+          "do",
+          "not",
+          "say",
+          "anything",
+          "just",
+          "one",
+          "more",
+          "longer"
+        ],
+        "hypothesis_words": [
+          "do",
+          "not",
+          "say",
+          "anything",
+          "just",
+          "one",
+          "more",
+          "a",
+          "little",
+          "longer"
+        ]
+      },
+      "seconds": 5.694243163001374
+    },
+    {
+      "id": "asmr7_repair_030",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_030.wav",
+      "audio_sha256": "e4f7f5da93681c1f346da3d322855bcda0afea36120c2663bde59c4e5ffe4119",
+      "expected_text": "Yes, I'm sure I did. I guess I am failing to make your day worse now.",
+      "transcript": "Yes, I'm sure I did. Guess I'm failing to make your day worse now.",
+      "segments": [
+        {
+          "text": "Yes, I'm sure I did.",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "avg_logprob": -0.3743501578768094,
+          "no_speech_prob": 0.051225218921899796,
+          "compression_ratio": 0.9295774647887324
+        },
+        {
+          "text": "Guess I'm failing to make your day worse now.",
+          "start_s": 4.0,
+          "end_s": 7.0,
+          "avg_logprob": -0.3743501578768094,
+          "no_speech_prob": 0.051225218921899796,
+          "compression_ratio": 0.9295774647887324
+        }
+      ],
+      "wer": {
+        "wer": 0.1875,
+        "reference_word_count": 16,
+        "hypothesis_word_count": 14,
+        "substitutions": 1,
+        "deletions": 2,
+        "insertions": 0,
+        "reference_words": [
+          "yes",
+          "i'm",
+          "sure",
+          "i",
+          "did",
+          "i",
+          "guess",
+          "i",
+          "am",
+          "failing",
+          "to",
+          "make",
+          "your",
+          "day",
+          "worse",
+          "now"
+        ],
+        "hypothesis_words": [
+          "yes",
+          "i'm",
+          "sure",
+          "i",
+          "did",
+          "guess",
+          "i'm",
+          "failing",
+          "to",
+          "make",
+          "your",
+          "day",
+          "worse",
+          "now"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.058824,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 16,
+        "substitutions": 0,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_words": [
+          "yes",
+          "i",
+          "am",
+          "sure",
+          "i",
+          "did",
+          "i",
+          "guess",
+          "i",
+          "am",
+          "failing",
+          "to",
+          "make",
+          "your",
+          "day",
+          "worse",
+          "now"
+        ],
+        "hypothesis_words": [
+          "yes",
+          "i",
+          "am",
+          "sure",
+          "i",
+          "did",
+          "guess",
+          "i",
+          "am",
+          "failing",
+          "to",
+          "make",
+          "your",
+          "day",
+          "worse",
+          "now"
+        ]
+      },
+      "seconds": 6.0131014740036335
+    },
+    {
+      "id": "asmr7_repair_031",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_031.wav",
+      "audio_sha256": "b81e7b9950c2d4a03eb2bf6cc6a1b4cbbec169ba9c5143f5d53c1f1ba851c192",
+      "expected_text": "Come on. know my kissing isn't that bad.",
+      "transcript": "Come on, I know my kissing isn't that bad.",
+      "segments": [
+        {
+          "text": "Come on, I know my kissing isn't that bad.",
+          "start_s": 0.0,
+          "end_s": 3.44,
+          "avg_logprob": -0.36270795663197836,
+          "no_speech_prob": 0.038834258913993835,
+          "compression_ratio": 0.84
+        }
+      ],
+      "wer": {
+        "wer": 0.125,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "come",
+          "on",
+          "know",
+          "my",
+          "kissing",
+          "isn't",
+          "that",
+          "bad"
+        ],
+        "hypothesis_words": [
+          "come",
+          "on",
+          "i",
+          "know",
+          "my",
+          "kissing",
+          "isn't",
+          "that",
+          "bad"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.111111,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 10,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "come",
+          "on",
+          "know",
+          "my",
+          "kissing",
+          "is",
+          "not",
+          "that",
+          "bad"
+        ],
+        "hypothesis_words": [
+          "come",
+          "on",
+          "i",
+          "know",
+          "my",
+          "kissing",
+          "is",
+          "not",
+          "that",
+          "bad"
+        ]
+      },
+      "seconds": 6.039332035004918
+    },
+    {
+      "id": "asmr7_repair_032",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_032.wav",
+      "audio_sha256": "9fd0bb8f4d02459613decf22b26696c1e653155e7bea0d4f0851c021a821607f",
+      "expected_text": "I have had plenty of practice and the watch majority of those who have experienced.",
+      "transcript": "I have had plenty of practice, and a large majority of those who have experienced...",
+      "segments": [
+        {
+          "text": "I have had plenty of practice, and a large majority of those who have experienced...",
+          "start_s": 0.0,
+          "end_s": 6.0,
+          "avg_logprob": -0.3028064355254173,
+          "no_speech_prob": 0.025608938187360764,
+          "compression_ratio": 1.0632911392405062
+        }
+      ],
+      "wer": {
+        "wer": 0.133333,
+        "reference_word_count": 15,
+        "hypothesis_word_count": 15,
+        "substitutions": 2,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "have",
+          "had",
+          "plenty",
+          "of",
+          "practice",
+          "and",
+          "the",
+          "watch",
+          "majority",
+          "of",
+          "those",
+          "who",
+          "have",
+          "experienced"
+        ],
+        "hypothesis_words": [
+          "i",
+          "have",
+          "had",
+          "plenty",
+          "of",
+          "practice",
+          "and",
+          "a",
+          "large",
+          "majority",
+          "of",
+          "those",
+          "who",
+          "have",
+          "experienced"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.133333,
+        "reference_word_count": 15,
+        "hypothesis_word_count": 15,
+        "substitutions": 2,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "have",
+          "had",
+          "plenty",
+          "of",
+          "practice",
+          "and",
+          "the",
+          "watch",
+          "majority",
+          "of",
+          "those",
+          "who",
+          "have",
+          "experienced"
+        ],
+        "hypothesis_words": [
+          "i",
+          "have",
+          "had",
+          "plenty",
+          "of",
+          "practice",
+          "and",
+          "a",
+          "large",
+          "majority",
+          "of",
+          "those",
+          "who",
+          "have",
+          "experienced"
+        ]
+      },
+      "seconds": 6.1263357939969865
+    },
+    {
+      "id": "asmr7_repair_033",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_033.wav",
+      "audio_sha256": "460a15655bae09b0afc39fa37b18b8e7934cbd397967d786677f9f4044dd6a27",
+      "expected_text": "Oh, um, not what you meant. Gotcha.",
+      "transcript": "Oh, um, not what you meant. Gotcha.",
+      "segments": [
+        {
+          "text": "Oh, um, not what you meant.",
+          "start_s": 0.0,
+          "end_s": 2.66,
+          "avg_logprob": -0.7185576483607292,
+          "no_speech_prob": 0.07214951515197754,
+          "compression_ratio": 0.813953488372093
+        },
+        {
+          "text": "Gotcha.",
+          "start_s": 3.38,
+          "end_s": 3.88,
+          "avg_logprob": -0.7185576483607292,
+          "no_speech_prob": 0.07214951515197754,
+          "compression_ratio": 0.813953488372093
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 7,
+        "hypothesis_word_count": 7,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "oh",
+          "um",
+          "not",
+          "what",
+          "you",
+          "meant",
+          "gotcha"
+        ],
+        "hypothesis_words": [
+          "oh",
+          "um",
+          "not",
+          "what",
+          "you",
+          "meant",
+          "gotcha"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 7,
+        "hypothesis_word_count": 7,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "oh",
+          "um",
+          "not",
+          "what",
+          "you",
+          "meant",
+          "gotcha"
+        ],
+        "hypothesis_words": [
+          "oh",
+          "um",
+          "not",
+          "what",
+          "you",
+          "meant",
+          "gotcha"
+        ]
+      },
+      "seconds": 6.332866260003357
+    },
+    {
+      "id": "asmr7_repair_034",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_034.wav",
+      "audio_sha256": "d29d39eaaf416364b0283ba8ca41adc99c08bbdf2589d6350ea1089b5631b20c",
+      "expected_text": "I read this closet experience, a solid 7 out of 10.",
+      "transcript": "I rate this closet experience a solid 7 out of 10.",
+      "segments": [
+        {
+          "text": "I rate this closet experience a solid 7 out of 10.",
+          "start_s": 0.0,
+          "end_s": 6.0,
+          "avg_logprob": -0.35633094708124796,
+          "no_speech_prob": 0.024319171905517578,
+          "compression_ratio": 0.8620689655172413
+        }
+      ],
+      "wer": {
+        "wer": 0.090909,
+        "reference_word_count": 11,
+        "hypothesis_word_count": 11,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "read",
+          "this",
+          "closet",
+          "experience",
+          "a",
+          "solid",
+          "7",
+          "out",
+          "of",
+          "10"
+        ],
+        "hypothesis_words": [
+          "i",
+          "rate",
+          "this",
+          "closet",
+          "experience",
+          "a",
+          "solid",
+          "7",
+          "out",
+          "of",
+          "10"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.090909,
+        "reference_word_count": 11,
+        "hypothesis_word_count": 11,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "read",
+          "this",
+          "closet",
+          "experience",
+          "a",
+          "solid",
+          "7",
+          "out",
+          "of",
+          "10"
+        ],
+        "hypothesis_words": [
+          "i",
+          "rate",
+          "this",
+          "closet",
+          "experience",
+          "a",
+          "solid",
+          "7",
+          "out",
+          "of",
+          "10"
+        ]
+      },
+      "seconds": 6.025070790004975
+    }
+  ],
+  "peak_rss_mib": 858.4453125
+}

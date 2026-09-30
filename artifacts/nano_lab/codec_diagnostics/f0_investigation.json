@@ -1,0 +1,21 @@
+{
+  "status": "no_verified_loader_bug",
+  "local_evidence": {
+    "soft_generated_f0_max": 0.953604,
+    "asmr_source_f0_max": 0.950735,
+    "harvey_generated_f0_max": 0.762725,
+    "all_three_voiced_fraction": 0.0,
+    "strict_vocoder_tensors_loaded": 328,
+    "soft_native_ort_max_abs_error": 1.04904e-05
+  },
+  "interpretation": "The harmonic source branch is masked on these inputs. This does not establish missing periodicity in the final waveform because the convolutional mel-to-wave path can synthesize periodic speech. Near-zero pitch predictions also occur for the Harvey generated mel. No arbitrary pitch multiplier is justified.",
+  "source_noise_ablation": "Zeroing explicit source noise changed the saved ASMR waveform by relative L2 0.01137. Auditory benefit is not established.",
+  "source_links": [
+    "https://github.com/resemble-ai/chatterbox/blob/master/src/chatterbox/models/s3gen/s3gen.py",
+    "https://github.com/QwenAudio/CosyVoice/blob/main/cosyvoice/dataset/processor.py"
+  ],
+  "tone_check": {
+    "method": "Welch8192samples, local41-binmedian, peaks>6dB above neighborhood; generatedASMR/Harvey andtheirreferences",
+    "result": "No common4.9kHznarrowpeak identified. This limitedcheckdoesnotestablishabsenceofartifacts. No notchfilteradded."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "cache": "artifacts/nano_lab/adaptation_harvey_aligned_cache.json",
+  "inference_conditionals": "artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+  "all_exact": true,
+  "rows": [
+    {
+      "id": "harvey_repair_001",
+      "speaker_max_abs_difference": 0.0,
+      "speaker_cosine": 1.0000001192092896,
+      "speaker_exact": true,
+      "prompt_exact": true,
+      "prompt_different_tokens": 0,
+      "cached_prompt_length": 178,
+      "inference_prompt_length": 178
+    },
+    {
+      "id": "harvey_repair_004",
+      "speaker_max_abs_difference": 0.0,
+      "speaker_cosine": 1.0000001192092896,
+      "speaker_exact": true,
+      "prompt_exact": true,
+      "prompt_different_tokens": 0,
+      "cached_prompt_length": 178,
+      "inference_prompt_length": 178
+    },
+    {
+      "id": "harvey_repair_005",
+      "speaker_max_abs_difference": 0.0,
+      "speaker_cosine": 1.0000001192092896,
+      "speaker_exact": true,
+      "prompt_exact": true,
+      "prompt_different_tokens": 0,
+      "cached_prompt_length": 178,
+      "inference_prompt_length": 178
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "audio": "artifacts/references/mommy_trimmed_mono_24k.wav",
+  "audio_seconds": 13.5,
+  "faster_whisper_tiny_en_int8": {
+    "model_storage_mb": 75,
+    "load_seconds": 0.570623,
+    "rss_after_load_mb": 307.3,
+    "transcription_seconds_with_vad": 2.002885,
+    "real_time_factor_with_vad": 0.1001,
+    "text": "Mm, cute, cute, cute, cute, cute, cute, cute, handsome. I love you so much, I love you. I mean, seriously, I can't get enough of you, I could just..."
+  },
+  "transformers_whisper_small_fp32": {
+    "model_storage_mb": 923,
+    "load_seconds": 0.871,
+    "rss_after_load_mb": 1772.7,
+    "transcription_seconds": 13.346,
+    "real_time_factor": 0.9886,
+    "text": "Mmm, cute, cute, cute, cute, you're so cute, handsome. I love you so much, I love you. I mean seriously, I can't get enough of you. I could just..."
+  },
+  "notes": [
+    "The tiny path uses CTranslate2 INT8 and one CPU thread.",
+    "The small path uses the existing cached Transformers model in FP32.",
+    "The tiny path is approximately 6.7x faster and uses approximately 5.8x less RSS in this local measurement."
+  ]
+}

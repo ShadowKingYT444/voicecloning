@@ -1,0 +1,188 @@
+{
+  "cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_harvey_aligned_cache.json",
+  "cache_sha256": "10cf52f83a8eb014dad1239983b3dd43a4e8b99c1fd4234b26c124a080cd32b1",
+  "cfm_steps": 2,
+  "command": [
+    "scripts/nano_lab/mel_calibration.py",
+    "prepare",
+    "--cache",
+    "artifacts/nano_lab/adaptation_harvey_aligned_cache.json",
+    "--conditionals-path",
+    "artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+    "--output-dir",
+    "artifacts/nano_lab/mel_calibration_harvey",
+    "--device",
+    "cuda"
+  ],
+  "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+  "conditioning_reference_provenance": {
+    "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav": {
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+      "preprocessing": {
+        "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+        "exaggeration": 0.5,
+        "norm_loudness": true,
+        "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+        "prompt_tokens_unmodified": true,
+        "speaker_embedding_source": "model.conds.t3.speaker_emb",
+        "speaker_embedding_unmodified": true
+      },
+      "sha256": "56ecd77459289dd7413e1c6309d7226ac2363d5e4850a78e63efc3d4b129308d"
+    }
+  },
+  "conditioning_sha256": "3b7db489a52a1a6cf14a9a43148d11b4689c32b090124aa80b02f162ef5480f2",
+  "created_unix": 1790709242.6666577,
+  "diagnostic_only": true,
+  "elapsed_seconds": 3.6048818820054294,
+  "flow_path": "model.s3gen.flow_inference only; HiFT vocoder not called",
+  "format": "nano_mel_calibration_prepare_v1",
+  "mel_bands": 80,
+  "mel_layout": "bands,time; raw log-mel values",
+  "model_checkpoint_sha256": "a34dc7d94e6906c2ab52053a4bfe91d4200fdc12a12a2838e9b51c4fce8d3809",
+  "model_dir": "/home/terryd/gooning/voicecloning/models/chatterbox-nano",
+  "rows": [
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/clips/harvey_repair_001.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "56ecd77459289dd7413e1c6309d7226ac2363d5e4850a78e63efc3d4b129308d"
+      },
+      "conditioning_reference_sha256": "56ecd77459289dd7413e1c6309d7226ac2363d5e4850a78e63efc3d4b129308d",
+      "conditioning_sha256": "3b7db489a52a1a6cf14a9a43148d11b4689c32b090124aa80b02f162ef5480f2",
+      "id": "harvey_repair_001",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_harvey/harvey_repair_001.mel.npz",
+      "output_token_count": 108,
+      "reconstructed_mel_shape": [
+        80,
+        215
+      ],
+      "seed": 31,
+      "source_mel_shape": [
+        80,
+        209
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "6be65d89931ea4a0281c3883b936ebd8d6edef68d8f7f6347cfbd37ee270bc17",
+      "source_text": "I don't take meetings. I set them. And my respect isn't demanded.",
+      "speaker_id": "harvey",
+      "speech_token_count": 105,
+      "split": "train",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/clips/harvey_repair_005.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "56ecd77459289dd7413e1c6309d7226ac2363d5e4850a78e63efc3d4b129308d"
+      },
+      "conditioning_reference_sha256": "56ecd77459289dd7413e1c6309d7226ac2363d5e4850a78e63efc3d4b129308d",
+      "conditioning_sha256": "3b7db489a52a1a6cf14a9a43148d11b4689c32b090124aa80b02f162ef5480f2",
+      "id": "harvey_repair_005",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_harvey/harvey_repair_005.mel.npz",
+      "output_token_count": 113,
+      "reconstructed_mel_shape": [
+        80,
+        225
+      ],
+      "seed": 1040,
+      "source_mel_shape": [
+        80,
+        219
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "cfe4fd44161621f9ed912820b2c494ad582c31bcf3d9d5b62a7599d62368a94c",
+      "source_text": "People pave the way for me. Life is this.",
+      "speaker_id": "harvey",
+      "speech_token_count": 110,
+      "split": "train",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/clips/harvey_repair_004.wav",
+      "cfm_steps": 2,
+      "conditioning_reference_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+      "conditioning_reference_provenance": {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+        "preprocessing": {
+          "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+          "exaggeration": 0.5,
+          "norm_loudness": true,
+          "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+          "prompt_tokens_unmodified": true,
+          "speaker_embedding_source": "model.conds.t3.speaker_emb",
+          "speaker_embedding_unmodified": true
+        },
+        "sha256": "56ecd77459289dd7413e1c6309d7226ac2363d5e4850a78e63efc3d4b129308d"
+      },
+      "conditioning_reference_sha256": "56ecd77459289dd7413e1c6309d7226ac2363d5e4850a78e63efc3d4b129308d",
+      "conditioning_sha256": "3b7db489a52a1a6cf14a9a43148d11b4689c32b090124aa80b02f162ef5480f2",
+      "id": "harvey_repair_004",
+      "mel_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_harvey/harvey_repair_004.mel.npz",
+      "output_token_count": 87,
+      "reconstructed_mel_shape": [
+        80,
+        173
+      ],
+      "seed": 2049,
+      "source_mel_shape": [
+        80,
+        168
+      ],
+      "source_preprocessing": {
+        "loader": "librosa.load(sr=24000, mono=True)",
+        "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+        "normalizer": "ChatterboxTurboTTS.norm_loudness(target_lufs=-27)"
+      },
+      "source_sha256": "3bf9ea788d49d416fd0a81263d3eb68906c505163ea828e4eb0fda2abc69cbcc",
+      "source_text": "First impressions last, I don't pave the way for people.",
+      "speaker_id": "harvey",
+      "speech_token_count": 84,
+      "split": "valid",
+      "trailing_silence": {
+        "count": 3,
+        "value": 4299
+      }
+    }
+  ],
+  "seed": 31,
+  "source_loudness_normalization": "upstream norm_loudness target_lufs=-27",
+  "source_sample_rate": 24000,
+  "speaker_id": "harvey",
+  "synthetic_audio": false
+}

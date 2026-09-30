@@ -1,0 +1,55 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+{
+  "output_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit_harvey_v4",
+  "parity": {
+    "atol": 0.0001,
+    "failures": [],
+    "max_abs": 0.0,
+    "rmse_mean": 0.0,
+    "rows": [
+      {
+        "id": "harvey_repair_001",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          215
+        ]
+      },
+      {
+        "id": "harvey_repair_005",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          225
+        ]
+      },
+      {
+        "id": "harvey_repair_004",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          173
+        ]
+      }
+    ],
+    "status": "passed"
+  },
+  "status": "fit_complete"
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 22.212s
+             CPU time consumed: 1min 21.140s
+                   Memory peak: 1.3G (swap: 0B)

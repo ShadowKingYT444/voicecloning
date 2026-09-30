@@ -1,0 +1,38 @@
+{
+  "conditioning_references": {
+    "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav": {
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+      "preprocessing": {
+        "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+        "exaggeration": 0.5,
+        "norm_loudness": true,
+        "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+        "prompt_tokens_unmodified": true,
+        "speaker_embedding_source": "model.conds.t3.speaker_emb",
+        "speaker_embedding_unmodified": true
+      },
+      "sha256": "56ecd77459289dd7413e1c6309d7226ac2363d5e4850a78e63efc3d4b129308d"
+    }
+  },
+  "counts": {
+    "all": 3,
+    "reference": 0,
+    "test": 0,
+    "train": 2,
+    "valid": 1
+  },
+  "created_at_unix": 1790701027.0997205,
+  "device_at_prepare": "cuda",
+  "elapsed_seconds": 4.214124047997757,
+  "format": "nano_t3_adaptation_cache_v1",
+  "max_target_tokens": 400,
+  "model_dir": "/home/terryd/gooning/voicecloning/models/chatterbox-nano",
+  "prompt_target_leakage_policy": {
+    "self_reference_allowed_for_diagnostic": false,
+    "target_and_reference_must_be_distinct": true,
+    "target_audio_is_never_used_as_reference_by_default": true
+  },
+  "source_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_rebased/adaptation_repaired.json",
+  "target_sample_rate": 16000,
+  "target_token_rate_hz": 25
+}

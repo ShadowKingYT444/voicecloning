@@ -1,0 +1,12 @@
+{"id": "asmr_early_t55", "dnsmos_signal": 3.5346894431022577, "dnsmos_background": 4.044945984433649, "dnsmos_overall": 3.282654883191893, "dnsmos_windows": 5, "dnsmos_repeated_short_clip": true}
+{"id": "asmr_early_t80", "dnsmos_signal": 3.4410838006725264, "dnsmos_background": 3.935020692063053, "dnsmos_overall": 3.1228557637274195, "dnsmos_windows": 5, "dnsmos_repeated_short_clip": true}
+{"id": "asmr_early_t100", "dnsmos_signal": 3.6684393152184485, "dnsmos_background": 4.1599813983984975, "dnsmos_overall": 3.425437623026641, "dnsmos_windows": 3, "dnsmos_repeated_short_clip": true}
+{"id": "asmr_middle_t55", "dnsmos_signal": 3.4999153025136662, "dnsmos_background": 3.6442334018321576, "dnsmos_overall": 3.0279963070405573, "dnsmos_windows": 4, "dnsmos_repeated_short_clip": true}
+{"id": "asmr_middle_t80", "dnsmos_signal": 3.4551807302342095, "dnsmos_background": 3.0017390666491504, "dnsmos_overall": 2.625339784795678, "dnsmos_windows": 4, "dnsmos_repeated_short_clip": true}
+{"id": "asmr_middle_t100", "dnsmos_signal": 3.5187941840572052, "dnsmos_background": 3.455231271117208, "dnsmos_overall": 2.918270059128446, "dnsmos_windows": 3, "dnsmos_repeated_short_clip": true}
+{"id": "asmr_late_t55", "dnsmos_signal": 2.483510730769852, "dnsmos_background": 3.0781076629128865, "dnsmos_overall": 2.0831396357177416, "dnsmos_windows": 8, "dnsmos_repeated_short_clip": true}
+{"id": "asmr_late_t80", "dnsmos_signal": 2.792965057382394, "dnsmos_background": 2.847646998716639, "dnsmos_overall": 2.2781848247222967, "dnsmos_windows": 3, "dnsmos_repeated_short_clip": true}
+{"id": "asmr_late_t100", "dnsmos_signal": 2.136826433725494, "dnsmos_background": 2.254253797397682, "dnsmos_overall": 1.727874258208438, "dnsmos_windows": 4, "dnsmos_repeated_short_clip": true}
+{"id": "asmr_long_t55", "dnsmos_signal": 3.6639678960666173, "dnsmos_background": 4.179643562440286, "dnsmos_overall": 3.4295827241932124, "dnsmos_windows": 6, "dnsmos_repeated_short_clip": true}
+{"id": "asmr_long_t80", "dnsmos_signal": 3.4432540650794925, "dnsmos_background": 3.926577530218097, "dnsmos_overall": 3.1028062419497555, "dnsmos_windows": 5, "dnsmos_repeated_short_clip": true}
+{"id": "asmr_long_t100", "dnsmos_signal": 3.4423398629814375, "dnsmos_background": 3.500368920720258, "dnsmos_overall": 2.9408314310442236, "dnsmos_windows": 4, "dnsmos_repeated_short_clip": true}

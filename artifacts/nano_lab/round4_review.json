@@ -1,0 +1,42 @@
+{
+  "human_listening": false,
+  "planned_cases": 18,
+  "successful_cases": 17,
+  "failures": [
+    {
+      "id": "harvey_expressive_63",
+      "error": "RuntimeError('Generation hit length limit')"
+    }
+  ],
+  "groups": {
+    "conv_base": {
+      "n": 6,
+      "speaker_cosine_mean": 0.8780943333333333,
+      "dnsmos_overall_mean": 2.9087451764402346,
+      "dnsmos_background_mean": 3.6890180212059867,
+      "whisper_small_exact": 6
+    },
+    "conv_fitted": {
+      "n": 6,
+      "speaker_cosine_mean": 0.8749511666666667,
+      "dnsmos_overall_mean": 3.2210868564271564,
+      "dnsmos_background_mean": 3.9434726860172056,
+      "whisper_small_exact": 5
+    },
+    "asmr_soft": {
+      "n": 3,
+      "speaker_cosine_mean": 0.8364896666666667,
+      "dnsmos_overall_mean": 3.1770020750763766,
+      "dnsmos_background_mean": 3.9476965381538323,
+      "whisper_small_exact": 3
+    },
+    "harvey": {
+      "n": 2,
+      "speaker_cosine_mean": 0.7971330000000001,
+      "dnsmos_overall_mean": 3.531742288506463,
+      "dnsmos_background_mean": 4.205450340814214,
+      "whisper_small_exact": 2
+    }
+  },
+  "decision": "Do not promote full-strength fitted vector yet: an expressive clip changes very to fairy in Whisper-small, with Tiny also reporting a discrepancy. Test reduced strength. Harvey expressive failure requires sampling/prompt investigation."
+}

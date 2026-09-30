@@ -1,0 +1,44 @@
+[
+  {
+    "id": "asmr_soft",
+    "voice": "asmr7",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/delivery/asmr_soft.wav",
+    "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+    "audio_role": "delivered mastered WAV"
+  },
+  {
+    "id": "asmr_conversational",
+    "voice": "asmr7",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/delivery/asmr_conversational.wav",
+    "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+    "audio_role": "delivered mastered WAV"
+  },
+  {
+    "id": "asmr_intimate",
+    "voice": "asmr7",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/delivery/asmr_intimate.wav",
+    "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+    "audio_role": "delivered mastered WAV"
+  },
+  {
+    "id": "asmr_conversational_fitted",
+    "voice": "asmr7",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/delivery/asmr_conversational_fitted.wav",
+    "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+    "audio_role": "delivered mastered WAV"
+  },
+  {
+    "id": "harvey",
+    "voice": "harvey",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/delivery/harvey.wav",
+    "text": "A useful decision starts with the facts. Read the full report before you decide what to do next.",
+    "audio_role": "delivered mastered WAV"
+  },
+  {
+    "id": "asmr_conversational_adapted",
+    "voice": "asmr7",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/delivery/asmr_conversational_adapted.wav",
+    "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+    "audio_role": "delivered mastered WAV"
+  }
+]

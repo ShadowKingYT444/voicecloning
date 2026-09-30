@@ -1,0 +1,26 @@
+[
+  {
+    "id": "source",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_source.wav",
+    "text": "Okay, gather around, everybody. Great. So, as the one throwing the party.",
+    "source_group": "reconstruction_source01"
+  },
+  {
+    "id": "source_mel_vocoder",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_vocoder.wav",
+    "text": "Okay, gather around, everybody. Great. So, as the one throwing the party.",
+    "source_group": "reconstruction_source01"
+  },
+  {
+    "id": "source_tokens_native",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/tokenizer_gain_probe/source01_raw.wav",
+    "text": "Okay, gather around, everybody. Great. So, as the one throwing the party.",
+    "source_group": "reconstruction_source01"
+  },
+  {
+    "id": "source_tokens_onnx_old",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tokens.wav",
+    "text": "Okay, gather around, everybody. Great. So, as the one throwing the party.",
+    "source_group": "reconstruction_source01"
+  }
+]

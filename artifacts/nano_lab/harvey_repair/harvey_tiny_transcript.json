@@ -1,0 +1,975 @@
+{
+  "source": {
+    "absolute_path": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+    "actual_sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+    "bit_rate": 109178,
+    "bytes": 557708,
+    "channels": 2,
+    "codec": "mp3",
+    "duration_s": 40.82068,
+    "family": "harvey",
+    "path": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+    "sample_rate": 44100,
+    "sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+    "source_hash_matches_manifest": true,
+    "source_id": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05"
+  },
+  "transcription": {
+    "compute_type": "int8",
+    "condition_on_previous_text": false,
+    "cpu_threads": 2,
+    "device": "cpu",
+    "duration_s": 40.8206875,
+    "elapsed_s": 4.550473,
+    "language": "en",
+    "language_probability": 1.0,
+    "model": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+    "schema_version": 1,
+    "segments": [
+      {
+        "avg_logprob": -0.205109,
+        "compression_ratio": 1.698997,
+        "end_s": 2.38,
+        "no_speech_prob": 0.042445,
+        "start_s": 0.0,
+        "text": "I don't take meetings. I set them.",
+        "words": [
+          {
+            "end_s": 0.28,
+            "probability": 0.632515,
+            "start_s": 0.0,
+            "word": "I"
+          },
+          {
+            "end_s": 0.48,
+            "probability": 0.996993,
+            "start_s": 0.28,
+            "word": "don't"
+          },
+          {
+            "end_s": 0.78,
+            "probability": 0.997762,
+            "start_s": 0.48,
+            "word": "take"
+          },
+          {
+            "end_s": 1.14,
+            "probability": 0.929144,
+            "start_s": 0.78,
+            "word": "meetings."
+          },
+          {
+            "end_s": 1.64,
+            "probability": 0.993525,
+            "start_s": 1.64,
+            "word": "I"
+          },
+          {
+            "end_s": 1.82,
+            "probability": 0.978835,
+            "start_s": 1.64,
+            "word": "set"
+          },
+          {
+            "end_s": 2.38,
+            "probability": 0.999036,
+            "start_s": 1.82,
+            "word": "them."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.205109,
+        "compression_ratio": 1.698997,
+        "end_s": 4.82,
+        "no_speech_prob": 0.042445,
+        "start_s": 2.58,
+        "text": "And my respect isn't demanded. It's earned.",
+        "words": [
+          {
+            "end_s": 2.78,
+            "probability": 0.977662,
+            "start_s": 2.58,
+            "word": "And"
+          },
+          {
+            "end_s": 3.12,
+            "probability": 0.996138,
+            "start_s": 2.78,
+            "word": "my"
+          },
+          {
+            "end_s": 3.4,
+            "probability": 0.991,
+            "start_s": 3.12,
+            "word": "respect"
+          },
+          {
+            "end_s": 3.7,
+            "probability": 0.982201,
+            "start_s": 3.4,
+            "word": "isn't"
+          },
+          {
+            "end_s": 4.04,
+            "probability": 0.586604,
+            "start_s": 3.7,
+            "word": "demanded."
+          },
+          {
+            "end_s": 4.54,
+            "probability": 0.978702,
+            "start_s": 4.52,
+            "word": "It's"
+          },
+          {
+            "end_s": 4.82,
+            "probability": 0.631084,
+            "start_s": 4.54,
+            "word": "earned."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.205109,
+        "compression_ratio": 1.698997,
+        "end_s": 6.32,
+        "no_speech_prob": 0.042445,
+        "start_s": 5.06,
+        "text": "Excuses don't win championships.",
+        "words": [
+          {
+            "end_s": 5.42,
+            "probability": 0.898463,
+            "start_s": 5.06,
+            "word": "Excuses"
+          },
+          {
+            "end_s": 5.68,
+            "probability": 0.997461,
+            "start_s": 5.42,
+            "word": "don't"
+          },
+          {
+            "end_s": 5.88,
+            "probability": 0.997977,
+            "start_s": 5.68,
+            "word": "win"
+          },
+          {
+            "end_s": 6.32,
+            "probability": 0.987743,
+            "start_s": 5.88,
+            "word": "championships."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.205109,
+        "compression_ratio": 1.698997,
+        "end_s": 7.86,
+        "no_speech_prob": 0.042445,
+        "start_s": 6.5,
+        "text": "Oh, you added Michael Jordan to tell you that?",
+        "words": [
+          {
+            "end_s": 6.66,
+            "probability": 0.777011,
+            "start_s": 6.5,
+            "word": "Oh,"
+          },
+          {
+            "end_s": 6.7,
+            "probability": 0.600842,
+            "start_s": 6.66,
+            "word": "you"
+          },
+          {
+            "end_s": 6.82,
+            "probability": 0.829257,
+            "start_s": 6.7,
+            "word": "added"
+          },
+          {
+            "end_s": 7.04,
+            "probability": 0.941866,
+            "start_s": 6.82,
+            "word": "Michael"
+          },
+          {
+            "end_s": 7.3,
+            "probability": 0.982468,
+            "start_s": 7.04,
+            "word": "Jordan"
+          },
+          {
+            "end_s": 7.4,
+            "probability": 0.361529,
+            "start_s": 7.3,
+            "word": "to"
+          },
+          {
+            "end_s": 7.48,
+            "probability": 0.993659,
+            "start_s": 7.4,
+            "word": "tell"
+          },
+          {
+            "end_s": 7.62,
+            "probability": 0.993253,
+            "start_s": 7.48,
+            "word": "you"
+          },
+          {
+            "end_s": 7.86,
+            "probability": 0.998571,
+            "start_s": 7.62,
+            "word": "that?"
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.205109,
+        "compression_ratio": 1.698997,
+        "end_s": 9.0,
+        "no_speech_prob": 0.042445,
+        "start_s": 7.92,
+        "text": "No, I told him.",
+        "words": [
+          {
+            "end_s": 8.14,
+            "probability": 0.979469,
+            "start_s": 7.92,
+            "word": "No,"
+          },
+          {
+            "end_s": 8.46,
+            "probability": 0.998596,
+            "start_s": 8.14,
+            "word": "I"
+          },
+          {
+            "end_s": 8.64,
+            "probability": 0.978398,
+            "start_s": 8.46,
+            "word": "told"
+          },
+          {
+            "end_s": 9.0,
+            "probability": 0.993021,
+            "start_s": 8.64,
+            "word": "him."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.205109,
+        "compression_ratio": 1.698997,
+        "end_s": 13.76,
+        "no_speech_prob": 0.042445,
+        "start_s": 9.72,
+        "text": "Never destroy anyone in public when you can accomplish the same result in private.",
+        "words": [
+          {
+            "end_s": 9.72,
+            "probability": 0.884995,
+            "start_s": 9.72,
+            "word": "Never"
+          },
+          {
+            "end_s": 10.3,
+            "probability": 0.994534,
+            "start_s": 9.72,
+            "word": "destroy"
+          },
+          {
+            "end_s": 10.68,
+            "probability": 0.995211,
+            "start_s": 10.3,
+            "word": "anyone"
+          },
+          {
+            "end_s": 11.0,
+            "probability": 0.960262,
+            "start_s": 10.68,
+            "word": "in"
+          },
+          {
+            "end_s": 11.4,
+            "probability": 0.996459,
+            "start_s": 11.0,
+            "word": "public"
+          },
+          {
+            "end_s": 11.7,
+            "probability": 0.676315,
+            "start_s": 11.4,
+            "word": "when"
+          },
+          {
+            "end_s": 11.82,
+            "probability": 0.993103,
+            "start_s": 11.7,
+            "word": "you"
+          },
+          {
+            "end_s": 12.0,
+            "probability": 0.996777,
+            "start_s": 11.82,
+            "word": "can"
+          },
+          {
+            "end_s": 12.34,
+            "probability": 0.998825,
+            "start_s": 12.0,
+            "word": "accomplish"
+          },
+          {
+            "end_s": 12.62,
+            "probability": 0.998516,
+            "start_s": 12.34,
+            "word": "the"
+          },
+          {
+            "end_s": 12.78,
+            "probability": 0.999823,
+            "start_s": 12.62,
+            "word": "same"
+          },
+          {
+            "end_s": 13.16,
+            "probability": 0.861258,
+            "start_s": 12.78,
+            "word": "result"
+          },
+          {
+            "end_s": 13.56,
+            "probability": 0.982227,
+            "start_s": 13.16,
+            "word": "in"
+          },
+          {
+            "end_s": 13.76,
+            "probability": 0.522848,
+            "start_s": 13.56,
+            "word": "private."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.205109,
+        "compression_ratio": 1.698997,
+        "end_s": 15.84,
+        "no_speech_prob": 0.042445,
+        "start_s": 13.84,
+        "text": "I don't play the odds. I play the man.",
+        "words": [
+          {
+            "end_s": 13.96,
+            "probability": 0.980973,
+            "start_s": 13.84,
+            "word": "I"
+          },
+          {
+            "end_s": 14.18,
+            "probability": 0.999568,
+            "start_s": 13.96,
+            "word": "don't"
+          },
+          {
+            "end_s": 14.38,
+            "probability": 0.99803,
+            "start_s": 14.18,
+            "word": "play"
+          },
+          {
+            "end_s": 14.58,
+            "probability": 0.996535,
+            "start_s": 14.38,
+            "word": "the"
+          },
+          {
+            "end_s": 14.82,
+            "probability": 0.957802,
+            "start_s": 14.58,
+            "word": "odds."
+          },
+          {
+            "end_s": 15.24,
+            "probability": 0.998083,
+            "start_s": 15.22,
+            "word": "I"
+          },
+          {
+            "end_s": 15.36,
+            "probability": 0.977968,
+            "start_s": 15.24,
+            "word": "play"
+          },
+          {
+            "end_s": 15.58,
+            "probability": 0.98981,
+            "start_s": 15.36,
+            "word": "the"
+          },
+          {
+            "end_s": 15.84,
+            "probability": 0.916573,
+            "start_s": 15.58,
+            "word": "man."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.205109,
+        "compression_ratio": 1.698997,
+        "end_s": 18.94,
+        "no_speech_prob": 0.042445,
+        "start_s": 16.26,
+        "text": "Winners don't make excuses when the other side plays the game.",
+        "words": [
+          {
+            "end_s": 16.46,
+            "probability": 0.767672,
+            "start_s": 16.26,
+            "word": "Winners"
+          },
+          {
+            "end_s": 16.7,
+            "probability": 0.999158,
+            "start_s": 16.46,
+            "word": "don't"
+          },
+          {
+            "end_s": 16.94,
+            "probability": 0.997907,
+            "start_s": 16.7,
+            "word": "make"
+          },
+          {
+            "end_s": 17.36,
+            "probability": 0.99849,
+            "start_s": 16.94,
+            "word": "excuses"
+          },
+          {
+            "end_s": 17.62,
+            "probability": 0.994987,
+            "start_s": 17.36,
+            "word": "when"
+          },
+          {
+            "end_s": 17.88,
+            "probability": 0.997055,
+            "start_s": 17.62,
+            "word": "the"
+          },
+          {
+            "end_s": 17.94,
+            "probability": 0.998217,
+            "start_s": 17.88,
+            "word": "other"
+          },
+          {
+            "end_s": 18.18,
+            "probability": 0.998561,
+            "start_s": 17.94,
+            "word": "side"
+          },
+          {
+            "end_s": 18.4,
+            "probability": 0.996327,
+            "start_s": 18.18,
+            "word": "plays"
+          },
+          {
+            "end_s": 18.62,
+            "probability": 0.997404,
+            "start_s": 18.4,
+            "word": "the"
+          },
+          {
+            "end_s": 18.94,
+            "probability": 0.995181,
+            "start_s": 18.62,
+            "word": "game."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.205109,
+        "compression_ratio": 1.698997,
+        "end_s": 20.8,
+        "no_speech_prob": 0.042445,
+        "start_s": 19.0,
+        "text": "They don't have dreams. I have goals.",
+        "words": [
+          {
+            "end_s": 19.12,
+            "probability": 0.453789,
+            "start_s": 19.0,
+            "word": "They"
+          },
+          {
+            "end_s": 19.18,
+            "probability": 0.829865,
+            "start_s": 19.12,
+            "word": "don't"
+          },
+          {
+            "end_s": 19.46,
+            "probability": 0.992921,
+            "start_s": 19.18,
+            "word": "have"
+          },
+          {
+            "end_s": 19.82,
+            "probability": 0.993722,
+            "start_s": 19.46,
+            "word": "dreams."
+          },
+          {
+            "end_s": 20.06,
+            "probability": 0.837654,
+            "start_s": 19.9,
+            "word": "I"
+          },
+          {
+            "end_s": 20.22,
+            "probability": 0.972726,
+            "start_s": 20.06,
+            "word": "have"
+          },
+          {
+            "end_s": 20.8,
+            "probability": 0.996941,
+            "start_s": 20.22,
+            "word": "goals."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.205109,
+        "compression_ratio": 1.698997,
+        "end_s": 22.3,
+        "no_speech_prob": 0.042445,
+        "start_s": 21.36,
+        "text": "Get it through your head.",
+        "words": [
+          {
+            "end_s": 21.46,
+            "probability": 0.953894,
+            "start_s": 21.36,
+            "word": "Get"
+          },
+          {
+            "end_s": 21.64,
+            "probability": 0.909381,
+            "start_s": 21.46,
+            "word": "it"
+          },
+          {
+            "end_s": 21.76,
+            "probability": 0.998584,
+            "start_s": 21.64,
+            "word": "through"
+          },
+          {
+            "end_s": 21.94,
+            "probability": 0.999508,
+            "start_s": 21.76,
+            "word": "your"
+          },
+          {
+            "end_s": 22.3,
+            "probability": 0.998883,
+            "start_s": 21.94,
+            "word": "head."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.205109,
+        "compression_ratio": 1.698997,
+        "end_s": 23.98,
+        "no_speech_prob": 0.042445,
+        "start_s": 22.96,
+        "text": "First impressions last.",
+        "words": [
+          {
+            "end_s": 23.02,
+            "probability": 0.943901,
+            "start_s": 22.96,
+            "word": "First"
+          },
+          {
+            "end_s": 23.38,
+            "probability": 0.897926,
+            "start_s": 23.02,
+            "word": "impressions"
+          },
+          {
+            "end_s": 23.98,
+            "probability": 0.877056,
+            "start_s": 23.38,
+            "word": "last."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.205109,
+        "compression_ratio": 1.698997,
+        "end_s": 26.0,
+        "no_speech_prob": 0.042445,
+        "start_s": 24.52,
+        "text": "I don't pave the way for people.",
+        "words": [
+          {
+            "end_s": 24.7,
+            "probability": 0.992999,
+            "start_s": 24.52,
+            "word": "I"
+          },
+          {
+            "end_s": 24.98,
+            "probability": 0.999701,
+            "start_s": 24.7,
+            "word": "don't"
+          },
+          {
+            "end_s": 25.18,
+            "probability": 0.898848,
+            "start_s": 24.98,
+            "word": "pave"
+          },
+          {
+            "end_s": 25.4,
+            "probability": 0.998219,
+            "start_s": 25.18,
+            "word": "the"
+          },
+          {
+            "end_s": 25.56,
+            "probability": 0.999243,
+            "start_s": 25.4,
+            "word": "way"
+          },
+          {
+            "end_s": 25.78,
+            "probability": 0.99832,
+            "start_s": 25.56,
+            "word": "for"
+          },
+          {
+            "end_s": 26.02,
+            "probability": 0.999178,
+            "start_s": 25.78,
+            "word": "people."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.205109,
+        "compression_ratio": 1.698997,
+        "end_s": 28.46,
+        "no_speech_prob": 0.042445,
+        "start_s": 27.0,
+        "text": "People pave the way for me.",
+        "words": [
+          {
+            "end_s": 27.32,
+            "probability": 0.956909,
+            "start_s": 27.0,
+            "word": "People"
+          },
+          {
+            "end_s": 27.56,
+            "probability": 0.931713,
+            "start_s": 27.32,
+            "word": "pave"
+          },
+          {
+            "end_s": 27.72,
+            "probability": 0.99918,
+            "start_s": 27.56,
+            "word": "the"
+          },
+          {
+            "end_s": 27.88,
+            "probability": 0.999597,
+            "start_s": 27.72,
+            "word": "way"
+          },
+          {
+            "end_s": 28.08,
+            "probability": 0.988777,
+            "start_s": 27.88,
+            "word": "for"
+          },
+          {
+            "end_s": 28.46,
+            "probability": 0.999822,
+            "start_s": 28.08,
+            "word": "me."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.347852,
+        "compression_ratio": 1.286822,
+        "end_s": 33.06,
+        "no_speech_prob": 0.022862,
+        "start_s": 28.46,
+        "text": "Life is this, I like this.",
+        "words": [
+          {
+            "end_s": 29.2,
+            "probability": 0.841523,
+            "start_s": 28.46,
+            "word": "Life"
+          },
+          {
+            "end_s": 29.96,
+            "probability": 0.87795,
+            "start_s": 29.2,
+            "word": "is"
+          },
+          {
+            "end_s": 30.64,
+            "probability": 0.982465,
+            "start_s": 29.96,
+            "word": "this,"
+          },
+          {
+            "end_s": 32.16,
+            "probability": 0.968991,
+            "start_s": 31.82,
+            "word": "I"
+          },
+          {
+            "end_s": 32.44,
+            "probability": 0.982818,
+            "start_s": 32.16,
+            "word": "like"
+          },
+          {
+            "end_s": 33.06,
+            "probability": 0.997344,
+            "start_s": 32.44,
+            "word": "this."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.347852,
+        "compression_ratio": 1.286822,
+        "end_s": 34.46,
+        "no_speech_prob": 0.022862,
+        "start_s": 33.4,
+        "text": "I don't get lucky.",
+        "words": [
+          {
+            "end_s": 33.46,
+            "probability": 0.984206,
+            "start_s": 33.4,
+            "word": "I"
+          },
+          {
+            "end_s": 33.82,
+            "probability": 0.998758,
+            "start_s": 33.46,
+            "word": "don't"
+          },
+          {
+            "end_s": 34.12,
+            "probability": 0.995388,
+            "start_s": 33.82,
+            "word": "get"
+          },
+          {
+            "end_s": 34.46,
+            "probability": 0.999049,
+            "start_s": 34.12,
+            "word": "lucky."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.347852,
+        "compression_ratio": 1.286822,
+        "end_s": 36.44,
+        "no_speech_prob": 0.022862,
+        "start_s": 35.34,
+        "text": "I make my own luck.",
+        "words": [
+          {
+            "end_s": 35.48,
+            "probability": 0.932048,
+            "start_s": 35.34,
+            "word": "I"
+          },
+          {
+            "end_s": 35.7,
+            "probability": 0.995521,
+            "start_s": 35.48,
+            "word": "make"
+          },
+          {
+            "end_s": 35.92,
+            "probability": 0.999144,
+            "start_s": 35.7,
+            "word": "my"
+          },
+          {
+            "end_s": 36.12,
+            "probability": 0.984487,
+            "start_s": 35.92,
+            "word": "own"
+          },
+          {
+            "end_s": 36.44,
+            "probability": 0.976718,
+            "start_s": 36.12,
+            "word": "luck."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.347852,
+        "compression_ratio": 1.286822,
+        "end_s": 38.44,
+        "no_speech_prob": 0.022862,
+        "start_s": 36.62,
+        "text": "You know what? That's the difference between us, Allison.",
+        "words": [
+          {
+            "end_s": 36.68,
+            "probability": 0.96795,
+            "start_s": 36.62,
+            "word": "You"
+          },
+          {
+            "end_s": 36.82,
+            "probability": 0.998974,
+            "start_s": 36.68,
+            "word": "know"
+          },
+          {
+            "end_s": 36.94,
+            "probability": 0.981035,
+            "start_s": 36.82,
+            "word": "what?"
+          },
+          {
+            "end_s": 37.24,
+            "probability": 0.992836,
+            "start_s": 37.1,
+            "word": "That's"
+          },
+          {
+            "end_s": 37.34,
+            "probability": 0.868278,
+            "start_s": 37.24,
+            "word": "the"
+          },
+          {
+            "end_s": 37.54,
+            "probability": 0.999553,
+            "start_s": 37.34,
+            "word": "difference"
+          },
+          {
+            "end_s": 37.92,
+            "probability": 0.998837,
+            "start_s": 37.54,
+            "word": "between"
+          },
+          {
+            "end_s": 38.16,
+            "probability": 0.838363,
+            "start_s": 37.92,
+            "word": "us,"
+          },
+          {
+            "end_s": 38.44,
+            "probability": 0.534593,
+            "start_s": 38.34,
+            "word": "Allison."
+          }
+        ]
+      },
+      {
+        "avg_logprob": -0.347852,
+        "compression_ratio": 1.286822,
+        "end_s": 40.76,
+        "no_speech_prob": 0.022862,
+        "start_s": 38.88,
+        "text": "You want to lose small. I want to win big.",
+        "words": [
+          {
+            "end_s": 39.0,
+            "probability": 0.99289,
+            "start_s": 38.88,
+            "word": "You"
+          },
+          {
+            "end_s": 39.12,
+            "probability": 0.749226,
+            "start_s": 39.0,
+            "word": "want"
+          },
+          {
+            "end_s": 39.26,
+            "probability": 0.834154,
+            "start_s": 39.12,
+            "word": "to"
+          },
+          {
+            "end_s": 39.48,
+            "probability": 0.978758,
+            "start_s": 39.26,
+            "word": "lose"
+          },
+          {
+            "end_s": 39.8,
+            "probability": 0.916083,
+            "start_s": 39.48,
+            "word": "small."
+          },
+          {
+            "end_s": 39.98,
+            "probability": 0.998262,
+            "start_s": 39.88,
+            "word": "I"
+          },
+          {
+            "end_s": 40.12,
+            "probability": 0.920154,
+            "start_s": 39.98,
+            "word": "want"
+          },
+          {
+            "end_s": 40.28,
+            "probability": 0.981888,
+            "start_s": 40.12,
+            "word": "to"
+          },
+          {
+            "end_s": 40.48,
+            "probability": 0.997872,
+            "start_s": 40.28,
+            "word": "win"
+          },
+          {
+            "end_s": 40.76,
+            "probability": 0.786359,
+            "start_s": 40.48,
+            "word": "big."
+          }
+        ]
+      }
+    ],
+    "text": "I don't take meetings. I set them. And my respect isn't demanded. It's earned. Excuses don't win championships. Oh, you added Michael Jordan to tell you that? No, I told him. Never destroy anyone in public when you can accomplish the same result in private. I don't play the odds. I play the man. Winners don't make excuses when the other side plays the game. They don't have dreams. I have goals. Get it through your head. First impressions last. I don't pave the way for people. People pave the way for me. Life is this, I like this. I don't get lucky. I make my own luck. You know what? That's the difference between us, Allison. You want to lose small. I want to win big.",
+    "word_timestamps": true
+  }
+}

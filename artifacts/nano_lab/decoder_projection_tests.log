@@ -1,0 +1,10 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: f1bf0480aa9f43bb84078706ce5950f7
+........................                                                 [100%]
+24 passed in 3.45s
+Stopping job: aggregate process RSS exceeded 640 MiB
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 5.290s
+             CPU time consumed: 5.377s
+                   Memory peak: 283.5M (swap: 0B)

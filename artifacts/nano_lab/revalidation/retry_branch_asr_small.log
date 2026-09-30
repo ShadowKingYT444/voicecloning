@@ -1,0 +1,8 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "forced_retry", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 24.945s
+             CPU time consumed: 23.696s
+                   Memory peak: 2G (swap: 0B)

@@ -1,0 +1,61 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+loaded PerthNet (Implicit) at step 250,000
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  2.80it/s]100%|██████████| 2/2 [00:00<00:00,  4.81it/s]100%|██████████| 2/2 [00:00<00:00,  4.34it/s]
+{"event": "prepared", "id": "asmr7_repair_001", "split": "train", "source_frames": 209, "reconstructed_frames": 216}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  6.76it/s]100%|██████████| 2/2 [00:00<00:00,  9.12it/s]
+{"event": "prepared", "id": "asmr7_repair_006", "split": "train", "source_frames": 273, "reconstructed_frames": 280}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  8.86it/s]100%|██████████| 2/2 [00:00<00:00, 11.03it/s]
+{"event": "prepared", "id": "asmr7_repair_007", "split": "train", "source_frames": 198, "reconstructed_frames": 204}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  6.75it/s]100%|██████████| 2/2 [00:00<00:00,  8.35it/s]
+{"event": "prepared", "id": "asmr7_repair_008", "split": "train", "source_frames": 437, "reconstructed_frames": 444}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  9.12it/s]100%|██████████| 2/2 [00:00<00:00, 10.93it/s]
+{"event": "prepared", "id": "asmr7_repair_010", "split": "train", "source_frames": 191, "reconstructed_frames": 198}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  9.63it/s]100%|██████████| 2/2 [00:00<00:00, 12.02it/s]
+{"event": "prepared", "id": "asmr7_repair_012", "split": "train", "source_frames": 259, "reconstructed_frames": 266}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  9.44it/s]100%|██████████| 2/2 [00:00<00:00, 11.38it/s]
+{"event": "prepared", "id": "asmr7_repair_013", "split": "train", "source_frames": 167, "reconstructed_frames": 174}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 12.57it/s]100%|██████████| 2/2 [00:00<00:00, 12.54it/s]
+{"event": "prepared", "id": "asmr7_repair_014", "split": "train", "source_frames": 214, "reconstructed_frames": 220}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  9.08it/s]100%|██████████| 2/2 [00:00<00:00, 10.76it/s]
+{"event": "prepared", "id": "asmr7_repair_015", "split": "train", "source_frames": 251, "reconstructed_frames": 258}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  6.04it/s]100%|██████████| 2/2 [00:00<00:00,  7.53it/s]100%|██████████| 2/2 [00:00<00:00,  7.25it/s]
+{"event": "prepared", "id": "asmr7_repair_019", "split": "train", "source_frames": 231, "reconstructed_frames": 238}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  5.89it/s]100%|██████████| 2/2 [00:00<00:00,  7.59it/s]100%|██████████| 2/2 [00:00<00:00,  7.26it/s]
+{"event": "prepared", "id": "asmr7_repair_023", "split": "train", "source_frames": 363, "reconstructed_frames": 370}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  6.53it/s]100%|██████████| 2/2 [00:00<00:00,  9.29it/s]
+{"event": "prepared", "id": "asmr7_repair_024", "split": "train", "source_frames": 187, "reconstructed_frames": 194}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 12.73it/s]100%|██████████| 2/2 [00:00<00:00, 12.71it/s]
+{"event": "prepared", "id": "asmr7_repair_025", "split": "train", "source_frames": 278, "reconstructed_frames": 284}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  9.67it/s]100%|██████████| 2/2 [00:00<00:00, 11.94it/s]
+{"event": "prepared", "id": "asmr7_repair_028", "split": "train", "source_frames": 261, "reconstructed_frames": 268}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  9.29it/s]100%|██████████| 2/2 [00:00<00:00, 10.75it/s]
+{"event": "prepared", "id": "asmr7_repair_033", "split": "train", "source_frames": 205, "reconstructed_frames": 212}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 12.77it/s]100%|██████████| 2/2 [00:00<00:00, 12.75it/s]
+{"event": "prepared", "id": "asmr7_repair_011", "split": "valid", "source_frames": 201, "reconstructed_frames": 208}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 11.68it/s]100%|██████████| 2/2 [00:00<00:00, 11.65it/s]
+{"event": "prepared", "id": "asmr7_repair_022", "split": "valid", "source_frames": 546, "reconstructed_frames": 552}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 44.920s
+             CPU time consumed: 45.130s
+                   Memory peak: 2.4G (swap: 0B)

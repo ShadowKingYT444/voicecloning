@@ -1,0 +1,15 @@
+MemoryMax=3GiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job
+Running as unit: nano-lab-model.service; invocation ID: 531b77f5bc4742aa84b028630041502d
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+loaded PerthNet (Implicit) at step 250,000
+  0%|          | 0/700 [00:00<?, ?it/s]  0%|          | 1/700 [00:00<01:40,  6.97it/s]  1%|          | 7/700 [00:00<00:21, 32.31it/s]  2%|▏         | 12/700 [00:00<00:17, 38.68it/s]  3%|▎         | 20/700 [00:00<00:13, 50.89it/s]  4%|▍         | 29/700 [00:00<00:10, 62.29it/s]  5%|▌         | 37/700 [00:00<00:09, 66.64it/s]  6%|▋         | 44/700 [00:00<00:09, 66.33it/s]  8%|▊         | 53/700 [00:00<00:09, 71.66it/s]  9%|▊         | 61/700 [00:01<00:08, 73.15it/s] 10%|▉         | 69/700 [00:01<00:08, 71.04it/s] 11%|█         | 77/700 [00:01<00:09, 65.24it/s] 12%|█▏        | 84/700 [00:01<00:09, 63.99it/s] 13%|█▎        | 93/700 [00:01<00:08, 70.33it/s] 15%|█▍        | 102/700 [00:01<00:08, 73.02it/s] 16%|█▌        | 110/700 [00:01<00:07, 74.72it/s] 17%|█▋        | 121/700 [00:01<00:06, 82.92it/s] 19%|█▊        | 131/700 [00:01<00:06, 86.99it/s] 19%|█▉        | 135/700 [00:01<00:08, 68.53it/s]
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  3.86it/s]100%|██████████| 2/2 [00:00<00:00,  5.37it/s]100%|██████████| 2/2 [00:00<00:00,  5.07it/s]
+Segment 1: 5.54s audio in 5.94s
+{"output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/delivery/harvey.wav", "report": "artifacts/nano_lab/delivery/harvey.wav.json", "peak_rss_mib": 2385.95703125}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 44.357s
+             CPU time consumed: 41.095s
+                   Memory peak: 2.4G (swap: 0B)

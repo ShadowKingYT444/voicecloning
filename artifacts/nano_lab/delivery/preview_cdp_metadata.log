@@ -1,0 +1,8 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 7d983a7e72c2477cadc6753827328ce1
+{"screenshot":"/home/terryd/gooning/voicecloning/artifacts/nano_lab/delivery/preview.png","contentHeight":2157,"media":[{"src":"../cadence_penalty/level_matched/source_heldout01.wav","duration":10},{"src":"../decoder_embedding_cap095_comparison/level_matched/heldout01_cap095_mel.wav","duration":6.6},{"src":"../decoder_cadence_combined/level_matched/fit_heldout01_rp1p2.wav","duration":6.6},{"src":"../harvey_level_matched/source_isolated.wav","duration":7.1},{"src":"../harvey_decoder_comparison/level_matched/business_decoder_fit.wav","duration":6.1},{"src":"../harvey_decoder_comparison/level_matched/business_base.wav","duration":6.1}]}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 4.797s
+             CPU time consumed: 4.927s
+                   Memory peak: 224.4M (swap: 0B)

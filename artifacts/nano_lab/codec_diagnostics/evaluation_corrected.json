@@ -1,0 +1,595 @@
+{
+  "schema_version": 1,
+  "generated_by": "scripts/nano_lab/reference_evaluator.py",
+  "manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "runtime": {
+    "cpu_threads": 2,
+    "whisper_enabled": true,
+    "speaker_enabled": true,
+    "whisper_model": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+    "heldout_variant": "natural",
+    "excluded_heldout_ids": [
+      "asmr7_heldout_01",
+      "asmr7_heldout_04",
+      "asmr7_heldout_05"
+    ],
+    "rss_mb": {
+      "rss_before_models_mb": 114.78,
+      "rss_after_whisper_mb": 407.81,
+      "rss_after_speaker_model_mb": 455.23,
+      "rss_after_evaluation_mb": 575.12
+    }
+  },
+  "inputs": [
+    {
+      "label": "source01_source",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_source.wav",
+      "family": "asmr7",
+      "expected_text": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+      "measurements": {
+        "duration_s": 6.0,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -22.36,
+        "peak_dbfs": -1.09,
+        "crest_db": 21.27,
+        "dc_offset": -2.7e-07,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -12.001,
+        "noise_floor_dbfs_proxy_low10pct_frames": -59.215,
+        "speech_level_dbfs_proxy_high50pct_frames": -22.911,
+        "snr_db_proxy_high50_minus_low10": 36.304,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -97.901,
+        "spectral_centroid_hz": 1031.542,
+        "spectral_flatness_proxy": 0.026466,
+        "high_band_fraction_proxy_ge8khz": 0.003863,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 409.7,
+      "asr": {
+        "text": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 6.0,
+            "text": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+            "avg_logprob": -0.39086,
+            "no_speech_prob": 0.013066
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 1.365871,
+        "real_time_factor": 0.227645,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.770885,
+        "min_cosine": 0.751166,
+        "max_cosine": 0.790604,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.790604
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.751166
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.387508863228297,
+      "dnsmos_background": 3.256166171713191,
+      "dnsmos_overall": 2.768996030982598,
+      "dnsmos_windows": 3,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "source01_vocoder",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_vocoder.wav",
+      "family": "asmr7",
+      "expected_text": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+      "measurements": {
+        "duration_s": 6.0,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -22.35,
+        "peak_dbfs": -1.125,
+        "crest_db": 21.225,
+        "dc_offset": -3.55e-06,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -11.627,
+        "noise_floor_dbfs_proxy_low10pct_frames": -59.381,
+        "speech_level_dbfs_proxy_high50pct_frames": -22.666,
+        "snr_db_proxy_high50_minus_low10": 36.715,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -95.311,
+        "spectral_centroid_hz": 989.864,
+        "spectral_flatness_proxy": 0.015359,
+        "high_band_fraction_proxy_ge8khz": 0.000815,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 574.48,
+      "asr": {
+        "text": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 6.0,
+            "text": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+            "avg_logprob": -0.420276,
+            "no_speech_prob": 0.010881
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 0.995621,
+        "real_time_factor": 0.165937,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.755829,
+        "min_cosine": 0.733903,
+        "max_cosine": 0.777756,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.777756
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.733903
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.3599761710274265,
+      "dnsmos_background": 3.452602368569135,
+      "dnsmos_overall": 2.8573849262295083,
+      "dnsmos_windows": 3,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "source01_tokens",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tokens.wav",
+      "family": "asmr7",
+      "expected_text": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+      "measurements": {
+        "duration_s": 6.12,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -20.584,
+        "peak_dbfs": -3.288,
+        "crest_db": 17.297,
+        "dc_offset": -7e-08,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -13.411,
+        "noise_floor_dbfs_proxy_low10pct_frames": -64.286,
+        "speech_level_dbfs_proxy_high50pct_frames": -18.426,
+        "snr_db_proxy_high50_minus_low10": 45.86,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -88.243,
+        "spectral_centroid_hz": 756.689,
+        "spectral_flatness_proxy": 0.025737,
+        "high_band_fraction_proxy_ge8khz": 0.002239,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 575.05,
+      "asr": {
+        "text": "Okay, gather around everybody. Great. So, as the ones you're going to party.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 6.0,
+            "text": "Okay, gather around everybody. Great. So, as the ones you're going to party.",
+            "avg_logprob": -0.490408,
+            "no_speech_prob": 0.006094
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 1.124935,
+        "real_time_factor": 0.183813,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.333333,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 13,
+        "substitutions": 3,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "ones",
+          "you're",
+          "going",
+          "to",
+          "party"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.416667,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 14,
+        "substitutions": 3,
+        "deletions": 0,
+        "insertions": 2,
+        "reference_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "ones",
+          "you",
+          "are",
+          "going",
+          "to",
+          "party"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.786396,
+        "min_cosine": 0.763316,
+        "max_cosine": 0.809475,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.809475
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.763316
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.3987195942249686,
+      "dnsmos_background": 3.8919343055345506,
+      "dnsmos_overall": 3.068443799510629,
+      "dnsmos_windows": 4,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "source01_tts_corrected",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tts_corrected.wav",
+      "family": "asmr7",
+      "expected_text": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+      "measurements": {
+        "duration_s": 4.84,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -22.958,
+        "peak_dbfs": -1.006,
+        "crest_db": 21.952,
+        "dc_offset": 7e-08,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -14.564,
+        "noise_floor_dbfs_proxy_low10pct_frames": -75.816,
+        "speech_level_dbfs_proxy_high50pct_frames": -22.632,
+        "snr_db_proxy_high50_minus_low10": 53.184,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -91.746,
+        "spectral_centroid_hz": 769.617,
+        "spectral_flatness_proxy": 0.026669,
+        "high_band_fraction_proxy_ge8khz": 0.002199,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 575.1,
+      "asr": {
+        "text": "Okay, gather around everybody. Great. So is the one throwing the party?",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 4.8,
+            "text": "Okay, gather around everybody. Great. So is the one throwing the party?",
+            "avg_logprob": -0.35339,
+            "no_speech_prob": 0.01392
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 1.223381,
+        "real_time_factor": 0.252765,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.083333,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "is",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.083333,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "is",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.860702,
+        "min_cosine": 0.841236,
+        "max_cosine": 0.880167,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.880167
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.841236
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.2613318844483214,
+      "dnsmos_background": 3.687816037067223,
+      "dnsmos_overall": 2.8731482205300476,
+      "dnsmos_windows": 1,
+      "dnsmos_repeated_short_clip": true
+    }
+  ],
+  "synthesis_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/evaluation_manifest_corrected.json",
+  "reference_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "evaluation_role": "development_selection"
+}

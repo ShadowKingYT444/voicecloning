@@ -1,0 +1,20 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Acoustic attention comparison</title>
+<style>body{max-width:1000px;margin:40px auto;padding:0 24px;font:16px/1.5 system-ui;color:#20252c;background:#faf9f6}audio{width:100%}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}article{background:white;padding:18px;border:1px solid #ddd;border-radius:12px}table{border-collapse:collapse}td,th{padding:9px;border-bottom:1px solid #ddd}</style>
+<h1>Acoustic attention comparison</h1><p>Experimental synthetic speech. Realism remains unaccepted. All listening copies use constant gain at the same loudness. Generated masters use the same 45 Hz high-pass filter. No noise gate or denoiser was added.</p>
+<p>Both variants use the new reference prompt and repetition penalty 1.0. Only the acoustic adapter changes.</p>
+<h2>Same words as the source</h2><div class="grid"><article><h3>Source recording</h3><audio controls preload="metadata" src="../cadence_penalty/level_matched/source_heldout01.wav"></audio></article>
+<article><h3>Control</h3><audio controls preload="metadata" src="level_matched/heldout01_prompt_attention0_mel.wav"></audio><p>7.40 seconds</p></article>
+<article><h3>Attention adapter</h3><audio controls preload="metadata" src="level_matched/heldout01_prompt_attention1_mel.wav"></audio><p>7.40 seconds</p></article>
+</div><h2>New text</h2><p>Each group has identical generated speech tokens. Only the acoustic attention adapter changes.</p>
+<h3>Did you remember the blue folder? I thought we agreed to meet at half past nine.</h3><div class="grid">
+<article><strong>prompt_attention0_mel</strong><audio controls preload="metadata" src="level_matched/question_prompt_attention0_mel.wav"></audio></article>
+<article><strong>prompt_attention1_mel</strong><audio controls preload="metadata" src="level_matched/question_prompt_attention1_mel.wav"></audio></article>
+</div>
+<h3>The last train had already left when I reached the station. A small light was still on above the ticket office.</h3><div class="grid">
+<article><strong>prompt_attention0_mel</strong><audio controls preload="metadata" src="level_matched/narrative_prompt_attention0_mel.wav"></audio></article>
+<article><strong>prompt_attention1_mel</strong><audio controls preload="metadata" src="level_matched/narrative_prompt_attention1_mel.wav"></audio></article>
+</div>
+<h2>Measured results</h2><p>These are automated proxies. They do not establish realism or clean ASMR texture.</p><table><tr><th>Variant</th><th>Speaker cosine</th><th>DNSMOS</th><th>WER</th></tr>
+<tr><td>attention0_mel</td><td>0.8864</td><td>3.1664</td><td>0.000</td></tr>
+<tr><td>attention1_mel</td><td>0.8936</td><td>3.1094</td><td>0.000</td></tr>
+</table><p>Peak synthesis process RSS: 2496.5 MiB. One serial model job, 3072 MiB hard limit, no swap.</p><p><a href='review.json'>Full evidence</a> | <a href='../delivery/index.html'>Main comparison</a></p>

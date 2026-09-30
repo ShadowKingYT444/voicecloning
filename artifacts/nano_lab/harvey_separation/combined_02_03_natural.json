@@ -1,0 +1,8 @@
+{
+  "sources": [
+    "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__natural.wav",
+    "artifacts/nano_lab/references/harvey/harvey_quote_03/harvey_quote_03__natural.wav"
+  ],
+  "gap_seconds": 0.12,
+  "synthetic": false
+}

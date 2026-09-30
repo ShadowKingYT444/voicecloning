@@ -1,0 +1,54 @@
+{
+  "format": "nano_decoder_attention_onnx_reference_v1",
+  "status": "reference_complete",
+  "cases": [
+    "mel256",
+    "mel64",
+    "mel8",
+    "mel512",
+    "mel768"
+  ],
+  "inputs": [
+    "x",
+    "mask",
+    "mu",
+    "t",
+    "speaker_embedding",
+    "cond",
+    "r"
+  ],
+  "adapter_effect_max_abs": {
+    "mel256": 0.1494462490081787,
+    "mel64": 0.10887753963470459,
+    "mel8": 0.05649375915527344,
+    "mel512": 0.16196668148040771,
+    "mel768": 0.18114161491394043
+  },
+  "base_stage_manifest_sha256": "5fa7bfb0dde0a818f50518b6d5b157f5d2998f04137f2137ae47c7b09cba9c7c",
+  "reference_sha256": "26c499ec1440d1f15dade5e3ddc1aa381a3c6b7c932b58c16af4519369713950",
+  "runtime": {
+    "enabled": true,
+    "restored": false,
+    "idempotent": false,
+    "strength": 1.0,
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_fit/best_attention.pt",
+    "adapter_sha256": "de6d40e5565011022efe776c1852f5bdc1850a87cf4e0e5ba51208aba3e747c2",
+    "model_checkpoint_path": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+    "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+    "inventory_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_inventory.json",
+    "inventory_sha256": "9f36f6f5a61c8ec1bda8fa09e88640035931fb8690a920f73d9fe15cb94919ed",
+    "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+    "initial_conditionals_sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+    "prepared_conditionals_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+    "target_weight_count": 224,
+    "target_parameter_count": 344064,
+    "target_weight_key_prefix": "flow.decoder.estimator."
+  },
+  "precision": {
+    "matmul_tf32": false,
+    "cudnn_tf32": false
+  },
+  "device": "cuda",
+  "peak_rss_bytes": 1529806848,
+  "elapsed_seconds": 17.448623746007797
+}

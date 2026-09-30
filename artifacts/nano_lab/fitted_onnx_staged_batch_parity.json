@@ -1,0 +1,6 @@
+{
+  "tokens_exact": true,
+  "mel_exact": true,
+  "wav_shape_equal": true,
+  "wav_max_abs": 3.4570693969726562e-06
+}

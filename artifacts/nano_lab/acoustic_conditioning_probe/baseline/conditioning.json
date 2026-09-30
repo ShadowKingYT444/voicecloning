@@ -1,0 +1,82 @@
+{
+  "baseline_conditionals_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+  "conditioning": {
+    "gen": {
+      "embedding": {
+        "dtype": "float32",
+        "kind": "tensor_or_array",
+        "sha256": "4e24b2cfd382e5f46973ab87e94a4dcd3423d573dd335dd2c7ef188c6db67b18",
+        "shape": [
+          1,
+          192
+        ]
+      },
+      "prompt_feat": {
+        "dtype": "float32",
+        "kind": "tensor_or_array",
+        "sha256": "ff981426844b3dd367a298c6ef6ca8c64a7926123754aaf8c594848d96793222",
+        "shape": [
+          1,
+          500,
+          80
+        ]
+      },
+      "prompt_feat_len": {
+        "kind": "repr",
+        "repr": "None",
+        "sha256": "dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91"
+      },
+      "prompt_token": {
+        "dtype": "int64",
+        "kind": "tensor_or_array",
+        "sha256": "fe951bc9dc1feae51628d9b30218d43ddb3abbf29080e2af400fcf375c5d79cf",
+        "shape": [
+          1,
+          250
+        ]
+      },
+      "prompt_token_len": {
+        "dtype": "int64",
+        "kind": "tensor_or_array",
+        "sha256": "4e8e14f0ac28d4a6840065d73ba438653d810ecc41ec9b7509615e009a5f3da4",
+        "shape": [
+          1
+        ]
+      }
+    },
+    "t3": {
+      "cond_prompt_speech_tokens": {
+        "dtype": "int64",
+        "kind": "tensor_or_array",
+        "sha256": "cb844bf20397532db2e0251e6691781bff3e6f9f2126815474b3d2b23f9d7c4e",
+        "shape": [
+          1,
+          333
+        ]
+      },
+      "emotion_adv": {
+        "dtype": "float32",
+        "kind": "tensor_or_array",
+        "sha256": "d99e58435243d9fef9c88273b8d553b4fba4d0baf8009d29eae74fa99e0d9f57",
+        "shape": [
+          1,
+          1,
+          1
+        ]
+      },
+      "speaker_emb": {
+        "dtype": "float32",
+        "kind": "tensor_or_array",
+        "sha256": "e2ed44c379a47ae28c1c4f90421dea52724364c063298c87e81403da75c6250f",
+        "shape": [
+          1,
+          256
+        ]
+      }
+    }
+  },
+  "self_leak_diagnostic": false,
+  "source_conditionals_audio_sha256": "29ccb07d11663151962f23bbf93e95796d8a0f39dd51c0b956b5a05bef5960d6",
+  "target_tokens_sha256": "c1f720377e1bc1c993160c334e9a1c723669533a51f7a49ca512ebdf98a8fcaf",
+  "variant": "baseline"
+}

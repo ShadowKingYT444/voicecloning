@@ -1,0 +1,77 @@
+{
+  "status": "verified",
+  "experimental": true,
+  "scope": "Deterministic estimator calls at mel lengths 8,64,256,512,768; no waveform or T3 claim",
+  "graph_sha256": "df2a1c85850133ce490830b1c795da0d9bc1848ceac5226b3e997b43d16df643",
+  "weights_sha256": "76c1253a5ca4340c2457b871a708d0b14f673fb5fe8e0d6559b6f958f52bac03",
+  "adapter_sha256": "de6d40e5565011022efe776c1852f5bdc1850a87cf4e0e5ba51208aba3e747c2",
+  "strength": 1.0,
+  "reference_sha256": "26c499ec1440d1f15dade5e3ddc1aa381a3c6b7c932b58c16af4519369713950",
+  "atol": 0.0003,
+  "rtol": 0.0003,
+  "ort_provider": "cpu",
+  "checks": [
+    {
+      "status": "passed",
+      "elements": 20480,
+      "max_abs": 3.063678741455078e-05,
+      "max_relative": 0.048866213151927435,
+      "relative_l2": 1.861680855668686e-06,
+      "outside_tolerance_count": 0,
+      "atol": 0.0003,
+      "rtol": 0.0003,
+      "case": "mel256",
+      "adapter_effect_max_abs": 0.1494462490081787
+    },
+    {
+      "status": "passed",
+      "elements": 5120,
+      "max_abs": 3.254413604736328e-05,
+      "max_relative": 0.02428645979687688,
+      "relative_l2": 1.934277110084943e-06,
+      "outside_tolerance_count": 0,
+      "atol": 0.0003,
+      "rtol": 0.0003,
+      "case": "mel64",
+      "adapter_effect_max_abs": 0.10887753963470459
+    },
+    {
+      "status": "passed",
+      "elements": 640,
+      "max_abs": 1.6689300537109375e-05,
+      "max_relative": 0.0006958490833072882,
+      "relative_l2": 1.2974721038943291e-06,
+      "outside_tolerance_count": 0,
+      "atol": 0.0003,
+      "rtol": 0.0003,
+      "case": "mel8",
+      "adapter_effect_max_abs": 0.05649375915527344
+    },
+    {
+      "status": "passed",
+      "elements": 40960,
+      "max_abs": 4.935264587402344e-05,
+      "max_relative": 0.3566964285714286,
+      "relative_l2": 1.8642936597836612e-06,
+      "outside_tolerance_count": 0,
+      "atol": 0.0003,
+      "rtol": 0.0003,
+      "case": "mel512",
+      "adapter_effect_max_abs": 0.16196668148040771
+    },
+    {
+      "status": "passed",
+      "elements": 61440,
+      "max_abs": 4.4345855712890625e-05,
+      "max_relative": 0.08831866328509623,
+      "relative_l2": 1.8345209638613718e-06,
+      "outside_tolerance_count": 0,
+      "atol": 0.0003,
+      "rtol": 0.0003,
+      "case": "mel768",
+      "adapter_effect_max_abs": 0.18114161491394043
+    }
+  ],
+  "peak_rss_bytes": 570265600,
+  "elapsed_seconds": 13.52798783199978
+}

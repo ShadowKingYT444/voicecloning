@@ -1,0 +1,10 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+Stopping job: desktop headroom fell below 4 GiB
+          Finished with result: success
+Main processes terminated with: code=killed, status=15/TERM
+               Service runtime: 1min 36.443s
+             CPU time consumed: 1min 36.400s
+                   Memory peak: 1.1G (swap: 0B)

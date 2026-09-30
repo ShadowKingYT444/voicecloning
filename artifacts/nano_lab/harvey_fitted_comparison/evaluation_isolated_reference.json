@@ -1,0 +1,532 @@
+{
+  "schema_version": 1,
+  "generated_by": "scripts/nano_lab/reference_evaluator.py",
+  "manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/manifest_harvey_isolated_eval.json",
+  "runtime": {
+    "cpu_threads": 2,
+    "whisper_enabled": false,
+    "speaker_enabled": true,
+    "whisper_model": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+    "heldout_variant": "natural",
+    "excluded_heldout_ids": [
+      "asmr7_heldout_01",
+      "asmr7_heldout_04",
+      "asmr7_heldout_05"
+    ],
+    "rss_mb": {
+      "rss_before_models_mb": 113.82,
+      "rss_after_speaker_model_mb": 317.23,
+      "rss_after_evaluation_mb": 442.29
+    }
+  },
+  "inputs": [
+    {
+      "label": "business_base",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_fitted_comparison/business_base.wav",
+      "family": "harvey",
+      "expected_text": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence.",
+      "measurements": {
+        "duration_s": 6.14,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -24.517,
+        "peak_dbfs": -2.326,
+        "crest_db": 22.191,
+        "dc_offset": -6.293e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -15.269,
+        "noise_floor_dbfs_proxy_low10pct_frames": -72.241,
+        "speech_level_dbfs_proxy_high50pct_frames": -24.245,
+        "snr_db_proxy_high50_minus_low10": 47.997,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -97.836,
+        "spectral_centroid_hz": 897.595,
+        "spectral_flatness_proxy": 0.009789,
+        "high_band_fraction_proxy_ge8khz": 0.000273,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 119.52,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.795328,
+        "min_cosine": 0.795328,
+        "max_cosine": 0.795328,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+            "cosine": 0.795328
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "business_speaker",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_fitted_comparison/business_speaker.wav",
+      "family": "harvey",
+      "expected_text": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence.",
+      "measurements": {
+        "duration_s": 6.42,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -24.842,
+        "peak_dbfs": -4.652,
+        "crest_db": 20.19,
+        "dc_offset": -6.3e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -16.109,
+        "noise_floor_dbfs_proxy_low10pct_frames": -81.097,
+        "speech_level_dbfs_proxy_high50pct_frames": -24.67,
+        "snr_db_proxy_high50_minus_low10": 56.427,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -102.335,
+        "spectral_centroid_hz": 837.746,
+        "spectral_flatness_proxy": 0.011079,
+        "high_band_fraction_proxy_ge8khz": 0.000357,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 434.92,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.797054,
+        "min_cosine": 0.797054,
+        "max_cosine": 0.797054,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+            "cosine": 0.797054
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "business_adapter_half",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_fitted_comparison/business_adapter_half.wav",
+      "family": "harvey",
+      "expected_text": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence.",
+      "measurements": {
+        "duration_s": 5.9,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -24.247,
+        "peak_dbfs": -1.065,
+        "crest_db": 23.181,
+        "dc_offset": -6.224e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -15.553,
+        "noise_floor_dbfs_proxy_low10pct_frames": -69.441,
+        "speech_level_dbfs_proxy_high50pct_frames": -22.915,
+        "snr_db_proxy_high50_minus_low10": 46.526,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -97.753,
+        "spectral_centroid_hz": 832.586,
+        "spectral_flatness_proxy": 0.013358,
+        "high_band_fraction_proxy_ge8khz": 0.000544,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 436.86,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.772257,
+        "min_cosine": 0.772257,
+        "max_cosine": 0.772257,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+            "cosine": 0.772257
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "business_adapter_full",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_fitted_comparison/business_adapter_full.wav",
+      "family": "harvey",
+      "expected_text": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence.",
+      "measurements": {
+        "duration_s": 6.1,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -24.271,
+        "peak_dbfs": -2.185,
+        "crest_db": 22.086,
+        "dc_offset": -5.939e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -15.717,
+        "noise_floor_dbfs_proxy_low10pct_frames": -72.83,
+        "speech_level_dbfs_proxy_high50pct_frames": -23.861,
+        "snr_db_proxy_high50_minus_low10": 48.969,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -98.355,
+        "spectral_centroid_hz": 813.618,
+        "spectral_flatness_proxy": 0.010222,
+        "high_band_fraction_proxy_ge8khz": 0.000311,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 436.86,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.792411,
+        "min_cosine": 0.792411,
+        "max_cosine": 0.792411,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+            "cosine": 0.792411
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "question_base",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_fitted_comparison/question_base.wav",
+      "family": "harvey",
+      "expected_text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "measurements": {
+        "duration_s": 4.18,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -23.57,
+        "peak_dbfs": -2.592,
+        "crest_db": 20.978,
+        "dc_offset": -7.204e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -16.317,
+        "noise_floor_dbfs_proxy_low10pct_frames": -67.962,
+        "speech_level_dbfs_proxy_high50pct_frames": -21.676,
+        "snr_db_proxy_high50_minus_low10": 46.286,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -98.748,
+        "spectral_centroid_hz": 715.72,
+        "spectral_flatness_proxy": 0.007786,
+        "high_band_fraction_proxy_ge8khz": 0.000265,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 436.86,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.813468,
+        "min_cosine": 0.813468,
+        "max_cosine": 0.813468,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+            "cosine": 0.813468
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "question_speaker",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_fitted_comparison/question_speaker.wav",
+      "family": "harvey",
+      "expected_text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "measurements": {
+        "duration_s": 4.34,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -23.091,
+        "peak_dbfs": -3.231,
+        "crest_db": 19.86,
+        "dc_offset": -7.377e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -15.519,
+        "noise_floor_dbfs_proxy_low10pct_frames": -69.112,
+        "speech_level_dbfs_proxy_high50pct_frames": -22.154,
+        "snr_db_proxy_high50_minus_low10": 46.959,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -96.834,
+        "spectral_centroid_hz": 685.341,
+        "spectral_flatness_proxy": 0.00954,
+        "high_band_fraction_proxy_ge8khz": 0.000457,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 437.93,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.808592,
+        "min_cosine": 0.808592,
+        "max_cosine": 0.808592,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+            "cosine": 0.808592
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "question_adapter_half",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_fitted_comparison/question_adapter_half.wav",
+      "family": "harvey",
+      "expected_text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "measurements": {
+        "duration_s": 4.46,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -21.867,
+        "peak_dbfs": -0.724,
+        "crest_db": 21.143,
+        "dc_offset": -8.904e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -12.368,
+        "noise_floor_dbfs_proxy_low10pct_frames": -80.953,
+        "speech_level_dbfs_proxy_high50pct_frames": -21.221,
+        "snr_db_proxy_high50_minus_low10": 59.732,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -102.633,
+        "spectral_centroid_hz": 749.622,
+        "spectral_flatness_proxy": 0.007846,
+        "high_band_fraction_proxy_ge8khz": 0.000195,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 438.93,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.801247,
+        "min_cosine": 0.801247,
+        "max_cosine": 0.801247,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+            "cosine": 0.801247
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "question_adapter_full",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_fitted_comparison/question_adapter_full.wav",
+      "family": "harvey",
+      "expected_text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "measurements": {
+        "duration_s": 4.58,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -23.136,
+        "peak_dbfs": -3.07,
+        "crest_db": 20.066,
+        "dc_offset": -7.655e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -15.22,
+        "noise_floor_dbfs_proxy_low10pct_frames": -80.339,
+        "speech_level_dbfs_proxy_high50pct_frames": -21.49,
+        "snr_db_proxy_high50_minus_low10": 58.849,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -101.219,
+        "spectral_centroid_hz": 798.088,
+        "spectral_flatness_proxy": 0.011689,
+        "high_band_fraction_proxy_ge8khz": 0.000434,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 439.93,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.823675,
+        "min_cosine": 0.823675,
+        "max_cosine": 0.823675,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+            "cosine": 0.823675
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "narrative_base",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_fitted_comparison/narrative_base.wav",
+      "family": "harvey",
+      "expected_text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "measurements": {
+        "duration_s": 5.78,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -24.52,
+        "peak_dbfs": -3.554,
+        "crest_db": 20.966,
+        "dc_offset": -6.543e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -15.77,
+        "noise_floor_dbfs_proxy_low10pct_frames": -79.714,
+        "speech_level_dbfs_proxy_high50pct_frames": -24.036,
+        "snr_db_proxy_high50_minus_low10": 55.678,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -100.505,
+        "spectral_centroid_hz": 873.025,
+        "spectral_flatness_proxy": 0.018895,
+        "high_band_fraction_proxy_ge8khz": 0.001128,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 439.96,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.787786,
+        "min_cosine": 0.787786,
+        "max_cosine": 0.787786,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+            "cosine": 0.787786
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "narrative_speaker",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_fitted_comparison/narrative_speaker.wav",
+      "family": "harvey",
+      "expected_text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "measurements": {
+        "duration_s": 6.74,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -25.369,
+        "peak_dbfs": -2.688,
+        "crest_db": 22.68,
+        "dc_offset": -5.89e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -16.214,
+        "noise_floor_dbfs_proxy_low10pct_frames": -73.317,
+        "speech_level_dbfs_proxy_high50pct_frames": -25.14,
+        "snr_db_proxy_high50_minus_low10": 48.177,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -100.969,
+        "spectral_centroid_hz": 942.652,
+        "spectral_flatness_proxy": 0.026084,
+        "high_band_fraction_proxy_ge8khz": 0.001847,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 442.07,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.820147,
+        "min_cosine": 0.820147,
+        "max_cosine": 0.820147,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+            "cosine": 0.820147
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "narrative_adapter_half",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_fitted_comparison/narrative_adapter_half.wav",
+      "family": "harvey",
+      "expected_text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "measurements": {
+        "duration_s": 6.1,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -26.405,
+        "peak_dbfs": -1.817,
+        "crest_db": 24.588,
+        "dc_offset": -5.136e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -16.288,
+        "noise_floor_dbfs_proxy_low10pct_frames": -74.584,
+        "speech_level_dbfs_proxy_high50pct_frames": -25.772,
+        "snr_db_proxy_high50_minus_low10": 48.812,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -99.561,
+        "spectral_centroid_hz": 972.996,
+        "spectral_flatness_proxy": 0.027821,
+        "high_band_fraction_proxy_ge8khz": 0.001921,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 442.25,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.819529,
+        "min_cosine": 0.819529,
+        "max_cosine": 0.819529,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+            "cosine": 0.819529
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "narrative_adapter_full",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_fitted_comparison/narrative_adapter_full.wav",
+      "family": "harvey",
+      "expected_text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "measurements": {
+        "duration_s": 6.1,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -25.253,
+        "peak_dbfs": -1.593,
+        "crest_db": 23.66,
+        "dc_offset": -5.161e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -16.269,
+        "noise_floor_dbfs_proxy_low10pct_frames": -77.242,
+        "speech_level_dbfs_proxy_high50pct_frames": -24.861,
+        "snr_db_proxy_high50_minus_low10": 52.381,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -99.044,
+        "spectral_centroid_hz": 917.525,
+        "spectral_flatness_proxy": 0.021288,
+        "high_band_fraction_proxy_ge8khz": 0.001275,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 442.25,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.840111,
+        "min_cosine": 0.840111,
+        "max_cosine": 0.840111,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+            "cosine": 0.840111
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    }
+  ],
+  "synthesis_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_fitted_comparison/manifest.json",
+  "reference_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/manifest_harvey_isolated_eval.json",
+  "dnsmos_enabled": false,
+  "evaluation_role": "development_selection"
+}

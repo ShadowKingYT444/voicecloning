@@ -1,0 +1,273 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{
+  "cases": {
+    "L128.decode0": {
+      "elapsed_seconds": 0.07714716199916438,
+      "errors": [],
+      "outputs": 25
+    },
+    "L128.decode1": {
+      "elapsed_seconds": 0.06281879600282991,
+      "errors": [],
+      "outputs": 25
+    },
+    "L128.prefill": {
+      "elapsed_seconds": 0.6439173759972618,
+      "errors": [],
+      "outputs": 25
+    },
+    "L32.decode0": {
+      "elapsed_seconds": 0.035651074002089445,
+      "errors": [],
+      "outputs": 25
+    },
+    "L32.decode1": {
+      "elapsed_seconds": 0.03604359199744067,
+      "errors": [],
+      "outputs": 25
+    },
+    "L32.prefill": {
+      "elapsed_seconds": 0.18598023099912098,
+      "errors": [],
+      "outputs": 25
+    },
+    "L400.decode0": {
+      "elapsed_seconds": 0.06196196400196641,
+      "errors": [],
+      "outputs": 25
+    },
+    "L400.decode1": {
+      "elapsed_seconds": 0.0860128740023356,
+      "errors": [],
+      "outputs": 25
+    },
+    "L400.prefill": {
+      "elapsed_seconds": 2.805758328999218,
+      "errors": [
+        {
+          "index": 11,
+          "kind": "numeric",
+          "max_abs": 0.0008516311645507812,
+          "max_relative": 0.26635825634002686
+        },
+        {
+          "index": 13,
+          "kind": "numeric",
+          "max_abs": 0.000733494758605957,
+          "max_relative": 0.32906471529842213
+        },
+        {
+          "index": 14,
+          "kind": "numeric",
+          "max_abs": 0.0004742145538330078,
+          "max_relative": 0.13476020610384462
+        },
+        {
+          "index": 15,
+          "kind": "numeric",
+          "max_abs": 0.0007140636444091797,
+          "max_relative": 0.12453531598513011
+        },
+        {
+          "index": 16,
+          "kind": "numeric",
+          "max_abs": 0.0006618499755859375,
+          "max_relative": 0.11212121212121212
+        },
+        {
+          "index": 17,
+          "kind": "numeric",
+          "max_abs": 0.0008513033390045166,
+          "max_relative": 0.08363387280430014
+        },
+        {
+          "index": 18,
+          "kind": "numeric",
+          "max_abs": 0.0006568431854248047,
+          "max_relative": 0.4080239408959132
+        },
+        {
+          "index": 19,
+          "kind": "numeric",
+          "max_abs": 0.0010318756103515625,
+          "max_relative": 0.39404553415061294
+        },
+        {
+          "index": 20,
+          "kind": "numeric",
+          "max_abs": 0.0007630884647369385,
+          "max_relative": 0.4172325134277343
+        },
+        {
+          "index": 21,
+          "kind": "numeric",
+          "max_abs": 0.0005713701248168945,
+          "max_relative": 0.2501704158145876
+        },
+        {
+          "index": 22,
+          "kind": "numeric",
+          "max_abs": 0.0007500648498535156,
+          "max_relative": 0.2890722091279194
+        },
+        {
+          "index": 23,
+          "kind": "numeric",
+          "max_abs": 0.0006389617919921875,
+          "max_relative": 0.10008410428931876
+        },
+        {
+          "index": 24,
+          "kind": "numeric",
+          "max_abs": 0.0008447766304016113,
+          "max_relative": 0.9132716606927238
+        }
+      ],
+      "outputs": 25
+    }
+  },
+  "errors": [
+    {
+      "case": "L400.prefill",
+      "index": 11,
+      "kind": "numeric",
+      "max_abs": 0.0008516311645507812,
+      "max_relative": 0.26635825634002686
+    },
+    {
+      "case": "L400.prefill",
+      "index": 13,
+      "kind": "numeric",
+      "max_abs": 0.000733494758605957,
+      "max_relative": 0.32906471529842213
+    },
+    {
+      "case": "L400.prefill",
+      "index": 14,
+      "kind": "numeric",
+      "max_abs": 0.0004742145538330078,
+      "max_relative": 0.13476020610384462
+    },
+    {
+      "case": "L400.prefill",
+      "index": 15,
+      "kind": "numeric",
+      "max_abs": 0.0007140636444091797,
+      "max_relative": 0.12453531598513011
+    },
+    {
+      "case": "L400.prefill",
+      "index": 16,
+      "kind": "numeric",
+      "max_abs": 0.0006618499755859375,
+      "max_relative": 0.11212121212121212
+    },
+    {
+      "case": "L400.prefill",
+      "index": 17,
+      "kind": "numeric",
+      "max_abs": 0.0008513033390045166,
+      "max_relative": 0.08363387280430014
+    },
+    {
+      "case": "L400.prefill",
+      "index": 18,
+      "kind": "numeric",
+      "max_abs": 0.0006568431854248047,
+      "max_relative": 0.4080239408959132
+    },
+    {
+      "case": "L400.prefill",
+      "index": 19,
+      "kind": "numeric",
+      "max_abs": 0.0010318756103515625,
+      "max_relative": 0.39404553415061294
+    },
+    {
+      "case": "L400.prefill",
+      "index": 20,
+      "kind": "numeric",
+      "max_abs": 0.0007630884647369385,
+      "max_relative": 0.4172325134277343
+    },
+    {
+      "case": "L400.prefill",
+      "index": 21,
+      "kind": "numeric",
+      "max_abs": 0.0005713701248168945,
+      "max_relative": 0.2501704158145876
+    },
+    {
+      "case": "L400.prefill",
+      "index": 22,
+      "kind": "numeric",
+      "max_abs": 0.0007500648498535156,
+      "max_relative": 0.2890722091279194
+    },
+    {
+      "case": "L400.prefill",
+      "index": 23,
+      "kind": "numeric",
+      "max_abs": 0.0006389617919921875,
+      "max_relative": 0.10008410428931876
+    },
+    {
+      "case": "L400.prefill",
+      "index": 24,
+      "kind": "numeric",
+      "max_abs": 0.0008447766304016113,
+      "max_relative": 0.9132716606927238
+    }
+  ],
+  "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged/t3/nano_t3_kv.onnx",
+  "inference_seconds": 5.027472674002638,
+  "inputs": [
+    "inputs_embeds",
+    "cache_position",
+    "past_0",
+    "past_1",
+    "past_2",
+    "past_3",
+    "past_4",
+    "past_5",
+    "past_6",
+    "past_7",
+    "past_8",
+    "past_9",
+    "past_10",
+    "past_11",
+    "past_12",
+    "past_13",
+    "past_14",
+    "past_15",
+    "past_16",
+    "past_17",
+    "past_18",
+    "past_19",
+    "past_20",
+    "past_21",
+    "past_22",
+    "past_23"
+  ],
+  "max_abs_error": 0.0010318756103515625,
+  "max_relative_error": 0.9132716606927238,
+  "method": "pure ORT CPU against upstream Transformers GPT2 outputs; no PyTorch model loaded",
+  "optimization": "disabled",
+  "peak_rss_bytes": 743133184,
+  "provider": "CPUExecutionProvider",
+  "rss_after_session_bytes": 678109184,
+  "rss_before_session_bytes": 59424768,
+  "session_load_seconds": 2.0397817789998953,
+  "stage": "t3",
+  "status": "mismatch",
+  "tolerances": {
+    "atol": 0.0003,
+    "rtol": 0.0003
+  }
+}
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 7.855s
+             CPU time consumed: 7.806s
+                   Memory peak: 1014.9M (swap: 0B)

@@ -1,0 +1,39 @@
+{
+  "status": "short_context_cpu_cuda_verified_experimental",
+  "asmr_graph": "onnx_staged_adapter_aligned_all_attn",
+  "harvey_graph": "onnx_staged_adapter_harvey_rank2",
+  "asmr_reference": "fitted_t3_onnx_reference",
+  "harvey_reference": "harvey_fitted_t3_onnx_reference",
+  "patch_memory_peak_mib": {
+    "asmr": 542.3,
+    "harvey": 541.3
+  },
+  "torch_reference_peak_rss_mib": {
+    "asmr": 1836.62,
+    "harvey": 1836.87
+  },
+  "bootstrap_rejection": "Strict runtime correctly rejected new graph with verification=not_run. Add explicit verifier-only load; do not mark verified without comparison.",
+  "realism_status": "not_accepted",
+  "one_model_job": true,
+  "job_swap": false,
+  "cuda_use_tf32": 0,
+  "bootstrap_rejection_resolved": true,
+  "long_context400_cache_gate": "unresolved",
+  "asmr_staged_peak_tree_rss_mib": 1004.265625,
+  "asmr_batch_peak_tree_rss_mib": 1936.96,
+  "harvey_batch_peak_tree_rss_mib": 1939.57,
+  "asmr_warm_full_request_seconds": [
+    3.2395582660028595,
+    3.8669147409964353
+  ],
+  "harvey_warm_full_request_seconds": [
+    3.157398519004346,
+    2.707963947999815
+  ],
+  "pre_cache_fp32_small_asr_exact": 6,
+  "pre_cache_fp32_small_asr_total": 6,
+  "cache_change_tokens_and_mel_exact": true,
+  "cache_change_waveform_max_abs": 3.5762786865234375e-06,
+  "tests_passed": 35,
+  "updated_unix": 1790704428.1314962
+}

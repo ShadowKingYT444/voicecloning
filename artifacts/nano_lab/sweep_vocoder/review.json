@@ -1,0 +1,109 @@
+{
+  "groups": {
+    "conv_fitted_expressive_63": [
+      {
+        "id": "conv_fitted_expressive_63_vnoise0p0",
+        "scale": 0.0,
+        "wav_sha256": "3412c0166c001848ac0a1967d0e25a70649faeaa70d465baaf1d5e8c8d71e4e9"
+      },
+      {
+        "id": "conv_fitted_expressive_63_vnoise0p5",
+        "scale": 0.5,
+        "wav_sha256": "3412c0166c001848ac0a1967d0e25a70649faeaa70d465baaf1d5e8c8d71e4e9"
+      },
+      {
+        "id": "conv_fitted_expressive_63_vnoise1p0",
+        "scale": 1.0,
+        "wav_sha256": "3412c0166c001848ac0a1967d0e25a70649faeaa70d465baaf1d5e8c8d71e4e9"
+      }
+    ],
+    "asmr_soft_expressive_63": [
+      {
+        "id": "asmr_soft_expressive_63_vnoise0p0",
+        "scale": 0.0,
+        "wav_sha256": "a6bc74f09e49d31b8f2826dcc4029e0f62c6ab711190e3fadb05203b47ba6b71"
+      },
+      {
+        "id": "asmr_soft_expressive_63_vnoise0p5",
+        "scale": 0.5,
+        "wav_sha256": "a6bc74f09e49d31b8f2826dcc4029e0f62c6ab711190e3fadb05203b47ba6b71"
+      },
+      {
+        "id": "asmr_soft_expressive_63_vnoise1p0",
+        "scale": 1.0,
+        "wav_sha256": "a6bc74f09e49d31b8f2826dcc4029e0f62c6ab711190e3fadb05203b47ba6b71"
+      }
+    ],
+    "harvey_expressive_63": [
+      {
+        "id": "harvey_expressive_63_vnoise0p0",
+        "scale": 0.0,
+        "wav_sha256": "2fb7ec52b7e34109be2a66f47f2aab3dec267a4f7cd20c1e73cb82176ce680e1"
+      },
+      {
+        "id": "harvey_expressive_63_vnoise0p5",
+        "scale": 0.5,
+        "wav_sha256": "2fb7ec52b7e34109be2a66f47f2aab3dec267a4f7cd20c1e73cb82176ce680e1"
+      },
+      {
+        "id": "harvey_expressive_63_vnoise1p0",
+        "scale": 1.0,
+        "wav_sha256": "2fb7ec52b7e34109be2a66f47f2aab3dec267a4f7cd20c1e73cb82176ce680e1"
+      }
+    ],
+    "conv_fitted_precise_63": [
+      {
+        "id": "conv_fitted_precise_63_vnoise0p0",
+        "scale": 0.0,
+        "wav_sha256": "b2f31ac3dfcd71ceb84231007499d8400b57919a23859f1a3a327e74e6208e6d"
+      },
+      {
+        "id": "conv_fitted_precise_63_vnoise0p5",
+        "scale": 0.5,
+        "wav_sha256": "b2f31ac3dfcd71ceb84231007499d8400b57919a23859f1a3a327e74e6208e6d"
+      },
+      {
+        "id": "conv_fitted_precise_63_vnoise1p0",
+        "scale": 1.0,
+        "wav_sha256": "b2f31ac3dfcd71ceb84231007499d8400b57919a23859f1a3a327e74e6208e6d"
+      }
+    ],
+    "asmr_soft_precise_63": [
+      {
+        "id": "asmr_soft_precise_63_vnoise0p0",
+        "scale": 0.0,
+        "wav_sha256": "1e11448a88d1d405739fbace92918f11aeed4982e427c4402923acf89b06cce8"
+      },
+      {
+        "id": "asmr_soft_precise_63_vnoise0p5",
+        "scale": 0.5,
+        "wav_sha256": "1e11448a88d1d405739fbace92918f11aeed4982e427c4402923acf89b06cce8"
+      },
+      {
+        "id": "asmr_soft_precise_63_vnoise1p0",
+        "scale": 1.0,
+        "wav_sha256": "1e11448a88d1d405739fbace92918f11aeed4982e427c4402923acf89b06cce8"
+      }
+    ],
+    "harvey_precise_63": [
+      {
+        "id": "harvey_precise_63_vnoise0p0",
+        "scale": 0.0,
+        "wav_sha256": "0e2b0087906b3be2ac55fc3342e3a5d7f82c9f875bbf4cbcf8733c6a17625a1b"
+      },
+      {
+        "id": "harvey_precise_63_vnoise0p5",
+        "scale": 0.5,
+        "wav_sha256": "0e2b0087906b3be2ac55fc3342e3a5d7f82c9f875bbf4cbcf8733c6a17625a1b"
+      },
+      {
+        "id": "harvey_precise_63_vnoise1p0",
+        "scale": 1.0,
+        "wav_sha256": "0e2b0087906b3be2ac55fc3342e3a5d7f82c9f875bbf4cbcf8733c6a17625a1b"
+      }
+    ]
+  },
+  "all_waveforms_identical_within_group": true,
+  "decision": "No measurable effect. Do not promote this control or claim noise reduction. Cause requires diagnostic inspection.",
+  "evaluation": "sweep_vocoder/evaluation.json"
+}

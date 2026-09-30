@@ -1,0 +1,35 @@
+{
+  "groups": {
+    "asmr_soft_precise_63": {
+      "asmr_soft_precise_63_vnoise0p5.tokens.pt": "c3de56291e4ee66baa2cb033a3e3b8863d81717a59769b8b6c465aaae1ef2c1c",
+      "asmr_soft_precise_63_vnoise0p0.tokens.pt": "c3de56291e4ee66baa2cb033a3e3b8863d81717a59769b8b6c465aaae1ef2c1c",
+      "asmr_soft_precise_63_vnoise1p0.tokens.pt": "c3de56291e4ee66baa2cb033a3e3b8863d81717a59769b8b6c465aaae1ef2c1c"
+    },
+    "harvey_precise_63": {
+      "harvey_precise_63_vnoise0p0.tokens.pt": "a1593c12585e3a6deb5d4fffa353cdea324d1319fc65e4ff4dc29c02c8896657",
+      "harvey_precise_63_vnoise1p0.tokens.pt": "a1593c12585e3a6deb5d4fffa353cdea324d1319fc65e4ff4dc29c02c8896657",
+      "harvey_precise_63_vnoise0p5.tokens.pt": "a1593c12585e3a6deb5d4fffa353cdea324d1319fc65e4ff4dc29c02c8896657"
+    },
+    "asmr_soft_expressive_63": {
+      "asmr_soft_expressive_63_vnoise0p5.tokens.pt": "173e5ff55670120a7beaac06c8068657ab2caedef9f620c88c9a9aca77e11c0a",
+      "asmr_soft_expressive_63_vnoise1p0.tokens.pt": "173e5ff55670120a7beaac06c8068657ab2caedef9f620c88c9a9aca77e11c0a",
+      "asmr_soft_expressive_63_vnoise0p0.tokens.pt": "173e5ff55670120a7beaac06c8068657ab2caedef9f620c88c9a9aca77e11c0a"
+    },
+    "conv_fitted_precise_63": {
+      "conv_fitted_precise_63_vnoise0p0.tokens.pt": "86bb7f988f077df26a2ba4305414ab11b6c06a29c414c644bb0872dc9fbf5534",
+      "conv_fitted_precise_63_vnoise1p0.tokens.pt": "86bb7f988f077df26a2ba4305414ab11b6c06a29c414c644bb0872dc9fbf5534",
+      "conv_fitted_precise_63_vnoise0p5.tokens.pt": "86bb7f988f077df26a2ba4305414ab11b6c06a29c414c644bb0872dc9fbf5534"
+    },
+    "conv_fitted_expressive_63": {
+      "conv_fitted_expressive_63_vnoise0p0.tokens.pt": "f26958cc684ac92cb073b77b4d3a5e5583c80845c0948b76e92d2b56cdcabf08",
+      "conv_fitted_expressive_63_vnoise0p5.tokens.pt": "f26958cc684ac92cb073b77b4d3a5e5583c80845c0948b76e92d2b56cdcabf08",
+      "conv_fitted_expressive_63_vnoise1p0.tokens.pt": "f26958cc684ac92cb073b77b4d3a5e5583c80845c0948b76e92d2b56cdcabf08"
+    },
+    "harvey_expressive_63": {
+      "harvey_expressive_63_vnoise0p0.tokens.pt": "bdeff7b920325691ffcc40257749cf8a8db99145b622ef1d5fb16ce88e0f4701",
+      "harvey_expressive_63_vnoise0p5.tokens.pt": "bdeff7b920325691ffcc40257749cf8a8db99145b622ef1d5fb16ce88e0f4701",
+      "harvey_expressive_63_vnoise1p0.tokens.pt": "bdeff7b920325691ffcc40257749cf8a8db99145b622ef1d5fb16ce88e0f4701"
+    }
+  },
+  "all_matched": true
+}

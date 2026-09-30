@@ -1,0 +1,79 @@
+{
+  "adapter_sha256": "046f0c5c52c6de9e627352f87e55cc17d5a09c3a2d30ed39353e01fc739b8be4",
+  "atol": 0.0001,
+  "checks": [
+    {
+      "id": "asmr7_repair_001",
+      "max_abs": 4.5299530029296875e-06,
+      "rmse": 1.0776681165225455e-06
+    },
+    {
+      "id": "asmr7_repair_022",
+      "max_abs": 5.7220458984375e-06,
+      "rmse": 1.129228053287079e-06
+    },
+    {
+      "id": "asmr7_repair_034",
+      "max_abs": 1.1920928955078125e-05,
+      "rmse": 1.1719286021616426e-06
+    }
+  ],
+  "elapsed_seconds": 28.974788162995537,
+  "idempotent_metadata": {
+    "adapter_sha256": "046f0c5c52c6de9e627352f87e55cc17d5a09c3a2d30ed39353e01fc739b8be4",
+    "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+    "enabled": true,
+    "idempotent": true,
+    "initial_conditionals_sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+    "inventory_sha256": "9f36f6f5a61c8ec1bda8fa09e88640035931fb8690a920f73d9fe15cb94919ed",
+    "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_fit_smoke/best_attention.pt",
+    "restored": false,
+    "strength": 1.0,
+    "target_parameter_count": 344064,
+    "target_weight_count": 224
+  },
+  "peak_rss_bytes": 1793921024,
+  "precision_before": {
+    "cudnn_tf32": true,
+    "matmul_tf32": false
+  },
+  "precision_used": {
+    "cudnn_tf32": false,
+    "matmul_tf32": false
+  },
+  "repeated_fold_exact": true,
+  "restore_exact": true,
+  "restore_metadata": {
+    "enabled": false,
+    "inventory_sha256": "9f36f6f5a61c8ec1bda8fa09e88640035931fb8690a920f73d9fe15cb94919ed",
+    "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+    "path": null,
+    "restored": true,
+    "strength": 0.0,
+    "target_parameter_count": 344064,
+    "target_weight_count": 224
+  },
+  "rmse_limit": 1e-05,
+  "runtime": {
+    "adapter_sha256": "046f0c5c52c6de9e627352f87e55cc17d5a09c3a2d30ed39353e01fc739b8be4",
+    "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+    "enabled": true,
+    "idempotent": false,
+    "initial_conditionals_sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+    "inventory_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_inventory.json",
+    "inventory_sha256": "9f36f6f5a61c8ec1bda8fa09e88640035931fb8690a920f73d9fe15cb94919ed",
+    "model_checkpoint_path": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+    "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_fit_smoke/best_attention.pt",
+    "prepared_conditionals_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+    "restored": false,
+    "strength": 1.0,
+    "target_parameter_count": 344064,
+    "target_weight_count": 224,
+    "target_weight_key_prefix": "flow.decoder.estimator."
+  },
+  "scope": "Three source-token flow reconstructions; no T3 or vocoder",
+  "status": "passed",
+  "strict_fp32": true
+}

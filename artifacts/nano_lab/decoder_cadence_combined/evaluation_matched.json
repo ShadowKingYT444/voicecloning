@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "generated_by": "scripts/nano_lab/reference_evaluator.py",
+  "manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "runtime": {
+    "cpu_threads": 2,
+    "whisper_enabled": false,
+    "speaker_enabled": true,
+    "whisper_model": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+    "heldout_variant": "natural",
+    "excluded_heldout_ids": [
+      "asmr7_heldout_01",
+      "asmr7_heldout_04",
+      "asmr7_heldout_05"
+    ],
+    "rss_mb": {
+      "rss_before_models_mb": 113.85,
+      "rss_after_speaker_model_mb": 601.93,
+      "rss_after_evaluation_mb": 735.36
+    }
+  },
+  "inputs": [
+    {
+      "label": "fit_heldout01_rp1p0",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_cadence_combined/level_matched/fit_heldout01_rp1p0.wav",
+      "family": "asmr7",
+      "expected_text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "measurements": {
+        "duration_s": 7.2,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -28.468,
+        "peak_dbfs": -8.677,
+        "crest_db": 19.791,
+        "dc_offset": 1.03e-06,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -19.3,
+        "noise_floor_dbfs_proxy_low10pct_frames": -71.132,
+        "speech_level_dbfs_proxy_high50pct_frames": -28.193,
+        "snr_db_proxy_high50_minus_low10": 42.939,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -91.149,
+        "spectral_centroid_hz": 1178.344,
+        "spectral_flatness_proxy": 0.087386,
+        "high_band_fraction_proxy_ge8khz": 0.022392,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 119.74,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.889833,
+        "min_cosine": 0.879623,
+        "max_cosine": 0.900042,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.900042
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.879623
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.194712631967074,
+      "dnsmos_background": 3.08081982378712,
+      "dnsmos_overall": 2.4974092509459993,
+      "dnsmos_windows": 6,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "fit_heldout01_rp1p2",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_cadence_combined/level_matched/fit_heldout01_rp1p2.wav",
+      "family": "asmr7",
+      "expected_text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "measurements": {
+        "duration_s": 6.6,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -28.274,
+        "peak_dbfs": -9.177,
+        "crest_db": 19.097,
+        "dc_offset": -2.2e-07,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -21.812,
+        "noise_floor_dbfs_proxy_low10pct_frames": -56.338,
+        "speech_level_dbfs_proxy_high50pct_frames": -26.471,
+        "snr_db_proxy_high50_minus_low10": 29.868,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -84.641,
+        "spectral_centroid_hz": 1575.319,
+        "spectral_flatness_proxy": 0.117808,
+        "high_band_fraction_proxy_ge8khz": 0.024659,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 726.61,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.882327,
+        "min_cosine": 0.877533,
+        "max_cosine": 0.887121,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.887121
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.877533
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.16931590772237,
+      "dnsmos_background": 3.2903498440709695,
+      "dnsmos_overall": 2.6028220668017736,
+      "dnsmos_windows": 5,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "fit_question_rp1p0",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_cadence_combined/level_matched/fit_question_rp1p0.wav",
+      "family": "asmr7",
+      "expected_text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "measurements": {
+        "duration_s": 6.32,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -28.002,
+        "peak_dbfs": -12.192,
+        "crest_db": 15.81,
+        "dc_offset": 4.5e-07,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -20.259,
+        "noise_floor_dbfs_proxy_low10pct_frames": -62.257,
+        "speech_level_dbfs_proxy_high50pct_frames": -26.873,
+        "snr_db_proxy_high50_minus_low10": 35.384,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -88.612,
+        "spectral_centroid_hz": 868.152,
+        "spectral_flatness_proxy": 0.039489,
+        "high_band_fraction_proxy_ge8khz": 0.003244,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 733.74,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.906273,
+        "min_cosine": 0.889525,
+        "max_cosine": 0.92302,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.92302
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.889525
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.6102317429058104,
+      "dnsmos_background": 3.6136797340657116,
+      "dnsmos_overall": 3.0808984089233924,
+      "dnsmos_windows": 4,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "fit_narrative_rp1p0",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_cadence_combined/level_matched/fit_narrative_rp1p0.wav",
+      "family": "asmr7",
+      "expected_text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "measurements": {
+        "duration_s": 7.72,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -28.595,
+        "peak_dbfs": -9.266,
+        "crest_db": 19.329,
+        "dc_offset": -9e-08,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -21.678,
+        "noise_floor_dbfs_proxy_low10pct_frames": -74.075,
+        "speech_level_dbfs_proxy_high50pct_frames": -26.248,
+        "snr_db_proxy_high50_minus_low10": 47.827,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -90.174,
+        "spectral_centroid_hz": 1606.181,
+        "spectral_flatness_proxy": 0.108678,
+        "high_band_fraction_proxy_ge8khz": 0.017443,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 734.34,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.911511,
+        "min_cosine": 0.891862,
+        "max_cosine": 0.931159,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.931159
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.891862
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.4107434920202855,
+      "dnsmos_background": 3.380080217554643,
+      "dnsmos_overall": 2.825373639689349,
+      "dnsmos_windows": 7,
+      "dnsmos_repeated_short_clip": true
+    }
+  ],
+  "synthesis_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_cadence_combined/level_matched/manifest.json",
+  "reference_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "dnsmos_enabled": true,
+  "evaluation_role": "development_selection"
+}

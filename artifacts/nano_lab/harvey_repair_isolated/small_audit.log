@@ -1,0 +1,12 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "harvey_repair_001", "wer": 0.076923, "transcript": "I don't take meetings. I set them. And my respect isn't demanded."}
+{"id": "harvey_repair_002", "wer": 0.117647, "transcript": "It's earned. Excuses don't win championships. Oh, you added Michael Jordan. Tell you that? No."}
+{"id": "harvey_repair_003", "wer": 0.076923, "transcript": "I don't have dreams. I have goals. Get it through your head."}
+{"id": "harvey_repair_004", "wer": 0.0, "transcript": "First impressions last. I don't pave the way for people."}
+{"id": "harvey_repair_005", "wer": 0.0, "transcript": "People pave the way for me. Life is this."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 35.071s
+             CPU time consumed: 1min 6.776s
+                   Memory peak: 1G (swap: 0B)

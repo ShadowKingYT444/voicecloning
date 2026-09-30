@@ -1,0 +1,31 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 857da0c0c93c4de29e738d4b8c39d724
+/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_staged.py:207: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+  torch.onnx.export(
+/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_spectral.py:137: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if value.shape[-1] <= n_fft // 2:
+{
+  "blocker": "The vocoder contains complex torch.stft/torch.istft and a source-filter path; no graph is released without parity evidence.",
+  "checkpoint": {
+    "bytes": 1064875036,
+    "exists": true,
+    "path": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+    "sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f"
+  },
+  "created_unix": 1790673919.6164188,
+  "model": "ResembleAI/chatterbox-nano",
+  "reason": "HiFT ONNX export unavailable: RuntimeError: Inference tensors cannot be saved for backward. Please do not use Tensors created in inference mode in computation tracked by autograd. To work around this, you can make a clone to get a normal tensor and use it in autograd, or use `torch.no_grad()` instead of `torch.inference_mode()`.",
+  "schema_version": 1,
+  "source": "local Nano checkpoint; no Turbo substitution",
+  "stage": "vocoder",
+  "status": "not_exported",
+  "verification": {
+    "command": "onnx_staged.py verify --stage vocoder",
+    "status": "not_run"
+  }
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 43.976s
+             CPU time consumed: 40.015s
+                   Memory peak: 1G (swap: 0B)

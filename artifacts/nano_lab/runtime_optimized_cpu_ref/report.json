@@ -1,0 +1,141 @@
+{
+  "after_runs": {
+    "cuda_allocated_mib": 0.0,
+    "cuda_peak_allocated_mib": 0.0,
+    "cuda_peak_reserved_mib": 0.0,
+    "cuda_reserved_mib": 0.0,
+    "peak_rss_mib": 4220.2265625,
+    "rss_mib": 3229.67578125
+  },
+  "conditioned": {
+    "conditioning_seconds": 8.937300308999511,
+    "cuda_allocated_mib": 0.0,
+    "cuda_peak_allocated_mib": 0.0,
+    "cuda_peak_reserved_mib": 0.0,
+    "cuda_reserved_mib": 0.0,
+    "peak_rss_mib": 4220.2265625,
+    "rss_mib": 3518.90625
+  },
+  "decoder": "meanflow",
+  "device": "cpu",
+  "dtype": "fp32",
+  "load_report": {
+    "decoder": "meanflow",
+    "device": "cpu",
+    "dtype": "torch.float32",
+    "engine": {
+      "decoder": "meanflow",
+      "device": "cpu",
+      "dtype": "torch.float32",
+      "optimized": true
+    },
+    "load_seconds": 12.539117569000155,
+    "optimized": true,
+    "parameters": {
+      "s3gen": 266030919,
+      "t3": 140247203,
+      "ve": 1423618
+    },
+    "s3gen": {
+      "loaded_tensors": 2491,
+      "missing_tensors": [],
+      "skipped_tensors": 0,
+      "unexpected_tensors": []
+    },
+    "t3": {
+      "loaded_tensors": 153,
+      "missing_tensors": [],
+      "removed_parameters": [
+        "tfmr.wte",
+        "text_head"
+      ],
+      "skipped_tensors": 2,
+      "unexpected_tensors": []
+    },
+    "ve": {
+      "dtype": "torch.float32",
+      "loaded_tensors": 16,
+      "missing_tensors": [],
+      "skipped_tensors": 0,
+      "unexpected_tensors": []
+    }
+  },
+  "loaded": {
+    "cuda_allocated_mib": 0.0,
+    "cuda_peak_allocated_mib": 0.0,
+    "cuda_peak_reserved_mib": 0.0,
+    "cuda_reserved_mib": 0.0,
+    "load_report": {
+      "decoder": "meanflow",
+      "device": "cpu",
+      "dtype": "torch.float32",
+      "engine": {
+        "decoder": "meanflow",
+        "device": "cpu",
+        "dtype": "torch.float32",
+        "optimized": true
+      },
+      "load_seconds": 12.539117569000155,
+      "optimized": true,
+      "parameters": {
+        "s3gen": 266030919,
+        "t3": 140247203,
+        "ve": 1423618
+      },
+      "s3gen": {
+        "loaded_tensors": 2491,
+        "missing_tensors": [],
+        "skipped_tensors": 0,
+        "unexpected_tensors": []
+      },
+      "t3": {
+        "loaded_tensors": 153,
+        "missing_tensors": [],
+        "removed_parameters": [
+          "tfmr.wte",
+          "text_head"
+        ],
+        "skipped_tensors": 2,
+        "unexpected_tensors": []
+      },
+      "ve": {
+        "dtype": "torch.float32",
+        "loaded_tensors": 16,
+        "missing_tensors": [],
+        "skipped_tensors": 0,
+        "unexpected_tensors": []
+      }
+    },
+    "load_seconds": 12.86371690299984,
+    "peak_rss_mib": 4220.2265625,
+    "rss_mib": 3417.8671875
+  },
+  "return_code": 0,
+  "runs": [
+    {
+      "audio_seconds": 6.64,
+      "cuda_allocated_mib": 0.0,
+      "cuda_peak_allocated_mib": 0.0,
+      "cuda_peak_reserved_mib": 0.0,
+      "cuda_reserved_mib": 0.0,
+      "generation_seconds": 46.00978198499979,
+      "index": 0,
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/runtime_optimized_cpu_ref/optimized_meanflow_0.wav",
+      "peak_rss_mib": 4220.2265625,
+      "rss_mib": 3229.58984375,
+      "rtf": 6.929184033885511,
+      "seed": 31,
+      "speech_tokens": 166,
+      "text": "Hey there. You are doing great. Take a slow breath and let your shoulders relax. I am right here with you."
+    }
+  ],
+  "schema": "nano-runtime-benchmark-v1",
+  "subprocess_sampler": {
+    "peak_rss_mib": 4220.14453125,
+    "peak_vms_mib": 13260.27734375,
+    "sample_count": 4983,
+    "sample_period_seconds": 0.02
+  },
+  "variant": "optimized",
+  "wall_seconds": 101.95826594800019
+}

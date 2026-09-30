@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "generated_by": "scripts/nano_lab/reference_evaluator.py",
+  "manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "runtime": {
+    "cpu_threads": 2,
+    "whisper_enabled": true,
+    "speaker_enabled": true,
+    "whisper_model": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+    "heldout_variant": "natural",
+    "excluded_heldout_ids": [
+      "asmr7_heldout_01",
+      "asmr7_heldout_04",
+      "asmr7_heldout_05"
+    ],
+    "rss_mb": {
+      "rss_before_models_mb": 113.17,
+      "rss_after_whisper_mb": 404.31,
+      "rss_after_speaker_model_mb": 451.03,
+      "rss_after_evaluation_mb": 567.14
+    }
+  },
+  "inputs": [
+    {
+      "label": "forced_retry",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/revalidation/retry_branch_test.wav",
+      "family": "asmr7",
+      "expected_text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "measurements": {
+        "duration_s": 7.46,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -20.123,
+        "peak_dbfs": -2.182,
+        "crest_db": 17.941,
+        "dc_offset": -1.1e-06,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -11.931,
+        "noise_floor_dbfs_proxy_low10pct_frames": -73.441,
+        "speech_level_dbfs_proxy_high50pct_frames": -18.118,
+        "snr_db_proxy_high50_minus_low10": 55.323,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -88.654,
+        "spectral_centroid_hz": 1121.351,
+        "spectral_flatness_proxy": 0.069359,
+        "high_band_fraction_proxy_ge8khz": 0.010903,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 407.5,
+      "asr": {
+        "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We had the whole morning ahead of us.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 2.0,
+            "text": "The rain has finally stopped.",
+            "avg_logprob": -0.21242,
+            "no_speech_prob": 0.013686
+          },
+          {
+            "start_s": 2.0,
+            "end_s": 5.0,
+            "text": "I opened the curtains and made a fresh cup of coffee.",
+            "avg_logprob": -0.21242,
+            "no_speech_prob": 0.013686
+          },
+          {
+            "start_s": 5.0,
+            "end_s": 8.0,
+            "text": "We had the whole morning ahead of us.",
+            "avg_logprob": -0.21242,
+            "no_speech_prob": 0.013686
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 1.147253,
+        "real_time_factor": 0.153787,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.041667,
+        "reference_word_count": 24,
+        "hypothesis_word_count": 24,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "the",
+          "rain",
+          "has",
+          "finally",
+          "stopped",
+          "i",
+          "opened",
+          "the",
+          "curtains",
+          "and",
+          "made",
+          "a",
+          "fresh",
+          "cup",
+          "of",
+          "coffee",
+          "we",
+          "have",
+          "the",
+          "whole",
+          "morning",
+          "ahead",
+          "of",
+          "us"
+        ],
+        "hypothesis_words": [
+          "the",
+          "rain",
+          "has",
+          "finally",
+          "stopped",
+          "i",
+          "opened",
+          "the",
+          "curtains",
+          "and",
+          "made",
+          "a",
+          "fresh",
+          "cup",
+          "of",
+          "coffee",
+          "we",
+          "had",
+          "the",
+          "whole",
+          "morning",
+          "ahead",
+          "of",
+          "us"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.041667,
+        "reference_word_count": 24,
+        "hypothesis_word_count": 24,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "the",
+          "rain",
+          "has",
+          "finally",
+          "stopped",
+          "i",
+          "opened",
+          "the",
+          "curtains",
+          "and",
+          "made",
+          "a",
+          "fresh",
+          "cup",
+          "of",
+          "coffee",
+          "we",
+          "have",
+          "the",
+          "whole",
+          "morning",
+          "ahead",
+          "of",
+          "us"
+        ],
+        "hypothesis_words": [
+          "the",
+          "rain",
+          "has",
+          "finally",
+          "stopped",
+          "i",
+          "opened",
+          "the",
+          "curtains",
+          "and",
+          "made",
+          "a",
+          "fresh",
+          "cup",
+          "of",
+          "coffee",
+          "we",
+          "had",
+          "the",
+          "whole",
+          "morning",
+          "ahead",
+          "of",
+          "us"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.845816,
+        "min_cosine": 0.828693,
+        "max_cosine": 0.862938,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.862938
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.828693
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.325338377024232,
+      "dnsmos_background": 3.348160916646598,
+      "dnsmos_overall": 2.7702931290024058,
+      "dnsmos_windows": 6,
+      "dnsmos_repeated_short_clip": true
+    }
+  ],
+  "synthesis_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/revalidation/retry_branch_manifest.json",
+  "reference_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/evaluation_manifest.json",
+  "evaluation_role": "development_selection"
+}

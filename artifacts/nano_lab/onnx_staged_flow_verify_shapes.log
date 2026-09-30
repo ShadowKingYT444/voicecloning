@@ -1,0 +1,35 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{
+  "errors": [],
+  "inputs": [
+    "speech_tokens",
+    "token_lengths"
+  ],
+  "max_abs_error": 2.6226043701171875e-06,
+  "max_relative_error": 0.026449561119079586,
+  "method": "separate pure-ORT process against saved PyTorch reference arrays",
+  "outputs": 6,
+  "outputs_per_case": {
+    "tokens12": {
+      "errors": 0,
+      "outputs": 2
+    },
+    "tokens120": {
+      "errors": 0,
+      "outputs": 2
+    },
+    "tokens600": {
+      "errors": 0,
+      "outputs": 2
+    }
+  },
+  "provider": "CPUExecutionProvider",
+  "stage": "flow_encoder",
+  "status": "verified"
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 11.261s
+             CPU time consumed: 10.820s
+                   Memory peak: 709.7M (swap: 0B)

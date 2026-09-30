@@ -1,0 +1,2783 @@
+{
+  "adapter_init_seed": 1701,
+  "base_target_weight_sha256": "d82dc3393e6f39ad0ff7692e20f27c8fb7b173f149473dadf019200e4c6511df",
+  "best_checkpoint": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_fit/best_projection.pt",
+  "cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_aligned_cache.json",
+  "cache_sha256": "ac3b7a6c6d3925420f8a3950a5e87417523fa333124593e48d6278404265ee4c",
+  "command": [
+    "scripts/nano_lab/fit_decoder_projection.py",
+    "--initial-conditionals",
+    "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+    "--output-dir",
+    "artifacts/nano_lab/decoder_projection_fit",
+    "--max-steps",
+    "40"
+  ],
+  "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+  "conditionals_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+  "diagnostic_only": true,
+  "disclosure": "This decoder projection fit is a timbre hypothesis. It uses source-token reconstruction targets and does not establish zero-shot realism or fix timing/pitch alignment.",
+  "elapsed_seconds": 89.61407284299639,
+  "epoch0": {
+    "train": {
+      "delta": {
+        "max_abs": 0.0,
+        "rms": 0.0
+      },
+      "mean": {
+        "adapter_l2": 0.0012778075179085135,
+        "baseline_distill_mse": 0.0,
+        "envelope_mse": 0.22620556751887003,
+        "raw_mse": 0.9118173996607463,
+        "regularization": 1.2778075131336664e-07,
+        "total": 0.9683689077695211
+      },
+      "rows": [
+        {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.13262300193309784,
+          "id": "asmr7_repair_001",
+          "raw_mse": 0.7714634537696838,
+          "regularization": 1.2778075131336664e-07,
+          "total": 0.804619312286377
+        },
+        {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.07146129757165909,
+          "id": "asmr7_repair_006",
+          "raw_mse": 0.8276925683021545,
+          "regularization": 1.2778075131336664e-07,
+          "total": 0.8455579876899719
+        },
+        {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.10647225379943848,
+          "id": "asmr7_repair_007",
+          "raw_mse": 0.9635529518127441,
+          "regularization": 1.2778075131336664e-07,
+          "total": 0.9901711344718933
+        },
+        {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.08235397934913635,
+          "id": "asmr7_repair_008",
+          "raw_mse": 0.8968482613563538,
+          "regularization": 1.2778075131336664e-07,
+          "total": 0.9174368977546692
+        },
+        {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.05490175634622574,
+          "id": "asmr7_repair_010",
+          "raw_mse": 0.9576891660690308,
+          "regularization": 1.2778075131336664e-07,
+          "total": 0.9714147448539734
+        },
+        {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.12122795730829239,
+          "id": "asmr7_repair_012",
+          "raw_mse": 0.8383552432060242,
+          "regularization": 1.2778075131336664e-07,
+          "total": 0.8686623573303223
+        },
+        {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.25071921944618225,
+          "id": "asmr7_repair_013",
+          "raw_mse": 0.9927970170974731,
+          "regularization": 1.2778075131336664e-07,
+          "total": 1.0554769039154053
+        },
+        {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.3908627927303314,
+          "id": "asmr7_repair_014",
+          "raw_mse": 1.0325486660003662,
+          "regularization": 1.2778075131336664e-07,
+          "total": 1.1302645206451416
+        },
+        {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.08453375846147537,
+          "id": "asmr7_repair_015",
+          "raw_mse": 0.8036597967147827,
+          "regularization": 1.2778075131336664e-07,
+          "total": 0.8247933387756348
+        },
+        {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.11895215511322021,
+          "id": "asmr7_repair_019",
+          "raw_mse": 0.7681682109832764,
+          "regularization": 1.2778075131336664e-07,
+          "total": 0.7979063987731934
+        },
+        {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.25572189688682556,
+          "id": "asmr7_repair_023",
+          "raw_mse": 0.8947066068649292,
+          "regularization": 1.2778075131336664e-07,
+          "total": 0.9586371779441833
+        },
+        {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.29669761657714844,
+          "id": "asmr7_repair_024",
+          "raw_mse": 0.7332873344421387,
+          "regularization": 1.2778075131336664e-07,
+          "total": 0.8074618577957153
+        },
+        {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.2895309031009674,
+          "id": "asmr7_repair_025",
+          "raw_mse": 0.8704549074172974,
+          "regularization": 1.2778075131336664e-07,
+          "total": 0.9428377747535706
+        },
+        {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.901538074016571,
+          "id": "asmr7_repair_028",
+          "raw_mse": 1.5166041851043701,
+          "regularization": 1.2778075131336664e-07,
+          "total": 1.7419887781143188
+        },
+        {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.23548685014247894,
+          "id": "asmr7_repair_033",
+          "raw_mse": 0.8094326257705688,
+          "regularization": 1.2778075131336664e-07,
+          "total": 0.868304431438446
+        }
+      ]
+    },
+    "valid": {
+      "delta": {
+        "max_abs": 0.0,
+        "rms": 0.0
+      },
+      "mean": {
+        "adapter_l2": 0.0012778075179085135,
+        "baseline_distill_mse": 0.0,
+        "envelope_mse": 0.05865603871643543,
+        "raw_mse": 0.879172295331955,
+        "regularization": 1.2778075131336664e-07,
+        "total": 0.8938364386558533
+      },
+      "rows": [
+        {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.06513641774654388,
+          "id": "asmr7_repair_011",
+          "raw_mse": 1.1359325647354126,
+          "regularization": 1.2778075131336664e-07,
+          "total": 1.1522167921066284
+        },
+        {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.05217565968632698,
+          "id": "asmr7_repair_022",
+          "raw_mse": 0.6224120259284973,
+          "regularization": 1.2778075131336664e-07,
+          "total": 0.6354560852050781
+        }
+      ]
+    }
+  },
+  "experimental": true,
+  "format": "nano_decoder_projection_lora_v1",
+  "frozen_params_no_grads": true,
+  "gradient_probe": {
+    "finite": true,
+    "gradient_norm": 0.01865255832672119,
+    "nonzero": true,
+    "trainable_parameter_count": 672
+  },
+  "history": [
+    {
+      "gradient_norm": 0.01865255832672119,
+      "step": 1,
+      "train": {
+        "mean": {
+          "adapter_l2": 0.0012778075179085135,
+          "baseline_distill_mse": 0.0,
+          "envelope_mse": 0.22620556751887003,
+          "raw_mse": 0.9118173996607463,
+          "regularization": 1.2778075131336664e-07,
+          "total": 0.9683689077695211
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0012778075179085135,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.13262300193309784,
+            "raw_mse": 0.7714634537696838,
+            "regularization": 1.2778075131336664e-07,
+            "total": 0.804619312286377
+          },
+          {
+            "adapter_l2": 0.0012778075179085135,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.07146129757165909,
+            "raw_mse": 0.8276925683021545,
+            "regularization": 1.2778075131336664e-07,
+            "total": 0.8455579876899719
+          },
+          {
+            "adapter_l2": 0.0012778075179085135,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.10647225379943848,
+            "raw_mse": 0.9635529518127441,
+            "regularization": 1.2778075131336664e-07,
+            "total": 0.9901711344718933
+          },
+          {
+            "adapter_l2": 0.0012778075179085135,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.08235397934913635,
+            "raw_mse": 0.8968482613563538,
+            "regularization": 1.2778075131336664e-07,
+            "total": 0.9174368977546692
+          },
+          {
+            "adapter_l2": 0.0012778075179085135,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.05490175634622574,
+            "raw_mse": 0.9576891660690308,
+            "regularization": 1.2778075131336664e-07,
+            "total": 0.9714147448539734
+          },
+          {
+            "adapter_l2": 0.0012778075179085135,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.12122795730829239,
+            "raw_mse": 0.8383552432060242,
+            "regularization": 1.2778075131336664e-07,
+            "total": 0.8686623573303223
+          },
+          {
+            "adapter_l2": 0.0012778075179085135,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.25071921944618225,
+            "raw_mse": 0.9927970170974731,
+            "regularization": 1.2778075131336664e-07,
+            "total": 1.0554769039154053
+          },
+          {
+            "adapter_l2": 0.0012778075179085135,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.3908627927303314,
+            "raw_mse": 1.0325486660003662,
+            "regularization": 1.2778075131336664e-07,
+            "total": 1.1302645206451416
+          },
+          {
+            "adapter_l2": 0.0012778075179085135,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.08453375846147537,
+            "raw_mse": 0.8036597967147827,
+            "regularization": 1.2778075131336664e-07,
+            "total": 0.8247933387756348
+          },
+          {
+            "adapter_l2": 0.0012778075179085135,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.11895215511322021,
+            "raw_mse": 0.7681682109832764,
+            "regularization": 1.2778075131336664e-07,
+            "total": 0.7979063987731934
+          },
+          {
+            "adapter_l2": 0.0012778075179085135,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.25572189688682556,
+            "raw_mse": 0.8947066068649292,
+            "regularization": 1.2778075131336664e-07,
+            "total": 0.9586371779441833
+          },
+          {
+            "adapter_l2": 0.0012778075179085135,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.29669761657714844,
+            "raw_mse": 0.7332873344421387,
+            "regularization": 1.2778075131336664e-07,
+            "total": 0.8074618577957153
+          },
+          {
+            "adapter_l2": 0.0012778075179085135,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.2895309031009674,
+            "raw_mse": 0.8704549074172974,
+            "regularization": 1.2778075131336664e-07,
+            "total": 0.9428377747535706
+          },
+          {
+            "adapter_l2": 0.0012778075179085135,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.901538074016571,
+            "raw_mse": 1.5166041851043701,
+            "regularization": 1.2778075131336664e-07,
+            "total": 1.7419887781143188
+          },
+          {
+            "adapter_l2": 0.0012778075179085135,
+            "baseline_distill_mse": 0.0,
+            "envelope_mse": 0.23548685014247894,
+            "raw_mse": 0.8094326257705688,
+            "regularization": 1.2778075131336664e-07,
+            "total": 0.868304431438446
+          }
+        ]
+      },
+      "valid": {
+        "delta": {
+          "max_abs": 0.0032358169555664062,
+          "rms": 0.0006861292058601975
+        },
+        "mean": {
+          "adapter_l2": 0.0012421791907399893,
+          "baseline_distill_mse": 4.746396058408209e-07,
+          "envelope_mse": 0.05862800590693951,
+          "raw_mse": 0.8791100084781647,
+          "regularization": 1.242179195060089e-07,
+          "total": 0.8937673568725586
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0012421791907399893,
+            "baseline_distill_mse": 4.830109219255974e-07,
+            "envelope_mse": 0.06515169143676758,
+            "id": "asmr7_repair_011",
+            "raw_mse": 1.1358819007873535,
+            "regularization": 1.242179195060089e-07,
+            "total": 1.152170181274414
+          },
+          {
+            "adapter_l2": 0.0012421791907399893,
+            "baseline_distill_mse": 4.662682897560444e-07,
+            "envelope_mse": 0.052104320377111435,
+            "id": "asmr7_repair_022",
+            "raw_mse": 0.6223381161689758,
+            "regularization": 1.242179195060089e-07,
+            "total": 0.6353645324707031
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.02947847917675972,
+      "step": 2,
+      "train": {
+        "mean": {
+          "adapter_l2": 0.0012421791907399893,
+          "baseline_distill_mse": 4.819283920672509e-07,
+          "envelope_mse": 0.2260413097838561,
+          "raw_mse": 0.9116543412208558,
+          "regularization": 1.242179195060089e-07,
+          "total": 0.9681650161743164
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0012421791907399893,
+            "baseline_distill_mse": 4.74672731343162e-07,
+            "envelope_mse": 0.13283273577690125,
+            "raw_mse": 0.7716792225837708,
+            "regularization": 1.242179195060089e-07,
+            "total": 0.8048877716064453
+          },
+          {
+            "adapter_l2": 0.0012421791907399893,
+            "baseline_distill_mse": 4.1405920114812034e-07,
+            "envelope_mse": 0.07141228765249252,
+            "raw_mse": 0.8276615142822266,
+            "regularization": 1.242179195060089e-07,
+            "total": 0.8455148935317993
+          },
+          {
+            "adapter_l2": 0.0012421791907399893,
+            "baseline_distill_mse": 4.969775773133733e-07,
+            "envelope_mse": 0.10647604614496231,
+            "raw_mse": 0.9635949730873108,
+            "regularization": 1.242179195060089e-07,
+            "total": 0.9902143478393555
+          },
+          {
+            "adapter_l2": 0.0012421791907399893,
+            "baseline_distill_mse": 5.436418746285199e-07,
+            "envelope_mse": 0.08226791024208069,
+            "raw_mse": 0.8968038558959961,
+            "regularization": 1.242179195060089e-07,
+            "total": 0.9173712730407715
+          },
+          {
+            "adapter_l2": 0.0012421791907399893,
+            "baseline_distill_mse": 3.9536692497676995e-07,
+            "envelope_mse": 0.054930370301008224,
+            "raw_mse": 0.9576675295829773,
+            "regularization": 1.242179195060089e-07,
+            "total": 0.9714004397392273
+          },
+          {
+            "adapter_l2": 0.0012421791907399893,
+            "baseline_distill_mse": 5.187432634556899e-07,
+            "envelope_mse": 0.12125491350889206,
+            "raw_mse": 0.838361382484436,
+            "regularization": 1.242179195060089e-07,
+            "total": 0.8686754703521729
+          },
+          {
+            "adapter_l2": 0.0012421791907399893,
+            "baseline_distill_mse": 5.695586651199847e-07,
+            "envelope_mse": 0.25037139654159546,
+            "raw_mse": 0.9923921227455139,
+            "regularization": 1.242179195060089e-07,
+            "total": 1.0549852848052979
+          },
+          {
+            "adapter_l2": 0.0012421791907399893,
+            "baseline_distill_mse": 4.765833523379115e-07,
+            "envelope_mse": 0.3905564248561859,
+            "raw_mse": 1.0322420597076416,
+            "regularization": 1.242179195060089e-07,
+            "total": 1.129881501197815
+          },
+          {
+            "adapter_l2": 0.0012421791907399893,
+            "baseline_distill_mse": 5.234363129602571e-07,
+            "envelope_mse": 0.08441116660833359,
+            "raw_mse": 0.8035469055175781,
+            "regularization": 1.242179195060089e-07,
+            "total": 0.8246500492095947
+          },
+          {
+            "adapter_l2": 0.0012421791907399893,
+            "baseline_distill_mse": 4.4624573547480395e-07,
+            "envelope_mse": 0.11878557503223419,
+            "raw_mse": 0.7680066823959351,
+            "regularization": 1.242179195060089e-07,
+            "total": 0.7977034449577332
+          },
+          {
+            "adapter_l2": 0.0012421791907399893,
+            "baseline_distill_mse": 5.094819925943739e-07,
+            "envelope_mse": 0.25544285774230957,
+            "raw_mse": 0.8944557905197144,
+            "regularization": 1.242179195060089e-07,
+            "total": 0.9583168625831604
+          },
+          {
+            "adapter_l2": 0.0012421791907399893,
+            "baseline_distill_mse": 4.1239778170165664e-07,
+            "envelope_mse": 0.29645228385925293,
+            "raw_mse": 0.7330321073532104,
+            "regularization": 1.242179195060089e-07,
+            "total": 0.8071454763412476
+          },
+          {
+            "adapter_l2": 0.0012421791907399893,
+            "baseline_distill_mse": 4.6482782067869266e-07,
+            "envelope_mse": 0.28924354910850525,
+            "raw_mse": 0.8702031373977661,
+            "regularization": 1.242179195060089e-07,
+            "total": 0.9425143599510193
+          },
+          {
+            "adapter_l2": 0.0012421791907399893,
+            "baseline_distill_mse": 5.042780912845046e-07,
+            "envelope_mse": 0.9009496569633484,
+            "raw_mse": 1.515938639640808,
+            "regularization": 1.242179195060089e-07,
+            "total": 1.7411763668060303
+          },
+          {
+            "adapter_l2": 0.0012421791907399893,
+            "baseline_distill_mse": 4.786545559909428e-07,
+            "envelope_mse": 0.23523247241973877,
+            "raw_mse": 0.8092291951179504,
+            "regularization": 1.242179195060089e-07,
+            "total": 0.8680377006530762
+          }
+        ]
+      },
+      "valid": {
+        "delta": {
+          "max_abs": 0.005604743957519531,
+          "rms": 0.0015807324089109898
+        },
+        "mean": {
+          "adapter_l2": 0.0012456246186047792,
+          "baseline_distill_mse": 2.553374088165583e-06,
+          "envelope_mse": 0.058482179418206215,
+          "raw_mse": 0.8789249956607819,
+          "regularization": 1.2456246167857898e-07,
+          "total": 0.8935469388961792
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0012456246186047792,
+            "baseline_distill_mse": 2.6717220862337854e-06,
+            "envelope_mse": 0.06520736962556839,
+            "id": "asmr7_repair_011",
+            "raw_mse": 1.1358612775802612,
+            "regularization": 1.2456246167857898e-07,
+            "total": 1.1521645784378052
+          },
+          {
+            "adapter_l2": 0.0012456246186047792,
+            "baseline_distill_mse": 2.435026090097381e-06,
+            "envelope_mse": 0.05175698921084404,
+            "id": "asmr7_repair_022",
+            "raw_mse": 0.6219887137413025,
+            "regularization": 1.2456246167857898e-07,
+            "total": 0.6349292993545532
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.0617532953619957,
+      "step": 3,
+      "train": {
+        "mean": {
+          "adapter_l2": 0.0012456246186047792,
+          "baseline_distill_mse": 2.719400284452907e-06,
+          "envelope_mse": 0.22545229345560075,
+          "raw_mse": 0.911056657632192,
+          "regularization": 1.2456246167857898e-07,
+          "total": 0.9674212217330933
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0012456246186047792,
+            "baseline_distill_mse": 2.754755087153171e-06,
+            "envelope_mse": 0.1335444301366806,
+            "raw_mse": 0.7723655104637146,
+            "regularization": 1.2456246167857898e-07,
+            "total": 0.8057531118392944
+          },
+          {
+            "adapter_l2": 0.0012456246186047792,
+            "baseline_distill_mse": 2.1895384634262882e-06,
+            "envelope_mse": 0.07118811458349228,
+            "raw_mse": 0.8274308443069458,
+            "regularization": 1.2456246167857898e-07,
+            "total": 0.8452290892601013
+          },
+          {
+            "adapter_l2": 0.0012456246186047792,
+            "baseline_distill_mse": 2.9887823984608985e-06,
+            "envelope_mse": 0.10652356594800949,
+            "raw_mse": 0.9636715650558472,
+            "regularization": 1.2456246167857898e-07,
+            "total": 0.9903040528297424
+          },
+          {
+            "adapter_l2": 0.0012456246186047792,
+            "baseline_distill_mse": 2.9906184408901026e-06,
+            "envelope_mse": 0.0819808766245842,
+            "raw_mse": 0.89650559425354,
+            "regularization": 1.2456246167857898e-07,
+            "total": 0.9170024394989014
+          },
+          {
+            "adapter_l2": 0.0012456246186047792,
+            "baseline_distill_mse": 1.86424722414813e-06,
+            "envelope_mse": 0.055139996111392975,
+            "raw_mse": 0.9578307867050171,
+            "regularization": 1.2456246167857898e-07,
+            "total": 0.9716168642044067
+          },
+          {
+            "adapter_l2": 0.0012456246186047792,
+            "baseline_distill_mse": 2.949706640720251e-06,
+            "envelope_mse": 0.12133877724409103,
+            "raw_mse": 0.8384077548980713,
+            "regularization": 1.2456246167857898e-07,
+            "total": 0.8687440752983093
+          },
+          {
+            "adapter_l2": 0.0012456246186047792,
+            "baseline_distill_mse": 3.383272996870801e-06,
+            "envelope_mse": 0.24929295480251312,
+            "raw_mse": 0.9913036227226257,
+            "regularization": 1.2456246167857898e-07,
+            "total": 1.05362868309021
+          },
+          {
+            "adapter_l2": 0.0012456246186047792,
+            "baseline_distill_mse": 2.617475274746539e-06,
+            "envelope_mse": 0.38930872082710266,
+            "raw_mse": 1.0309696197509766,
+            "regularization": 1.2456246167857898e-07,
+            "total": 1.128298282623291
+          },
+          {
+            "adapter_l2": 0.0012456246186047792,
+            "baseline_distill_mse": 2.9867812827433227e-06,
+            "envelope_mse": 0.08398916572332382,
+            "raw_mse": 0.8031221628189087,
+            "regularization": 1.2456246167857898e-07,
+            "total": 0.8241210579872131
+          },
+          {
+            "adapter_l2": 0.0012456246186047792,
+            "baseline_distill_mse": 2.7049454729421996e-06,
+            "envelope_mse": 0.11817877739667892,
+            "raw_mse": 0.7673918008804321,
+            "regularization": 1.2456246167857898e-07,
+            "total": 0.7969380021095276
+          },
+          {
+            "adapter_l2": 0.0012456246186047792,
+            "baseline_distill_mse": 2.772828565866803e-06,
+            "envelope_mse": 0.2544408440589905,
+            "raw_mse": 0.8934991359710693,
+            "regularization": 1.2456246167857898e-07,
+            "total": 0.9571108222007751
+          },
+          {
+            "adapter_l2": 0.0012456246186047792,
+            "baseline_distill_mse": 2.3329373561864486e-06,
+            "envelope_mse": 0.2954094409942627,
+            "raw_mse": 0.7319592237472534,
+            "regularization": 1.2456246167857898e-07,
+            "total": 0.8058128952980042
+          },
+          {
+            "adapter_l2": 0.0012456246186047792,
+            "baseline_distill_mse": 2.6158991204283666e-06,
+            "envelope_mse": 0.2881507873535156,
+            "raw_mse": 0.8691366910934448,
+            "regularization": 1.2456246167857898e-07,
+            "total": 0.9411758184432983
+          },
+          {
+            "adapter_l2": 0.0012456246186047792,
+            "baseline_distill_mse": 2.813519586197799e-06,
+            "envelope_mse": 0.8989869356155396,
+            "raw_mse": 1.5139142274856567,
+            "regularization": 1.2456246167857898e-07,
+            "total": 1.7386624813079834
+          },
+          {
+            "adapter_l2": 0.0012456246186047792,
+            "baseline_distill_mse": 2.825696356012486e-06,
+            "envelope_mse": 0.23431101441383362,
+            "raw_mse": 0.8083413243293762,
+            "regularization": 1.2456246167857898e-07,
+            "total": 0.8669206500053406
+          }
+        ]
+      },
+      "valid": {
+        "delta": {
+          "max_abs": 0.008622169494628906,
+          "rms": 0.003376356326043606
+        },
+        "mean": {
+          "adapter_l2": 0.0012520237360149622,
+          "baseline_distill_mse": 1.1612950402195565e-05,
+          "envelope_mse": 0.05821667239069939,
+          "raw_mse": 0.8785908222198486,
+          "regularization": 1.2520237646640453e-07,
+          "total": 0.8931509554386139
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0012520237360149622,
+            "baseline_distill_mse": 1.2074506230419502e-05,
+            "envelope_mse": 0.06531473249197006,
+            "id": "asmr7_repair_011",
+            "raw_mse": 1.1358230113983154,
+            "regularization": 1.2520237646640453e-07,
+            "total": 1.1521579027175903
+          },
+          {
+            "adapter_l2": 0.0012520237360149622,
+            "baseline_distill_mse": 1.1151394573971629e-05,
+            "envelope_mse": 0.05111861228942871,
+            "id": "asmr7_repair_022",
+            "raw_mse": 0.6213586330413818,
+            "regularization": 1.2520237646640453e-07,
+            "total": 0.6341440081596375
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.09442214667797089,
+      "step": 4,
+      "train": {
+        "mean": {
+          "adapter_l2": 0.0012520237360149622,
+          "baseline_distill_mse": 1.2286097262403928e-05,
+          "envelope_mse": 0.22438749348123868,
+          "raw_mse": 0.9099653482437133,
+          "regularization": 1.2520237646640453e-07,
+          "total": 0.9660684744517009
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0012520237360149622,
+            "baseline_distill_mse": 1.2507389328675345e-05,
+            "envelope_mse": 0.13482557237148285,
+            "raw_mse": 0.7735776901245117,
+            "regularization": 1.2520237646640453e-07,
+            "total": 0.8072904348373413
+          },
+          {
+            "adapter_l2": 0.0012520237360149622,
+            "baseline_distill_mse": 1.0471331734152045e-05,
+            "envelope_mse": 0.0707690492272377,
+            "raw_mse": 0.8270016312599182,
+            "regularization": 1.2520237646640453e-07,
+            "total": 0.8446992635726929
+          },
+          {
+            "adapter_l2": 0.0012520237360149622,
+            "baseline_distill_mse": 1.303437147726072e-05,
+            "envelope_mse": 0.10660071671009064,
+            "raw_mse": 0.963759183883667,
+            "regularization": 1.2520237646640453e-07,
+            "total": 0.9904159903526306
+          },
+          {
+            "adapter_l2": 0.0012520237360149622,
+            "baseline_distill_mse": 1.3054133887635544e-05,
+            "envelope_mse": 0.0814787745475769,
+            "raw_mse": 0.895972728729248,
+            "regularization": 1.2520237646640453e-07,
+            "total": 0.9163491129875183
+          },
+          {
+            "adapter_l2": 0.0012520237360149622,
+            "baseline_distill_mse": 9.113645319303032e-06,
+            "envelope_mse": 0.05554472282528877,
+            "raw_mse": 0.9581576585769653,
+            "regularization": 1.2520237646640453e-07,
+            "total": 0.9720484614372253
+          },
+          {
+            "adapter_l2": 0.0012520237360149622,
+            "baseline_distill_mse": 1.3195930478104856e-05,
+            "envelope_mse": 0.12149433046579361,
+            "raw_mse": 0.8385002017021179,
+            "regularization": 1.2520237646640453e-07,
+            "total": 0.8688805103302002
+          },
+          {
+            "adapter_l2": 0.0012520237360149622,
+            "baseline_distill_mse": 1.4525501683237962e-05,
+            "envelope_mse": 0.24743147194385529,
+            "raw_mse": 0.9893974661827087,
+            "regularization": 1.2520237646640453e-07,
+            "total": 1.0512627363204956
+          },
+          {
+            "adapter_l2": 0.0012520237360149622,
+            "baseline_distill_mse": 1.1790707503678277e-05,
+            "envelope_mse": 0.38699063658714294,
+            "raw_mse": 1.028613805770874,
+            "regularization": 1.2520237646640453e-07,
+            "total": 1.1253674030303955
+          },
+          {
+            "adapter_l2": 0.0012520237360149622,
+            "baseline_distill_mse": 1.32290924739209e-05,
+            "envelope_mse": 0.08323900401592255,
+            "raw_mse": 0.8023775219917297,
+            "regularization": 1.2520237646640453e-07,
+            "total": 0.8231940269470215
+          },
+          {
+            "adapter_l2": 0.0012520237360149622,
+            "baseline_distill_mse": 1.2538903320091777e-05,
+            "envelope_mse": 0.11707522720098495,
+            "raw_mse": 0.7662851810455322,
+            "regularization": 1.2520237646640453e-07,
+            "total": 0.795560359954834
+          },
+          {
+            "adapter_l2": 0.0012520237360149622,
+            "baseline_distill_mse": 1.2444344974937849e-05,
+            "envelope_mse": 0.2526054382324219,
+            "raw_mse": 0.8916868567466736,
+            "regularization": 1.2520237646640453e-07,
+            "total": 0.9548445343971252
+          },
+          {
+            "adapter_l2": 0.0012520237360149622,
+            "baseline_distill_mse": 1.0850684702745639e-05,
+            "envelope_mse": 0.2935149073600769,
+            "raw_mse": 0.7300199270248413,
+            "regularization": 1.2520237646640453e-07,
+            "total": 0.8034042119979858
+          },
+          {
+            "adapter_l2": 0.0012520237360149622,
+            "baseline_distill_mse": 1.2018042070849333e-05,
+            "envelope_mse": 0.2861514985561371,
+            "raw_mse": 0.8671594858169556,
+            "regularization": 1.2520237646640453e-07,
+            "total": 0.9387034773826599
+          },
+          {
+            "adapter_l2": 0.0012520237360149622,
+            "baseline_distill_mse": 1.2718596735794563e-05,
+            "envelope_mse": 0.8954343795776367,
+            "raw_mse": 1.5102592706680298,
+            "regularization": 1.2520237646640453e-07,
+            "total": 1.7341243028640747
+          },
+          {
+            "adapter_l2": 0.0012520237360149622,
+            "baseline_distill_mse": 1.2798783245671075e-05,
+            "envelope_mse": 0.23265667259693146,
+            "raw_mse": 0.8067116141319275,
+            "regularization": 1.2520237646640453e-07,
+            "total": 0.8648822903633118
+          }
+        ]
+      },
+      "valid": {
+        "delta": {
+          "max_abs": 0.012950897216796875,
+          "rms": 0.006106461398303509
+        },
+        "mean": {
+          "adapter_l2": 0.0012616267194971442,
+          "baseline_distill_mse": 3.7761596104246564e-05,
+          "envelope_mse": 0.05783681757748127,
+          "raw_mse": 0.8781597316265106,
+          "regularization": 1.261626749737843e-07,
+          "total": 0.8926379382610321
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0012616267194971442,
+            "baseline_distill_mse": 3.878514689859003e-05,
+            "envelope_mse": 0.06548933684825897,
+            "id": "asmr7_repair_011",
+            "raw_mse": 1.1358811855316162,
+            "regularization": 1.261626749737843e-07,
+            "total": 1.1522730588912964
+          },
+          {
+            "adapter_l2": 0.0012616267194971442,
+            "baseline_distill_mse": 3.67380453099031e-05,
+            "envelope_mse": 0.05018429830670357,
+            "id": "asmr7_repair_022",
+            "raw_mse": 0.620438277721405,
+            "regularization": 1.261626749737843e-07,
+            "total": 0.6330028176307678
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.12680646777153015,
+      "step": 5,
+      "train": {
+        "mean": {
+          "adapter_l2": 0.0012616267194971442,
+          "baseline_distill_mse": 3.944664446559424e-05,
+          "envelope_mse": 0.2228514090180397,
+          "raw_mse": 0.9084039449691772,
+          "regularization": 1.261626749737843e-07,
+          "total": 0.9641366283098857
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0012616267194971442,
+            "baseline_distill_mse": 3.9967453631106764e-05,
+            "envelope_mse": 0.13670241832733154,
+            "raw_mse": 0.7753763794898987,
+            "regularization": 1.261626749737843e-07,
+            "total": 0.8095720410346985
+          },
+          {
+            "adapter_l2": 0.0012616267194971442,
+            "baseline_distill_mse": 3.512208058964461e-05,
+            "envelope_mse": 0.07016018778085709,
+            "raw_mse": 0.8263933062553406,
+            "regularization": 1.261626749737843e-07,
+            "total": 0.8439510464668274
+          },
+          {
+            "adapter_l2": 0.0012616267194971442,
+            "baseline_distill_mse": 4.124462793697603e-05,
+            "envelope_mse": 0.10673437267541885,
+            "raw_mse": 0.9638805985450745,
+            "regularization": 1.261626749737843e-07,
+            "total": 0.9905849099159241
+          },
+          {
+            "adapter_l2": 0.0012616267194971442,
+            "baseline_distill_mse": 4.106243795831688e-05,
+            "envelope_mse": 0.08076492697000504,
+            "raw_mse": 0.895226240158081,
+            "regularization": 1.261626749737843e-07,
+            "total": 0.9154381155967712
+          },
+          {
+            "adapter_l2": 0.0012616267194971442,
+            "baseline_distill_mse": 3.1311355996876955e-05,
+            "envelope_mse": 0.0561622753739357,
+            "raw_mse": 0.958701491355896,
+            "regularization": 1.261626749737843e-07,
+            "total": 0.972757875919342
+          },
+          {
+            "adapter_l2": 0.0012616267194971442,
+            "baseline_distill_mse": 4.1883387893904e-05,
+            "envelope_mse": 0.12173771113157272,
+            "raw_mse": 0.8386656641960144,
+            "regularization": 1.261626749737843e-07,
+            "total": 0.8691211342811584
+          },
+          {
+            "adapter_l2": 0.0012616267194971442,
+            "baseline_distill_mse": 4.4438234908739105e-05,
+            "envelope_mse": 0.24480564892292023,
+            "raw_mse": 0.9867479205131531,
+            "regularization": 1.261626749737843e-07,
+            "total": 1.0479716062545776
+          },
+          {
+            "adapter_l2": 0.0012616267194971442,
+            "baseline_distill_mse": 3.81606187147554e-05,
+            "envelope_mse": 0.38360247015953064,
+            "raw_mse": 1.0252071619033813,
+            "regularization": 1.261626749737843e-07,
+            "total": 1.1211270093917847
+          },
+          {
+            "adapter_l2": 0.0012616267194971442,
+            "baseline_distill_mse": 4.153407644480467e-05,
+            "envelope_mse": 0.08216851204633713,
+            "raw_mse": 0.8012768626213074,
+            "regularization": 1.261626749737843e-07,
+            "total": 0.8218398690223694
+          },
+          {
+            "adapter_l2": 0.0012616267194971442,
+            "baseline_distill_mse": 4.043428270961158e-05,
+            "envelope_mse": 0.11549439281225204,
+            "raw_mse": 0.7647066712379456,
+            "regularization": 1.261626749737843e-07,
+            "total": 0.7936006188392639
+          },
+          {
+            "adapter_l2": 0.0012616267194971442,
+            "baseline_distill_mse": 4.007487223134376e-05,
+            "envelope_mse": 0.24992890655994415,
+            "raw_mse": 0.8890474438667297,
+            "regularization": 1.261626749737843e-07,
+            "total": 0.9515498280525208
+          },
+          {
+            "adapter_l2": 0.0012616267194971442,
+            "baseline_distill_mse": 3.593725705286488e-05,
+            "envelope_mse": 0.2907005250453949,
+            "raw_mse": 0.727190375328064,
+            "regularization": 1.261626749737843e-07,
+            "total": 0.7998835444450378
+          },
+          {
+            "adapter_l2": 0.0012616267194971442,
+            "baseline_distill_mse": 3.8700425648130476e-05,
+            "envelope_mse": 0.28326088190078735,
+            "raw_mse": 0.8642721772193909,
+            "regularization": 1.261626749737843e-07,
+            "total": 0.9351068735122681
+          },
+          {
+            "adapter_l2": 0.0012616267194971442,
+            "baseline_distill_mse": 4.0875846025301144e-05,
+            "envelope_mse": 0.8902575373649597,
+            "raw_mse": 1.504988193511963,
+            "regularization": 1.261626749737843e-07,
+            "total": 1.727573037147522
+          },
+          {
+            "adapter_l2": 0.0012616267194971442,
+            "baseline_distill_mse": 4.095270924153738e-05,
+            "envelope_mse": 0.23029036819934845,
+            "raw_mse": 0.8043786883354187,
+            "regularization": 1.261626749737843e-07,
+            "total": 0.861971914768219
+          }
+        ]
+      },
+      "valid": {
+        "delta": {
+          "max_abs": 0.016778945922851562,
+          "rms": 0.009811618365347385
+        },
+        "mean": {
+          "adapter_l2": 0.0012746946886181831,
+          "baseline_distill_mse": 9.694804975879379e-05,
+          "envelope_mse": 0.05734703503549099,
+          "raw_mse": 0.8776134550571442,
+          "regularization": 1.2746946254083014e-07,
+          "total": 0.891998827457428
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0012746946886181831,
+            "baseline_distill_mse": 9.842082363320515e-05,
+            "envelope_mse": 0.0657396912574768,
+            "id": "asmr7_repair_011",
+            "raw_mse": 1.1360068321228027,
+            "regularization": 1.2746946254083014e-07,
+            "total": 1.1524910926818848
+          },
+          {
+            "adapter_l2": 0.0012746946886181831,
+            "baseline_distill_mse": 9.547527588438243e-05,
+            "envelope_mse": 0.04895437881350517,
+            "id": "asmr7_repair_022",
+            "raw_mse": 0.6192200779914856,
+            "regularization": 1.2746946254083014e-07,
+            "total": 0.6315065622329712
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.1584024578332901,
+      "step": 6,
+      "train": {
+        "mean": {
+          "adapter_l2": 0.0012746946886181831,
+          "baseline_distill_mse": 0.00010081769772417223,
+          "envelope_mse": 0.22082282503445944,
+          "raw_mse": 0.9063364863395691,
+          "regularization": 1.2746946254083014e-07,
+          "total": 0.9615927179654439
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0012746946886181831,
+            "baseline_distill_mse": 0.00010124166146852076,
+            "envelope_mse": 0.1392272561788559,
+            "raw_mse": 0.777830958366394,
+            "regularization": 1.2746946254083014e-07,
+            "total": 0.8126884698867798
+          },
+          {
+            "adapter_l2": 0.0012746946886181831,
+            "baseline_distill_mse": 9.188020339934155e-05,
+            "envelope_mse": 0.06937474012374878,
+            "raw_mse": 0.8256024718284607,
+            "regularization": 1.2746946254083014e-07,
+            "total": 0.8429922461509705
+          },
+          {
+            "adapter_l2": 0.0012746946886181831,
+            "baseline_distill_mse": 0.00010468304390087724,
+            "envelope_mse": 0.1069391518831253,
+            "raw_mse": 0.9640166759490967,
+            "regularization": 1.2746946254083014e-07,
+            "total": 0.9908038973808289
+          },
+          {
+            "adapter_l2": 0.0012746946886181831,
+            "baseline_distill_mse": 0.00010424551146570593,
+            "envelope_mse": 0.07983734458684921,
+            "raw_mse": 0.8942117094993591,
+            "regularization": 1.2746946254083014e-07,
+            "total": 0.9142232537269592
+          },
+          {
+            "adapter_l2": 0.0012746946886181831,
+            "baseline_distill_mse": 8.354817691724747e-05,
+            "envelope_mse": 0.05702674388885498,
+            "raw_mse": 0.9594950079917908,
+            "regularization": 1.2746946254083014e-07,
+            "total": 0.9737935662269592
+          },
+          {
+            "adapter_l2": 0.0012746946886181831,
+            "baseline_distill_mse": 0.00010581441893009469,
+            "envelope_mse": 0.12208213657140732,
+            "raw_mse": 0.8389261960983276,
+            "regularization": 1.2746946254083014e-07,
+            "total": 0.8694998025894165
+          },
+          {
+            "adapter_l2": 0.0012746946886181831,
+            "baseline_distill_mse": 0.00011022724356735125,
+            "envelope_mse": 0.2413485050201416,
+            "raw_mse": 0.9832711219787598,
+            "regularization": 1.2746946254083014e-07,
+            "total": 1.0436633825302124
+          },
+          {
+            "adapter_l2": 0.0012746946886181831,
+            "baseline_distill_mse": 9.859328565653414e-05,
+            "envelope_mse": 0.379047691822052,
+            "raw_mse": 1.020638108253479,
+            "regularization": 1.2746946254083014e-07,
+            "total": 1.1154495477676392
+          },
+          {
+            "adapter_l2": 0.0012746946886181831,
+            "baseline_distill_mse": 0.00010557904170127586,
+            "envelope_mse": 0.08074755221605301,
+            "raw_mse": 0.7998490333557129,
+            "regularization": 1.2746946254083014e-07,
+            "total": 0.8200888633728027
+          },
+          {
+            "adapter_l2": 0.0012746946886181831,
+            "baseline_distill_mse": 0.00010352407116442919,
+            "envelope_mse": 0.11339917033910751,
+            "raw_mse": 0.7625865936279297,
+            "regularization": 1.2746946254083014e-07,
+            "total": 0.7909882664680481
+          },
+          {
+            "adapter_l2": 0.0012746946886181831,
+            "baseline_distill_mse": 0.000102671590866521,
+            "envelope_mse": 0.24636173248291016,
+            "raw_mse": 0.8854652643203735,
+            "regularization": 1.2746946254083014e-07,
+            "total": 0.9471071362495422
+          },
+          {
+            "adapter_l2": 0.0012746946886181831,
+            "baseline_distill_mse": 9.322563710156828e-05,
+            "envelope_mse": 0.2869534194469452,
+            "raw_mse": 0.7234017848968506,
+            "regularization": 1.2746946254083014e-07,
+            "total": 0.7951868772506714
+          },
+          {
+            "adapter_l2": 0.0012746946886181831,
+            "baseline_distill_mse": 9.885887266136706e-05,
+            "envelope_mse": 0.2794215977191925,
+            "raw_mse": 0.8604468107223511,
+            "regularization": 1.2746946254083014e-07,
+            "total": 0.930351734161377
+          },
+          {
+            "adapter_l2": 0.0012746946886181831,
+            "baseline_distill_mse": 0.00010346018825657666,
+            "envelope_mse": 0.8834460377693176,
+            "raw_mse": 1.4980435371398926,
+            "regularization": 1.2746946254083014e-07,
+            "total": 1.7189569473266602
+          },
+          {
+            "adapter_l2": 0.0012746946886181831,
+            "baseline_distill_mse": 0.0001047125188051723,
+            "envelope_mse": 0.22712929546833038,
+            "raw_mse": 0.8012620210647583,
+            "regularization": 1.2746946254083014e-07,
+            "total": 0.8580967783927917
+          }
+        ]
+      },
+      "valid": {
+        "delta": {
+          "max_abs": 0.023750782012939453,
+          "rms": 0.01452215202152729
+        },
+        "mean": {
+          "adapter_l2": 0.0012914685066789389,
+          "baseline_distill_mse": 0.00021167842351133004,
+          "envelope_mse": 0.05676647089421749,
+          "raw_mse": 0.8769612908363342,
+          "regularization": 1.29146840777139e-07,
+          "total": 0.8912588655948639
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0012914685066789389,
+            "baseline_distill_mse": 0.00021337924408726394,
+            "envelope_mse": 0.0660967230796814,
+            "id": "asmr7_repair_011",
+            "raw_mse": 1.1362178325653076,
+            "regularization": 1.29146840777139e-07,
+            "total": 1.1528488397598267
+          },
+          {
+            "adapter_l2": 0.0012914685066789389,
+            "baseline_distill_mse": 0.00020997760293539613,
+            "envelope_mse": 0.047436218708753586,
+            "id": "asmr7_repair_022",
+            "raw_mse": 0.6177047491073608,
+            "regularization": 1.29146840777139e-07,
+            "total": 0.6296688914299011
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.18862879276275635,
+      "step": 7,
+      "train": {
+        "mean": {
+          "adapter_l2": 0.0012914685066789389,
+          "baseline_distill_mse": 0.00021939933940302582,
+          "envelope_mse": 0.21830359548330308,
+          "raw_mse": 0.9037650903065999,
+          "regularization": 1.29146840777139e-07,
+          "total": 0.9584508021672566
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0012914685066789389,
+            "baseline_distill_mse": 0.00021991072571836412,
+            "envelope_mse": 0.14247827231884003,
+            "raw_mse": 0.7809545993804932,
+            "regularization": 1.29146840777139e-07,
+            "total": 0.8166842460632324
+          },
+          {
+            "adapter_l2": 0.0012914685066789389,
+            "baseline_distill_mse": 0.00020265512284822762,
+            "envelope_mse": 0.06841951608657837,
+            "raw_mse": 0.8246238827705383,
+            "regularization": 1.29146840777139e-07,
+            "total": 0.8418301939964294
+          },
+          {
+            "adapter_l2": 0.0012914685066789389,
+            "baseline_distill_mse": 0.00022704130969941616,
+            "envelope_mse": 0.10724933445453644,
+            "raw_mse": 0.9642606973648071,
+            "regularization": 1.29146840777139e-07,
+            "total": 0.9911866784095764
+          },
+          {
+            "adapter_l2": 0.0012914685066789389,
+            "baseline_distill_mse": 0.00022542139049619436,
+            "envelope_mse": 0.07870900630950928,
+            "raw_mse": 0.8929574489593506,
+            "regularization": 1.29146840777139e-07,
+            "total": 0.9127475619316101
+          },
+          {
+            "adapter_l2": 0.0012914685066789389,
+            "baseline_distill_mse": 0.00018650913261808455,
+            "envelope_mse": 0.05816182494163513,
+            "raw_mse": 0.9605334401130676,
+            "regularization": 1.29146840777139e-07,
+            "total": 0.9751672744750977
+          },
+          {
+            "adapter_l2": 0.0012914685066789389,
+            "baseline_distill_mse": 0.0002292837161803618,
+            "envelope_mse": 0.12257605046033859,
+            "raw_mse": 0.8392963409423828,
+            "regularization": 1.29146840777139e-07,
+            "total": 0.870055079460144
+          },
+          {
+            "adapter_l2": 0.0012914685066789389,
+            "baseline_distill_mse": 0.00023508512822445482,
+            "envelope_mse": 0.23705101013183594,
+            "raw_mse": 0.9789356589317322,
+            "regularization": 1.29146840777139e-07,
+            "total": 1.0383161306381226
+          },
+          {
+            "adapter_l2": 0.0012914685066789389,
+            "baseline_distill_mse": 0.0002165461628464982,
+            "envelope_mse": 0.3732921779155731,
+            "raw_mse": 1.014838457107544,
+            "regularization": 1.29146840777139e-07,
+            "total": 1.1082698106765747
+          },
+          {
+            "adapter_l2": 0.0012914685066789389,
+            "baseline_distill_mse": 0.00022867656662128866,
+            "envelope_mse": 0.07900955528020859,
+            "raw_mse": 0.798065185546875,
+            "regularization": 1.29146840777139e-07,
+            "total": 0.8179320096969604
+          },
+          {
+            "adapter_l2": 0.0012914685066789389,
+            "baseline_distill_mse": 0.00022382143652066588,
+            "envelope_mse": 0.11082317680120468,
+            "raw_mse": 0.7600145936012268,
+            "regularization": 1.29146840777139e-07,
+            "total": 0.7878324389457703
+          },
+          {
+            "adapter_l2": 0.0012914685066789389,
+            "baseline_distill_mse": 0.00022413319675251842,
+            "envelope_mse": 0.24189133942127228,
+            "raw_mse": 0.8810057640075684,
+            "regularization": 1.29146840777139e-07,
+            "total": 0.9415907859802246
+          },
+          {
+            "adapter_l2": 0.0012914685066789389,
+            "baseline_distill_mse": 0.0002049296599579975,
+            "envelope_mse": 0.2822380065917969,
+            "raw_mse": 0.7186573147773743,
+            "regularization": 1.29146840777139e-07,
+            "total": 0.7893193960189819
+          },
+          {
+            "adapter_l2": 0.0012914685066789389,
+            "baseline_distill_mse": 0.00021593163546640426,
+            "envelope_mse": 0.2745823264122009,
+            "raw_mse": 0.8556099534034729,
+            "regularization": 1.29146840777139e-07,
+            "total": 0.9243636131286621
+          },
+          {
+            "adapter_l2": 0.0012914685066789389,
+            "baseline_distill_mse": 0.00022406011703424156,
+            "envelope_mse": 0.8748533129692078,
+            "raw_mse": 1.4893358945846558,
+            "regularization": 1.29146840777139e-07,
+            "total": 1.7081613540649414
+          },
+          {
+            "adapter_l2": 0.0012914685066789389,
+            "baseline_distill_mse": 0.00022698479006066918,
+            "envelope_mse": 0.22321902215480804,
+            "raw_mse": 0.7973871231079102,
+            "regularization": 1.29146840777139e-07,
+            "total": 0.853305459022522
+          }
+        ]
+      },
+      "valid": {
+        "delta": {
+          "max_abs": 0.03294658660888672,
+          "rms": 0.0203077532351017
+        },
+        "mean": {
+          "adapter_l2": 0.0013121559750288725,
+          "baseline_distill_mse": 0.0004129176231799647,
+          "envelope_mse": 0.05612134002149105,
+          "raw_mse": 0.8762407302856445,
+          "regularization": 1.3121560016315925e-07,
+          "total": 0.8904776573181152
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0013121559750288725,
+            "baseline_distill_mse": 0.0004140278906561434,
+            "envelope_mse": 0.0666060596704483,
+            "id": "asmr7_repair_011",
+            "raw_mse": 1.1365587711334229,
+            "regularization": 1.3121560016315925e-07,
+            "total": 1.1534174680709839
+          },
+          {
+            "adapter_l2": 0.0013121559750288725,
+            "baseline_distill_mse": 0.000411807355703786,
+            "envelope_mse": 0.0456366203725338,
+            "id": "asmr7_repair_022",
+            "raw_mse": 0.6159226894378662,
+            "regularization": 1.3121560016315925e-07,
+            "total": 0.6275378465652466
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.21679699420928955,
+      "step": 8,
+      "train": {
+        "mean": {
+          "adapter_l2": 0.0013121559750288725,
+          "baseline_distill_mse": 0.00042617729826209446,
+          "envelope_mse": 0.21528697659571966,
+          "raw_mse": 0.9006915847460429,
+          "regularization": 1.3121560016315925e-07,
+          "total": 0.954726533095042
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0013121559750288725,
+            "baseline_distill_mse": 0.00042583959293551743,
+            "envelope_mse": 0.1465013474225998,
+            "raw_mse": 0.7848621010780334,
+            "regularization": 1.3121560016315925e-07,
+            "total": 0.8217004537582397
+          },
+          {
+            "adapter_l2": 0.0013121559750288725,
+            "baseline_distill_mse": 0.00039762145024724305,
+            "envelope_mse": 0.06731098145246506,
+            "raw_mse": 0.823518693447113,
+            "regularization": 1.3121560016315925e-07,
+            "total": 0.8405453562736511
+          },
+          {
+            "adapter_l2": 0.0013121559750288725,
+            "baseline_distill_mse": 0.00043932656990364194,
+            "envelope_mse": 0.10769351571798325,
+            "raw_mse": 0.964630126953125,
+            "regularization": 1.3121560016315925e-07,
+            "total": 0.991773247718811
+          },
+          {
+            "adapter_l2": 0.0013121559750288725,
+            "baseline_distill_mse": 0.00043536844896152616,
+            "envelope_mse": 0.0774020105600357,
+            "raw_mse": 0.8915504217147827,
+            "regularization": 1.3121560016315925e-07,
+            "total": 0.911118745803833
+          },
+          {
+            "adapter_l2": 0.0013121559750288725,
+            "baseline_distill_mse": 0.00036906677996739745,
+            "envelope_mse": 0.05961427092552185,
+            "raw_mse": 0.961887001991272,
+            "regularization": 1.3121560016315925e-07,
+            "total": 0.9769752025604248
+          },
+          {
+            "adapter_l2": 0.0013121559750288725,
+            "baseline_distill_mse": 0.0004422695783432573,
+            "envelope_mse": 0.12324213981628418,
+            "raw_mse": 0.8398088812828064,
+            "regularization": 1.3121560016315925e-07,
+            "total": 0.8708406686782837
+          },
+          {
+            "adapter_l2": 0.0013121559750288725,
+            "baseline_distill_mse": 0.000450521387392655,
+            "envelope_mse": 0.2318664789199829,
+            "raw_mse": 0.9737034440040588,
+            "regularization": 1.3121560016315925e-07,
+            "total": 1.0318955183029175
+          },
+          {
+            "adapter_l2": 0.0013121559750288725,
+            "baseline_distill_mse": 0.0004222705902066082,
+            "envelope_mse": 0.36635085940361023,
+            "raw_mse": 1.0078436136245728,
+            "regularization": 1.3121560016315925e-07,
+            "total": 1.0996425151824951
+          },
+          {
+            "adapter_l2": 0.0013121559750288725,
+            "baseline_distill_mse": 0.00044295171392150223,
+            "envelope_mse": 0.07695040851831436,
+            "raw_mse": 0.7959789633750916,
+            "regularization": 1.3121560016315925e-07,
+            "total": 0.8154381513595581
+          },
+          {
+            "adapter_l2": 0.0013121559750288725,
+            "baseline_distill_mse": 0.00043533911230042577,
+            "envelope_mse": 0.1077132374048233,
+            "raw_mse": 0.7568740844726562,
+            "regularization": 1.3121560016315925e-07,
+            "total": 0.784020185470581
+          },
+          {
+            "adapter_l2": 0.0013121559750288725,
+            "baseline_distill_mse": 0.00043613658635877073,
+            "envelope_mse": 0.23649059236049652,
+            "raw_mse": 0.875603199005127,
+            "regularization": 1.3121560016315925e-07,
+            "total": 0.9349440336227417
+          },
+          {
+            "adapter_l2": 0.0013121559750288725,
+            "baseline_distill_mse": 0.000400998949771747,
+            "envelope_mse": 0.2765246629714966,
+            "raw_mse": 0.7129029035568237,
+            "regularization": 1.3121560016315925e-07,
+            "total": 0.7822346687316895
+          },
+          {
+            "adapter_l2": 0.0013121559750288725,
+            "baseline_distill_mse": 0.0004193354689050466,
+            "envelope_mse": 0.2687532901763916,
+            "raw_mse": 0.8497820496559143,
+            "regularization": 1.3121560016315925e-07,
+            "total": 0.9171801805496216
+          },
+          {
+            "adapter_l2": 0.0013121559750288725,
+            "baseline_distill_mse": 0.0004342296742834151,
+            "envelope_mse": 0.8644188046455383,
+            "raw_mse": 1.4787390232086182,
+            "regularization": 1.3121560016315925e-07,
+            "total": 1.6950609683990479
+          },
+          {
+            "adapter_l2": 0.0013121559750288725,
+            "baseline_distill_mse": 0.00044138357043266296,
+            "envelope_mse": 0.21847204864025116,
+            "raw_mse": 0.7926892638206482,
+            "regularization": 1.3121560016315925e-07,
+            "total": 0.8475281000137329
+          }
+        ]
+      },
+      "valid": {
+        "delta": {
+          "max_abs": 0.04124021530151367,
+          "rms": 0.027194764465093613
+        },
+        "mean": {
+          "adapter_l2": 0.001336971647106111,
+          "baseline_distill_mse": 0.0007392623811028898,
+          "envelope_mse": 0.05544214881956577,
+          "raw_mse": 0.8754630982875824,
+          "regularization": 1.3369715645694669e-07,
+          "total": 0.8896933794021606
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.001336971647106111,
+            "baseline_distill_mse": 0.0007386280340142548,
+            "envelope_mse": 0.067299984395504,
+            "id": "asmr7_repair_011",
+            "raw_mse": 1.137052059173584,
+            "regularization": 1.3369715645694669e-07,
+            "total": 1.15424644947052
+          },
+          {
+            "adapter_l2": 0.001336971647106111,
+            "baseline_distill_mse": 0.0007398967281915247,
+            "envelope_mse": 0.04358431324362755,
+            "id": "asmr7_repair_022",
+            "raw_mse": 0.6138741374015808,
+            "regularization": 1.3369715645694669e-07,
+            "total": 0.6251403093338013
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.24223215878009796,
+      "step": 9,
+      "train": {
+        "mean": {
+          "adapter_l2": 0.001336971647106111,
+          "baseline_distill_mse": 0.0007614158598395686,
+          "envelope_mse": 0.2117919345696767,
+          "raw_mse": 0.89712553024292,
+          "regularization": 1.3369715645694669e-07,
+          "total": 0.9504543383916219
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.001336971647106111,
+            "baseline_distill_mse": 0.0007587379077449441,
+            "envelope_mse": 0.1513780802488327,
+            "raw_mse": 0.7895863056182861,
+            "regularization": 1.3369715645694669e-07,
+            "total": 0.8278103470802307
+          },
+          {
+            "adapter_l2": 0.001336971647106111,
+            "baseline_distill_mse": 0.0007160165696404874,
+            "envelope_mse": 0.06607931107282639,
+            "raw_mse": 0.8222599029541016,
+            "regularization": 1.3369715645694669e-07,
+            "total": 0.839137852191925
+          },
+          {
+            "adapter_l2": 0.001336971647106111,
+            "baseline_distill_mse": 0.0007823480409570038,
+            "envelope_mse": 0.10831253975629807,
+            "raw_mse": 0.9651351571083069,
+            "regularization": 1.3369715645694669e-07,
+            "total": 0.9926046133041382
+          },
+          {
+            "adapter_l2": 0.001336971647106111,
+            "baseline_distill_mse": 0.0007744791219010949,
+            "envelope_mse": 0.07594084739685059,
+            "raw_mse": 0.8899297118186951,
+            "regularization": 1.3369715645694669e-07,
+            "total": 0.909302294254303
+          },
+          {
+            "adapter_l2": 0.001336971647106111,
+            "baseline_distill_mse": 0.000670022564008832,
+            "envelope_mse": 0.061438798904418945,
+            "raw_mse": 0.9635799527168274,
+            "regularization": 1.3369715645694669e-07,
+            "total": 0.9792748093605042
+          },
+          {
+            "adapter_l2": 0.001336971647106111,
+            "baseline_distill_mse": 0.0007885516970418394,
+            "envelope_mse": 0.12413521111011505,
+            "raw_mse": 0.8405192494392395,
+            "regularization": 1.3369715645694669e-07,
+            "total": 0.8719474673271179
+          },
+          {
+            "adapter_l2": 0.001336971647106111,
+            "baseline_distill_mse": 0.000795955304056406,
+            "envelope_mse": 0.22581849992275238,
+            "raw_mse": 0.9676285982131958,
+            "regularization": 1.3369715645694669e-07,
+            "total": 1.0244812965393066
+          },
+          {
+            "adapter_l2": 0.001336971647106111,
+            "baseline_distill_mse": 0.0007567790453322232,
+            "envelope_mse": 0.3581627905368805,
+            "raw_mse": 0.9996173977851868,
+            "regularization": 1.3369715645694669e-07,
+            "total": 1.0895365476608276
+          },
+          {
+            "adapter_l2": 0.001336971647106111,
+            "baseline_distill_mse": 0.0007902804645709693,
+            "envelope_mse": 0.07458223402500153,
+            "raw_mse": 0.7935654520988464,
+            "regularization": 1.3369715645694669e-07,
+            "total": 0.8126062750816345
+          },
+          {
+            "adapter_l2": 0.001336971647106111,
+            "baseline_distill_mse": 0.0007780675077810884,
+            "envelope_mse": 0.1041039377450943,
+            "raw_mse": 0.7532436847686768,
+            "regularization": 1.3369715645694669e-07,
+            "total": 0.779658854007721
+          },
+          {
+            "adapter_l2": 0.001336971647106111,
+            "baseline_distill_mse": 0.0007796876598149538,
+            "envelope_mse": 0.2301599532365799,
+            "raw_mse": 0.8692583441734314,
+            "regularization": 1.3369715645694669e-07,
+            "total": 0.9271882772445679
+          },
+          {
+            "adapter_l2": 0.001336971647106111,
+            "baseline_distill_mse": 0.0007204462890513241,
+            "envelope_mse": 0.2697913348674774,
+            "raw_mse": 0.706125795841217,
+            "regularization": 1.3369715645694669e-07,
+            "total": 0.773934006690979
+          },
+          {
+            "adapter_l2": 0.001336971647106111,
+            "baseline_distill_mse": 0.0007492729346267879,
+            "envelope_mse": 0.26189956068992615,
+            "raw_mse": 0.8429100513458252,
+            "regularization": 1.3369715645694669e-07,
+            "total": 0.9087596535682678
+          },
+          {
+            "adapter_l2": 0.001336971647106111,
+            "baseline_distill_mse": 0.0007734165410511196,
+            "envelope_mse": 0.8521220088005066,
+            "raw_mse": 1.4663114547729492,
+            "regularization": 1.3369715645694669e-07,
+            "total": 1.6797287464141846
+          },
+          {
+            "adapter_l2": 0.001336971647106111,
+            "baseline_distill_mse": 0.0007871762500144541,
+            "envelope_mse": 0.21295391023159027,
+            "raw_mse": 0.7872118949890137,
+            "regularization": 1.3369715645694669e-07,
+            "total": 0.8408440351486206
+          }
+        ]
+      },
+      "valid": {
+        "delta": {
+          "max_abs": 0.05290794372558594,
+          "rms": 0.03524301201105118
+        },
+        "mean": {
+          "adapter_l2": 0.0013661178527399898,
+          "baseline_distill_mse": 0.0012395879020914435,
+          "envelope_mse": 0.05476183071732521,
+          "raw_mse": 0.8746980130672455,
+          "regularization": 1.366117885481799e-07,
+          "total": 0.8890084028244019
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0013661178527399898,
+            "baseline_distill_mse": 0.0012342138215899467,
+            "envelope_mse": 0.06821808964014053,
+            "id": "asmr7_repair_011",
+            "raw_mse": 1.1378034353256226,
+            "regularization": 1.366117885481799e-07,
+            "total": 1.1554752588272095
+          },
+          {
+            "adapter_l2": 0.0013661178527399898,
+            "baseline_distill_mse": 0.0012449619825929403,
+            "envelope_mse": 0.04130557179450989,
+            "id": "asmr7_repair_022",
+            "raw_mse": 0.6115925908088684,
+            "regularization": 1.366117885481799e-07,
+            "total": 0.6225415468215942
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.26418885588645935,
+      "step": 10,
+      "train": {
+        "mean": {
+          "adapter_l2": 0.0013661178527399898,
+          "baseline_distill_mse": 0.001274663807513813,
+          "envelope_mse": 0.20782796690861385,
+          "raw_mse": 0.8930823763211568,
+          "regularization": 1.366117885481799e-07,
+          "total": 0.9456768035888672
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0013661178527399898,
+            "baseline_distill_mse": 0.0012687082635238767,
+            "envelope_mse": 0.15719196200370789,
+            "raw_mse": 0.7952011227607727,
+            "regularization": 1.366117885481799e-07,
+            "total": 0.8351336121559143
+          },
+          {
+            "adapter_l2": 0.0013661178527399898,
+            "baseline_distill_mse": 0.0012047126656398177,
+            "envelope_mse": 0.06474538147449493,
+            "raw_mse": 0.8209015130996704,
+            "regularization": 1.366117885481799e-07,
+            "total": 0.8376903533935547
+          },
+          {
+            "adapter_l2": 0.0013661178527399898,
+            "baseline_distill_mse": 0.001306625665165484,
+            "envelope_mse": 0.10915849357843399,
+            "raw_mse": 0.9658506512641907,
+            "regularization": 1.366117885481799e-07,
+            "total": 0.9937937259674072
+          },
+          {
+            "adapter_l2": 0.0013661178527399898,
+            "baseline_distill_mse": 0.0012930722441524267,
+            "envelope_mse": 0.07435400784015656,
+            "raw_mse": 0.888164222240448,
+            "regularization": 1.366117885481799e-07,
+            "total": 0.9073993563652039
+          },
+          {
+            "adapter_l2": 0.0013661178527399898,
+            "baseline_distill_mse": 0.0011318137403577566,
+            "envelope_mse": 0.06367743015289307,
+            "raw_mse": 0.9656776189804077,
+            "regularization": 1.366117885481799e-07,
+            "total": 0.9821629524230957
+          },
+          {
+            "adapter_l2": 0.0013661178527399898,
+            "baseline_distill_mse": 0.0013139821821823716,
+            "envelope_mse": 0.12529967725276947,
+            "raw_mse": 0.8415112495422363,
+            "regularization": 1.366117885481799e-07,
+            "total": 0.8734932541847229
+          },
+          {
+            "adapter_l2": 0.0013661178527399898,
+            "baseline_distill_mse": 0.0013221331173554063,
+            "envelope_mse": 0.21889157593250275,
+            "raw_mse": 0.9606342911720276,
+            "regularization": 1.366117885481799e-07,
+            "total": 1.016018271446228
+          },
+          {
+            "adapter_l2": 0.0013661178527399898,
+            "baseline_distill_mse": 0.001271093962714076,
+            "envelope_mse": 0.34870946407318115,
+            "raw_mse": 0.9901268482208252,
+            "regularization": 1.366117885481799e-07,
+            "total": 1.0779398679733276
+          },
+          {
+            "adapter_l2": 0.0013661178527399898,
+            "baseline_distill_mse": 0.001321587827987969,
+            "envelope_mse": 0.07195063680410385,
+            "raw_mse": 0.7908644676208496,
+            "regularization": 1.366117885481799e-07,
+            "total": 0.8095130324363708
+          },
+          {
+            "adapter_l2": 0.0013661178527399898,
+            "baseline_distill_mse": 0.0013007170055061579,
+            "envelope_mse": 0.10003206878900528,
+            "raw_mse": 0.7491645216941833,
+            "regularization": 1.366117885481799e-07,
+            "total": 0.774823009967804
+          },
+          {
+            "adapter_l2": 0.0013661178527399898,
+            "baseline_distill_mse": 0.001306107733398676,
+            "envelope_mse": 0.2228965312242508,
+            "raw_mse": 0.8619979619979858,
+            "regularization": 1.366117885481799e-07,
+            "total": 0.9183752536773682
+          },
+          {
+            "adapter_l2": 0.0013661178527399898,
+            "baseline_distill_mse": 0.0012126052752137184,
+            "envelope_mse": 0.26202473044395447,
+            "raw_mse": 0.6983073353767395,
+            "regularization": 1.366117885481799e-07,
+            "total": 0.7644199132919312
+          },
+          {
+            "adapter_l2": 0.0013661178527399898,
+            "baseline_distill_mse": 0.0012565571814775467,
+            "envelope_mse": 0.25399231910705566,
+            "raw_mse": 0.8350125551223755,
+            "regularization": 1.366117885481799e-07,
+            "total": 0.8991390466690063
+          },
+          {
+            "adapter_l2": 0.0013661178527399898,
+            "baseline_distill_mse": 0.0012929587392136455,
+            "envelope_mse": 0.8378778696060181,
+            "raw_mse": 1.4518760442733765,
+            "regularization": 1.366117885481799e-07,
+            "total": 1.661992073059082
+          },
+          {
+            "adapter_l2": 0.0013661178527399898,
+            "baseline_distill_mse": 0.0013172815088182688,
+            "envelope_mse": 0.2066173553466797,
+            "raw_mse": 0.7809452414512634,
+            "regularization": 1.366117885481799e-07,
+            "total": 0.833258330821991
+          }
+        ]
+      },
+      "valid": {
+        "delta": {
+          "max_abs": 0.06575775146484375,
+          "rms": 0.04451100528240204
+        },
+        "mean": {
+          "adapter_l2": 0.0013997751520946622,
+          "baseline_distill_mse": 0.0019750099163502455,
+          "envelope_mse": 0.054142218083143234,
+          "raw_mse": 0.8739559948444366,
+          "regularization": 1.3997751580063778e-07,
+          "total": 0.8884791731834412
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0013997751520946622,
+            "baseline_distill_mse": 0.001961542759090662,
+            "envelope_mse": 0.06944139301776886,
+            "id": "asmr7_repair_011",
+            "raw_mse": 1.1387768983840942,
+            "regularization": 1.3997751580063778e-07,
+            "total": 1.1571180820465088
+          },
+          {
+            "adapter_l2": 0.0013997751520946622,
+            "baseline_distill_mse": 0.001988477073609829,
+            "envelope_mse": 0.03884304314851761,
+            "id": "asmr7_repair_022",
+            "raw_mse": 0.609135091304779,
+            "regularization": 1.3997751580063778e-07,
+            "total": 0.6198402643203735
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.281921923160553,
+      "step": 11,
+      "train": {
+        "mean": {
+          "adapter_l2": 0.0013997751520946622,
+          "baseline_distill_mse": 0.002028315452237924,
+          "envelope_mse": 0.20343947062889736,
+          "raw_mse": 0.8886012355486552,
+          "regularization": 1.3997751580063778e-07,
+          "total": 0.9404753843943278
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0013997751520946622,
+            "baseline_distill_mse": 0.0020161413121968508,
+            "envelope_mse": 0.16404615342617035,
+            "raw_mse": 0.8018646836280823,
+            "regularization": 1.3997751580063778e-07,
+            "total": 0.8438844084739685
+          },
+          {
+            "adapter_l2": 0.0013997751520946622,
+            "baseline_distill_mse": 0.0019254701910540462,
+            "envelope_mse": 0.06337942183017731,
+            "raw_mse": 0.8195289373397827,
+            "regularization": 1.3997751580063778e-07,
+            "total": 0.8363366723060608
+          },
+          {
+            "adapter_l2": 0.0013997751520946622,
+            "baseline_distill_mse": 0.0020788228139281273,
+            "envelope_mse": 0.11031844466924667,
+            "raw_mse": 0.9668344259262085,
+            "regularization": 1.3997751580063778e-07,
+            "total": 0.9954535365104675
+          },
+          {
+            "adapter_l2": 0.0013997751520946622,
+            "baseline_distill_mse": 0.002052474766969681,
+            "envelope_mse": 0.07270029932260513,
+            "raw_mse": 0.8862938284873962,
+            "regularization": 1.3997751580063778e-07,
+            "total": 0.9054952263832092
+          },
+          {
+            "adapter_l2": 0.0013997751520946622,
+            "baseline_distill_mse": 0.0018155844882130623,
+            "envelope_mse": 0.06641250848770142,
+            "raw_mse": 0.9682804942131042,
+            "regularization": 1.3997751580063778e-07,
+            "total": 0.9857915043830872
+          },
+          {
+            "adapter_l2": 0.0013997751520946622,
+            "baseline_distill_mse": 0.002086866647005081,
+            "envelope_mse": 0.12681105732917786,
+            "raw_mse": 0.8428139686584473,
+            "regularization": 1.3997751580063778e-07,
+            "total": 0.8755602836608887
+          },
+          {
+            "adapter_l2": 0.0013997751520946622,
+            "baseline_distill_mse": 0.0020915651693940163,
+            "envelope_mse": 0.21109533309936523,
+            "raw_mse": 0.952793300151825,
+            "regularization": 1.3997751580063778e-07,
+            "total": 1.00661301612854
+          },
+          {
+            "adapter_l2": 0.0013997751520946622,
+            "baseline_distill_mse": 0.0020260303281247616,
+            "envelope_mse": 0.3380090296268463,
+            "raw_mse": 0.9793799519538879,
+            "regularization": 1.3997751580063778e-07,
+            "total": 1.0648953914642334
+          },
+          {
+            "adapter_l2": 0.0013997751520946622,
+            "baseline_distill_mse": 0.002101294696331024,
+            "envelope_mse": 0.06909161061048508,
+            "raw_mse": 0.7879656553268433,
+            "regularization": 1.3997751580063778e-07,
+            "total": 0.8062893152236938
+          },
+          {
+            "adapter_l2": 0.0013997751520946622,
+            "baseline_distill_mse": 0.00206831656396389,
+            "envelope_mse": 0.09550489485263824,
+            "raw_mse": 0.7445873618125916,
+            "regularization": 1.3997751580063778e-07,
+            "total": 0.7694978713989258
+          },
+          {
+            "adapter_l2": 0.0013997751520946622,
+            "baseline_distill_mse": 0.0020791979040950537,
+            "envelope_mse": 0.2147056609392166,
+            "raw_mse": 0.8537595272064209,
+            "regularization": 1.3997751580063778e-07,
+            "total": 0.9084756970405579
+          },
+          {
+            "adapter_l2": 0.0013997751520946622,
+            "baseline_distill_mse": 0.0019360218429937959,
+            "envelope_mse": 0.2532486021518707,
+            "raw_mse": 0.6894702315330505,
+            "regularization": 1.3997751580063778e-07,
+            "total": 0.7537505626678467
+          },
+          {
+            "adapter_l2": 0.0013997751520946622,
+            "baseline_distill_mse": 0.0019995556212961674,
+            "envelope_mse": 0.24507732689380646,
+            "raw_mse": 0.8260664939880371,
+            "regularization": 1.3997751580063778e-07,
+            "total": 0.8883357048034668
+          },
+          {
+            "adapter_l2": 0.0013997751520946622,
+            "baseline_distill_mse": 0.0020547176245599985,
+            "envelope_mse": 0.8216589093208313,
+            "raw_mse": 1.4354573488235474,
+            "regularization": 1.3997751580063778e-07,
+            "total": 1.641899585723877
+          },
+          {
+            "adapter_l2": 0.0013997751520946622,
+            "baseline_distill_mse": 0.002092671813443303,
+            "envelope_mse": 0.19953280687332153,
+            "raw_mse": 0.773922324180603,
+            "regularization": 1.3997751580063778e-07,
+            "total": 0.8248519897460938
+          }
+        ]
+      },
+      "valid": {
+        "delta": {
+          "max_abs": 0.07968521118164062,
+          "rms": 0.05502251163125038
+        },
+        "mean": {
+          "adapter_l2": 0.0014380880165845156,
+          "baseline_distill_mse": 0.00301495217718184,
+          "envelope_mse": 0.05364231951534748,
+          "raw_mse": 0.873328447341919,
+          "regularization": 1.4380880486442038e-07,
+          "total": 0.8882466554641724
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0014380880165845156,
+            "baseline_distill_mse": 0.002987832762300968,
+            "envelope_mse": 0.07102485746145248,
+            "id": "asmr7_repair_011",
+            "raw_mse": 1.1400905847549438,
+            "regularization": 1.4380880486442038e-07,
+            "total": 1.1593408584594727
+          },
+          {
+            "adapter_l2": 0.0014380880165845156,
+            "baseline_distill_mse": 0.0030420715920627117,
+            "envelope_mse": 0.03625978156924248,
+            "id": "asmr7_repair_022",
+            "raw_mse": 0.606566309928894,
+            "regularization": 1.4380880486442038e-07,
+            "total": 0.6171524524688721
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.29466909170150757,
+      "step": 12,
+      "train": {
+        "mean": {
+          "adapter_l2": 0.0014380880165845156,
+          "baseline_distill_mse": 0.0030931456635395686,
+          "envelope_mse": 0.1986710471411546,
+          "raw_mse": 0.883713960647583,
+          "regularization": 1.4380880486442038e-07,
+          "total": 0.9349284052848816
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.0014380880165845156,
+            "baseline_distill_mse": 0.0030707477126270533,
+            "envelope_mse": 0.17200861871242523,
+            "raw_mse": 0.80958092212677,
+            "regularization": 1.4380880486442038e-07,
+            "total": 0.8541185259819031
+          },
+          {
+            "adapter_l2": 0.0014380880165845156,
+            "baseline_distill_mse": 0.0029471199959516525,
+            "envelope_mse": 0.062026429921388626,
+            "raw_mse": 0.8181354403495789,
+            "regularization": 1.4380880486442038e-07,
+            "total": 0.8351157307624817
+          },
+          {
+            "adapter_l2": 0.0014380880165845156,
+            "baseline_distill_mse": 0.003165023634210229,
+            "envelope_mse": 0.11183760315179825,
+            "raw_mse": 0.968147337436676,
+            "regularization": 1.4380880486442038e-07,
+            "total": 0.9976893663406372
+          },
+          {
+            "adapter_l2": 0.0014380880165845156,
+            "baseline_distill_mse": 0.0031246517319232225,
+            "envelope_mse": 0.07103433459997177,
+            "raw_mse": 0.8843542337417603,
+            "regularization": 1.4380880486442038e-07,
+            "total": 0.9036752581596375
+          },
+          {
+            "adapter_l2": 0.0014380880165845156,
+            "baseline_distill_mse": 0.002786398632451892,
+            "envelope_mse": 0.06970986723899841,
+            "raw_mse": 0.971406102180481,
+            "regularization": 1.4380880486442038e-07,
+            "total": 0.9902268648147583
+          },
+          {
+            "adapter_l2": 0.0014380880165845156,
+            "baseline_distill_mse": 0.0031771997455507517,
+            "envelope_mse": 0.1287313550710678,
+            "raw_mse": 0.8444491028785706,
+            "regularization": 1.4380880486442038e-07,
+            "total": 0.8782206177711487
+          },
+          {
+            "adapter_l2": 0.0014380880165845156,
+            "baseline_distill_mse": 0.0031723908614367247,
+            "envelope_mse": 0.20250175893306732,
+            "raw_mse": 0.9441601037979126,
+            "regularization": 1.4380880486442038e-07,
+            "total": 0.996371865272522
+          },
+          {
+            "adapter_l2": 0.0014380880165845156,
+            "baseline_distill_mse": 0.003095635212957859,
+            "envelope_mse": 0.3260684907436371,
+            "raw_mse": 0.9673516750335693,
+            "regularization": 1.4380880486442038e-07,
+            "total": 1.0504167079925537
+          },
+          {
+            "adapter_l2": 0.0014380880165845156,
+            "baseline_distill_mse": 0.0032017005141824484,
+            "envelope_mse": 0.0660698190331459,
+            "raw_mse": 0.784844696521759,
+            "regularization": 1.4380880486442038e-07,
+            "total": 0.802963137626648
+          },
+          {
+            "adapter_l2": 0.0014380880165845156,
+            "baseline_distill_mse": 0.0031517953611910343,
+            "envelope_mse": 0.09060152620077133,
+            "raw_mse": 0.7396499514579773,
+            "regularization": 1.4380880486442038e-07,
+            "total": 0.7638763189315796
+          },
+          {
+            "adapter_l2": 0.0014380880165845156,
+            "baseline_distill_mse": 0.0031740462873131037,
+            "envelope_mse": 0.2056211531162262,
+            "raw_mse": 0.8446357846260071,
+            "regularization": 1.4380880486442038e-07,
+            "total": 0.8976282477378845
+          },
+          {
+            "adapter_l2": 0.0014380880165845156,
+            "baseline_distill_mse": 0.0029593000654131174,
+            "envelope_mse": 0.2435080111026764,
+            "raw_mse": 0.6796677112579346,
+            "regularization": 1.4380880486442038e-07,
+            "total": 0.7420244812965393
+          },
+          {
+            "adapter_l2": 0.0014380880165845156,
+            "baseline_distill_mse": 0.00305116712115705,
+            "envelope_mse": 0.23517131805419922,
+            "raw_mse": 0.8161225914955139,
+            "regularization": 1.4380880486442038e-07,
+            "total": 0.8764411211013794
+          },
+          {
+            "adapter_l2": 0.0014380880165845156,
+            "baseline_distill_mse": 0.0031302261631935835,
+            "envelope_mse": 0.8034740686416626,
+            "raw_mse": 1.4170584678649902,
+            "regularization": 1.4380880486442038e-07,
+            "total": 1.6194921731948853
+          },
+          {
+            "adapter_l2": 0.0014380880165845156,
+            "baseline_distill_mse": 0.003189781913533807,
+            "envelope_mse": 0.19170135259628296,
+            "raw_mse": 0.7661452889442444,
+            "regularization": 1.4380880486442038e-07,
+            "total": 0.8156656622886658
+          }
+        ]
+      },
+      "valid": {
+        "delta": {
+          "max_abs": 0.09539985656738281,
+          "rms": 0.06679866462945938
+        },
+        "mean": {
+          "adapter_l2": 0.001481137122027576,
+          "baseline_distill_mse": 0.004440057324245572,
+          "envelope_mse": 0.053338708356022835,
+          "raw_mse": 0.8728778064250946,
+          "regularization": 1.4811371329415124e-07,
+          "total": 0.8884326219558716
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.001481137122027576,
+            "baseline_distill_mse": 0.004392411559820175,
+            "envelope_mse": 0.07304862886667252,
+            "id": "asmr7_repair_011",
+            "raw_mse": 1.1418362855911255,
+            "regularization": 1.4811371329415124e-07,
+            "total": 1.1622947454452515
+          },
+          {
+            "adapter_l2": 0.001481137122027576,
+            "baseline_distill_mse": 0.004487703088670969,
+            "envelope_mse": 0.033628787845373154,
+            "id": "asmr7_repair_022",
+            "raw_mse": 0.6039193272590637,
+            "regularization": 1.4811371329415124e-07,
+            "total": 0.6145704984664917
+          }
+        ]
+      }
+    },
+    {
+      "gradient_norm": 0.30174556374549866,
+      "step": 13,
+      "train": {
+        "mean": {
+          "adapter_l2": 0.001481137122027576,
+          "baseline_distill_mse": 0.004550626377264658,
+          "envelope_mse": 0.19359341412782669,
+          "raw_mse": 0.8785247802734375,
+          "regularization": 1.4811371329415124e-07,
+          "total": 0.9291985750198364
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.001481137122027576,
+            "baseline_distill_mse": 0.004513891879469156,
+            "envelope_mse": 0.18118269741535187,
+            "raw_mse": 0.8184806704521179,
+            "regularization": 1.4811371329415124e-07,
+            "total": 0.8660333752632141
+          },
+          {
+            "adapter_l2": 0.001481137122027576,
+            "baseline_distill_mse": 0.004351447336375713,
+            "envelope_mse": 0.060757458209991455,
+            "raw_mse": 0.8168433904647827,
+            "regularization": 1.4811371329415124e-07,
+            "total": 0.834208607673645
+          },
+          {
+            "adapter_l2": 0.001481137122027576,
+            "baseline_distill_mse": 0.00465073436498642,
+            "envelope_mse": 0.11378341168165207,
+            "raw_mse": 0.969883918762207,
+            "regularization": 1.4811371329415124e-07,
+            "total": 1.0006552934646606
+          },
+          {
+            "adapter_l2": 0.001481137122027576,
+            "baseline_distill_mse": 0.004592176992446184,
+            "envelope_mse": 0.0694262683391571,
+            "raw_mse": 0.8824739456176758,
+            "regularization": 1.4811371329415124e-07,
+            "total": 0.9021267294883728
+          },
+          {
+            "adapter_l2": 0.001481137122027576,
+            "baseline_distill_mse": 0.004118551965802908,
+            "envelope_mse": 0.07363947480916977,
+            "raw_mse": 0.9752010703086853,
+            "regularization": 1.4811371329415124e-07,
+            "total": 0.9956703186035156
+          },
+          {
+            "adapter_l2": 0.001481137122027576,
+            "baseline_distill_mse": 0.004668062087148428,
+            "envelope_mse": 0.1311604082584381,
+            "raw_mse": 0.8465976715087891,
+            "regularization": 1.4811371329415124e-07,
+            "total": 0.8817219734191895
+          },
+          {
+            "adapter_l2": 0.001481137122027576,
+            "baseline_distill_mse": 0.004650839604437351,
+            "envelope_mse": 0.19312028586864471,
+            "raw_mse": 0.9347112774848938,
+            "regularization": 1.4811371329415124e-07,
+            "total": 0.9853168725967407
+          },
+          {
+            "adapter_l2": 0.001481137122027576,
+            "baseline_distill_mse": 0.004561202134937048,
+            "envelope_mse": 0.31295984983444214,
+            "raw_mse": 0.9541731476783752,
+            "regularization": 1.4811371329415124e-07,
+            "total": 1.0346938371658325
+          },
+          {
+            "adapter_l2": 0.001481137122027576,
+            "baseline_distill_mse": 0.004704110324382782,
+            "envelope_mse": 0.06295502185821533,
+            "raw_mse": 0.7816954255104065,
+            "regularization": 1.4811371329415124e-07,
+            "total": 0.799786388874054
+          },
+          {
+            "adapter_l2": 0.001481137122027576,
+            "baseline_distill_mse": 0.004635164514183998,
+            "envelope_mse": 0.08536843210458755,
+            "raw_mse": 0.7344104051589966,
+            "regularization": 1.4811371329415124e-07,
+            "total": 0.7580702304840088
+          },
+          {
+            "adapter_l2": 0.001481137122027576,
+            "baseline_distill_mse": 0.004670568276196718,
+            "envelope_mse": 0.19573919475078583,
+            "raw_mse": 0.8347196578979492,
+            "regularization": 1.4811371329415124e-07,
+            "total": 0.8859899044036865
+          },
+          {
+            "adapter_l2": 0.001481137122027576,
+            "baseline_distill_mse": 0.004360872320830822,
+            "envelope_mse": 0.2328568547964096,
+            "raw_mse": 0.6689289808273315,
+            "regularization": 1.4811371329415124e-07,
+            "total": 0.7293237447738647
+          },
+          {
+            "adapter_l2": 0.001481137122027576,
+            "baseline_distill_mse": 0.004490875173360109,
+            "envelope_mse": 0.2243335098028183,
+            "raw_mse": 0.8052598237991333,
+            "regularization": 1.4811371329415124e-07,
+            "total": 0.8635887503623962
+          },
+          {
+            "adapter_l2": 0.001481137122027576,
+            "baseline_distill_mse": 0.004599231760948896,
+            "envelope_mse": 0.7834240794181824,
+            "raw_mse": 1.396785020828247,
+            "regularization": 1.4811371329415124e-07,
+            "total": 1.5949407815933228
+          },
+          {
+            "adapter_l2": 0.001481137122027576,
+            "baseline_distill_mse": 0.004691666923463345,
+            "envelope_mse": 0.18319426476955414,
+            "raw_mse": 0.7577072978019714,
+            "regularization": 1.4811371329415124e-07,
+            "total": 0.8058518171310425
+          }
+        ]
+      },
+      "valid": {
+        "delta": {
+          "max_abs": 0.11357307434082031,
+          "rms": 0.0798414945602417
+        },
+        "mean": {
+          "adapter_l2": 0.00152888847514987,
+          "baseline_distill_mse": 0.006339311366900802,
+          "envelope_mse": 0.053314815275371075,
+          "raw_mse": 0.8727222084999084,
+          "regularization": 1.5288884469555342e-07,
+          "total": 0.8892207145690918
+        },
+        "rows": [
+          {
+            "adapter_l2": 0.00152888847514987,
+            "baseline_distill_mse": 0.006262761540710926,
+            "envelope_mse": 0.07558909058570862,
+            "id": "asmr7_repair_011",
+            "raw_mse": 1.1440985202789307,
+            "regularization": 1.5288884469555342e-07,
+            "total": 1.166127324104309
+          },
+          {
+            "adapter_l2": 0.00152888847514987,
+            "baseline_distill_mse": 0.006415861193090677,
+            "envelope_mse": 0.03104053996503353,
+            "id": "asmr7_repair_022",
+            "raw_mse": 0.6013458967208862,
+            "regularization": 1.5288884469555342e-07,
+            "total": 0.6123141050338745
+          }
+        ]
+      }
+    }
+  ],
+  "hyperparameters": {
+    "alpha": 2.0,
+    "distill_weight": 0.5,
+    "envelope_weight": 0.25,
+    "lr": 0.001,
+    "max_steps": 40,
+    "parity_atol": 0.0001,
+    "patience": 3,
+    "rank": 2,
+    "regularizer": 0.0001,
+    "scale": 1.0,
+    "steps": 2
+  },
+  "initial_conditionals": {
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+    "provided": true,
+    "sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c"
+  },
+  "initial_embedding": {
+    "conditionals_sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+    "norm": 13.84383773803711,
+    "shape": [
+      1,
+      192
+    ]
+  },
+  "loader": {
+    "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+    "checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+    "flow_encoder": {
+      "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+      "loaded_tensors": 209,
+      "missing_tensors": [],
+      "selected_tensors": 209,
+      "skipped_tensors": 2282,
+      "unexpected_tensors": []
+    },
+    "frozen": true,
+    "loaded_components": [
+      "flow.input_embedding",
+      "flow.encoder",
+      "flow.encoder_proj",
+      "flow.spk_embed_affine_layer",
+      "flow.decoder.estimator"
+    ],
+    "meanflow_estimator": {
+      "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+      "loaded_tensors": 913,
+      "missing_tensors": [],
+      "selected_tensors": 913,
+      "skipped_tensors": 1578,
+      "unexpected_tensors": []
+    },
+    "omitted_components": [
+      "T3",
+      "S3Gen tokenizer",
+      "S3Gen speaker encoder",
+      "HiFT vocoder"
+    ]
+  },
+  "mask_policy": "ConditionalDecoder multiplies final_proj output by its mask after the adapter; adapter forward is unmasked.",
+  "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+  "model_dir": "/home/terryd/gooning/voicecloning/models/chatterbox-nano",
+  "native_row_seeds": {
+    "asmr7_repair_001": 31,
+    "asmr7_repair_006": 1040,
+    "asmr7_repair_007": 2049,
+    "asmr7_repair_008": 3058,
+    "asmr7_repair_010": 4067,
+    "asmr7_repair_011": 15166,
+    "asmr7_repair_012": 5076,
+    "asmr7_repair_013": 6085,
+    "asmr7_repair_014": 7094,
+    "asmr7_repair_015": 8103,
+    "asmr7_repair_019": 9112,
+    "asmr7_repair_022": 16175,
+    "asmr7_repair_023": 10121,
+    "asmr7_repair_024": 11130,
+    "asmr7_repair_025": 12139,
+    "asmr7_repair_028": 13148,
+    "asmr7_repair_033": 14157
+  },
+  "parity": {
+    "atol": 0.0001,
+    "failures": [],
+    "max_abs": 0.0,
+    "rmse_mean": 0.0,
+    "rows": [
+      {
+        "id": "asmr7_repair_001",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          216
+        ]
+      },
+      {
+        "id": "asmr7_repair_006",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          280
+        ]
+      },
+      {
+        "id": "asmr7_repair_007",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          204
+        ]
+      },
+      {
+        "id": "asmr7_repair_008",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          444
+        ]
+      },
+      {
+        "id": "asmr7_repair_010",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          198
+        ]
+      },
+      {
+        "id": "asmr7_repair_012",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          266
+        ]
+      },
+      {
+        "id": "asmr7_repair_013",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          174
+        ]
+      },
+      {
+        "id": "asmr7_repair_014",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          220
+        ]
+      },
+      {
+        "id": "asmr7_repair_015",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          258
+        ]
+      },
+      {
+        "id": "asmr7_repair_019",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          238
+        ]
+      },
+      {
+        "id": "asmr7_repair_023",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          370
+        ]
+      },
+      {
+        "id": "asmr7_repair_024",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          194
+        ]
+      },
+      {
+        "id": "asmr7_repair_025",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          284
+        ]
+      },
+      {
+        "id": "asmr7_repair_028",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          268
+        ]
+      },
+      {
+        "id": "asmr7_repair_033",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          212
+        ]
+      },
+      {
+        "id": "asmr7_repair_011",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          208
+        ]
+      },
+      {
+        "id": "asmr7_repair_022",
+        "max_abs": 0.0,
+        "passed": true,
+        "rmse": 0.0,
+        "shape": [
+          1,
+          80,
+          552
+        ]
+      }
+    ],
+    "status": "passed"
+  },
+  "peak_rss_bytes": 1637355520,
+  "prepare_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr",
+  "prepare_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/manifest.json",
+  "prepare_manifest_sha256": "b422229277ee2cd79d694eaaeb305f076dbc55a4ade99e5c6a489cb93cf4c8cb",
+  "prepared_embedding": {
+    "conditionals_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+    "norm": 13.843836784362793,
+    "shape": [
+      1,
+      192
+    ]
+  },
+  "rss_before_load_bytes": 663543808,
+  "status": "interrupted_by_resource_guard",
+  "target_alignment": {
+    "generated_frames": "2*(N+3)",
+    "source_frames": "2*N or 2*N-1",
+    "speech_tokens_plus_s3gen_sil": 3,
+    "trim_policy": "reuse fit_decoder_embedding._aligned_prediction; no time warp/resampling/DTW"
+  },
+  "target_shape": [
+    80,
+    256,
+    1
+  ],
+  "target_weight_key": "flow.decoder.estimator.final_proj.weight",
+  "train_ids": [
+    "asmr7_repair_001",
+    "asmr7_repair_006",
+    "asmr7_repair_007",
+    "asmr7_repair_008",
+    "asmr7_repair_010",
+    "asmr7_repair_012",
+    "asmr7_repair_013",
+    "asmr7_repair_014",
+    "asmr7_repair_015",
+    "asmr7_repair_019",
+    "asmr7_repair_023",
+    "asmr7_repair_024",
+    "asmr7_repair_025",
+    "asmr7_repair_028",
+    "asmr7_repair_033"
+  ],
+  "valid_ids": [
+    "asmr7_repair_011",
+    "asmr7_repair_022"
+  ],
+  "zero_adapter": {
+    "delta": {
+      "max_abs": 0.0,
+      "rms": 0.0
+    },
+    "exact_equal_all_rows": true,
+    "rows": 17
+  },
+  "status_before_resource_stop": "running",
+  "resource_stop": {
+    "wrapper_exit_code": 125,
+    "reason": "desktop headroom fell below 4 GiB",
+    "completed_steps": 13,
+    "log": "artifacts/nano_lab/decoder_projection_fit.log",
+    "checkpoint_preserved": true,
+    "checkpoint_sha256": "a5565ebd25bbd31735f3892e8a0a9af96986c96cdcc5336ebcf37304b41671b2"
+  },
+  "inspected_best_checkpoint": {
+    "step": 11,
+    "valid": {
+      "total": 0.8882466554641724,
+      "raw_mse": 0.873328447341919,
+      "envelope_mse": 0.05364231951534748,
+      "baseline_distill_mse": 0.00301495217718184,
+      "adapter_l2": 0.0014380880165845156,
+      "regularization": 1.4380880486442038e-07
+    },
+    "artifact_verification": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_fit/artifact_verification.json"
+  }
+}

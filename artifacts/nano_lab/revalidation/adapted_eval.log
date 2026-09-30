@@ -1,0 +1,8 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: fde0c8ca24ec43e298dd64a839703816
+{"id": "asmr_conversational_adapted_morning_31", "cosine": 0.837635, "wer": 0.0, "dnsmos_overall": 3.016435440253082}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 20.821s
+             CPU time consumed: 28.506s
+                   Memory peak: 852.6M (swap: 0B)

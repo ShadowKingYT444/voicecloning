@@ -1,0 +1,116 @@
+{
+  "output_dir": "artifacts/nano_lab/sweep_acoustic_original",
+  "cases": [
+    {
+      "id": "conv_cfg0.0_noise0.85",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 31,
+      "steps": 10,
+      "acoustic_cfg": 0.0,
+      "acoustic_temperature": 0.85
+    },
+    {
+      "id": "conv_cfg0.0_noise1.0",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 31,
+      "steps": 10,
+      "acoustic_cfg": 0.0,
+      "acoustic_temperature": 1.0
+    },
+    {
+      "id": "conv_cfg0.35_noise0.85",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 31,
+      "steps": 10,
+      "acoustic_cfg": 0.35,
+      "acoustic_temperature": 0.85
+    },
+    {
+      "id": "conv_cfg0.35_noise1.0",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 31,
+      "steps": 10,
+      "acoustic_cfg": 0.35,
+      "acoustic_temperature": 1.0
+    },
+    {
+      "id": "conv_cfg1.0_noise0.85",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 31,
+      "steps": 10,
+      "acoustic_cfg": 1.0,
+      "acoustic_temperature": 0.85
+    },
+    {
+      "id": "conv_cfg1.0_noise1.0",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 31,
+      "steps": 10,
+      "acoustic_cfg": 1.0,
+      "acoustic_temperature": 1.0
+    },
+    {
+      "id": "soft_cfg0.0_noise0.85",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 31,
+      "steps": 10,
+      "acoustic_cfg": 0.0,
+      "acoustic_temperature": 0.85
+    },
+    {
+      "id": "soft_cfg0.0_noise1.0",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 31,
+      "steps": 10,
+      "acoustic_cfg": 0.0,
+      "acoustic_temperature": 1.0
+    },
+    {
+      "id": "soft_cfg0.35_noise0.85",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 31,
+      "steps": 10,
+      "acoustic_cfg": 0.35,
+      "acoustic_temperature": 0.85
+    },
+    {
+      "id": "soft_cfg0.35_noise1.0",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 31,
+      "steps": 10,
+      "acoustic_cfg": 0.35,
+      "acoustic_temperature": 1.0
+    },
+    {
+      "id": "soft_cfg1.0_noise0.85",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 31,
+      "steps": 10,
+      "acoustic_cfg": 1.0,
+      "acoustic_temperature": 0.85
+    },
+    {
+      "id": "soft_cfg1.0_noise1.0",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "temperature": 0.65,
+      "seed": 31,
+      "steps": 10,
+      "acoustic_cfg": 1.0,
+      "acoustic_temperature": 1.0
+    }
+  ],
+  "decoder": "original",
+  "optimized_loader": true,
+  "threads": 2
+}

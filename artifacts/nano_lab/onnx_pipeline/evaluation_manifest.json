@@ -1,0 +1,20 @@
+[
+  {
+    "id": "soft_acoustic",
+    "voice": "asmr7",
+    "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/soft_acoustic.wav"
+  },
+  {
+    "id": "soft_complete",
+    "voice": "asmr7",
+    "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/soft_complete.wav"
+  },
+  {
+    "id": "harvey_complete_fixed",
+    "voice": "harvey",
+    "text": "A useful decision starts with the facts. Read the full report before you decide what to do next.",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/harvey_complete_fixed.wav"
+  }
+]

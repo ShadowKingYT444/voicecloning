@@ -1,0 +1,16 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "neutral_base", "cosine": 0.893398, "wer": 0.0, "dnsmos_overall": 2.6541717301144483}
+{"id": "neutral_speaker", "cosine": 0.882259, "wer": 0.058824, "dnsmos_overall": 3.030680412803264}
+{"id": "neutral_adapter_full", "cosine": 0.849604, "wer": 0.058824, "dnsmos_overall": 3.2700945828290338}
+{"id": "expressive_base", "cosine": 0.873828, "wer": 0.071429, "dnsmos_overall": 2.5181585830203113}
+{"id": "expressive_speaker", "cosine": 0.847749, "wer": 0.0, "dnsmos_overall": 3.285306312529606}
+{"id": "expressive_adapter_full", "cosine": 0.880438, "wer": 0.071429, "dnsmos_overall": 3.3716616522052476}
+{"id": "quiet_base", "cosine": 0.877816, "wer": 0.0, "dnsmos_overall": 2.6739687250919175}
+{"id": "quiet_speaker", "cosine": 0.863104, "wer": 0.0, "dnsmos_overall": 2.996908904422972}
+{"id": "quiet_adapter_full", "cosine": 0.868058, "wer": 0.0, "dnsmos_overall": 3.2353118523186213}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 46.101s
+             CPU time consumed: 1min 22.929s
+                   Memory peak: 600.9M (swap: 0B)

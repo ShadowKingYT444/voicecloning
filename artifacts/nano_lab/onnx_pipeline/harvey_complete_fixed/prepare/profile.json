@@ -1,0 +1,20 @@
+{
+  "conditioning_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+  "conditioning_cache_sha256": "3b7db489a52a1a6cf14a9a43148d11b4689c32b090124aa80b02f162ef5480f2",
+  "cuda_dtype": "fp32",
+  "decoder": "meanflow",
+  "label": "Harvey isolated reference 02",
+  "mode": "zero_shot",
+  "profile_path": "/home/terryd/gooning/voicecloning/voices/nano/harvey.json",
+  "reference": "artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+  "sampling": {
+    "repetition_penalty": 1.2,
+    "temperature": 0.65,
+    "top_k": 1000,
+    "top_p": 0.95
+  },
+  "source_case": "harvey_tune_isolated",
+  "status": "candidate_under_validation",
+  "steps": 2,
+  "watermark": true
+}

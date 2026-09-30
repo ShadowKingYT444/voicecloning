@@ -1,0 +1,19 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+loaded PerthNet (Implicit) at step 250,000
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  3.34it/s]100%|██████████| 2/2 [00:00<00:00,  5.46it/s]
+{"event": "prepared", "id": "harvey_repair_001", "split": "train", "source_frames": 209, "reconstructed_frames": 215}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  6.44it/s]100%|██████████| 2/2 [00:00<00:00,  8.94it/s]
+{"event": "prepared", "id": "harvey_repair_005", "split": "train", "source_frames": 219, "reconstructed_frames": 225}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  5.12it/s]100%|██████████| 2/2 [00:00<00:00,  6.99it/s]
+{"event": "prepared", "id": "harvey_repair_004", "split": "valid", "source_frames": 168, "reconstructed_frames": 173}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 42.438s
+             CPU time consumed: 41.096s
+                   Memory peak: 2.4G (swap: 0B)

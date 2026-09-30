@@ -1,0 +1,16 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "heldout01_prompt", "wer": 0.0, "transcript": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?"}
+{"id": "heldout01_speaker", "wer": 0.0, "transcript": "Let's see who's the lucky person who gets to kiss me. Wait a minute, do I know you?"}
+{"id": "heldout01_all_t3", "wer": 0.05, "transcript": "Let's see you, who's the lucky person who gets to kiss me? Wait a minute, do I know you?"}
+{"id": "question_prompt", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "question_speaker", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "question_all_t3", "wer": 0.0625, "transcript": "Do you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "narrative_prompt", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "narrative_speaker", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "narrative_all_t3", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 1.345s
+             CPU time consumed: 1min 58.568s
+                   Memory peak: 1G (swap: 0B)

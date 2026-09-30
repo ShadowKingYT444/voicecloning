@@ -1,0 +1,27 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+loaded PerthNet (Implicit) at step 250,000
+{"event": "prepared", "index": 0, "id": "asmr7_repair_001", "split": "train", "target_tokens": 105, "prompt_tokens": 333, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 1, "id": "asmr7_repair_006", "split": "train", "target_tokens": 137, "prompt_tokens": 333, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 2, "id": "asmr7_repair_007", "split": "train", "target_tokens": 99, "prompt_tokens": 333, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 3, "id": "asmr7_repair_008", "split": "train", "target_tokens": 219, "prompt_tokens": 333, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 4, "id": "asmr7_repair_010", "split": "train", "target_tokens": 96, "prompt_tokens": 333, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 5, "id": "asmr7_repair_011", "split": "valid", "target_tokens": 101, "prompt_tokens": 333, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 6, "id": "asmr7_repair_012", "split": "train", "target_tokens": 130, "prompt_tokens": 333, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 7, "id": "asmr7_repair_013", "split": "train", "target_tokens": 84, "prompt_tokens": 333, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 8, "id": "asmr7_repair_014", "split": "train", "target_tokens": 107, "prompt_tokens": 333, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 9, "id": "asmr7_repair_015", "split": "train", "target_tokens": 126, "prompt_tokens": 333, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 10, "id": "asmr7_repair_019", "split": "train", "target_tokens": 116, "prompt_tokens": 333, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 11, "id": "asmr7_repair_022", "split": "valid", "target_tokens": 273, "prompt_tokens": 333, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 12, "id": "asmr7_repair_023", "split": "train", "target_tokens": 182, "prompt_tokens": 333, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 13, "id": "asmr7_repair_024", "split": "train", "target_tokens": 94, "prompt_tokens": 333, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 14, "id": "asmr7_repair_025", "split": "train", "target_tokens": 139, "prompt_tokens": 333, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 15, "id": "asmr7_repair_028", "split": "train", "target_tokens": 131, "prompt_tokens": 333, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 16, "id": "asmr7_repair_033", "split": "train", "target_tokens": 103, "prompt_tokens": 333, "reference_source": "row.reference_audio_path"}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 45.205s
+             CPU time consumed: 42.442s
+                   Memory peak: 2.4G (swap: 0B)

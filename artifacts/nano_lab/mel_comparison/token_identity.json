@@ -1,0 +1,29 @@
+[
+  {
+    "domain": "neutral",
+    "same_token_storage": true,
+    "token_storage_sha256": [
+      "e509e84ad13a1d7c4fd560b598d063750561929dfaaddc9b8cca98a45a63403f",
+      "e509e84ad13a1d7c4fd560b598d063750561929dfaaddc9b8cca98a45a63403f",
+      "e509e84ad13a1d7c4fd560b598d063750561929dfaaddc9b8cca98a45a63403f"
+    ]
+  },
+  {
+    "domain": "expressive",
+    "same_token_storage": true,
+    "token_storage_sha256": [
+      "05f55d2a8d91690be83895a4e0d737233a50047973ad05689df766ee2f4d290b",
+      "05f55d2a8d91690be83895a4e0d737233a50047973ad05689df766ee2f4d290b",
+      "05f55d2a8d91690be83895a4e0d737233a50047973ad05689df766ee2f4d290b"
+    ]
+  },
+  {
+    "domain": "quiet",
+    "same_token_storage": true,
+    "token_storage_sha256": [
+      "89c8b00ccb554bda273024daf356269815f1c8fd7711de99712117a0fc46fdaf",
+      "89c8b00ccb554bda273024daf356269815f1c8fd7711de99712117a0fc46fdaf",
+      "89c8b00ccb554bda273024daf356269815f1c8fd7711de99712117a0fc46fdaf"
+    ]
+  }
+]

@@ -1,0 +1,138 @@
+{
+  "acoustic_decoder": {
+    "reason": "S3Gen CausalConditionalCFM flow loop and dynamic mel length require a dedicated graph; no Turbo graph substituted.",
+    "status": "not_exported"
+  },
+  "architecture": {
+    "backbone": "GPT2_small",
+    "cache_layout": "12 layers x key,value; [batch,heads,sequence,head_dim]",
+    "hidden_size": 768,
+    "layers": 12,
+    "prompt_tokens": 375,
+    "speech_vocab": 6563
+  },
+  "checkpoint_dir": "/home/terryd/gooning/voicecloning/models/chatterbox-nano",
+  "created_unix": 1790669428.458607,
+  "decode": {
+    "bytes": 406101414,
+    "elapsed_seconds": 9.898086963000424,
+    "inputs": [
+      "speech_token",
+      "cache_position",
+      "past_0",
+      "past_1",
+      "past_2",
+      "past_3",
+      "past_4",
+      "past_5",
+      "past_6",
+      "past_7",
+      "past_8",
+      "past_9",
+      "past_10",
+      "past_11",
+      "past_12",
+      "past_13",
+      "past_14",
+      "past_15",
+      "past_16",
+      "past_17",
+      "past_18",
+      "past_19",
+      "past_20",
+      "past_21",
+      "past_22",
+      "past_23"
+    ],
+    "nodes": 2596,
+    "opset": 18,
+    "outputs": [
+      "logits",
+      "present_0",
+      "present_1",
+      "present_2",
+      "present_3",
+      "present_4",
+      "present_5",
+      "present_6",
+      "present_7",
+      "present_8",
+      "present_9",
+      "present_10",
+      "present_11",
+      "present_12",
+      "present_13",
+      "present_14",
+      "present_15",
+      "present_16",
+      "present_17",
+      "present_18",
+      "present_19",
+      "present_20",
+      "present_21",
+      "present_22",
+      "present_23"
+    ],
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx/nano_t3_decode.onnx"
+  },
+  "format": "onnx",
+  "load": {
+    "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/t3_nano_v1.safetensors",
+    "loaded_tensors": 153,
+    "missing_parameters": [],
+    "removed_parameters": [
+      "tfmr.wte",
+      "text_head"
+    ]
+  },
+  "model": "ResembleAI/chatterbox-nano",
+  "prefill": {
+    "bytes": 561339026,
+    "elapsed_seconds": 17.957488889999695,
+    "inputs": [
+      "speaker_emb",
+      "cond_prompt_speech_tokens",
+      "text_tokens"
+    ],
+    "nodes": 2611,
+    "opset": 18,
+    "outputs": [
+      "logits",
+      "present_0",
+      "present_1",
+      "present_2",
+      "present_3",
+      "present_4",
+      "present_5",
+      "present_6",
+      "present_7",
+      "present_8",
+      "present_9",
+      "present_10",
+      "present_11",
+      "present_12",
+      "present_13",
+      "present_14",
+      "present_15",
+      "present_16",
+      "present_17",
+      "present_18",
+      "present_19",
+      "present_20",
+      "present_21",
+      "present_22",
+      "present_23"
+    ],
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx/nano_t3_prefill.onnx"
+  },
+  "source": "vendor/chatterbox @ commit 5de7a54 (local checkout)",
+  "status": "partial_t3_exported",
+  "vocoder": {
+    "reason": "HiFTGenerator has a separate f0/source path and stateful cache; preserve PyTorch path until a numerical parity wrapper exists.",
+    "status": "not_exported"
+  },
+  "watermark": {
+    "reason": "Perth watermark is applied by NanoEngine after vocoding and remains in released audio.",
+    "status": "pytorch_only"
+  }
+}

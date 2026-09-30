@@ -1,0 +1,4 @@
+{"id": "conv_steps1", "cosine": 0.863981, "wer": 0.0, "dnsmos_overall": 2.58494204807021}
+{"id": "conv_steps2", "cosine": 0.870609, "wer": 0.0, "dnsmos_overall": 2.7003392178417203}
+{"id": "conv_steps4", "cosine": 0.873414, "wer": 0.0, "dnsmos_overall": 2.812457828753396}
+{"id": "conv_steps8", "cosine": 0.869434, "wer": 0.0, "dnsmos_overall": 2.752766921202234}

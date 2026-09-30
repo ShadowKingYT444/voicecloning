@@ -1,0 +1,24 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "conv_base_narrative_63", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office. I waited by the door and watched the rain move across the empty platform."}
+{"id": "conv_fitted_narrative_63", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office. I waited by the door and watched the rain move across the empty platform."}
+{"id": "conv_base_narrative_79", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office. I waited by the door and watched the rain move across the empty platform."}
+{"id": "conv_fitted_narrative_79", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office. I waited by the door and watched the rain move across the empty platform."}
+{"id": "asmr_soft_narrative_63", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office. I waited by the door and watched the rain move across the empty platform."}
+{"id": "harvey_narrative_63", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office. I waited by the door and watched the rain move across the empty platform."}
+{"id": "conv_base_expressive_63", "wer": 0.0, "transcript": "Really? I thought you had forgotten. That is wonderful news. Come here for a moment. I want to hear every detail from the very beginning."}
+{"id": "conv_fitted_expressive_63", "wer": 0.04, "transcript": "Really? I thought you had forgotten. That is wonderful news. Come here for a moment. I want to hear every detail from the fairy beginning."}
+{"id": "conv_base_expressive_79", "wer": 0.0, "transcript": "Really? I thought you had forgotten. That's wonderful news. Come here for a moment. I want to hear every detail from the very beginning."}
+{"id": "conv_fitted_expressive_79", "wer": 0.0, "transcript": "Really, I thought you had forgotten. That is wonderful news. Come here for a moment. I want to hear every detail from the very beginning."}
+{"id": "asmr_soft_expressive_63", "wer": 0.0, "transcript": "Really, I thought you had forgotten. That is wonderful news. Come here for a moment. I want to hear every detail from the very beginning."}
+{"id": "conv_base_precise_63", "wer": 0.0, "transcript": "Please put the green cup beside the black notebook. There are three letters on the table, two keys by the door, and one small box beneath the chair."}
+{"id": "conv_fitted_precise_63", "wer": 0.0, "transcript": "Please put the green cup beside the black notebook. There are three letters on the table, two keys by the door, and one small box beneath the chair."}
+{"id": "conv_base_precise_79", "wer": 0.0, "transcript": "Please put the green cup beside the black notebook. There are three letters on the table. Two keys by the door and one small box beneath the chair."}
+{"id": "conv_fitted_precise_79", "wer": 0.0, "transcript": "Please put the green cup beside the black notebook. There are three letters on the table, two keys by the door, and one small box beneath the chair."}
+{"id": "asmr_soft_precise_63", "wer": 0.0, "transcript": "Please put the green cup beside the black notebook. There are three letters on the table, two keys by the door, and one small box beneath the chair."}
+{"id": "harvey_precise_63", "wer": 0.0, "transcript": "Please put the green cup beside the black notebook. There are three letters on the table, two keys by the door, and one small box beneath the chair."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 41.601s
+             CPU time consumed: 41.092s
+                   Memory peak: 2.1G (swap: 0B)

@@ -1,0 +1,16 @@
+{
+  "source": "/home/terryd/Downloads/mommy-asmr.mp3",
+  "transcription_model": "openai/whisper-small",
+  "profiles": [
+    {
+      "name": "Mommy ASMR - Natural",
+      "id": "aefe696c-b18a-438c-aced-feaf0f2693a2",
+      "reference": "/home/terryd/gooning/voicecloning/artifacts/references/mommy_trimmed_mono_24k.wav"
+    },
+    {
+      "name": "Mommy ASMR - Bandlimited",
+      "id": "b113807a-adcb-478b-9cc7-1d2ab0e106e5",
+      "reference": "/home/terryd/gooning/voicecloning/artifacts/references/mommy_trimmed_bandlimited_mono_24k.wav"
+    }
+  ]
+}

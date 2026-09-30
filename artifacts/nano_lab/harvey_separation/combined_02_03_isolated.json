@@ -1,0 +1,8 @@
+{
+  "sources": [
+    "artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+    "artifacts/nano_lab/harvey_separation/harvey_quote_03_isolated.wav"
+  ],
+  "gap_seconds": 0.12,
+  "synthetic": false
+}

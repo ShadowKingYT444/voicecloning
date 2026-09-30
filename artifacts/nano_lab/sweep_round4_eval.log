@@ -1,0 +1,24 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 15a85b0bd27a4a4e878c706ae2fd4bd6
+{"id": "conv_base_narrative_63", "cosine": 0.887854, "wer": 0.0, "dnsmos_overall": 2.8745031228171953}
+{"id": "conv_fitted_narrative_63", "cosine": 0.850383, "wer": 0.028571, "dnsmos_overall": 3.4248414884156992}
+{"id": "conv_base_narrative_79", "cosine": 0.882134, "wer": 0.0, "dnsmos_overall": 2.4484186220068396}
+{"id": "conv_fitted_narrative_79", "cosine": 0.890319, "wer": 0.0, "dnsmos_overall": 3.0850361582273664}
+{"id": "asmr_soft_narrative_63", "cosine": 0.843905, "wer": 0.0, "dnsmos_overall": 3.116846177605357}
+{"id": "harvey_narrative_63", "cosine": 0.793305, "wer": 0.0, "dnsmos_overall": 3.568650968949762}
+{"id": "conv_base_expressive_63", "cosine": 0.873533, "wer": 0.0, "dnsmos_overall": 2.9181382721652325}
+{"id": "conv_fitted_expressive_63", "cosine": 0.901656, "wer": 0.04, "dnsmos_overall": 3.0227278409231757}
+{"id": "conv_base_expressive_79", "cosine": 0.881979, "wer": 0.08, "dnsmos_overall": 2.8884511788794947}
+{"id": "conv_fitted_expressive_79", "cosine": 0.87592, "wer": 0.04, "dnsmos_overall": 3.052936192362941}
+{"id": "asmr_soft_expressive_63", "cosine": 0.841889, "wer": 0.0, "dnsmos_overall": 3.140171973559434}
+{"id": "conv_base_precise_63", "cosine": 0.868278, "wer": 0.0, "dnsmos_overall": 2.97502497694668}
+{"id": "conv_fitted_precise_63", "cosine": 0.867112, "wer": 0.0, "dnsmos_overall": 3.430561965367029}
+{"id": "conv_base_precise_79", "cosine": 0.874788, "wer": 0.0, "dnsmos_overall": 3.347934885825965}
+{"id": "conv_fitted_precise_79", "cosine": 0.864317, "wer": 0.0, "dnsmos_overall": 3.3104174932667267}
+{"id": "asmr_soft_precise_63", "cosine": 0.823675, "wer": 0.0, "dnsmos_overall": 3.2739880740643383}
+{"id": "harvey_precise_63", "cosine": 0.800961, "wer": 0.0, "dnsmos_overall": 3.494833608063164}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 57.345s
+             CPU time consumed: 3min 34.490s
+                   Memory peak: 1.1G (swap: 0B)

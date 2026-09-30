@@ -1,0 +1,14 @@
+{
+  "elapsed_seconds": 7.165571928024292,
+  "error": "RuntimeError: ort_provider='cuda' requested CUDAExecutionProvider, but the session is not CUDA-backed: ['CPUExecutionProvider']",
+  "finished_unix": 1790698999.9176674,
+  "rss": {
+    "peak_rss_bytes": 758611968,
+    "rss_bytes": 759648256
+  },
+  "schema_version": 1,
+  "stage": "tokens",
+  "started_unix": 1790698992.7520974,
+  "status": "error",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_pipeline.py\", line 1013, in _dispatch_stage\n    result = functions[stage_name](args)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_pipeline.py\", line 558, in stage_tokens\n    return _run_t3_generation(args, token_config_path=stage / \"config.json\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_pipeline.py\", line 604, in _run_t3_generation\n    runtime = T3UnifiedOrtRuntime(Path(args.model_dir), **_ort_runtime_kwargs(args, \"t3\"))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_staged_runtime.py\", line 291, in __init__\n    self.session = _session(\n                   ^^^^^^^^^\n  File \"/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_staged_runtime.py\", line 215, in _session\n    raise RuntimeError(\nRuntimeError: ort_provider='cuda' requested CUDAExecutionProvider, but the session is not CUDA-backed: ['CPUExecutionProvider']\n"
+}

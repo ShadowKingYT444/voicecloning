@@ -1,0 +1,62 @@
+[
+  {
+    "id": "baseline_10031",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline/seed_10031/audio.master.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "baseline"
+  },
+  {
+    "id": "baseline_10097",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline/seed_10097/audio.master.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "baseline"
+  },
+  {
+    "id": "self_all_10031",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/self_all/seed_10031/audio.master.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "self_all"
+  },
+  {
+    "id": "self_all_10097",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/self_all/seed_10097/audio.master.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "self_all"
+  },
+  {
+    "id": "baseline_self_embedding_10031",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_embedding/seed_10031/audio.master.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "baseline_self_embedding"
+  },
+  {
+    "id": "baseline_self_embedding_10097",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_embedding/seed_10097/audio.master.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "baseline_self_embedding"
+  },
+  {
+    "id": "baseline_self_prompt_10031",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_prompt/seed_10031/audio.master.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "baseline_self_prompt"
+  },
+  {
+    "id": "baseline_self_prompt_10097",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/baseline_self_prompt/seed_10097/audio.master.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "baseline_self_prompt"
+  },
+  {
+    "id": "source_mel_upperbound",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/source_mel_upperbound/seed_10031/audio.master.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "source_mel"
+  },
+  {
+    "id": "source",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_01/asmr7_heldout_01__raw.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "source"
+  }
+]

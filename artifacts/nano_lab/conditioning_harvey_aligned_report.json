@@ -1,0 +1,189 @@
+{
+  "adapted_embedding_norm": 1.0,
+  "adoption": {
+    "accepted_by_teacher_forced_gate": true,
+    "reason": "heldout loss improved beyond min_delta",
+    "speaker_id": "harvey"
+  },
+  "best_epoch": 3,
+  "best_valid_loss": 4.505900859832764,
+  "checkpoint": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/conditioning_harvey_aligned.pt",
+  "checkpoint_written": true,
+  "config": {
+    "epochs": 12,
+    "grad_clip": 1.0,
+    "l2_lambda": 0.01,
+    "lr": 0.05,
+    "max_delta_norm": 0.1,
+    "max_steps": 24,
+    "min_delta": 0.0001,
+    "patience": 3,
+    "seed": 31,
+    "unit_normalize": true,
+    "weight_decay": 0.0
+  },
+  "delta_norm": 0.10000000894069672,
+  "elapsed_seconds": 0.8922228200026439,
+  "format": "nano_t3_conditioning_fit_report_v1",
+  "history": [
+    {
+      "epoch": 0,
+      "objective": "initial validation loss at original speaker embedding",
+      "train": null,
+      "valid": {
+        "correct": 10,
+        "loss": 4.5813679695129395,
+        "perplexity": 97.64788220834328,
+        "token_accuracy": 0.11764705882352941,
+        "tokens": 85
+      }
+    },
+    {
+      "adapted_embedding_norm": 1.0,
+      "delta_norm": 0.10000000149011612,
+      "epoch": 1,
+      "l2_lambda": 0.01,
+      "max_delta_norm": 0.1,
+      "objective": "shifted speech-token cross-entropy + embedding L2",
+      "train": {
+        "correct": 34,
+        "embedding_l2_to_base": 1.885519432194149e-05,
+        "loss": 4.264437273350729,
+        "perplexity": 71.12488484190685,
+        "token_accuracy": 0.15668202764976957,
+        "tokens": 217
+      },
+      "valid": {
+        "correct": 9,
+        "loss": 4.506380558013916,
+        "perplexity": 90.59332709957678,
+        "token_accuracy": 0.10588235294117647,
+        "tokens": 85
+      }
+    },
+    {
+      "adapted_embedding_norm": 1.0,
+      "delta_norm": 0.10000000149011612,
+      "epoch": 2,
+      "l2_lambda": 0.01,
+      "max_delta_norm": 0.1,
+      "objective": "shifted speech-token cross-entropy + embedding L2",
+      "train": {
+        "correct": 34,
+        "embedding_l2_to_base": 3.850056427962271e-05,
+        "loss": 4.197345879770094,
+        "perplexity": 66.50957217405609,
+        "token_accuracy": 0.15668202764976957,
+        "tokens": 217
+      },
+      "valid": {
+        "correct": 9,
+        "loss": 4.526916980743408,
+        "perplexity": 92.47302503481647,
+        "token_accuracy": 0.10588235294117647,
+        "tokens": 85
+      }
+    },
+    {
+      "adapted_embedding_norm": 1.0,
+      "delta_norm": 0.10000000149011612,
+      "epoch": 3,
+      "l2_lambda": 0.01,
+      "max_delta_norm": 0.1,
+      "objective": "shifted speech-token cross-entropy + embedding L2",
+      "train": {
+        "correct": 34,
+        "embedding_l2_to_base": 3.868073442562436e-05,
+        "loss": 4.193826888563446,
+        "perplexity": 66.27593689576052,
+        "token_accuracy": 0.15668202764976957,
+        "tokens": 217
+      },
+      "valid": {
+        "correct": 8,
+        "loss": 4.505900859832764,
+        "perplexity": 90.54988006690698,
+        "token_accuracy": 0.09411764705882353,
+        "tokens": 85
+      }
+    },
+    {
+      "adapted_embedding_norm": 0.9999999403953552,
+      "delta_norm": 0.09999998658895493,
+      "epoch": 4,
+      "l2_lambda": 0.01,
+      "max_delta_norm": 0.1,
+      "objective": "shifted speech-token cross-entropy + embedding L2",
+      "train": {
+        "correct": 34,
+        "embedding_l2_to_base": 3.8823887852260906e-05,
+        "loss": 4.190663001504362,
+        "perplexity": 66.06657868419822,
+        "token_accuracy": 0.15668202764976957,
+        "tokens": 217
+      },
+      "valid": {
+        "correct": 9,
+        "loss": 4.513381004333496,
+        "perplexity": 91.22974583139487,
+        "token_accuracy": 0.10588235294117647,
+        "tokens": 85
+      }
+    },
+    {
+      "adapted_embedding_norm": 1.0,
+      "delta_norm": 0.10000000149011612,
+      "epoch": 5,
+      "l2_lambda": 0.01,
+      "max_delta_norm": 0.1,
+      "objective": "shifted speech-token cross-entropy + embedding L2",
+      "train": {
+        "correct": 34,
+        "embedding_l2_to_base": 3.890316700495775e-05,
+        "loss": 4.182121928386424,
+        "perplexity": 65.5047021350829,
+        "token_accuracy": 0.15668202764976957,
+        "tokens": 217
+      },
+      "valid": {
+        "correct": 9,
+        "loss": 4.510942459106445,
+        "perplexity": 91.00754899875334,
+        "token_accuracy": 0.10588235294117647,
+        "tokens": 85
+      }
+    },
+    {
+      "adapted_embedding_norm": 1.0,
+      "delta_norm": 0.10000000894069672,
+      "epoch": 6,
+      "l2_lambda": 0.01,
+      "max_delta_norm": 0.1,
+      "objective": "shifted speech-token cross-entropy + embedding L2",
+      "train": {
+        "correct": 33,
+        "embedding_l2_to_base": 3.899094082140428e-05,
+        "loss": 4.179986289019959,
+        "perplexity": 65.36495699024518,
+        "token_accuracy": 0.15207373271889402,
+        "tokens": 217
+      },
+      "valid": {
+        "correct": 9,
+        "loss": 4.514047622680664,
+        "perplexity": 91.29058152861666,
+        "token_accuracy": 0.10588235294117647,
+        "tokens": 85
+      }
+    }
+  ],
+  "initial_valid": {
+    "correct": 10,
+    "loss": 4.5813679695129395,
+    "perplexity": 97.64788220834328,
+    "token_accuracy": 0.11764705882352941,
+    "tokens": 85
+  },
+  "trainable_parameters": 256,
+  "vector_json": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/conditioning_harvey_aligned.json"
+}

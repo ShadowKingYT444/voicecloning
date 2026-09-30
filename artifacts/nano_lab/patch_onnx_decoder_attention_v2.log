@@ -1,0 +1,21 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{
+  "adapter_sha256": "de6d40e5565011022efe776c1852f5bdc1850a87cf4e0e5ba51208aba3e747c2",
+  "base_weights_sha256": "9d528f120de855da015313e678dd532e71a1b3243184c749107b7b49c0f328ec",
+  "changed_count": 224,
+  "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged_adapter_aligned_all_attn_decoder_attention/meanflow_estimator/nano_meanflow_estimator.onnx",
+  "graph_sha256": "df2a1c85850133ce490830b1c795da0d9bc1848ceac5226b3e997b43d16df643",
+  "inventory_sha256": "9f36f6f5a61c8ec1bda8fa09e88640035931fb8690a920f73d9fe15cb94919ed",
+  "meanflow_stage_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged_adapter_aligned_all_attn_decoder_attention/meanflow_estimator/manifest.json",
+  "output_model_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged_adapter_aligned_all_attn_decoder_attention",
+  "patched_weights_sha256": "76c1253a5ca4340c2457b871a708d0b14f673fb5fe8e0d6559b6f958f52bac03",
+  "strength": 1.0,
+  "verification": "pending",
+  "weights": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged_adapter_aligned_all_attn_decoder_attention/meanflow_estimator/nano_meanflow_estimator.weights.bin"
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 6.623s
+             CPU time consumed: 6.263s
+                   Memory peak: 513.5M (swap: 0B)

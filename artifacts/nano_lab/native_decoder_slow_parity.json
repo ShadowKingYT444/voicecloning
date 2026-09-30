@@ -1,0 +1,7 @@
+{
+  "native_cli": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/native_asmr_decoder_slow_question_79.wav",
+  "audited_sweep": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_cadence_combined/fit_question_rp1p0.master.wav",
+  "native_sha256": "22725f9d26f6a3b6419841a318479115fce06b75aa5f869e70478c8d2b278ae8",
+  "sweep_sha256": "22725f9d26f6a3b6419841a318479115fce06b75aa5f869e70478c8d2b278ae8",
+  "byte_equal": true
+}

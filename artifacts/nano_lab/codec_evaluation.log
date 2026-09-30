@@ -1,0 +1,12 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "source01_source", "cosine": 0.770885, "wer": 0.888889, "dnsmos_overall": 2.768996030982598}
+{"id": "source01_vocoder", "cosine": 0.755829, "wer": 0.888889, "dnsmos_overall": 2.8573849262295083}
+{"id": "source01_tokens", "cosine": 0.786396, "wer": 0.944444, "dnsmos_overall": 3.068443799510629}
+{"id": "source01_tts", "cosine": 0.864189, "wer": 0.111111, "dnsmos_overall": 2.1417414060876228}
+{"id": "harvey_complete_fixed", "cosine": 0.705812, "wer": 0.0, "dnsmos_overall": 3.357856869272114}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 32.314s
+             CPU time consumed: 53.830s
+                   Memory peak: 688.2M (swap: 0B)

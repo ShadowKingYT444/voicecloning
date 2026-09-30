@@ -1,0 +1,30 @@
+{
+  "label": "ASMR fitted decoder with slower sampling, experimental",
+  "mode": "speaker_specific_text_and_decoder_fit",
+  "status": "awaiting_listening_validation",
+  "experimental": true,
+  "zero_shot": false,
+  "speaker_specific": true,
+  "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+  "conditioning_cache": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+  "decoder": "meanflow",
+  "steps": 2,
+  "cuda_dtype": "fp32",
+  "sampling": {
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "top_k": 1000,
+    "repetition_penalty": 1.0
+  },
+  "adapter": "artifacts/nano_lab/adapter_aligned_all_attn.pt",
+  "adapter_scale": 1.0,
+  "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+  "mel_calibration_strength": 1.0,
+  "source_case": "fit_heldout01_rp1p0",
+  "validation_report": "artifacts/nano_lab/decoder_cadence_combined/review.json",
+  "validation_config": "artifacts/nano_lab/decoder_cadence_combined_config.json",
+  "watermark": true,
+  "conditioning_cache_required": true,
+  "conditioning_cache_sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+  "decoder_fit_report": "artifacts/nano_lab/decoder_embedding_fit/fit_report.json"
+}

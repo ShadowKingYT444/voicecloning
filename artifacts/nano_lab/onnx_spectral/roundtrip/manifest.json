@@ -1,0 +1,57 @@
+{
+  "examples": {
+    "inputs": 1,
+    "outputs": 1,
+    "path": "examples.npz"
+  },
+  "export_seconds": 0.10670488699906855,
+  "graph": {
+    "bytes": 9198,
+    "inputs": [
+      "waveform"
+    ],
+    "nodes": 80,
+    "opset": 18,
+    "outputs": [
+      "audio"
+    ],
+    "path": "nano_roundtrip_real.onnx"
+  },
+  "kind": "roundtrip",
+  "parameters": {
+    "center": true,
+    "hop_length": 4,
+    "n_fft": 16,
+    "normalization": "unnormalized DFT + overlap window-square envelope",
+    "one_sided": true,
+    "pad_mode": "reflect",
+    "periodic_hann": true
+  },
+  "schema_version": 1,
+  "stage": "roundtrip",
+  "status": "exported",
+  "torch_peak_rss_bytes": 561721344,
+  "verification": {
+    "errors": [],
+    "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_spectral/roundtrip/nano_roundtrip_real.onnx",
+    "inference_seconds": 0.0016292220007017022,
+    "inputs": [
+      "waveform"
+    ],
+    "max_abs_error": 2.384185791015625e-07,
+    "max_relative_error": 3.9420133774194967e-07,
+    "method": "pure ORT CPU against Torch reference saved during export",
+    "outputs": 1,
+    "peak_rss_bytes": 68063232,
+    "provider": "CPUExecutionProvider",
+    "rss_after_session_bytes": 67928064,
+    "rss_before_session_bytes": 67776512,
+    "session_load_seconds": 0.019102489999568206,
+    "stage": "roundtrip",
+    "status": "verified",
+    "tolerances": {
+      "atol": 3e-05,
+      "rtol": 3e-05
+    }
+  }
+}

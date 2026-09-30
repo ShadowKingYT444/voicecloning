@@ -1,0 +1,19 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 799bb20016124ccd8fbd1c771d393127
+{"id": "question_79_base", "cosine": 0.849118, "wer": 0.0625, "dnsmos_overall": 2.6649834017108374}
+{"id": "question_79_adapter", "cosine": 0.870178, "wer": 0.1875, "dnsmos_overall": 3.2773803384057127}
+{"id": "question_79_combined", "cosine": 0.873354, "wer": 0.1875, "dnsmos_overall": 3.2484709116427624}
+{"id": "question_97_base", "cosine": 0.859245, "wer": 0.0, "dnsmos_overall": 3.2388160496728373}
+{"id": "question_97_adapter", "cosine": 0.846045, "wer": 0.0, "dnsmos_overall": 3.255597604242472}
+{"id": "question_97_combined", "cosine": 0.856772, "wer": 0.0, "dnsmos_overall": 3.3164295026924338}
+{"id": "narrative_79_base", "cosine": 0.889466, "wer": 0.095238, "dnsmos_overall": 2.987247935715771}
+{"id": "narrative_79_adapter", "cosine": 0.874761, "wer": 0.0, "dnsmos_overall": 3.1033435513070726}
+{"id": "narrative_79_combined", "cosine": 0.882321, "wer": 0.0, "dnsmos_overall": 3.167469431389437}
+{"id": "narrative_97_base", "cosine": 0.869544, "wer": 0.0, "dnsmos_overall": 3.024832377601226}
+{"id": "narrative_97_adapter", "cosine": 0.879275, "wer": 0.0, "dnsmos_overall": 3.1413599185944414}
+{"id": "narrative_97_combined", "cosine": 0.885634, "wer": 0.0, "dnsmos_overall": 3.224883387136225}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 59.350s
+             CPU time consumed: 1min 48.700s
+                   Memory peak: 655.2M (swap: 0B)

@@ -1,0 +1,11 @@
+{
+  "torch": "2.11.0+cu128",
+  "torchaudio": "2.11.0+cu128",
+  "transformers": "4.57.3",
+  "diffusers": "0.39.0",
+  "chatterbox-tts": "0.1.7",
+  "safetensors": "0.8.0",
+  "librosa": "0.11.0",
+  "resemble-perth": "1.0.1",
+  "onnxruntime": "1.29.0"
+}

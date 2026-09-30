@@ -1,0 +1,1404 @@
+{
+  "generated_by": "reference_prepare.py",
+  "sources": {
+    "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss]": {
+      "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "bytes": 14730063,
+      "duration_s": 613.680181,
+      "codec": "mp3",
+      "sample_rate": 44100,
+      "channels": 2,
+      "bit_rate": 192000,
+      "decoded_sample_rate_hz": 24000,
+      "decoded_measurements": {
+        "duration_s": 613.680208,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -33.881,
+        "peak_dbfs": -0.363,
+        "crest_db": 33.518,
+        "dc_offset": -2.29e-06,
+        "clipping_fraction_proxy": 0.0,
+        "noise_floor_dbfs_proxy_low10pct_frames": -64.249,
+        "speech_level_dbfs_proxy_high50pct_frames": -36.438,
+        "snr_db_proxy_high50_minus_low10": 27.811,
+        "spectral_centroid_hz": 988.908,
+        "spectral_flatness_proxy": 0.142845,
+        "high_band_fraction_proxy_ge8khz": 0.022286
+      },
+      "ten_second_windows": [
+        {
+          "start_s": 0.0,
+          "end_s": 10.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -27.484,
+            "peak_dbfs": -2.311,
+            "crest_db": 25.173,
+            "dc_offset": -1.2e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -68.636,
+            "speech_level_dbfs_proxy_high50pct_frames": -32.413,
+            "snr_db_proxy_high50_minus_low10": 36.223,
+            "spectral_centroid_hz": 822.012,
+            "spectral_flatness_proxy": 0.05247,
+            "high_band_fraction_proxy_ge8khz": 0.007265
+          }
+        },
+        {
+          "start_s": 10.0,
+          "end_s": 20.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -28.949,
+            "peak_dbfs": -8.878,
+            "crest_db": 20.071,
+            "dc_offset": -1.638e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -57.118,
+            "speech_level_dbfs_proxy_high50pct_frames": -28.786,
+            "snr_db_proxy_high50_minus_low10": 28.332,
+            "spectral_centroid_hz": 702.483,
+            "spectral_flatness_proxy": 0.060127,
+            "high_band_fraction_proxy_ge8khz": 0.012286
+          }
+        },
+        {
+          "start_s": 20.0,
+          "end_s": 30.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -32.168,
+            "peak_dbfs": -9.993,
+            "crest_db": 22.175,
+            "dc_offset": -1.636e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -58.936,
+            "speech_level_dbfs_proxy_high50pct_frames": -32.566,
+            "snr_db_proxy_high50_minus_low10": 26.37,
+            "spectral_centroid_hz": 705.106,
+            "spectral_flatness_proxy": 0.053717,
+            "high_band_fraction_proxy_ge8khz": 0.009144
+          }
+        },
+        {
+          "start_s": 30.0,
+          "end_s": 40.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -28.429,
+            "peak_dbfs": -4.438,
+            "crest_db": 23.991,
+            "dc_offset": -8.85e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -61.454,
+            "speech_level_dbfs_proxy_high50pct_frames": -50.176,
+            "snr_db_proxy_high50_minus_low10": 11.278,
+            "spectral_centroid_hz": 1098.349,
+            "spectral_flatness_proxy": 0.053498,
+            "high_band_fraction_proxy_ge8khz": 0.004967
+          }
+        },
+        {
+          "start_s": 40.0,
+          "end_s": 50.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -29.312,
+            "peak_dbfs": -7.778,
+            "crest_db": 21.534,
+            "dc_offset": -5.52e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -60.671,
+            "speech_level_dbfs_proxy_high50pct_frames": -28.143,
+            "snr_db_proxy_high50_minus_low10": 32.529,
+            "spectral_centroid_hz": 841.719,
+            "spectral_flatness_proxy": 0.085828,
+            "high_band_fraction_proxy_ge8khz": 0.01929
+          }
+        },
+        {
+          "start_s": 50.0,
+          "end_s": 60.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -32.079,
+            "peak_dbfs": -11.244,
+            "crest_db": 20.835,
+            "dc_offset": -3.1e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -56.446,
+            "speech_level_dbfs_proxy_high50pct_frames": -30.646,
+            "snr_db_proxy_high50_minus_low10": 25.8,
+            "spectral_centroid_hz": 912.552,
+            "spectral_flatness_proxy": 0.113703,
+            "high_band_fraction_proxy_ge8khz": 0.032194
+          }
+        },
+        {
+          "start_s": 60.0,
+          "end_s": 70.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -30.669,
+            "peak_dbfs": -9.6,
+            "crest_db": 21.068,
+            "dc_offset": -1.3e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -56.521,
+            "speech_level_dbfs_proxy_high50pct_frames": -30.982,
+            "snr_db_proxy_high50_minus_low10": 25.539,
+            "spectral_centroid_hz": 799.601,
+            "spectral_flatness_proxy": 0.081508,
+            "high_band_fraction_proxy_ge8khz": 0.010453
+          }
+        },
+        {
+          "start_s": 70.0,
+          "end_s": 80.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -31.852,
+            "peak_dbfs": -12.219,
+            "crest_db": 19.634,
+            "dc_offset": -3.238e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -54.603,
+            "speech_level_dbfs_proxy_high50pct_frames": -33.3,
+            "snr_db_proxy_high50_minus_low10": 21.303,
+            "spectral_centroid_hz": 1005.271,
+            "spectral_flatness_proxy": 0.126919,
+            "high_band_fraction_proxy_ge8khz": 0.039397
+          }
+        },
+        {
+          "start_s": 80.0,
+          "end_s": 90.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -29.846,
+            "peak_dbfs": -6.983,
+            "crest_db": 22.863,
+            "dc_offset": 1.457e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -50.904,
+            "speech_level_dbfs_proxy_high50pct_frames": -31.14,
+            "snr_db_proxy_high50_minus_low10": 19.764,
+            "spectral_centroid_hz": 1231.476,
+            "spectral_flatness_proxy": 0.136728,
+            "high_band_fraction_proxy_ge8khz": 0.015024
+          }
+        },
+        {
+          "start_s": 90.0,
+          "end_s": 100.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -32.285,
+            "peak_dbfs": -8.646,
+            "crest_db": 23.639,
+            "dc_offset": -5.39e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -53.886,
+            "speech_level_dbfs_proxy_high50pct_frames": -37.191,
+            "snr_db_proxy_high50_minus_low10": 16.695,
+            "spectral_centroid_hz": 939.45,
+            "spectral_flatness_proxy": 0.104662,
+            "high_band_fraction_proxy_ge8khz": 0.027451
+          }
+        },
+        {
+          "start_s": 100.0,
+          "end_s": 110.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -25.697,
+            "peak_dbfs": -0.363,
+            "crest_db": 25.334,
+            "dc_offset": -5.68e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -53.06,
+            "speech_level_dbfs_proxy_high50pct_frames": -27.327,
+            "snr_db_proxy_high50_minus_low10": 25.733,
+            "spectral_centroid_hz": 1064.374,
+            "spectral_flatness_proxy": 0.077688,
+            "high_band_fraction_proxy_ge8khz": 0.011582
+          }
+        },
+        {
+          "start_s": 110.0,
+          "end_s": 120.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -34.279,
+            "peak_dbfs": -10.235,
+            "crest_db": 24.044,
+            "dc_offset": -6.96e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -62.543,
+            "speech_level_dbfs_proxy_high50pct_frames": -37.588,
+            "snr_db_proxy_high50_minus_low10": 24.956,
+            "spectral_centroid_hz": 547.841,
+            "spectral_flatness_proxy": 0.046366,
+            "high_band_fraction_proxy_ge8khz": 0.005102
+          }
+        },
+        {
+          "start_s": 120.0,
+          "end_s": 130.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -32.116,
+            "peak_dbfs": -9.92,
+            "crest_db": 22.196,
+            "dc_offset": -1.183e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -63.76,
+            "speech_level_dbfs_proxy_high50pct_frames": -34.435,
+            "snr_db_proxy_high50_minus_low10": 29.325,
+            "spectral_centroid_hz": 959.062,
+            "spectral_flatness_proxy": 0.091711,
+            "high_band_fraction_proxy_ge8khz": 0.019853
+          }
+        },
+        {
+          "start_s": 130.0,
+          "end_s": 140.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -31.299,
+            "peak_dbfs": -11.917,
+            "crest_db": 19.382,
+            "dc_offset": 2.358e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -59.761,
+            "speech_level_dbfs_proxy_high50pct_frames": -29.956,
+            "snr_db_proxy_high50_minus_low10": 29.804,
+            "spectral_centroid_hz": 665.482,
+            "spectral_flatness_proxy": 0.080318,
+            "high_band_fraction_proxy_ge8khz": 0.012119
+          }
+        },
+        {
+          "start_s": 140.0,
+          "end_s": 150.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -33.881,
+            "peak_dbfs": -14.592,
+            "crest_db": 19.289,
+            "dc_offset": 3.443e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -67.336,
+            "speech_level_dbfs_proxy_high50pct_frames": -32.973,
+            "snr_db_proxy_high50_minus_low10": 34.363,
+            "spectral_centroid_hz": 1070.232,
+            "spectral_flatness_proxy": 0.136878,
+            "high_band_fraction_proxy_ge8khz": 0.056594
+          }
+        },
+        {
+          "start_s": 150.0,
+          "end_s": 160.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -28.766,
+            "peak_dbfs": -7.168,
+            "crest_db": 21.598,
+            "dc_offset": 2.129e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -67.346,
+            "speech_level_dbfs_proxy_high50pct_frames": -33.067,
+            "snr_db_proxy_high50_minus_low10": 34.279,
+            "spectral_centroid_hz": 1277.372,
+            "spectral_flatness_proxy": 0.077564,
+            "high_band_fraction_proxy_ge8khz": 0.012527
+          }
+        },
+        {
+          "start_s": 160.0,
+          "end_s": 170.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -35.457,
+            "peak_dbfs": -19.225,
+            "crest_db": 16.232,
+            "dc_offset": 1.783e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -61.47,
+            "speech_level_dbfs_proxy_high50pct_frames": -33.794,
+            "snr_db_proxy_high50_minus_low10": 27.675,
+            "spectral_centroid_hz": 880.538,
+            "spectral_flatness_proxy": 0.103241,
+            "high_band_fraction_proxy_ge8khz": 0.010243
+          }
+        },
+        {
+          "start_s": 170.0,
+          "end_s": 180.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -37.492,
+            "peak_dbfs": -18.715,
+            "crest_db": 18.777,
+            "dc_offset": 2.152e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -61.966,
+            "speech_level_dbfs_proxy_high50pct_frames": -37.301,
+            "snr_db_proxy_high50_minus_low10": 24.665,
+            "spectral_centroid_hz": 1100.515,
+            "spectral_flatness_proxy": 0.146509,
+            "high_band_fraction_proxy_ge8khz": 0.052947
+          }
+        },
+        {
+          "start_s": 180.0,
+          "end_s": 190.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -35.317,
+            "peak_dbfs": -14.383,
+            "crest_db": 20.934,
+            "dc_offset": 1.512e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -61.736,
+            "speech_level_dbfs_proxy_high50pct_frames": -34.166,
+            "snr_db_proxy_high50_minus_low10": 27.571,
+            "spectral_centroid_hz": 1100.65,
+            "spectral_flatness_proxy": 0.155067,
+            "high_band_fraction_proxy_ge8khz": 0.033898
+          }
+        },
+        {
+          "start_s": 190.0,
+          "end_s": 200.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -35.297,
+            "peak_dbfs": -16.399,
+            "crest_db": 18.897,
+            "dc_offset": -3.2e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -59.463,
+            "speech_level_dbfs_proxy_high50pct_frames": -33.767,
+            "snr_db_proxy_high50_minus_low10": 25.696,
+            "spectral_centroid_hz": 928.796,
+            "spectral_flatness_proxy": 0.137271,
+            "high_band_fraction_proxy_ge8khz": 0.03486
+          }
+        },
+        {
+          "start_s": 200.0,
+          "end_s": 210.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -41.08,
+            "peak_dbfs": -20.064,
+            "crest_db": 21.016,
+            "dc_offset": -5.73e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -64.953,
+            "speech_level_dbfs_proxy_high50pct_frames": -41.645,
+            "snr_db_proxy_high50_minus_low10": 23.309,
+            "spectral_centroid_hz": 1648.967,
+            "spectral_flatness_proxy": 0.233449,
+            "high_band_fraction_proxy_ge8khz": 0.062509
+          }
+        },
+        {
+          "start_s": 210.0,
+          "end_s": 220.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -34.638,
+            "peak_dbfs": -17.555,
+            "crest_db": 17.083,
+            "dc_offset": 2.622e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -59.486,
+            "speech_level_dbfs_proxy_high50pct_frames": -32.663,
+            "snr_db_proxy_high50_minus_low10": 26.822,
+            "spectral_centroid_hz": 794.914,
+            "spectral_flatness_proxy": 0.09807,
+            "high_band_fraction_proxy_ge8khz": 0.027638
+          }
+        },
+        {
+          "start_s": 220.0,
+          "end_s": 230.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -38.353,
+            "peak_dbfs": -20.092,
+            "crest_db": 18.262,
+            "dc_offset": 2.433e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -62.254,
+            "speech_level_dbfs_proxy_high50pct_frames": -36.337,
+            "snr_db_proxy_high50_minus_low10": 25.917,
+            "spectral_centroid_hz": 1039.119,
+            "spectral_flatness_proxy": 0.146318,
+            "high_band_fraction_proxy_ge8khz": 0.024744
+          }
+        },
+        {
+          "start_s": 230.0,
+          "end_s": 240.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -35.826,
+            "peak_dbfs": -18.138,
+            "crest_db": 17.687,
+            "dc_offset": 2.013e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -63.39,
+            "speech_level_dbfs_proxy_high50pct_frames": -35.97,
+            "snr_db_proxy_high50_minus_low10": 27.42,
+            "spectral_centroid_hz": 932.892,
+            "spectral_flatness_proxy": 0.117886,
+            "high_band_fraction_proxy_ge8khz": 0.038009
+          }
+        },
+        {
+          "start_s": 240.0,
+          "end_s": 250.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -37.965,
+            "peak_dbfs": -18.126,
+            "crest_db": 19.839,
+            "dc_offset": 3.33e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -64.798,
+            "speech_level_dbfs_proxy_high50pct_frames": -36.357,
+            "snr_db_proxy_high50_minus_low10": 28.442,
+            "spectral_centroid_hz": 1715.271,
+            "spectral_flatness_proxy": 0.269436,
+            "high_band_fraction_proxy_ge8khz": 0.08944
+          }
+        },
+        {
+          "start_s": 250.0,
+          "end_s": 260.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -32.763,
+            "peak_dbfs": -10.213,
+            "crest_db": 22.55,
+            "dc_offset": -1.46e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -82.858,
+            "speech_level_dbfs_proxy_high50pct_frames": -39.123,
+            "snr_db_proxy_high50_minus_low10": 43.735,
+            "spectral_centroid_hz": 942.943,
+            "spectral_flatness_proxy": 0.050492,
+            "high_band_fraction_proxy_ge8khz": 0.00763
+          }
+        },
+        {
+          "start_s": 260.0,
+          "end_s": 270.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -36.564,
+            "peak_dbfs": -16.261,
+            "crest_db": 20.304,
+            "dc_offset": -1.33e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -68.969,
+            "speech_level_dbfs_proxy_high50pct_frames": -39.729,
+            "snr_db_proxy_high50_minus_low10": 29.24,
+            "spectral_centroid_hz": 748.628,
+            "spectral_flatness_proxy": 0.102499,
+            "high_band_fraction_proxy_ge8khz": 0.019492
+          }
+        },
+        {
+          "start_s": 270.0,
+          "end_s": 280.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -33.028,
+            "peak_dbfs": -14.241,
+            "crest_db": 18.787,
+            "dc_offset": -2.111e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -59.769,
+            "speech_level_dbfs_proxy_high50pct_frames": -31.781,
+            "snr_db_proxy_high50_minus_low10": 27.989,
+            "spectral_centroid_hz": 865.926,
+            "spectral_flatness_proxy": 0.112608,
+            "high_band_fraction_proxy_ge8khz": 0.022695
+          }
+        },
+        {
+          "start_s": 280.0,
+          "end_s": 290.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -36.874,
+            "peak_dbfs": -19.391,
+            "crest_db": 17.482,
+            "dc_offset": -4.97e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -59.0,
+            "speech_level_dbfs_proxy_high50pct_frames": -35.98,
+            "snr_db_proxy_high50_minus_low10": 23.02,
+            "spectral_centroid_hz": 762.64,
+            "spectral_flatness_proxy": 0.098253,
+            "high_band_fraction_proxy_ge8khz": 0.014826
+          }
+        },
+        {
+          "start_s": 290.0,
+          "end_s": 300.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -40.292,
+            "peak_dbfs": -22.888,
+            "crest_db": 17.404,
+            "dc_offset": -1.001e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -62.533,
+            "speech_level_dbfs_proxy_high50pct_frames": -41.687,
+            "snr_db_proxy_high50_minus_low10": 20.846,
+            "spectral_centroid_hz": 642.287,
+            "spectral_flatness_proxy": 0.07507,
+            "high_band_fraction_proxy_ge8khz": 0.007298
+          }
+        },
+        {
+          "start_s": 300.0,
+          "end_s": 310.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -40.228,
+            "peak_dbfs": -22.892,
+            "crest_db": 17.336,
+            "dc_offset": -1.335e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -62.609,
+            "speech_level_dbfs_proxy_high50pct_frames": -40.498,
+            "snr_db_proxy_high50_minus_low10": 22.11,
+            "spectral_centroid_hz": 756.318,
+            "spectral_flatness_proxy": 0.090109,
+            "high_band_fraction_proxy_ge8khz": 0.01412
+          }
+        },
+        {
+          "start_s": 310.0,
+          "end_s": 320.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -38.877,
+            "peak_dbfs": -20.162,
+            "crest_db": 18.715,
+            "dc_offset": -4.35e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -66.37,
+            "speech_level_dbfs_proxy_high50pct_frames": -38.892,
+            "snr_db_proxy_high50_minus_low10": 27.478,
+            "spectral_centroid_hz": 1043.276,
+            "spectral_flatness_proxy": 0.148767,
+            "high_band_fraction_proxy_ge8khz": 0.045367
+          }
+        },
+        {
+          "start_s": 320.0,
+          "end_s": 330.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -40.823,
+            "peak_dbfs": -19.633,
+            "crest_db": 21.19,
+            "dc_offset": -5.79e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -66.711,
+            "speech_level_dbfs_proxy_high50pct_frames": -41.318,
+            "snr_db_proxy_high50_minus_low10": 25.393,
+            "spectral_centroid_hz": 1514.15,
+            "spectral_flatness_proxy": 0.218378,
+            "high_band_fraction_proxy_ge8khz": 0.051013
+          }
+        },
+        {
+          "start_s": 330.0,
+          "end_s": 340.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -36.481,
+            "peak_dbfs": -16.522,
+            "crest_db": 19.958,
+            "dc_offset": -7.81e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -64.911,
+            "speech_level_dbfs_proxy_high50pct_frames": -35.447,
+            "snr_db_proxy_high50_minus_low10": 29.464,
+            "spectral_centroid_hz": 1887.18,
+            "spectral_flatness_proxy": 0.282793,
+            "high_band_fraction_proxy_ge8khz": 0.072567
+          }
+        },
+        {
+          "start_s": 340.0,
+          "end_s": 350.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -36.17,
+            "peak_dbfs": -17.868,
+            "crest_db": 18.303,
+            "dc_offset": 4.057e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -64.105,
+            "speech_level_dbfs_proxy_high50pct_frames": -34.472,
+            "snr_db_proxy_high50_minus_low10": 29.633,
+            "spectral_centroid_hz": 972.512,
+            "spectral_flatness_proxy": 0.148175,
+            "high_band_fraction_proxy_ge8khz": 0.036148
+          }
+        },
+        {
+          "start_s": 350.0,
+          "end_s": 360.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -38.575,
+            "peak_dbfs": -20.181,
+            "crest_db": 18.395,
+            "dc_offset": -5.523e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -64.8,
+            "speech_level_dbfs_proxy_high50pct_frames": -37.026,
+            "snr_db_proxy_high50_minus_low10": 27.774,
+            "spectral_centroid_hz": 1955.225,
+            "spectral_flatness_proxy": 0.256369,
+            "high_band_fraction_proxy_ge8khz": 0.125663
+          }
+        },
+        {
+          "start_s": 360.0,
+          "end_s": 370.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -37.965,
+            "peak_dbfs": -20.089,
+            "crest_db": 17.876,
+            "dc_offset": -1.169e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -62.617,
+            "speech_level_dbfs_proxy_high50pct_frames": -36.204,
+            "snr_db_proxy_high50_minus_low10": 26.413,
+            "spectral_centroid_hz": 1430.981,
+            "spectral_flatness_proxy": 0.21492,
+            "high_band_fraction_proxy_ge8khz": 0.07667
+          }
+        },
+        {
+          "start_s": 370.0,
+          "end_s": 380.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -34.476,
+            "peak_dbfs": -12.588,
+            "crest_db": 21.887,
+            "dc_offset": 3.55e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -65.792,
+            "speech_level_dbfs_proxy_high50pct_frames": -35.186,
+            "snr_db_proxy_high50_minus_low10": 30.606,
+            "spectral_centroid_hz": 1440.961,
+            "spectral_flatness_proxy": 0.18923,
+            "high_band_fraction_proxy_ge8khz": 0.055464
+          }
+        },
+        {
+          "start_s": 380.0,
+          "end_s": 390.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -32.21,
+            "peak_dbfs": -14.681,
+            "crest_db": 17.529,
+            "dc_offset": -3.95e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -66.438,
+            "speech_level_dbfs_proxy_high50pct_frames": -31.081,
+            "snr_db_proxy_high50_minus_low10": 35.357,
+            "spectral_centroid_hz": 866.501,
+            "spectral_flatness_proxy": 0.11068,
+            "high_band_fraction_proxy_ge8khz": 0.024304
+          }
+        },
+        {
+          "start_s": 390.0,
+          "end_s": 400.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -28.989,
+            "peak_dbfs": -9.44,
+            "crest_db": 19.549,
+            "dc_offset": -2.99e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -62.398,
+            "speech_level_dbfs_proxy_high50pct_frames": -28.591,
+            "snr_db_proxy_high50_minus_low10": 33.808,
+            "spectral_centroid_hz": 687.114,
+            "spectral_flatness_proxy": 0.072453,
+            "high_band_fraction_proxy_ge8khz": 0.010572
+          }
+        },
+        {
+          "start_s": 400.0,
+          "end_s": 410.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -40.301,
+            "peak_dbfs": -17.556,
+            "crest_db": 22.745,
+            "dc_offset": -1.45e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -63.656,
+            "speech_level_dbfs_proxy_high50pct_frames": -41.092,
+            "snr_db_proxy_high50_minus_low10": 22.564,
+            "spectral_centroid_hz": 1894.023,
+            "spectral_flatness_proxy": 0.294794,
+            "high_band_fraction_proxy_ge8khz": 0.09787
+          }
+        },
+        {
+          "start_s": 410.0,
+          "end_s": 420.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -41.279,
+            "peak_dbfs": -19.028,
+            "crest_db": 22.25,
+            "dc_offset": -2.66e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -65.323,
+            "speech_level_dbfs_proxy_high50pct_frames": -41.019,
+            "snr_db_proxy_high50_minus_low10": 24.304,
+            "spectral_centroid_hz": 1988.788,
+            "spectral_flatness_proxy": 0.224849,
+            "high_band_fraction_proxy_ge8khz": 0.024145
+          }
+        },
+        {
+          "start_s": 420.0,
+          "end_s": 430.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -39.2,
+            "peak_dbfs": -17.467,
+            "crest_db": 21.733,
+            "dc_offset": -8.58e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -60.674,
+            "speech_level_dbfs_proxy_high50pct_frames": -37.816,
+            "snr_db_proxy_high50_minus_low10": 22.858,
+            "spectral_centroid_hz": 2448.119,
+            "spectral_flatness_proxy": 0.311677,
+            "high_band_fraction_proxy_ge8khz": 0.163981
+          }
+        },
+        {
+          "start_s": 430.0,
+          "end_s": 440.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -41.541,
+            "peak_dbfs": -16.721,
+            "crest_db": 24.82,
+            "dc_offset": -1.076e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -63.362,
+            "speech_level_dbfs_proxy_high50pct_frames": -43.238,
+            "snr_db_proxy_high50_minus_low10": 20.123,
+            "spectral_centroid_hz": 3209.272,
+            "spectral_flatness_proxy": 0.375993,
+            "high_band_fraction_proxy_ge8khz": 0.154854
+          }
+        },
+        {
+          "start_s": 440.0,
+          "end_s": 450.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -49.146,
+            "peak_dbfs": -24.05,
+            "crest_db": 25.096,
+            "dc_offset": -1.006e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -67.086,
+            "speech_level_dbfs_proxy_high50pct_frames": -55.941,
+            "snr_db_proxy_high50_minus_low10": 11.145,
+            "spectral_centroid_hz": 2130.281,
+            "spectral_flatness_proxy": 0.225028,
+            "high_band_fraction_proxy_ge8khz": 0.07007
+          }
+        },
+        {
+          "start_s": 450.0,
+          "end_s": 460.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -50.055,
+            "peak_dbfs": -23.314,
+            "crest_db": 26.741,
+            "dc_offset": -9.08e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -68.694,
+            "speech_level_dbfs_proxy_high50pct_frames": -55.708,
+            "snr_db_proxy_high50_minus_low10": 12.986,
+            "spectral_centroid_hz": 2719.454,
+            "spectral_flatness_proxy": 0.349433,
+            "high_band_fraction_proxy_ge8khz": 0.092174
+          }
+        },
+        {
+          "start_s": 460.0,
+          "end_s": 470.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -42.536,
+            "peak_dbfs": -21.731,
+            "crest_db": 20.805,
+            "dc_offset": -7.23e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -65.829,
+            "speech_level_dbfs_proxy_high50pct_frames": -51.6,
+            "snr_db_proxy_high50_minus_low10": 14.229,
+            "spectral_centroid_hz": 682.56,
+            "spectral_flatness_proxy": 0.063747,
+            "high_band_fraction_proxy_ge8khz": 0.012646
+          }
+        },
+        {
+          "start_s": 470.0,
+          "end_s": 480.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -36.732,
+            "peak_dbfs": -17.482,
+            "crest_db": 19.249,
+            "dc_offset": -1.324e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -63.296,
+            "speech_level_dbfs_proxy_high50pct_frames": -39.246,
+            "snr_db_proxy_high50_minus_low10": 24.05,
+            "spectral_centroid_hz": 741.693,
+            "spectral_flatness_proxy": 0.087115,
+            "high_band_fraction_proxy_ge8khz": 0.023128
+          }
+        },
+        {
+          "start_s": 480.0,
+          "end_s": 490.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -37.041,
+            "peak_dbfs": -17.052,
+            "crest_db": 19.989,
+            "dc_offset": 4.604e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -58.598,
+            "speech_level_dbfs_proxy_high50pct_frames": -35.945,
+            "snr_db_proxy_high50_minus_low10": 22.653,
+            "spectral_centroid_hz": 805.273,
+            "spectral_flatness_proxy": 0.113518,
+            "high_band_fraction_proxy_ge8khz": 0.02638
+          }
+        },
+        {
+          "start_s": 490.0,
+          "end_s": 500.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -38.624,
+            "peak_dbfs": -18.718,
+            "crest_db": 19.906,
+            "dc_offset": -9.56e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -62.606,
+            "speech_level_dbfs_proxy_high50pct_frames": -37.905,
+            "snr_db_proxy_high50_minus_low10": 24.7,
+            "spectral_centroid_hz": 1669.198,
+            "spectral_flatness_proxy": 0.216699,
+            "high_band_fraction_proxy_ge8khz": 0.08443
+          }
+        },
+        {
+          "start_s": 500.0,
+          "end_s": 510.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -36.74,
+            "peak_dbfs": -17.403,
+            "crest_db": 19.337,
+            "dc_offset": -2.46e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -57.964,
+            "speech_level_dbfs_proxy_high50pct_frames": -35.754,
+            "snr_db_proxy_high50_minus_low10": 22.21,
+            "spectral_centroid_hz": 1112.828,
+            "spectral_flatness_proxy": 0.171125,
+            "high_band_fraction_proxy_ge8khz": 0.042761
+          }
+        },
+        {
+          "start_s": 510.0,
+          "end_s": 520.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -41.032,
+            "peak_dbfs": -19.416,
+            "crest_db": 21.616,
+            "dc_offset": -1.43e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -61.5,
+            "speech_level_dbfs_proxy_high50pct_frames": -47.922,
+            "snr_db_proxy_high50_minus_low10": 13.578,
+            "spectral_centroid_hz": 857.984,
+            "spectral_flatness_proxy": 0.059588,
+            "high_band_fraction_proxy_ge8khz": 0.004351
+          }
+        },
+        {
+          "start_s": 520.0,
+          "end_s": 530.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -50.898,
+            "peak_dbfs": -26.842,
+            "crest_db": 24.056,
+            "dc_offset": -5.93e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -64.885,
+            "speech_level_dbfs_proxy_high50pct_frames": -54.884,
+            "snr_db_proxy_high50_minus_low10": 10.001,
+            "spectral_centroid_hz": 291.33,
+            "spectral_flatness_proxy": 0.011203,
+            "high_band_fraction_proxy_ge8khz": 0.000697
+          }
+        },
+        {
+          "start_s": 530.0,
+          "end_s": 540.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -40.414,
+            "peak_dbfs": -18.591,
+            "crest_db": 21.823,
+            "dc_offset": -1.096e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -63.522,
+            "speech_level_dbfs_proxy_high50pct_frames": -38.595,
+            "snr_db_proxy_high50_minus_low10": 24.927,
+            "spectral_centroid_hz": 2574.797,
+            "spectral_flatness_proxy": 0.345089,
+            "high_band_fraction_proxy_ge8khz": 0.136878
+          }
+        },
+        {
+          "start_s": 540.0,
+          "end_s": 550.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -37.63,
+            "peak_dbfs": -18.706,
+            "crest_db": 18.924,
+            "dc_offset": -8.09e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -61.083,
+            "speech_level_dbfs_proxy_high50pct_frames": -40.496,
+            "snr_db_proxy_high50_minus_low10": 20.587,
+            "spectral_centroid_hz": 631.482,
+            "spectral_flatness_proxy": 0.062348,
+            "high_band_fraction_proxy_ge8khz": 0.009557
+          }
+        },
+        {
+          "start_s": 550.0,
+          "end_s": 560.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -39.744,
+            "peak_dbfs": -20.944,
+            "crest_db": 18.799,
+            "dc_offset": -8.12e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -59.837,
+            "speech_level_dbfs_proxy_high50pct_frames": -38.512,
+            "snr_db_proxy_high50_minus_low10": 21.325,
+            "spectral_centroid_hz": 1089.565,
+            "spectral_flatness_proxy": 0.165394,
+            "high_band_fraction_proxy_ge8khz": 0.037064
+          }
+        },
+        {
+          "start_s": 560.0,
+          "end_s": 570.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -42.092,
+            "peak_dbfs": -18.384,
+            "crest_db": 23.708,
+            "dc_offset": -7.17e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -62.434,
+            "speech_level_dbfs_proxy_high50pct_frames": -43.031,
+            "snr_db_proxy_high50_minus_low10": 19.402,
+            "spectral_centroid_hz": 1058.281,
+            "spectral_flatness_proxy": 0.165089,
+            "high_band_fraction_proxy_ge8khz": 0.03311
+          }
+        },
+        {
+          "start_s": 570.0,
+          "end_s": 580.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -43.529,
+            "peak_dbfs": -17.636,
+            "crest_db": 25.892,
+            "dc_offset": 5.53e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -63.357,
+            "speech_level_dbfs_proxy_high50pct_frames": -53.068,
+            "snr_db_proxy_high50_minus_low10": 10.289,
+            "spectral_centroid_hz": 958.024,
+            "spectral_flatness_proxy": 0.075431,
+            "high_band_fraction_proxy_ge8khz": 0.006226
+          }
+        },
+        {
+          "start_s": 580.0,
+          "end_s": 590.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -38.027,
+            "peak_dbfs": -17.172,
+            "crest_db": 20.855,
+            "dc_offset": -2.36e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -59.16,
+            "speech_level_dbfs_proxy_high50pct_frames": -36.819,
+            "snr_db_proxy_high50_minus_low10": 22.341,
+            "spectral_centroid_hz": 1014.265,
+            "spectral_flatness_proxy": 0.153957,
+            "high_band_fraction_proxy_ge8khz": 0.034053
+          }
+        },
+        {
+          "start_s": 590.0,
+          "end_s": 600.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -39.323,
+            "peak_dbfs": -19.29,
+            "crest_db": 20.034,
+            "dc_offset": -8.3e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -62.05,
+            "speech_level_dbfs_proxy_high50pct_frames": -37.378,
+            "snr_db_proxy_high50_minus_low10": 24.672,
+            "spectral_centroid_hz": 805.704,
+            "spectral_flatness_proxy": 0.100679,
+            "high_band_fraction_proxy_ge8khz": 0.013462
+          }
+        },
+        {
+          "start_s": 600.0,
+          "end_s": 610.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -50.352,
+            "peak_dbfs": -27.63,
+            "crest_db": 22.722,
+            "dc_offset": -1.316e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -65.441,
+            "speech_level_dbfs_proxy_high50pct_frames": -56.404,
+            "snr_db_proxy_high50_minus_low10": 9.036,
+            "spectral_centroid_hz": 727.698,
+            "spectral_flatness_proxy": 0.040608,
+            "high_band_fraction_proxy_ge8khz": 0.002074
+          }
+        },
+        {
+          "start_s": 610.0,
+          "end_s": 613.68,
+          "measurements": {
+            "duration_s": 3.680208,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -62.233,
+            "peak_dbfs": -46.114,
+            "crest_db": 16.118,
+            "dc_offset": -1.322e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -79.914,
+            "speech_level_dbfs_proxy_high50pct_frames": -59.844,
+            "snr_db_proxy_high50_minus_low10": 20.07,
+            "spectral_centroid_hz": 209.774,
+            "spectral_flatness_proxy": 0.005748,
+            "high_band_fraction_proxy_ge8khz": 0.000296
+          }
+        }
+      ]
+    },
+    "when Harvey speaks, success listens #Suits #HarveySpecter #Shorts": {
+      "path": "when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+      "sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+      "bytes": 557708,
+      "duration_s": 40.82068,
+      "codec": "mp3",
+      "sample_rate": 44100,
+      "channels": 2,
+      "bit_rate": 109178,
+      "decoded_sample_rate_hz": 24000,
+      "decoded_measurements": {
+        "duration_s": 40.820667,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -22.877,
+        "peak_dbfs": -4.935,
+        "crest_db": 17.942,
+        "dc_offset": 2.934e-05,
+        "clipping_fraction_proxy": 0.0,
+        "noise_floor_dbfs_proxy_low10pct_frames": -45.504,
+        "speech_level_dbfs_proxy_high50pct_frames": -22.697,
+        "snr_db_proxy_high50_minus_low10": 22.807,
+        "spectral_centroid_hz": 706.961,
+        "spectral_flatness_proxy": 0.054461,
+        "high_band_fraction_proxy_ge8khz": 0.002906
+      },
+      "ten_second_windows": [
+        {
+          "start_s": 0.0,
+          "end_s": 10.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -24.176,
+            "peak_dbfs": -4.935,
+            "crest_db": 19.241,
+            "dc_offset": 4.83e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -47.869,
+            "speech_level_dbfs_proxy_high50pct_frames": -24.007,
+            "snr_db_proxy_high50_minus_low10": 23.862,
+            "spectral_centroid_hz": 832.774,
+            "spectral_flatness_proxy": 0.060729,
+            "high_band_fraction_proxy_ge8khz": 0.002653
+          }
+        },
+        {
+          "start_s": 10.0,
+          "end_s": 20.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -20.989,
+            "peak_dbfs": -4.985,
+            "crest_db": 16.004,
+            "dc_offset": 8.922e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -41.6,
+            "speech_level_dbfs_proxy_high50pct_frames": -20.481,
+            "snr_db_proxy_high50_minus_low10": 21.119,
+            "spectral_centroid_hz": 735.432,
+            "spectral_flatness_proxy": 0.048259,
+            "high_band_fraction_proxy_ge8khz": 0.003733
+          }
+        },
+        {
+          "start_s": 20.0,
+          "end_s": 30.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -22.638,
+            "peak_dbfs": -4.975,
+            "crest_db": 17.663,
+            "dc_offset": 1.628e-05,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -44.991,
+            "speech_level_dbfs_proxy_high50pct_frames": -21.872,
+            "snr_db_proxy_high50_minus_low10": 23.119,
+            "spectral_centroid_hz": 584.578,
+            "spectral_flatness_proxy": 0.030535,
+            "high_band_fraction_proxy_ge8khz": 0.001588
+          }
+        },
+        {
+          "start_s": 30.0,
+          "end_s": 40.0,
+          "measurements": {
+            "duration_s": 10.0,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -24.392,
+            "peak_dbfs": -5.322,
+            "crest_db": 19.07,
+            "dc_offset": 7.54e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -47.288,
+            "speech_level_dbfs_proxy_high50pct_frames": -25.161,
+            "snr_db_proxy_high50_minus_low10": 22.127,
+            "spectral_centroid_hz": 719.883,
+            "spectral_flatness_proxy": 0.060322,
+            "high_band_fraction_proxy_ge8khz": 0.003459
+          }
+        }
+      ]
+    }
+  },
+  "reference_ids": [
+    "asmr7_bully_01",
+    "asmr7_bully_02",
+    "asmr7_conversational_01",
+    "asmr7_soft_praise_01",
+    "asmr7_emotional_01",
+    "asmr7_emotional_02",
+    "asmr7_party_01",
+    "harvey_quote_01",
+    "harvey_quote_02",
+    "harvey_quote_03",
+    "harvey_quote_04"
+  ],
+  "heldout_ids": [
+    "asmr7_heldout_01",
+    "asmr7_heldout_02",
+    "asmr7_heldout_03",
+    "asmr7_heldout_04",
+    "asmr7_heldout_05",
+    "harvey_heldout_01"
+  ]
+}

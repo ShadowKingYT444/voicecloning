@@ -1,0 +1,32 @@
+[
+  {
+    "id": "soft_cold",
+    "tokens_exact": true,
+    "mel_exact": true,
+    "wav_same_length": true,
+    "wav_max_abs": 2.384185791015625e-07,
+    "full_request_seconds": 30.161018927996338,
+    "audio_seconds": 7.36,
+    "full_request_rtf": 4.097964528260372
+  },
+  {
+    "id": "soft_warm_repeat",
+    "tokens_exact": true,
+    "mel_exact": true,
+    "wav_same_length": true,
+    "wav_max_abs": 3.5762786865234375e-07,
+    "full_request_seconds": 4.3232846050013904,
+    "audio_seconds": 7.36,
+    "full_request_rtf": 0.5874027995925802
+  },
+  {
+    "id": "soft_warm_new",
+    "tokens_exact": true,
+    "mel_exact": true,
+    "wav_same_length": true,
+    "wav_max_abs": 3.5762786865234375e-07,
+    "full_request_seconds": 3.8435571119989618,
+    "audio_seconds": 6.96,
+    "full_request_rtf": 0.5522352172412301
+  }
+]

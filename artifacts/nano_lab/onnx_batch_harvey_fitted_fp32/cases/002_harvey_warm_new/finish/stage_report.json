@@ -1,0 +1,35 @@
+{
+  "elapsed_seconds": 0.132767915725708,
+  "finished_unix": 1790703843.4984279,
+  "result": {
+    "audio_samples": 98400,
+    "audio_seconds": 4.1,
+    "master_processing": {
+      "achieved_lufs": -19.416897461726116,
+      "gain_db": 3.136815975447689,
+      "highpass_hz": 45,
+      "noise_gate": false,
+      "target_lufs": -19,
+      "true_peak_ceiling_dbtp": -1,
+      "true_peak_oversampling": 4
+    },
+    "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_batch_harvey_fitted_fp32/harvey_warm_new.wav",
+    "sample_rate": 24000,
+    "schema_version": 1,
+    "source": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_batch_harvey_fitted_fp32/cases/002_harvey_warm_new/vocoder/audio.npz",
+    "trim_fade": {
+      "fade_ms": 20,
+      "n_trim": 480
+    },
+    "watermark": "PerthImplicitWatermarker",
+    "watermark_applied": true
+  },
+  "rss": {
+    "peak_rss_bytes": 1894490112,
+    "rss_bytes": 1883488256
+  },
+  "schema_version": 1,
+  "stage": "finish",
+  "started_unix": 1790703843.3656607,
+  "status": "ok"
+}

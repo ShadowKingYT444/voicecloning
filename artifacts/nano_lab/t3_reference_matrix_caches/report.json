@@ -1,0 +1,119 @@
+{
+  "base": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+  "base_sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+  "donor": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_intimate_morning_31.conds.pt",
+  "donor_sha256": "5869ebb4539e742dd5bb03f65cee3f8cc5aa04ec4dd6622b5ed6d52f611b6d19",
+  "donor_reference": "asmr7_bully_01__natural.wav",
+  "donor_interval_s": [
+    117.7,
+    129.0
+  ],
+  "heldout01_interval_s": [
+    92.1,
+    102.1
+  ],
+  "variants": {
+    "prompt": {
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+      "sha256": "ba80b353c82ab7f8a59ecbab4da0ec59dcde252a93162e6773dde184d99a078c",
+      "decoder_gen_exact": true,
+      "t3": {
+        "speaker_emb": {
+          "shape": [
+            1,
+            256
+          ],
+          "dtype": "torch.float32",
+          "sha256": "e2ed44c379a47ae28c1c4f90421dea52724364c063298c87e81403da75c6250f"
+        },
+        "clap_emb": null,
+        "cond_prompt_speech_tokens": {
+          "shape": [
+            1,
+            283
+          ],
+          "dtype": "torch.int64",
+          "sha256": "1a71cc7a05f7c866972a3ffe7cded6bda36bb4f2f107f0d88b2b21b3d2bb5136"
+        },
+        "cond_prompt_speech_emb": null,
+        "emotion_adv": {
+          "shape": [
+            1,
+            1,
+            1
+          ],
+          "dtype": "torch.float32",
+          "sha256": "d99e58435243d9fef9c88273b8d553b4fba4d0baf8009d29eae74fa99e0d9f57"
+        }
+      }
+    },
+    "speaker": {
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/speaker.conds.pt",
+      "sha256": "47e8170f4b7beee400fbe8a8e571f3a573d9ea5728a35366c88974401986a673",
+      "decoder_gen_exact": true,
+      "t3": {
+        "speaker_emb": {
+          "shape": [
+            1,
+            256
+          ],
+          "dtype": "torch.float32",
+          "sha256": "6ba220d36cb87e1b01810071c8b9faee15e4f76f0fd08f4145d4cbfdf7368d4e"
+        },
+        "clap_emb": null,
+        "cond_prompt_speech_tokens": {
+          "shape": [
+            1,
+            333
+          ],
+          "dtype": "torch.int64",
+          "sha256": "cb844bf20397532db2e0251e6691781bff3e6f9f2126815474b3d2b23f9d7c4e"
+        },
+        "cond_prompt_speech_emb": null,
+        "emotion_adv": {
+          "shape": [
+            1,
+            1,
+            1
+          ],
+          "dtype": "torch.float32",
+          "sha256": "d99e58435243d9fef9c88273b8d553b4fba4d0baf8009d29eae74fa99e0d9f57"
+        }
+      }
+    },
+    "all_t3": {
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/t3_reference_matrix_caches/all_t3.conds.pt",
+      "sha256": "1d496305896c55c927531428bcd8d024ad6dc242807850aeaff87a7fe1757a0e",
+      "decoder_gen_exact": true,
+      "t3": {
+        "speaker_emb": {
+          "shape": [
+            1,
+            256
+          ],
+          "dtype": "torch.float32",
+          "sha256": "6ba220d36cb87e1b01810071c8b9faee15e4f76f0fd08f4145d4cbfdf7368d4e"
+        },
+        "clap_emb": null,
+        "cond_prompt_speech_tokens": {
+          "shape": [
+            1,
+            283
+          ],
+          "dtype": "torch.int64",
+          "sha256": "1a71cc7a05f7c866972a3ffe7cded6bda36bb4f2f107f0d88b2b21b3d2bb5136"
+        },
+        "cond_prompt_speech_emb": null,
+        "emotion_adv": {
+          "shape": [
+            1,
+            1,
+            1
+          ],
+          "dtype": "torch.float32",
+          "sha256": "d99e58435243d9fef9c88273b8d553b4fba4d0baf8009d29eae74fa99e0d9f57"
+        }
+      }
+    }
+  }
+}

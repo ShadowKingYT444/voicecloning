@@ -1,0 +1,8 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"screenshot":"/home/terryd/gooning/voicecloning/artifacts/nano_lab/delivery/preview.png","contentHeight":2205,"media":[{"src":"../cadence_penalty/level_matched/source_heldout01.wav","duration":10},{"src":"../decoder_attention_prompt_comparison_v2/level_matched/heldout01_prompt_attention0_mel.wav","duration":7.4},{"src":"../decoder_attention_prompt_comparison_v2/level_matched/heldout01_prompt_attention1_mel.wav","duration":7.4},{"src":"../harvey_level_matched/source_isolated.wav","duration":7.1},{"src":"../harvey_decoder_comparison/level_matched/business_decoder_fit.wav","duration":6.1},{"src":"../harvey_decoder_comparison/level_matched/business_base.wav","duration":6.1}],"mutedPlayback":[{"src":"../cadence_penalty/level_matched/source_heldout01.wav","advancedSeconds":0.078485},{"src":"../decoder_attention_prompt_comparison_v2/level_matched/heldout01_prompt_attention0_mel.wav","advancedSeconds":0.078447},{"src":"../decoder_attention_prompt_comparison_v2/level_matched/heldout01_prompt_attention1_mel.wav","advancedSeconds":0.078933},{"src":"../harvey_level_matched/source_isolated.wav","advancedSeconds":0.078416},{"src":"../harvey_decoder_comparison/level_matched/business_decoder_fit.wav","advancedSeconds":0.078754},{"src":"../harvey_decoder_comparison/level_matched/business_base.wav","advancedSeconds":0.078231}]}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 4.993s
+             CPU time consumed: 4.676s
+                   Memory peak: 116.8M (swap: 0B)

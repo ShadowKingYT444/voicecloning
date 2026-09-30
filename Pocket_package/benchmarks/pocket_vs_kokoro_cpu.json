@@ -1,0 +1,53 @@
+{
+  "hardware": {
+    "cpu": 16,
+    "gpu": null
+  },
+  "benchmark_text_characters": 113,
+  "pocket": {
+    "model": "Pocket TTS local checkpoint",
+    "runtime": "ONNX Runtime CPU",
+    "precision": "INT8 dynamic MatMul",
+    "device": "cpu",
+    "threads": 1,
+    "temperature": 0.2,
+    "lsd_steps": 1,
+    "reference": "/home/terryd/gooning/voicecloning/Pocket_package/voices/asmr7_30s_loud_reference.wav",
+    "reference_seconds": 30.0,
+    "model_load_seconds": 1.546656,
+    "reference_conditioning_seconds": 15.217018,
+    "rss_after_load_mb": 798.1,
+    "rss_after_conditioning_mb": 1921.0,
+    "iterations": 2,
+    "audio_seconds": 4.32,
+    "mean_seconds": 5.741893,
+    "median_seconds": 5.741893,
+    "min_seconds": 5.593415,
+    "max_seconds": 5.890371,
+    "audio_seconds_per_second": 0.752,
+    "real_time_factor": 1.3291,
+    "warm_output_seconds": 4.32,
+    "max_frames": 54
+  },
+  "kokoro": {
+    "model": "Kokoro-82M packaged runtime",
+    "runtime": "PyTorch KokoroVoice",
+    "precision": "fp32",
+    "device": "cpu",
+    "model_load_seconds": 6.498361,
+    "rss_after_load_mb": 1780.9,
+    "iterations": 2,
+    "audio_seconds": 7.625,
+    "mean_seconds": 12.631552,
+    "median_seconds": 12.631552,
+    "min_seconds": 12.341014,
+    "max_seconds": 12.922091,
+    "audio_seconds_per_second": 0.604,
+    "real_time_factor": 1.6566
+  },
+  "comparison": {
+    "pocket_vs_kokoro_warm_speedup": 1.245,
+    "pocket_vs_kokoro_warm_latency_ratio": 0.455,
+    "note": "Compare providers/devices from the fields above; Pocket is CPU ONNX and Kokoro uses the selected packaged device."
+  }
+}

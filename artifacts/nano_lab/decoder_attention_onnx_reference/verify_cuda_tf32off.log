@@ -1,0 +1,271 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: cbf59cf65b8b4d4d8b6100c89b9f03f1
+[0;93m2026-09-29 17:37:39.790470893 [W:onnxruntime:, transformer_memcpy.cc:111 ApplyImpl] 56 Memcpy nodes are added to the graph main_graph for CUDAExecutionProvider. It might have negative impact on performance (including unable to run CUDA graph). Set session_options.log_severity_level=1 to see the detail logs before this message.[m
+[1;31m2026-09-29 17:37:43.580325440 [E:onnxruntime:Default, cudnn_fe_call.cc:38 CudaErrString<cudnn_frontend::error_object>] No valid engine configs for ConvFwd_
+{"engineId":53,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":53,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":46,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":55,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":54,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":56,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":46,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":48,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":53,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":54,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":55,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":55,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":48,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":35,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":46,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":54,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":53,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":48,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":55,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":48,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":38,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":55,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":55,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":55,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":35,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+{"engineId":55,"smVersion":890,"knobChoices":{}}
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: core_engine.getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine_iface->getStatus()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: status
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: engine.finalize()
+Warning: CUDNN_STATUS_NOT_SUPPORTED; Reason: finalize_internal()
+
+[m
+[1;31m2026-09-29 17:37:43.584619418 [E:onnxruntime:, sequential_executor.cc:615 ExecuteKernel] Non-zero status code returned while running Conv node. Name:'/estimator/down_blocks.0.0/block1/block/block.0/Conv' Status Message: Failed to initialize CUDNN Frontend: /onnxruntime_src/onnxruntime/core/providers/cuda/cudnn_fe_call.cc:104 std::conditional_t<THRW, void, onnxruntime::common::Status> onnxruntime::CudaCall(ERRTYPE, const char*, const char*, SUCCTYPE, const char*, const char*, int) [with ERRTYPE = cudnn_frontend::error_object; bool THRW = true; SUCCTYPE = cudnn_frontend::error_code_t; std::conditional_t<THRW, void, common::Status> = void] /onnxruntime_src/onnxruntime/core/providers/cuda/cudnn_fe_call.cc:96 std::conditional_t<THRW, void, onnxruntime::common::Status> onnxruntime::CudaCall(ERRTYPE, const char*, const char*, SUCCTYPE, const char*, const char*, int) [with ERRTYPE = cudnn_frontend::error_object; bool THRW = true; SUCCTYPE = cudnn_frontend::error_code_t; std::conditional_t<THRW, void, common::Status> = void] CUDNN_FE failure 8: HEURISTIC_QUERY_FAILED ; GPU=0 ; hostname=terry-katana15b12vfk ; file=/onnxruntime_src/onnxruntime/core/providers/cuda/nn/conv.cc ; line=238 ; expr=s_.cudnn_fe_graph->create_execution_plans({heur_mode}); 
+
+ with the cudnn frontend json:
+{"context":{"compute_data_type":"FLOAT","intermediate_data_type":"FLOAT","io_data_type":"FLOAT","name":"","sm_count":-1},"cudnn_backend_version":"9.19.0","cudnn_frontend_version":11200,"json_version":"1.0","nodes":[{"compute_data_type":"FLOAT","dilation":[1,1],"inputs":{"W":"w","X":"x"},"math_mode":"CROSS_CORRELATION","name":"0","outputs":{"Y":"0::Y"},"post_padding":[0,0],"pre_padding":[0,0],"stride":[1,1],"tag":"CONV_FPROP"}],"tensors":{"0::Y":{"data_type":"FLOAT","dim":[1,256,256,1],"is_pass_by_value":false,"is_virtual":false,"name":"0::Y","pass_by_value":null,"reordering_type":"NONE","stride":[65536,256,1,1],"uid":3,"uid_assigned":true},"w":{"data_type":"FLOAT","dim":[256,320,3,1],"is_pass_by_value":false,"is_virtual":false,"name":"w","pass_by_value":null,"reordering_type":"NONE","stride":[960,3,1,1],"uid":1,"uid_assigned":true},"x":{"data_type":"FLOAT","dim":[1,320,258,1],"is_pass_by_value":false,"is_virtual":false,"name":"x","pass_by_value":null,"reordering_type":"NONE","stride":[82560,258,1,1],"uid":2,"uid_assigned":true}}}[m
+Traceback (most recent call last):
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/verify_decoder_attention_onnx.py", line 184, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/verify_decoder_attention_onnx.py", line 180, in main
+    return reference(args) if args.command == 'reference' else verify(args)
+                                                               ^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/verify_decoder_attention_onnx.py", line 131, in verify
+    actual = runtime.estimate(**inputs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_staged_runtime.py", line 725, in estimate
+    result = self._run(
+             ^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_staged_runtime.py", line 437, in _run
+    outputs = tuple(np.asarray(value) for value in self.session.run(list(self.output_names), dict(feeds), run_options))
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/.venv-nano-ort/lib/python3.12/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 322, in run
+    return self._sess.run(output_names, input_feed, run_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+onnxruntime.capi.onnxruntime_pybind11_state.EPFail: [ONNXRuntimeError] : 11 : EP_FAIL : Non-zero status code returned while running Conv node. Name:'/estimator/down_blocks.0.0/block1/block/block.0/Conv' Status Message: Failed to initialize CUDNN Frontend: /onnxruntime_src/onnxruntime/core/providers/cuda/cudnn_fe_call.cc:104 std::conditional_t<THRW, void, onnxruntime::common::Status> onnxruntime::CudaCall(ERRTYPE, const char*, const char*, SUCCTYPE, const char*, const char*, int) [with ERRTYPE = cudnn_frontend::error_object; bool THRW = true; SUCCTYPE = cudnn_frontend::error_code_t; std::conditional_t<THRW, void, common::Status> = void] /onnxruntime_src/onnxruntime/core/providers/cuda/cudnn_fe_call.cc:96 std::conditional_t<THRW, void, onnxruntime::common::Status> onnxruntime::CudaCall(ERRTYPE, const char*, const char*, SUCCTYPE, const char*, const char*, int) [with ERRTYPE = cudnn_frontend::error_object; bool THRW = true; SUCCTYPE = cudnn_frontend::error_code_t; std::conditional_t<THRW, void, common::Status> = void] CUDNN_FE failure 8: HEURISTIC_QUERY_FAILED ; GPU=0 ; hostname=terry-katana15b12vfk ; file=/onnxruntime_src/onnxruntime/core/providers/cuda/nn/conv.cc ; line=238 ; expr=s_.cudnn_fe_graph->create_execution_plans({heur_mode}); 
+
+ with the cudnn frontend json:
+{"context":{"compute_data_type":"FLOAT","intermediate_data_type":"FLOAT","io_data_type":"FLOAT","name":"","sm_count":-1},"cudnn_backend_version":"9.19.0","cudnn_frontend_version":11200,"json_version":"1.0","nodes":[{"compute_data_type":"FLOAT","dilation":[1,1],"inputs":{"W":"w","X":"x"},"math_mode":"CROSS_CORRELATION","name":"0","outputs":{"Y":"0::Y"},"post_padding":[0,0],"pre_padding":[0,0],"stride":[1,1],"tag":"CONV_FPROP"}],"tensors":{"0::Y":{"data_type":"FLOAT","dim":[1,256,256,1],"is_pass_by_value":false,"is_virtual":false,"name":"0::Y","pass_by_value":null,"reordering_type":"NONE","stride":[65536,256,1,1],"uid":3,"uid_assigned":true},"w":{"data_type":"FLOAT","dim":[256,320,3,1],"is_pass_by_value":false,"is_virtual":false,"name":"w","pass_by_value":null,"reordering_type":"NONE","stride":[960,3,1,1],"uid":1,"uid_assigned":true},"x":{"data_type":"FLOAT","dim":[1,320,258,1],"is_pass_by_value":false,"is_virtual":false,"name":"x","pass_by_value":null,"reordering_type":"NONE","stride":[82560,258,1,1],"uid":2,"uid_assigned":true}}}
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 10.722s
+             CPU time consumed: 10.808s
+                   Memory peak: 669.5M (swap: 0B)

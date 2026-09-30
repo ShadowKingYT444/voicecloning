@@ -1,0 +1,19 @@
+# Direct packages observed locally. Fresh environment resolution has not been tested.
+numpy==1.26.4
+scipy==1.17.1
+transformers==4.57.3
+tokenizers==0.22.2
+diffusers==0.39.0
+safetensors==0.8.0
+s3tokenizer==0.3.0
+resemble-perth==1.0.1
+librosa==0.11.0
+soundfile==0.14.0
+conformer==0.3.2
+einops==0.8.2
+omegaconf==2.3.1
+pyloudnorm==0.2.0
+psutil==7.2.2
+pykakasi==2.3.0
+spacy-pkuseg==1.0.1
+huggingface-hub==0.36.2

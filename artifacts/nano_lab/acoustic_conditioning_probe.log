@@ -1,0 +1,40 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: a25f2f97aa6147a6874503350ad757b1
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+loaded PerthNet (Implicit) at step 250,000
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  3.57it/s]100%|██████████| 2/2 [00:00<00:00,  5.38it/s]
+{"variant": "baseline", "seed": 10031, "peak_rss_mib": 2524.10546875}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  7.45it/s]100%|██████████| 2/2 [00:00<00:00,  9.66it/s]
+{"variant": "baseline", "seed": 10097, "peak_rss_mib": 2547.51953125}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 13.72it/s]100%|██████████| 2/2 [00:00<00:00, 13.69it/s]
+{"variant": "self_all", "seed": 10031, "peak_rss_mib": 2563.3828125}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 13.67it/s]100%|██████████| 2/2 [00:00<00:00, 13.64it/s]
+{"variant": "self_all", "seed": 10097, "peak_rss_mib": 2576.77734375}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 11.88it/s]100%|██████████| 2/2 [00:00<00:00, 11.86it/s]
+{"variant": "baseline_self_embedding", "seed": 10031, "peak_rss_mib": 2593.84765625}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 13.14it/s]100%|██████████| 2/2 [00:00<00:00, 13.12it/s]
+{"variant": "baseline_self_embedding", "seed": 10097, "peak_rss_mib": 2615.4765625}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 13.60it/s]100%|██████████| 2/2 [00:00<00:00, 13.58it/s]
+{"variant": "baseline_self_prompt", "seed": 10031, "peak_rss_mib": 2631.359375}
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 13.23it/s]100%|██████████| 2/2 [00:00<00:00, 13.21it/s]
+{"variant": "baseline_self_prompt", "seed": 10097, "peak_rss_mib": 2649.0625}
+{
+  "output_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe",
+  "peak_rss_bytes": 2794668032,
+  "research_only": true,
+  "rows": 8
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 41.971s
+             CPU time consumed: 43.088s
+                   Memory peak: 2.4G (swap: 0B)

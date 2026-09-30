@@ -1,0 +1,15 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "morning_cap095_raw", "cosine": 0.867375, "wer": null, "dnsmos_overall": 3.0269392897842384}
+{"id": "morning_cap095_mel", "cosine": 0.870951, "wer": null, "dnsmos_overall": 3.0416342830787997}
+{"id": "question_cap095_raw", "cosine": 0.91254, "wer": null, "dnsmos_overall": 3.1607384110061076}
+{"id": "question_cap095_mel", "cosine": 0.915772, "wer": null, "dnsmos_overall": 3.1233055773882863}
+{"id": "narrative_cap095_raw", "cosine": 0.897682, "wer": null, "dnsmos_overall": 3.081089267549649}
+{"id": "narrative_cap095_mel", "cosine": 0.9057, "wer": null, "dnsmos_overall": 3.113934453443947}
+{"id": "heldout01_cap095_raw", "cosine": 0.884077, "wer": null, "dnsmos_overall": 2.7143780544845764}
+{"id": "heldout01_cap095_mel", "cosine": 0.884014, "wer": null, "dnsmos_overall": 2.592356031096953}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 37.417s
+             CPU time consumed: 1min 5.120s
+                   Memory peak: 685.2M (swap: 0B)

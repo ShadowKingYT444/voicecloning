@@ -1,0 +1,46 @@
+MemoryMax=3GiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job
+Running as unit: nano-lab-model.service
+{"id": "asmr_conversational_morning_31_noise", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "asmr_conversational_morning_31_delta", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "asmr_conversational_morning_47_noise", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "asmr_conversational_morning_47_delta", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "asmr_conversational_question_31_noise", "wer": 0.0, "transcript": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it."}
+{"id": "asmr_conversational_question_31_delta", "wer": 0.0, "transcript": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it."}
+{"id": "asmr_conversational_question_47_noise", "wer": 0.0, "transcript": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it."}
+{"id": "asmr_conversational_question_47_delta", "wer": 0.0, "transcript": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it."}
+{"id": "asmr_conversational_reassurance_31_noise", "wer": 0.0, "transcript": "You do not need to solve everything tonight. Choose one small step, give yourself a little space, and we can begin again tomorrow."}
+{"id": "asmr_conversational_reassurance_31_delta", "wer": 0.0, "transcript": "You do not need to solve everything tonight. Choose one small step, give yourself a little space, and we can begin again tomorrow."}
+{"id": "asmr_conversational_reassurance_47_noise", "wer": 0.086957, "transcript": "You do not need to solve everything to mind. Choose one small step, give yourself a little space, and we can begin again tomorrow."}
+{"id": "asmr_conversational_reassurance_47_delta", "wer": 0.0, "transcript": "You do not need to solve everything tonight. Choose one small step. Give yourself a little space and we can begin again tomorrow."}
+{"id": "asmr_soft_morning_31_noise", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "asmr_soft_morning_31_delta", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "asmr_soft_morning_47_noise", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "asmr_soft_question_31_noise", "wer": 0.0, "transcript": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it."}
+{"id": "asmr_soft_question_31_delta", "wer": 0.0, "transcript": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it."}
+{"id": "asmr_soft_question_47_noise", "wer": 0.0, "transcript": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it."}
+{"id": "asmr_soft_question_47_delta", "wer": 0.0, "transcript": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it."}
+{"id": "asmr_soft_reassurance_31_noise", "wer": 0.0, "transcript": "You do not need to solve everything tonight. Choose one small step. Give yourself a little space and we can begin again tomorrow."}
+{"id": "asmr_soft_reassurance_31_delta", "wer": 0.0, "transcript": "You do not need to solve everything tonight. Choose one small step, give yourself a little space, and we can begin again tomorrow."}
+{"id": "asmr_soft_reassurance_47_noise", "wer": 0.0, "transcript": "You do not need to solve everything tonight. Choose one small step, give yourself a little space, and we can begin again tomorrow."}
+{"id": "asmr_soft_reassurance_47_delta", "wer": 0.0, "transcript": "You do not need to solve everything tonight. Choose one small step, give yourself a little space, and we can begin again tomorrow."}
+{"id": "fit_emotional_base_neutral", "wer": 0.0, "transcript": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow."}
+{"id": "fit_emotional_base_calm", "wer": 0.0, "transcript": "You have done enough for today. Take a quiet moment. Breathe slowly and let yourself relax."}
+{"id": "fit_emotional_fit_neutral", "wer": 0.0, "transcript": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow."}
+{"id": "fit_emotional_fit_calm", "wer": 0.0, "transcript": "You have done enough for today. Take a quiet moment, breathe slowly, and let yourself relax."}
+{"id": "harvey_tune_isolated_meeting_31", "wer": 0.05, "transcript": "Our appointment begins at 9 tomorrow morning. Bring the latest figures, check each number, and leave enough time for questions."}
+{"id": "harvey_tune_isolated_meeting_47", "wer": 0.05, "transcript": "Our appointment begins at 9 tomorrow morning. Bring the latest figures, check each number, and leave enough time for questions."}
+{"id": "harvey_tune_isolated_decision_31", "wer": 0.0, "transcript": "A useful decision starts with the facts. Read the full report before you decide what to do next."}
+{"id": "harvey_tune_isolated_decision_47", "wer": 0.0, "transcript": "A useful decision starts with the facts. Read the full report before you decide what to do next."}
+{"id": "harvey_tune_natural_mean_meeting_31", "wer": 0.25, "transcript": "tomorrow morning. Bring the latest figures, check each number and leave enough time for questions."}
+{"id": "harvey_tune_natural_mean_meeting_47", "wer": 0.05, "transcript": "Our appointment begins at 9 tomorrow morning. Bring the latest figures, check each number, and leave enough time for questions."}
+{"id": "harvey_tune_natural_mean_decision_31", "wer": 0.0, "transcript": "A useful decision starts with the facts. Read the full report before you decide what to do next."}
+{"id": "harvey_tune_natural_mean_decision_47", "wer": 0.055556, "transcript": "Useful decision starts with the facts. Read the full report before you decide what to do next."}
+{"id": "harvey_tune_isolated_natdecode_meeting_31", "wer": 0.05, "transcript": "Our appointment begins at 9 tomorrow morning. Bring the latest figures, check each number, and leave enough time for questions."}
+{"id": "harvey_tune_isolated_natdecode_meeting_47", "wer": 0.05, "transcript": "Our appointment begins at 9 tomorrow morning. Bring the latest figures, check each number, and leave enough time for questions."}
+{"id": "harvey_tune_isolated_natdecode_decision_31", "wer": 0.0, "transcript": "A useful decision starts with the facts. Read the full report before you decide what to do next."}
+{"id": "harvey_tune_isolated_natdecode_decision_47", "wer": 0.0, "transcript": "A useful decision starts with the facts. Read the full report before you decide what to do next."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 45.907s
+             CPU time consumed: 47.191s
+                   Memory peak: 2G (swap: 0B)

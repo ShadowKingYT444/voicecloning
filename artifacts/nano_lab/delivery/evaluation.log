@@ -1,0 +1,13 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 9ae84c62708e4e7da2b3f8a39c8c9415
+{"id": "asmr_soft", "cosine": 0.850373, "wer": 0.0, "dnsmos_overall": 2.7456735534194228}
+{"id": "asmr_conversational", "cosine": 0.860509, "wer": 0.041667, "dnsmos_overall": 2.1066903548330265}
+{"id": "asmr_intimate", "cosine": 0.849819, "wer": 0.083333, "dnsmos_overall": 2.092901718684394}
+{"id": "asmr_conversational_fitted", "cosine": 0.830211, "wer": 0.0, "dnsmos_overall": 2.795603756973275}
+{"id": "harvey", "cosine": 0.787984, "wer": 0.0, "dnsmos_overall": 3.240036677012945}
+{"id": "asmr_conversational_adapted", "cosine": 0.837635, "wer": 0.0, "dnsmos_overall": 3.016435440253082}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 47.821s
+             CPU time consumed: 1min 27.622s
+                   Memory peak: 497.4M (swap: 0B)

@@ -1,0 +1,217 @@
+[
+  {
+    "id": "all_attn_comparison__neutral_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_comparison/neutral_base.wav",
+    "text": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "all_attn_comparison__neutral_adapter_full",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_comparison/neutral_adapter_full.wav",
+    "text": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "all_attn_comparison__expressive_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_comparison/expressive_base.wav",
+    "text": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "all_attn_comparison__expressive_adapter_full",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_comparison/expressive_adapter_full.wav",
+    "text": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "all_attn_comparison__quiet_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_comparison/quiet_base.wav",
+    "text": "The room is quiet now. Take a slow breath. We have plenty of time to talk.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "all_attn_comparison__quiet_adapter_full",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_comparison/quiet_adapter_full.wav",
+    "text": "The room is quiet now. Take a slow breath. We have plenty of time to talk.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "all_attn_robustness__question_79_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_robustness/question_79_base.wav",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "all_attn_robustness__question_79_adapter",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_robustness/question_79_adapter.wav",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "all_attn_robustness__question_79_combined",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_robustness/question_79_combined.wav",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "all_attn_robustness__question_97_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_robustness/question_97_base.wav",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "all_attn_robustness__question_97_adapter",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_robustness/question_97_adapter.wav",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "all_attn_robustness__question_97_combined",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_robustness/question_97_combined.wav",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "all_attn_robustness__narrative_79_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_robustness/narrative_79_base.wav",
+    "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "all_attn_robustness__narrative_79_adapter",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_robustness/narrative_79_adapter.wav",
+    "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "all_attn_robustness__narrative_79_combined",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_robustness/narrative_79_combined.wav",
+    "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "all_attn_robustness__narrative_97_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_robustness/narrative_97_base.wav",
+    "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "all_attn_robustness__narrative_97_adapter",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_robustness/narrative_97_adapter.wav",
+    "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "all_attn_robustness__narrative_97_combined",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/all_attn_robustness/narrative_97_combined.wav",
+    "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "mel_comparison__neutral_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_comparison/neutral_base.wav",
+    "text": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "mel_comparison__neutral_mel_half",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_comparison/neutral_mel_half.wav",
+    "text": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "mel_comparison__neutral_mel_full",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_comparison/neutral_mel_full.wav",
+    "text": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "mel_comparison__expressive_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_comparison/expressive_base.wav",
+    "text": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "mel_comparison__expressive_mel_half",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_comparison/expressive_mel_half.wav",
+    "text": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "mel_comparison__expressive_mel_full",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_comparison/expressive_mel_full.wav",
+    "text": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "mel_comparison__quiet_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_comparison/quiet_base.wav",
+    "text": "The room is quiet now. Take a slow breath. We have plenty of time to talk.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "mel_comparison__quiet_mel_half",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_comparison/quiet_mel_half.wav",
+    "text": "The room is quiet now. Take a slow breath. We have plenty of time to talk.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "mel_comparison__quiet_mel_full",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_comparison/quiet_mel_full.wav",
+    "text": "The room is quiet now. Take a slow breath. We have plenty of time to talk.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "mel_robustness__question_79_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_robustness/question_79_base.wav",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "mel_robustness__question_79_mel_full",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_robustness/question_79_mel_full.wav",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "mel_robustness__question_97_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_robustness/question_97_base.wav",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "mel_robustness__question_97_mel_full",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_robustness/question_97_mel_full.wav",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "mel_robustness__narrative_79_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_robustness/narrative_79_base.wav",
+    "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "mel_robustness__narrative_79_mel_full",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_robustness/narrative_79_mel_full.wav",
+    "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "mel_robustness__narrative_97_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_robustness/narrative_97_base.wav",
+    "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "mel_robustness__narrative_97_mel_full",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_robustness/narrative_97_mel_full.wav",
+    "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+    "voice": "asmr7"
+  },
+  {
+    "id": "source_conversational",
+    "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+    "voice": "asmr7"
+  }
+]

@@ -1,0 +1,101 @@
+{
+  "output_dir": "artifacts/nano_lab/sweep_initial",
+  "cases": [
+    {
+      "id": "asmr_early_t55",
+      "voice": "asmr7",
+      "reference": "artifacts/references/chunks/asmr7_chunk_36-46.wav",
+      "text_id": "comfort",
+      "temperature": 0.55,
+      "seed": 31
+    },
+    {
+      "id": "asmr_early_t80",
+      "voice": "asmr7",
+      "reference": "artifacts/references/chunks/asmr7_chunk_36-46.wav",
+      "text_id": "comfort",
+      "temperature": 0.8,
+      "seed": 31
+    },
+    {
+      "id": "asmr_early_t100",
+      "voice": "asmr7",
+      "reference": "artifacts/references/chunks/asmr7_chunk_36-46.wav",
+      "text_id": "comfort",
+      "temperature": 1.0,
+      "seed": 31
+    },
+    {
+      "id": "asmr_middle_t55",
+      "voice": "asmr7",
+      "reference": "artifacts/references/chunks/asmr7_chunk_96-106.wav",
+      "text_id": "comfort",
+      "temperature": 0.55,
+      "seed": 31
+    },
+    {
+      "id": "asmr_middle_t80",
+      "voice": "asmr7",
+      "reference": "artifacts/references/chunks/asmr7_chunk_96-106.wav",
+      "text_id": "comfort",
+      "temperature": 0.8,
+      "seed": 31
+    },
+    {
+      "id": "asmr_middle_t100",
+      "voice": "asmr7",
+      "reference": "artifacts/references/chunks/asmr7_chunk_96-106.wav",
+      "text_id": "comfort",
+      "temperature": 1.0,
+      "seed": 31
+    },
+    {
+      "id": "asmr_late_t55",
+      "voice": "asmr7",
+      "reference": "artifacts/references/asmr7_variants/reference_3.wav",
+      "text_id": "comfort",
+      "temperature": 0.55,
+      "seed": 31
+    },
+    {
+      "id": "asmr_late_t80",
+      "voice": "asmr7",
+      "reference": "artifacts/references/asmr7_variants/reference_3.wav",
+      "text_id": "comfort",
+      "temperature": 0.8,
+      "seed": 31
+    },
+    {
+      "id": "asmr_late_t100",
+      "voice": "asmr7",
+      "reference": "artifacts/references/asmr7_variants/reference_3.wav",
+      "text_id": "comfort",
+      "temperature": 1.0,
+      "seed": 31
+    },
+    {
+      "id": "asmr_long_t55",
+      "voice": "asmr7",
+      "reference": "artifacts/references/chunks/asmr7_chunk_80-110_trimmed.wav",
+      "text_id": "comfort",
+      "temperature": 0.55,
+      "seed": 31
+    },
+    {
+      "id": "asmr_long_t80",
+      "voice": "asmr7",
+      "reference": "artifacts/references/chunks/asmr7_chunk_80-110_trimmed.wav",
+      "text_id": "comfort",
+      "temperature": 0.8,
+      "seed": 31
+    },
+    {
+      "id": "asmr_long_t100",
+      "voice": "asmr7",
+      "reference": "artifacts/references/chunks/asmr7_chunk_80-110_trimmed.wav",
+      "text_id": "comfort",
+      "temperature": 1.0,
+      "seed": 31
+    }
+  ]
+}

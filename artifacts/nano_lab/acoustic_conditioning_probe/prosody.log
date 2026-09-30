@@ -1,0 +1,8 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 6f558006f2474a5aba5c1f9176f6d02c
+{"analyzed_count": 10, "error_count": 0, "out": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/prosody.json", "peak_rss_mib": 134.383}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 47.688s
+             CPU time consumed: 1min 33.758s
+                   Memory peak: 102.1M (swap: 0B)

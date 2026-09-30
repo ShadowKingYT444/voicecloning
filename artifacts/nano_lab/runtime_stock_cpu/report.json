@@ -1,0 +1,59 @@
+{
+  "after_runs": {
+    "cuda_allocated_mib": 0.0,
+    "cuda_peak_allocated_mib": 0.0,
+    "cuda_peak_reserved_mib": 0.0,
+    "cuda_reserved_mib": 0.0,
+    "peak_rss_mib": 5358.6953125,
+    "rss_mib": 3700.5625
+  },
+  "conditioned": {
+    "conditioning_seconds": 0.0,
+    "cuda_allocated_mib": 0.0,
+    "cuda_peak_allocated_mib": 0.0,
+    "cuda_peak_reserved_mib": 0.0,
+    "cuda_reserved_mib": 0.0,
+    "peak_rss_mib": 5358.6953125,
+    "rss_mib": 3585.13671875
+  },
+  "decoder": "meanflow",
+  "device": "cpu",
+  "dtype": "fp32",
+  "loaded": {
+    "cuda_allocated_mib": 0.0,
+    "cuda_peak_allocated_mib": 0.0,
+    "cuda_peak_reserved_mib": 0.0,
+    "cuda_reserved_mib": 0.0,
+    "load_seconds": 12.982683834999989,
+    "peak_rss_mib": 5358.6953125,
+    "rss_mib": 3585.13671875
+  },
+  "return_code": 0,
+  "runs": [
+    {
+      "audio_seconds": 5.72,
+      "cuda_allocated_mib": 0.0,
+      "cuda_peak_allocated_mib": 0.0,
+      "cuda_peak_reserved_mib": 0.0,
+      "cuda_reserved_mib": 0.0,
+      "generation_seconds": 25.009633669000323,
+      "index": 0,
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/runtime_stock_cpu/stock_meanflow_0.wav",
+      "peak_rss_mib": 5358.6953125,
+      "rss_mib": 3700.5625,
+      "rtf": 4.37231357849656,
+      "seed": 31,
+      "speech_tokens": 0,
+      "text": "Hey there. You are doing great. Take a slow breath and let your shoulders relax. I am right here with you."
+    }
+  ],
+  "schema": "nano-runtime-benchmark-v1",
+  "subprocess_sampler": {
+    "peak_rss_mib": 5359.84765625,
+    "peak_vms_mib": 14527.765625,
+    "sample_count": 2812,
+    "sample_period_seconds": 0.02
+  },
+  "variant": "stock",
+  "wall_seconds": 57.37486630300009
+}

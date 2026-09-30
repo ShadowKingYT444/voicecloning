@@ -1,0 +1,15 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+WARNING:root:Reference mel length is not equal to 2 * reference token length.
+
+loaded PerthNet (Implicit) at step 250,000
+{"event": "prepared", "index": 0, "id": "harvey_repair_001", "split": "train", "target_tokens": 105, "prompt_tokens": 178, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 1, "id": "harvey_repair_004", "split": "valid", "target_tokens": 84, "prompt_tokens": 178, "reference_source": "row.reference_audio_path"}
+{"event": "prepared", "index": 2, "id": "harvey_repair_005", "split": "train", "target_tokens": 110, "prompt_tokens": 178, "reference_source": "row.reference_audio_path"}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 31.269s
+             CPU time consumed: 30.663s
+                   Memory peak: 2.2G (swap: 0B)

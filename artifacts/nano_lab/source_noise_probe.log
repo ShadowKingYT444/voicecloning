@@ -1,0 +1,10 @@
+MemoryMax=768MiB, MemoryHigh=614MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 0dcb719b4c8e49c39208f4f9b220c51d
+{"source_noise_scale": 1.0, "seconds": 11.039411069999915, "identical_to_baseline": true, "max_abs_difference": 0.0, "difference_rms": 0.0, "relative_l2_difference": 0.0, "intermediate_waveform": "artifacts/nano_lab/source_noise_probe/scale_1.0/vocoder/audio.npz"}
+{"source_noise_scale": 0.5, "seconds": 12.024914756002545, "identical_to_baseline": false, "max_abs_difference": 0.01609872281551361, "difference_rms": 0.0003961237117749923, "relative_l2_difference": 0.005679642627784498, "intermediate_waveform": "artifacts/nano_lab/source_noise_probe/scale_0.5/vocoder/audio.npz"}
+{"source_noise_scale": 0.0, "seconds": 10.93419167099637, "identical_to_baseline": false, "max_abs_difference": 0.03185358643531799, "difference_rms": 0.0007930208859697043, "relative_l2_difference": 0.01137037520045097, "intermediate_waveform": "artifacts/nano_lab/source_noise_probe/scale_0.0/vocoder/audio.npz"}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 35.701s
+             CPU time consumed: 36.271s
+                   Memory peak: 392.4M (swap: 0B)

@@ -1,0 +1,2764 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 1aeef25e90bb41fdbf192dcfb7f24f7b
+/home/terryd/gooning/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/utils/mask.py:186: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  max_len = max_len if max_len > 0 else lengths.max().item()
+/home/terryd/gooning/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/transformer/embedding.py:229: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if self.pe.size(1) >= x.size(1) * 2 - 1:
+/home/terryd/gooning/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/utils/mask.py:161: TracerWarning: Converting a tensor to a Python number might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if (chunk_masks.sum(dim=-1) == 0).sum().item() != 0:
+/home/terryd/gooning/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/transformer/attention.py:295: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if cache.size(0) > 0:
+/home/terryd/gooning/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/transformer/attention.py:324: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if matrix_ac.shape != matrix_bd.shape:
+/home/terryd/gooning/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/transformer/attention.py:108: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if mask.size(2) > 0:  # time2 > 0
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/torch/onnx/_internal/torchscript_exporter/jit_utils.py:308: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_node_shape_type_inference(node, params_dict, opset_version)
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/torch/onnx/_internal/torchscript_exporter/utils.py:714: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_graph_shape_type_inference(
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/torch/onnx/_internal/torchscript_exporter/utils.py:1187: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_graph_shape_type_inference(
+{
+  "checkpoint": {
+    "bytes": 1064875036,
+    "exists": true,
+    "path": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+    "sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f"
+  },
+  "created_unix": 1790692070.1720257,
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "examples": {
+    "bytes": 479390,
+    "cases": {
+      "tokens12": {
+        "input_names": [
+          "speech_tokens",
+          "token_lengths"
+        ],
+        "output_names": [
+          "output_0",
+          "output_1"
+        ]
+      },
+      "tokens120": {
+        "input_names": [
+          "speech_tokens",
+          "token_lengths"
+        ],
+        "output_names": [
+          "output_0",
+          "output_1"
+        ]
+      },
+      "tokens600": {
+        "input_names": [
+          "speech_tokens",
+          "token_lengths"
+        ],
+        "output_names": [
+          "output_0",
+          "output_1"
+        ]
+      }
+    },
+    "path": "examples.npz"
+  },
+  "graph": {
+    "bytes": 20874584,
+    "elapsed_seconds": 6.931895452999015,
+    "export_constant_folding": false,
+    "external_parameters": {
+      "elapsed_seconds": 6.761821997999505,
+      "export_options": {
+        "do_constant_folding": false,
+        "export_params": false,
+        "keep_initializers_as_inputs": true,
+        "onnx_shape_inference": true
+      },
+      "external": {
+        "graph_inputs_after": [
+          "speech_tokens",
+          "token_lengths"
+        ],
+        "graph_inputs_before": [
+          "speech_tokens",
+          "token_lengths",
+          "input_embedding.weight",
+          "encoder.embed.out.0.weight",
+          "encoder.embed.out.0.bias",
+          "encoder.embed.out.1.weight",
+          "encoder.embed.out.1.bias",
+          "encoder.after_norm.weight",
+          "encoder.after_norm.bias",
+          "encoder.pre_lookahead_layer.conv1.weight",
+          "encoder.pre_lookahead_layer.conv1.bias",
+          "encoder.pre_lookahead_layer.conv2.weight",
+          "encoder.pre_lookahead_layer.conv2.bias",
+          "encoder.encoders.0.self_attn.pos_bias_u",
+          "encoder.encoders.0.self_attn.pos_bias_v",
+          "encoder.encoders.0.self_attn.linear_q.weight",
+          "encoder.encoders.0.self_attn.linear_q.bias",
+          "encoder.encoders.0.self_attn.linear_k.weight",
+          "encoder.encoders.0.self_attn.linear_k.bias",
+          "encoder.encoders.0.self_attn.linear_v.weight",
+          "encoder.encoders.0.self_attn.linear_v.bias",
+          "encoder.encoders.0.self_attn.linear_out.weight",
+          "encoder.encoders.0.self_attn.linear_out.bias",
+          "encoder.encoders.0.self_attn.linear_pos.weight",
+          "encoder.encoders.0.feed_forward.w_1.weight",
+          "encoder.encoders.0.feed_forward.w_1.bias",
+          "encoder.encoders.0.feed_forward.w_2.weight",
+          "encoder.encoders.0.feed_forward.w_2.bias",
+          "encoder.encoders.0.norm_ff.weight",
+          "encoder.encoders.0.norm_ff.bias",
+          "encoder.encoders.0.norm_mha.weight",
+          "encoder.encoders.0.norm_mha.bias",
+          "encoder.encoders.1.self_attn.pos_bias_u",
+          "encoder.encoders.1.self_attn.pos_bias_v",
+          "encoder.encoders.1.self_attn.linear_q.weight",
+          "encoder.encoders.1.self_attn.linear_q.bias",
+          "encoder.encoders.1.self_attn.linear_k.weight",
+          "encoder.encoders.1.self_attn.linear_k.bias",
+          "encoder.encoders.1.self_attn.linear_v.weight",
+          "encoder.encoders.1.self_attn.linear_v.bias",
+          "encoder.encoders.1.self_attn.linear_out.weight",
+          "encoder.encoders.1.self_attn.linear_out.bias",
+          "encoder.encoders.1.self_attn.linear_pos.weight",
+          "encoder.encoders.1.feed_forward.w_1.weight",
+          "encoder.encoders.1.feed_forward.w_1.bias",
+          "encoder.encoders.1.feed_forward.w_2.weight",
+          "encoder.encoders.1.feed_forward.w_2.bias",
+          "encoder.encoders.1.norm_ff.weight",
+          "encoder.encoders.1.norm_ff.bias",
+          "encoder.encoders.1.norm_mha.weight",
+          "encoder.encoders.1.norm_mha.bias",
+          "encoder.encoders.2.self_attn.pos_bias_u",
+          "encoder.encoders.2.self_attn.pos_bias_v",
+          "encoder.encoders.2.self_attn.linear_q.weight",
+          "encoder.encoders.2.self_attn.linear_q.bias",
+          "encoder.encoders.2.self_attn.linear_k.weight",
+          "encoder.encoders.2.self_attn.linear_k.bias",
+          "encoder.encoders.2.self_attn.linear_v.weight",
+          "encoder.encoders.2.self_attn.linear_v.bias",
+          "encoder.encoders.2.self_attn.linear_out.weight",
+          "encoder.encoders.2.self_attn.linear_out.bias",
+          "encoder.encoders.2.self_attn.linear_pos.weight",
+          "encoder.encoders.2.feed_forward.w_1.weight",
+          "encoder.encoders.2.feed_forward.w_1.bias",
+          "encoder.encoders.2.feed_forward.w_2.weight",
+          "encoder.encoders.2.feed_forward.w_2.bias",
+          "encoder.encoders.2.norm_ff.weight",
+          "encoder.encoders.2.norm_ff.bias",
+          "encoder.encoders.2.norm_mha.weight",
+          "encoder.encoders.2.norm_mha.bias",
+          "encoder.encoders.3.self_attn.pos_bias_u",
+          "encoder.encoders.3.self_attn.pos_bias_v",
+          "encoder.encoders.3.self_attn.linear_q.weight",
+          "encoder.encoders.3.self_attn.linear_q.bias",
+          "encoder.encoders.3.self_attn.linear_k.weight",
+          "encoder.encoders.3.self_attn.linear_k.bias",
+          "encoder.encoders.3.self_attn.linear_v.weight",
+          "encoder.encoders.3.self_attn.linear_v.bias",
+          "encoder.encoders.3.self_attn.linear_out.weight",
+          "encoder.encoders.3.self_attn.linear_out.bias",
+          "encoder.encoders.3.self_attn.linear_pos.weight",
+          "encoder.encoders.3.feed_forward.w_1.weight",
+          "encoder.encoders.3.feed_forward.w_1.bias",
+          "encoder.encoders.3.feed_forward.w_2.weight",
+          "encoder.encoders.3.feed_forward.w_2.bias",
+          "encoder.encoders.3.norm_ff.weight",
+          "encoder.encoders.3.norm_ff.bias",
+          "encoder.encoders.3.norm_mha.weight",
+          "encoder.encoders.3.norm_mha.bias",
+          "encoder.encoders.4.self_attn.pos_bias_u",
+          "encoder.encoders.4.self_attn.pos_bias_v",
+          "encoder.encoders.4.self_attn.linear_q.weight",
+          "encoder.encoders.4.self_attn.linear_q.bias",
+          "encoder.encoders.4.self_attn.linear_k.weight",
+          "encoder.encoders.4.self_attn.linear_k.bias",
+          "encoder.encoders.4.self_attn.linear_v.weight",
+          "encoder.encoders.4.self_attn.linear_v.bias",
+          "encoder.encoders.4.self_attn.linear_out.weight",
+          "encoder.encoders.4.self_attn.linear_out.bias",
+          "encoder.encoders.4.self_attn.linear_pos.weight",
+          "encoder.encoders.4.feed_forward.w_1.weight",
+          "encoder.encoders.4.feed_forward.w_1.bias",
+          "encoder.encoders.4.feed_forward.w_2.weight",
+          "encoder.encoders.4.feed_forward.w_2.bias",
+          "encoder.encoders.4.norm_ff.weight",
+          "encoder.encoders.4.norm_ff.bias",
+          "encoder.encoders.4.norm_mha.weight",
+          "encoder.encoders.4.norm_mha.bias",
+          "encoder.encoders.5.self_attn.pos_bias_u",
+          "encoder.encoders.5.self_attn.pos_bias_v",
+          "encoder.encoders.5.self_attn.linear_q.weight",
+          "encoder.encoders.5.self_attn.linear_q.bias",
+          "encoder.encoders.5.self_attn.linear_k.weight",
+          "encoder.encoders.5.self_attn.linear_k.bias",
+          "encoder.encoders.5.self_attn.linear_v.weight",
+          "encoder.encoders.5.self_attn.linear_v.bias",
+          "encoder.encoders.5.self_attn.linear_out.weight",
+          "encoder.encoders.5.self_attn.linear_out.bias",
+          "encoder.encoders.5.self_attn.linear_pos.weight",
+          "encoder.encoders.5.feed_forward.w_1.weight",
+          "encoder.encoders.5.feed_forward.w_1.bias",
+          "encoder.encoders.5.feed_forward.w_2.weight",
+          "encoder.encoders.5.feed_forward.w_2.bias",
+          "encoder.encoders.5.norm_ff.weight",
+          "encoder.encoders.5.norm_ff.bias",
+          "encoder.encoders.5.norm_mha.weight",
+          "encoder.encoders.5.norm_mha.bias",
+          "encoder.up_layer.conv.weight",
+          "encoder.up_layer.conv.bias",
+          "encoder.up_embed.out.0.weight",
+          "encoder.up_embed.out.0.bias",
+          "encoder.up_embed.out.1.weight",
+          "encoder.up_embed.out.1.bias",
+          "encoder.up_encoders.0.self_attn.pos_bias_u",
+          "encoder.up_encoders.0.self_attn.pos_bias_v",
+          "encoder.up_encoders.0.self_attn.linear_q.weight",
+          "encoder.up_encoders.0.self_attn.linear_q.bias",
+          "encoder.up_encoders.0.self_attn.linear_k.weight",
+          "encoder.up_encoders.0.self_attn.linear_k.bias",
+          "encoder.up_encoders.0.self_attn.linear_v.weight",
+          "encoder.up_encoders.0.self_attn.linear_v.bias",
+          "encoder.up_encoders.0.self_attn.linear_out.weight",
+          "encoder.up_encoders.0.self_attn.linear_out.bias",
+          "encoder.up_encoders.0.self_attn.linear_pos.weight",
+          "encoder.up_encoders.0.feed_forward.w_1.weight",
+          "encoder.up_encoders.0.feed_forward.w_1.bias",
+          "encoder.up_encoders.0.feed_forward.w_2.weight",
+          "encoder.up_encoders.0.feed_forward.w_2.bias",
+          "encoder.up_encoders.0.norm_ff.weight",
+          "encoder.up_encoders.0.norm_ff.bias",
+          "encoder.up_encoders.0.norm_mha.weight",
+          "encoder.up_encoders.0.norm_mha.bias",
+          "encoder.up_encoders.1.self_attn.pos_bias_u",
+          "encoder.up_encoders.1.self_attn.pos_bias_v",
+          "encoder.up_encoders.1.self_attn.linear_q.weight",
+          "encoder.up_encoders.1.self_attn.linear_q.bias",
+          "encoder.up_encoders.1.self_attn.linear_k.weight",
+          "encoder.up_encoders.1.self_attn.linear_k.bias",
+          "encoder.up_encoders.1.self_attn.linear_v.weight",
+          "encoder.up_encoders.1.self_attn.linear_v.bias",
+          "encoder.up_encoders.1.self_attn.linear_out.weight",
+          "encoder.up_encoders.1.self_attn.linear_out.bias",
+          "encoder.up_encoders.1.self_attn.linear_pos.weight",
+          "encoder.up_encoders.1.feed_forward.w_1.weight",
+          "encoder.up_encoders.1.feed_forward.w_1.bias",
+          "encoder.up_encoders.1.feed_forward.w_2.weight",
+          "encoder.up_encoders.1.feed_forward.w_2.bias",
+          "encoder.up_encoders.1.norm_ff.weight",
+          "encoder.up_encoders.1.norm_ff.bias",
+          "encoder.up_encoders.1.norm_mha.weight",
+          "encoder.up_encoders.1.norm_mha.bias",
+          "encoder.up_encoders.2.self_attn.pos_bias_u",
+          "encoder.up_encoders.2.self_attn.pos_bias_v",
+          "encoder.up_encoders.2.self_attn.linear_q.weight",
+          "encoder.up_encoders.2.self_attn.linear_q.bias",
+          "encoder.up_encoders.2.self_attn.linear_k.weight",
+          "encoder.up_encoders.2.self_attn.linear_k.bias",
+          "encoder.up_encoders.2.self_attn.linear_v.weight",
+          "encoder.up_encoders.2.self_attn.linear_v.bias",
+          "encoder.up_encoders.2.self_attn.linear_out.weight",
+          "encoder.up_encoders.2.self_attn.linear_out.bias",
+          "encoder.up_encoders.2.self_attn.linear_pos.weight",
+          "encoder.up_encoders.2.feed_forward.w_1.weight",
+          "encoder.up_encoders.2.feed_forward.w_1.bias",
+          "encoder.up_encoders.2.feed_forward.w_2.weight",
+          "encoder.up_encoders.2.feed_forward.w_2.bias",
+          "encoder.up_encoders.2.norm_ff.weight",
+          "encoder.up_encoders.2.norm_ff.bias",
+          "encoder.up_encoders.2.norm_mha.weight",
+          "encoder.up_encoders.2.norm_mha.bias",
+          "encoder.up_encoders.3.self_attn.pos_bias_u",
+          "encoder.up_encoders.3.self_attn.pos_bias_v",
+          "encoder.up_encoders.3.self_attn.linear_q.weight",
+          "encoder.up_encoders.3.self_attn.linear_q.bias",
+          "encoder.up_encoders.3.self_attn.linear_k.weight",
+          "encoder.up_encoders.3.self_attn.linear_k.bias",
+          "encoder.up_encoders.3.self_attn.linear_v.weight",
+          "encoder.up_encoders.3.self_attn.linear_v.bias",
+          "encoder.up_encoders.3.self_attn.linear_out.weight",
+          "encoder.up_encoders.3.self_attn.linear_out.bias",
+          "encoder.up_encoders.3.self_attn.linear_pos.weight",
+          "encoder.up_encoders.3.feed_forward.w_1.weight",
+          "encoder.up_encoders.3.feed_forward.w_1.bias",
+          "encoder.up_encoders.3.feed_forward.w_2.weight",
+          "encoder.up_encoders.3.feed_forward.w_2.bias",
+          "encoder.up_encoders.3.norm_ff.weight",
+          "encoder.up_encoders.3.norm_ff.bias",
+          "encoder.up_encoders.3.norm_mha.weight",
+          "encoder.up_encoders.3.norm_mha.bias",
+          "encoder_proj.weight",
+          "encoder_proj.bias"
+        ],
+        "initializers": [
+          {
+            "dtype": "float32",
+            "graph_name": "input_embedding.weight",
+            "length": 13436928,
+            "offset": 0,
+            "sha256": "421a489476f7f9105e60598e74b571d64883b056ad44b05066835896deabb940",
+            "shape": [
+              6561,
+              512
+            ],
+            "state_name": "input_embedding.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.embed.out.0.weight",
+            "length": 1048576,
+            "offset": 13436928,
+            "sha256": "34c7cd960a80e6c41a6012c82f54dcb14b9ac24dff0b2bdf45ada8dd91094e58",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.embed.out.0.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.embed.out.0.bias",
+            "length": 2048,
+            "offset": 14485504,
+            "sha256": "72ce6ce4e9865f46fa2a59a489143c5341afb77ac76fa28d881ee85e6a6b1a21",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.embed.out.0.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.embed.out.1.weight",
+            "length": 2048,
+            "offset": 14487552,
+            "sha256": "1a35ce3b972a34d5f3256aa17dd555182c729a149a07d9600abce7b98bf59769",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.embed.out.1.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.embed.out.1.bias",
+            "length": 2048,
+            "offset": 14489600,
+            "sha256": "2473c4e096874b72f08631e18f0f582909da8a1c1ceb7cd299e02312f87b37a2",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.embed.out.1.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.after_norm.weight",
+            "length": 2048,
+            "offset": 14491648,
+            "sha256": "6b9c12e127f9c4e2ccd90566b43d5823d5a0874cd776214151855ca752c60749",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.after_norm.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.after_norm.bias",
+            "length": 2048,
+            "offset": 14493696,
+            "sha256": "9a941ea9d8e829bb1c83aaa9e1be4442729d254d9f1694958994d65bd08d54bf",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.after_norm.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.pre_lookahead_layer.conv1.weight",
+            "length": 4194304,
+            "offset": 14495744,
+            "sha256": "0f438ff6f9b72abdb9bfb487a1eec8892b145d00f1b3a0046b266c87b81c98a2",
+            "shape": [
+              512,
+              512,
+              4
+            ],
+            "state_name": "encoder.pre_lookahead_layer.conv1.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.pre_lookahead_layer.conv1.bias",
+            "length": 2048,
+            "offset": 18690048,
+            "sha256": "3ab062f3dd1b09d2eb88cc6e5e886f3bcb24bb3520d2966a23b3bff229849cd6",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.pre_lookahead_layer.conv1.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.pre_lookahead_layer.conv2.weight",
+            "length": 3145728,
+            "offset": 18692096,
+            "sha256": "260e298ed8ad69a85bf465c2d227bb2de8cba30667ec4946fe84965f10ce7272",
+            "shape": [
+              512,
+              512,
+              3
+            ],
+            "state_name": "encoder.pre_lookahead_layer.conv2.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.pre_lookahead_layer.conv2.bias",
+            "length": 2048,
+            "offset": 21837824,
+            "sha256": "9a0994ea2198937dff398db8e355c9523f8db6c89ef13b1624868081755d0b22",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.pre_lookahead_layer.conv2.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.self_attn.pos_bias_u",
+            "length": 2048,
+            "offset": 21839872,
+            "sha256": "754070b194aa12a3534fa8fdc54b9bd8b535510fe3448ee0eff7aa19b2a58c73",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.encoders.0.self_attn.pos_bias_u"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.self_attn.pos_bias_v",
+            "length": 2048,
+            "offset": 21841920,
+            "sha256": "8276d83550f6a727364f2adf1205ec18ed949f865024f8bcf441548da7bd2922",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.encoders.0.self_attn.pos_bias_v"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.self_attn.linear_q.weight",
+            "length": 1048576,
+            "offset": 21843968,
+            "sha256": "2300df769d2dea4129127ff84fdbfac677932d4f407c029d9b9a2d21e02f0716",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.0.self_attn.linear_q.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.self_attn.linear_q.bias",
+            "length": 2048,
+            "offset": 22892544,
+            "sha256": "c3e8032a7b810ee03a7558436a09909ce30db62e3e67b68932cdd06fe54a812a",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.0.self_attn.linear_q.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.self_attn.linear_k.weight",
+            "length": 1048576,
+            "offset": 22894592,
+            "sha256": "3f3ac854e94e88515e61a27397553d47a6f4c671a658976940b494e4a6b3b362",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.0.self_attn.linear_k.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.self_attn.linear_k.bias",
+            "length": 2048,
+            "offset": 23943168,
+            "sha256": "a3d3d8092cb3ebf55ad3cbfb2fefd83408a7ec8fd7608a7e247d01fc4afa3cba",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.0.self_attn.linear_k.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.self_attn.linear_v.weight",
+            "length": 1048576,
+            "offset": 23945216,
+            "sha256": "69a2651d4a55edf3ae4f9f2993b1152bacc9bd98c4717db5f92a1cfadfb396cf",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.0.self_attn.linear_v.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.self_attn.linear_v.bias",
+            "length": 2048,
+            "offset": 24993792,
+            "sha256": "a8840650ed556e7eaea5ed62302ed9a493909803953d3989362d6f71533fb85e",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.0.self_attn.linear_v.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.self_attn.linear_out.weight",
+            "length": 1048576,
+            "offset": 24995840,
+            "sha256": "17f1162d3695a022fce2680b8b7e72e1ea322368c8dcff4313928d9827619942",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.0.self_attn.linear_out.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.self_attn.linear_out.bias",
+            "length": 2048,
+            "offset": 26044416,
+            "sha256": "90de09ad6ed8e352d22d3e0c9514d37d4b78a015316c2b9732371e287ac45d57",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.0.self_attn.linear_out.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.self_attn.linear_pos.weight",
+            "length": 1048576,
+            "offset": 26046464,
+            "sha256": "cf88a58fd12ae84a65e72565268895ba1d7efb87bcd70be4571b81e6fb5fb5c8",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.0.self_attn.linear_pos.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.feed_forward.w_1.weight",
+            "length": 4194304,
+            "offset": 27095040,
+            "sha256": "74743a6359b574448c157e6e18009700cc43cc564d0cfa7d56266549b7213164",
+            "shape": [
+              2048,
+              512
+            ],
+            "state_name": "encoder.encoders.0.feed_forward.w_1.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.feed_forward.w_1.bias",
+            "length": 8192,
+            "offset": 31289344,
+            "sha256": "9f44d95d6ecea30b88680109810603d8564b3fbf3483b52a17fe7439e35ab114",
+            "shape": [
+              2048
+            ],
+            "state_name": "encoder.encoders.0.feed_forward.w_1.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.feed_forward.w_2.weight",
+            "length": 4194304,
+            "offset": 31297536,
+            "sha256": "8a38e82e83498f2896e8bd20c808a8cfb4c2b3c4f921506d344d612935a0333f",
+            "shape": [
+              512,
+              2048
+            ],
+            "state_name": "encoder.encoders.0.feed_forward.w_2.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.feed_forward.w_2.bias",
+            "length": 2048,
+            "offset": 35491840,
+            "sha256": "3718e8f54b7bcb24cf3bb3195d72bea97c1a4f0f04627c6dcd20136f0d77d572",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.0.feed_forward.w_2.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.norm_ff.weight",
+            "length": 2048,
+            "offset": 35493888,
+            "sha256": "66f8a7b90e06ba5d113f00f1b4f9003c05d03066aca66b9a5f3d8f5e86721894",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.0.norm_ff.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.norm_ff.bias",
+            "length": 2048,
+            "offset": 35495936,
+            "sha256": "613054f485f59091f09ccc11f1a97b59d4f8617b97457b67b4820721a4716eff",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.0.norm_ff.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.norm_mha.weight",
+            "length": 2048,
+            "offset": 35497984,
+            "sha256": "ba5f481569d63bcd13dbf0e701447c934491213c34fc2ed78d47cd56dba2ded3",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.0.norm_mha.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.0.norm_mha.bias",
+            "length": 2048,
+            "offset": 35500032,
+            "sha256": "816e2a5a9ab7e36c6d00e4ffe2b754ffc4a00ef71bfc868246edcfaabfa510d4",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.0.norm_mha.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.self_attn.pos_bias_u",
+            "length": 2048,
+            "offset": 35502080,
+            "sha256": "bc996c9f7efe7f8e7afec6eb6f64ed9b6aa18956953c0fb7faec88348d748c9d",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.encoders.1.self_attn.pos_bias_u"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.self_attn.pos_bias_v",
+            "length": 2048,
+            "offset": 35504128,
+            "sha256": "d20314a56dc524bafa9029b1d0dcf2fea79308a461d30b72338bf9ad6a7730bb",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.encoders.1.self_attn.pos_bias_v"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.self_attn.linear_q.weight",
+            "length": 1048576,
+            "offset": 35506176,
+            "sha256": "eac3c7baec5602ec0f03ecd8b9778eddced807805e4d993d97c79c93a3570f90",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.1.self_attn.linear_q.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.self_attn.linear_q.bias",
+            "length": 2048,
+            "offset": 36554752,
+            "sha256": "5f88c1de07d9207d4ecad7be2b10a42e95de89238c1e841aef5d483f12a1ad47",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.1.self_attn.linear_q.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.self_attn.linear_k.weight",
+            "length": 1048576,
+            "offset": 36556800,
+            "sha256": "4b3f636f8db8bc0cf16f41fcb593fd00384a213a797ecde5e9bb6b8a52c0be3c",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.1.self_attn.linear_k.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.self_attn.linear_k.bias",
+            "length": 2048,
+            "offset": 37605376,
+            "sha256": "baf9c93e8543e6f170a21fabee66d599c0a157afcdc75da98b92212dc1e284ba",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.1.self_attn.linear_k.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.self_attn.linear_v.weight",
+            "length": 1048576,
+            "offset": 37607424,
+            "sha256": "6c3ee1d09a5ecfdc30d1e3057365f93bdf75600adae332b406e51f2add928b96",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.1.self_attn.linear_v.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.self_attn.linear_v.bias",
+            "length": 2048,
+            "offset": 38656000,
+            "sha256": "57773a0f1020577ba021bbe4a56ce42404b5fbc2b9325be10513edb87124b97c",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.1.self_attn.linear_v.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.self_attn.linear_out.weight",
+            "length": 1048576,
+            "offset": 38658048,
+            "sha256": "a49fd699b2381d297e94bfb2fffb9a9bf4f04deef42eb40269d1a9180d0f807c",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.1.self_attn.linear_out.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.self_attn.linear_out.bias",
+            "length": 2048,
+            "offset": 39706624,
+            "sha256": "925ec3663469d89a81b03f23d831be9bc037634a3e921e5995107211bfd45afc",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.1.self_attn.linear_out.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.self_attn.linear_pos.weight",
+            "length": 1048576,
+            "offset": 39708672,
+            "sha256": "3e6e11b5c992debf180b276d64bd39fb1f6713551890db6b7f0c83c84c8a7276",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.1.self_attn.linear_pos.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.feed_forward.w_1.weight",
+            "length": 4194304,
+            "offset": 40757248,
+            "sha256": "098ecb2a36c11bc46fc7f351043f28a2f417f85c6e0e78691484d5c66b978f63",
+            "shape": [
+              2048,
+              512
+            ],
+            "state_name": "encoder.encoders.1.feed_forward.w_1.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.feed_forward.w_1.bias",
+            "length": 8192,
+            "offset": 44951552,
+            "sha256": "b9b57b68489ac72eedff8e426e00752eccd0fc9e87362a8e02512cef2a63b0ed",
+            "shape": [
+              2048
+            ],
+            "state_name": "encoder.encoders.1.feed_forward.w_1.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.feed_forward.w_2.weight",
+            "length": 4194304,
+            "offset": 44959744,
+            "sha256": "e13d7bac769623fe7efe234e4b6dc6f22e4e54df740368b8fc88c0cd0613ef17",
+            "shape": [
+              512,
+              2048
+            ],
+            "state_name": "encoder.encoders.1.feed_forward.w_2.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.feed_forward.w_2.bias",
+            "length": 2048,
+            "offset": 49154048,
+            "sha256": "4b9c4e6834b8f43a62e0b8d5523f3238079bc0383575fc94ef5e633a94a0e9d6",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.1.feed_forward.w_2.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.norm_ff.weight",
+            "length": 2048,
+            "offset": 49156096,
+            "sha256": "0ab2a82f37a9d6bfb5bf0cd49c5e55aa8663824209f0e691c8b9e17ba06f710a",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.1.norm_ff.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.norm_ff.bias",
+            "length": 2048,
+            "offset": 49158144,
+            "sha256": "aafbc9c6ca8a127950b9ca250f8ec4fe42162b7b78e5e2b9d83dc78bf119d53b",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.1.norm_ff.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.norm_mha.weight",
+            "length": 2048,
+            "offset": 49160192,
+            "sha256": "6afaeac8568cc9d89806b3a85320baa5ea356e9c4f631a71e9b0ced36abd42d4",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.1.norm_mha.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.1.norm_mha.bias",
+            "length": 2048,
+            "offset": 49162240,
+            "sha256": "8d10ebcccb1fb377b2af234b37afd940730be80c2501f835eb47fd9ca1b4161d",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.1.norm_mha.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.self_attn.pos_bias_u",
+            "length": 2048,
+            "offset": 49164288,
+            "sha256": "eacedf683e2c261b084b4f438936a2c367ea0951a545bfb56d9cad529b2c589b",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.encoders.2.self_attn.pos_bias_u"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.self_attn.pos_bias_v",
+            "length": 2048,
+            "offset": 49166336,
+            "sha256": "d9bbd450feecebce15651823c03bfc398d2f9c36e1a87001a538ad69bd83936f",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.encoders.2.self_attn.pos_bias_v"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.self_attn.linear_q.weight",
+            "length": 1048576,
+            "offset": 49168384,
+            "sha256": "0c5a52c34b98335daa4d67e1c78823f977e85941c89315c687f83363986b3ff5",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.2.self_attn.linear_q.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.self_attn.linear_q.bias",
+            "length": 2048,
+            "offset": 50216960,
+            "sha256": "51f1aaa9dc63e2c05ed7ba6581b779e1eeabcb34d7542824b9de3e1b91aee875",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.2.self_attn.linear_q.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.self_attn.linear_k.weight",
+            "length": 1048576,
+            "offset": 50219008,
+            "sha256": "d895bdddd1cfb5ac28f8c754e352bb6451cd4a416f39af11a84e049d9d921104",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.2.self_attn.linear_k.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.self_attn.linear_k.bias",
+            "length": 2048,
+            "offset": 51267584,
+            "sha256": "907167cc7eeb2faac66f82834e1e63197319e829c5a025edfefb19e1beae173e",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.2.self_attn.linear_k.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.self_attn.linear_v.weight",
+            "length": 1048576,
+            "offset": 51269632,
+            "sha256": "cfe6901e01d516c7292fbdce7c1194b95f1147463f2f5261b229e7d4a007aa65",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.2.self_attn.linear_v.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.self_attn.linear_v.bias",
+            "length": 2048,
+            "offset": 52318208,
+            "sha256": "d532e07082af4e6655b5535a581fa4b25447e61508c48754a24680a8dd09e431",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.2.self_attn.linear_v.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.self_attn.linear_out.weight",
+            "length": 1048576,
+            "offset": 52320256,
+            "sha256": "7306ad31b3d8d257064ebeba0cbbb10f1418489bc6b80e2c34192e28c82a0bb6",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.2.self_attn.linear_out.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.self_attn.linear_out.bias",
+            "length": 2048,
+            "offset": 53368832,
+            "sha256": "048fae4e1c9bf8c7fe63fdc1c86a072f72a252a00921dfd6f2972db6f30781da",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.2.self_attn.linear_out.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.self_attn.linear_pos.weight",
+            "length": 1048576,
+            "offset": 53370880,
+            "sha256": "716f73f4b5709a734a1c6838d16924471846812fa2ba05bb0d4efce31a84dfa5",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.2.self_attn.linear_pos.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.feed_forward.w_1.weight",
+            "length": 4194304,
+            "offset": 54419456,
+            "sha256": "40ebf16bf6cfc101fb0e21905438ec96d1e7828fc2b60c7d1b0b0b423df819a9",
+            "shape": [
+              2048,
+              512
+            ],
+            "state_name": "encoder.encoders.2.feed_forward.w_1.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.feed_forward.w_1.bias",
+            "length": 8192,
+            "offset": 58613760,
+            "sha256": "f29833e31ff5283a3219098cb624bedcd6c7c2dde429db0f03f9d815aa9a309d",
+            "shape": [
+              2048
+            ],
+            "state_name": "encoder.encoders.2.feed_forward.w_1.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.feed_forward.w_2.weight",
+            "length": 4194304,
+            "offset": 58621952,
+            "sha256": "cedadcaa5422d9c86d9bbfb358bf5ef039ce4c0ef3296c3638fe9ee736ffa6b7",
+            "shape": [
+              512,
+              2048
+            ],
+            "state_name": "encoder.encoders.2.feed_forward.w_2.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.feed_forward.w_2.bias",
+            "length": 2048,
+            "offset": 62816256,
+            "sha256": "aebdf8f69e0e03fb58fc9da28614ed51a6cdfa106cd8552ab2d6e7d3e9a2058e",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.2.feed_forward.w_2.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.norm_ff.weight",
+            "length": 2048,
+            "offset": 62818304,
+            "sha256": "bac2643d08f8a1a350e6fed801f212122ad4d8469a8282c75dfd29e7049d2818",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.2.norm_ff.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.norm_ff.bias",
+            "length": 2048,
+            "offset": 62820352,
+            "sha256": "53f6fddcd99b310c9db47ad54346df08a932d9cd7cf36f210dc5aee5594a1b16",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.2.norm_ff.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.norm_mha.weight",
+            "length": 2048,
+            "offset": 62822400,
+            "sha256": "e3ba7478972802e2f464a3f8dd11be319cc214122c46b6cd0c89ec04c993356f",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.2.norm_mha.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.2.norm_mha.bias",
+            "length": 2048,
+            "offset": 62824448,
+            "sha256": "e4f95929cf15cd549e8ad927c52ab76a9d1c98510ca29eed264cbf86e722cbe4",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.2.norm_mha.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.self_attn.pos_bias_u",
+            "length": 2048,
+            "offset": 62826496,
+            "sha256": "ae83a99191a53d7632b747381df219f5814fdb7ea103b6f179e01630824870c9",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.encoders.3.self_attn.pos_bias_u"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.self_attn.pos_bias_v",
+            "length": 2048,
+            "offset": 62828544,
+            "sha256": "7c19911a1a3ee2a35620331633d5852f4046b9509306c9aa70e90ed332767761",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.encoders.3.self_attn.pos_bias_v"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.self_attn.linear_q.weight",
+            "length": 1048576,
+            "offset": 62830592,
+            "sha256": "eea4f00c0322abe57e30817fba22e95585ceafd7ce9d765f4ed81e2eb77db707",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.3.self_attn.linear_q.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.self_attn.linear_q.bias",
+            "length": 2048,
+            "offset": 63879168,
+            "sha256": "dc5649105515fee26f0ef3c105f3ba4240d613274aebe87ac6e9ad44f393cfbb",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.3.self_attn.linear_q.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.self_attn.linear_k.weight",
+            "length": 1048576,
+            "offset": 63881216,
+            "sha256": "2b97aa5f0dcfa71f38d4f79c8fed91ed3e0b7b6dabc5b470a58abbe6fa98d409",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.3.self_attn.linear_k.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.self_attn.linear_k.bias",
+            "length": 2048,
+            "offset": 64929792,
+            "sha256": "69cd0dbf7bbb8c7fb33335d65ead0cd7b542c65a65856be3bccf2dd2a575b7ff",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.3.self_attn.linear_k.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.self_attn.linear_v.weight",
+            "length": 1048576,
+            "offset": 64931840,
+            "sha256": "0a8a37222e014475b14071a043183a3fda93fdd3c4f77e20857d453fb6c22e76",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.3.self_attn.linear_v.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.self_attn.linear_v.bias",
+            "length": 2048,
+            "offset": 65980416,
+            "sha256": "41380ee9dc8fed0fb57e59008d7719c80e0dc49611527aa7ec8f51c4dadbcb78",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.3.self_attn.linear_v.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.self_attn.linear_out.weight",
+            "length": 1048576,
+            "offset": 65982464,
+            "sha256": "068435a715312fc1cf500ee14fad9a8ac864cf9e7012f53ff0b2440525147e55",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.3.self_attn.linear_out.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.self_attn.linear_out.bias",
+            "length": 2048,
+            "offset": 67031040,
+            "sha256": "39ff2ee31342967a257763633a8c65c38e675791e4ea8131130674a8f6468b22",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.3.self_attn.linear_out.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.self_attn.linear_pos.weight",
+            "length": 1048576,
+            "offset": 67033088,
+            "sha256": "2374ccee17e4e3fafc5cf3cd4ea6033dc061d242ec1766404d4d0a37c2ecfc77",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.3.self_attn.linear_pos.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.feed_forward.w_1.weight",
+            "length": 4194304,
+            "offset": 68081664,
+            "sha256": "ddb8189ff812833ae869f2a09ee762f4c469446bddf0c74a647d822ebbdf0313",
+            "shape": [
+              2048,
+              512
+            ],
+            "state_name": "encoder.encoders.3.feed_forward.w_1.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.feed_forward.w_1.bias",
+            "length": 8192,
+            "offset": 72275968,
+            "sha256": "6609b5da7839f2e6f5fae4f5eb8b521ba157147d50eb943a93d9857b781ac6b7",
+            "shape": [
+              2048
+            ],
+            "state_name": "encoder.encoders.3.feed_forward.w_1.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.feed_forward.w_2.weight",
+            "length": 4194304,
+            "offset": 72284160,
+            "sha256": "6f0d63893d5fc19f36935cd29456e666b4e0a4d59672f4a98df9e75d4d31e050",
+            "shape": [
+              512,
+              2048
+            ],
+            "state_name": "encoder.encoders.3.feed_forward.w_2.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.feed_forward.w_2.bias",
+            "length": 2048,
+            "offset": 76478464,
+            "sha256": "291013352736f051b721653ba5e6c9175b2691ea0260562ad8528cf7309bde2d",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.3.feed_forward.w_2.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.norm_ff.weight",
+            "length": 2048,
+            "offset": 76480512,
+            "sha256": "cc99307cc61315226f3ad2a594ae444620bad5140e5862f1ac45559e73e1e44d",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.3.norm_ff.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.norm_ff.bias",
+            "length": 2048,
+            "offset": 76482560,
+            "sha256": "d871ebf96fde2cb9630bdc1381ab2aa30548f015b940bc0f8ceb0843aacd52c1",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.3.norm_ff.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.norm_mha.weight",
+            "length": 2048,
+            "offset": 76484608,
+            "sha256": "218fd06e9da42b5eec28649d9d9daa296bf1bca48b3bcb604e22040c200089d9",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.3.norm_mha.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.3.norm_mha.bias",
+            "length": 2048,
+            "offset": 76486656,
+            "sha256": "3651f202464759efe6b7f1b46264b21e4ea82cb9c7e9047f630d37cfce2e96dc",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.3.norm_mha.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.self_attn.pos_bias_u",
+            "length": 2048,
+            "offset": 76488704,
+            "sha256": "9ca00f8923917ca88a2d1c448a445f1e75478f899a740007f39c9ef67bbf69e7",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.encoders.4.self_attn.pos_bias_u"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.self_attn.pos_bias_v",
+            "length": 2048,
+            "offset": 76490752,
+            "sha256": "91fd3d813235df565b400a8cf88f23a2faefa76c30cc0190c2657db98af15b0e",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.encoders.4.self_attn.pos_bias_v"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.self_attn.linear_q.weight",
+            "length": 1048576,
+            "offset": 76492800,
+            "sha256": "7c48cf275ea3b0dddcb14c81c9371d91417fecb6eeecaf4f73fe654e13759f7e",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.4.self_attn.linear_q.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.self_attn.linear_q.bias",
+            "length": 2048,
+            "offset": 77541376,
+            "sha256": "ad90b71e61ea2f5a7b114a23feaed8c2e48a11f0795f175c0ae385ff6217c3e0",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.4.self_attn.linear_q.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.self_attn.linear_k.weight",
+            "length": 1048576,
+            "offset": 77543424,
+            "sha256": "8eb9004e566b77e2caa8fa818d3aa23e1df6b498a31092131b03e1b136dd44ae",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.4.self_attn.linear_k.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.self_attn.linear_k.bias",
+            "length": 2048,
+            "offset": 78592000,
+            "sha256": "3004f0e39ecc033a5b9bb999d406e68492e2ee25428bf3345b11886e31c7c7fd",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.4.self_attn.linear_k.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.self_attn.linear_v.weight",
+            "length": 1048576,
+            "offset": 78594048,
+            "sha256": "a6179d13c558f51268c1ffbe41c1f798924a811de979a113db84f79a978314f1",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.4.self_attn.linear_v.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.self_attn.linear_v.bias",
+            "length": 2048,
+            "offset": 79642624,
+            "sha256": "e6a8f01a2e797142825178dd4bebc04230884a7cc8d71a384b8ec0648585dee1",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.4.self_attn.linear_v.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.self_attn.linear_out.weight",
+            "length": 1048576,
+            "offset": 79644672,
+            "sha256": "b414b95bc002fca585dd65d574346d8fa8793afcfc6e8510e13bf110f230862c",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.4.self_attn.linear_out.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.self_attn.linear_out.bias",
+            "length": 2048,
+            "offset": 80693248,
+            "sha256": "e308b3e52a1cc3085f4782e2ee815e3627cd7e63268950afe9ed9d5bd3b76f4c",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.4.self_attn.linear_out.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.self_attn.linear_pos.weight",
+            "length": 1048576,
+            "offset": 80695296,
+            "sha256": "60580d4a9e28da71a669877e97093423915c510f64e9ada5cb57131cde700bbc",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.4.self_attn.linear_pos.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.feed_forward.w_1.weight",
+            "length": 4194304,
+            "offset": 81743872,
+            "sha256": "0076f7a9d11f6fb697e6973fdcadd91e41de29e35d02a369eb4f55e29308a46c",
+            "shape": [
+              2048,
+              512
+            ],
+            "state_name": "encoder.encoders.4.feed_forward.w_1.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.feed_forward.w_1.bias",
+            "length": 8192,
+            "offset": 85938176,
+            "sha256": "25f326b5a9a32a94e4c8b96b194efac3df453b77bc148dd32f58d1278eb4ac78",
+            "shape": [
+              2048
+            ],
+            "state_name": "encoder.encoders.4.feed_forward.w_1.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.feed_forward.w_2.weight",
+            "length": 4194304,
+            "offset": 85946368,
+            "sha256": "0c7613ae34355ae55b9d0c1aca451c4937c7cd94ea5cf942ac2053d81b399768",
+            "shape": [
+              512,
+              2048
+            ],
+            "state_name": "encoder.encoders.4.feed_forward.w_2.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.feed_forward.w_2.bias",
+            "length": 2048,
+            "offset": 90140672,
+            "sha256": "4b2137e06be29a0c04a96761e8a65d6f20a0b0aef4e78bddd0e5cf1a10f03c05",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.4.feed_forward.w_2.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.norm_ff.weight",
+            "length": 2048,
+            "offset": 90142720,
+            "sha256": "87d5fa4e373ba1258654fca4412d0c360594a7fa7bcf66c6c6a05936844b8c3e",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.4.norm_ff.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.norm_ff.bias",
+            "length": 2048,
+            "offset": 90144768,
+            "sha256": "b43c1e339a35a6623a7131f81e4b0ab7744591493e85b1195c048f260ad0632f",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.4.norm_ff.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.norm_mha.weight",
+            "length": 2048,
+            "offset": 90146816,
+            "sha256": "d68c15db70617e09def4c7a4dab28b7ae56ddff8971a0bc9dd722cc0c97e38ea",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.4.norm_mha.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.4.norm_mha.bias",
+            "length": 2048,
+            "offset": 90148864,
+            "sha256": "469b439a271db8a9ba8d3025c63fff53907c7db56ada2f479d4ec9aab9612af6",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.4.norm_mha.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.self_attn.pos_bias_u",
+            "length": 2048,
+            "offset": 90150912,
+            "sha256": "a01fe93b522d143223c44c17112651ac57236f8787eae3c656bb0596b453d233",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.encoders.5.self_attn.pos_bias_u"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.self_attn.pos_bias_v",
+            "length": 2048,
+            "offset": 90152960,
+            "sha256": "36ff4933cbb55ce6edbc544eac959b0eacfb40d54eab3f11da4a7bb636c3aaec",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.encoders.5.self_attn.pos_bias_v"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.self_attn.linear_q.weight",
+            "length": 1048576,
+            "offset": 90155008,
+            "sha256": "8aef7c7b71a4f63ba9ace68a462c161f418e144841d51d5d9d6456dcf7f66373",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.5.self_attn.linear_q.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.self_attn.linear_q.bias",
+            "length": 2048,
+            "offset": 91203584,
+            "sha256": "a66485f901c1fd1138d806c4934e973fcfe717bb469dadf7a6737cb15bf41970",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.5.self_attn.linear_q.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.self_attn.linear_k.weight",
+            "length": 1048576,
+            "offset": 91205632,
+            "sha256": "de4afae565241230e7763cc4e32c5d22b51c29d2ca9eb4d901e7152e3e2ea2c6",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.5.self_attn.linear_k.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.self_attn.linear_k.bias",
+            "length": 2048,
+            "offset": 92254208,
+            "sha256": "a5bc0859ce4e8ec8fd8cd4b8ff6c4e3ce55800d2171c28ce4decc01c9f4f2ea8",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.5.self_attn.linear_k.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.self_attn.linear_v.weight",
+            "length": 1048576,
+            "offset": 92256256,
+            "sha256": "3ca95ad621e2212b0035da024c243a1aa9d804a30cd577c3d56ec02a8aa780c6",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.5.self_attn.linear_v.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.self_attn.linear_v.bias",
+            "length": 2048,
+            "offset": 93304832,
+            "sha256": "568b9ecb9016027e1561c090ea9120fdf0c6325ac2f57f3bd10c3880de4301ee",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.5.self_attn.linear_v.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.self_attn.linear_out.weight",
+            "length": 1048576,
+            "offset": 93306880,
+            "sha256": "a43c113a10be9fc5828bba408fabc35cc5ade72c9570a28394b70c9f6f84b00b",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.5.self_attn.linear_out.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.self_attn.linear_out.bias",
+            "length": 2048,
+            "offset": 94355456,
+            "sha256": "e8340e81cf485150c97596766d45705e6daf35cd3b077d066a5eb9a29868f0d3",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.5.self_attn.linear_out.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.self_attn.linear_pos.weight",
+            "length": 1048576,
+            "offset": 94357504,
+            "sha256": "2e00632d46dd7e16b41283c3c45356a374101d50a3bbbf77ec4bb81bb335ca99",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.encoders.5.self_attn.linear_pos.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.feed_forward.w_1.weight",
+            "length": 4194304,
+            "offset": 95406080,
+            "sha256": "8b121cbb1b0370cbde89bb6cbce427325aa5133c8a37f85bec3191d098ba3798",
+            "shape": [
+              2048,
+              512
+            ],
+            "state_name": "encoder.encoders.5.feed_forward.w_1.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.feed_forward.w_1.bias",
+            "length": 8192,
+            "offset": 99600384,
+            "sha256": "fb2453a79715ae91adddd1d77330811b46e62c8b39fd9c027c6fc35c04caa9a8",
+            "shape": [
+              2048
+            ],
+            "state_name": "encoder.encoders.5.feed_forward.w_1.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.feed_forward.w_2.weight",
+            "length": 4194304,
+            "offset": 99608576,
+            "sha256": "07e5117614cfb55e553753193628c9c4920c092655c769cb35af61ef7a14c847",
+            "shape": [
+              512,
+              2048
+            ],
+            "state_name": "encoder.encoders.5.feed_forward.w_2.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.feed_forward.w_2.bias",
+            "length": 2048,
+            "offset": 103802880,
+            "sha256": "25d110c67aa615c738b0aee292940822309fe6e749fd785069bebee9b9283f40",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.5.feed_forward.w_2.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.norm_ff.weight",
+            "length": 2048,
+            "offset": 103804928,
+            "sha256": "1cd9d0337ea0ab0e1e4d69f076c4c7874667415a1dd219e622f0c18b25c9cbb0",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.5.norm_ff.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.norm_ff.bias",
+            "length": 2048,
+            "offset": 103806976,
+            "sha256": "8c1659de661e27be6a8ecba174ce3e79a8932462d093a466c316017d132d0620",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.5.norm_ff.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.norm_mha.weight",
+            "length": 2048,
+            "offset": 103809024,
+            "sha256": "cd37881a1aebc8eae23b3cd509aa2ef38a2833253d480fb43b2a10f8ca8e1533",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.5.norm_mha.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.encoders.5.norm_mha.bias",
+            "length": 2048,
+            "offset": 103811072,
+            "sha256": "46463bf50fd14fe5e7a4cb9073ac1165670cff8b23835480aeba71df2daa7fc1",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.encoders.5.norm_mha.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_layer.conv.weight",
+            "length": 5242880,
+            "offset": 103813120,
+            "sha256": "d8755613ada48cb74898b92b3924a4a5bb49cc052f2a7914e52b53f0925a42fa",
+            "shape": [
+              512,
+              512,
+              5
+            ],
+            "state_name": "encoder.up_layer.conv.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_layer.conv.bias",
+            "length": 2048,
+            "offset": 109056000,
+            "sha256": "d68dd077d7e1b3e9a43ee006fa5d35f61992eddd41d289d4835b3c7207f4cd5b",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_layer.conv.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_embed.out.0.weight",
+            "length": 1048576,
+            "offset": 109058048,
+            "sha256": "50fd8cadf10f96fa334fcada8c12086b2fa0aedd8ef62030488504172d97f172",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_embed.out.0.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_embed.out.0.bias",
+            "length": 2048,
+            "offset": 110106624,
+            "sha256": "6bafcdca047ea3ace97f2ea8e05805c40df0cac2f6d23199ac8d7e96bb01ca06",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_embed.out.0.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_embed.out.1.weight",
+            "length": 2048,
+            "offset": 110108672,
+            "sha256": "6073e85978967587189bdb98b64a864ef5efd5ebca520729154c96c41a4f167f",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_embed.out.1.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_embed.out.1.bias",
+            "length": 2048,
+            "offset": 110110720,
+            "sha256": "35cfc6507fb7ce81de2fb48b3e42f434fb6906951c23f59243a1dcd82086146b",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_embed.out.1.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.self_attn.pos_bias_u",
+            "length": 2048,
+            "offset": 110112768,
+            "sha256": "8c9c3606002dc5834f6121b58984ef3cea8374aa87b95ed2d8d80839e21949ca",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.up_encoders.0.self_attn.pos_bias_u"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.self_attn.pos_bias_v",
+            "length": 2048,
+            "offset": 110114816,
+            "sha256": "370633e3f05c838e84a693a0a3f940e28961034b64052f72e273c27ac3b02687",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.up_encoders.0.self_attn.pos_bias_v"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.self_attn.linear_q.weight",
+            "length": 1048576,
+            "offset": 110116864,
+            "sha256": "d95b28e1dae21a7b78a396c0116125c4baa7499a814b0873fa81b07013883bc0",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.0.self_attn.linear_q.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.self_attn.linear_q.bias",
+            "length": 2048,
+            "offset": 111165440,
+            "sha256": "cd4e138d096558f1ced40bec5efb794ba17f82b573dcd4ca2f34a878e504b0fd",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.0.self_attn.linear_q.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.self_attn.linear_k.weight",
+            "length": 1048576,
+            "offset": 111167488,
+            "sha256": "549d5489531d3ea5b8cc3ebf84358a101ed684fb8dbbffbb8741378a81089398",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.0.self_attn.linear_k.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.self_attn.linear_k.bias",
+            "length": 2048,
+            "offset": 112216064,
+            "sha256": "4f8c9ad86fd06f8400049868dd611b414f846fa0736842fbd578bc83c3443292",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.0.self_attn.linear_k.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.self_attn.linear_v.weight",
+            "length": 1048576,
+            "offset": 112218112,
+            "sha256": "5356ae1cce1bb03b0e4e117960bcffcfba3d99e951ccfff1617882e48ef5c2ed",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.0.self_attn.linear_v.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.self_attn.linear_v.bias",
+            "length": 2048,
+            "offset": 113266688,
+            "sha256": "e435138d30b4d99bc46adad8c6af839205f26149f479bb0ef69660ce09259666",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.0.self_attn.linear_v.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.self_attn.linear_out.weight",
+            "length": 1048576,
+            "offset": 113268736,
+            "sha256": "3caef942e7a09219fd36660e3803cf4558aeed777d3dd7baca2c99da92384e25",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.0.self_attn.linear_out.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.self_attn.linear_out.bias",
+            "length": 2048,
+            "offset": 114317312,
+            "sha256": "d62edf23381903cfb1588b9f3457e712f01471f2bfe91e764954ee492bef1b7e",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.0.self_attn.linear_out.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.self_attn.linear_pos.weight",
+            "length": 1048576,
+            "offset": 114319360,
+            "sha256": "506cb18a7376ec7f68c32a5ffd281275d28e08bbfde1c91ed9351a7d8172ad98",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.0.self_attn.linear_pos.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.feed_forward.w_1.weight",
+            "length": 4194304,
+            "offset": 115367936,
+            "sha256": "5bb28b0daf61dd379ee03f9c92cc8d001e4c66889975351da415907df3f8ce1f",
+            "shape": [
+              2048,
+              512
+            ],
+            "state_name": "encoder.up_encoders.0.feed_forward.w_1.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.feed_forward.w_1.bias",
+            "length": 8192,
+            "offset": 119562240,
+            "sha256": "607c59b468e13a57b71744a6e94c55e78efbe039fc019a2d6dc104a7bcc1bde2",
+            "shape": [
+              2048
+            ],
+            "state_name": "encoder.up_encoders.0.feed_forward.w_1.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.feed_forward.w_2.weight",
+            "length": 4194304,
+            "offset": 119570432,
+            "sha256": "32c196502380725abdddc09b16f9b340c03378206dc50029bac934be66334c48",
+            "shape": [
+              512,
+              2048
+            ],
+            "state_name": "encoder.up_encoders.0.feed_forward.w_2.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.feed_forward.w_2.bias",
+            "length": 2048,
+            "offset": 123764736,
+            "sha256": "29c4a2e819d59a6b6baae25d89f9b65059b2af4433abfb6cb670010d0dded98a",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.0.feed_forward.w_2.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.norm_ff.weight",
+            "length": 2048,
+            "offset": 123766784,
+            "sha256": "2d6eca20e0021102815263a0af04199424f692b1185ff8d1cbd2fe1a67b85871",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.0.norm_ff.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.norm_ff.bias",
+            "length": 2048,
+            "offset": 123768832,
+            "sha256": "245bac1c636d36ecaf1f7add46ea355fda935ef8b64ef4e57e5bc59695c15949",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.0.norm_ff.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.norm_mha.weight",
+            "length": 2048,
+            "offset": 123770880,
+            "sha256": "6038570760ede2d47f308c4e06f2553d1e32eb2da196a19615bb21f09e856dec",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.0.norm_mha.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.0.norm_mha.bias",
+            "length": 2048,
+            "offset": 123772928,
+            "sha256": "5a9248db816d0540bc5565ea0eb5adcf61cde68cc98d9e1abd2e41448d400035",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.0.norm_mha.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.self_attn.pos_bias_u",
+            "length": 2048,
+            "offset": 123774976,
+            "sha256": "1136acadbc0462b4562845d98690b63a5a368e18810336fef8eafe191061f72b",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.up_encoders.1.self_attn.pos_bias_u"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.self_attn.pos_bias_v",
+            "length": 2048,
+            "offset": 123777024,
+            "sha256": "63e96180ebc75a4116183978164d359e493a4489d01e1abee89c481dc5ddd56c",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.up_encoders.1.self_attn.pos_bias_v"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.self_attn.linear_q.weight",
+            "length": 1048576,
+            "offset": 123779072,
+            "sha256": "20b2e2cd0322840be473081efbfe3ffeed8834614be07ed1f20331b3f3183df2",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.1.self_attn.linear_q.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.self_attn.linear_q.bias",
+            "length": 2048,
+            "offset": 124827648,
+            "sha256": "88cd03ea0d300805fe7aece294d6ac414010d97109b7614ab7e41519d26bbbde",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.1.self_attn.linear_q.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.self_attn.linear_k.weight",
+            "length": 1048576,
+            "offset": 124829696,
+            "sha256": "1519c07f0d481f2282a7d7c77d4716536fd9bd65484444d387ecf764d2cf7cd4",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.1.self_attn.linear_k.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.self_attn.linear_k.bias",
+            "length": 2048,
+            "offset": 125878272,
+            "sha256": "93724569241063a729934f47ff41a5b297fa0356082f79a6dc6237e485f81bef",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.1.self_attn.linear_k.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.self_attn.linear_v.weight",
+            "length": 1048576,
+            "offset": 125880320,
+            "sha256": "b74361fad1aa8ae497b17fd3e8c9b19d00d181a8290c9c87201b327b821c5f5a",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.1.self_attn.linear_v.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.self_attn.linear_v.bias",
+            "length": 2048,
+            "offset": 126928896,
+            "sha256": "0fd052c195a896ab995746f684bce6ccde30bc18e0f93c620b4f3d76d122e281",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.1.self_attn.linear_v.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.self_attn.linear_out.weight",
+            "length": 1048576,
+            "offset": 126930944,
+            "sha256": "674722b601e9aa89c5b4c4c5cfab7d350e3bddaf55ff56df3c3c8ccd8d9f0fa4",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.1.self_attn.linear_out.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.self_attn.linear_out.bias",
+            "length": 2048,
+            "offset": 127979520,
+            "sha256": "dfee082611a0fbc421e54c81b3550553b7369d9a0c41f92cd23b78b3eaa85a4f",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.1.self_attn.linear_out.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.self_attn.linear_pos.weight",
+            "length": 1048576,
+            "offset": 127981568,
+            "sha256": "ef2501645bf49cb69507e41a2ba29bdc20a0fca33c65ad91f22f592d627a7e75",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.1.self_attn.linear_pos.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.feed_forward.w_1.weight",
+            "length": 4194304,
+            "offset": 129030144,
+            "sha256": "38e47b9071b4290c2bdc60f79ab068f66da36892461083b9d9df502ce03c97a0",
+            "shape": [
+              2048,
+              512
+            ],
+            "state_name": "encoder.up_encoders.1.feed_forward.w_1.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.feed_forward.w_1.bias",
+            "length": 8192,
+            "offset": 133224448,
+            "sha256": "b90ad5e6fdad097c95b0a4808625d0066359a604f303b9400cd063006a44c6d7",
+            "shape": [
+              2048
+            ],
+            "state_name": "encoder.up_encoders.1.feed_forward.w_1.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.feed_forward.w_2.weight",
+            "length": 4194304,
+            "offset": 133232640,
+            "sha256": "43365b176f342f80d5bfe693abfde4dec89a10c56d199614d132037d3ca6a1a1",
+            "shape": [
+              512,
+              2048
+            ],
+            "state_name": "encoder.up_encoders.1.feed_forward.w_2.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.feed_forward.w_2.bias",
+            "length": 2048,
+            "offset": 137426944,
+            "sha256": "ef833ea7850d2e9f9ba7c72d5b251f15818b210973a738a815b76ea5d284a83c",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.1.feed_forward.w_2.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.norm_ff.weight",
+            "length": 2048,
+            "offset": 137428992,
+            "sha256": "8a9d88347509ab72d30c50cdb9ae48de80b28ca65db66524ea2188f37cc0240d",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.1.norm_ff.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.norm_ff.bias",
+            "length": 2048,
+            "offset": 137431040,
+            "sha256": "34ee9784eb99ee14469a6473af37bd1297099be02963605ba9bd6a88de266497",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.1.norm_ff.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.norm_mha.weight",
+            "length": 2048,
+            "offset": 137433088,
+            "sha256": "09921ba9fd53da6001ffb3dc0027a48b7eff730c6b42aeaa6fb1372e400886e5",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.1.norm_mha.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.1.norm_mha.bias",
+            "length": 2048,
+            "offset": 137435136,
+            "sha256": "a98c5838a4ccdb52d79299907e369c3964ec71e2e7d424d0ec5957965fc197ef",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.1.norm_mha.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.self_attn.pos_bias_u",
+            "length": 2048,
+            "offset": 137437184,
+            "sha256": "bdda98031e4a680db79684221cc2bb9dec51189c292d1ac2ac1dc951972519d7",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.up_encoders.2.self_attn.pos_bias_u"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.self_attn.pos_bias_v",
+            "length": 2048,
+            "offset": 137439232,
+            "sha256": "a3d7cf639b7c65a7fda4e21dcfc7cd87c01f97c53fc5a1b9cf5d5bb1ce864cb8",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.up_encoders.2.self_attn.pos_bias_v"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.self_attn.linear_q.weight",
+            "length": 1048576,
+            "offset": 137441280,
+            "sha256": "7511646ea2521af85b0f9e6fdd0b94eafb8bc8518c57925eb77e8a9f932a39bf",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.2.self_attn.linear_q.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.self_attn.linear_q.bias",
+            "length": 2048,
+            "offset": 138489856,
+            "sha256": "781e675837bef1dcf507b501fa02ae347c496d26b87ab9d43908d7e9916f12bd",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.2.self_attn.linear_q.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.self_attn.linear_k.weight",
+            "length": 1048576,
+            "offset": 138491904,
+            "sha256": "8ad07b1dc10f37518baf88cf462ea671c3b514045a27ea29843faa25b94ea09e",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.2.self_attn.linear_k.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.self_attn.linear_k.bias",
+            "length": 2048,
+            "offset": 139540480,
+            "sha256": "0b4b5afbdbc62fe0c970205099c1886a9c20f33400b54cdb2096233a6f7cf6e1",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.2.self_attn.linear_k.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.self_attn.linear_v.weight",
+            "length": 1048576,
+            "offset": 139542528,
+            "sha256": "87f8b42a3fea8995860a049315a7f619e0305e5513c8d8362557d12738b87d1b",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.2.self_attn.linear_v.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.self_attn.linear_v.bias",
+            "length": 2048,
+            "offset": 140591104,
+            "sha256": "7d84dad14e18785a40eb01ee5f3450ceac324ef5719a82815e82fc4c7836895d",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.2.self_attn.linear_v.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.self_attn.linear_out.weight",
+            "length": 1048576,
+            "offset": 140593152,
+            "sha256": "411ebb09b74035a1744b61c4a29ca0467df2820c55757cfab505dbe9f95da170",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.2.self_attn.linear_out.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.self_attn.linear_out.bias",
+            "length": 2048,
+            "offset": 141641728,
+            "sha256": "a25de4c07f38c4d05e5d3a18c2cb7c8d73dd66dc8264e69d3b5e492d1d7396a3",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.2.self_attn.linear_out.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.self_attn.linear_pos.weight",
+            "length": 1048576,
+            "offset": 141643776,
+            "sha256": "dfa4faea19a63d751e820b2d78f0dfe7424a2bbb7fd6a668f9d2ddeb6600165e",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.2.self_attn.linear_pos.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.feed_forward.w_1.weight",
+            "length": 4194304,
+            "offset": 142692352,
+            "sha256": "c4723e93fccefc494b655847a905b9fa4e44232752647febf25b292464eddaff",
+            "shape": [
+              2048,
+              512
+            ],
+            "state_name": "encoder.up_encoders.2.feed_forward.w_1.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.feed_forward.w_1.bias",
+            "length": 8192,
+            "offset": 146886656,
+            "sha256": "96970d3876ba79631b79ad5f711839474805386726bb4e74625f81803683e151",
+            "shape": [
+              2048
+            ],
+            "state_name": "encoder.up_encoders.2.feed_forward.w_1.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.feed_forward.w_2.weight",
+            "length": 4194304,
+            "offset": 146894848,
+            "sha256": "429510dd0cf9b3c3041b8af56662c0355166021d1bfd24794cce18af62b3a6e8",
+            "shape": [
+              512,
+              2048
+            ],
+            "state_name": "encoder.up_encoders.2.feed_forward.w_2.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.feed_forward.w_2.bias",
+            "length": 2048,
+            "offset": 151089152,
+            "sha256": "288e0602bd59f396ca81ffa17ef62b1f88ea0012f0e3cf99c7f7f29f210ac09e",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.2.feed_forward.w_2.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.norm_ff.weight",
+            "length": 2048,
+            "offset": 151091200,
+            "sha256": "3e988c68915e1109ef34b364ec6d7e11b6be5c0cc9513fa39d6fccb77a007cb3",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.2.norm_ff.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.norm_ff.bias",
+            "length": 2048,
+            "offset": 151093248,
+            "sha256": "170411d7d43ad0ab7e7018f0832d0b07ba18d20fa44b3f35399bd686503beffd",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.2.norm_ff.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.norm_mha.weight",
+            "length": 2048,
+            "offset": 151095296,
+            "sha256": "3532d47f29912610bba8e8eb6791a607d1942c5db0fcf8d88d5c8373827af2eb",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.2.norm_mha.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.2.norm_mha.bias",
+            "length": 2048,
+            "offset": 151097344,
+            "sha256": "7f4bac91c486f40dcedf1fe09e6284bea82dd1a0c8d9ec5c385488061ad06862",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.2.norm_mha.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.self_attn.pos_bias_u",
+            "length": 2048,
+            "offset": 151099392,
+            "sha256": "38fea9e11c0915e45a2e3a607ab8cf4aaef1e29e70a901aa35fcc4fdaeced661",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.up_encoders.3.self_attn.pos_bias_u"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.self_attn.pos_bias_v",
+            "length": 2048,
+            "offset": 151101440,
+            "sha256": "eb97692346480386af5885c61055750713161b2df103f35645009a2179cca711",
+            "shape": [
+              8,
+              64
+            ],
+            "state_name": "encoder.up_encoders.3.self_attn.pos_bias_v"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.self_attn.linear_q.weight",
+            "length": 1048576,
+            "offset": 151103488,
+            "sha256": "213f6a59ef6d140542848d65f4f8962d5054cc971fcec1548d57167fc8130aaa",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.3.self_attn.linear_q.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.self_attn.linear_q.bias",
+            "length": 2048,
+            "offset": 152152064,
+            "sha256": "acc5356f2f789dcf1d70d7b99828ab21cb25d9c6456c5924a122e91b5cf7c928",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.3.self_attn.linear_q.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.self_attn.linear_k.weight",
+            "length": 1048576,
+            "offset": 152154112,
+            "sha256": "ffac8f9ba34142473085791a2b063e437e10bb6d85468d63957328d2f2a40fd5",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.3.self_attn.linear_k.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.self_attn.linear_k.bias",
+            "length": 2048,
+            "offset": 153202688,
+            "sha256": "5012b846f10f9b84cfe092a17df380e59d65f440d274c56c737c40c8af2ad52c",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.3.self_attn.linear_k.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.self_attn.linear_v.weight",
+            "length": 1048576,
+            "offset": 153204736,
+            "sha256": "908e50a1037a059969d86d0358c46562fcde3072208c63a8a1185f5f278b8dc2",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.3.self_attn.linear_v.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.self_attn.linear_v.bias",
+            "length": 2048,
+            "offset": 154253312,
+            "sha256": "14d4136afd084e86c322702824bbb49357aa1f86a65d6be2fbd53b8768ba0f54",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.3.self_attn.linear_v.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.self_attn.linear_out.weight",
+            "length": 1048576,
+            "offset": 154255360,
+            "sha256": "d8346f2d5d650130e0e68f12882dd6cbc695eb65b1624b55572d7daecd456b3f",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.3.self_attn.linear_out.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.self_attn.linear_out.bias",
+            "length": 2048,
+            "offset": 155303936,
+            "sha256": "4713bd65da933473d0d16ac8acaf0515ca951cd7848a191cb16b1f98ad8dde16",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.3.self_attn.linear_out.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.self_attn.linear_pos.weight",
+            "length": 1048576,
+            "offset": 155305984,
+            "sha256": "9ef4a490324859eca3b93239412fd121d880af31b25e313b6e225928231759a5",
+            "shape": [
+              512,
+              512
+            ],
+            "state_name": "encoder.up_encoders.3.self_attn.linear_pos.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.feed_forward.w_1.weight",
+            "length": 4194304,
+            "offset": 156354560,
+            "sha256": "e5e2a5b7f3329777f2607ae59621209e77e7673b22ffa824d17c77147815b0ab",
+            "shape": [
+              2048,
+              512
+            ],
+            "state_name": "encoder.up_encoders.3.feed_forward.w_1.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.feed_forward.w_1.bias",
+            "length": 8192,
+            "offset": 160548864,
+            "sha256": "60b9d29bafb95a00b345223f726a3eb6749a90c024a30cc2b9ed59dd16042e59",
+            "shape": [
+              2048
+            ],
+            "state_name": "encoder.up_encoders.3.feed_forward.w_1.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.feed_forward.w_2.weight",
+            "length": 4194304,
+            "offset": 160557056,
+            "sha256": "5b8338250e802d15fd4966b60992d27087c5c75f77f6d7c2da5333939ac940f8",
+            "shape": [
+              512,
+              2048
+            ],
+            "state_name": "encoder.up_encoders.3.feed_forward.w_2.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.feed_forward.w_2.bias",
+            "length": 2048,
+            "offset": 164751360,
+            "sha256": "adb9f2d8df9764693c45b13b864900fa712c0399406f09138060acb79a552863",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.3.feed_forward.w_2.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.norm_ff.weight",
+            "length": 2048,
+            "offset": 164753408,
+            "sha256": "3a78ad94cbec6da920bcf25744b4e2bb2b797d64a17e3e64d765ebc2bcff0ba2",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.3.norm_ff.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.norm_ff.bias",
+            "length": 2048,
+            "offset": 164755456,
+            "sha256": "3d1c2ae98c3f1b878c9bb7920cdd4b935d19c74573b181b1e18005572dd294d7",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.3.norm_ff.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.norm_mha.weight",
+            "length": 2048,
+            "offset": 164757504,
+            "sha256": "55c6699149f8dff59e7ca9164d8529165f49f024f0c8862e789c4802cf29ff27",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.3.norm_mha.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder.up_encoders.3.norm_mha.bias",
+            "length": 2048,
+            "offset": 164759552,
+            "sha256": "9841c5bc3e78556d16eb22d449e39db831ef56da1821b1da8dea26f5d352fc21",
+            "shape": [
+              512
+            ],
+            "state_name": "encoder.up_encoders.3.norm_mha.bias"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder_proj.weight",
+            "length": 163840,
+            "offset": 164761600,
+            "sha256": "41ea2191c0355cbc0ac1233a1b9dfc68a5fbe4d9502d7ed89e2b9a1edc92c3f8",
+            "shape": [
+              80,
+              512
+            ],
+            "state_name": "encoder_proj.weight"
+          },
+          {
+            "dtype": "float32",
+            "graph_name": "encoder_proj.bias",
+            "length": 320,
+            "offset": 164925440,
+            "sha256": "2319760b37fb54eff692cb0bb855066b1eaab9b8a2eb82cfdf5b3b747e597641",
+            "shape": [
+              80
+            ],
+            "state_name": "encoder_proj.bias"
+          }
+        ],
+        "outputs": [
+          "mu",
+          "mask"
+        ],
+        "runtime_inputs": [
+          "speech_tokens",
+          "token_lengths"
+        ],
+        "unbound_state": [],
+        "weight_bytes": 164925760,
+        "weight_file": "nano_flow_encoder.weights.bin"
+      },
+      "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged/flow_encoder/nano_flow_encoder.onnx",
+      "graph_bytes": 20874584,
+      "output_names": [
+        "mu",
+        "mask"
+      ],
+      "peak_rss_bytes": 976576512,
+      "private_api": "torch.onnx._internal.torchscript_exporter.utils._export",
+      "private_api_signature": "(model, args, f, export_params=True, verbose=False, training=<TrainingMode.EVAL: 0>, input_names=None, output_names=None, operator_export_type=<OperatorExportTypes.ONNX: 0>, export_type=None, opset_version=None, do_constant_folding=True, dynamic_axes=None, keep_initializers_as_inputs=None, fixed_batch_size=False, custom_opsets=None, add_node_names=True, onnx_shape_inference=True, export_modules_as_functions: 'Any' = False, autograd_inlining=True)",
+      "rss_after_bytes": 897486848,
+      "rss_before_bytes": 862392320,
+      "runtime_inputs": [
+        "speech_tokens",
+        "token_lengths"
+      ],
+      "safe_fallback": "disabled",
+      "status": "exported",
+      "torch_version": "2.11.0+cu128"
+    },
+    "opset": 18,
+    "path": "nano_flow_encoder.onnx",
+    "requested_inputs": [
+      "speech_tokens",
+      "token_lengths"
+    ],
+    "requested_outputs": [
+      "mu",
+      "mask"
+    ],
+    "validation": "pending separate ORT verification"
+  },
+  "load": {
+    "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+    "loaded_tensors": 209,
+    "missing_tensors": [],
+    "selected_tensors": 209,
+    "skipped_tensors": 2282,
+    "unexpected_tensors": []
+  },
+  "model": "ResembleAI/chatterbox-nano",
+  "runtime_contract": "Input tokens are the concatenated S3Gen prompt and generated tokens; output mu is (B,mel_length,80), mask is (B,1,mel_length).",
+  "schema_version": 1,
+  "source": "local Nano checkpoint; no Turbo substitution",
+  "stage": "flow_encoder",
+  "status": "exported",
+  "verification": {
+    "command": "onnx_staged.py verify --stage flow_encoder",
+    "status": "not_run"
+  }
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 31.883s
+             CPU time consumed: 37.743s
+                   Memory peak: 1G (swap: 0B)

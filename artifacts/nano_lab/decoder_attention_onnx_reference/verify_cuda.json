@@ -1,0 +1,78 @@
+{
+  "status": "failed",
+  "experimental": true,
+  "scope": "Deterministic estimator calls at mel lengths 8,64,256,512,768; no waveform or T3 claim",
+  "graph_sha256": "df2a1c85850133ce490830b1c795da0d9bc1848ceac5226b3e997b43d16df643",
+  "weights_sha256": "76c1253a5ca4340c2457b871a708d0b14f673fb5fe8e0d6559b6f958f52bac03",
+  "adapter_sha256": "de6d40e5565011022efe776c1852f5bdc1850a87cf4e0e5ba51208aba3e747c2",
+  "strength": 1.0,
+  "reference_sha256": "26c499ec1440d1f15dade5e3ddc1aa381a3c6b7c932b58c16af4519369713950",
+  "atol": 0.0003,
+  "rtol": 0.0003,
+  "ort_provider": "cuda",
+  "onnxruntime_version": "1.26.0",
+  "checks": [
+    {
+      "status": "mismatch",
+      "elements": 20480,
+      "max_abs": 0.020074009895324707,
+      "max_relative": 5.420748299319728,
+      "relative_l2": 0.0007251547289715553,
+      "outside_tolerance_count": 8150,
+      "atol": 0.0003,
+      "rtol": 0.0003,
+      "case": "mel256",
+      "adapter_effect_max_abs": 0.1494462490081787
+    },
+    {
+      "status": "mismatch",
+      "elements": 5120,
+      "max_abs": 0.019664347171783447,
+      "max_relative": 20.827786921440328,
+      "relative_l2": 0.0008032252537887803,
+      "outside_tolerance_count": 2152,
+      "atol": 0.0003,
+      "rtol": 0.0003,
+      "case": "mel64",
+      "adapter_effect_max_abs": 0.10887753963470459
+    },
+    {
+      "status": "passed",
+      "elements": 640,
+      "max_abs": 3.62396240234375e-05,
+      "max_relative": 0.00048522219182911054,
+      "relative_l2": 3.0196506686699114e-06,
+      "outside_tolerance_count": 0,
+      "atol": 0.0003,
+      "rtol": 0.0003,
+      "case": "mel8",
+      "adapter_effect_max_abs": 0.05649375915527344
+    },
+    {
+      "status": "mismatch",
+      "elements": 40960,
+      "max_abs": 0.020609021186828613,
+      "max_relative": 18.814732142857142,
+      "relative_l2": 0.0005213830682212215,
+      "outside_tolerance_count": 16108,
+      "atol": 0.0003,
+      "rtol": 0.0003,
+      "case": "mel512",
+      "adapter_effect_max_abs": 0.16196668148040771
+    },
+    {
+      "status": "mismatch",
+      "elements": 61440,
+      "max_abs": 0.01911318302154541,
+      "max_relative": 27.75251509054326,
+      "relative_l2": 0.0004822698325323838,
+      "outside_tolerance_count": 23503,
+      "atol": 0.0003,
+      "rtol": 0.0003,
+      "case": "mel768",
+      "adapter_effect_max_abs": 0.18114161491394043
+    }
+  ],
+  "peak_rss_bytes": 992714752,
+  "elapsed_seconds": 11.913231368002016
+}

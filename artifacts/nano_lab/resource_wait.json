@@ -1,0 +1,17 @@
+{
+  "checked_unix": 1790695279.214705,
+  "available_mib": 6195.5,
+  "required_tiny_export_mib": 4736,
+  "required_small_component_mib": 5376,
+  "required_synthesis_mib": 6144,
+  "model_service_state": "inactive",
+  "blocker": null,
+  "unfinished": [
+    "Perceptual ASMR acceptance: current samples rejected by user",
+    "Source reconstruction diagnostic to locate lost voice detail",
+    "Complete Harvey ONNX audio and content validation",
+    "Strict long-prefill T3 cache numerical mismatch",
+    "Low-memory runtime that also meets smooth inference latency"
+  ],
+  "next_action": "Continue one guarded model job at a time; guard determines launch eligibility from live RAM."
+}

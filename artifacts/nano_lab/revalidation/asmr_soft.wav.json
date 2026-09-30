@@ -1,0 +1,78 @@
+{
+  "synthetic": true,
+  "profile": "/home/terryd/gooning/voicecloning/voices/nano/asmr_soft.json",
+  "device": "cuda",
+  "dtype": "fp32",
+  "seed": 31,
+  "load_and_prepare_seconds": 7.171672033000505,
+  "runtime_load_report": {
+    "optimized": true,
+    "device": "cuda",
+    "dtype": "torch.float32",
+    "decoder": "meanflow",
+    "implementation_sha256": "17918f3a8b235c0d5b8ba8f5636fe7f4c46582c096daf873e73a760a6cf55617",
+    "ve": {
+      "skipped": true,
+      "reason": "conditionals_path supplied"
+    },
+    "t3": {
+      "loaded_tensors": 153,
+      "skipped_tensors": 2,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": [],
+      "removed_parameters": [
+        "tfmr.wte",
+        "text_head"
+      ]
+    },
+    "precision_policy": {
+      "t3": "torch.float32",
+      "s3gen": "torch.float32"
+    },
+    "s3gen": {
+      "loaded_tensors": 1450,
+      "skipped_tensors": 1041,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": []
+    },
+    "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_soft_morning_31.conds.pt",
+    "parameters": {
+      "t3": 140247203,
+      "s3gen": 135467807,
+      "ve": 0
+    },
+    "load_seconds": 7.167117777000385,
+    "engine": {
+      "optimized": true,
+      "dtype": "torch.float32",
+      "device": "cuda",
+      "decoder": "meanflow"
+    }
+  },
+  "ready_rss_mib": 1352.265625,
+  "segments": [
+    {
+      "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "seconds": 8.36,
+      "generation_and_master_seconds": 8.65537415200015,
+      "rtf": 1.0353318363636543,
+      "processing": {
+        "highpass_hz": 45,
+        "gain_db": 5.335254629318832,
+        "target_lufs": -19,
+        "achieved_lufs": -19.759429056218345,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      }
+    }
+  ],
+  "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/revalidation/asmr_soft.wav",
+  "audio_seconds": 8.36,
+  "total_seconds": 15.837637257998722,
+  "rss_mib": 2126.40625,
+  "peak_rss_mib": 2125.05859375,
+  "cuda_peak_allocated_mib": 1664.5810546875
+}

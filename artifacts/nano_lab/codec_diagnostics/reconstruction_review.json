@@ -1,0 +1,40 @@
+{
+  "source_text_verified_by": "Tiny/Small agreement, not human verification",
+  "same_text": true,
+  "findings": [
+    {
+      "id": "source01_source",
+      "tiny_wer": 0.0,
+      "small_wer": 0.0,
+      "small_transcript": "Okay, gather around, everybody. Great. So, as the one throwing the party...",
+      "speaker_cosine_to_heldout": 0.770885,
+      "dnsmos_overall": 2.768996030982598
+    },
+    {
+      "id": "source01_vocoder",
+      "tiny_wer": 0.0,
+      "small_wer": 0.0,
+      "small_transcript": "Okay, gather around everybody. Great. So, as the one throwing the party...",
+      "speaker_cosine_to_heldout": 0.755829,
+      "dnsmos_overall": 2.8573849262295083
+    },
+    {
+      "id": "source01_tokens",
+      "tiny_wer": 0.416667,
+      "small_wer": 0.333333,
+      "small_transcript": "Okay, gather around, everybody. Great. So, as the ones who are in the party.",
+      "speaker_cosine_to_heldout": 0.786396,
+      "dnsmos_overall": 3.068443799510629
+    },
+    {
+      "id": "source01_tts_corrected",
+      "tiny_wer": 0.083333,
+      "small_wer": 0.166667,
+      "small_transcript": "Okay, gather around everybody. Great. So it was the one throwing the party.",
+      "speaker_cosine_to_heldout": 0.860702,
+      "dnsmos_overall": 2.8731482205300476
+    }
+  ],
+  "conclusion": "Vocoder-only reconstruction retains recognized words. Source-token acoustic reconstruction changes a phrase according to both recognizers. Higher DNSMOS does not establish fidelity. Investigate tokenizer/acoustic decoding rather than assuming the vocoder alone causes all defects.",
+  "limitation": "One six-second excerpt with a sentence cut at its end. Generated TTS has different timing. Speaker cosine to other heldout source clips is style-sensitive."
+}

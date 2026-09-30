@@ -1,0 +1,34 @@
+{
+  "audio_samples_after_crop": 144000,
+  "command": [
+    "scripts/nano_lab/codec_diagnostics.py",
+    "source-mel",
+    "--id",
+    "asmr7_train_01"
+  ],
+  "kind": "genuine_source_mel",
+  "mel_extractor": "vendor/chatterbox/src/chatterbox/models/s3gen/utils/mel.py::mel_spectrogram",
+  "mel_layout": "B,80,T",
+  "mel_params": {
+    "center": false,
+    "fmax": 8000,
+    "fmin": 0,
+    "hop_size": 480,
+    "n_fft": 1920,
+    "num_mels": 80,
+    "win_size": 1920
+  },
+  "mel_shape": [
+    1,
+    80,
+    300
+  ],
+  "pipeline_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/manifest.json",
+  "prefix_mel_frames": 300,
+  "row_id": "asmr7_train_01",
+  "sample_rate": 24000,
+  "schema_version": 1,
+  "source_audio": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_train_01/asmr7_train_01__natural.wav",
+  "source_audio_sha256": "0ab55445b2044b39504d899c38e268ec31226fd4670063cc68abe8eafef7945b",
+  "synthetic_tts": false
+}

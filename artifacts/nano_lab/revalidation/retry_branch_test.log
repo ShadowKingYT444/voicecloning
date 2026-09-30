@@ -1,0 +1,21 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+loaded PerthNet (Implicit) at step 250,000
+  0%|          | 0/180 [00:00<?, ?it/s]  1%|          | 1/180 [00:00<00:33,  5.33it/s]  4%|▍         | 7/180 [00:00<00:06, 28.77it/s]  8%|▊         | 14/180 [00:00<00:03, 43.62it/s] 12%|█▏        | 21/180 [00:00<00:03, 51.37it/s] 16%|█▌        | 28/180 [00:00<00:02, 54.86it/s] 19%|█▉        | 35/180 [00:00<00:02, 57.58it/s] 23%|██▎       | 42/180 [00:00<00:02, 59.09it/s] 27%|██▋       | 49/180 [00:00<00:02, 60.49it/s] 31%|███       | 56/180 [00:01<00:01, 62.07it/s] 35%|███▌      | 63/180 [00:01<00:01, 61.17it/s] 41%|████      | 73/180 [00:01<00:01, 71.24it/s] 46%|████▌     | 82/180 [00:01<00:01, 76.42it/s] 50%|█████     | 90/180 [00:01<00:01, 74.65it/s] 55%|█████▌    | 99/180 [00:01<00:01, 78.17it/s] 61%|██████    | 110/180 [00:01<00:00, 85.84it/s] 68%|██████▊   | 122/180 [00:01<00:00, 93.93it/s] 74%|███████▍  | 133/180 [00:01<00:00, 96.56it/s] 80%|████████  | 144/180 [00:02<00:00, 97.42it/s] 86%|████████▌ | 154/180 [00:02<00:00, 88.34it/s] 91%|█████████ | 163/180 [00:02<00:00, 81.20it/s] 96%|█████████▌| 172/180 [00:02<00:00, 79.45it/s]100%|██████████| 180/180 [00:02<00:00, 72.01it/s]
+Length limit: retrying as 2 shorter segments
+  0%|          | 0/180 [00:00<?, ?it/s]  6%|▌         | 10/180 [00:00<00:01, 92.57it/s] 11%|█         | 20/180 [00:00<00:01, 87.70it/s] 16%|█▌        | 29/180 [00:00<00:02, 61.07it/s] 22%|██▏       | 39/180 [00:00<00:01, 71.80it/s] 26%|██▌       | 47/180 [00:00<00:01, 72.95it/s] 31%|███       | 55/180 [00:00<00:01, 68.33it/s] 35%|███▌      | 63/180 [00:00<00:01, 67.11it/s] 39%|███▉      | 70/180 [00:01<00:01, 65.97it/s] 43%|████▎     | 77/180 [00:01<00:01, 64.62it/s] 47%|████▋     | 84/180 [00:01<00:01, 65.16it/s] 51%|█████     | 91/180 [00:01<00:01, 64.50it/s] 54%|█████▍    | 98/180 [00:01<00:01, 64.38it/s] 58%|█████▊    | 105/180 [00:01<00:01, 63.95it/s] 62%|██████▏   | 112/180 [00:01<00:01, 63.78it/s] 68%|██████▊   | 122/180 [00:01<00:00, 72.88it/s] 68%|██████▊   | 122/180 [00:01<00:00, 68.27it/s]
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  4.67it/s]100%|██████████| 2/2 [00:00<00:00,  6.70it/s]100%|██████████| 2/2 [00:00<00:00,  6.28it/s]
+Segment 1: 5.04s audio in 4.84s
+  0%|          | 0/180 [00:00<?, ?it/s]  3%|▎         | 6/180 [00:00<00:03, 57.65it/s]  9%|▉         | 16/180 [00:00<00:01, 82.10it/s] 15%|█▌        | 27/180 [00:00<00:01, 92.53it/s] 22%|██▏       | 39/180 [00:00<00:01, 99.16it/s] 28%|██▊       | 50/180 [00:00<00:01, 102.00it/s] 30%|███       | 54/180 [00:00<00:01, 94.24it/s] 
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 12.70it/s]100%|██████████| 2/2 [00:00<00:00, 12.67it/s]
+Segment 2: 2.32s audio in 1.14s
+{"output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/revalidation/retry_branch_test.wav", "report": "artifacts/nano_lab/revalidation/retry_branch_test.wav.json", "peak_rss_mib": 2389.1875}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 39.631s
+             CPU time consumed: 38.373s
+                   Memory peak: 2.4G (swap: 0B)

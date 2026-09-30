@@ -1,0 +1,384 @@
+{
+  "baseline_projection0_identity": {
+    "all_six_equal": true,
+    "checks": {
+      "morning_projection0_mel": {
+        "current": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/morning_projection0_mel.wav",
+        "current_sha256": "6cc488d171f0e4972d69f0a2363b7e04bad8660b8c9c3d1b142f92e178ea3fef",
+        "equal": true,
+        "expected": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_fitted_comparison/morning_fit_mel.wav",
+        "expected_sha256": "6cc488d171f0e4972d69f0a2363b7e04bad8660b8c9c3d1b142f92e178ea3fef"
+      },
+      "morning_projection0_raw": {
+        "current": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/morning_projection0_raw.wav",
+        "current_sha256": "2e3d117c89cc847cc232088ce3249d4c9e680e9c4f2a945e8c634a35a2cb1414",
+        "equal": true,
+        "expected": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_fitted_comparison/morning_fit_raw.wav",
+        "expected_sha256": "2e3d117c89cc847cc232088ce3249d4c9e680e9c4f2a945e8c634a35a2cb1414"
+      },
+      "narrative_projection0_mel": {
+        "current": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/narrative_projection0_mel.wav",
+        "current_sha256": "45dea17c0e8bfeb2d949b8011a3ecb00a76ccf6b75c42df4c0f75a2ae3c76e1d",
+        "equal": true,
+        "expected": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_fitted_comparison/narrative_fit_mel.wav",
+        "expected_sha256": "45dea17c0e8bfeb2d949b8011a3ecb00a76ccf6b75c42df4c0f75a2ae3c76e1d"
+      },
+      "narrative_projection0_raw": {
+        "current": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/narrative_projection0_raw.wav",
+        "current_sha256": "6adfadc8468829725a74313ea9e45650d8c24d6c897c31244faa9450ff52854b",
+        "equal": true,
+        "expected": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_fitted_comparison/narrative_fit_raw.wav",
+        "expected_sha256": "6adfadc8468829725a74313ea9e45650d8c24d6c897c31244faa9450ff52854b"
+      },
+      "question_projection0_mel": {
+        "current": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/question_projection0_mel.wav",
+        "current_sha256": "b9177b2e1bca36c45024848efe0ef71830ccdb30d05ffa6964bc424710ad6d79",
+        "equal": true,
+        "expected": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_fitted_comparison/question_fit_mel.wav",
+        "expected_sha256": "b9177b2e1bca36c45024848efe0ef71830ccdb30d05ffa6964bc424710ad6d79"
+      },
+      "question_projection0_raw": {
+        "current": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/question_projection0_raw.wav",
+        "current_sha256": "2f7bfb4ae68ec9aee8b2b15f0f6ba1644aa3ef55f2cebce0037776e71204eee7",
+        "equal": true,
+        "expected": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_fitted_comparison/question_fit_raw.wav",
+        "expected_sha256": "2f7bfb4ae68ec9aee8b2b15f0f6ba1644aa3ef55f2cebce0037776e71204eee7"
+      }
+    }
+  },
+  "comparison_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison",
+  "fit_disclosure": {
+    "best_step": 11,
+    "claim": "partial fitted experiment; no human acceptance or general zero-shot promotion",
+    "complete": false,
+    "requested_max_steps": 40,
+    "status": "interrupted_by_resource_guard",
+    "stopped_after_steps": 13
+  },
+  "general_zero_shot_improvement": false,
+  "groups": {
+    "projection0_mel": {
+      "all_wer_zero": true,
+      "mean": {
+        "audio_seconds": 6.373333333333333,
+        "dnsmos_overall": 3.167073190675618,
+        "generation_seconds": 2.900160732337099,
+        "identity_cosine": 0.8895066666666667,
+        "peak_rss_mib": 2310.36328125,
+        "wer": 0.0
+      },
+      "rows": [
+        {
+          "audio_seconds": 7.28,
+          "audio_sha256": null,
+          "dnsmos_overall": 3.115634951601715,
+          "enabled": false,
+          "generation_seconds": 3.4212301810039207,
+          "id": "morning_projection0_mel",
+          "identity_cosine": 0.86326,
+          "level_matched_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/morning_projection0_mel.wav",
+          "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/morning_projection0_mel.master.wav",
+          "peak_rss_mib": 2310.36328125,
+          "raw_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/morning_projection0_mel.wav",
+          "strength": 0.0,
+          "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+          "text_name": "morning",
+          "token_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/morning_projection0_mel.tokens.pt",
+          "wer": 0.0
+        },
+        {
+          "audio_seconds": 6.88,
+          "audio_sha256": null,
+          "dnsmos_overall": 3.2038074245133097,
+          "enabled": false,
+          "generation_seconds": 2.995423329004552,
+          "id": "narrative_projection0_mel",
+          "identity_cosine": 0.90015,
+          "level_matched_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/narrative_projection0_mel.wav",
+          "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/narrative_projection0_mel.master.wav",
+          "peak_rss_mib": 2310.36328125,
+          "raw_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/narrative_projection0_mel.wav",
+          "strength": 0.0,
+          "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+          "text_name": "narrative",
+          "token_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/narrative_projection0_mel.tokens.pt",
+          "wer": 0.0
+        },
+        {
+          "audio_seconds": 4.96,
+          "audio_sha256": null,
+          "dnsmos_overall": 3.18177719591183,
+          "enabled": false,
+          "generation_seconds": 2.283828687002824,
+          "id": "question_projection0_mel",
+          "identity_cosine": 0.90511,
+          "level_matched_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/question_projection0_mel.wav",
+          "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/question_projection0_mel.master.wav",
+          "peak_rss_mib": 2310.36328125,
+          "raw_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/question_projection0_mel.wav",
+          "strength": 0.0,
+          "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+          "text_name": "question",
+          "token_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/question_projection0_mel.tokens.pt",
+          "wer": 0.0
+        }
+      ]
+    },
+    "projection0_raw": {
+      "all_wer_zero": true,
+      "mean": {
+        "audio_seconds": 6.373333333333333,
+        "dnsmos_overall": 3.14625452028471,
+        "generation_seconds": 4.343626540665961,
+        "identity_cosine": 0.8848316666666667,
+        "peak_rss_mib": 2310.1028645833335,
+        "wer": 0.0
+      },
+      "rows": [
+        {
+          "audio_seconds": 7.28,
+          "audio_sha256": null,
+          "dnsmos_overall": 3.077840941206808,
+          "enabled": false,
+          "generation_seconds": 7.016270635998808,
+          "id": "morning_projection0_raw",
+          "identity_cosine": 0.860826,
+          "level_matched_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/morning_projection0_raw.wav",
+          "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/morning_projection0_raw.master.wav",
+          "peak_rss_mib": 2309.58203125,
+          "raw_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/morning_projection0_raw.wav",
+          "strength": 0.0,
+          "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+          "text_name": "morning",
+          "token_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/morning_projection0_raw.tokens.pt",
+          "wer": 0.0
+        },
+        {
+          "audio_seconds": 6.88,
+          "audio_sha256": null,
+          "dnsmos_overall": 3.081602195515001,
+          "enabled": false,
+          "generation_seconds": 3.3087650000015856,
+          "id": "narrative_projection0_raw",
+          "identity_cosine": 0.891777,
+          "level_matched_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/narrative_projection0_raw.wav",
+          "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/narrative_projection0_raw.master.wav",
+          "peak_rss_mib": 2310.36328125,
+          "raw_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/narrative_projection0_raw.wav",
+          "strength": 0.0,
+          "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+          "text_name": "narrative",
+          "token_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/narrative_projection0_raw.tokens.pt",
+          "wer": 0.0
+        },
+        {
+          "audio_seconds": 4.96,
+          "audio_sha256": null,
+          "dnsmos_overall": 3.2793204241323206,
+          "enabled": false,
+          "generation_seconds": 2.7058439859974897,
+          "id": "question_projection0_raw",
+          "identity_cosine": 0.901892,
+          "level_matched_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/question_projection0_raw.wav",
+          "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/question_projection0_raw.master.wav",
+          "peak_rss_mib": 2310.36328125,
+          "raw_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/question_projection0_raw.wav",
+          "strength": 0.0,
+          "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+          "text_name": "question",
+          "token_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/question_projection0_raw.tokens.pt",
+          "wer": 0.0
+        }
+      ]
+    },
+    "projection1_mel": {
+      "all_wer_zero": true,
+      "mean": {
+        "audio_seconds": 6.373333333333333,
+        "dnsmos_overall": 3.1643031973882527,
+        "generation_seconds": 2.8214257293317737,
+        "identity_cosine": 0.890468,
+        "peak_rss_mib": 2310.36328125,
+        "wer": 0.0
+      },
+      "rows": [
+        {
+          "audio_seconds": 7.28,
+          "audio_sha256": null,
+          "dnsmos_overall": 3.141645075311931,
+          "enabled": true,
+          "generation_seconds": 3.0746716799985734,
+          "id": "morning_projection1_mel",
+          "identity_cosine": 0.866143,
+          "level_matched_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/morning_projection1_mel.wav",
+          "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/morning_projection1_mel.master.wav",
+          "peak_rss_mib": 2310.36328125,
+          "raw_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/morning_projection1_mel.wav",
+          "strength": 1.0,
+          "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+          "text_name": "morning",
+          "token_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/morning_projection1_mel.tokens.pt",
+          "wer": 0.0
+        },
+        {
+          "audio_seconds": 6.88,
+          "audio_sha256": null,
+          "dnsmos_overall": 3.146999062362853,
+          "enabled": true,
+          "generation_seconds": 3.031379444000777,
+          "id": "narrative_projection1_mel",
+          "identity_cosine": 0.900082,
+          "level_matched_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/narrative_projection1_mel.wav",
+          "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/narrative_projection1_mel.master.wav",
+          "peak_rss_mib": 2310.36328125,
+          "raw_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/narrative_projection1_mel.wav",
+          "strength": 1.0,
+          "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+          "text_name": "narrative",
+          "token_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/narrative_projection1_mel.tokens.pt",
+          "wer": 0.0
+        },
+        {
+          "audio_seconds": 4.96,
+          "audio_sha256": null,
+          "dnsmos_overall": 3.2042654544899736,
+          "enabled": true,
+          "generation_seconds": 2.3582260639959713,
+          "id": "question_projection1_mel",
+          "identity_cosine": 0.905179,
+          "level_matched_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/question_projection1_mel.wav",
+          "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/question_projection1_mel.master.wav",
+          "peak_rss_mib": 2310.36328125,
+          "raw_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/question_projection1_mel.wav",
+          "strength": 1.0,
+          "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+          "text_name": "question",
+          "token_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/question_projection1_mel.tokens.pt",
+          "wer": 0.0
+        }
+      ]
+    },
+    "projection1_raw": {
+      "all_wer_zero": true,
+      "mean": {
+        "audio_seconds": 6.373333333333333,
+        "dnsmos_overall": 3.155749219198423,
+        "generation_seconds": 2.9533490766674126,
+        "identity_cosine": 0.8849686666666666,
+        "peak_rss_mib": 2310.36328125,
+        "wer": 0.0
+      },
+      "rows": [
+        {
+          "audio_seconds": 7.28,
+          "audio_sha256": null,
+          "dnsmos_overall": 3.0767633805419714,
+          "enabled": true,
+          "generation_seconds": 3.5292683580046287,
+          "id": "morning_projection1_raw",
+          "identity_cosine": 0.861862,
+          "level_matched_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/morning_projection1_raw.wav",
+          "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/morning_projection1_raw.master.wav",
+          "peak_rss_mib": 2310.36328125,
+          "raw_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/morning_projection1_raw.wav",
+          "strength": 1.0,
+          "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+          "text_name": "morning",
+          "token_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/morning_projection1_raw.tokens.pt",
+          "wer": 0.0
+        },
+        {
+          "audio_seconds": 6.88,
+          "audio_sha256": null,
+          "dnsmos_overall": 3.0594850084871887,
+          "enabled": true,
+          "generation_seconds": 2.9368070189957507,
+          "id": "narrative_projection1_raw",
+          "identity_cosine": 0.891114,
+          "level_matched_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/narrative_projection1_raw.wav",
+          "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/narrative_projection1_raw.master.wav",
+          "peak_rss_mib": 2310.36328125,
+          "raw_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/narrative_projection1_raw.wav",
+          "strength": 1.0,
+          "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+          "text_name": "narrative",
+          "token_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/narrative_projection1_raw.tokens.pt",
+          "wer": 0.0
+        },
+        {
+          "audio_seconds": 4.96,
+          "audio_sha256": null,
+          "dnsmos_overall": 3.3309992685661087,
+          "enabled": true,
+          "generation_seconds": 2.393971853001858,
+          "id": "question_projection1_raw",
+          "identity_cosine": 0.90193,
+          "level_matched_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/question_projection1_raw.wav",
+          "master_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/question_projection1_raw.master.wav",
+          "peak_rss_mib": 2310.36328125,
+          "raw_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/question_projection1_raw.wav",
+          "strength": 1.0,
+          "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+          "text_name": "question",
+          "token_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/question_projection1_raw.tokens.pt",
+          "wer": 0.0
+        }
+      ]
+    }
+  },
+  "human_listening_accepted": false,
+  "inputs": {
+    "artifact_verification": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_fit/artifact_verification.json",
+    "evaluation": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/evaluation_matched.json",
+    "fit_report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_fit/fit_report.json",
+    "level_matched": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/level_matched/manifest.json",
+    "manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/manifest.json",
+    "small_audit": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_projection_comparison/small_audit.json"
+  },
+  "kind": "decoder_projection_controlled_review",
+  "limitations": [
+    "The projection fit is speaker-specific and uses a partial optimization run.",
+    "Identity and DNSMOS are automatic proxies. They do not establish realism.",
+    "WER is a content check only. It does not measure voice identity or naturalness.",
+    "Token payload equality is required so raw/mel rows isolate decoder/vocoder controls rather than T3 sampling."
+  ],
+  "promoted": false,
+  "schema_version": 1,
+  "texts": [
+    "morning",
+    "narrative",
+    "question"
+  ],
+  "token_payload_checks": {
+    "morning": {
+      "normalisation": "ZIP archive/ prefix removed; serialization_id entry excluded",
+      "payload_equal_across_four_variants": true,
+      "variants": {
+        "morning_projection0_mel": "14cabc266b0dbb682a1f7e662b09f58525ed6077166010562322a5b43777fced",
+        "morning_projection0_raw": "14cabc266b0dbb682a1f7e662b09f58525ed6077166010562322a5b43777fced",
+        "morning_projection1_mel": "14cabc266b0dbb682a1f7e662b09f58525ed6077166010562322a5b43777fced",
+        "morning_projection1_raw": "14cabc266b0dbb682a1f7e662b09f58525ed6077166010562322a5b43777fced"
+      }
+    },
+    "narrative": {
+      "normalisation": "ZIP archive/ prefix removed; serialization_id entry excluded",
+      "payload_equal_across_four_variants": true,
+      "variants": {
+        "narrative_projection0_mel": "6da6dcb35036ff0c5cc0e2564974935e922769ab281d95fb393f1587d06af38b",
+        "narrative_projection0_raw": "6da6dcb35036ff0c5cc0e2564974935e922769ab281d95fb393f1587d06af38b",
+        "narrative_projection1_mel": "6da6dcb35036ff0c5cc0e2564974935e922769ab281d95fb393f1587d06af38b",
+        "narrative_projection1_raw": "6da6dcb35036ff0c5cc0e2564974935e922769ab281d95fb393f1587d06af38b"
+      }
+    },
+    "question": {
+      "normalisation": "ZIP archive/ prefix removed; serialization_id entry excluded",
+      "payload_equal_across_four_variants": true,
+      "variants": {
+        "question_projection0_mel": "de03157d107588891146536cc31c42a7329d3b824381922096f2b7c97a151816",
+        "question_projection0_raw": "de03157d107588891146536cc31c42a7329d3b824381922096f2b7c97a151816",
+        "question_projection1_mel": "de03157d107588891146536cc31c42a7329d3b824381922096f2b7c97a151816",
+        "question_projection1_raw": "de03157d107588891146536cc31c42a7329d3b824381922096f2b7c97a151816"
+      }
+    }
+  }
+}

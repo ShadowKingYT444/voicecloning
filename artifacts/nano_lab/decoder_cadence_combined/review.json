@@ -1,0 +1,206 @@
+{
+  "kind": "decoder_fit_and_cadence_interaction",
+  "promoted": false,
+  "human_listening_accepted": false,
+  "general_zero_shot_improvement": false,
+  "groups": {
+    "current_standard": {
+      "rows": [
+        {
+          "id": "heldout01_rp1p2",
+          "experiment": "cadence_penalty",
+          "speaker_cosine": 0.875678,
+          "dnsmos_overall": 2.4335087251149488,
+          "dnsmos_background": 3.0599928488194763,
+          "small_wer": 0.0,
+          "seconds": 6.6,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/cadence_penalty/level_matched/heldout01_rp1p2.wav"
+        },
+        {
+          "id": "question_rp1p2",
+          "experiment": "cadence_penalty",
+          "speaker_cosine": 0.875305,
+          "dnsmos_overall": 3.03688078926857,
+          "dnsmos_background": 3.7009591390227667,
+          "small_wer": 0.0,
+          "seconds": 4.96,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/cadence_penalty/level_matched/question_rp1p2.wav"
+        },
+        {
+          "id": "narrative_rp1p2",
+          "experiment": "cadence_penalty",
+          "speaker_cosine": 0.884645,
+          "dnsmos_overall": 3.2809225844835503,
+          "dnsmos_background": 4.132111932697346,
+          "small_wer": 0.0,
+          "seconds": 6.88,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/cadence_penalty/level_matched/narrative_rp1p2.wav"
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8785426666666667,
+        "dnsmos_overall": 2.91710403295569,
+        "dnsmos_background": 3.6310213068465296,
+        "small_wer": 0.0,
+        "seconds": 6.1466666666666665
+      }
+    },
+    "current_slower": {
+      "rows": [
+        {
+          "id": "heldout01_rp1p0",
+          "experiment": "cadence_penalty",
+          "speaker_cosine": 0.88688,
+          "dnsmos_overall": 2.6011394448034335,
+          "dnsmos_background": 3.285302523690131,
+          "small_wer": 0.0,
+          "seconds": 7.2,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/cadence_penalty/level_matched/heldout01_rp1p0.wav"
+        },
+        {
+          "id": "question_rp1p0",
+          "experiment": "cadence_penalty",
+          "speaker_cosine": 0.897007,
+          "dnsmos_overall": 3.2766435189524454,
+          "dnsmos_background": 3.952158461445066,
+          "small_wer": 0.0,
+          "seconds": 6.32,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/cadence_penalty/level_matched/question_rp1p0.wav"
+        },
+        {
+          "id": "narrative_rp1p0",
+          "experiment": "cadence_penalty",
+          "speaker_cosine": 0.889598,
+          "dnsmos_overall": 3.0567847409373994,
+          "dnsmos_background": 3.7382587002765026,
+          "small_wer": 0.0,
+          "seconds": 7.72,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/cadence_penalty/level_matched/narrative_rp1p0.wav"
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8911616666666666,
+        "dnsmos_overall": 2.9781892348977594,
+        "dnsmos_background": 3.6585732284705665,
+        "small_wer": 0.0,
+        "seconds": 7.08
+      }
+    },
+    "decoder_standard": {
+      "rows": [
+        {
+          "id": "fit_heldout01_rp1p2",
+          "experiment": "decoder_cadence_combined",
+          "speaker_cosine": 0.882327,
+          "dnsmos_overall": 2.6028220668017736,
+          "dnsmos_background": 3.2903498440709695,
+          "small_wer": 0.0,
+          "seconds": 6.6,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_cadence_combined/level_matched/fit_heldout01_rp1p2.wav"
+        },
+        {
+          "id": "question_fit_mel",
+          "experiment": "decoder_fitted_comparison",
+          "speaker_cosine": 0.90511,
+          "dnsmos_overall": 3.18177719591183,
+          "dnsmos_background": 3.920480033231793,
+          "small_wer": 0.0,
+          "seconds": 4.96,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_fitted_comparison/level_matched/question_fit_mel.wav"
+        },
+        {
+          "id": "narrative_fit_mel",
+          "experiment": "decoder_fitted_comparison",
+          "speaker_cosine": 0.90015,
+          "dnsmos_overall": 3.2038074245133097,
+          "dnsmos_background": 4.0466971502456,
+          "small_wer": 0.0,
+          "seconds": 6.88,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_fitted_comparison/level_matched/narrative_fit_mel.wav"
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.8958623333333333,
+        "dnsmos_overall": 2.996135562408971,
+        "dnsmos_background": 3.7525090091827873,
+        "small_wer": 0.0,
+        "seconds": 6.1466666666666665
+      }
+    },
+    "decoder_slower": {
+      "rows": [
+        {
+          "id": "fit_heldout01_rp1p0",
+          "experiment": "decoder_cadence_combined",
+          "speaker_cosine": 0.889833,
+          "dnsmos_overall": 2.4974092509459993,
+          "dnsmos_background": 3.08081982378712,
+          "small_wer": 0.0,
+          "seconds": 7.2,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_cadence_combined/level_matched/fit_heldout01_rp1p0.wav"
+        },
+        {
+          "id": "fit_question_rp1p0",
+          "experiment": "decoder_cadence_combined",
+          "speaker_cosine": 0.906273,
+          "dnsmos_overall": 3.0808984089233924,
+          "dnsmos_background": 3.6136797340657116,
+          "small_wer": 0.0,
+          "seconds": 6.32,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_cadence_combined/level_matched/fit_question_rp1p0.wav"
+        },
+        {
+          "id": "fit_narrative_rp1p0",
+          "experiment": "decoder_cadence_combined",
+          "speaker_cosine": 0.911511,
+          "dnsmos_overall": 2.825373639689349,
+          "dnsmos_background": 3.380080217554643,
+          "small_wer": 0.0,
+          "seconds": 7.72,
+          "listening_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_cadence_combined/level_matched/fit_narrative_rp1p0.wav"
+        }
+      ],
+      "mean": {
+        "speaker_cosine": 0.902539,
+        "dnsmos_overall": 2.8012270998529134,
+        "dnsmos_background": 3.358193258469158,
+        "small_wer": 0.0,
+        "seconds": 7.08
+      }
+    }
+  },
+  "notes": [
+    "All four variants use the same all-attention T3 adapter and mel correction.",
+    "Three matched texts/seeds; Small ASR exact for every listed clip. Penalty1.1 was rejected for a word error and is excluded.",
+    "Equal loudness -27 LUFS; comparisons use identical held-out development references.",
+    "Standard penalty1.2; slower penalty1.0. Slower is an observation on these clips, not a duration guarantee.",
+    "Speaker similarity and DNSMOS are proxies. These samples have not met a human realism acceptance test."
+  ],
+  "decision": "Keep both new profiles experimental. Decoder standard has higher mean identity and DNSMOS than current standard. Decoder slower trades a further identity increase for lower DNSMOS.",
+  "new_clip_prosody": {
+    "fit_heldout01_rp1p0": {
+      "median_voiced_f0_hz": 192.7297906875549,
+      "voiced_fraction": 0.2737430167597765,
+      "hnr_median_db": 3.978039322725661,
+      "duration_s": 7.2
+    },
+    "fit_heldout01_rp1p2": {
+      "median_voiced_f0_hz": 175.6090326948701,
+      "voiced_fraction": 0.35060975609756095,
+      "hnr_median_db": 2.5227636921601713,
+      "duration_s": 6.6
+    },
+    "fit_question_rp1p0": {
+      "median_voiced_f0_hz": 230.58415863819116,
+      "voiced_fraction": 0.4601910828025478,
+      "hnr_median_db": 5.670648758888758,
+      "duration_s": 6.32
+    },
+    "fit_narrative_rp1p0": {
+      "median_voiced_f0_hz": 206.9606222227007,
+      "voiced_fraction": 0.3736979166666667,
+      "hnr_median_db": 4.066965570040579,
+      "duration_s": 7.72
+    }
+  }
+}

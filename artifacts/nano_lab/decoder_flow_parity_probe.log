@@ -1,0 +1,113 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  9.92it/s]100%|██████████| 2/2 [00:00<00:00, 11.32it/s]
+{
+  "manual_native": {
+    "shape_a": [
+      1,
+      80,
+      216
+    ],
+    "shape_b": [
+      1,
+      80,
+      216
+    ],
+    "max_abs": 0.0,
+    "rmse": 0.0
+  },
+  "native_saved": {
+    "shape_a": [
+      1,
+      80,
+      216
+    ],
+    "shape_b": [
+      1,
+      80,
+      216
+    ],
+    "max_abs": 4.3091535568237305,
+    "rmse": 0.5908602476119995
+  },
+  "manual_saved": {
+    "shape_a": [
+      1,
+      80,
+      216
+    ],
+    "shape_b": [
+      1,
+      80,
+      216
+    ],
+    "max_abs": 4.3091535568237305,
+    "rmse": 0.5908602476119995
+  },
+  "noise": {
+    "shape_a": [
+      1,
+      80,
+      716
+    ],
+    "shape_b": [
+      1,
+      80,
+      716
+    ],
+    "max_abs": 0.0,
+    "rmse": 0.0
+  },
+  "mu": {
+    "shape_a": [
+      1,
+      80,
+      716
+    ],
+    "shape_b": [
+      1,
+      80,
+      716
+    ],
+    "max_abs": 0.0,
+    "rmse": 0.0
+  },
+  "mask": {
+    "shape_a": [
+      1,
+      1,
+      716
+    ],
+    "shape_b": [
+      1,
+      1,
+      716
+    ],
+    "max_abs": 0.0,
+    "rmse": 0.0
+  },
+  "cond": {
+    "shape_a": [
+      1,
+      80,
+      716
+    ],
+    "shape_b": [
+      1,
+      80,
+      716
+    ],
+    "max_abs": 0.0,
+    "rmse": 0.0
+  },
+  "seed": 31,
+  "peak_rss_mib": 1489.859375
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 21.076s
+             CPU time consumed: 21.131s
+                   Memory peak: 1G (swap: 0B)

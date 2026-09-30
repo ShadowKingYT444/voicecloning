@@ -1,0 +1,14 @@
+{
+  "elapsed_seconds": 0.010918617248535156,
+  "error": "ValueError: flow prompt length mismatch: state tail implies 354, cached prompt features have 355",
+  "finished_unix": 1790695265.8837469,
+  "rss": {
+    "peak_rss_bytes": 42004480,
+    "rss_bytes": 42053632
+  },
+  "schema_version": 1,
+  "stage": "estimator",
+  "started_unix": 1790695265.872829,
+  "status": "error",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_pipeline.py\", line 941, in _dispatch_stage\n    result = functions[stage_name](args)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_pipeline.py\", line 730, in stage_estimator\n    raise ValueError(\nValueError: flow prompt length mismatch: state tail implies 354, cached prompt features have 355\n"
+}

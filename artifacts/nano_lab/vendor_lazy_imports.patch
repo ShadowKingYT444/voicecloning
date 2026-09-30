@@ -1,0 +1,54 @@
+diff --git a/src/chatterbox/__init__.py b/src/chatterbox/__init__.py
+index 190cfbf..8b4ed66 100644
+--- a/src/chatterbox/__init__.py
++++ b/src/chatterbox/__init__.py
+@@ -6,6 +6,24 @@ except ImportError:
+ __version__ = version("chatterbox-tts")
+ 
+ 
+-from .tts import ChatterboxTTS
+-from .vc import ChatterboxVC
+-from .mtl_tts import ChatterboxMultilingualTTS, SUPPORTED_LANGUAGES
+\ No newline at end of file
++_PUBLIC_MODULES = {
++    "ChatterboxTTS": ".tts",
++    "ChatterboxVC": ".vc",
++    "ChatterboxMultilingualTTS": ".mtl_tts",
++    "SUPPORTED_LANGUAGES": ".mtl_tts",
++}
++__all__ = list(_PUBLIC_MODULES)
++
++
++def __getattr__(name):
++    """Load only the requested public API, not every voice pipeline."""
++    if name not in _PUBLIC_MODULES:
++        raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
++    from importlib import import_module
++    value = getattr(import_module(_PUBLIC_MODULES[name], __name__), name)
++    globals()[name] = value
++    return value
++
++
++def __dir__():
++    return sorted(set(globals()) | set(_PUBLIC_MODULES))
+diff --git a/src/chatterbox/models/s3gen/__init__.py b/src/chatterbox/models/s3gen/__init__.py
+index bef618d..3434e5b 100644
+--- a/src/chatterbox/models/s3gen/__init__.py
++++ b/src/chatterbox/models/s3gen/__init__.py
+@@ -1,2 +1,15 @@
+-from .s3gen import S3Token2Wav as S3Gen
+ from .const import S3GEN_SR
++
++__all__ = ["S3GEN_SR", "S3Gen"]
++
++
++def __getattr__(name):
++    if name != "S3Gen":
++        raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
++    from .s3gen import S3Token2Wav
++    globals()[name] = S3Token2Wav
++    return S3Token2Wav
++
++
++def __dir__():
++    return sorted(set(globals()) | set(__all__))

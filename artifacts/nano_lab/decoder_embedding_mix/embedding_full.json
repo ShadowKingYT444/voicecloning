@@ -1,0 +1,376 @@
+{
+  "base_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+  "base_cache_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+  "donor_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_intimate_morning_31.conds.pt",
+  "donor_cache_sha256": "5869ebb4539e742dd5bb03f65cee3f8cc5aa04ec4dd6622b5ed6d52f611b6d19",
+  "embedding_contract": {
+    "endpoint_one": "exact independent copy of donor embedding",
+    "endpoint_zero": "exact independent copy of base embedding",
+    "interior": "normalized linear interpolation, then rescale to base L2 norm",
+    "shape": [
+      1,
+      192
+    ]
+  },
+  "fit": false,
+  "format": "nano_decoder_conditionals_mix_report_v1",
+  "mode": "embedding",
+  "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_mix/embedding_full.conds.pt",
+  "output_sha256": "2b51b3ad043d4ae9e5692ad48825015e302c4f3b9a2484834c2275cae5c913ba",
+  "prompt_contract": {
+    "fields": [
+      "prompt_token",
+      "prompt_token_len",
+      "prompt_feat",
+      "prompt_feat_len"
+    ],
+    "prompt_and_feature_lengths_copied_together": true
+  },
+  "quality_claim": "No general quality claim; this is a controlled conditionals mix.",
+  "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_mix/embedding_full.json",
+  "same_t3_exact": true,
+  "same_t3_proof": {
+    "base_vs_donor": false,
+    "output_matches_base": true
+  },
+  "status": "created",
+  "strength": 1.0,
+  "tensor_hashes": {
+    "base": {
+      "children": {
+        "gen": {
+          "children": {
+            "embedding": {
+              "dtype": "torch.float32",
+              "kind": "tensor",
+              "sha256": "486cdd4e7ca9435150e421a6084509a9e0692e7bc3e63ed219ab350427a31782",
+              "shape": [
+                1,
+                192
+              ]
+            },
+            "prompt_feat": {
+              "dtype": "torch.float32",
+              "kind": "tensor",
+              "sha256": "6380f1b4a300d8518ed98b0ccdf75eb675d2c1ed99cfa9216f1d729cdabf27f3",
+              "shape": [
+                1,
+                500,
+                80
+              ]
+            },
+            "prompt_feat_len": {
+              "kind": "none",
+              "sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+            },
+            "prompt_token": {
+              "dtype": "torch.int64",
+              "kind": "tensor",
+              "sha256": "237c4e5cb46a9eb47865aa63a7bae1ba1756e76d870ff4d521e171bb4ef38286",
+              "shape": [
+                1,
+                250
+              ]
+            },
+            "prompt_token_len": {
+              "dtype": "torch.int64",
+              "kind": "tensor",
+              "sha256": "066a7e94dda361601e16fad0c98c439e0c7197bcdb04ad056ca6547d60837a04",
+              "shape": [
+                1
+              ]
+            }
+          },
+          "keys": [
+            "embedding",
+            "prompt_feat",
+            "prompt_feat_len",
+            "prompt_token",
+            "prompt_token_len"
+          ],
+          "kind": "mapping",
+          "sha256": "1eadff4f6381b4078d6eeede0b7798f3cae1ef3e42a5be3d72a6c8866de00a5a"
+        },
+        "t3": {
+          "children": {
+            "clap_emb": {
+              "kind": "none",
+              "sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+            },
+            "cond_prompt_speech_emb": {
+              "kind": "none",
+              "sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+            },
+            "cond_prompt_speech_tokens": {
+              "dtype": "torch.int64",
+              "kind": "tensor",
+              "sha256": "96aebc0aabde2883827fc8b1afa9bc2c0013a6dab0f70a65074f475d38d9ef70",
+              "shape": [
+                1,
+                333
+              ]
+            },
+            "emotion_adv": {
+              "dtype": "torch.float32",
+              "kind": "tensor",
+              "sha256": "df56feb136f0532a537c4e56fcc23c93a0c983b2b5d552c3ef78ea8c0ada39d6",
+              "shape": [
+                1,
+                1,
+                1
+              ]
+            },
+            "speaker_emb": {
+              "dtype": "torch.float32",
+              "kind": "tensor",
+              "sha256": "ae4a21825edd569e862129e19e8c5bb8ace0b2fba5bb0b3f6be3072fb61b5e2c",
+              "shape": [
+                1,
+                256
+              ]
+            }
+          },
+          "keys": [
+            "clap_emb",
+            "cond_prompt_speech_emb",
+            "cond_prompt_speech_tokens",
+            "emotion_adv",
+            "speaker_emb"
+          ],
+          "kind": "mapping",
+          "sha256": "fedbe175b7c1637f589acc6c7f7f5b35d98340557503698deb0c61b0c74a059d"
+        }
+      },
+      "keys": [
+        "gen",
+        "t3"
+      ],
+      "kind": "mapping",
+      "sha256": "c1012bf9433d3de36579d2cf4805d0646b9c7842fbc8c6ee2bd8450ff007591d"
+    },
+    "donor": {
+      "children": {
+        "gen": {
+          "children": {
+            "embedding": {
+              "dtype": "torch.float32",
+              "kind": "tensor",
+              "sha256": "d8cd9d1e168b91ef3e6d3aa759589b088dada72d769a5a6cc8706d80e86501df",
+              "shape": [
+                1,
+                192
+              ]
+            },
+            "prompt_feat": {
+              "dtype": "torch.float32",
+              "kind": "tensor",
+              "sha256": "f2b8ef70bfad40ac390f1329b6ecc71b5b9479d11cc22e07c9f5ec0427e8baab",
+              "shape": [
+                1,
+                500,
+                80
+              ]
+            },
+            "prompt_feat_len": {
+              "kind": "none",
+              "sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+            },
+            "prompt_token": {
+              "dtype": "torch.int64",
+              "kind": "tensor",
+              "sha256": "bf3bc1cbe5d2e71df2aa8b3763008b6a7e60ae2c81d9d03b909181d78e7c7cb0",
+              "shape": [
+                1,
+                250
+              ]
+            },
+            "prompt_token_len": {
+              "dtype": "torch.int64",
+              "kind": "tensor",
+              "sha256": "066a7e94dda361601e16fad0c98c439e0c7197bcdb04ad056ca6547d60837a04",
+              "shape": [
+                1
+              ]
+            }
+          },
+          "keys": [
+            "embedding",
+            "prompt_feat",
+            "prompt_feat_len",
+            "prompt_token",
+            "prompt_token_len"
+          ],
+          "kind": "mapping",
+          "sha256": "2add20f8d0c491aaf5d4520e186d65e54e33fc580ecc8d4b7d5301bd498ddfcf"
+        },
+        "t3": {
+          "children": {
+            "clap_emb": {
+              "kind": "none",
+              "sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+            },
+            "cond_prompt_speech_emb": {
+              "kind": "none",
+              "sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+            },
+            "cond_prompt_speech_tokens": {
+              "dtype": "torch.int64",
+              "kind": "tensor",
+              "sha256": "a0918f152456c4121245ed4c9eba93f7a1121f90c682ff3664d25a4e8a94f17f",
+              "shape": [
+                1,
+                283
+              ]
+            },
+            "emotion_adv": {
+              "dtype": "torch.float32",
+              "kind": "tensor",
+              "sha256": "df56feb136f0532a537c4e56fcc23c93a0c983b2b5d552c3ef78ea8c0ada39d6",
+              "shape": [
+                1,
+                1,
+                1
+              ]
+            },
+            "speaker_emb": {
+              "dtype": "torch.float32",
+              "kind": "tensor",
+              "sha256": "ffe0ec753c5ff5c11b7b1eaabea8fe21301b6dd71b1b1bc580a61c66fa141cff",
+              "shape": [
+                1,
+                256
+              ]
+            }
+          },
+          "keys": [
+            "clap_emb",
+            "cond_prompt_speech_emb",
+            "cond_prompt_speech_tokens",
+            "emotion_adv",
+            "speaker_emb"
+          ],
+          "kind": "mapping",
+          "sha256": "214907437a5cf0581432f0765f58c4f1b90d5c531bca32f2adef2c048f833824"
+        }
+      },
+      "keys": [
+        "gen",
+        "t3"
+      ],
+      "kind": "mapping",
+      "sha256": "f7ddeeda616f2905a1a12bd401520137a39b40f9844d78694f1600b31592ae18"
+    },
+    "output": {
+      "children": {
+        "gen": {
+          "children": {
+            "embedding": {
+              "dtype": "torch.float32",
+              "kind": "tensor",
+              "sha256": "d8cd9d1e168b91ef3e6d3aa759589b088dada72d769a5a6cc8706d80e86501df",
+              "shape": [
+                1,
+                192
+              ]
+            },
+            "prompt_feat": {
+              "dtype": "torch.float32",
+              "kind": "tensor",
+              "sha256": "6380f1b4a300d8518ed98b0ccdf75eb675d2c1ed99cfa9216f1d729cdabf27f3",
+              "shape": [
+                1,
+                500,
+                80
+              ]
+            },
+            "prompt_feat_len": {
+              "kind": "none",
+              "sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+            },
+            "prompt_token": {
+              "dtype": "torch.int64",
+              "kind": "tensor",
+              "sha256": "237c4e5cb46a9eb47865aa63a7bae1ba1756e76d870ff4d521e171bb4ef38286",
+              "shape": [
+                1,
+                250
+              ]
+            },
+            "prompt_token_len": {
+              "dtype": "torch.int64",
+              "kind": "tensor",
+              "sha256": "066a7e94dda361601e16fad0c98c439e0c7197bcdb04ad056ca6547d60837a04",
+              "shape": [
+                1
+              ]
+            }
+          },
+          "keys": [
+            "embedding",
+            "prompt_feat",
+            "prompt_feat_len",
+            "prompt_token",
+            "prompt_token_len"
+          ],
+          "kind": "mapping",
+          "sha256": "a7ca3c684c35e7a949e353d5f9888856ad9726ae7f0cc107e37eea42ffe85c5e"
+        },
+        "t3": {
+          "children": {
+            "clap_emb": {
+              "kind": "none",
+              "sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+            },
+            "cond_prompt_speech_emb": {
+              "kind": "none",
+              "sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+            },
+            "cond_prompt_speech_tokens": {
+              "dtype": "torch.int64",
+              "kind": "tensor",
+              "sha256": "96aebc0aabde2883827fc8b1afa9bc2c0013a6dab0f70a65074f475d38d9ef70",
+              "shape": [
+                1,
+                333
+              ]
+            },
+            "emotion_adv": {
+              "dtype": "torch.float32",
+              "kind": "tensor",
+              "sha256": "df56feb136f0532a537c4e56fcc23c93a0c983b2b5d552c3ef78ea8c0ada39d6",
+              "shape": [
+                1,
+                1,
+                1
+              ]
+            },
+            "speaker_emb": {
+              "dtype": "torch.float32",
+              "kind": "tensor",
+              "sha256": "ae4a21825edd569e862129e19e8c5bb8ace0b2fba5bb0b3f6be3072fb61b5e2c",
+              "shape": [
+                1,
+                256
+              ]
+            }
+          },
+          "keys": [
+            "clap_emb",
+            "cond_prompt_speech_emb",
+            "cond_prompt_speech_tokens",
+            "emotion_adv",
+            "speaker_emb"
+          ],
+          "kind": "mapping",
+          "sha256": "fedbe175b7c1637f589acc6c7f7f5b35d98340557503698deb0c61b0c74a059d"
+        }
+      },
+      "keys": [
+        "gen",
+        "t3"
+      ],
+      "kind": "mapping",
+      "sha256": "48aa12f110cf136d1f5499a934476e4f4ad318a0c4011693f950623eba761711"
+    }
+  }
+}

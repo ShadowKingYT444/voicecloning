@@ -1,0 +1,9 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "source01_raw", "wer": 0.0, "transcript": "Okay, gather around everybody, great, so, as the one throwing the party."}
+{"id": "source01_normalized", "wer": 0.083333, "transcript": "Okay, gather around everybody. Great. So, as the one's throwing the party."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 18.560s
+             CPU time consumed: 32.690s
+                   Memory peak: 1G (swap: 0B)

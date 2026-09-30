@@ -1,0 +1,8 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 99a54c4e2d184ae19adcb2c913f0f532
+{"id": "onnx_decoder_fit_question79", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 12.903s
+             CPU time consumed: 20.937s
+                   Memory peak: 1G (swap: 0B)

@@ -1,0 +1,17 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "asmr7_train_01", "wer": 0.888889, "transcript": "Okay, gather around everybody. Great. So, as the one throwing the party,"}
+{"id": "asmr7_train_02", "wer": 0.0, "transcript": "There's a closet in pretty much every room in this house, so we might as well put them to use."}
+{"id": "asmr7_train_03", "wer": 0.0, "transcript": "I'll be nice enough to let whoever started the game up to go on first."}
+{"id": "asmr7_train_04", "wer": 0.1875, "transcript": "It's my birthday, so they better make these seven minutes worth it."}
+{"id": "asmr7_train_05", "wer": 0.0, "transcript": "What did I do to end up here with you? I know I spun the bottle. Fucking dumbass."}
+{"id": "asmr7_train_06", "wer": 0.928571, "transcript": "some reason you're here now and stuck in a closet with me. I'm not sure if this is more torture for me or"}
+{"id": "asmr7_train_07", "wer": 0.083333, "transcript": "I hate you. You're too perfect. Like untouchable by misfortune."}
+{"id": "asmr7_train_08", "wer": 0.526316, "transcript": "The fact is, when I see you, I see you."}
+{"id": "asmr7_train_09", "wer": 0.4, "transcript": "Okay, what I'm trying to say is that you made me jump."}
+{"id": "asmr7_valid_04", "wer": 0.44, "transcript": "Thanks. Wait, that better not be implying that I'm also a nerd because I won't take back all the nice things I said about you. I am not a nerd. And you know what?"}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 29.913s
+             CPU time consumed: 28.109s
+                   Memory peak: 2.2G (swap: 0B)

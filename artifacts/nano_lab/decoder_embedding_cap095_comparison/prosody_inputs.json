@@ -1,0 +1,62 @@
+[
+  {
+    "id": "morning_cap095_raw",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_cap095_comparison/level_matched/morning_cap095_raw.wav",
+    "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+    "source_group": "cap095"
+  },
+  {
+    "id": "morning_cap095_mel",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_cap095_comparison/level_matched/morning_cap095_mel.wav",
+    "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+    "source_group": "cap095"
+  },
+  {
+    "id": "question_cap095_raw",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_cap095_comparison/level_matched/question_cap095_raw.wav",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+    "source_group": "cap095"
+  },
+  {
+    "id": "question_cap095_mel",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_cap095_comparison/level_matched/question_cap095_mel.wav",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+    "source_group": "cap095"
+  },
+  {
+    "id": "narrative_cap095_raw",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_cap095_comparison/level_matched/narrative_cap095_raw.wav",
+    "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+    "source_group": "cap095"
+  },
+  {
+    "id": "narrative_cap095_mel",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_cap095_comparison/level_matched/narrative_cap095_mel.wav",
+    "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+    "source_group": "cap095"
+  },
+  {
+    "id": "heldout01_cap095_raw",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_cap095_comparison/level_matched/heldout01_cap095_raw.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "cap095"
+  },
+  {
+    "id": "heldout01_cap095_mel",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_cap095_comparison/level_matched/heldout01_cap095_mel.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "cap095"
+  },
+  {
+    "id": "source_heldout01",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/cadence_penalty/level_matched/source_heldout01.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "source"
+  },
+  {
+    "id": "heldout01_cap098_mel",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_cadence_combined/level_matched/fit_heldout01_rp1p2.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "cap098"
+  }
+]

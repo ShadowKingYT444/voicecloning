@@ -1,0 +1,13 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "heldout01_base", "wer": 0.0, "transcript": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?"}
+{"id": "heldout01_adapter", "wer": 0.0, "transcript": "Let's see who's the lucky person who gets to kiss me. Wait a minute, do I know you?"}
+{"id": "heldout01_combined", "wer": 0.0, "transcript": "Let's see who's the lucky person who gets to kiss me. Wait a minute, do I know you?"}
+{"id": "integrated_soft_cold", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "integrated_soft_warm_repeat", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "integrated_soft_warm_new", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 44.599s
+             CPU time consumed: 1min 24.358s
+                   Memory peak: 1G (swap: 0B)

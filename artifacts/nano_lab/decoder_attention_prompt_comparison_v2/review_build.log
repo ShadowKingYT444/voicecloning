@@ -1,0 +1,20 @@
+{
+  "groups": {
+    "attention0_mel": {
+      "identity_cosine": 0.8864105,
+      "dnsmos_overall": 3.166403406522236,
+      "wer": 0.0,
+      "seconds": 6.76,
+      "generation_seconds": 3.911519874498481
+    },
+    "attention1_mel": {
+      "identity_cosine": 0.8935955,
+      "dnsmos_overall": 3.109368290607757,
+      "wer": 0.0,
+      "seconds": 6.76,
+      "generation_seconds": 2.9699878155006445
+    }
+  },
+  "all_wer_zero": true,
+  "peak_process_rss_mib": 2496.48828125
+}

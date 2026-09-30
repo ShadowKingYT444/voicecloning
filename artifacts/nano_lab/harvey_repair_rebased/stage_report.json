@@ -1,0 +1,1085 @@
+{
+  "accepted": [
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/clips/harvey_repair_001.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "6be65d89931ea4a0281c3883b936ebd8d6edef68d8f7f6347cfbd37ee270bc17",
+        "avg_logprob": -0.2848116785287857,
+        "compression_ratio": 0.9558823529411765,
+        "mean_word_probability": 0.9621280903617541,
+        "min_word_probability": 0.8237413763999939,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/tiny_clip_audit.json",
+          "report_sha256": "d03f933a2e87a00f442859aeaffa80fecd9d2df192d3e4fde72670f24daf90ff"
+        },
+        "no_speech_prob": 0.012244559824466705,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/tiny_clip_audit.json",
+        "report_sha256": "d03f933a2e87a00f442859aeaffa80fecd9d2df192d3e4fde72670f24daf90ff",
+        "segments": [
+          {
+            "avg_logprob": -0.2848116785287857,
+            "compression_ratio": 0.9558823529411765,
+            "end_s": 4.0,
+            "no_speech_prob": 0.012244559824466705,
+            "start_s": 0.0,
+            "text": "I don't take meetings. I set them. And my respect isn't demanded.",
+            "words": [
+              {
+                "end_s": 0.3,
+                "probability": 0.8237413763999939,
+                "start_s": 0.0,
+                "word": "I"
+              },
+              {
+                "end_s": 0.52,
+                "probability": 0.995197206735611,
+                "start_s": 0.3,
+                "word": "don't"
+              },
+              {
+                "end_s": 0.78,
+                "probability": 0.9951004385948181,
+                "start_s": 0.52,
+                "word": "take"
+              },
+              {
+                "end_s": 1.12,
+                "probability": 0.9352364540100098,
+                "start_s": 0.78,
+                "word": "meetings."
+              },
+              {
+                "end_s": 1.66,
+                "probability": 0.9951823353767395,
+                "start_s": 1.64,
+                "word": "I"
+              },
+              {
+                "end_s": 1.84,
+                "probability": 0.9660807847976685,
+                "start_s": 1.66,
+                "word": "set"
+              },
+              {
+                "end_s": 2.28,
+                "probability": 0.9989619255065918,
+                "start_s": 1.84,
+                "word": "them."
+              },
+              {
+                "end_s": 2.82,
+                "probability": 0.9504904747009277,
+                "start_s": 2.64,
+                "word": "And"
+              },
+              {
+                "end_s": 3.12,
+                "probability": 0.989167332649231,
+                "start_s": 2.82,
+                "word": "my"
+              },
+              {
+                "end_s": 3.4,
+                "probability": 0.9841131567955017,
+                "start_s": 3.12,
+                "word": "respect"
+              },
+              {
+                "end_s": 3.74,
+                "probability": 0.9342077970504761,
+                "start_s": 3.4,
+                "word": "isn't"
+              },
+              {
+                "end_s": 4.0,
+                "probability": 0.9780578017234802,
+                "start_s": 3.74,
+                "word": "demanded."
+              }
+            ]
+          }
+        ],
+        "text": "I don't take meetings. I set them. And my respect isn't demanded.",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 14,
+          "hypothesis_words": [
+            "i",
+            "do",
+            "not",
+            "take",
+            "meetings",
+            "i",
+            "set",
+            "them",
+            "and",
+            "my",
+            "respect",
+            "is",
+            "not",
+            "demanded"
+          ],
+          "insertions": 0,
+          "reference_word_count": 14,
+          "reference_words": [
+            "i",
+            "do",
+            "not",
+            "take",
+            "meetings",
+            "i",
+            "set",
+            "them",
+            "and",
+            "my",
+            "respect",
+            "is",
+            "not",
+            "demanded"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/small_audit.json",
+          "report_sha256": "467cf080146c9b49b2f78060c4b754a358595e7e6befba138e46eda556d2e009"
+        },
+        "small_text": "I don't take meetings. I set them. And my respect isn't demanded.",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "I don't take meetings. I set them. And my respect isn't demanded."
+      },
+      "clip_tiny_text": "I don't take meetings. I set them. And my respect isn't demanded.",
+      "decode_alignment": {
+        "asserted": true,
+        "decoded_duration_s": 40.820708,
+        "delta_s": 2.8e-05,
+        "method": "ffprobe_format_duration",
+        "raw_duration_s": 40.82068,
+        "tolerance_s": 0.05
+      },
+      "decode_audio": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/voice_24k.wav",
+      "decode_audio_sha256": "6346e102b45d724032620584292050140e0e86a2a7051759540636f35fcc2a9c",
+      "decode_provenance": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/manifest.json",
+      "decode_provenance_sha256": "985843d5cffaef85779514606adab9a1669c08a807e1eeb89626ae16641cc4b9",
+      "decoded_source": {
+        "alignment": {
+          "asserted": true,
+          "decoded_duration_s": 40.820708,
+          "delta_s": 2.8e-05,
+          "method": "ffprobe_format_duration",
+          "raw_duration_s": 40.82068,
+          "tolerance_s": 0.05
+        },
+        "alignment_asserted": true,
+        "matched_provenance_source": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/voice_24k.wav",
+        "provenance": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/manifest.json",
+        "provenance_sha256": "985843d5cffaef85779514606adab9a1669c08a807e1eeb89626ae16641cc4b9",
+        "sha256": "6346e102b45d724032620584292050140e0e86a2a7051759540636f35fcc2a9c",
+        "source_hash_match": true,
+        "source_path": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+        "source_path_match": true,
+        "source_sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05"
+      },
+      "decoded_source_is_aligned": true,
+      "duration_s": 4.19,
+      "end_s": 4.19,
+      "family": "harvey",
+      "id": "harvey_repair_001",
+      "original_confidence": {
+        "avg_logprob": -0.168918,
+        "mean_word_probability": 0.9410830000000001,
+        "min_word_probability": 0.577093,
+        "no_speech_prob": 0.051931
+      },
+      "original_text": "I don't take meetings. set them. And my respect isn't demanded.",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_rebased/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "6be65d89931ea4a0281c3883b936ebd8d6edef68d8f7f6347cfbd37ee270bc17",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "I don't take meetings. set them. And my respect isn't demanded.",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/small_audit.json",
+          "report_sha256": "467cf080146c9b49b2f78060c4b754a358595e7e6befba138e46eda556d2e009"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/tiny_clip_audit.json",
+          "report_sha256": "d03f933a2e87a00f442859aeaffa80fecd9d2df192d3e4fde72670f24daf90ff"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+      "reference_audio_sha256": "56ecd77459289dd7413e1c6309d7226ac2363d5e4850a78e63efc3d4b129308d",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": 0.0,
+        "overlaps": false,
+        "profile_interval": {
+          "end_s": 16.1,
+          "start_s": 9.0
+        },
+        "same_raw_source": true,
+        "source_id": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+        "status": "checked",
+        "target_interval": {
+          "end_s": 4.19,
+          "start_s": 0.0
+        }
+      },
+      "reference_profile_kind": "isolated_derivative",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/harvey.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+      "source_audio_sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+      "source_id": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+      "source_text": "I don't take meetings. I set them. And my respect isn't demanded.",
+      "speaker_id": "harvey",
+      "speech_end_s": 4.04,
+      "speech_start_s": 0.0,
+      "split": "train",
+      "start_s": 0.0,
+      "text": "I don't take meetings. I set them. And my respect isn't demanded.",
+      "transcript_audit": {
+        "audio_sha256": "6be65d89931ea4a0281c3883b936ebd8d6edef68d8f7f6347cfbd37ee270bc17",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/small_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 14,
+          "hypothesis_words": [
+            "i",
+            "do",
+            "not",
+            "take",
+            "meetings",
+            "i",
+            "set",
+            "them",
+            "and",
+            "my",
+            "respect",
+            "is",
+            "not",
+            "demanded"
+          ],
+          "insertions": 0,
+          "reference_word_count": 14,
+          "reference_words": [
+            "i",
+            "do",
+            "not",
+            "take",
+            "meetings",
+            "i",
+            "set",
+            "them",
+            "and",
+            "my",
+            "respect",
+            "is",
+            "not",
+            "demanded"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "I don't take meetings. I set them. And my respect isn't demanded.",
+        "status": "accepted",
+        "text_sha256": "7a0e7a1f67140847a855113e6dd6eb0c966ae7c56c39b4f364c99227de9b3ae4",
+        "tiny_text": "I don't take meetings. I set them. And my respect isn't demanded."
+      },
+      "voice": "harvey"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/clips/harvey_repair_004.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "3bf9ea788d49d416fd0a81263d3eb68906c505163ea828e4eb0fda2abc69cbcc",
+        "avg_logprob": -0.38134817965328693,
+        "compression_ratio": 0.875,
+        "mean_word_probability": 0.8956808745861053,
+        "min_word_probability": 0.39614248275756836,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/tiny_clip_audit.json",
+          "report_sha256": "d03f933a2e87a00f442859aeaffa80fecd9d2df192d3e4fde72670f24daf90ff"
+        },
+        "no_speech_prob": 0.0147548234090209,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/tiny_clip_audit.json",
+        "report_sha256": "d03f933a2e87a00f442859aeaffa80fecd9d2df192d3e4fde72670f24daf90ff",
+        "segments": [
+          {
+            "avg_logprob": -0.38134817965328693,
+            "compression_ratio": 0.875,
+            "end_s": 3.26,
+            "no_speech_prob": 0.0147548234090209,
+            "start_s": 0.0,
+            "text": "First impressions last, I don't pave the way for people.",
+            "words": [
+              {
+                "end_s": 0.24,
+                "probability": 0.39614248275756836,
+                "start_s": 0.0,
+                "word": "First"
+              },
+              {
+                "end_s": 0.56,
+                "probability": 0.8136796951293945,
+                "start_s": 0.24,
+                "word": "impressions"
+              },
+              {
+                "end_s": 1.18,
+                "probability": 0.9362753629684448,
+                "start_s": 0.56,
+                "word": "last,"
+              },
+              {
+                "end_s": 1.88,
+                "probability": 0.946300208568573,
+                "start_s": 1.72,
+                "word": "I"
+              },
+              {
+                "end_s": 2.18,
+                "probability": 0.9959774017333984,
+                "start_s": 1.88,
+                "word": "don't"
+              },
+              {
+                "end_s": 2.36,
+                "probability": 0.8754758238792419,
+                "start_s": 2.18,
+                "word": "pave"
+              },
+              {
+                "end_s": 2.6,
+                "probability": 0.9977766871452332,
+                "start_s": 2.36,
+                "word": "the"
+              },
+              {
+                "end_s": 2.74,
+                "probability": 0.9988110065460205,
+                "start_s": 2.6,
+                "word": "way"
+              },
+              {
+                "end_s": 2.98,
+                "probability": 0.9973224997520447,
+                "start_s": 2.74,
+                "word": "for"
+              },
+              {
+                "end_s": 3.26,
+                "probability": 0.999047577381134,
+                "start_s": 2.98,
+                "word": "people."
+              }
+            ]
+          }
+        ],
+        "text": "First impressions last, I don't pave the way for people.",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 11,
+          "hypothesis_words": [
+            "first",
+            "impressions",
+            "last",
+            "i",
+            "do",
+            "not",
+            "pave",
+            "the",
+            "way",
+            "for",
+            "people"
+          ],
+          "insertions": 0,
+          "reference_word_count": 11,
+          "reference_words": [
+            "first",
+            "impressions",
+            "last",
+            "i",
+            "do",
+            "not",
+            "pave",
+            "the",
+            "way",
+            "for",
+            "people"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/small_audit.json",
+          "report_sha256": "467cf080146c9b49b2f78060c4b754a358595e7e6befba138e46eda556d2e009"
+        },
+        "small_text": "First impressions last. I don't pave the way for people.",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "First impressions last, I don't pave the way for people."
+      },
+      "clip_tiny_text": "First impressions last, I don't pave the way for people.",
+      "decode_alignment": {
+        "asserted": true,
+        "decoded_duration_s": 40.820708,
+        "delta_s": 2.8e-05,
+        "method": "ffprobe_format_duration",
+        "raw_duration_s": 40.82068,
+        "tolerance_s": 0.05
+      },
+      "decode_audio": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/voice_24k.wav",
+      "decode_audio_sha256": "6346e102b45d724032620584292050140e0e86a2a7051759540636f35fcc2a9c",
+      "decode_provenance": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/manifest.json",
+      "decode_provenance_sha256": "985843d5cffaef85779514606adab9a1669c08a807e1eeb89626ae16641cc4b9",
+      "decoded_source": {
+        "alignment": {
+          "asserted": true,
+          "decoded_duration_s": 40.820708,
+          "delta_s": 2.8e-05,
+          "method": "ffprobe_format_duration",
+          "raw_duration_s": 40.82068,
+          "tolerance_s": 0.05
+        },
+        "alignment_asserted": true,
+        "matched_provenance_source": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/voice_24k.wav",
+        "provenance": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/manifest.json",
+        "provenance_sha256": "985843d5cffaef85779514606adab9a1669c08a807e1eeb89626ae16641cc4b9",
+        "sha256": "6346e102b45d724032620584292050140e0e86a2a7051759540636f35fcc2a9c",
+        "source_hash_match": true,
+        "source_path": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+        "source_path_match": true,
+        "source_sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05"
+      },
+      "decoded_source_is_aligned": true,
+      "duration_s": 3.36,
+      "end_s": 26.17,
+      "family": "harvey",
+      "id": "harvey_repair_004",
+      "original_confidence": {
+        "avg_logprob": -0.168918,
+        "mean_word_probability": 0.9168372999999999,
+        "min_word_probability": 0.500118,
+        "no_speech_prob": 0.051931
+      },
+      "original_text": "First impressions last. I don't pave the way for people.",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_rebased/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "3bf9ea788d49d416fd0a81263d3eb68906c505163ea828e4eb0fda2abc69cbcc",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "First impressions last. I don't pave the way for people.",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/small_audit.json",
+          "report_sha256": "467cf080146c9b49b2f78060c4b754a358595e7e6befba138e46eda556d2e009"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/tiny_clip_audit.json",
+          "report_sha256": "d03f933a2e87a00f442859aeaffa80fecd9d2df192d3e4fde72670f24daf90ff"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+      "reference_audio_sha256": "56ecd77459289dd7413e1c6309d7226ac2363d5e4850a78e63efc3d4b129308d",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": 0.0,
+        "overlaps": false,
+        "profile_interval": {
+          "end_s": 16.1,
+          "start_s": 9.0
+        },
+        "same_raw_source": true,
+        "source_id": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+        "status": "checked",
+        "target_interval": {
+          "end_s": 26.17,
+          "start_s": 22.81
+        }
+      },
+      "reference_profile_kind": "isolated_derivative",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/harvey.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+      "source_audio_sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+      "source_id": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+      "source_text": "First impressions last, I don't pave the way for people.",
+      "speaker_id": "harvey",
+      "speech_end_s": 26.02,
+      "speech_start_s": 22.96,
+      "split": "valid",
+      "start_s": 22.81,
+      "text": "First impressions last, I don't pave the way for people.",
+      "transcript_audit": {
+        "audio_sha256": "3bf9ea788d49d416fd0a81263d3eb68906c505163ea828e4eb0fda2abc69cbcc",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/small_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 11,
+          "hypothesis_words": [
+            "first",
+            "impressions",
+            "last",
+            "i",
+            "do",
+            "not",
+            "pave",
+            "the",
+            "way",
+            "for",
+            "people"
+          ],
+          "insertions": 0,
+          "reference_word_count": 11,
+          "reference_words": [
+            "first",
+            "impressions",
+            "last",
+            "i",
+            "do",
+            "not",
+            "pave",
+            "the",
+            "way",
+            "for",
+            "people"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "First impressions last. I don't pave the way for people.",
+        "status": "accepted",
+        "text_sha256": "5c420936dc6d9be878de851370a2a42ac403a48233465152e2b86ccdaaa8f401",
+        "tiny_text": "First impressions last, I don't pave the way for people."
+      },
+      "voice": "harvey"
+    },
+    {
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/clips/harvey_repair_005.wav",
+      "clip_tiny_audit": {
+        "audio_sha256": "cfe4fd44161621f9ed912820b2c494ad582c31bcf3d9d5b62a7599d62368a94c",
+        "avg_logprob": -0.4884174093604088,
+        "compression_ratio": 0.8541666666666666,
+        "mean_word_probability": 0.8288673493597243,
+        "min_word_probability": 0.32069116830825806,
+        "model": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/tiny_clip_audit.json",
+          "report_sha256": "d03f933a2e87a00f442859aeaffa80fecd9d2df192d3e4fde72670f24daf90ff"
+        },
+        "no_speech_prob": 0.006220134906470776,
+        "quality_reasons": [],
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/tiny_clip_audit.json",
+        "report_sha256": "d03f933a2e87a00f442859aeaffa80fecd9d2df192d3e4fde72670f24daf90ff",
+        "segments": [
+          {
+            "avg_logprob": -0.4884174093604088,
+            "compression_ratio": 0.8541666666666666,
+            "end_s": 1.62,
+            "no_speech_prob": 0.006220134906470776,
+            "start_s": 0.0,
+            "text": "People pave the way for me.",
+            "words": [
+              {
+                "end_s": 0.42,
+                "probability": 0.7034542560577393,
+                "start_s": 0.0,
+                "word": "People"
+              },
+              {
+                "end_s": 0.68,
+                "probability": 0.32069116830825806,
+                "start_s": 0.42,
+                "word": "pave"
+              },
+              {
+                "end_s": 0.84,
+                "probability": 0.994256317615509,
+                "start_s": 0.68,
+                "word": "the"
+              },
+              {
+                "end_s": 1.02,
+                "probability": 0.9992038607597351,
+                "start_s": 0.84,
+                "word": "way"
+              },
+              {
+                "end_s": 1.2,
+                "probability": 0.5416364669799805,
+                "start_s": 1.02,
+                "word": "for"
+              },
+              {
+                "end_s": 1.62,
+                "probability": 0.9985681772232056,
+                "start_s": 1.2,
+                "word": "me."
+              }
+            ]
+          },
+          {
+            "avg_logprob": -0.4884174093604088,
+            "compression_ratio": 0.8541666666666666,
+            "end_s": 3.76,
+            "no_speech_prob": 0.006220134906470776,
+            "start_s": 2.04,
+            "text": "Life is this.",
+            "words": [
+              {
+                "end_s": 2.28,
+                "probability": 0.978958010673523,
+                "start_s": 2.04,
+                "word": "Life"
+              },
+              {
+                "end_s": 3.1,
+                "probability": 0.955792248249054,
+                "start_s": 2.28,
+                "word": "is"
+              },
+              {
+                "end_s": 3.76,
+                "probability": 0.9672456383705139,
+                "start_s": 3.1,
+                "word": "this."
+              }
+            ]
+          }
+        ],
+        "text": "People pave the way for me. Life is this.",
+        "word_timestamps_verified": true
+      },
+      "clip_tiny_small_consensus": {
+        "exact": true,
+        "metrics": {
+          "deletions": 0,
+          "hypothesis_word_count": 9,
+          "hypothesis_words": [
+            "people",
+            "pave",
+            "the",
+            "way",
+            "for",
+            "me",
+            "life",
+            "is",
+            "this"
+          ],
+          "insertions": 0,
+          "reference_word_count": 9,
+          "reference_words": [
+            "people",
+            "pave",
+            "the",
+            "way",
+            "for",
+            "me",
+            "life",
+            "is",
+            "this"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/small_audit.json",
+          "report_sha256": "467cf080146c9b49b2f78060c4b754a358595e7e6befba138e46eda556d2e009"
+        },
+        "small_text": "People pave the way for me. Life is this.",
+        "strict_gate": "wer == 0.0 after contraction expansion",
+        "tiny_text": "People pave the way for me. Life is this."
+      },
+      "clip_tiny_text": "People pave the way for me. Life is this.",
+      "decode_alignment": {
+        "asserted": true,
+        "decoded_duration_s": 40.820708,
+        "delta_s": 2.8e-05,
+        "method": "ffprobe_format_duration",
+        "raw_duration_s": 40.82068,
+        "tolerance_s": 0.05
+      },
+      "decode_audio": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/voice_24k.wav",
+      "decode_audio_sha256": "6346e102b45d724032620584292050140e0e86a2a7051759540636f35fcc2a9c",
+      "decode_provenance": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/manifest.json",
+      "decode_provenance_sha256": "985843d5cffaef85779514606adab9a1669c08a807e1eeb89626ae16641cc4b9",
+      "decoded_source": {
+        "alignment": {
+          "asserted": true,
+          "decoded_duration_s": 40.820708,
+          "delta_s": 2.8e-05,
+          "method": "ffprobe_format_duration",
+          "raw_duration_s": 40.82068,
+          "tolerance_s": 0.05
+        },
+        "alignment_asserted": true,
+        "matched_provenance_source": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/voice_24k.wav",
+        "provenance": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/manifest.json",
+        "provenance_sha256": "985843d5cffaef85779514606adab9a1669c08a807e1eeb89626ae16641cc4b9",
+        "sha256": "6346e102b45d724032620584292050140e0e86a2a7051759540636f35fcc2a9c",
+        "source_hash_match": true,
+        "source_path": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+        "source_path_match": true,
+        "source_sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05"
+      },
+      "decoded_source_is_aligned": true,
+      "duration_s": 4.38,
+      "end_s": 31.25,
+      "family": "harvey",
+      "id": "harvey_repair_005",
+      "original_confidence": {
+        "avg_logprob": -0.377385,
+        "mean_word_probability": 0.8746081111111111,
+        "min_word_probability": 0.056604,
+        "no_speech_prob": 0.080472
+      },
+      "original_text": "People pave the way for me. life is this.",
+      "proposal_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_rebased/proposal_rebased.json",
+      "rebase": {
+        "audio_sha256": "cfe4fd44161621f9ed912820b2c494ad582c31bcf3d9d5b62a7599d62368a94c",
+        "method": "clip_level_tiny_reaudit",
+        "original_text": "People pave the way for me. life is this.",
+        "quality_reasons": [],
+        "small_audit": {
+          "identity": {},
+          "kind": "small",
+          "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/small_audit.json",
+          "report_sha256": "467cf080146c9b49b2f78060c4b754a358595e7e6befba138e46eda556d2e009"
+        },
+        "strict_consensus_exact": true,
+        "tiny_audit": {
+          "identity": {
+            "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+            "download_manifest_sha256": null,
+            "name": "tiny.en",
+            "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+            "size_class": "tiny"
+          },
+          "kind": "tiny",
+          "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+          "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/tiny_clip_audit.json",
+          "report_sha256": "d03f933a2e87a00f442859aeaffa80fecd9d2df192d3e4fde72670f24daf90ff"
+        }
+      },
+      "reference_audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+      "reference_audio_sha256": "56ecd77459289dd7413e1c6309d7226ac2363d5e4850a78e63efc3d4b129308d",
+      "reference_overlap": {
+        "identity": "raw_source_sha256_and_interval",
+        "overlap_s": 0.0,
+        "overlaps": false,
+        "profile_interval": {
+          "end_s": 16.1,
+          "start_s": 9.0
+        },
+        "same_raw_source": true,
+        "source_id": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+        "status": "checked",
+        "target_interval": {
+          "end_s": 31.25,
+          "start_s": 26.87
+        }
+      },
+      "reference_profile_kind": "isolated_derivative",
+      "reference_source": "/home/terryd/gooning/voicecloning/voices/nano/harvey.json",
+      "source_audio": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+      "source_audio_sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+      "source_id": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+      "source_text": "People pave the way for me. Life is this.",
+      "speaker_id": "harvey",
+      "speech_end_s": 31.1,
+      "speech_start_s": 27.02,
+      "split": "train",
+      "start_s": 26.87,
+      "text": "People pave the way for me. Life is this.",
+      "transcript_audit": {
+        "audio_sha256": "cfe4fd44161621f9ed912820b2c494ad582c31bcf3d9d5b62a7599d62368a94c",
+        "audit_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/small_audit.json",
+        "consensus": {
+          "deletions": 0,
+          "hypothesis_word_count": 9,
+          "hypothesis_words": [
+            "people",
+            "pave",
+            "the",
+            "way",
+            "for",
+            "me",
+            "life",
+            "is",
+            "this"
+          ],
+          "insertions": 0,
+          "reference_word_count": 9,
+          "reference_words": [
+            "people",
+            "pave",
+            "the",
+            "way",
+            "for",
+            "me",
+            "life",
+            "is",
+            "this"
+          ],
+          "substitutions": 0,
+          "wer": 0.0
+        },
+        "human_verified": false,
+        "method": "independent_tiny_small_consensus",
+        "small_text": "People pave the way for me. Life is this.",
+        "status": "accepted",
+        "text_sha256": "67dc6b6c9967b0b6de1b01f40fb9edeb2159f048f160c5bf7c6db287180ebc58",
+        "tiny_text": "People pave the way for me. Life is this."
+      },
+      "voice": "harvey"
+    }
+  ],
+  "accepted_count": 3,
+  "audit": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/small_audit.json",
+  "command": [
+    "scripts/nano_lab/repair_dataset.py",
+    "stage",
+    "--family",
+    "harvey",
+    "--proposal",
+    "artifacts/nano_lab/harvey_repair_rebased/proposal_rebased.json",
+    "--audit",
+    "artifacts/nano_lab/harvey_repair_isolated/small_audit.json",
+    "--output-dir",
+    "artifacts/nano_lab/harvey_repair_rebased",
+    "--min-train",
+    "2",
+    "--min-valid",
+    "1"
+  ],
+  "decoded_source": {
+    "alignment": {
+      "asserted": true,
+      "decoded_duration_s": 40.820708,
+      "delta_s": 2.8e-05,
+      "method": "ffprobe_format_duration",
+      "raw_duration_s": 40.82068,
+      "tolerance_s": 0.05
+    },
+    "alignment_asserted": true,
+    "matched_provenance_source": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/voice_24k.wav",
+    "provenance": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/manifest.json",
+    "provenance_sha256": "985843d5cffaef85779514606adab9a1669c08a807e1eeb89626ae16641cc4b9",
+    "sha256": "6346e102b45d724032620584292050140e0e86a2a7051759540636f35fcc2a9c",
+    "source_hash_match": true,
+    "source_path": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+    "source_path_match": true,
+    "source_sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05"
+  },
+  "family": "harvey",
+  "manifest_counts": {
+    "all": 3,
+    "train": 2,
+    "valid": 1
+  },
+  "min_train": 2,
+  "min_valid": 1,
+  "production_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_rebased/adaptation_repaired.json",
+  "proposal": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_rebased/proposal_rebased.json",
+  "protected_intervals": [
+    {
+      "end_s": 16.1,
+      "family": "harvey",
+      "id": "harvey_quote_02",
+      "section": "references",
+      "source_id": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+      "start_s": 9.0
+    },
+    {
+      "end_s": 40.8,
+      "family": "harvey",
+      "id": "harvey_heldout_01",
+      "section": "heldout",
+      "source_id": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+      "start_s": 34.0
+    }
+  ],
+  "references_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair/protected_manifest.json",
+  "rejected": [
+    {
+      "consensus": {
+        "deletions": 0,
+        "hypothesis_word_count": 17,
+        "hypothesis_words": [
+          "it",
+          "is",
+          "earned",
+          "excuses",
+          "do",
+          "not",
+          "win",
+          "championships",
+          "oh",
+          "you",
+          "added",
+          "michael",
+          "jordan",
+          "tell",
+          "you",
+          "that",
+          "no"
+        ],
+        "insertions": 0,
+        "reference_word_count": 17,
+        "reference_words": [
+          "it",
+          "is",
+          "earned",
+          "excuses",
+          "do",
+          "not",
+          "win",
+          "championships",
+          "oh",
+          "yeah",
+          "did",
+          "michael",
+          "jordan",
+          "tell",
+          "you",
+          "that",
+          "no"
+        ],
+        "substitutions": 2,
+        "wer": 0.117647
+      },
+      "id": "harvey_repair_002",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "It's earned. Excuses don't win championships. Oh, you added Michael Jordan. Tell you that? No.",
+      "tiny_text": "It's earned. Excuses don't win championships. Oh yeah, did Michael Jordan tell you that? No."
+    },
+    {
+      "consensus": {
+        "deletions": 1,
+        "hypothesis_word_count": 13,
+        "hypothesis_words": [
+          "i",
+          "do",
+          "not",
+          "have",
+          "dreams",
+          "i",
+          "have",
+          "goals",
+          "get",
+          "it",
+          "through",
+          "your",
+          "head"
+        ],
+        "insertions": 0,
+        "reference_word_count": 14,
+        "reference_words": [
+          "and",
+          "we",
+          "are",
+          "gonna",
+          "have",
+          "dreams",
+          "i",
+          "have",
+          "goals",
+          "get",
+          "it",
+          "through",
+          "your",
+          "head"
+        ],
+        "substitutions": 3,
+        "wer": 0.285714
+      },
+      "id": "harvey_repair_003",
+      "reasons": [
+        "tiny_small_disagreement"
+      ],
+      "small_text": "I don't have dreams. I have goals. Get it through your head.",
+      "tiny_text": "And we're gonna have dreams, I have goals. Get it through your head."
+    }
+  ],
+  "rejected_count": 2,
+  "schema_version": 1,
+  "status": "accepted"
+}

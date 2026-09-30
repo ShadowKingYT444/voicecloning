@@ -1,0 +1,164 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{
+  "mel2wav.f0_predictor.classifier.bias": {
+    "shape": [
+      1
+    ],
+    "maxabs": 0.06526226550340652,
+    "mean": 0.06526226550340652
+  },
+  "mel2wav.f0_predictor.classifier.weight": {
+    "shape": [
+      1,
+      512
+    ],
+    "maxabs": 0.03298834711313248,
+    "mean": 8.26137766125612e-05
+  },
+  "mel2wav.f0_predictor.condnet.0.bias": {
+    "shape": [
+      512
+    ],
+    "maxabs": 1.3234293460845947,
+    "mean": 0.031845808029174805
+  },
+  "mel2wav.f0_predictor.condnet.0.parametrizations.weight.original0": {
+    "shape": [
+      512,
+      1,
+      1
+    ],
+    "maxabs": 2.0005440711975098,
+    "mean": 1.1073331832885742
+  },
+  "mel2wav.f0_predictor.condnet.0.parametrizations.weight.original1": {
+    "shape": [
+      512,
+      80,
+      3
+    ],
+    "maxabs": 1.0246059894561768,
+    "mean": 0.0018172411946579814
+  },
+  "mel2wav.f0_predictor.condnet.2.bias": {
+    "shape": [
+      512
+    ],
+    "maxabs": 0.26237258315086365,
+    "mean": -0.023648986592888832
+  },
+  "mel2wav.f0_predictor.condnet.2.parametrizations.weight.original0": {
+    "shape": [
+      512,
+      1,
+      1
+    ],
+    "maxabs": 3.9779610633850098,
+    "mean": 1.2057242393493652
+  },
+  "mel2wav.f0_predictor.condnet.2.parametrizations.weight.original1": {
+    "shape": [
+      512,
+      512,
+      3
+    ],
+    "maxabs": 0.47660717368125916,
+    "mean": -0.003996881656348705
+  },
+  "mel2wav.f0_predictor.condnet.4.bias": {
+    "shape": [
+      512
+    ],
+    "maxabs": 0.15942338109016418,
+    "mean": -0.044793762266635895
+  },
+  "mel2wav.f0_predictor.condnet.4.parametrizations.weight.original0": {
+    "shape": [
+      512,
+      1,
+      1
+    ],
+    "maxabs": 4.624200820922852,
+    "mean": 1.154167890548706
+  },
+  "mel2wav.f0_predictor.condnet.4.parametrizations.weight.original1": {
+    "shape": [
+      512,
+      512,
+      3
+    ],
+    "maxabs": 0.9285730123519897,
+    "mean": -0.00031981049687601626
+  },
+  "mel2wav.f0_predictor.condnet.6.bias": {
+    "shape": [
+      512
+    ],
+    "maxabs": 0.18682071566581726,
+    "mean": -0.0344240665435791
+  },
+  "mel2wav.f0_predictor.condnet.6.parametrizations.weight.original0": {
+    "shape": [
+      512,
+      1,
+      1
+    ],
+    "maxabs": 2.572995662689209,
+    "mean": 0.8568596243858337
+  },
+  "mel2wav.f0_predictor.condnet.6.parametrizations.weight.original1": {
+    "shape": [
+      512,
+      512,
+      3
+    ],
+    "maxabs": 0.7790637016296387,
+    "mean": -0.0011044612620025873
+  },
+  "mel2wav.f0_predictor.condnet.8.bias": {
+    "shape": [
+      512
+    ],
+    "maxabs": 0.16081324219703674,
+    "mean": -0.007763641886413097
+  },
+  "mel2wav.f0_predictor.condnet.8.parametrizations.weight.original0": {
+    "shape": [
+      512,
+      1,
+      1
+    ],
+    "maxabs": 0.7327030301094055,
+    "mean": 0.10930570214986801
+  },
+  "mel2wav.f0_predictor.condnet.8.parametrizations.weight.original1": {
+    "shape": [
+      512,
+      512,
+      3
+    ],
+    "maxabs": 0.4749835133552551,
+    "mean": 0.0001802343176677823
+  },
+  "mel2wav.m_source.l_linear.bias": {
+    "shape": [
+      1
+    ],
+    "maxabs": 0.005905893165618181,
+    "mean": 0.005905893165618181
+  },
+  "mel2wav.m_source.l_linear.weight": {
+    "shape": [
+      1,
+      9
+    ],
+    "maxabs": 0.0018931946251541376,
+    "mean": -8.426857675658539e-05
+  }
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 751ms
+             CPU time consumed: 809ms
+                   Memory peak: 39.8M (swap: 0B)

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "harvey_quote_01_isolated",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_01_isolated.wav",
+    "voice": "harvey",
+    "start_s": 0.0,
+    "end_s": 6.3,
+    "source": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+    "preprocessing": "Demucs htdemucs vocals"
+  },
+  {
+    "id": "harvey_quote_02_isolated",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+    "voice": "harvey",
+    "start_s": 9.0,
+    "end_s": 16.1,
+    "source": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+    "preprocessing": "Demucs htdemucs vocals"
+  },
+  {
+    "id": "harvey_quote_03_isolated",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_03_isolated.wav",
+    "voice": "harvey",
+    "start_s": 18.6,
+    "end_s": 24.7,
+    "source": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+    "preprocessing": "Demucs htdemucs vocals"
+  },
+  {
+    "id": "harvey_quote_04_isolated",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_quote_04_isolated.wav",
+    "voice": "harvey",
+    "start_s": 26.7,
+    "end_s": 33.2,
+    "source": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+    "preprocessing": "Demucs htdemucs vocals"
+  },
+  {
+    "id": "harvey_heldout_01_isolated",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_separation/harvey_heldout_01_isolated.wav",
+    "voice": "harvey",
+    "start_s": 34.0,
+    "end_s": 40.8,
+    "source": "/home/terryd/gooning/voicecloning/when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+    "preprocessing": "Demucs htdemucs vocals"
+  }
+]

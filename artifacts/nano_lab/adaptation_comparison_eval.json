@@ -1,0 +1,1028 @@
+{
+  "schema_version": 1,
+  "generated_by": "scripts/nano_lab/reference_evaluator.py",
+  "manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "runtime": {
+    "cpu_threads": 2,
+    "whisper_enabled": true,
+    "speaker_enabled": true,
+    "whisper_model": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+    "heldout_variant": "natural",
+    "excluded_heldout_ids": [
+      "asmr7_heldout_01",
+      "asmr7_heldout_04",
+      "asmr7_heldout_05"
+    ],
+    "rss_mb": {
+      "rss_before_models_mb": 115.1,
+      "rss_after_whisper_mb": 692.35,
+      "rss_after_speaker_model_mb": 738.95,
+      "rss_after_evaluation_mb": 859.41
+    }
+  },
+  "inputs": [
+    {
+      "label": "base_neutral_seed31",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_samples_base/neutral_seed31.wav",
+      "family": "asmr7",
+      "expected_text": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow.",
+      "measurements": {
+        "duration_s": 5.08,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -25.742,
+        "peak_dbfs": -7.109,
+        "crest_db": 18.633,
+        "dc_offset": -4.411e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -13.312,
+        "noise_floor_dbfs_proxy_low10pct_frames": -70.368,
+        "speech_level_dbfs_proxy_high50pct_frames": -26.227,
+        "snr_db_proxy_high50_minus_low10": 44.14,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -91.252,
+        "spectral_centroid_hz": 657.623,
+        "spectral_flatness_proxy": 0.026657,
+        "high_band_fraction_proxy_ge8khz": 0.004167,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 693.88,
+      "asr": {
+        "text": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 4.96,
+            "text": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow.",
+            "avg_logprob": -0.25442,
+            "no_speech_prob": 0.018214
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 2.658704,
+        "real_time_factor": 0.523367,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 17,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ],
+        "hypothesis_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 17,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ],
+        "hypothesis_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.796628,
+        "min_cosine": 0.782741,
+        "max_cosine": 0.810515,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.810515
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.782741
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.495769484243376,
+      "dnsmos_background": 4.12407040519949,
+      "dnsmos_overall": 3.213176168351657,
+      "dnsmos_windows": 2,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "base_calm_seed47",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_samples_base/calm_seed47.wav",
+      "family": "asmr7",
+      "expected_text": "You have done enough for today. Take a quiet moment, breathe slowly, and let yourself relax.",
+      "measurements": {
+        "duration_s": 5.88,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -25.449,
+        "peak_dbfs": -8.18,
+        "crest_db": 17.269,
+        "dc_offset": -5.538e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -16.834,
+        "noise_floor_dbfs_proxy_low10pct_frames": -72.162,
+        "speech_level_dbfs_proxy_high50pct_frames": -24.568,
+        "snr_db_proxy_high50_minus_low10": 47.594,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -89.861,
+        "spectral_centroid_hz": 763.804,
+        "spectral_flatness_proxy": 0.029946,
+        "high_band_fraction_proxy_ge8khz": 0.00429,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 855.99,
+      "asr": {
+        "text": "You have done enough for today. Take a quiet moment, breathe slowly and let yourself relax.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 2.0,
+            "text": "You have done enough for today.",
+            "avg_logprob": -0.285596,
+            "no_speech_prob": 0.014106
+          },
+          {
+            "start_s": 2.0,
+            "end_s": 6.0,
+            "text": "Take a quiet moment, breathe slowly and let yourself relax.",
+            "avg_logprob": -0.285596,
+            "no_speech_prob": 0.014106
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 1.141646,
+        "real_time_factor": 0.194157,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 16,
+        "hypothesis_word_count": 16,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "you",
+          "have",
+          "done",
+          "enough",
+          "for",
+          "today",
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "breathe",
+          "slowly",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "you",
+          "have",
+          "done",
+          "enough",
+          "for",
+          "today",
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "breathe",
+          "slowly",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 16,
+        "hypothesis_word_count": 16,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "you",
+          "have",
+          "done",
+          "enough",
+          "for",
+          "today",
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "breathe",
+          "slowly",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "you",
+          "have",
+          "done",
+          "enough",
+          "for",
+          "today",
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "breathe",
+          "slowly",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.789372,
+        "min_cosine": 0.76327,
+        "max_cosine": 0.815474,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.815474
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.76327
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.350803220583799,
+      "dnsmos_background": 4.021226183679219,
+      "dnsmos_overall": 3.082306203039517,
+      "dnsmos_windows": 3,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "rank4_neutral_seed31",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_samples_rank4/neutral_seed31.wav",
+      "family": "asmr7",
+      "expected_text": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow.",
+      "measurements": {
+        "duration_s": 5.0,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -26.809,
+        "peak_dbfs": -10.38,
+        "crest_db": 16.429,
+        "dc_offset": -4.779e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -18.741,
+        "noise_floor_dbfs_proxy_low10pct_frames": -69.33,
+        "speech_level_dbfs_proxy_high50pct_frames": -25.233,
+        "snr_db_proxy_high50_minus_low10": 44.097,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -88.725,
+        "spectral_centroid_hz": 659.455,
+        "spectral_flatness_proxy": 0.02622,
+        "high_band_fraction_proxy_ge8khz": 0.002721,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 858.98,
+      "asr": {
+        "text": "I'll hash the blue notebook beside the window. Please bring it with you when we meet tomorrow.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 2.72,
+            "text": "I'll hash the blue notebook beside the window.",
+            "avg_logprob": -0.343964,
+            "no_speech_prob": 0.011191
+          },
+          {
+            "start_s": 2.72,
+            "end_s": 4.88,
+            "text": "Please bring it with you when we meet tomorrow.",
+            "avg_logprob": -0.343964,
+            "no_speech_prob": 0.011191
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 1.402731,
+        "real_time_factor": 0.280546,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.117647,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 17,
+        "substitutions": 2,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ],
+        "hypothesis_words": [
+          "i'll",
+          "hash",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.117647,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 18,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ],
+        "hypothesis_words": [
+          "i",
+          "will",
+          "hash",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.794155,
+        "min_cosine": 0.76758,
+        "max_cosine": 0.82073,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.82073
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.76758
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.676277704144583,
+      "dnsmos_background": 4.182596750331591,
+      "dnsmos_overall": 3.426325506615222,
+      "dnsmos_windows": 1,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "rank4_calm_seed47",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_samples_rank4/calm_seed47.wav",
+      "family": "asmr7",
+      "expected_text": "You have done enough for today. Take a quiet moment, breathe slowly, and let yourself relax.",
+      "measurements": {
+        "duration_s": 6.04,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -27.975,
+        "peak_dbfs": -11.986,
+        "crest_db": 15.989,
+        "dc_offset": -4.542e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -20.474,
+        "noise_floor_dbfs_proxy_low10pct_frames": -66.909,
+        "speech_level_dbfs_proxy_high50pct_frames": -26.108,
+        "snr_db_proxy_high50_minus_low10": 40.8,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -88.943,
+        "spectral_centroid_hz": 741.542,
+        "spectral_flatness_proxy": 0.03849,
+        "high_band_fraction_proxy_ge8khz": 0.008517,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 858.98,
+      "asr": {
+        "text": "You've done enough for today. Take a quiet moment, breathe slowly, and what yourself relax.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 1.68,
+            "text": "You've done enough for today.",
+            "avg_logprob": -0.391878,
+            "no_speech_prob": 0.00825
+          },
+          {
+            "start_s": 1.68,
+            "end_s": 3.2,
+            "text": "Take a quiet moment,",
+            "avg_logprob": -0.391878,
+            "no_speech_prob": 0.00825
+          },
+          {
+            "start_s": 3.2,
+            "end_s": 6.0,
+            "text": "breathe slowly, and what yourself relax.",
+            "avg_logprob": -0.391878,
+            "no_speech_prob": 0.00825
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 2.241831,
+        "real_time_factor": 0.371164,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.1875,
+        "reference_word_count": 16,
+        "hypothesis_word_count": 15,
+        "substitutions": 2,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_words": [
+          "you",
+          "have",
+          "done",
+          "enough",
+          "for",
+          "today",
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "breathe",
+          "slowly",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "you've",
+          "done",
+          "enough",
+          "for",
+          "today",
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "breathe",
+          "slowly",
+          "and",
+          "what",
+          "yourself",
+          "relax"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0625,
+        "reference_word_count": 16,
+        "hypothesis_word_count": 16,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "you",
+          "have",
+          "done",
+          "enough",
+          "for",
+          "today",
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "breathe",
+          "slowly",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "you",
+          "have",
+          "done",
+          "enough",
+          "for",
+          "today",
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "breathe",
+          "slowly",
+          "and",
+          "what",
+          "yourself",
+          "relax"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.806926,
+        "min_cosine": 0.782201,
+        "max_cosine": 0.831652,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.831652
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.782201
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.4676034781894725,
+      "dnsmos_background": 3.844560899636574,
+      "dnsmos_overall": 3.089594346248726,
+      "dnsmos_windows": 4,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "rank8_neutral_seed31",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_samples_rank8/neutral_seed31.wav",
+      "family": "asmr7",
+      "expected_text": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow.",
+      "measurements": {
+        "duration_s": 4.96,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -27.818,
+        "peak_dbfs": -8.588,
+        "crest_db": 19.23,
+        "dc_offset": -4.441e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -17.118,
+        "noise_floor_dbfs_proxy_low10pct_frames": -68.106,
+        "speech_level_dbfs_proxy_high50pct_frames": -26.985,
+        "snr_db_proxy_high50_minus_low10": 41.121,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -89.877,
+        "spectral_centroid_hz": 776.203,
+        "spectral_flatness_proxy": 0.040484,
+        "high_band_fraction_proxy_ge8khz": 0.006033,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 859.04,
+      "asr": {
+        "text": "I lash the blue notebook beside the window. Please bring it with you only me tomorrow.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 2.72,
+            "text": "I lash the blue notebook beside the window.",
+            "avg_logprob": -0.395105,
+            "no_speech_prob": 0.008054
+          },
+          {
+            "start_s": 2.72,
+            "end_s": 4.8,
+            "text": "Please bring it with you only me tomorrow.",
+            "avg_logprob": -0.395105,
+            "no_speech_prob": 0.008054
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 1.467069,
+        "real_time_factor": 0.29578,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.235294,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 16,
+        "substitutions": 3,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ],
+        "hypothesis_words": [
+          "i",
+          "lash",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "only",
+          "me",
+          "tomorrow"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.235294,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 16,
+        "substitutions": 3,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ],
+        "hypothesis_words": [
+          "i",
+          "lash",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "only",
+          "me",
+          "tomorrow"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.804276,
+        "min_cosine": 0.775262,
+        "max_cosine": 0.83329,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.83329
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.775262
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.6718675972512997,
+      "dnsmos_background": 4.195334826761844,
+      "dnsmos_overall": 3.4363150092480246,
+      "dnsmos_windows": 1,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "rank8_calm_seed47",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_samples_rank8/calm_seed47.wav",
+      "family": "asmr7",
+      "expected_text": "You have done enough for today. Take a quiet moment, breathe slowly, and let yourself relax.",
+      "measurements": {
+        "duration_s": 5.84,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -28.025,
+        "peak_dbfs": -11.901,
+        "crest_db": 16.124,
+        "dc_offset": -4.653e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -21.336,
+        "noise_floor_dbfs_proxy_low10pct_frames": -80.804,
+        "speech_level_dbfs_proxy_high50pct_frames": -25.974,
+        "snr_db_proxy_high50_minus_low10": 54.83,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -99.366,
+        "spectral_centroid_hz": 915.51,
+        "spectral_flatness_proxy": 0.049662,
+        "high_band_fraction_proxy_ge8khz": 0.009347,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 859.36,
+      "asr": {
+        "text": "You've done enough for today. Take a quiet moment, pre-slurly, and let yourself relax.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 1.68,
+            "text": "You've done enough for today.",
+            "avg_logprob": -0.4415,
+            "no_speech_prob": 0.008497
+          },
+          {
+            "start_s": 1.68,
+            "end_s": 3.04,
+            "text": "Take a quiet moment,",
+            "avg_logprob": -0.4415,
+            "no_speech_prob": 0.008497
+          },
+          {
+            "start_s": 3.04,
+            "end_s": 5.68,
+            "text": "pre-slurly, and let yourself relax.",
+            "avg_logprob": -0.4415,
+            "no_speech_prob": 0.008497
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 1.990315,
+        "real_time_factor": 0.340807,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.25,
+        "reference_word_count": 16,
+        "hypothesis_word_count": 15,
+        "substitutions": 3,
+        "deletions": 1,
+        "insertions": 0,
+        "reference_words": [
+          "you",
+          "have",
+          "done",
+          "enough",
+          "for",
+          "today",
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "breathe",
+          "slowly",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "you've",
+          "done",
+          "enough",
+          "for",
+          "today",
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "pre",
+          "slurly",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.125,
+        "reference_word_count": 16,
+        "hypothesis_word_count": 16,
+        "substitutions": 2,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "you",
+          "have",
+          "done",
+          "enough",
+          "for",
+          "today",
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "breathe",
+          "slowly",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "you",
+          "have",
+          "done",
+          "enough",
+          "for",
+          "today",
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "pre",
+          "slurly",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.801149,
+        "min_cosine": 0.78307,
+        "max_cosine": 0.819227,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.819227
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.78307
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.668743349478516,
+      "dnsmos_background": 4.151457932514879,
+      "dnsmos_overall": 3.4289024940008974,
+      "dnsmos_windows": 3,
+      "dnsmos_repeated_short_clip": true
+    }
+  ],
+  "synthesis_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_comparison_inputs.json",
+  "reference_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "evaluation_role": "development_selection"
+}

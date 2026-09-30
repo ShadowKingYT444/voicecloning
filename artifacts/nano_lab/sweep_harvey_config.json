@@ -1,0 +1,135 @@
+{
+  "output_dir": "artifacts/nano_lab/sweep_harvey",
+  "cases": [
+    {
+      "id": "harvey_quote_01_raw",
+      "voice": "harvey",
+      "reference": "artifacts/nano_lab/references/harvey/harvey_quote_01/harvey_quote_01__raw.wav",
+      "text_id": "business",
+      "temperature": 0.65,
+      "seed": 31
+    },
+    {
+      "id": "harvey_quote_01_natural",
+      "voice": "harvey",
+      "reference": "artifacts/nano_lab/references/harvey/harvey_quote_01/harvey_quote_01__natural.wav",
+      "text_id": "business",
+      "temperature": 0.65,
+      "seed": 31
+    },
+    {
+      "id": "harvey_quote_01_clean",
+      "voice": "harvey",
+      "reference": "artifacts/nano_lab/references/harvey/harvey_quote_01/harvey_quote_01__clean.wav",
+      "text_id": "business",
+      "temperature": 0.65,
+      "seed": 31
+    },
+    {
+      "id": "harvey_quote_01_isolated",
+      "voice": "harvey",
+      "reference": "artifacts/nano_lab/harvey_separation/harvey_quote_01_isolated.wav",
+      "text_id": "business",
+      "temperature": 0.65,
+      "seed": 31
+    },
+    {
+      "id": "harvey_quote_02_raw",
+      "voice": "harvey",
+      "reference": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__raw.wav",
+      "text_id": "business",
+      "temperature": 0.65,
+      "seed": 31
+    },
+    {
+      "id": "harvey_quote_02_natural",
+      "voice": "harvey",
+      "reference": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__natural.wav",
+      "text_id": "business",
+      "temperature": 0.65,
+      "seed": 31
+    },
+    {
+      "id": "harvey_quote_02_clean",
+      "voice": "harvey",
+      "reference": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__clean.wav",
+      "text_id": "business",
+      "temperature": 0.65,
+      "seed": 31
+    },
+    {
+      "id": "harvey_quote_02_isolated",
+      "voice": "harvey",
+      "reference": "artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+      "text_id": "business",
+      "temperature": 0.65,
+      "seed": 31
+    },
+    {
+      "id": "harvey_quote_03_raw",
+      "voice": "harvey",
+      "reference": "artifacts/nano_lab/references/harvey/harvey_quote_03/harvey_quote_03__raw.wav",
+      "text_id": "business",
+      "temperature": 0.65,
+      "seed": 31
+    },
+    {
+      "id": "harvey_quote_03_natural",
+      "voice": "harvey",
+      "reference": "artifacts/nano_lab/references/harvey/harvey_quote_03/harvey_quote_03__natural.wav",
+      "text_id": "business",
+      "temperature": 0.65,
+      "seed": 31
+    },
+    {
+      "id": "harvey_quote_03_clean",
+      "voice": "harvey",
+      "reference": "artifacts/nano_lab/references/harvey/harvey_quote_03/harvey_quote_03__clean.wav",
+      "text_id": "business",
+      "temperature": 0.65,
+      "seed": 31
+    },
+    {
+      "id": "harvey_quote_03_isolated",
+      "voice": "harvey",
+      "reference": "artifacts/nano_lab/harvey_separation/harvey_quote_03_isolated.wav",
+      "text_id": "business",
+      "temperature": 0.65,
+      "seed": 31
+    },
+    {
+      "id": "harvey_quote_04_raw",
+      "voice": "harvey",
+      "reference": "artifacts/nano_lab/references/harvey/harvey_quote_04/harvey_quote_04__raw.wav",
+      "text_id": "business",
+      "temperature": 0.65,
+      "seed": 31
+    },
+    {
+      "id": "harvey_quote_04_natural",
+      "voice": "harvey",
+      "reference": "artifacts/nano_lab/references/harvey/harvey_quote_04/harvey_quote_04__natural.wav",
+      "text_id": "business",
+      "temperature": 0.65,
+      "seed": 31
+    },
+    {
+      "id": "harvey_quote_04_clean",
+      "voice": "harvey",
+      "reference": "artifacts/nano_lab/references/harvey/harvey_quote_04/harvey_quote_04__clean.wav",
+      "text_id": "business",
+      "temperature": 0.65,
+      "seed": 31
+    },
+    {
+      "id": "harvey_quote_04_isolated",
+      "voice": "harvey",
+      "reference": "artifacts/nano_lab/harvey_separation/harvey_quote_04_isolated.wav",
+      "text_id": "business",
+      "temperature": 0.65,
+      "seed": 31
+    }
+  ],
+  "optimized_loader": true,
+  "threads": 2
+}

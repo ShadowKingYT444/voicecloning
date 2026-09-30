@@ -1,0 +1,9 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+...........                                                              [100%]
+11 passed in 5.30s
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 7.067s
+             CPU time consumed: 6.774s
+                   Memory peak: 280.2M (swap: 0B)

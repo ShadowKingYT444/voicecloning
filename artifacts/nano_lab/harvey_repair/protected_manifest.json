@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "generated_by": "scripts/nano_lab/reference_prepare.py",
+  "target": {
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "format": "PCM_16 WAV",
+    "nano_reference_window_s": "5-15 (reference clips)"
+  },
+  "processing_policy": {
+    "default_variant": "natural",
+    "clean_variant_role": "A/B only; restrained gate keeps a 0.55 gain floor",
+    "raw_variant_role": "source audit and fallback",
+    "normalisation": "peak target -2 dBFS, maximum gain +8 dB for processed variants",
+    "noise_metrics": "heuristic proxies; no clean-room reference is available",
+    "original_sources_preserved": true
+  },
+  "sources": [
+    {
+      "path": "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3",
+      "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+      "bytes": 14730063,
+      "duration_s": 613.680181,
+      "codec": "mp3",
+      "sample_rate": 44100,
+      "channels": 2,
+      "bit_rate": 192000
+    },
+    {
+      "path": "when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+      "sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+      "bytes": 557708,
+      "duration_s": 40.82068,
+      "codec": "mp3",
+      "sample_rate": 44100,
+      "channels": 2,
+      "bit_rate": 109178
+    }
+  ],
+  "references": [
+    {
+      "id": "harvey_quote_02",
+      "family": "harvey",
+      "split": "reference",
+      "style": "measured authority",
+      "source": {
+        "path": "when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+        "sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+        "bytes": 557708,
+        "duration_s": 7.1,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 109178,
+        "start_s": 9.0,
+        "end_s": 16.1,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 7.1,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -23.378,
+          "peak_dbfs": -4.935,
+          "crest_db": 18.442,
+          "dc_offset": -3.55e-06,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -43.438,
+          "speech_level_dbfs_proxy_high50pct_frames": -22.963,
+          "snr_db_proxy_high50_minus_low10": 20.475,
+          "spectral_centroid_hz": 815.441,
+          "spectral_flatness_proxy": 0.036579,
+          "high_band_fraction_proxy_ge8khz": 0.001195
+        }
+      },
+      "transcript": "Never destroy anyone in public when you can accomplish the same result in private. I don't play the odds. I play the man.",
+      "transcript_source": "faster-whisper-tiny.en (auto, high confidence)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__raw.wav",
+        "natural": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__natural.wav",
+        "clean": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 7.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -23.378,
+            "peak_dbfs": -4.935,
+            "crest_db": 18.442,
+            "dc_offset": -3.55e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -43.438,
+            "speech_level_dbfs_proxy_high50pct_frames": -22.963,
+            "snr_db_proxy_high50_minus_low10": 20.475,
+            "spectral_centroid_hz": 815.441,
+            "spectral_flatness_proxy": 0.036579,
+            "high_band_fraction_proxy_ge8khz": 0.001195
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 7.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -20.479,
+            "peak_dbfs": -2.0,
+            "crest_db": 18.479,
+            "dc_offset": -4.91e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -40.961,
+            "speech_level_dbfs_proxy_high50pct_frames": -20.075,
+            "snr_db_proxy_high50_minus_low10": 20.886,
+            "spectral_centroid_hz": 819.392,
+            "spectral_flatness_proxy": 0.015573,
+            "high_band_fraction_proxy_ge8khz": 0.001116
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 7.1,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -20.536,
+            "peak_dbfs": -2.0,
+            "crest_db": 18.536,
+            "dc_offset": -4.67e-06,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -42.966,
+            "speech_level_dbfs_proxy_high50pct_frames": -20.194,
+            "snr_db_proxy_high50_minus_low10": 22.772,
+            "spectral_centroid_hz": 824.971,
+            "spectral_flatness_proxy": 0.015285,
+            "high_band_fraction_proxy_ge8khz": 0.001126
+          }
+        }
+      }
+    }
+  ],
+  "heldout": [
+    {
+      "id": "harvey_heldout_01",
+      "family": "harvey",
+      "split": "heldout",
+      "style": "heldout / closing quote",
+      "source": {
+        "path": "when Harvey speaks, success listens #Suits #HarveySpecter #Shorts.mp3",
+        "sha256": "d4cb0d1ac6ed639af5cc65721a28faa0de9f4ad7207f9148ffdec8453cfe6f05",
+        "bytes": 557708,
+        "duration_s": 6.8,
+        "codec": "mp3",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 109178,
+        "start_s": 34.0,
+        "end_s": 40.8,
+        "decoded_sample_rate_hz": 24000,
+        "decoded_channel_layout": "mono",
+        "window_measurements": {
+          "duration_s": 6.8,
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "rms_dbfs": -23.903,
+          "peak_dbfs": -5.989,
+          "crest_db": 17.914,
+          "dc_offset": -0.00010663,
+          "clipping_fraction_proxy": 0.0,
+          "noise_floor_dbfs_proxy_low10pct_frames": -47.688,
+          "speech_level_dbfs_proxy_high50pct_frames": -23.168,
+          "snr_db_proxy_high50_minus_low10": 24.52,
+          "spectral_centroid_hz": 662.442,
+          "spectral_flatness_proxy": 0.046046,
+          "high_band_fraction_proxy_ge8khz": 0.002672
+        }
+      },
+      "transcript": "I don't get lucky. I make my own luck. You know what? That's the difference between us, Allison. You want to lose small. I want to win big.",
+      "transcript_source": "faster-whisper-tiny.en (auto, high confidence)",
+      "transcript_review": "auto_tiny_en_unverified",
+      "files": {
+        "raw": "artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__raw.wav",
+        "natural": "artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+        "clean": "artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__clean.wav"
+      },
+      "variants": {
+        "raw": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__raw.wav",
+          "processing": {
+            "operations": [
+              "mono_downmix",
+              "resample_24khz"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.8,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -23.903,
+            "peak_dbfs": -5.989,
+            "crest_db": 17.914,
+            "dc_offset": -0.00010663,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -47.688,
+            "speech_level_dbfs_proxy_high50pct_frames": -23.168,
+            "snr_db_proxy_high50_minus_low10": 24.52,
+            "spectral_centroid_hz": 662.442,
+            "spectral_flatness_proxy": 0.046046,
+            "high_band_fraction_proxy_ge8khz": 0.002672
+          }
+        },
+        "natural": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.8,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -19.97,
+            "peak_dbfs": -2.0,
+            "crest_db": 17.97,
+            "dc_offset": -9.6e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -44.015,
+            "speech_level_dbfs_proxy_high50pct_frames": -19.209,
+            "snr_db_proxy_high50_minus_low10": 24.806,
+            "spectral_centroid_hz": 667.692,
+            "spectral_flatness_proxy": 0.01962,
+            "high_band_fraction_proxy_ge8khz": 0.002157
+          }
+        },
+        "clean": {
+          "path": "artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__clean.wav",
+          "processing": {
+            "operations": [
+              "remove_dc",
+              "highpass_55hz",
+              "lowpass_10.8khz",
+              "soft_spectral_gate_strength_0.35_floor_0.55",
+              "safe_peak_scale_target_-2dbfs_max_gain_8db"
+            ]
+          },
+          "measurements": {
+            "duration_s": 6.8,
+            "sample_rate_hz": 24000,
+            "channels": 1,
+            "rms_dbfs": -20.005,
+            "peak_dbfs": -2.0,
+            "crest_db": 18.005,
+            "dc_offset": -6.2e-07,
+            "clipping_fraction_proxy": 0.0,
+            "noise_floor_dbfs_proxy_low10pct_frames": -46.443,
+            "speech_level_dbfs_proxy_high50pct_frames": -19.256,
+            "snr_db_proxy_high50_minus_low10": 27.187,
+            "spectral_centroid_hz": 668.72,
+            "spectral_flatness_proxy": 0.019317,
+            "high_band_fraction_proxy_ge8khz": 0.002162
+          }
+        }
+      }
+    }
+  ],
+  "training": [],
+  "experiment_role": "Harvey voice-specific diagnostic: reserve selected prompt and original heldout; other source times may supply train/validation.",
+  "selection_warning": "40.82-second compilation. Any fit has very limited evidence and cannot establish general zero-shot improvement."
+}

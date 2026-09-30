@@ -1,0 +1,31 @@
+<!doctype html><meta charset="utf-8"><title>Acoustic attention comparison</title>
+<style>body{max-width:1000px;margin:40px auto;padding:0 24px;font:16px/1.5 system-ui;color:#20252c;background:#faf9f6}audio{width:100%}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}article{background:white;padding:18px;border:1px solid #ddd;border-radius:12px}table{border-collapse:collapse}td,th{padding:9px;border-bottom:1px solid #ddd}</style>
+<h1>Acoustic attention comparison</h1><p>Experimental synthetic speech. Realism remains unaccepted. All listening copies use constant gain at the same loudness. No noise gate or denoiser was added.</p>
+<h2>Same words as the source</h2><div class="grid"><article><h3>Source recording</h3><audio controls preload="metadata" src="../cadence_penalty/level_matched/source_heldout01.wav"></audio></article>
+<article><h3>Control</h3><audio controls preload="metadata" src="level_matched/heldout01_attention0_mel.wav"></audio><p>6.60 seconds</p></article>
+<article><h3>Attention adapter</h3><audio controls preload="metadata" src="level_matched/heldout01_attention1_mel.wav"></audio><p>6.60 seconds</p></article>
+</div><h2>New text</h2><p>Each group has identical generated speech tokens. Only the acoustic attention adapter and mel correction change.</p>
+<h3>The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.</h3><div class="grid">
+<article><strong>attention0_raw</strong><audio controls preload="metadata" src="level_matched/morning_attention0_raw.wav"></audio></article>
+<article><strong>attention1_raw</strong><audio controls preload="metadata" src="level_matched/morning_attention1_raw.wav"></audio></article>
+<article><strong>attention0_mel</strong><audio controls preload="metadata" src="level_matched/morning_attention0_mel.wav"></audio></article>
+<article><strong>attention1_mel</strong><audio controls preload="metadata" src="level_matched/morning_attention1_mel.wav"></audio></article>
+</div>
+<h3>Did you remember the blue folder? I thought we agreed to meet at half past nine.</h3><div class="grid">
+<article><strong>attention0_raw</strong><audio controls preload="metadata" src="level_matched/question_attention0_raw.wav"></audio></article>
+<article><strong>attention1_raw</strong><audio controls preload="metadata" src="level_matched/question_attention1_raw.wav"></audio></article>
+<article><strong>attention0_mel</strong><audio controls preload="metadata" src="level_matched/question_attention0_mel.wav"></audio></article>
+<article><strong>attention1_mel</strong><audio controls preload="metadata" src="level_matched/question_attention1_mel.wav"></audio></article>
+</div>
+<h3>The last train had already left when I reached the station. A small light was still on above the ticket office.</h3><div class="grid">
+<article><strong>attention0_raw</strong><audio controls preload="metadata" src="level_matched/narrative_attention0_raw.wav"></audio></article>
+<article><strong>attention1_raw</strong><audio controls preload="metadata" src="level_matched/narrative_attention1_raw.wav"></audio></article>
+<article><strong>attention0_mel</strong><audio controls preload="metadata" src="level_matched/narrative_attention0_mel.wav"></audio></article>
+<article><strong>attention1_mel</strong><audio controls preload="metadata" src="level_matched/narrative_attention1_mel.wav"></audio></article>
+</div>
+<h2>Measured results</h2><p>These are automated proxies. They do not establish realism or clean ASMR texture.</p><table><tr><th>Variant</th><th>Speaker cosine</th><th>DNSMOS</th><th>WER</th></tr>
+<tr><td>attention0_raw</td><td>0.8853</td><td>3.1318</td><td>0.000</td></tr>
+<tr><td>attention0_mel</td><td>0.8898</td><td>3.1537</td><td>0.000</td></tr>
+<tr><td>attention1_raw</td><td>0.8922</td><td>3.1259</td><td>0.000</td></tr>
+<tr><td>attention1_mel</td><td>0.8965</td><td>3.1642</td><td>0.000</td></tr>
+</table><p>Peak synthesis process RSS: 2495.5 MiB. One serial model job, 3072 MiB hard limit, no swap.</p><p><a href='review.json'>Full evidence</a> | <a href='../delivery/index.html'>Main comparison</a></p>

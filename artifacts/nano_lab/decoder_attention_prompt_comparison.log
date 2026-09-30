@@ -1,0 +1,70 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 86018491f2334794b856809b09ef3d40
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+Traceback (most recent call last):
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/quality_sweep.py", line 196, in run
+    row['t3_donor_runtime'] = copy_t3_conditioning(
+                              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/t3_conditioning_donor.py", line 97, in copy_t3_conditioning
+    donor_prompt = _validate_prompt(torch, donor_t3, "donor") if use_prompt else None
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/t3_conditioning_donor.py", line 39, in _validate_prompt
+    raise ValueError(f"{label} {PROMPT_FIELD} must have shape (1,N), 1<=N<={PROMPT_MAX_LENGTH}")
+ValueError: donor t3.cond_prompt_speech_tokens must have shape (1,N), 1<=N<=250
+Traceback (most recent call last):
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/quality_sweep.py", line 196, in run
+    row['t3_donor_runtime'] = copy_t3_conditioning(
+                              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/t3_conditioning_donor.py", line 97, in copy_t3_conditioning
+    donor_prompt = _validate_prompt(torch, donor_t3, "donor") if use_prompt else None
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/t3_conditioning_donor.py", line 39, in _validate_prompt
+    raise ValueError(f"{label} {PROMPT_FIELD} must have shape (1,N), 1<=N<={PROMPT_MAX_LENGTH}")
+ValueError: donor t3.cond_prompt_speech_tokens must have shape (1,N), 1<=N<=250
+Traceback (most recent call last):
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/quality_sweep.py", line 196, in run
+    row['t3_donor_runtime'] = copy_t3_conditioning(
+                              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/t3_conditioning_donor.py", line 97, in copy_t3_conditioning
+    donor_prompt = _validate_prompt(torch, donor_t3, "donor") if use_prompt else None
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/t3_conditioning_donor.py", line 39, in _validate_prompt
+    raise ValueError(f"{label} {PROMPT_FIELD} must have shape (1,N), 1<=N<={PROMPT_MAX_LENGTH}")
+ValueError: donor t3.cond_prompt_speech_tokens must have shape (1,N), 1<=N<=250
+Traceback (most recent call last):
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/quality_sweep.py", line 196, in run
+    row['t3_donor_runtime'] = copy_t3_conditioning(
+                              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/t3_conditioning_donor.py", line 97, in copy_t3_conditioning
+    donor_prompt = _validate_prompt(torch, donor_t3, "donor") if use_prompt else None
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/t3_conditioning_donor.py", line 39, in _validate_prompt
+    raise ValueError(f"{label} {PROMPT_FIELD} must have shape (1,N), 1<=N<={PROMPT_MAX_LENGTH}")
+ValueError: donor t3.cond_prompt_speech_tokens must have shape (1,N), 1<=N<=250
+Traceback (most recent call last):
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/quality_sweep.py", line 196, in run
+    row['t3_donor_runtime'] = copy_t3_conditioning(
+                              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/t3_conditioning_donor.py", line 97, in copy_t3_conditioning
+    donor_prompt = _validate_prompt(torch, donor_t3, "donor") if use_prompt else None
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/t3_conditioning_donor.py", line 39, in _validate_prompt
+    raise ValueError(f"{label} {PROMPT_FIELD} must have shape (1,N), 1<=N<={PROMPT_MAX_LENGTH}")
+ValueError: donor t3.cond_prompt_speech_tokens must have shape (1,N), 1<=N<=250
+Traceback (most recent call last):
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/quality_sweep.py", line 196, in run
+    row['t3_donor_runtime'] = copy_t3_conditioning(
+                              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/t3_conditioning_donor.py", line 97, in copy_t3_conditioning
+    donor_prompt = _validate_prompt(torch, donor_t3, "donor") if use_prompt else None
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/t3_conditioning_donor.py", line 39, in _validate_prompt
+    raise ValueError(f"{label} {PROMPT_FIELD} must have shape (1,N), 1<=N<={PROMPT_MAX_LENGTH}")
+ValueError: donor t3.cond_prompt_speech_tokens must have shape (1,N), 1<=N<=250
+loaded PerthNet (Implicit) at step 250,000
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 24.085s
+             CPU time consumed: 23.903s
+                   Memory peak: 1.3G (swap: 0B)

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+project_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+if [[ $# -eq 1 && ( "$1" == --list || "$1" == --help || "$1" == -h ) ]]; then
+  exec "$project_dir/.venv-nano/bin/python" "$project_dir/scripts/nano_lab/clone.py" "$@"
+fi
+exec python "$project_dir/scripts/nano_lab/bounded_job.py" \
+  "$project_dir/.venv-nano/bin/python" \
+  "$project_dir/scripts/nano_lab/clone.py" "$@"

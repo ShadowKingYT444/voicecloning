@@ -1,0 +1,17 @@
+{
+  "command": [
+    "scripts/nano_lab/fit_decoder_embedding.py",
+    "--prepare-dir",
+    "artifacts/nano_lab/mel_calibration_harvey",
+    "--output-dir",
+    "artifacts/nano_lab/decoder_embedding_fit_harvey",
+    "--max-steps",
+    "40"
+  ],
+  "error": "prepared reconstructed mel frame count for harvey_repair_001 is 215; expected 216 for N+3 tokens",
+  "error_type": "ValueError",
+  "format": "nano_decoder_embedding_fit_v1",
+  "output_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit_harvey",
+  "peak_rss_bytes": 534876160,
+  "status": "failed"
+}

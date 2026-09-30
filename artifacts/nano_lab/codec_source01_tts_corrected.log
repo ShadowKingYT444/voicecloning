@@ -1,0 +1,325 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 78441d5fdd8749a99265811398c395a8
+{
+  "elapsed_seconds": 3.019392251968384,
+  "finished_unix": 1790696450.2791617,
+  "result": {
+    "conditioning_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+    "field_count": 7,
+    "mode": "zero_shot",
+    "profile": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+    "skipped_optional_fields": [
+      "t3.clap_emb",
+      "t3.cond_prompt_speech_emb",
+      "gen.prompt_feat_len"
+    ]
+  },
+  "rss": {
+    "peak_rss_bytes": 234930176,
+    "rss_bytes": 235831296
+  },
+  "schema_version": 1,
+  "stage": "prepare",
+  "started_unix": 1790696447.2597716,
+  "status": "ok"
+}
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+{
+  "elapsed_seconds": 17.40680170059204,
+  "finished_unix": 1790696468.57392,
+  "result": {
+    "eos_seen": true,
+    "experimental_t3": true,
+    "generated_token_count": 118,
+    "length_limit_reached": false,
+    "mode": "t3_generated_numpy_sampler",
+    "prefill_sequence_length": 352,
+    "raw_sampled_token_count": 119,
+    "speech_token_count_with_silence": 121,
+    "t3_used": true
+  },
+  "rss": {
+    "peak_rss_bytes": 843563008,
+    "rss_bytes": 395374592
+  },
+  "schema_version": 1,
+  "stage": "tokens",
+  "started_unix": 1790696451.1671195,
+  "status": "ok"
+}
+{
+  "elapsed_seconds": 3.9427411556243896,
+  "finished_unix": 1790696473.1575663,
+  "result": {
+    "mel_length": 742,
+    "prompt_feat_length": 500,
+    "prompt_token_count": 250,
+    "speech_token_count": 121
+  },
+  "rss": {
+    "peak_rss_bytes": 437329920,
+    "rss_bytes": 255860736
+  },
+  "schema_version": 1,
+  "stage": "flow",
+  "started_unix": 1790696469.2148268,
+  "status": "ok"
+}
+{
+  "elapsed_seconds": 20.459104776382446,
+  "finished_unix": 1790696494.2147772,
+  "result": {
+    "mel_length": 242,
+    "prompt_feat_length": 500,
+    "seed": 20231,
+    "speech_token_count": 121,
+    "steps": 2
+  },
+  "rss": {
+    "peak_rss_bytes": 597495808,
+    "rss_bytes": 489721856
+  },
+  "schema_version": 1,
+  "stage": "estimator",
+  "started_unix": 1790696473.755677,
+  "status": "ok"
+}
+{
+  "elapsed_seconds": 7.217108964920044,
+  "finished_unix": 1790696502.666195,
+  "result": {
+    "audio_samples": 116160,
+    "audio_seconds": 4.84,
+    "mel_length": 242
+  },
+  "rss": {
+    "peak_rss_bytes": 338120704,
+    "rss_bytes": 152068096
+  },
+  "schema_version": 1,
+  "stage": "vocoder",
+  "started_unix": 1790696495.4490879,
+  "status": "ok"
+}
+loaded PerthNet (Implicit) at step 250,000
+{
+  "elapsed_seconds": 9.229599475860596,
+  "finished_unix": 1790696512.364803,
+  "result": {
+    "audio_samples": 116160,
+    "audio_seconds": 4.84,
+    "master_processing": {
+      "achieved_lufs": -22.616598325528635,
+      "gain_db": 8.889159101983864,
+      "highpass_hz": 45,
+      "noise_gate": false,
+      "target_lufs": -19,
+      "true_peak_ceiling_dbtp": -1,
+      "true_peak_oversampling": 4
+    },
+    "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tts_corrected.wav",
+    "sample_rate": 24000,
+    "schema_version": 1,
+    "source": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tts_corrected/vocoder/audio.npz",
+    "trim_fade": {
+      "fade_ms": 20,
+      "n_trim": 480
+    },
+    "watermark": "PerthImplicitWatermarker",
+    "watermark_applied": true
+  },
+  "rss": {
+    "peak_rss_bytes": 510042112,
+    "rss_bytes": 492269568
+  },
+  "schema_version": 1,
+  "stage": "finish",
+  "started_unix": 1790696503.1352208,
+  "status": "ok"
+}
+{
+  "elapsed_seconds": 66.75547385215759,
+  "experimental_t3": true,
+  "experimental_t3_limitation": "The long T3 reference at sequence length 400 is not within the strict 3e-4 cache gate: 176 of 7.4M cache values exceeded the gate (max abs 0.000989; relative L2 1.44e-5). Logits, lengths 32/128, and decode cases passed. This integration run is experimental and does not claim full numerical T3 verification.",
+  "finished_unix": 1790696513.6046183,
+  "model_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged",
+  "model_manifest_sha256": {
+    "flow_encoder": "a9e6d3ab0a0c1bfd721a95e9012beddaa5eb55d25fb75829d904aca1ea9645b2",
+    "meanflow_estimator": "5fa7bfb0dde0a818f50518b6d5b157f5d2998f04137f2137ae47c7b09cba9c7c",
+    "t3": "f4d0570d14a17f278f12d89000f32193d9ac0e12dca3b7468ce8f718f015fbcc",
+    "vocoder": "9d4fc85a206c8b7a1326ad0194317ac98cac7665cc7dac23c5ac83a06a562e69"
+  },
+  "numpy_sampler": "not Torch-identical",
+  "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tts_corrected.wav",
+  "pipeline_source_sha256": "d7928ad4d29c4b407be7f4103fb570355c2e7e6e837050b2cc2dd050d41ab4ab",
+  "python_executable": "/home/terryd/gooning/voicecloning/.venv-nano-cpu/bin/python",
+  "rss_sample_interval_seconds": 0.1,
+  "rtf": 13.792453275239172,
+  "run_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tts_corrected",
+  "sampled_peak_tree_rss_bytes": 885829632,
+  "schema_version": 1,
+  "seed": 20231,
+  "stages": [
+    {
+      "elapsed_seconds": 3.019392251968384,
+      "finished_unix": 1790696450.2791617,
+      "parent_elapsed_seconds": 4.037985563278198,
+      "result": {
+        "conditioning_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+        "field_count": 7,
+        "mode": "zero_shot",
+        "profile": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+        "skipped_optional_fields": [
+          "t3.clap_emb",
+          "t3.cond_prompt_speech_emb",
+          "gen.prompt_feat_len"
+        ]
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 234930176,
+        "rss_bytes": 235831296
+      },
+      "sampled_peak_tree_rss_bytes": 276582400,
+      "schema_version": 1,
+      "stage": "prepare",
+      "started_unix": 1790696447.2597716,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 17.40680170059204,
+      "finished_unix": 1790696468.57392,
+      "parent_elapsed_seconds": 17.885032415390015,
+      "result": {
+        "eos_seen": true,
+        "experimental_t3": true,
+        "generated_token_count": 118,
+        "length_limit_reached": false,
+        "mode": "t3_generated_numpy_sampler",
+        "prefill_sequence_length": 352,
+        "raw_sampled_token_count": 119,
+        "speech_token_count_with_silence": 121,
+        "t3_used": true
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 843563008,
+        "rss_bytes": 395374592
+      },
+      "sampled_peak_tree_rss_bytes": 885829632,
+      "schema_version": 1,
+      "stage": "tokens",
+      "started_unix": 1790696451.1671195,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 3.9427411556243896,
+      "finished_unix": 1790696473.1575663,
+      "parent_elapsed_seconds": 4.545586585998535,
+      "result": {
+        "mel_length": 742,
+        "prompt_feat_length": 500,
+        "prompt_token_count": 250,
+        "speech_token_count": 121
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 437329920,
+        "rss_bytes": 255860736
+      },
+      "sampled_peak_tree_rss_bytes": 479166464,
+      "schema_version": 1,
+      "stage": "flow",
+      "started_unix": 1790696469.2148268,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 20.459104776382446,
+      "finished_unix": 1790696494.2147772,
+      "parent_elapsed_seconds": 21.797128438949585,
+      "result": {
+        "mel_length": 242,
+        "prompt_feat_length": 500,
+        "seed": 20231,
+        "speech_token_count": 121,
+        "steps": 2
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 597495808,
+        "rss_bytes": 489721856
+      },
+      "sampled_peak_tree_rss_bytes": 639614976,
+      "schema_version": 1,
+      "stage": "estimator",
+      "started_unix": 1790696473.755677,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 7.217108964920044,
+      "finished_unix": 1790696502.666195,
+      "parent_elapsed_seconds": 7.66156792640686,
+      "result": {
+        "audio_samples": 116160,
+        "audio_seconds": 4.84,
+        "mel_length": 242
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 338120704,
+        "rss_bytes": 152068096
+      },
+      "sampled_peak_tree_rss_bytes": 371900416,
+      "schema_version": 1,
+      "stage": "vocoder",
+      "started_unix": 1790696495.4490879,
+      "status": "ok"
+    },
+    {
+      "elapsed_seconds": 9.229599475860596,
+      "finished_unix": 1790696512.364803,
+      "parent_elapsed_seconds": 10.808080911636353,
+      "result": {
+        "audio_samples": 116160,
+        "audio_seconds": 4.84,
+        "master_processing": {
+          "achieved_lufs": -22.616598325528635,
+          "gain_db": 8.889159101983864,
+          "highpass_hz": 45,
+          "noise_gate": false,
+          "target_lufs": -19,
+          "true_peak_ceiling_dbtp": -1,
+          "true_peak_oversampling": 4
+        },
+        "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tts_corrected.wav",
+        "sample_rate": 24000,
+        "schema_version": 1,
+        "source": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tts_corrected/vocoder/audio.npz",
+        "trim_fade": {
+          "fade_ms": 20,
+          "n_trim": 480
+        },
+        "watermark": "PerthImplicitWatermarker",
+        "watermark_applied": true
+      },
+      "returncode": 0,
+      "rss": {
+        "peak_rss_bytes": 510042112,
+        "rss_bytes": 492269568
+      },
+      "sampled_peak_tree_rss_bytes": 541405184,
+      "schema_version": 1,
+      "stage": "finish",
+      "started_unix": 1790696503.1352208,
+      "status": "ok"
+    }
+  ],
+  "status": "ok",
+  "supplied_tokens_mode": false,
+  "voice": "asmr_conversational"
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 7.272s
+             CPU time consumed: 1min 6.807s
+                   Memory peak: 1G (swap: 0B)

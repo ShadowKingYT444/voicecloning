@@ -1,0 +1,8 @@
+MemoryMax=3GiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job
+Running as unit: nano-lab-model.service; invocation ID: d20a51960e0e419580abdf22d9530729
+PASS: omitted buffers restored after to_empty-style allocation; checkpoint parameter preserved
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 31.148s
+             CPU time consumed: 27.432s
+                   Memory peak: 1G (swap: 0B)

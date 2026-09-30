@@ -1,0 +1,43 @@
+MemoryMax=3GiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job
+Running as unit: nano-lab-model.service; invocation ID: 3e77c00ddce24afaa04e08eca1439d55
+{"id": "asmr_conversational_morning_31", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "asmr_conversational_morning_47", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "asmr_conversational_question_31", "wer": 0.0, "transcript": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it."}
+{"id": "asmr_conversational_question_47", "wer": 0.0, "transcript": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it."}
+{"id": "asmr_conversational_reassurance_31", "wer": 0.0, "transcript": "You do not need to solve everything tonight. Choose one small step, give yourself a little space, and we can begin again tomorrow."}
+{"id": "asmr_conversational_reassurance_47", "wer": 0.086957, "transcript": "You do not need to solve everything to mind. Choose one small step, give yourself a little space, and we can begin again tomorrow."}
+{"id": "asmr_soft_morning_31", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "asmr_soft_morning_47", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "asmr_soft_question_31", "wer": 0.0, "transcript": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it."}
+{"id": "asmr_soft_question_47", "wer": 0.0, "transcript": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it."}
+{"id": "asmr_soft_reassurance_31", "wer": 0.0, "transcript": "You do not need to solve everything tonight. Choose one small step. Give yourself a little space and we can begin again tomorrow."}
+{"id": "asmr_soft_reassurance_47", "wer": 0.0, "transcript": "You do not need to solve everything tonight. Choose one small step, give yourself a little space, and we can begin again tomorrow."}
+{"id": "asmr_intimate_morning_31", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "asmr_intimate_morning_47", "wer": 0.0, "transcript": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us."}
+{"id": "asmr_intimate_question_31", "wer": 0.0, "transcript": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it."}
+{"id": "asmr_intimate_question_47", "wer": 0.0, "transcript": "Where did you put the silver key? I checked the kitchen twice, but I still cannot find it."}
+{"id": "asmr_intimate_reassurance_31", "wer": 0.0, "transcript": "You do not need to solve everything tonight. Choose one small step, give yourself a little space, and we can begin again tomorrow."}
+{"id": "asmr_intimate_reassurance_47", "wer": 0.0, "transcript": "You do not need to solve everything tonight. Choose one small step, give yourself a little space, and we can begin again tomorrow."}
+{"id": "conv_noise0.65", "wer": 0.0, "transcript": "Hey there, you are doing great. Take a slow breath and let your shoulders relax. I am right here with you."}
+{"id": "conv_noise0.85", "wer": 0.0, "transcript": "Hey there, you are doing great. Take a slow breath and let your shoulders relax. I am right here with you."}
+{"id": "conv_noise1.0", "wer": 0.0, "transcript": "Hey there, you are doing great. Take a slow breath and let your shoulders relax. I am right here with you."}
+{"id": "conv_noise1.15", "wer": 0.0, "transcript": "Hey there, you are doing great. Take a slow breath and let your shoulders relax. I am right here with you."}
+{"id": "conv_noise1.35", "wer": 0.0, "transcript": "Hey there, you are doing great. Take a slow breath and let your shoulders relax. I am right here with you."}
+{"id": "soft_noise0.65", "wer": 0.0, "transcript": "Hey there. You are doing great. Take a slow breath and let your shoulders relax. I am right here with you."}
+{"id": "soft_noise0.85", "wer": 0.0, "transcript": "Hey there. You are doing great. Take a slow breath and let your shoulders relax. I am right here with you."}
+{"id": "soft_noise1.0", "wer": 0.0, "transcript": "Hey there. You are doing great. Take a slow breath and let your shoulders relax. I am right here with you."}
+{"id": "soft_noise1.15", "wer": 0.0, "transcript": "Hey there. You're doing great. Take a slow breath and let your shoulders relax. I am right here with you."}
+{"id": "soft_noise1.35", "wer": 0.047619, "transcript": "Hey there. You were doing great. Take a slow breath and let your shoulders relax. I am right here with you."}
+{"id": "harvey_tune_natural", "wer": 0.263158, "transcript": "Check the details, prepare your next move, and walk into that meeting with confidence."}
+{"id": "harvey_tune_isolated", "wer": 0.0, "transcript": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence."}
+{"id": "harvey_tune_natural_isodecode", "wer": 0.0, "transcript": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence."}
+{"id": "harvey_tune_isolated_natdecode", "wer": 0.263158, "transcript": "Check the details, prepare your next move, and walk into that meeting with confidence."}
+{"id": "harvey_tune_natural_mean", "wer": 0.263158, "transcript": "Check the details, prepare your next move, and walk into that meeting with confidence."}
+{"id": "harvey_tune_isolated_mean", "wer": 0.0, "transcript": "We have a clear plan. Check the details. Prepare your next move and walk into that meeting with confidence."}
+{"id": "harvey_tune_combined_natural", "wer": 0.0, "transcript": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence."}
+{"id": "harvey_tune_combined_isolated", "wer": 0.0, "transcript": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 52.920s
+             CPU time consumed: 53.763s
+                   Memory peak: 2.1G (swap: 0B)

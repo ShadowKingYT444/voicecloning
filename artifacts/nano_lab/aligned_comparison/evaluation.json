@@ -1,0 +1,1492 @@
+{
+  "schema_version": 1,
+  "generated_by": "scripts/nano_lab/reference_evaluator.py",
+  "manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "runtime": {
+    "cpu_threads": 2,
+    "whisper_enabled": true,
+    "speaker_enabled": true,
+    "whisper_model": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+    "heldout_variant": "natural",
+    "excluded_heldout_ids": [
+      "asmr7_heldout_01",
+      "asmr7_heldout_04",
+      "asmr7_heldout_05"
+    ],
+    "rss_mb": {
+      "rss_before_models_mb": 114.73,
+      "rss_after_whisper_mb": 407.72,
+      "rss_after_speaker_model_mb": 455.23,
+      "rss_after_evaluation_mb": 576.05
+    }
+  },
+  "inputs": [
+    {
+      "label": "neutral_base",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/aligned_comparison/neutral_base.wav",
+      "family": "asmr7",
+      "expected_text": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow.",
+      "measurements": {
+        "duration_s": 5.96,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -35.239,
+        "peak_dbfs": -15.122,
+        "crest_db": 20.117,
+        "dc_offset": -3.022e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -26.121,
+        "noise_floor_dbfs_proxy_low10pct_frames": -100.336,
+        "speech_level_dbfs_proxy_high50pct_frames": -33.714,
+        "snr_db_proxy_high50_minus_low10": 66.622,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -109.46,
+        "spectral_centroid_hz": 1577.126,
+        "spectral_flatness_proxy": 0.088982,
+        "high_band_fraction_proxy_ge8khz": 0.00995,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 409.68,
+      "asr": {
+        "text": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 2.48,
+            "text": "I left the blue notebook beside the window.",
+            "avg_logprob": -0.310075,
+            "no_speech_prob": 0.025901
+          },
+          {
+            "start_s": 3.12,
+            "end_s": 5.84,
+            "text": "Please bring it with you when we meet tomorrow.",
+            "avg_logprob": -0.310075,
+            "no_speech_prob": 0.025901
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 1.248492,
+        "real_time_factor": 0.209478,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 17,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ],
+        "hypothesis_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 17,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ],
+        "hypothesis_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.893398,
+        "min_cosine": 0.871011,
+        "max_cosine": 0.915784,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.915784
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.871011
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.144170487997657,
+      "dnsmos_background": 3.5684148350419727,
+      "dnsmos_overall": 2.6541717301144483,
+      "dnsmos_windows": 3,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "neutral_speaker",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/aligned_comparison/neutral_speaker.wav",
+      "family": "asmr7",
+      "expected_text": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow.",
+      "measurements": {
+        "duration_s": 5.36,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -31.017,
+        "peak_dbfs": -13.947,
+        "crest_db": 17.07,
+        "dc_offset": -1.546e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -24.614,
+        "noise_floor_dbfs_proxy_low10pct_frames": -57.866,
+        "speech_level_dbfs_proxy_high50pct_frames": -29.092,
+        "snr_db_proxy_high50_minus_low10": 28.774,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -93.671,
+        "spectral_centroid_hz": 1032.59,
+        "spectral_flatness_proxy": 0.06309,
+        "high_band_fraction_proxy_ge8khz": 0.010096,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 571.56,
+      "asr": {
+        "text": "I left a blue notebook beside the window. Please bring it with you when we meet tomorrow.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 3.04,
+            "text": "I left a blue notebook beside the window.",
+            "avg_logprob": -0.296299,
+            "no_speech_prob": 0.011993
+          },
+          {
+            "start_s": 3.04,
+            "end_s": 5.44,
+            "text": "Please bring it with you when we meet tomorrow.",
+            "avg_logprob": -0.296299,
+            "no_speech_prob": 0.011993
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 0.989546,
+        "real_time_factor": 0.184617,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.058824,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 17,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ],
+        "hypothesis_words": [
+          "i",
+          "left",
+          "a",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.058824,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 17,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ],
+        "hypothesis_words": [
+          "i",
+          "left",
+          "a",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.882259,
+        "min_cosine": 0.856819,
+        "max_cosine": 0.907699,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.907699
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.856819
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.5468005530567863,
+      "dnsmos_background": 3.587645571721766,
+      "dnsmos_overall": 3.030680412803264,
+      "dnsmos_windows": 2,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "neutral_adapter_full",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/aligned_comparison/neutral_adapter_full.wav",
+      "family": "asmr7",
+      "expected_text": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow.",
+      "measurements": {
+        "duration_s": 5.88,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -27.824,
+        "peak_dbfs": -11.003,
+        "crest_db": 16.821,
+        "dc_offset": -1.492e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -21.086,
+        "noise_floor_dbfs_proxy_low10pct_frames": -58.155,
+        "speech_level_dbfs_proxy_high50pct_frames": -26.118,
+        "snr_db_proxy_high50_minus_low10": 32.037,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -91.658,
+        "spectral_centroid_hz": 659.53,
+        "spectral_flatness_proxy": 0.034225,
+        "high_band_fraction_proxy_ge8khz": 0.004932,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 593.42,
+      "asr": {
+        "text": "I left the blue notebook beside the window. Please bran it with you when we meet tomorrow.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 3.04,
+            "text": "I left the blue notebook beside the window.",
+            "avg_logprob": -0.333878,
+            "no_speech_prob": 0.00936
+          },
+          {
+            "start_s": 3.04,
+            "end_s": 5.84,
+            "text": "Please bran it with you when we meet tomorrow.",
+            "avg_logprob": -0.333878,
+            "no_speech_prob": 0.00936
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 1.026823,
+        "real_time_factor": 0.17463,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.058824,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 17,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ],
+        "hypothesis_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bran",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.058824,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 17,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bring",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ],
+        "hypothesis_words": [
+          "i",
+          "left",
+          "the",
+          "blue",
+          "notebook",
+          "beside",
+          "the",
+          "window",
+          "please",
+          "bran",
+          "it",
+          "with",
+          "you",
+          "when",
+          "we",
+          "meet",
+          "tomorrow"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.849604,
+        "min_cosine": 0.827602,
+        "max_cosine": 0.871607,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.871607
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.827602
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.629656808317392,
+      "dnsmos_background": 3.9518959862828527,
+      "dnsmos_overall": 3.2700945828290338,
+      "dnsmos_windows": 3,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "expressive_base",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/aligned_comparison/expressive_base.wav",
+      "family": "asmr7",
+      "expected_text": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened.",
+      "measurements": {
+        "duration_s": 6.56,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -35.614,
+        "peak_dbfs": -13.997,
+        "crest_db": 21.617,
+        "dc_offset": -3.791e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -27.623,
+        "noise_floor_dbfs_proxy_low10pct_frames": -92.362,
+        "speech_level_dbfs_proxy_high50pct_frames": -33.879,
+        "snr_db_proxy_high50_minus_low10": 58.483,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -107.973,
+        "spectral_centroid_hz": 1543.949,
+        "spectral_flatness_proxy": 0.063826,
+        "high_band_fraction_proxy_ge8khz": 0.003966,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 573.79,
+      "asr": {
+        "text": "Really? I thought you would forgotten. That is wonderful news. Tell me what happened.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 2.4,
+            "text": "Really? I thought you would forgotten.",
+            "avg_logprob": -0.526861,
+            "no_speech_prob": 0.031506
+          },
+          {
+            "start_s": 3.0,
+            "end_s": 4.6,
+            "text": "That is wonderful news.",
+            "avg_logprob": -0.526861,
+            "no_speech_prob": 0.031506
+          },
+          {
+            "start_s": 5.3,
+            "end_s": 6.5,
+            "text": "Tell me what happened.",
+            "avg_logprob": -0.526861,
+            "no_speech_prob": 0.031506
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 1.418064,
+        "real_time_factor": 0.216168,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.071429,
+        "reference_word_count": 14,
+        "hypothesis_word_count": 14,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "really",
+          "i",
+          "thought",
+          "you",
+          "had",
+          "forgotten",
+          "that",
+          "is",
+          "wonderful",
+          "news",
+          "tell",
+          "me",
+          "what",
+          "happened"
+        ],
+        "hypothesis_words": [
+          "really",
+          "i",
+          "thought",
+          "you",
+          "would",
+          "forgotten",
+          "that",
+          "is",
+          "wonderful",
+          "news",
+          "tell",
+          "me",
+          "what",
+          "happened"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.071429,
+        "reference_word_count": 14,
+        "hypothesis_word_count": 14,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "really",
+          "i",
+          "thought",
+          "you",
+          "had",
+          "forgotten",
+          "that",
+          "is",
+          "wonderful",
+          "news",
+          "tell",
+          "me",
+          "what",
+          "happened"
+        ],
+        "hypothesis_words": [
+          "really",
+          "i",
+          "thought",
+          "you",
+          "would",
+          "forgotten",
+          "that",
+          "is",
+          "wonderful",
+          "news",
+          "tell",
+          "me",
+          "what",
+          "happened"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.873828,
+        "min_cosine": 0.857752,
+        "max_cosine": 0.889904,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.889904
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.857752
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 2.9903626251014677,
+      "dnsmos_background": 3.4998930077689274,
+      "dnsmos_overall": 2.5181585830203113,
+      "dnsmos_windows": 5,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "expressive_speaker",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/aligned_comparison/expressive_speaker.wav",
+      "family": "asmr7",
+      "expected_text": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened.",
+      "measurements": {
+        "duration_s": 5.28,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -29.605,
+        "peak_dbfs": -9.828,
+        "crest_db": 19.777,
+        "dc_offset": -2.865e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -20.931,
+        "noise_floor_dbfs_proxy_low10pct_frames": -64.8,
+        "speech_level_dbfs_proxy_high50pct_frames": -28.449,
+        "snr_db_proxy_high50_minus_low10": 36.351,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -95.45,
+        "spectral_centroid_hz": 786.859,
+        "spectral_flatness_proxy": 0.03929,
+        "high_band_fraction_proxy_ge8khz": 0.005526,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 574.27,
+      "asr": {
+        "text": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 5.44,
+            "text": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened.",
+            "avg_logprob": -0.301663,
+            "no_speech_prob": 0.012838
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 1.010998,
+        "real_time_factor": 0.191477,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 14,
+        "hypothesis_word_count": 14,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "really",
+          "i",
+          "thought",
+          "you",
+          "had",
+          "forgotten",
+          "that",
+          "is",
+          "wonderful",
+          "news",
+          "tell",
+          "me",
+          "what",
+          "happened"
+        ],
+        "hypothesis_words": [
+          "really",
+          "i",
+          "thought",
+          "you",
+          "had",
+          "forgotten",
+          "that",
+          "is",
+          "wonderful",
+          "news",
+          "tell",
+          "me",
+          "what",
+          "happened"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 14,
+        "hypothesis_word_count": 14,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "really",
+          "i",
+          "thought",
+          "you",
+          "had",
+          "forgotten",
+          "that",
+          "is",
+          "wonderful",
+          "news",
+          "tell",
+          "me",
+          "what",
+          "happened"
+        ],
+        "hypothesis_words": [
+          "really",
+          "i",
+          "thought",
+          "you",
+          "had",
+          "forgotten",
+          "that",
+          "is",
+          "wonderful",
+          "news",
+          "tell",
+          "me",
+          "what",
+          "happened"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.847749,
+        "min_cosine": 0.828705,
+        "max_cosine": 0.866793,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.866793
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.828705
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.617703349051026,
+      "dnsmos_background": 4.006569684390081,
+      "dnsmos_overall": 3.285306312529606,
+      "dnsmos_windows": 2,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "expressive_adapter_full",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/aligned_comparison/expressive_adapter_full.wav",
+      "family": "asmr7",
+      "expected_text": "Really? I thought you had forgotten. That is wonderful news. Tell me what happened.",
+      "measurements": {
+        "duration_s": 6.56,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -27.638,
+        "peak_dbfs": -10.428,
+        "crest_db": 17.211,
+        "dc_offset": -1.422e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -19.335,
+        "noise_floor_dbfs_proxy_low10pct_frames": -66.372,
+        "speech_level_dbfs_proxy_high50pct_frames": -25.964,
+        "snr_db_proxy_high50_minus_low10": 40.408,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -99.731,
+        "spectral_centroid_hz": 1004.048,
+        "spectral_flatness_proxy": 0.053846,
+        "high_band_fraction_proxy_ge8khz": 0.006842,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 574.33,
+      "asr": {
+        "text": "Really? I thought you would forgotten. That is wonderful news. Tell me what happened.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 6.4,
+            "text": "Really? I thought you would forgotten. That is wonderful news. Tell me what happened.",
+            "avg_logprob": -0.295758,
+            "no_speech_prob": 0.018373
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 1.275967,
+        "real_time_factor": 0.194507,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.071429,
+        "reference_word_count": 14,
+        "hypothesis_word_count": 14,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "really",
+          "i",
+          "thought",
+          "you",
+          "had",
+          "forgotten",
+          "that",
+          "is",
+          "wonderful",
+          "news",
+          "tell",
+          "me",
+          "what",
+          "happened"
+        ],
+        "hypothesis_words": [
+          "really",
+          "i",
+          "thought",
+          "you",
+          "would",
+          "forgotten",
+          "that",
+          "is",
+          "wonderful",
+          "news",
+          "tell",
+          "me",
+          "what",
+          "happened"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.071429,
+        "reference_word_count": 14,
+        "hypothesis_word_count": 14,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "really",
+          "i",
+          "thought",
+          "you",
+          "had",
+          "forgotten",
+          "that",
+          "is",
+          "wonderful",
+          "news",
+          "tell",
+          "me",
+          "what",
+          "happened"
+        ],
+        "hypothesis_words": [
+          "really",
+          "i",
+          "thought",
+          "you",
+          "would",
+          "forgotten",
+          "that",
+          "is",
+          "wonderful",
+          "news",
+          "tell",
+          "me",
+          "what",
+          "happened"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.880438,
+        "min_cosine": 0.85701,
+        "max_cosine": 0.903866,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.903866
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.85701
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.6364555992699357,
+      "dnsmos_background": 4.119833800317773,
+      "dnsmos_overall": 3.3716616522052476,
+      "dnsmos_windows": 5,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "quiet_base",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/aligned_comparison/quiet_base.wav",
+      "family": "asmr7",
+      "expected_text": "The room is quiet now. Take a slow breath. We have plenty of time to talk.",
+      "measurements": {
+        "duration_s": 5.36,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -34.742,
+        "peak_dbfs": -14.112,
+        "crest_db": 20.63,
+        "dc_offset": -1.222e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -27.594,
+        "noise_floor_dbfs_proxy_low10pct_frames": -100.983,
+        "speech_level_dbfs_proxy_high50pct_frames": -32.058,
+        "snr_db_proxy_high50_minus_low10": 68.925,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -109.322,
+        "spectral_centroid_hz": 2027.032,
+        "spectral_flatness_proxy": 0.120557,
+        "high_band_fraction_proxy_ge8khz": 0.022718,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 575.4,
+      "asr": {
+        "text": "The room is quiet now. Take a slow breath. We have plenty of time to talk.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 5.44,
+            "text": "The room is quiet now. Take a slow breath. We have plenty of time to talk.",
+            "avg_logprob": -0.315762,
+            "no_speech_prob": 0.008634
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 1.34317,
+        "real_time_factor": 0.250591,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 16,
+        "hypothesis_word_count": 16,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "the",
+          "room",
+          "is",
+          "quiet",
+          "now",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "we",
+          "have",
+          "plenty",
+          "of",
+          "time",
+          "to",
+          "talk"
+        ],
+        "hypothesis_words": [
+          "the",
+          "room",
+          "is",
+          "quiet",
+          "now",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "we",
+          "have",
+          "plenty",
+          "of",
+          "time",
+          "to",
+          "talk"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 16,
+        "hypothesis_word_count": 16,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "the",
+          "room",
+          "is",
+          "quiet",
+          "now",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "we",
+          "have",
+          "plenty",
+          "of",
+          "time",
+          "to",
+          "talk"
+        ],
+        "hypothesis_words": [
+          "the",
+          "room",
+          "is",
+          "quiet",
+          "now",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "we",
+          "have",
+          "plenty",
+          "of",
+          "time",
+          "to",
+          "talk"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.877816,
+        "min_cosine": 0.865062,
+        "max_cosine": 0.890571,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.890571
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.865062
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.247107731484254,
+      "dnsmos_background": 3.451781692984141,
+      "dnsmos_overall": 2.6739687250919175,
+      "dnsmos_windows": 2,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "quiet_speaker",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/aligned_comparison/quiet_speaker.wav",
+      "family": "asmr7",
+      "expected_text": "The room is quiet now. Take a slow breath. We have plenty of time to talk.",
+      "measurements": {
+        "duration_s": 4.88,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -30.978,
+        "peak_dbfs": -11.73,
+        "crest_db": 19.248,
+        "dc_offset": -1.558e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -22.546,
+        "noise_floor_dbfs_proxy_low10pct_frames": -80.599,
+        "speech_level_dbfs_proxy_high50pct_frames": -29.646,
+        "snr_db_proxy_high50_minus_low10": 50.953,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -104.19,
+        "spectral_centroid_hz": 1016.858,
+        "spectral_flatness_proxy": 0.06348,
+        "high_band_fraction_proxy_ge8khz": 0.010005,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 575.89,
+      "asr": {
+        "text": "The room is quiet now. Take a slow breath. We have plenty of time to talk.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 1.88,
+            "text": "The room is quiet now.",
+            "avg_logprob": -0.340392,
+            "no_speech_prob": 0.007292
+          },
+          {
+            "start_s": 1.88,
+            "end_s": 3.08,
+            "text": "Take a slow breath.",
+            "avg_logprob": -0.340392,
+            "no_speech_prob": 0.007292
+          },
+          {
+            "start_s": 3.08,
+            "end_s": 4.88,
+            "text": "We have plenty of time to talk.",
+            "avg_logprob": -0.340392,
+            "no_speech_prob": 0.007292
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 0.992942,
+        "real_time_factor": 0.203472,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 16,
+        "hypothesis_word_count": 16,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "the",
+          "room",
+          "is",
+          "quiet",
+          "now",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "we",
+          "have",
+          "plenty",
+          "of",
+          "time",
+          "to",
+          "talk"
+        ],
+        "hypothesis_words": [
+          "the",
+          "room",
+          "is",
+          "quiet",
+          "now",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "we",
+          "have",
+          "plenty",
+          "of",
+          "time",
+          "to",
+          "talk"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 16,
+        "hypothesis_word_count": 16,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "the",
+          "room",
+          "is",
+          "quiet",
+          "now",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "we",
+          "have",
+          "plenty",
+          "of",
+          "time",
+          "to",
+          "talk"
+        ],
+        "hypothesis_words": [
+          "the",
+          "room",
+          "is",
+          "quiet",
+          "now",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "we",
+          "have",
+          "plenty",
+          "of",
+          "time",
+          "to",
+          "talk"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.863104,
+        "min_cosine": 0.846027,
+        "max_cosine": 0.880182,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.880182
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.846027
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.4025894571825557,
+      "dnsmos_background": 3.8486822892077157,
+      "dnsmos_overall": 2.996908904422972,
+      "dnsmos_windows": 1,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "quiet_adapter_full",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/aligned_comparison/quiet_adapter_full.wav",
+      "family": "asmr7",
+      "expected_text": "The room is quiet now. Take a slow breath. We have plenty of time to talk.",
+      "measurements": {
+        "duration_s": 6.36,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -26.713,
+        "peak_dbfs": -7.193,
+        "crest_db": 19.52,
+        "dc_offset": -2.109e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -16.061,
+        "noise_floor_dbfs_proxy_low10pct_frames": -63.654,
+        "speech_level_dbfs_proxy_high50pct_frames": -28.483,
+        "snr_db_proxy_high50_minus_low10": 35.171,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -93.746,
+        "spectral_centroid_hz": 718.213,
+        "spectral_flatness_proxy": 0.031306,
+        "high_band_fraction_proxy_ge8khz": 0.003383,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 576.02,
+      "asr": {
+        "text": "The room is quiet now. Take a slow breath. We have plenty of time to talk.",
+        "segments": [
+          {
+            "start_s": 0.0,
+            "end_s": 2.12,
+            "text": "The room is quiet now.",
+            "avg_logprob": -0.32383,
+            "no_speech_prob": 0.006163
+          },
+          {
+            "start_s": 2.12,
+            "end_s": 4.12,
+            "text": "Take a slow breath.",
+            "avg_logprob": -0.32383,
+            "no_speech_prob": 0.006163
+          },
+          {
+            "start_s": 4.12,
+            "end_s": 6.24,
+            "text": "We have plenty of time to talk.",
+            "avg_logprob": -0.32383,
+            "no_speech_prob": 0.006163
+          }
+        ],
+        "language": "en",
+        "elapsed_s": 1.467574,
+        "real_time_factor": 0.230751,
+        "model": "bundled faster-whisper tiny.en",
+        "compute_type": "int8",
+        "cpu_threads": 2
+      },
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 16,
+        "hypothesis_word_count": 16,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "the",
+          "room",
+          "is",
+          "quiet",
+          "now",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "we",
+          "have",
+          "plenty",
+          "of",
+          "time",
+          "to",
+          "talk"
+        ],
+        "hypothesis_words": [
+          "the",
+          "room",
+          "is",
+          "quiet",
+          "now",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "we",
+          "have",
+          "plenty",
+          "of",
+          "time",
+          "to",
+          "talk"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 16,
+        "hypothesis_word_count": 16,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "the",
+          "room",
+          "is",
+          "quiet",
+          "now",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "we",
+          "have",
+          "plenty",
+          "of",
+          "time",
+          "to",
+          "talk"
+        ],
+        "hypothesis_words": [
+          "the",
+          "room",
+          "is",
+          "quiet",
+          "now",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "we",
+          "have",
+          "plenty",
+          "of",
+          "time",
+          "to",
+          "talk"
+        ]
+      },
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.868058,
+        "min_cosine": 0.864161,
+        "max_cosine": 0.871955,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.871955
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.864161
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.5464605896777073,
+      "dnsmos_background": 4.019069413322565,
+      "dnsmos_overall": 3.2353118523186213,
+      "dnsmos_windows": 4,
+      "dnsmos_repeated_short_clip": true
+    }
+  ],
+  "synthesis_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/aligned_comparison/manifest.json",
+  "reference_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "evaluation_role": "development_selection"
+}

@@ -1,0 +1,36 @@
+{
+  "cases": [
+    {
+      "id": "harvey_cold",
+      "before_seconds": 30.222713543000282,
+      "after_seconds": 25.865932000997418,
+      "audio_seconds": 6.54,
+      "tokens_exact": true,
+      "mel_exact": true,
+      "wav_exact": false,
+      "wav_max_abs": 7.152557373046875e-07
+    },
+    {
+      "id": "harvey_warm_repeat",
+      "before_seconds": 4.548685672001739,
+      "after_seconds": 3.157398519004346,
+      "audio_seconds": 6.54,
+      "tokens_exact": true,
+      "mel_exact": true,
+      "wav_exact": false,
+      "wav_max_abs": 7.152557373046875e-07
+    },
+    {
+      "id": "harvey_warm_new",
+      "before_seconds": 4.271029600000475,
+      "after_seconds": 2.707963947999815,
+      "audio_seconds": 4.1,
+      "tokens_exact": true,
+      "mel_exact": true,
+      "wav_exact": false,
+      "wav_max_abs": 7.152557373046875e-07
+    }
+  ],
+  "rss_after_mib": 1939.57,
+  "end_to_end_seconds": 46.84481122800207
+}

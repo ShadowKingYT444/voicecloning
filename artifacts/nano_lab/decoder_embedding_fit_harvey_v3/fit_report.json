@@ -1,0 +1,164 @@
+{
+  "baseline_embedding": {
+    "cosine_to_itself": 1.0,
+    "norm": 12.606304168701172,
+    "shape": [
+      1,
+      192
+    ]
+  },
+  "cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_harvey_aligned_cache.json",
+  "cache_sha256": "10cf52f83a8eb014dad1239983b3dd43a4e8b99c1fd4234b26c124a080cd32b1",
+  "command": [
+    "scripts/nano_lab/fit_decoder_embedding.py",
+    "--prepare-dir",
+    "artifacts/nano_lab/mel_calibration_harvey",
+    "--output-dir",
+    "artifacts/nano_lab/decoder_embedding_fit_harvey_v3",
+    "--max-steps",
+    "40"
+  ],
+  "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+  "conditionals_sha256": "3b7db489a52a1a6cf14a9a43148d11b4689c32b090124aa80b02f162ef5480f2",
+  "device": "cuda",
+  "diagnostic_only": true,
+  "disclosure": "Decoder embedding fit uses source-token reconstruction targets. It is not text generation and does not establish zero-shot voice cloning quality.",
+  "elapsed_seconds": 23.58505926399812,
+  "experimental": true,
+  "format": "nano_decoder_embedding_fit_v1",
+  "history": [],
+  "hyperparameters": {
+    "envelope_weight": 0.25,
+    "lr": 0.01,
+    "max_steps": 40,
+    "min_cosine": 0.98,
+    "patience": 3,
+    "regularizer": 0.01,
+    "requested_seed": null,
+    "steps": 2
+  },
+  "loader": {
+    "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+    "checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+    "flow_encoder": {
+      "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+      "loaded_tensors": 209,
+      "missing_tensors": [],
+      "selected_tensors": 209,
+      "skipped_tensors": 2282,
+      "unexpected_tensors": []
+    },
+    "frozen": true,
+    "loaded_components": [
+      "flow.input_embedding",
+      "flow.encoder",
+      "flow.encoder_proj",
+      "flow.spk_embed_affine_layer",
+      "flow.decoder.estimator"
+    ],
+    "meanflow_estimator": {
+      "checkpoint": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+      "loaded_tensors": 913,
+      "missing_tensors": [],
+      "selected_tensors": 913,
+      "skipped_tensors": 1578,
+      "unexpected_tensors": []
+    },
+    "omitted_components": [
+      "T3",
+      "S3Gen tokenizer",
+      "S3Gen speaker encoder",
+      "HiFT vocoder"
+    ]
+  },
+  "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+  "model_dir": "/home/terryd/gooning/voicecloning/models/chatterbox-nano",
+  "native_row_seeds": {
+    "harvey_repair_001": 31,
+    "harvey_repair_004": 2049,
+    "harvey_repair_005": 1040
+  },
+  "parity": {
+    "atol": 0.0001,
+    "failures": [
+      {
+        "atol": 0.0001,
+        "id": "harvey_repair_001",
+        "max_abs": 2.661346435546875,
+        "reason": "numeric",
+        "rmse": 0.5219535315360173
+      },
+      {
+        "atol": 0.0001,
+        "id": "harvey_repair_005",
+        "max_abs": 3.7091712951660156,
+        "reason": "numeric",
+        "rmse": 0.6038890583680547
+      },
+      {
+        "atol": 0.0001,
+        "id": "harvey_repair_004",
+        "max_abs": 2.1709208488464355,
+        "reason": "numeric",
+        "rmse": 0.48203105496511156
+      }
+    ],
+    "max_abs": 3.7091712951660156,
+    "rmse_mean": 0.5359578816230611,
+    "rows": [
+      {
+        "id": "harvey_repair_001",
+        "max_abs": 2.661346435546875,
+        "passed": false,
+        "rmse": 0.5219535315360173,
+        "shape": [
+          1,
+          80,
+          215
+        ]
+      },
+      {
+        "id": "harvey_repair_005",
+        "max_abs": 3.7091712951660156,
+        "passed": false,
+        "rmse": 0.6038890583680547,
+        "shape": [
+          1,
+          80,
+          225
+        ]
+      },
+      {
+        "id": "harvey_repair_004",
+        "max_abs": 2.1709208488464355,
+        "passed": false,
+        "rmse": 0.48203105496511156,
+        "shape": [
+          1,
+          80,
+          173
+        ]
+      }
+    ],
+    "status": "failed"
+  },
+  "peak_rss_bytes": 1545105408,
+  "prepare_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_harvey",
+  "prepare_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_harvey/manifest.json",
+  "prepare_manifest_sha256": "4a6dbb2a52922bce8c043af290668b72dc9c1aad55446b9bd85146f54f470201",
+  "rss_before_load_bytes": 749617152,
+  "status": "parity_failed",
+  "target_alignment": {
+    "generated_frames": "2*(N+3) minus reference mel/token offset (0 or 1)",
+    "source_frames": "2*N or 2*N-1",
+    "speech_tokens_plus_s3gen_sil": 3,
+    "trim_policy": "crop native output to source frames; account for three silence tokens, source framing tail, and measured odd reference frame; no time warp/resampling/DTW"
+  },
+  "train_rows": [
+    "harvey_repair_001",
+    "harvey_repair_005"
+  ],
+  "valid_rows": [
+    "harvey_repair_004"
+  ]
+}

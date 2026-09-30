@@ -1,0 +1,68 @@
+{
+  "elapsed_seconds": 6.1034486293792725,
+  "finished_unix": 1790729039.7275336,
+  "result": {
+    "mel_length": 848,
+    "prompt_feat_length": 500,
+    "prompt_token_count": 250,
+    "runtime": {
+      "cuda_arena_shrinkage_after_run": false,
+      "cuda_kv_cache_location": "numpy_cpu",
+      "cuda_kv_resident_active": false,
+      "cuda_kv_resident_requested": false,
+      "cuda_memory_pattern_enabled": null,
+      "fallback_disabled": false,
+      "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged_adapter_aligned_all_attn_decoder_attention/flow_encoder/nano_flow_encoder.onnx",
+      "inputs": [
+        "speech_tokens",
+        "token_lengths"
+      ],
+      "io_binding_calls": 0,
+      "ort_provider": "cpu",
+      "ort_version": "1.29.0",
+      "outputs": [
+        "mu",
+        "mask"
+      ],
+      "profile_requested": false,
+      "profiling": {
+        "enabled": false,
+        "ended": true,
+        "profile_path": null,
+        "profile_prefix": null
+      },
+      "provider_metadata": {
+        "available": [
+          "AzureExecutionProvider",
+          "CPUExecutionProvider"
+        ],
+        "cuda_options": null,
+        "preload_dlls": {
+          "attempted": false,
+          "directory": null,
+          "status": "not_requested"
+        },
+        "requested": "cpu"
+      },
+      "providers": [
+        "CPUExecutionProvider"
+      ],
+      "requested_provider_options": null,
+      "requested_providers": [
+        "CPUExecutionProvider"
+      ],
+      "stage": "flow_encoder",
+      "threads": "bounded by caller; default 1 intra-op and 1 inter-op",
+      "verification_only": false
+    },
+    "speech_token_count": 174
+  },
+  "rss": {
+    "peak_rss_bytes": 465846272,
+    "rss_bytes": 330969088
+  },
+  "schema_version": 1,
+  "stage": "flow",
+  "started_unix": 1790729033.6240864,
+  "status": "ok"
+}

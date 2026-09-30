@@ -1,0 +1,20 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 04c0367ae502462e94487aa53431acfb
+Traceback (most recent call last):
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/level_match.py", line 80, in <module>
+    main()
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/level_match.py", line 35, in main
+    rows = json.loads(args.manifest.read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/terryd/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/nano_lab/decoder_attention_prompt_comparison/level_inputs.json'
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 2.350s
+             CPU time consumed: 2.524s
+                   Memory peak: 59.3M (swap: 0B)

@@ -1,0 +1,8 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"module": "chatterbox.models.s3gen.hifigan", "import_seconds": 9.365790980000384, "rss_mib": 547.7890625, "peak_rss_mib": 546.109375}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 11.712s
+             CPU time consumed: 9.691s
+                   Memory peak: 807.1M (swap: 0B)

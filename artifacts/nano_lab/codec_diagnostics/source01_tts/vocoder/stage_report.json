@@ -1,0 +1,17 @@
+{
+  "elapsed_seconds": 9.966261863708496,
+  "finished_unix": 1790695846.7512686,
+  "result": {
+    "audio_samples": 140160,
+    "audio_seconds": 5.84,
+    "mel_length": 292
+  },
+  "rss": {
+    "peak_rss_bytes": 363012096,
+    "rss_bytes": 162709504
+  },
+  "schema_version": 1,
+  "stage": "vocoder",
+  "started_unix": 1790695836.7850106,
+  "status": "ok"
+}

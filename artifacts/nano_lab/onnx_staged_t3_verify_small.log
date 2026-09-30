@@ -1,0 +1,55 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{
+  "errors": [],
+  "inputs": [
+    "inputs_embeds",
+    "cache_position",
+    "past_0",
+    "past_1",
+    "past_2",
+    "past_3",
+    "past_4",
+    "past_5",
+    "past_6",
+    "past_7",
+    "past_8",
+    "past_9",
+    "past_10",
+    "past_11",
+    "past_12",
+    "past_13",
+    "past_14",
+    "past_15",
+    "past_16",
+    "past_17",
+    "past_18",
+    "past_19",
+    "past_20",
+    "past_21",
+    "past_22",
+    "past_23"
+  ],
+  "max_abs_error": 1.71661376953125e-05,
+  "max_relative_error": 0.19119669876203577,
+  "method": "separate pure-ORT process against saved PyTorch reference arrays",
+  "outputs": 50,
+  "outputs_per_case": {
+    "decode": {
+      "errors": 0,
+      "outputs": 25
+    },
+    "prefill": {
+      "errors": 0,
+      "outputs": 25
+    }
+  },
+  "provider": "CPUExecutionProvider",
+  "stage": "t3",
+  "status": "verified"
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 4.459s
+             CPU time consumed: 4.254s
+                   Memory peak: 977.8M (swap: 0B)

@@ -1,0 +1,9 @@
+{
+  "status": "normalization_not_adopted",
+  "matched_tokens_raw_vs_old_cache": true,
+  "raw_small_wer": 0.0,
+  "normalized_small_wer": 0.083333,
+  "token_differences": 9,
+  "peak_rss_mib": 2334.87890625,
+  "interpretation": "Same raw source tokens can reconstruct the words correctly with the native GPU path/acoustic seed10031. Earlier CPU staged reconstruction with a different acoustic noise realization damaged the phrase. This comparison does not isolate backend from noise. Loudness-normalized target tokens do not improve this matched GPU test. Do not claim irreversible token information loss."
+}

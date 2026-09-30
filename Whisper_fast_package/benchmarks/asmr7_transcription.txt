@@ -1,0 +1,3 @@
+and the guts to kiss me as tonight. It's my birthday, so they better make these seven minutes worth it. Please be cute, please be cute. Let's see, who's the lucky person who gets to kiss me? Wait a minute. Do I know you? Will you stop pushing me? I'm getting up already. I don't need to be shoved in my own closet.
+
+Benchmark: 3.161 s on 30.00 s audio; RTF 0.105; 29.64 s selected by VAD.

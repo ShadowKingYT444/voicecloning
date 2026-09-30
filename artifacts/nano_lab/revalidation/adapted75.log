@@ -1,0 +1,15 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+loaded PerthNet (Implicit) at step 250,000
+  0%|          | 0/700 [00:00<?, ?it/s]  0%|          | 1/700 [00:00<02:17,  5.08it/s]  1%|▏         | 9/700 [00:00<00:19, 36.01it/s]  3%|▎         | 21/700 [00:00<00:10, 66.16it/s]  5%|▍         | 33/700 [00:00<00:08, 82.95it/s]  6%|▋         | 44/700 [00:00<00:07, 90.35it/s]  8%|▊         | 54/700 [00:00<00:06, 92.62it/s]  9%|▉         | 65/700 [00:00<00:06, 97.50it/s] 11%|█         | 76/700 [00:00<00:06, 97.28it/s] 12%|█▏        | 86/700 [00:01<00:06, 88.10it/s] 14%|█▎        | 96/700 [00:01<00:07, 85.04it/s] 15%|█▌        | 105/700 [00:01<00:07, 80.34it/s] 16%|█▋        | 114/700 [00:01<00:07, 74.01it/s] 18%|█▊        | 124/700 [00:01<00:07, 79.57it/s] 19%|█▉        | 135/700 [00:01<00:06, 86.52it/s] 21%|██        | 145/700 [00:01<00:06, 90.09it/s] 22%|██▏       | 155/700 [00:01<00:05, 91.74it/s] 24%|██▎       | 165/700 [00:02<00:06, 85.58it/s] 25%|██▍       | 174/700 [00:02<00:06, 80.61it/s] 26%|██▌       | 183/700 [00:02<00:06, 75.86it/s] 27%|██▋       | 191/700 [00:02<00:06, 73.16it/s] 28%|██▊       | 197/700 [00:02<00:06, 78.11it/s]
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  5.26it/s]100%|██████████| 2/2 [00:00<00:00,  7.68it/s]
+Segment 1: 8.04s audio in 7.82s
+{"output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/revalidation/asmr_conversational_adapted.wav", "report": "artifacts/nano_lab/revalidation/asmr_conversational_adapted.wav.json", "peak_rss_mib": 2311.66796875}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 45.334s
+             CPU time consumed: 42.074s
+                   Memory peak: 2.4G (swap: 0B)

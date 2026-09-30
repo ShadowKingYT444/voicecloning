@@ -1,0 +1,73 @@
+{
+  "conditioning_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_soft_morning_31.conds.pt",
+  "conditioning_cache_sha256": "e6b44fc6e20bfeccbbcca7c68ddccede2618706ed3349878fcedd9b7d70ad5da",
+  "decoder": "meanflow",
+  "keys": {
+    "gen.embedding": {
+      "dtype": "float32",
+      "shape": [
+        1,
+        192
+      ]
+    },
+    "gen.prompt_feat": {
+      "dtype": "float32",
+      "shape": [
+        1,
+        500,
+        80
+      ]
+    },
+    "gen.prompt_token": {
+      "dtype": "int64",
+      "shape": [
+        1,
+        250
+      ]
+    },
+    "gen.prompt_token_len": {
+      "dtype": "int64",
+      "shape": [
+        1
+      ]
+    },
+    "t3.cond_prompt_speech_tokens": {
+      "dtype": "int64",
+      "shape": [
+        1,
+        348
+      ]
+    },
+    "t3.emotion_adv": {
+      "dtype": "float32",
+      "shape": [
+        1,
+        1,
+        1
+      ]
+    },
+    "t3.speaker_emb": {
+      "dtype": "float32",
+      "shape": [
+        1,
+        256
+      ]
+    }
+  },
+  "mode": "zero_shot",
+  "profile": "/home/terryd/gooning/voicecloning/voices/nano/asmr_soft.json",
+  "profile_sha256": "c2cf5aea7658bc99e897a5c9b1c5f7c5db77492576730815ba94ff558f452c91",
+  "sampling": {
+    "repetition_penalty": 1.2,
+    "temperature": 0.65,
+    "top_k": 1000,
+    "top_p": 0.95
+  },
+  "schema_version": 1,
+  "skipped_optional_fields": [
+    "t3.clap_emb",
+    "t3.cond_prompt_speech_emb",
+    "gen.prompt_feat_len"
+  ],
+  "steps": 2
+}

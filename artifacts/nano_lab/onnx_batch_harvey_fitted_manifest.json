@@ -1,0 +1,20 @@
+[
+  {
+    "id": "harvey_cold",
+    "voice": "harvey_fitted_experimental",
+    "text": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence.",
+    "seed": 31
+  },
+  {
+    "id": "harvey_warm_repeat",
+    "voice": "harvey_fitted_experimental",
+    "text": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence.",
+    "seed": 31
+  },
+  {
+    "id": "harvey_warm_new",
+    "voice": "harvey_fitted_experimental",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+    "seed": 47
+  }
+]

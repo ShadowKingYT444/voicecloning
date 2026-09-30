@@ -1,0 +1,11 @@
+{
+  "full_token_count": 371,
+  "mask_layout": "B,1,T",
+  "mel_length": 742,
+  "mu_layout": "B,80,T",
+  "prompt_feat_length": 500,
+  "prompt_token_count": 250,
+  "schema_version": 1,
+  "speech_token_count": 121,
+  "token_mode": "t3_generated_numpy_sampler"
+}

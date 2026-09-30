@@ -1,0 +1,26 @@
+[
+  {
+    "id": "source_heldout01",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/asmr_same_text/level_matched/source_heldout01.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "asmr_same_text"
+  },
+  {
+    "id": "heldout01_base",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/asmr_same_text/level_matched/heldout01_base.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "asmr_same_text"
+  },
+  {
+    "id": "heldout01_adapter",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/asmr_same_text/level_matched/heldout01_adapter.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "asmr_same_text"
+  },
+  {
+    "id": "heldout01_combined",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/asmr_same_text/level_matched/heldout01_combined.wav",
+    "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+    "source_group": "asmr_same_text"
+  }
+]

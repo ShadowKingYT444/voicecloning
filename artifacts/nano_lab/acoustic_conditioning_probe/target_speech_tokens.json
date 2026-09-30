@@ -1,0 +1,20 @@
+{
+  "disclosure": "These IDs are copied from source speech for reconstruction diagnostics. They are not text-generated TTS tokens.",
+  "kind": "genuine_source_target_tokens",
+  "source_audio": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_01/asmr7_heldout_01__raw.wav",
+  "source_audio_sha256": "29ccb07d11663151962f23bbf93e95796d8a0f39dd51c0b956b5a05bef5960d6",
+  "synthetic_tts": false,
+  "target_tokens": {
+    "count": 253,
+    "dtype": "int64",
+    "sha256": "c1f720377e1bc1c993160c334e9a1c723669533a51f7a49ca512ebdf98a8fcaf",
+    "shape": [
+      253
+    ],
+    "silence_count": 3,
+    "silence_id": 4299,
+    "source_ids_count": 250
+  },
+  "target_tokens_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_conditioning_probe/target_speech_tokens.npy",
+  "text_label": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?"
+}

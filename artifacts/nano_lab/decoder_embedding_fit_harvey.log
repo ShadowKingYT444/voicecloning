@@ -1,0 +1,24 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{
+  "command": [
+    "scripts/nano_lab/fit_decoder_embedding.py",
+    "--prepare-dir",
+    "artifacts/nano_lab/mel_calibration_harvey",
+    "--output-dir",
+    "artifacts/nano_lab/decoder_embedding_fit_harvey",
+    "--max-steps",
+    "40"
+  ],
+  "error": "prepared reconstructed mel frame count for harvey_repair_001 is 215; expected 216 for N+3 tokens",
+  "error_type": "ValueError",
+  "format": "nano_decoder_embedding_fit_v1",
+  "output_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit_harvey",
+  "peak_rss_bytes": 534876160,
+  "status": "failed"
+}
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 6.981s
+             CPU time consumed: 6.679s
+                   Memory peak: 299.4M (swap: 0B)

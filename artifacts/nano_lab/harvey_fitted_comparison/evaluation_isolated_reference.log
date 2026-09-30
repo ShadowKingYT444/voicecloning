@@ -1,0 +1,19 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "business_base", "cosine": 0.722667, "wer": null, "dnsmos_overall": 3.296747025851074}
+{"id": "business_speaker", "cosine": 0.703496, "wer": null, "dnsmos_overall": 3.375423524315158}
+{"id": "business_adapter_half", "cosine": 0.689338, "wer": null, "dnsmos_overall": 3.3785319116300663}
+{"id": "business_adapter_full", "cosine": 0.707799, "wer": null, "dnsmos_overall": 3.430301195220185}
+{"id": "question_base", "cosine": 0.72659, "wer": null, "dnsmos_overall": 3.412468643398898}
+{"id": "question_speaker", "cosine": 0.732533, "wer": null, "dnsmos_overall": 3.5151249237963245}
+{"id": "question_adapter_half", "cosine": 0.70179, "wer": null, "dnsmos_overall": 3.491440936135408}
+{"id": "question_adapter_full", "cosine": 0.74241, "wer": null, "dnsmos_overall": 3.424603824392908}
+{"id": "narrative_base", "cosine": 0.716905, "wer": null, "dnsmos_overall": 3.4304750852034567}
+{"id": "narrative_speaker", "cosine": 0.749627, "wer": null, "dnsmos_overall": 3.4880401393641733}
+{"id": "narrative_adapter_half", "cosine": 0.738054, "wer": null, "dnsmos_overall": 3.459869022488947}
+{"id": "narrative_adapter_full", "cosine": 0.754006, "wer": null, "dnsmos_overall": 3.4142059041757076}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 52.145s
+             CPU time consumed: 1min 36.805s
+                   Memory peak: 485.4M (swap: 0B)

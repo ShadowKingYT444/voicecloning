@@ -1,0 +1,28 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+/home/terryd/gooning/voicecloning/scripts/nano_lab/onnx_staged.py:208: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+  torch.onnx.export(
+/home/terryd/gooning/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/utils/mask.py:186: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  max_len = max_len if max_len > 0 else lengths.max().item()
+/home/terryd/gooning/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/transformer/embedding.py:229: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if self.pe.size(1) >= x.size(1) * 2 - 1:
+/home/terryd/gooning/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/utils/mask.py:161: TracerWarning: Converting a tensor to a Python number might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if (chunk_masks.sum(dim=-1) == 0).sum().item() != 0:
+/home/terryd/gooning/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/transformer/attention.py:295: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if cache.size(0) > 0:
+/home/terryd/gooning/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/transformer/attention.py:324: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if matrix_ac.shape != matrix_bd.shape:
+/home/terryd/gooning/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/transformer/attention.py:108: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if mask.size(2) > 0:  # time2 > 0
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/torch/onnx/_internal/torchscript_exporter/jit_utils.py:308: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_node_shape_type_inference(node, params_dict, opset_version)
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/torch/onnx/_internal/torchscript_exporter/utils.py:714: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_graph_shape_type_inference(
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/torch/onnx/_internal/torchscript_exporter/utils.py:1187: UserWarning: Constant folding - Only steps=1 can be constant folded for opset >= 10 onnx::Slice op. Constant folding not applied. (Triggered internally at /pytorch/torch/csrc/jit/passes/onnx/constant_fold.cpp:178.)
+  _C._jit_pass_onnx_graph_shape_type_inference(
+Stopping job: aggregate process RSS exceeded 1280 MiB
+          Finished with result: success
+Main processes terminated with: code=killed, status=15/TERM
+               Service runtime: 24.054s
+             CPU time consumed: 20.309s
+                   Memory peak: 1G (swap: 0B)

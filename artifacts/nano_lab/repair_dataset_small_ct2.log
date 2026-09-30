@@ -1,0 +1,43 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: e661ba3876f04a5bb6fe0127f231b7df
+{"id": "calibration_asmr7_train_01", "wer": 0.888889, "transcript": "Okay, gather around everybody. Great. So, as the one throwing the party..."}
+{"id": "calibration_asmr7_train_02", "wer": 0.0, "transcript": "There's a closet in pretty much every room in this house, so we might as well put them to use."}
+{"id": "asmr7_repair_001", "wer": 0.0, "transcript": "Whoa, easy there. Okay, I swear."}
+{"id": "asmr7_repair_002", "wer": 0.1, "transcript": "If anyone breaks my parents' vase, I'm gonna be pissed."}
+{"id": "asmr7_repair_003", "wer": 0.157895, "transcript": "Yes, I hid it in one of the locked rooms, but you know Steph is going to pick the lock."}
+{"id": "asmr7_repair_004", "wer": 0.384615, "transcript": "Wow, there's the game has been the bottle going on already"}
+{"id": "asmr7_repair_005", "wer": 0.1, "transcript": "You want it? Of course I'm going in!"}
+{"id": "asmr7_repair_006", "wer": 0.0, "transcript": "There's a closet in pretty much every room in this house, so we might as well put them to use."}
+{"id": "asmr7_repair_007", "wer": 0.0, "transcript": "Sound good? Great. Very well."}
+{"id": "asmr7_repair_008", "wer": 0.0, "transcript": "Now, let's get this game underway. I'll be nice enough to let whoever started the game up to go on first."}
+{"id": "asmr7_repair_009", "wer": 0.117647, "transcript": "Alright, my turn. Let me see who the lucky person that gets to kiss me has tonight."}
+{"id": "asmr7_repair_010", "wer": 0.0, "transcript": "It's my birthday, so they better make these seven minutes worth it."}
+{"id": "asmr7_repair_011", "wer": 0.0, "transcript": "Will you stop pushing me? I'm getting up already."}
+{"id": "asmr7_repair_012", "wer": 0.0, "transcript": "Don't worry Wait, hold on"}
+{"id": "asmr7_repair_013", "wer": 0.0, "transcript": "Look, why on earth are you even here?"}
+{"id": "asmr7_repair_014", "wer": 0.0, "transcript": "It just means I'm stuck here with you for longer."}
+{"id": "asmr7_repair_015", "wer": 0.0, "transcript": "Did I mention it's you? Why?"}
+{"id": "asmr7_repair_016", "wer": 0.055556, "transcript": "I hate you because you're a nerd, a loser, and a loner who keeps cutting in my way."}
+{"id": "asmr7_repair_017", "wer": 0.090909, "transcript": "school, after school, at the park, and now at my own party."}
+{"id": "asmr7_repair_018", "wer": 0.235294, "transcript": "Geez. I put out into the universe that I don't wanna see one person and boom."}
+{"id": "asmr7_repair_019", "wer": 0.0, "transcript": "They're everywhere. You are so that bad."}
+{"id": "asmr7_repair_020", "wer": 0.375, "transcript": "Not even, Daddy. Why do you look like that?"}
+{"id": "asmr7_repair_021", "wer": 0.166667, "transcript": "Oh, you look... sad. My sad."}
+{"id": "asmr7_repair_022", "wer": 0.0, "transcript": "How's it finally dawned on you that you ruined my birthday party by destroying my one chance? My one chance to kiss a random person?"}
+{"id": "asmr7_repair_023", "wer": 0.0, "transcript": "Oh, well, when I usually insult you, you just throw one back at me."}
+{"id": "asmr7_repair_024", "wer": 0.0, "transcript": "I didn't think I actually hurt you when I say these things."}
+{"id": "asmr7_repair_025", "wer": 0.0, "transcript": "Right back to the topic because you just want to hear me sing your praises"}
+{"id": "asmr7_repair_026", "wer": 0.636364, "transcript": "You're a dumber than I originally thought. Shit, I think someone's coming in."}
+{"id": "asmr7_repair_027", "wer": 0.357143, "transcript": "I'm gonna shut up, quick, kiss me. Yes, I'm serious, kiss me."}
+{"id": "asmr7_repair_028", "wer": 0.0, "transcript": "We need to like make them go away and they find us talking."}
+{"id": "asmr7_repair_029", "wer": 0.25, "transcript": "Don't say anything. Just one more. A little longer."}
+{"id": "asmr7_repair_030", "wer": 0.058824, "transcript": "Yes, I'm sure I did. Guess I'm failing to make your day worse now."}
+{"id": "asmr7_repair_031", "wer": 0.111111, "transcript": "Come on, I know my kissing isn't that bad."}
+{"id": "asmr7_repair_032", "wer": 0.133333, "transcript": "I have had plenty of practice, and a large majority of those who have experienced..."}
+{"id": "asmr7_repair_033", "wer": 0.0, "transcript": "Oh, um, not what you meant. Gotcha."}
+{"id": "asmr7_repair_034", "wer": 0.090909, "transcript": "I rate this closet experience a solid 7 out of 10."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 3min 47.610s
+             CPU time consumed: 7min 28.467s
+                   Memory peak: 946.9M (swap: 0B)

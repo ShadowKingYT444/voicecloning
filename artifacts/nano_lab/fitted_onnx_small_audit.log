@@ -1,0 +1,13 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "asmr_cold", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "asmr_warm_repeat", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "asmr_warm_new", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "harvey_cold", "wer": 0.0, "transcript": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence."}
+{"id": "harvey_warm_repeat", "wer": 0.0, "transcript": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence."}
+{"id": "harvey_warm_new", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 41.897s
+             CPU time consumed: 1min 19.471s
+                   Memory peak: 1G (swap: 0B)

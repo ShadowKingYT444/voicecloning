@@ -1,0 +1,82 @@
+{
+  "cfg": "disabled; meanflow graph receives one conditional estimate per Euler step",
+  "generated_token_count": 181,
+  "layout": "B,80,T",
+  "mel_length": 368,
+  "noise_tail_offset": 500,
+  "prompt_feat_length": 500,
+  "rng": "numpy.default_rng; explicit state and tail noise; not Torch-identical",
+  "runtime": {
+    "cuda_arena_shrinkage_after_run": true,
+    "cuda_memory_pattern_enabled": false,
+    "fallback_disabled": true,
+    "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged/meanflow_estimator/nano_meanflow_estimator.onnx",
+    "inputs": [
+      "x",
+      "mask",
+      "mu",
+      "t",
+      "speaker_embedding",
+      "cond",
+      "r"
+    ],
+    "ort_provider": "cuda",
+    "ort_version": "1.26.0",
+    "outputs": [
+      "dxdt"
+    ],
+    "profile_requested": false,
+    "profiling": {
+      "enabled": false,
+      "ended": true,
+      "profile_path": null,
+      "profile_prefix": null
+    },
+    "provider_metadata": {
+      "available": [
+        "TensorrtExecutionProvider",
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "cuda_options": {
+        "arena_extend_strategy": "kSameAsRequested",
+        "cudnn_conv_algo_search": "HEURISTIC",
+        "device_id": 0,
+        "do_copy_in_default_stream": true,
+        "gpu_mem_limit": 2147483648
+      },
+      "preload_dlls": {
+        "attempted": true,
+        "directory": "",
+        "status": "ok"
+      },
+      "requested": "cuda"
+    },
+    "providers": [
+      "CUDAExecutionProvider",
+      "CPUExecutionProvider"
+    ],
+    "requested_provider_options": {
+      "arena_extend_strategy": "kSameAsRequested",
+      "cuda_device_id": 0,
+      "cudnn_conv_algo_search": "HEURISTIC",
+      "do_copy_in_default_stream": true,
+      "gpu_mem_limit_mib": 2048
+    },
+    "requested_providers": [
+      "CUDAExecutionProvider",
+      "CPUExecutionProvider"
+    ],
+    "stage": "meanflow_estimator",
+    "threads": "bounded by caller; default 1 intra-op and 1 inter-op"
+  },
+  "schema_version": 1,
+  "seed": 31,
+  "speech_token_count": 184,
+  "steps": 2,
+  "time_grid": [
+    0.0,
+    0.5,
+    1.0
+  ]
+}

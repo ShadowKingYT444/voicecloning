@@ -1,0 +1,48 @@
+[
+  {
+    "id": "source01_source",
+    "voice": "asmr7",
+    "text": "So as the one throwing the party, and it also being my party, I would like to announce.",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_source.wav",
+    "kind": "Source excerpt, loudness matched",
+    "sha256": "b71115fb5f1afb51099d5a5dcbd5985febe1de62625ec0db6bc2ac634fd686f6",
+    "duration_seconds": 6.0,
+    "human_listening_verified": false
+  },
+  {
+    "id": "source01_vocoder",
+    "voice": "asmr7",
+    "text": "So as the one throwing the party, and it also being my party, I would like to announce.",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_vocoder.wav",
+    "kind": "Vocoder reconstruction",
+    "sha256": "42fadf0a0d151060618484b5f6b28bd9b0f5b5f9378fdfe09ba56a7fdbb93b0c",
+    "duration_seconds": 6.0,
+    "human_listening_verified": false
+  },
+  {
+    "id": "source01_tokens",
+    "voice": "asmr7",
+    "text": "So as the one throwing the party, and it also being my party, I would like to announce.",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tokens.wav",
+    "kind": "Source-token reconstruction",
+    "sha256": "7225770d3f0eaf12d0bb57d896511241ffb565c23840f4d6a492adecbe856690",
+    "duration_seconds": 6.12,
+    "human_listening_verified": false
+  },
+  {
+    "id": "source01_tts",
+    "voice": "asmr7",
+    "text": "So as the one throwing the party, and it also being my party, I would like to announce.",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tts.wav",
+    "kind": "Text-generated speech",
+    "sha256": "f491fe29ef81be8e0a2a0b4603a5c7caa24fcdedbcc81fa69434b00d1c7f1ec7",
+    "duration_seconds": 5.84,
+    "human_listening_verified": false
+  },
+  {
+    "id": "harvey_complete_fixed",
+    "voice": "harvey",
+    "text": "A useful decision starts with the facts. Read the full report before you decide what to do next.",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/harvey_complete_fixed.wav"
+  }
+]

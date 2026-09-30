@@ -1,0 +1,18 @@
+{
+  "label": "ASMR conversational",
+  "mode": "zero_shot",
+  "status": "candidate_under_validation",
+  "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+  "conditioning_cache": "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+  "decoder": "meanflow",
+  "steps": 2,
+  "cuda_dtype": "fp32",
+  "sampling": {
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "top_k": 1000,
+    "repetition_penalty": 1.2
+  },
+  "source_case": "asmr_conversational_morning_31",
+  "watermark": true
+}

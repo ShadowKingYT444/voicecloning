@@ -1,0 +1,25 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "conv_fitted_expressive_63_vnoise0p0", "cosine": 0.880564, "wer": 0.04, "dnsmos_overall": 2.9720262111254434}
+{"id": "conv_fitted_expressive_63_vnoise0p5", "cosine": 0.880564, "wer": 0.04, "dnsmos_overall": 2.9720262111254434}
+{"id": "conv_fitted_expressive_63_vnoise1p0", "cosine": 0.880564, "wer": 0.04, "dnsmos_overall": 2.9720262111254434}
+{"id": "asmr_soft_expressive_63_vnoise0p0", "cosine": 0.841889, "wer": 0.0, "dnsmos_overall": 3.140171973559434}
+{"id": "asmr_soft_expressive_63_vnoise0p5", "cosine": 0.841889, "wer": 0.0, "dnsmos_overall": 3.140171973559434}
+{"id": "asmr_soft_expressive_63_vnoise1p0", "cosine": 0.841889, "wer": 0.0, "dnsmos_overall": 3.140171973559434}
+{"id": "harvey_expressive_63_vnoise0p0", "cosine": 0.738623, "wer": 0.0, "dnsmos_overall": 3.559692843895638}
+{"id": "harvey_expressive_63_vnoise0p5", "cosine": 0.738623, "wer": 0.0, "dnsmos_overall": 3.559692843895638}
+{"id": "harvey_expressive_63_vnoise1p0", "cosine": 0.738623, "wer": 0.0, "dnsmos_overall": 3.559692843895638}
+{"id": "conv_fitted_precise_63_vnoise0p0", "cosine": 0.881547, "wer": 0.0, "dnsmos_overall": 3.3085646559093296}
+{"id": "conv_fitted_precise_63_vnoise0p5", "cosine": 0.881547, "wer": 0.0, "dnsmos_overall": 3.3085646559093296}
+{"id": "conv_fitted_precise_63_vnoise1p0", "cosine": 0.881547, "wer": 0.0, "dnsmos_overall": 3.3085646559093296}
+{"id": "asmr_soft_precise_63_vnoise0p0", "cosine": 0.823675, "wer": 0.0, "dnsmos_overall": 3.2739880740643383}
+{"id": "asmr_soft_precise_63_vnoise0p5", "cosine": 0.823675, "wer": 0.0, "dnsmos_overall": 3.2739880740643383}
+{"id": "asmr_soft_precise_63_vnoise1p0", "cosine": 0.823675, "wer": 0.0, "dnsmos_overall": 3.2739880740643383}
+{"id": "harvey_precise_63_vnoise0p0", "cosine": 0.733723, "wer": 0.035714, "dnsmos_overall": 3.336716295248495}
+{"id": "harvey_precise_63_vnoise0p5", "cosine": 0.733723, "wer": 0.035714, "dnsmos_overall": 3.336716295248495}
+{"id": "harvey_precise_63_vnoise1p0", "cosine": 0.733723, "wer": 0.035714, "dnsmos_overall": 3.336716295248495}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 53.408s
+             CPU time consumed: 3min 32.390s
+                   Memory peak: 843.7M (swap: 0B)

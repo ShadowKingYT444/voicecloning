@@ -1,0 +1,22 @@
+{
+  "all_equal": true,
+  "comparisons": {
+    "morning": {
+      "base_mel": true,
+      "fit_raw": true,
+      "fit_mel": true
+    },
+    "question": {
+      "base_mel": true,
+      "fit_raw": true,
+      "fit_mel": true
+    },
+    "narrative": {
+      "base_mel": true,
+      "fit_raw": true,
+      "fit_mel": true
+    }
+  },
+  "comparison": "All torch ZIP entries except archive serialization ID",
+  "maximum_sampled_process_rss_mib": 2416.8046875
+}

@@ -1,0 +1,15 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+loaded PerthNet (Implicit) at step 250,000
+  0%|          | 0/700 [00:00<?, ?it/s]  0%|          | 1/700 [00:00<01:18,  8.88it/s]  1%|          | 7/700 [00:00<00:19, 34.77it/s]  2%|▏         | 13/700 [00:00<00:15, 43.32it/s]  3%|▎         | 19/700 [00:00<00:14, 47.66it/s]  4%|▎         | 25/700 [00:00<00:13, 51.36it/s]  4%|▍         | 31/700 [00:00<00:12, 54.13it/s]  5%|▌         | 38/700 [00:00<00:11, 57.50it/s]  7%|▋         | 47/700 [00:00<00:09, 65.81it/s]  8%|▊         | 56/700 [00:00<00:09, 70.89it/s]  9%|▉         | 65/700 [00:01<00:08, 75.70it/s] 11%|█         | 74/700 [00:01<00:07, 78.77it/s] 12%|█▏        | 82/700 [00:01<00:07, 79.05it/s] 13%|█▎        | 91/700 [00:01<00:07, 80.31it/s] 14%|█▍        | 100/700 [00:01<00:07, 80.28it/s] 16%|█▌        | 109/700 [00:01<00:07, 81.14it/s] 17%|█▋        | 118/700 [00:01<00:07, 79.95it/s] 17%|█▋        | 120/700 [00:01<00:08, 67.79it/s]
+S3 Token -> Mel Inference...
+  0%|          | 0/2 [00:00<?, ?it/s] 50%|█████     | 1/2 [00:00<00:00,  4.21it/s]100%|██████████| 2/2 [00:00<00:00,  6.09it/s]
+Segment 1: 4.96s audio in 5.57s
+{"output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/native_asmr_fitted_question_79.wav", "report": "artifacts/nano_lab/native_asmr_fitted_question_79.wav.json", "peak_rss_mib": 2373.2890625}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 30.287s
+             CPU time consumed: 29.882s
+                   Memory peak: 2.4G (swap: 0B)

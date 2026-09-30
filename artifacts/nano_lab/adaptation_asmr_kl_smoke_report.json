@@ -1,0 +1,113 @@
+{
+  "adoption": {
+    "accepted": true,
+    "reason": "heldout loss improved beyond min_delta",
+    "speaker_id": "asmr7"
+  },
+  "best_epoch": 1,
+  "best_valid_loss": 5.55087423324585,
+  "checkpoint": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_kl_smoke.pt",
+  "checkpoint_written": true,
+  "config": {
+    "alpha": 8.0,
+    "dropout": 0.05,
+    "module_shapes": {
+      "h.10.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.10.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.11.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.11.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.8.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.8.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.9.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.9.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      }
+    },
+    "modules": [
+      "h.8.attn.c_attn",
+      "h.8.attn.c_proj",
+      "h.9.attn.c_attn",
+      "h.9.attn.c_proj",
+      "h.10.attn.c_attn",
+      "h.10.attn.c_proj",
+      "h.11.attn.c_attn",
+      "h.11.attn.c_proj"
+    ],
+    "rank": 4
+  },
+  "elapsed_seconds": 12.711430288999509,
+  "format": "nano_t3_adaptation_report_v1",
+  "history": [
+    {
+      "epoch": 0,
+      "objective": "initial heldout loss before optimizer steps",
+      "train": null,
+      "valid": {
+        "correct": 17,
+        "loss": 5.553082466125488,
+        "perplexity": 258.0317052985514,
+        "token_accuracy": 0.06093189964157706,
+        "tokens": 279
+      }
+    },
+    {
+      "adapter_l2": 1e-05,
+      "epoch": 1,
+      "kl_coef": 0.1,
+      "kl_temperature": 1.0,
+      "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+      "train": {
+        "correct": 32,
+        "loss": 4.466495513916016,
+        "perplexity": 87.05111839962764,
+        "token_accuracy": 0.17679558011049723,
+        "tokens": 181
+      },
+      "train_kl": -7.0789227812895206e-09,
+      "valid": {
+        "correct": 17,
+        "loss": 5.55087423324585,
+        "perplexity": 257.4625398591253,
+        "token_accuracy": 0.06093189964157706,
+        "tokens": 279
+      }
+    }
+  ],
+  "initial_valid": {
+    "correct": 17,
+    "loss": 5.553082466125488,
+    "perplexity": 258.0317052985514,
+    "token_accuracy": 0.06093189964157706,
+    "tokens": 279
+  },
+  "parameter_counts": {
+    "adapter_trainable": 73728,
+    "s3gen_frozen": 266030919,
+    "t3_total": 178932899,
+    "voice_encoder_frozen": 1423618
+  },
+  "peak_rss_mib": 5205.359375,
+  "resume": null
+}

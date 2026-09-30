@@ -1,0 +1,15 @@
+{"id": "conv_scale0.0_neutral", "cosine": 0.887806, "wer": 0.117647, "dnsmos_overall": 2.9923502053134388}
+{"id": "conv_scale0.0_calm", "cosine": 0.893659, "wer": 0.0, "dnsmos_overall": 2.7492010741088198}
+{"id": "conv_scale0.25_neutral", "cosine": 0.885086, "wer": 0.0, "dnsmos_overall": 2.4524730898867135}
+{"id": "conv_scale0.25_calm", "cosine": 0.884644, "wer": 0.0, "dnsmos_overall": 2.49600427479736}
+{"id": "conv_scale0.5_neutral", "cosine": 0.889528, "wer": 0.0, "dnsmos_overall": 2.791425678939299}
+{"id": "conv_scale0.5_calm", "cosine": 0.898702, "wer": 0.125, "dnsmos_overall": 2.5491619942783705}
+{"id": "conv_scale1.0_neutral", "cosine": 0.885423, "wer": 0.0, "dnsmos_overall": 1.6700329650571786}
+{"id": "conv_scale1.0_calm", "cosine": 0.859079, "wer": 0.0, "dnsmos_overall": 2.805020242498493}
+{"id": "soft_scale0.0_neutral", "cosine": 0.849134, "wer": 0.0, "dnsmos_overall": 3.250712946372306}
+{"id": "soft_scale0.0_calm", "cosine": 0.863146, "wer": 0.0, "dnsmos_overall": 3.0076427532334242}
+{"id": "soft_scale0.25_neutral", "cosine": 0.818562, "wer": 0.0, "dnsmos_overall": 3.442356720888136}
+{"id": "soft_scale0.25_calm", "cosine": 0.890414, "wer": 0.0, "dnsmos_overall": 3.1841699241299772}
+{"id": "soft_scale0.5_neutral", "cosine": 0.846092, "wer": 0.0, "dnsmos_overall": 3.168218222422325}
+{"id": "soft_scale0.5_calm", "cosine": 0.875876, "wer": 0.0, "dnsmos_overall": 3.0488629458305736}
+{"id": "soft_scale1.0_neutral", "cosine": 0.906658, "wer": 0.0, "dnsmos_overall": 2.7543830948264527}

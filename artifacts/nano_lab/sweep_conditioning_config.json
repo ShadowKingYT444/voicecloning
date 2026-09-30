@@ -1,0 +1,270 @@
+{
+  "output_dir": "artifacts/nano_lab/sweep_conditioning",
+  "cases": [
+    {
+      "id": "conv_steps1",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "steps": 1,
+      "temperature": 0.65
+    },
+    {
+      "id": "conv_steps2",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "steps": 2,
+      "temperature": 0.65
+    },
+    {
+      "id": "conv_steps4",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "steps": 4,
+      "temperature": 0.65
+    },
+    {
+      "id": "conv_steps8",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "steps": 8,
+      "temperature": 0.65
+    },
+    {
+      "id": "conv_split_natural",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "decoder_reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__natural.wav",
+      "temperature": 0.65
+    },
+    {
+      "id": "conv_split_clean",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "decoder_reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__clean.wav",
+      "temperature": 0.65
+    },
+    {
+      "id": "soft_steps1",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "steps": 1,
+      "temperature": 0.65
+    },
+    {
+      "id": "soft_steps2",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "steps": 2,
+      "temperature": 0.65
+    },
+    {
+      "id": "soft_steps4",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "steps": 4,
+      "temperature": 0.65
+    },
+    {
+      "id": "soft_steps8",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "steps": 8,
+      "temperature": 0.65
+    },
+    {
+      "id": "soft_split_natural",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "decoder_reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__natural.wav",
+      "temperature": 0.65
+    },
+    {
+      "id": "soft_split_clean",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "decoder_reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__clean.wav",
+      "temperature": 0.65
+    },
+    {
+      "id": "bully_steps1",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "steps": 1,
+      "temperature": 0.65
+    },
+    {
+      "id": "bully_steps2",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "steps": 2,
+      "temperature": 0.65
+    },
+    {
+      "id": "bully_steps4",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "steps": 4,
+      "temperature": 0.65
+    },
+    {
+      "id": "bully_steps8",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "steps": 8,
+      "temperature": 0.65
+    },
+    {
+      "id": "bully_split_natural",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "decoder_reference": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__natural.wav",
+      "temperature": 0.65
+    },
+    {
+      "id": "bully_split_clean",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "decoder_reference": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__clean.wav",
+      "temperature": 0.65
+    },
+    {
+      "id": "conv_embed_mean",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "speaker_references": [
+        "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+        "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__raw.wav"
+      ],
+      "temperature": 0.65
+    },
+    {
+      "id": "conv_dec_embed_mean",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "decoder_speaker_references": [
+        "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+        "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__raw.wav"
+      ],
+      "temperature": 0.65
+    },
+    {
+      "id": "conv_spkscale0.75",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "speaker_scale": 0.75,
+      "temperature": 0.65
+    },
+    {
+      "id": "conv_spkscale1.25",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "speaker_scale": 1.25,
+      "temperature": 0.65
+    },
+    {
+      "id": "conv_prompt125",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "prompt_frames": 125,
+      "temperature": 0.65
+    },
+    {
+      "id": "conv_prompt200",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "prompt_frames": 200,
+      "temperature": 0.65
+    },
+    {
+      "id": "conv_temp0.45",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "temperature": 0.45
+    },
+    {
+      "id": "conv_temp0.95",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "temperature": 0.95
+    },
+    {
+      "id": "middle_split_conv",
+      "voice": "asmr7",
+      "reference": "artifacts/references/chunks/asmr7_chunk_96-106.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "decoder_reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "temperature": 0.55
+    },
+    {
+      "id": "conv_split_soft",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "decoder_reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "temperature": 0.65
+    },
+    {
+      "id": "soft_split_conv",
+      "voice": "asmr7",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+      "text_id": "comfort",
+      "seed": 31,
+      "decoder_reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "temperature": 0.65
+    }
+  ]
+}

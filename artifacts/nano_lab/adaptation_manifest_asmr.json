@@ -1,0 +1,112 @@
+[
+  {
+    "id": "asmr7_train_01",
+    "speaker_id": "asmr7",
+    "audio_path": "references/asmr7/asmr7_train_01/asmr7_train_01__natural.wav",
+    "reference_audio_path": "references/asmr7/asmr7_emotional_02/asmr7_emotional_02__natural.wav",
+    "source_id": "asmr7_main",
+    "start_s": 35.2,
+    "end_s": 41.2,
+    "text": "So as the one throwing the party, and it also being my party, I would like to announce",
+    "split": "train"
+  },
+  {
+    "id": "asmr7_train_02",
+    "speaker_id": "asmr7",
+    "audio_path": "references/asmr7/asmr7_train_02/asmr7_train_02__natural.wav",
+    "reference_audio_path": "references/asmr7/asmr7_emotional_02/asmr7_emotional_02__natural.wav",
+    "source_id": "asmr7_main",
+    "start_s": 52.1,
+    "end_s": 58.0,
+    "text": "There's a closet in pretty much every room in this house, so we might as well put them to use.",
+    "split": "train"
+  },
+  {
+    "id": "asmr7_train_03",
+    "speaker_id": "asmr7",
+    "audio_path": "references/asmr7/asmr7_train_03/asmr7_train_03__natural.wav",
+    "reference_audio_path": "references/asmr7/asmr7_emotional_02/asmr7_emotional_02__natural.wav",
+    "source_id": "asmr7_main",
+    "start_s": 67.1,
+    "end_s": 72.0,
+    "text": "I'll be nice enough to let whoever started the game up to go on first.",
+    "split": "train"
+  },
+  {
+    "id": "asmr7_train_04",
+    "speaker_id": "asmr7",
+    "audio_path": "references/asmr7/asmr7_train_04/asmr7_train_04__natural.wav",
+    "reference_audio_path": "references/asmr7/asmr7_emotional_02/asmr7_emotional_02__natural.wav",
+    "source_id": "asmr7_main",
+    "start_s": 82.8,
+    "end_s": 89.0,
+    "text": "It's my birthday, so they better make these seven minutes worth it. Please be cute.",
+    "split": "train"
+  },
+  {
+    "id": "asmr7_train_05",
+    "speaker_id": "asmr7",
+    "audio_path": "references/asmr7/asmr7_train_05/asmr7_train_05__natural.wav",
+    "reference_audio_path": "references/asmr7/asmr7_emotional_02/asmr7_emotional_02__natural.wav",
+    "source_id": "asmr7_main",
+    "start_s": 121.6,
+    "end_s": 128.8,
+    "text": "What did I do to end up here with you? I know I spun the bottle. Fucking dumbass.",
+    "split": "train"
+  },
+  {
+    "id": "asmr7_train_06",
+    "speaker_id": "asmr7",
+    "audio_path": "references/asmr7/asmr7_train_06/asmr7_train_06__natural.wav",
+    "reference_audio_path": "references/asmr7/asmr7_emotional_02/asmr7_emotional_02__natural.wav",
+    "source_id": "asmr7_main",
+    "start_s": 181.4,
+    "end_s": 187.7,
+    "text": "For some reason, you're here now, and stuck in a closet with me.",
+    "split": "train"
+  },
+  {
+    "id": "asmr7_train_07",
+    "speaker_id": "asmr7",
+    "audio_path": "references/asmr7/asmr7_train_07/asmr7_train_07__natural.wav",
+    "reference_audio_path": "references/asmr7/asmr7_emotional_02/asmr7_emotional_02__natural.wav",
+    "source_id": "asmr7_main",
+    "start_s": 329.8,
+    "end_s": 335.9,
+    "text": "And I hate you, you're too perfect, like untouchable by misfortune.",
+    "split": "train"
+  },
+  {
+    "id": "asmr7_train_08",
+    "speaker_id": "asmr7",
+    "audio_path": "references/asmr7/asmr7_train_08/asmr7_train_08__natural.wav",
+    "reference_audio_path": "references/asmr7/asmr7_emotional_02/asmr7_emotional_02__natural.wav",
+    "source_id": "asmr7_main",
+    "start_s": 354.3,
+    "end_s": 360.6,
+    "text": "The fact is, when I see you, I see this cute little perfect being who lives in a bubble.",
+    "split": "train"
+  },
+  {
+    "id": "asmr7_train_09",
+    "speaker_id": "asmr7",
+    "audio_path": "references/asmr7/asmr7_train_09/asmr7_train_09__natural.wav",
+    "reference_audio_path": "references/asmr7/asmr7_emotional_02/asmr7_emotional_02__natural.wav",
+    "source_id": "asmr7_main",
+    "start_s": 372.8,
+    "end_s": 378.8,
+    "text": "Okay, what I'm trying to say is that you made me jealous, that you live in this perfect world",
+    "split": "train"
+  },
+  {
+    "id": "asmr7_valid_04",
+    "speaker_id": "asmr7",
+    "audio_path": "references/asmr7/asmr7_heldout_04/asmr7_heldout_04__natural.wav",
+    "reference_audio_path": "references/asmr7/asmr7_emotional_02/asmr7_emotional_02__natural.wav",
+    "source_id": "asmr7_main",
+    "start_s": 475.7,
+    "end_s": 486.8,
+    "text": "Thanks. Wait, that better not be implying I'm also a nerd because I will take back all the nice things I said about you.",
+    "split": "valid"
+  }
+]

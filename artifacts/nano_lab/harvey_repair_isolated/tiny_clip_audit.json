@@ -1,0 +1,921 @@
+{
+  "model": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+  "backend": "CTranslate2 CPU int8",
+  "role": "independent_content_audit",
+  "human_listening": false,
+  "model_download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+  "model_identity": {
+    "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+    "name": "tiny.en",
+    "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+    "download_manifest_sha256": null,
+    "size_class": "tiny"
+  },
+  "word_timestamps": true,
+  "inputs": [
+    {
+      "id": "harvey_repair_001",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/clips/harvey_repair_001.wav",
+      "audio_sha256": "6be65d89931ea4a0281c3883b936ebd8d6edef68d8f7f6347cfbd37ee270bc17",
+      "expected_text": "I don't take meetings. set them. And my respect isn't demanded.",
+      "transcript": "I don't take meetings. I set them. And my respect isn't demanded.",
+      "segments": [
+        {
+          "text": "I don't take meetings. I set them. And my respect isn't demanded.",
+          "start_s": 0.0,
+          "end_s": 4.0,
+          "avg_logprob": -0.2848116785287857,
+          "no_speech_prob": 0.012244559824466705,
+          "compression_ratio": 0.9558823529411765,
+          "words": [
+            {
+              "word": "I",
+              "start_s": 0.0,
+              "end_s": 0.3,
+              "probability": 0.8237413763999939
+            },
+            {
+              "word": "don't",
+              "start_s": 0.3,
+              "end_s": 0.52,
+              "probability": 0.995197206735611
+            },
+            {
+              "word": "take",
+              "start_s": 0.52,
+              "end_s": 0.78,
+              "probability": 0.9951004385948181
+            },
+            {
+              "word": "meetings.",
+              "start_s": 0.78,
+              "end_s": 1.12,
+              "probability": 0.9352364540100098
+            },
+            {
+              "word": "I",
+              "start_s": 1.64,
+              "end_s": 1.66,
+              "probability": 0.9951823353767395
+            },
+            {
+              "word": "set",
+              "start_s": 1.66,
+              "end_s": 1.84,
+              "probability": 0.9660807847976685
+            },
+            {
+              "word": "them.",
+              "start_s": 1.84,
+              "end_s": 2.28,
+              "probability": 0.9989619255065918
+            },
+            {
+              "word": "And",
+              "start_s": 2.64,
+              "end_s": 2.82,
+              "probability": 0.9504904747009277
+            },
+            {
+              "word": "my",
+              "start_s": 2.82,
+              "end_s": 3.12,
+              "probability": 0.989167332649231
+            },
+            {
+              "word": "respect",
+              "start_s": 3.12,
+              "end_s": 3.4,
+              "probability": 0.9841131567955017
+            },
+            {
+              "word": "isn't",
+              "start_s": 3.4,
+              "end_s": 3.74,
+              "probability": 0.9342077970504761
+            },
+            {
+              "word": "demanded.",
+              "start_s": 3.74,
+              "end_s": 4.0,
+              "probability": 0.9780578017234802
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.090909,
+        "reference_word_count": 11,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "i",
+          "don't",
+          "take",
+          "meetings",
+          "set",
+          "them",
+          "and",
+          "my",
+          "respect",
+          "isn't",
+          "demanded"
+        ],
+        "hypothesis_words": [
+          "i",
+          "don't",
+          "take",
+          "meetings",
+          "i",
+          "set",
+          "them",
+          "and",
+          "my",
+          "respect",
+          "isn't",
+          "demanded"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.076923,
+        "reference_word_count": 13,
+        "hypothesis_word_count": 14,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "i",
+          "do",
+          "not",
+          "take",
+          "meetings",
+          "set",
+          "them",
+          "and",
+          "my",
+          "respect",
+          "is",
+          "not",
+          "demanded"
+        ],
+        "hypothesis_words": [
+          "i",
+          "do",
+          "not",
+          "take",
+          "meetings",
+          "i",
+          "set",
+          "them",
+          "and",
+          "my",
+          "respect",
+          "is",
+          "not",
+          "demanded"
+        ]
+      },
+      "model_identity": {
+        "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+        "name": "tiny.en",
+        "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+        "download_manifest_sha256": null,
+        "size_class": "tiny"
+      },
+      "seconds": 1.2016884710028535
+    },
+    {
+      "id": "harvey_repair_002",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/clips/harvey_repair_002.wav",
+      "audio_sha256": "1574f14491e36f6d2c1de4ce2ddf5606881be86da4b3440563670e2ec18adcf1",
+      "expected_text": "It's earned. Excuses don't win championships. Oh, you added Michael Jordan to tell you that?",
+      "transcript": "It's earned. Excuses don't win championships. Oh yeah, did Michael Jordan tell you that? No.",
+      "segments": [
+        {
+          "text": "It's earned.",
+          "start_s": 0.0,
+          "end_s": 0.6,
+          "avg_logprob": -0.33205235563218594,
+          "no_speech_prob": 0.04059183597564697,
+          "compression_ratio": 1.010989010989011,
+          "words": [
+            {
+              "word": "It's",
+              "start_s": 0.0,
+              "end_s": 0.3,
+              "probability": 0.5858666971325874
+            },
+            {
+              "word": "earned.",
+              "start_s": 0.3,
+              "end_s": 0.6,
+              "probability": 0.8447538018226624
+            }
+          ]
+        },
+        {
+          "text": "Excuses don't win championships.",
+          "start_s": 0.9,
+          "end_s": 2.08,
+          "avg_logprob": -0.33205235563218594,
+          "no_speech_prob": 0.04059183597564697,
+          "compression_ratio": 1.010989010989011,
+          "words": [
+            {
+              "word": "Excuses",
+              "start_s": 0.9,
+              "end_s": 1.22,
+              "probability": 0.887496680021286
+            },
+            {
+              "word": "don't",
+              "start_s": 1.22,
+              "end_s": 1.54,
+              "probability": 0.9070622622966766
+            },
+            {
+              "word": "win",
+              "start_s": 1.54,
+              "end_s": 1.64,
+              "probability": 0.9976713061332703
+            },
+            {
+              "word": "championships.",
+              "start_s": 1.64,
+              "end_s": 2.08,
+              "probability": 0.9706277847290039
+            }
+          ]
+        },
+        {
+          "text": "Oh yeah, did Michael Jordan tell you that?",
+          "start_s": 2.32,
+          "end_s": 3.6,
+          "avg_logprob": -0.33205235563218594,
+          "no_speech_prob": 0.04059183597564697,
+          "compression_ratio": 1.010989010989011,
+          "words": [
+            {
+              "word": "Oh",
+              "start_s": 2.32,
+              "end_s": 2.38,
+              "probability": 0.6630313992500305
+            },
+            {
+              "word": "yeah,",
+              "start_s": 2.38,
+              "end_s": 2.48,
+              "probability": 0.4625261127948761
+            },
+            {
+              "word": "did",
+              "start_s": 2.64,
+              "end_s": 2.66,
+              "probability": 0.6297577619552612
+            },
+            {
+              "word": "Michael",
+              "start_s": 2.66,
+              "end_s": 2.78,
+              "probability": 0.9809719324111938
+            },
+            {
+              "word": "Jordan",
+              "start_s": 2.78,
+              "end_s": 3.04,
+              "probability": 0.9368684887886047
+            },
+            {
+              "word": "tell",
+              "start_s": 3.04,
+              "end_s": 3.22,
+              "probability": 0.9894008040428162
+            },
+            {
+              "word": "you",
+              "start_s": 3.22,
+              "end_s": 3.36,
+              "probability": 0.9837452173233032
+            },
+            {
+              "word": "that?",
+              "start_s": 3.36,
+              "end_s": 3.6,
+              "probability": 0.9970631003379822
+            }
+          ]
+        },
+        {
+          "text": "No.",
+          "start_s": 3.7,
+          "end_s": 3.74,
+          "avg_logprob": -0.33205235563218594,
+          "no_speech_prob": 0.04059183597564697,
+          "compression_ratio": 1.010989010989011,
+          "words": [
+            {
+              "word": "No.",
+              "start_s": 3.7,
+              "end_s": 3.74,
+              "probability": 0.951157808303833
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.266667,
+        "reference_word_count": 15,
+        "hypothesis_word_count": 15,
+        "substitutions": 2,
+        "deletions": 1,
+        "insertions": 1,
+        "reference_words": [
+          "it's",
+          "earned",
+          "excuses",
+          "don't",
+          "win",
+          "championships",
+          "oh",
+          "you",
+          "added",
+          "michael",
+          "jordan",
+          "to",
+          "tell",
+          "you",
+          "that"
+        ],
+        "hypothesis_words": [
+          "it's",
+          "earned",
+          "excuses",
+          "don't",
+          "win",
+          "championships",
+          "oh",
+          "yeah",
+          "did",
+          "michael",
+          "jordan",
+          "tell",
+          "you",
+          "that",
+          "no"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.235294,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 17,
+        "substitutions": 2,
+        "deletions": 1,
+        "insertions": 1,
+        "reference_words": [
+          "it",
+          "is",
+          "earned",
+          "excuses",
+          "do",
+          "not",
+          "win",
+          "championships",
+          "oh",
+          "you",
+          "added",
+          "michael",
+          "jordan",
+          "to",
+          "tell",
+          "you",
+          "that"
+        ],
+        "hypothesis_words": [
+          "it",
+          "is",
+          "earned",
+          "excuses",
+          "do",
+          "not",
+          "win",
+          "championships",
+          "oh",
+          "yeah",
+          "did",
+          "michael",
+          "jordan",
+          "tell",
+          "you",
+          "that",
+          "no"
+        ]
+      },
+      "model_identity": {
+        "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+        "name": "tiny.en",
+        "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+        "download_manifest_sha256": null,
+        "size_class": "tiny"
+      },
+      "seconds": 1.4008352410019143
+    },
+    {
+      "id": "harvey_repair_003",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/clips/harvey_repair_003.wav",
+      "audio_sha256": "c3d46491fb53401d19cb2e07ec912a1b8310f9ebbf8df7272bc058d9d1d99b7e",
+      "expected_text": "They don't have dreams. I have goals. Get it through your head.",
+      "transcript": "And we're gonna have dreams, I have goals. Get it through your head.",
+      "segments": [
+        {
+          "text": "And we're gonna have dreams, I have goals.",
+          "start_s": 0.0,
+          "end_s": 1.98,
+          "avg_logprob": -0.45997887578877533,
+          "no_speech_prob": 0.010407890193164349,
+          "compression_ratio": 0.9577464788732394,
+          "words": [
+            {
+              "word": "And",
+              "start_s": 0.0,
+              "end_s": 0.28,
+              "probability": 0.11947349458932877
+            },
+            {
+              "word": "we're",
+              "start_s": 0.28,
+              "end_s": 0.34,
+              "probability": 0.8134138286113739
+            },
+            {
+              "word": "gonna",
+              "start_s": 0.34,
+              "end_s": 0.44,
+              "probability": 0.7125816941261292
+            },
+            {
+              "word": "have",
+              "start_s": 0.44,
+              "end_s": 0.66,
+              "probability": 0.9974554181098938
+            },
+            {
+              "word": "dreams,",
+              "start_s": 0.66,
+              "end_s": 0.98,
+              "probability": 0.9616281390190125
+            },
+            {
+              "word": "I",
+              "start_s": 1.22,
+              "end_s": 1.22,
+              "probability": 0.9027602672576904
+            },
+            {
+              "word": "have",
+              "start_s": 1.22,
+              "end_s": 1.36,
+              "probability": 0.9397503137588501
+            },
+            {
+              "word": "goals.",
+              "start_s": 1.36,
+              "end_s": 1.98,
+              "probability": 0.9822925925254822
+            }
+          ]
+        },
+        {
+          "text": "Get it through your head.",
+          "start_s": 2.54,
+          "end_s": 3.38,
+          "avg_logprob": -0.45997887578877533,
+          "no_speech_prob": 0.010407890193164349,
+          "compression_ratio": 0.9577464788732394,
+          "words": [
+            {
+              "word": "Get",
+              "start_s": 2.54,
+              "end_s": 2.62,
+              "probability": 0.9675228595733643
+            },
+            {
+              "word": "it",
+              "start_s": 2.62,
+              "end_s": 2.78,
+              "probability": 0.9645185470581055
+            },
+            {
+              "word": "through",
+              "start_s": 2.78,
+              "end_s": 2.92,
+              "probability": 0.9951890707015991
+            },
+            {
+              "word": "your",
+              "start_s": 2.92,
+              "end_s": 3.1,
+              "probability": 0.9974289536476135
+            },
+            {
+              "word": "head.",
+              "start_s": 3.1,
+              "end_s": 3.38,
+              "probability": 0.9994291663169861
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.25,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 13,
+        "substitutions": 2,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "they",
+          "don't",
+          "have",
+          "dreams",
+          "i",
+          "have",
+          "goals",
+          "get",
+          "it",
+          "through",
+          "your",
+          "head"
+        ],
+        "hypothesis_words": [
+          "and",
+          "we're",
+          "gonna",
+          "have",
+          "dreams",
+          "i",
+          "have",
+          "goals",
+          "get",
+          "it",
+          "through",
+          "your",
+          "head"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.307692,
+        "reference_word_count": 13,
+        "hypothesis_word_count": 14,
+        "substitutions": 3,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "they",
+          "do",
+          "not",
+          "have",
+          "dreams",
+          "i",
+          "have",
+          "goals",
+          "get",
+          "it",
+          "through",
+          "your",
+          "head"
+        ],
+        "hypothesis_words": [
+          "and",
+          "we",
+          "are",
+          "gonna",
+          "have",
+          "dreams",
+          "i",
+          "have",
+          "goals",
+          "get",
+          "it",
+          "through",
+          "your",
+          "head"
+        ]
+      },
+      "model_identity": {
+        "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+        "name": "tiny.en",
+        "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+        "download_manifest_sha256": null,
+        "size_class": "tiny"
+      },
+      "seconds": 1.2193839289975585
+    },
+    {
+      "id": "harvey_repair_004",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/clips/harvey_repair_004.wav",
+      "audio_sha256": "3bf9ea788d49d416fd0a81263d3eb68906c505163ea828e4eb0fda2abc69cbcc",
+      "expected_text": "First impressions last. I don't pave the way for people.",
+      "transcript": "First impressions last, I don't pave the way for people.",
+      "segments": [
+        {
+          "text": "First impressions last, I don't pave the way for people.",
+          "start_s": 0.0,
+          "end_s": 3.26,
+          "avg_logprob": -0.38134817965328693,
+          "no_speech_prob": 0.0147548234090209,
+          "compression_ratio": 0.875,
+          "words": [
+            {
+              "word": "First",
+              "start_s": 0.0,
+              "end_s": 0.24,
+              "probability": 0.39614248275756836
+            },
+            {
+              "word": "impressions",
+              "start_s": 0.24,
+              "end_s": 0.56,
+              "probability": 0.8136796951293945
+            },
+            {
+              "word": "last,",
+              "start_s": 0.56,
+              "end_s": 1.18,
+              "probability": 0.9362753629684448
+            },
+            {
+              "word": "I",
+              "start_s": 1.72,
+              "end_s": 1.88,
+              "probability": 0.946300208568573
+            },
+            {
+              "word": "don't",
+              "start_s": 1.88,
+              "end_s": 2.18,
+              "probability": 0.9959774017333984
+            },
+            {
+              "word": "pave",
+              "start_s": 2.18,
+              "end_s": 2.36,
+              "probability": 0.8754758238792419
+            },
+            {
+              "word": "the",
+              "start_s": 2.36,
+              "end_s": 2.6,
+              "probability": 0.9977766871452332
+            },
+            {
+              "word": "way",
+              "start_s": 2.6,
+              "end_s": 2.74,
+              "probability": 0.9988110065460205
+            },
+            {
+              "word": "for",
+              "start_s": 2.74,
+              "end_s": 2.98,
+              "probability": 0.9973224997520447
+            },
+            {
+              "word": "people.",
+              "start_s": 2.98,
+              "end_s": 3.26,
+              "probability": 0.999047577381134
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 10,
+        "hypothesis_word_count": 10,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "first",
+          "impressions",
+          "last",
+          "i",
+          "don't",
+          "pave",
+          "the",
+          "way",
+          "for",
+          "people"
+        ],
+        "hypothesis_words": [
+          "first",
+          "impressions",
+          "last",
+          "i",
+          "don't",
+          "pave",
+          "the",
+          "way",
+          "for",
+          "people"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 11,
+        "hypothesis_word_count": 11,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "first",
+          "impressions",
+          "last",
+          "i",
+          "do",
+          "not",
+          "pave",
+          "the",
+          "way",
+          "for",
+          "people"
+        ],
+        "hypothesis_words": [
+          "first",
+          "impressions",
+          "last",
+          "i",
+          "do",
+          "not",
+          "pave",
+          "the",
+          "way",
+          "for",
+          "people"
+        ]
+      },
+      "model_identity": {
+        "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+        "name": "tiny.en",
+        "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+        "download_manifest_sha256": null,
+        "size_class": "tiny"
+      },
+      "seconds": 1.1208775829945807
+    },
+    {
+      "id": "harvey_repair_005",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/harvey_repair_isolated/clips/harvey_repair_005.wav",
+      "audio_sha256": "cfe4fd44161621f9ed912820b2c494ad582c31bcf3d9d5b62a7599d62368a94c",
+      "expected_text": "People pave the way for me. life is this.",
+      "transcript": "People pave the way for me. Life is this.",
+      "segments": [
+        {
+          "text": "People pave the way for me.",
+          "start_s": 0.0,
+          "end_s": 1.62,
+          "avg_logprob": -0.4884174093604088,
+          "no_speech_prob": 0.006220134906470776,
+          "compression_ratio": 0.8541666666666666,
+          "words": [
+            {
+              "word": "People",
+              "start_s": 0.0,
+              "end_s": 0.42,
+              "probability": 0.7034542560577393
+            },
+            {
+              "word": "pave",
+              "start_s": 0.42,
+              "end_s": 0.68,
+              "probability": 0.32069116830825806
+            },
+            {
+              "word": "the",
+              "start_s": 0.68,
+              "end_s": 0.84,
+              "probability": 0.994256317615509
+            },
+            {
+              "word": "way",
+              "start_s": 0.84,
+              "end_s": 1.02,
+              "probability": 0.9992038607597351
+            },
+            {
+              "word": "for",
+              "start_s": 1.02,
+              "end_s": 1.2,
+              "probability": 0.5416364669799805
+            },
+            {
+              "word": "me.",
+              "start_s": 1.2,
+              "end_s": 1.62,
+              "probability": 0.9985681772232056
+            }
+          ]
+        },
+        {
+          "text": "Life is this.",
+          "start_s": 2.04,
+          "end_s": 3.76,
+          "avg_logprob": -0.4884174093604088,
+          "no_speech_prob": 0.006220134906470776,
+          "compression_ratio": 0.8541666666666666,
+          "words": [
+            {
+              "word": "Life",
+              "start_s": 2.04,
+              "end_s": 2.28,
+              "probability": 0.978958010673523
+            },
+            {
+              "word": "is",
+              "start_s": 2.28,
+              "end_s": 3.1,
+              "probability": 0.955792248249054
+            },
+            {
+              "word": "this.",
+              "start_s": 3.1,
+              "end_s": 3.76,
+              "probability": 0.9672456383705139
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "people",
+          "pave",
+          "the",
+          "way",
+          "for",
+          "me",
+          "life",
+          "is",
+          "this"
+        ],
+        "hypothesis_words": [
+          "people",
+          "pave",
+          "the",
+          "way",
+          "for",
+          "me",
+          "life",
+          "is",
+          "this"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "people",
+          "pave",
+          "the",
+          "way",
+          "for",
+          "me",
+          "life",
+          "is",
+          "this"
+        ],
+        "hypothesis_words": [
+          "people",
+          "pave",
+          "the",
+          "way",
+          "for",
+          "me",
+          "life",
+          "is",
+          "this"
+        ]
+      },
+      "model_identity": {
+        "path": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+        "name": "tiny.en",
+        "download_manifest": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en/download_manifest.json",
+        "download_manifest_sha256": null,
+        "size_class": "tiny"
+      },
+      "seconds": 1.4270611870015273
+    }
+  ],
+  "peak_rss_mib": 313.31640625
+}

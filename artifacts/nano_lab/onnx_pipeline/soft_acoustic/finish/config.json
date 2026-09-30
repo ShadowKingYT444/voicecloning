@@ -1,0 +1,23 @@
+{
+  "audio_samples": 200640,
+  "audio_seconds": 8.36,
+  "master_processing": {
+    "achieved_lufs": -19.00000030357116,
+    "gain_db": 6.104235573332364,
+    "highpass_hz": 45,
+    "noise_gate": false,
+    "target_lufs": -19,
+    "true_peak_ceiling_dbtp": -1,
+    "true_peak_oversampling": 4
+  },
+  "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/soft_acoustic.wav",
+  "sample_rate": 24000,
+  "schema_version": 1,
+  "source": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/soft_acoustic/vocoder/audio.npz",
+  "trim_fade": {
+    "fade_ms": 20,
+    "n_trim": 480
+  },
+  "watermark": "PerthImplicitWatermarker",
+  "watermark_applied": true
+}

@@ -1,0 +1,11 @@
+Using Python 3.12.14 environment at: .venv-nano-cpu
+Resolved 3 packages in 899ms
+Downloading torch (181.5MiB)
+Downloading torchvision (1.8MiB)
+ Downloaded torchvision
+ Downloaded torch
+Prepared 3 packages in 43.72s
+Installed 3 packages in 311ms
+ + torch==2.11.0+cpu
+ + torchaudio==2.11.0+cpu
+ + torchvision==0.26.0+cpu

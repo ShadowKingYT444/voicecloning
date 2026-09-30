@@ -1,0 +1,640 @@
+{
+  "schema_version": 1,
+  "generated_by": "scripts/nano_lab/reference_evaluator.py",
+  "manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "runtime": {
+    "cpu_threads": 2,
+    "whisper_enabled": false,
+    "speaker_enabled": true,
+    "whisper_model": "/home/terryd/gooning/voicecloning/Whisper_fast_package/models/tiny.en",
+    "heldout_variant": "natural",
+    "excluded_heldout_ids": [
+      "asmr7_heldout_01",
+      "asmr7_heldout_04",
+      "asmr7_heldout_05"
+    ],
+    "rss_mb": {
+      "rss_before_models_mb": 113.88,
+      "rss_after_speaker_model_mb": 599.72,
+      "rss_after_evaluation_mb": 730.68
+    }
+  },
+  "inputs": [
+    {
+      "label": "morning_baseline",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_comparison/level_matched/morning_baseline.wav",
+      "family": "asmr7",
+      "expected_text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "measurements": {
+        "duration_s": 7.28,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -27.61,
+        "peak_dbfs": -10.375,
+        "crest_db": 17.235,
+        "dc_offset": -5e-08,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -18.542,
+        "noise_floor_dbfs_proxy_low10pct_frames": -79.381,
+        "speech_level_dbfs_proxy_high50pct_frames": -27.122,
+        "snr_db_proxy_high50_minus_low10": 52.26,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -100.326,
+        "spectral_centroid_hz": 805.329,
+        "spectral_flatness_proxy": 0.041163,
+        "high_band_fraction_proxy_ge8khz": 0.005233,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 119.82,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.845953,
+        "min_cosine": 0.827695,
+        "max_cosine": 0.864211,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.864211
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.827695
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.5300314860582085,
+      "dnsmos_background": 4.020583832747758,
+      "dnsmos_overall": 3.2141700793357075,
+      "dnsmos_windows": 6,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "morning_embedding_half",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_comparison/level_matched/morning_embedding_half.wav",
+      "family": "asmr7",
+      "expected_text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "measurements": {
+        "duration_s": 7.28,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -27.835,
+        "peak_dbfs": -8.841,
+        "crest_db": 18.993,
+        "dc_offset": -5e-08,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -19.488,
+        "noise_floor_dbfs_proxy_low10pct_frames": -82.674,
+        "speech_level_dbfs_proxy_high50pct_frames": -27.348,
+        "snr_db_proxy_high50_minus_low10": 55.327,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -101.414,
+        "spectral_centroid_hz": 944.58,
+        "spectral_flatness_proxy": 0.046871,
+        "high_band_fraction_proxy_ge8khz": 0.005726,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 726.01,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.853411,
+        "min_cosine": 0.83499,
+        "max_cosine": 0.871831,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.871831
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.83499
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.5398596429970124,
+      "dnsmos_background": 4.016791333359255,
+      "dnsmos_overall": 3.225378642928105,
+      "dnsmos_windows": 6,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "morning_embedding_full",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_comparison/level_matched/morning_embedding_full.wav",
+      "family": "asmr7",
+      "expected_text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "measurements": {
+        "duration_s": 7.28,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -28.017,
+        "peak_dbfs": -7.709,
+        "crest_db": 20.308,
+        "dc_offset": -5e-08,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -19.333,
+        "noise_floor_dbfs_proxy_low10pct_frames": -83.928,
+        "speech_level_dbfs_proxy_high50pct_frames": -27.579,
+        "snr_db_proxy_high50_minus_low10": 56.35,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -102.378,
+        "spectral_centroid_hz": 1055.692,
+        "spectral_flatness_proxy": 0.05045,
+        "high_band_fraction_proxy_ge8khz": 0.00584,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 726.57,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.843395,
+        "min_cosine": 0.823126,
+        "max_cosine": 0.863665,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.863665
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.823126
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.5106829862060316,
+      "dnsmos_background": 4.028641352393145,
+      "dnsmos_overall": 3.1989390383968197,
+      "dnsmos_windows": 6,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "morning_full_gen",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_comparison/level_matched/morning_full_gen.wav",
+      "family": "asmr7",
+      "expected_text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "measurements": {
+        "duration_s": 7.28,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -27.991,
+        "peak_dbfs": -8.949,
+        "crest_db": 19.042,
+        "dc_offset": -5e-08,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -18.555,
+        "noise_floor_dbfs_proxy_low10pct_frames": -87.216,
+        "speech_level_dbfs_proxy_high50pct_frames": -27.53,
+        "snr_db_proxy_high50_minus_low10": 59.686,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -103.879,
+        "spectral_centroid_hz": 1058.393,
+        "spectral_flatness_proxy": 0.058999,
+        "high_band_fraction_proxy_ge8khz": 0.010081,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 726.99,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.809659,
+        "min_cosine": 0.783004,
+        "max_cosine": 0.836315,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.836315
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.783004
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.48593607756178,
+      "dnsmos_background": 4.115588828341882,
+      "dnsmos_overall": 3.222085656382499,
+      "dnsmos_windows": 6,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "question_baseline",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_comparison/level_matched/question_baseline.wav",
+      "family": "asmr7",
+      "expected_text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "measurements": {
+        "duration_s": 4.96,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -27.2,
+        "peak_dbfs": -8.049,
+        "crest_db": 19.151,
+        "dc_offset": -5e-08,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -19.029,
+        "noise_floor_dbfs_proxy_low10pct_frames": -80.018,
+        "speech_level_dbfs_proxy_high50pct_frames": -27.027,
+        "snr_db_proxy_high50_minus_low10": 52.992,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -107.409,
+        "spectral_centroid_hz": 891.762,
+        "spectral_flatness_proxy": 0.037193,
+        "high_band_fraction_proxy_ge8khz": 0.003139,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 727.1,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.875305,
+        "min_cosine": 0.865149,
+        "max_cosine": 0.885461,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.885461
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.865149
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.4834352423459354,
+      "dnsmos_background": 3.7009591390227667,
+      "dnsmos_overall": 3.03688078926857,
+      "dnsmos_windows": 1,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "question_embedding_half",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_comparison/level_matched/question_embedding_half.wav",
+      "family": "asmr7",
+      "expected_text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "measurements": {
+        "duration_s": 4.96,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -27.376,
+        "peak_dbfs": -9.423,
+        "crest_db": 17.953,
+        "dc_offset": -5e-08,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -19.86,
+        "noise_floor_dbfs_proxy_low10pct_frames": -82.299,
+        "speech_level_dbfs_proxy_high50pct_frames": -27.115,
+        "snr_db_proxy_high50_minus_low10": 55.184,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -108.799,
+        "spectral_centroid_hz": 1027.577,
+        "spectral_flatness_proxy": 0.045421,
+        "high_band_fraction_proxy_ge8khz": 0.00386,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 729.6,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.892088,
+        "min_cosine": 0.877979,
+        "max_cosine": 0.906197,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.906197
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.877979
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.4750825670932044,
+      "dnsmos_background": 3.606475959554982,
+      "dnsmos_overall": 2.987583252775004,
+      "dnsmos_windows": 1,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "question_embedding_full",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_comparison/level_matched/question_embedding_full.wav",
+      "family": "asmr7",
+      "expected_text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "measurements": {
+        "duration_s": 4.96,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -27.507,
+        "peak_dbfs": -9.684,
+        "crest_db": 17.823,
+        "dc_offset": -5e-08,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -20.057,
+        "noise_floor_dbfs_proxy_low10pct_frames": -83.904,
+        "speech_level_dbfs_proxy_high50pct_frames": -26.835,
+        "snr_db_proxy_high50_minus_low10": 57.069,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -109.58,
+        "spectral_centroid_hz": 1115.73,
+        "spectral_flatness_proxy": 0.050433,
+        "high_band_fraction_proxy_ge8khz": 0.004313,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 729.6,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.907366,
+        "min_cosine": 0.89069,
+        "max_cosine": 0.924042,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.924042
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.89069
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.42573218240262,
+      "dnsmos_background": 3.259856719098347,
+      "dnsmos_overall": 2.743139416960565,
+      "dnsmos_windows": 1,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "question_full_gen",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_comparison/level_matched/question_full_gen.wav",
+      "family": "asmr7",
+      "expected_text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "measurements": {
+        "duration_s": 4.96,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -27.627,
+        "peak_dbfs": -9.286,
+        "crest_db": 18.341,
+        "dc_offset": -6e-08,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -18.727,
+        "noise_floor_dbfs_proxy_low10pct_frames": -84.31,
+        "speech_level_dbfs_proxy_high50pct_frames": -26.51,
+        "snr_db_proxy_high50_minus_low10": 57.8,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -110.554,
+        "spectral_centroid_hz": 1041.738,
+        "spectral_flatness_proxy": 0.046719,
+        "high_band_fraction_proxy_ge8khz": 0.004694,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 729.6,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.862208,
+        "min_cosine": 0.845275,
+        "max_cosine": 0.87914,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.87914
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.845275
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.5080275506447105,
+      "dnsmos_background": 3.9746386458706855,
+      "dnsmos_overall": 3.1814409862442528,
+      "dnsmos_windows": 1,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "narrative_baseline",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_comparison/level_matched/narrative_baseline.wav",
+      "family": "asmr7",
+      "expected_text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "measurements": {
+        "duration_s": 6.88,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -27.966,
+        "peak_dbfs": -9.14,
+        "crest_db": 18.826,
+        "dc_offset": -6e-08,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -18.315,
+        "noise_floor_dbfs_proxy_low10pct_frames": -104.915,
+        "speech_level_dbfs_proxy_high50pct_frames": -27.83,
+        "snr_db_proxy_high50_minus_low10": 77.085,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -124.772,
+        "spectral_centroid_hz": 1268.526,
+        "spectral_flatness_proxy": 0.072403,
+        "high_band_fraction_proxy_ge8khz": 0.008537,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 729.61,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.884645,
+        "min_cosine": 0.868425,
+        "max_cosine": 0.900866,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.900866
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.868425
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.5192931171463044,
+      "dnsmos_background": 4.132111932697346,
+      "dnsmos_overall": 3.2809225844835503,
+      "dnsmos_windows": 5,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "narrative_embedding_half",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_comparison/level_matched/narrative_embedding_half.wav",
+      "family": "asmr7",
+      "expected_text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "measurements": {
+        "duration_s": 6.88,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -28.261,
+        "peak_dbfs": -9.653,
+        "crest_db": 18.609,
+        "dc_offset": -6e-08,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -19.069,
+        "noise_floor_dbfs_proxy_low10pct_frames": -104.901,
+        "speech_level_dbfs_proxy_high50pct_frames": -27.944,
+        "snr_db_proxy_high50_minus_low10": 76.957,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -124.923,
+        "spectral_centroid_hz": 1502.56,
+        "spectral_flatness_proxy": 0.087283,
+        "high_band_fraction_proxy_ge8khz": 0.010345,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 729.67,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.89653,
+        "min_cosine": 0.879096,
+        "max_cosine": 0.913964,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.913964
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.879096
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.4277616571417737,
+      "dnsmos_background": 4.034160098467559,
+      "dnsmos_overall": 3.152071634757937,
+      "dnsmos_windows": 5,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "narrative_embedding_full",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_comparison/level_matched/narrative_embedding_full.wav",
+      "family": "asmr7",
+      "expected_text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "measurements": {
+        "duration_s": 6.88,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -28.44,
+        "peak_dbfs": -8.988,
+        "crest_db": 19.452,
+        "dc_offset": -7e-08,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -19.545,
+        "noise_floor_dbfs_proxy_low10pct_frames": -104.996,
+        "speech_level_dbfs_proxy_high50pct_frames": -27.873,
+        "snr_db_proxy_high50_minus_low10": 77.123,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -125.015,
+        "spectral_centroid_hz": 1648.593,
+        "spectral_flatness_proxy": 0.0973,
+        "high_band_fraction_proxy_ge8khz": 0.011543,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 730.68,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.897524,
+        "min_cosine": 0.878743,
+        "max_cosine": 0.916305,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.916305
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.878743
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.3601183287308736,
+      "dnsmos_background": 3.9792062769840215,
+      "dnsmos_overall": 3.062105642428409,
+      "dnsmos_windows": 5,
+      "dnsmos_repeated_short_clip": true
+    },
+    {
+      "label": "narrative_full_gen",
+      "audio_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_comparison/level_matched/narrative_full_gen.wav",
+      "family": "asmr7",
+      "expected_text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "measurements": {
+        "duration_s": 6.88,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -28.069,
+        "peak_dbfs": -8.154,
+        "crest_db": 19.915,
+        "dc_offset": -5e-08,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -19.663,
+        "noise_floor_dbfs_proxy_low10pct_frames": -104.209,
+        "speech_level_dbfs_proxy_high50pct_frames": -27.243,
+        "snr_db_proxy_high50_minus_low10": 76.966,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -124.434,
+        "spectral_centroid_hz": 1409.126,
+        "spectral_flatness_proxy": 0.090975,
+        "high_band_fraction_proxy_ge8khz": 0.012523,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 730.68,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.854716,
+        "min_cosine": 0.834596,
+        "max_cosine": 0.874836,
+        "rows": [
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.874836
+          },
+          {
+            "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.834596
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      },
+      "dnsmos_signal": 3.438787638916433,
+      "dnsmos_background": 3.984023856027303,
+      "dnsmos_overall": 3.131884045288329,
+      "dnsmos_windows": 5,
+      "dnsmos_repeated_short_clip": true
+    }
+  ],
+  "synthesis_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_comparison/level_matched/evaluation_inputs.json",
+  "reference_manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "dnsmos_enabled": true,
+  "evaluation_role": "development_selection"
+}

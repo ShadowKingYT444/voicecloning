@@ -1,0 +1,342 @@
+{
+  "config": {
+    "alpha": 8.0,
+    "dropout": 0.05,
+    "module_shapes": {
+      "h.10.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.10.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.11.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.11.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.8.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.8.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.9.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.9.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      }
+    },
+    "modules": [
+      "h.8.attn.c_attn",
+      "h.8.attn.c_proj",
+      "h.9.attn.c_attn",
+      "h.9.attn.c_proj",
+      "h.10.attn.c_attn",
+      "h.10.attn.c_proj",
+      "h.11.attn.c_attn",
+      "h.11.attn.c_proj"
+    ],
+    "rank": 4
+  },
+  "format": "nano_t3_lora_checkpoint_v1",
+  "metadata": {
+    "adapted_label": "nano_lora_adapter",
+    "adapter": {
+      "alpha": 8.0,
+      "dropout": 0.05,
+      "module_shapes": {
+        "h.10.attn.c_attn": {
+          "in_features": 768,
+          "out_features": 2304
+        },
+        "h.10.attn.c_proj": {
+          "in_features": 768,
+          "out_features": 768
+        },
+        "h.11.attn.c_attn": {
+          "in_features": 768,
+          "out_features": 2304
+        },
+        "h.11.attn.c_proj": {
+          "in_features": 768,
+          "out_features": 768
+        },
+        "h.8.attn.c_attn": {
+          "in_features": 768,
+          "out_features": 2304
+        },
+        "h.8.attn.c_proj": {
+          "in_features": 768,
+          "out_features": 768
+        },
+        "h.9.attn.c_attn": {
+          "in_features": 768,
+          "out_features": 2304
+        },
+        "h.9.attn.c_proj": {
+          "in_features": 768,
+          "out_features": 768
+        }
+      },
+      "modules": [
+        "h.8.attn.c_attn",
+        "h.8.attn.c_proj",
+        "h.9.attn.c_attn",
+        "h.9.attn.c_proj",
+        "h.10.attn.c_attn",
+        "h.10.attn.c_proj",
+        "h.11.attn.c_attn",
+        "h.11.attn.c_proj"
+      ],
+      "rank": 4
+    },
+    "adoption_gate": {
+      "accepted_for_audio_evaluation": true,
+      "baseline_valid_loss": 4.95826862720733,
+      "release_status": "unreviewed",
+      "required_improvement": 0.0001
+    },
+    "causal_alignment": {
+      "input": "conditioning + text + BOS + speech[:-1]",
+      "reason": "stock loss scores logits at positions whose speech embedding contains the same target",
+      "stock_t3_loss_used": false,
+      "target": "speech + EOS"
+    },
+    "cpu_threads": 2,
+    "data": {
+      "cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adaptation_asmr_repaired_cache.json",
+      "max_target_tokens": 400,
+      "prompt_target_leakage_policy": {
+        "self_reference_allowed_for_diagnostic": false,
+        "target_and_reference_must_be_distinct": true,
+        "target_audio_is_never_used_as_reference_by_default": true
+      },
+      "speaker_id": "asmr7",
+      "train_rows": 15,
+      "valid_rows": 2
+    },
+    "device": "cuda",
+    "experiment": "nano_t3_per_voice_lora",
+    "mode": "adapted",
+    "model_dir": "/home/terryd/gooning/voicecloning/models/chatterbox-nano",
+    "objective": "exact Turbo causal shifted speech-token cross-entropy",
+    "parameter_counts": {
+      "adapter_trainable": 73728,
+      "s3gen_frozen": 0,
+      "t3_total": 140320931,
+      "voice_encoder_frozen": 0
+    },
+    "regularization": {
+      "adapter_l2": 1e-05,
+      "base_logit_kl": {
+        "coefficient": 0.2,
+        "reduction": "per-token batchmean, multiplied by temperature squared",
+        "reference": "same frozen base T3 pass with every LoRA residual scale set to zero",
+        "reference_gradients": false,
+        "temperature": 1.0
+      },
+      "grad_clip": 1.0,
+      "weight_decay": 0.0001
+    },
+    "tradeoffs": {
+      "8gb_gpu_feasibility": "training is likely feasible with Nano plus LoRA and short excerpts; full model load and optimizer/vocoder RSS must be measured on the target GPU",
+      "adapter_scope": "GPT-2 attention projections only unless --target-modules changes it",
+      "expected_effect": "small timbre/prosody correction; no new speaker data or vocoder denoising capacity",
+      "quality_claim": "not established until heldout audio and speaker-similarity metrics are evaluated"
+    },
+    "training": {
+      "best_valid_loss": 4.624262718444175,
+      "early_stop_patience": 2,
+      "elapsed_seconds": 10.380143948001205,
+      "epoch": 7,
+      "history": [
+        {
+          "epoch": 0,
+          "objective": "initial heldout loss before optimizer steps",
+          "train": null,
+          "valid": {
+            "correct": 51,
+            "loss": 4.95826862720733,
+            "perplexity": 142.34712647834868,
+            "token_accuracy": 0.1356382978723404,
+            "tokens": 376
+          }
+        },
+        {
+          "adapter_l2": 1e-05,
+          "epoch": 1,
+          "kl_coef": 0.2,
+          "kl_temperature": 1.0,
+          "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+          "train": {
+            "correct": 179,
+            "loss": 5.050018192540441,
+            "perplexity": 156.0253029572093,
+            "token_accuracy": 0.09506107275624004,
+            "tokens": 1883
+          },
+          "train_kl": 0.0006449046277062513,
+          "valid": {
+            "correct": 50,
+            "loss": 4.91063775407507,
+            "perplexity": 135.72594658793645,
+            "token_accuracy": 0.13297872340425532,
+            "tokens": 376
+          }
+        },
+        {
+          "adapter_l2": 1e-05,
+          "epoch": 2,
+          "kl_coef": 0.2,
+          "kl_temperature": 1.0,
+          "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+          "train": {
+            "correct": 197,
+            "loss": 4.939684441415034,
+            "perplexity": 139.72615081606602,
+            "token_accuracy": 0.1046202867764206,
+            "tokens": 1883
+          },
+          "train_kl": 0.01655049492054546,
+          "valid": {
+            "correct": 54,
+            "loss": 4.803586690983874,
+            "perplexity": 121.9470203493632,
+            "token_accuracy": 0.14361702127659576,
+            "tokens": 376
+          }
+        },
+        {
+          "adapter_l2": 1e-05,
+          "epoch": 3,
+          "kl_coef": 0.2,
+          "kl_temperature": 1.0,
+          "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+          "train": {
+            "correct": 213,
+            "loss": 4.784972302785783,
+            "perplexity": 119.69804773547664,
+            "token_accuracy": 0.11311736590546999,
+            "tokens": 1883
+          },
+          "train_kl": 0.10014934752945627,
+          "valid": {
+            "correct": 50,
+            "loss": 4.710329809087388,
+            "perplexity": 111.0887919576699,
+            "token_accuracy": 0.13297872340425532,
+            "tokens": 376
+          }
+        },
+        {
+          "adapter_l2": 1e-05,
+          "epoch": 4,
+          "kl_coef": 0.2,
+          "kl_temperature": 1.0,
+          "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+          "train": {
+            "correct": 231,
+            "loss": 4.686732002730326,
+            "perplexity": 108.49802854576558,
+            "token_accuracy": 0.12267657992565056,
+            "tokens": 1883
+          },
+          "train_kl": 0.21502832059396815,
+          "valid": {
+            "correct": 51,
+            "loss": 4.670711930761946,
+            "perplexity": 106.77373088356705,
+            "token_accuracy": 0.1356382978723404,
+            "tokens": 376
+          }
+        },
+        {
+          "adapter_l2": 1e-05,
+          "epoch": 5,
+          "kl_coef": 0.2,
+          "kl_temperature": 1.0,
+          "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+          "train": {
+            "correct": 238,
+            "loss": 4.635354845054088,
+            "perplexity": 103.06448342951091,
+            "token_accuracy": 0.12639405204460966,
+            "tokens": 1883
+          },
+          "train_kl": 0.2537093983247947,
+          "valid": {
+            "correct": 52,
+            "loss": 4.648704427353879,
+            "perplexity": 104.44957586610484,
+            "token_accuracy": 0.13829787234042554,
+            "tokens": 376
+          }
+        },
+        {
+          "adapter_l2": 1e-05,
+          "epoch": 6,
+          "kl_coef": 0.2,
+          "kl_temperature": 1.0,
+          "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+          "train": {
+            "correct": 242,
+            "loss": 4.5939258569361865,
+            "perplexity": 98.88186521345848,
+            "token_accuracy": 0.128518321826872,
+            "tokens": 1883
+          },
+          "train_kl": 0.2606426677723483,
+          "valid": {
+            "correct": 52,
+            "loss": 4.631060600280762,
+            "perplexity": 102.62284823370953,
+            "token_accuracy": 0.13829787234042554,
+            "tokens": 376
+          }
+        },
+        {
+          "adapter_l2": 1e-05,
+          "epoch": 7,
+          "kl_coef": 0.2,
+          "kl_temperature": 1.0,
+          "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+          "train": {
+            "correct": 117,
+            "loss": 4.497997757227448,
+            "perplexity": 89.83707546786754,
+            "token_accuracy": 0.1449814126394052,
+            "tokens": 807
+          },
+          "train_kl": 0.25659079858952444,
+          "valid": {
+            "correct": 52,
+            "loss": 4.624262718444175,
+            "perplexity": 101.92759603619315,
+            "token_accuracy": 0.13829787234042554,
+            "tokens": 376
+          }
+        }
+      ],
+      "initial_valid": {
+        "correct": 51,
+        "loss": 4.95826862720733,
+        "perplexity": 142.34712647834868,
+        "token_accuracy": 0.1356382978723404,
+        "tokens": 376
+      },
+      "peak_rss_mib": 2015.08984375
+    },
+    "training_loader": "t3_only_cached_features; acoustic/reference encoders not loaded",
+    "zero_shot_label": "base_nano_without_adapter"
+  }
+}

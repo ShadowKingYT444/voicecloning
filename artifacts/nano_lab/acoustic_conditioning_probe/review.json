@@ -1,0 +1,147 @@
+{
+  "kind": "source_reconstruction_conditioning_ablation",
+  "zero_shot_quality_evidence": false,
+  "groups": {
+    "baseline": [
+      {
+        "id": "baseline_10031",
+        "median_f0_hz": 235.24113470211154,
+        "voiced_fraction": 0.3018867924528302,
+        "hnr_median_db": 8.09698310730165,
+        "duration_s": 10.12
+      },
+      {
+        "id": "baseline_10097",
+        "median_f0_hz": 233.90292120397845,
+        "voiced_fraction": 0.2999006951340616,
+        "hnr_median_db": 8.106249686498947,
+        "duration_s": 10.12
+      }
+    ],
+    "self_all": [
+      {
+        "id": "self_all_10031",
+        "median_f0_hz": 268.35320813522014,
+        "voiced_fraction": 0.3028798411122145,
+        "hnr_median_db": 9.159982773450043,
+        "duration_s": 10.12
+      },
+      {
+        "id": "self_all_10097",
+        "median_f0_hz": 264.14383236656556,
+        "voiced_fraction": 0.2969215491559086,
+        "hnr_median_db": 8.34124695526156,
+        "duration_s": 10.12
+      }
+    ],
+    "baseline_self_embedding": [
+      {
+        "id": "baseline_self_embedding_10031",
+        "median_f0_hz": 264.0130960180088,
+        "voiced_fraction": 0.28897715988083417,
+        "hnr_median_db": 7.8206451279312095,
+        "duration_s": 10.12
+      },
+      {
+        "id": "baseline_self_embedding_10097",
+        "median_f0_hz": 253.61364690940673,
+        "voiced_fraction": 0.2959285004965243,
+        "hnr_median_db": 7.675589497401622,
+        "duration_s": 10.12
+      }
+    ],
+    "baseline_self_prompt": [
+      {
+        "id": "baseline_self_prompt_10031",
+        "median_f0_hz": 246.20849223083883,
+        "voiced_fraction": 0.3028798411122145,
+        "hnr_median_db": 8.857089159423545,
+        "duration_s": 10.12
+      },
+      {
+        "id": "baseline_self_prompt_10097",
+        "median_f0_hz": 245.8323136875525,
+        "voiced_fraction": 0.2969215491559086,
+        "hnr_median_db": 8.896721867462862,
+        "duration_s": 10.12
+      }
+    ],
+    "source_mel": [
+      {
+        "id": "source_mel_upperbound",
+        "median_f0_hz": 259.95401756192217,
+        "voiced_fraction": 0.3055276381909548,
+        "hnr_median_db": 8.05376443639989,
+        "duration_s": 10.0
+      }
+    ],
+    "source": [
+      {
+        "id": "source",
+        "median_f0_hz": 258.87367952018326,
+        "voiced_fraction": 0.31959798994974875,
+        "hnr_median_db": 7.859638248785918,
+        "duration_s": 10.0
+      }
+    ]
+  },
+  "embedding_only_t3_exact": true,
+  "embedding_only_other_gen_exact": true,
+  "prompt_only_embedding_exact": true,
+  "prompt_shapes_same": true,
+  "peak_rss_mib": 2665.203125,
+  "interpretation": "Changing only the decoder speaker embedding moves estimated pitch closer to source across both fixed seeds. Source conditioning deliberately leaks target information; this is mechanism evidence, not a new-text clone result.",
+  "next_experiment": "Mix an independent reference decoder embedding into the conversational cache; preserve T3 and other gen fields; compare new text with baseline, same adapter and seeds.",
+  "small_content_audit": [
+    {
+      "id": "baseline_10031",
+      "wer": 0.1,
+      "transcript": "Let's see, who's the lucky person to get to kiss me? Wait a minute, do I know you?"
+    },
+    {
+      "id": "baseline_10097",
+      "wer": 0.1,
+      "transcript": "Let's see, who's the lucky person to get to kiss me? Wait a minute, do I know you?"
+    },
+    {
+      "id": "self_all_10031",
+      "wer": 0.0,
+      "transcript": "Let's see, who's the lucky person who gets to kiss me? Wait a minute. Do I know you?"
+    },
+    {
+      "id": "self_all_10097",
+      "wer": 0.0,
+      "transcript": "Let's see, who's the lucky person who gets to kiss me? Wait a minute, do I know you?"
+    },
+    {
+      "id": "baseline_self_embedding_10031",
+      "wer": 0.1,
+      "transcript": "Let's see, who's the lucky person to get to kiss me? Wait a minute, do I know you?"
+    },
+    {
+      "id": "baseline_self_embedding_10097",
+      "wer": 0.1,
+      "transcript": "Let's see, who's the lucky person to get to kiss me? Wait a minute, do I know you?"
+    },
+    {
+      "id": "baseline_self_prompt_10031",
+      "wer": 0.0,
+      "transcript": "Let's see, who's the lucky person who gets to kiss me? Wait a minute, do I know you?"
+    },
+    {
+      "id": "baseline_self_prompt_10097",
+      "wer": 0.0,
+      "transcript": "Let's see, who's the lucky person who gets to kiss me? Wait a minute, do I know you?"
+    },
+    {
+      "id": "source_mel_upperbound",
+      "wer": 0.05,
+      "transcript": "Let's see, who's the lucky person who got to kiss me? Wait a minute, do I know you?"
+    },
+    {
+      "id": "source",
+      "wer": 0.0,
+      "transcript": "Let's see, who's the lucky person who gets to kiss me? Wait a minute, do I know you?"
+    }
+  ]
+}

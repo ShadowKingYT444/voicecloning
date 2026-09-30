@@ -1,0 +1,22 @@
+[
+  {
+    "voice": "asmr_soft",
+    "byte_identical": true,
+    "old_reported_peak_rss_mib": 2436.80078125,
+    "new_reported_peak_rss_mib": 2125.05859375,
+    "new_observed_peak_rss_mib": 2126.40625,
+    "old_cuda_peak_mib": 2376.2724609375,
+    "new_cuda_peak_mib": 1664.5810546875,
+    "runtime_sha256": "17918f3a8b235c0d5b8ba8f5636fe7f4c46582c096daf873e73a760a6cf55617"
+  },
+  {
+    "voice": "harvey",
+    "byte_identical": true,
+    "old_reported_peak_rss_mib": 2385.95703125,
+    "new_reported_peak_rss_mib": 2134.640625,
+    "new_observed_peak_rss_mib": 2136.234375,
+    "old_cuda_peak_mib": 2376.2724609375,
+    "new_cuda_peak_mib": 1664.5810546875,
+    "runtime_sha256": "17918f3a8b235c0d5b8ba8f5636fe7f4c46582c096daf873e73a760a6cf55617"
+  }
+]

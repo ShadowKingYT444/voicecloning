@@ -1,0 +1,84 @@
+{
+  "synthetic": true,
+  "profile": "/home/terryd/gooning/voicecloning/voices/nano/harvey_fitted_experimental.json",
+  "device": "cuda",
+  "dtype": "fp32",
+  "seed": 31,
+  "load_and_prepare_seconds": 4.4304147960065166,
+  "runtime_load_report": {
+    "optimized": true,
+    "device": "cuda",
+    "dtype": "torch.float32",
+    "decoder": "meanflow",
+    "implementation_sha256": "74ca7629d3e2460943b747519f8bda3449115202c85072c897bafee2f44532af",
+    "ve": {
+      "skipped": true,
+      "reason": "conditionals_path supplied"
+    },
+    "t3": {
+      "loaded_tensors": 153,
+      "skipped_tensors": 2,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": [],
+      "removed_parameters": [
+        "tfmr.wte",
+        "text_head"
+      ]
+    },
+    "precision_policy": {
+      "t3": "torch.float32",
+      "s3gen": "torch.float32"
+    },
+    "s3gen": {
+      "loaded_tensors": 1450,
+      "skipped_tensors": 1041,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": []
+    },
+    "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+    "parameters": {
+      "t3": 140247203,
+      "s3gen": 135467807,
+      "ve": 0
+    },
+    "load_seconds": 4.389999771003204,
+    "engine": {
+      "optimized": true,
+      "dtype": "torch.float32",
+      "device": "cuda",
+      "decoder": "meanflow"
+    }
+  },
+  "ready_rss_mib": 1461.5859375,
+  "segments": [
+    {
+      "text": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence.",
+      "seconds": 6.1,
+      "generation_and_master_seconds": 4.647738601001038,
+      "rtf": 0.7619243608198423,
+      "processing": {
+        "highpass_hz": 45,
+        "gain_db": 0.9218484814422827,
+        "target_lufs": -19,
+        "achieved_lufs": -22.167097570837548,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      }
+    }
+  ],
+  "length_limit_retries": [],
+  "mel_calibration": {
+    "requested": false,
+    "applied": false,
+    "strength": 0.0
+  },
+  "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/native_harvey_fitted_business_31.wav",
+  "audio_seconds": 6.1,
+  "total_seconds": 9.087830567004858,
+  "rss_mib": 2401.01953125,
+  "peak_rss_mib": 2400.19140625,
+  "cuda_peak_allocated_mib": 1664.5810546875
+}

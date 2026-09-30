@@ -1,0 +1,23 @@
+{
+  "label": "ASMR conversational adapted (75%, experimental)",
+  "mode": "speaker_adapted",
+  "status": "rejected_training_label_mismatch",
+  "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+  "conditioning_cache": "artifacts/nano_lab/sweep_robustness/conv_fitted_expressive_63_s75.conds.pt",
+  "decoder": "meanflow",
+  "steps": 2,
+  "cuda_dtype": "fp32",
+  "sampling": {
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "top_k": 1000,
+    "repetition_penalty": 1.2
+  },
+  "source_case": "conv_fitted_expressive_63_s75",
+  "watermark": true,
+  "speaker_vector": "artifacts/nano_lab/conditioning_fit_constrained.json",
+  "speaker_vector_mode": "delta",
+  "speaker_vector_strength": 0.75,
+  "validation_report": "artifacts/nano_lab/robustness_review.json",
+  "rejection_reason": "Fitted using a cache with source/transcript mismatches. New fitting requires audited replacement data."
+}

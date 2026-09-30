@@ -1,0 +1,47 @@
+{
+  "elapsed_seconds": 3.4695427417755127,
+  "finished_unix": 1790703713.0433817,
+  "result": {
+    "conditioning_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+    "field_count": 7,
+    "mode": "speaker_adapted_and_mel_calibrated",
+    "profile": "/home/terryd/gooning/voicecloning/voices/nano/asmr_fitted_experimental.json",
+    "profile_validation": {
+      "adapter": {
+        "adapter_patch_format": "nano_t3_lora_merged_v1",
+        "adapter_sha256": "cec985d98348a0a09a437766b996862d1f1017d36bdb8f400bbc0ad1547b0c4d",
+        "enabled": true,
+        "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged_adapter_aligned_all_attn/t3/nano_t3_kv.onnx",
+        "graph_sha256": "01c73f743c816b379ea93d56846e2253f7869118394b363ebd5c2fdde36dee83",
+        "manifest": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged_adapter_aligned_all_attn/t3/manifest.json",
+        "manifest_sha256": "4a523c90ca95d5eba858fe0cb7474aa173a5406f2ec45dc7ecd66d485eabe421",
+        "patched_graph_sha256": "01c73f743c816b379ea93d56846e2253f7869118394b363ebd5c2fdde36dee83",
+        "profile_adapter": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/adapter_aligned_all_attn.pt",
+        "profile_scale": 1.0
+      },
+      "mel_calibration": {
+        "applied": false,
+        "delta_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/delta.npy",
+        "delta_sha256": "f2fe4c931a6d2d68e8a7be9775761c6e1911dd9740c9f3715861debc99637e83",
+        "enabled": true,
+        "report": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/report.json",
+        "report_sha256": "df5644ca3f83a8dbea1a5d8887d902475edf01b7335040d1a8e20b3e877e9719",
+        "strength": 1.0
+      },
+      "profile": "/home/terryd/gooning/voicecloning/voices/nano/asmr_fitted_experimental.json"
+    },
+    "skipped_optional_fields": [
+      "t3.clap_emb",
+      "t3.cond_prompt_speech_emb",
+      "gen.prompt_feat_len"
+    ]
+  },
+  "rss": {
+    "peak_rss_bytes": 236658688,
+    "rss_bytes": 237584384
+  },
+  "schema_version": 1,
+  "stage": "prepare",
+  "started_unix": 1790703709.57384,
+  "status": "ok"
+}

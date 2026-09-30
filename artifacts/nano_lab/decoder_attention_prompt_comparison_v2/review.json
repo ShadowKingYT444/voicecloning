@@ -1,0 +1,760 @@
+{
+  "status": "experimental_not_promoted",
+  "human_listening": false,
+  "prompt_donor": true,
+  "rows": [
+    {
+      "id": "question_prompt_attention0_mel",
+      "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/level_matched/question_prompt_attention0_mel.wav",
+      "level_audio_sha256_at_review": "11a4384ea52632360cc8bf81a6e16241be4ba579df38ae0f9518abdd38423b6f",
+      "wer": 0.0,
+      "identity_cosine": 0.881803,
+      "dnsmos_overall": 3.1190086662966565,
+      "seconds": 5.72,
+      "generation_seconds": 4.754392249000375,
+      "peak_rss_mib": 2360.078125
+    },
+    {
+      "id": "question_prompt_attention1_mel",
+      "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine.",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/level_matched/question_prompt_attention1_mel.wav",
+      "level_audio_sha256_at_review": "8102c37c5f2f43b4d98e208acdc9e9d3276710a8b63d22342f34a8a1012ed5ef",
+      "wer": 0.0,
+      "identity_cosine": 0.88853,
+      "dnsmos_overall": 3.082281910127096,
+      "seconds": 5.72,
+      "generation_seconds": 2.9204330639986438,
+      "peak_rss_mib": 2478.765625
+    },
+    {
+      "id": "narrative_prompt_attention0_mel",
+      "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/level_matched/narrative_prompt_attention0_mel.wav",
+      "level_audio_sha256_at_review": "3ef5e7313551616c6beb33836d516a16594b997a9c2575927d1733cab1d921b6",
+      "wer": 0.0,
+      "identity_cosine": 0.891018,
+      "dnsmos_overall": 3.213798146747816,
+      "seconds": 7.8,
+      "generation_seconds": 3.0686474999965867,
+      "peak_rss_mib": 2482.140625
+    },
+    {
+      "id": "narrative_prompt_attention1_mel",
+      "text": "The last train had already left when I reached the station. A small light was still on above the ticket office.",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/level_matched/narrative_prompt_attention1_mel.wav",
+      "level_audio_sha256_at_review": "0f9b0f703aabc780dfdf2d3a9a059e3bec4c6e773fc1602a829e510da74f5d47",
+      "wer": 0.0,
+      "identity_cosine": 0.898661,
+      "dnsmos_overall": 3.136454671088418,
+      "seconds": 7.8,
+      "generation_seconds": 3.0195425670026452,
+      "peak_rss_mib": 2496.36328125
+    },
+    {
+      "id": "heldout01_prompt_attention0_mel",
+      "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/level_matched/heldout01_prompt_attention0_mel.wav",
+      "level_audio_sha256_at_review": "3eebb904ff47f6a8f038bd5f0b03074344829a8b9ae66f647bc289a47ab9707a",
+      "wer": 0.0,
+      "identity_cosine": 0.910653,
+      "dnsmos_overall": 3.2047087541205137,
+      "seconds": 7.4,
+      "generation_seconds": 3.5010558560024947,
+      "peak_rss_mib": 2496.36328125
+    },
+    {
+      "id": "heldout01_prompt_attention1_mel",
+      "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/level_matched/heldout01_prompt_attention1_mel.wav",
+      "level_audio_sha256_at_review": "8cdfbdac593903574977cee9f31417cb94521c2ec756cb46d2a2bc3d7f59d373",
+      "wer": 0.0,
+      "identity_cosine": 0.915628,
+      "dnsmos_overall": 3.1781804112503664,
+      "seconds": 7.4,
+      "generation_seconds": 2.892832690005889,
+      "peak_rss_mib": 2496.48828125
+    }
+  ],
+  "groups": {
+    "attention0_mel": {
+      "identity_cosine": 0.8864105,
+      "dnsmos_overall": 3.166403406522236,
+      "wer": 0.0,
+      "seconds": 6.76,
+      "generation_seconds": 3.911519874498481
+    },
+    "attention1_mel": {
+      "identity_cosine": 0.8935955,
+      "dnsmos_overall": 3.109368290607757,
+      "wer": 0.0,
+      "seconds": 6.76,
+      "generation_seconds": 2.9699878155006445
+    }
+  },
+  "token_checks": {
+    "question": {
+      "exact_equal": true,
+      "signatures": {
+        "question_prompt_attention0_mel": "cd3222912071eabdcd3f25d4ff04a952344cf5cb9217aaa16dc45490d43e2693",
+        "question_prompt_attention1_mel": "cd3222912071eabdcd3f25d4ff04a952344cf5cb9217aaa16dc45490d43e2693"
+      }
+    },
+    "narrative": {
+      "exact_equal": true,
+      "signatures": {
+        "narrative_prompt_attention0_mel": "b01c933ef3ec9a81c1721e446a0e51aad8ccf670ea3ffe7c75eae51b00918728",
+        "narrative_prompt_attention1_mel": "b01c933ef3ec9a81c1721e446a0e51aad8ccf670ea3ffe7c75eae51b00918728"
+      }
+    },
+    "heldout01": {
+      "exact_equal": true,
+      "signatures": {
+        "heldout01_prompt_attention0_mel": "d5596b4e6b3f5208b8758054ea8929fca0314189d9bd74dc3287bd39f7edc16e",
+        "heldout01_prompt_attention1_mel": "d5596b4e6b3f5208b8758054ea8929fca0314189d9bd74dc3287bd39f7edc16e"
+      }
+    }
+  },
+  "all_wer_zero": true,
+  "peak_process_rss_mib": 2496.48828125,
+  "fit": {
+    "best_step": 30,
+    "epoch0_valid": 0.7862758636474609,
+    "best_valid": 0.6658157408237457,
+    "peak_rss_bytes": 1918775296
+  },
+  "fold_verification": {
+    "adapter_sha256": "de6d40e5565011022efe776c1852f5bdc1850a87cf4e0e5ba51208aba3e747c2",
+    "atol": 0.0001,
+    "checks": [
+      {
+        "id": "asmr7_repair_001",
+        "max_abs": 4.76837158203125e-06,
+        "rmse": 1.0652400987964938e-06
+      },
+      {
+        "id": "asmr7_repair_022",
+        "max_abs": 5.7220458984375e-06,
+        "rmse": 1.0963486829496105e-06
+      },
+      {
+        "id": "asmr7_repair_034",
+        "max_abs": 6.198883056640625e-06,
+        "rmse": 1.0619014574331231e-06
+      }
+    ],
+    "elapsed_seconds": 28.020823188999202,
+    "idempotent_metadata": {
+      "adapter_sha256": "de6d40e5565011022efe776c1852f5bdc1850a87cf4e0e5ba51208aba3e747c2",
+      "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+      "enabled": true,
+      "idempotent": true,
+      "initial_conditionals_sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+      "inventory_sha256": "9f36f6f5a61c8ec1bda8fa09e88640035931fb8690a920f73d9fe15cb94919ed",
+      "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_fit/best_attention.pt",
+      "restored": false,
+      "strength": 1.0,
+      "target_parameter_count": 344064,
+      "target_weight_count": 224
+    },
+    "peak_rss_bytes": 1793687552,
+    "precision_before": {
+      "cudnn_tf32": true,
+      "matmul_tf32": false
+    },
+    "precision_used": {
+      "cudnn_tf32": false,
+      "matmul_tf32": false
+    },
+    "repeated_fold_exact": true,
+    "restore_exact": true,
+    "restore_metadata": {
+      "enabled": false,
+      "inventory_sha256": "9f36f6f5a61c8ec1bda8fa09e88640035931fb8690a920f73d9fe15cb94919ed",
+      "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+      "path": null,
+      "restored": true,
+      "strength": 0.0,
+      "target_parameter_count": 344064,
+      "target_weight_count": 224
+    },
+    "rmse_limit": 1e-05,
+    "runtime": {
+      "adapter_sha256": "de6d40e5565011022efe776c1852f5bdc1850a87cf4e0e5ba51208aba3e747c2",
+      "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+      "enabled": true,
+      "idempotent": false,
+      "initial_conditionals_sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+      "inventory_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_inventory.json",
+      "inventory_sha256": "9f36f6f5a61c8ec1bda8fa09e88640035931fb8690a920f73d9fe15cb94919ed",
+      "model_checkpoint_path": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/s3gen_meanflow.safetensors",
+      "model_checkpoint_sha256": "d65cb687a2ed581ee6cc297e919ffefa63386944f42364ae13b78a594945514f",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_fit/best_attention.pt",
+      "prepared_conditionals_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+      "restored": false,
+      "strength": 1.0,
+      "target_parameter_count": 344064,
+      "target_weight_count": 224,
+      "target_weight_key_prefix": "flow.decoder.estimator."
+    },
+    "scope": "Three source-token flow reconstructions; no T3 or vocoder",
+    "status": "passed",
+    "strict_fp32": true
+  },
+  "prosody": {
+    "schema_version": 1,
+    "kind": "prosody_diagnostic",
+    "score_free": true,
+    "acceptance_score": null,
+    "interpretation": "Descriptive acoustic diagnostics only; they do not establish realism, identity, or quality.",
+    "pitch": {
+      "backend": "Praat autocorrelation via parselmouth",
+      "floor_hz": 60.0,
+      "ceiling_hz": 500.0,
+      "time_step_s": 0.01,
+      "reliability_warning": "Autocorrelation F0 can be unreliable for whispered, creaky, breathy, or noisy speech."
+    },
+    "inputs": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/prosody_inputs.json",
+    "input_count": 3,
+    "analyzed_count": 3,
+    "error_count": 0,
+    "errors": [],
+    "rows": [
+      {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/level_matched/heldout01_prompt_attention0_mel.wav",
+        "duration_s": 7.4,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "source_sha256": "3eebb904ff47f6a8f038bd5f0b03074344829a8b9ae66f647bc289a47ab9707a",
+        "text_word_count": 18,
+        "pitch": {
+          "method": "Praat autocorrelation via parselmouth",
+          "floor_hz": 60.0,
+          "ceiling_hz": 500.0,
+          "time_step_s": 0.01,
+          "frame_count": 736,
+          "finite_frame_count": 736,
+          "voiced_frame_count": 267,
+          "finite_frame_fraction": 1.0,
+          "voiced_frame_fraction": 0.36277173913043476,
+          "f0_hz": {
+            "count": 267,
+            "missing_count": 0,
+            "min": 65.03432378172889,
+            "p10": 91.51744030076843,
+            "p25": 184.99052531489997,
+            "median": 197.04484034821192,
+            "p75": 214.53648812690562,
+            "p90": 249.98046182054355,
+            "max": 299.9791187181181,
+            "mean": 187.7992418655474,
+            "std": 53.61189022082185
+          },
+          "adjacent_voiced_frame_count": 257,
+          "semitone_delta": {
+            "count": 257,
+            "missing_count": 0,
+            "min": -12.180780316317685,
+            "p10": -0.5220806270467526,
+            "p25": -0.2504557969731716,
+            "median": -0.060696400654867935,
+            "p75": 0.11540462408420168,
+            "p90": 0.2596366909642478,
+            "max": 12.207614431598099,
+            "mean": -0.1726971811398494,
+            "std": 1.5307240710514016
+          },
+          "large_jump_fraction_abs_gt_4st": 0.01556420233463035,
+          "reliability_warning": "Whispered, creaky, breathy, and noisy ASMR can produce unreliable autocorrelation F0; frame coverage is diagnostic only."
+        },
+        "harmonicity": {
+          "method": "Praat cross-correlation harmonicity",
+          "minimum_pitch_hz": 60.0,
+          "time_step_s": 0.01,
+          "frame_count": 731,
+          "raw_finite_frame_count": 731,
+          "raw_finite_frame_fraction": 1.0,
+          "undefined_sentinel_db": -200.0,
+          "undefined_sentinel_frame_count": 346,
+          "defined_frame_count": 385,
+          "defined_frame_fraction": 0.5266757865937073,
+          "harmonicity_db": {
+            "count": 385,
+            "missing_count": 0,
+            "min": -4.1036219563086,
+            "p10": -0.12213055024619843,
+            "p25": 1.8128143532577128,
+            "median": 7.38779249307913,
+            "p75": 10.100358880091957,
+            "p90": 12.977285611280074,
+            "max": 18.02020384427179,
+            "mean": 6.612591855676292,
+            "std": 5.100678837375236
+          },
+          "reliability_warning": "Harmonicity coverage is a diagnostic of periodic structure, not a realism or quality score.",
+          "sentinel_warning": "Praat reports -200 dB for undefined or silent harmonicity frames; those finite sentinel values are excluded from the HNR distribution and counted separately."
+        },
+        "pauses_and_duration": {
+          "frame_count": 739,
+          "active_frame_fraction": 0.7117726657645467,
+          "pause_frame_fraction": 0.2882273342354533,
+          "pause_count": 7,
+          "pause_duration_s": {
+            "count": 7,
+            "missing_count": 0,
+            "min": 0.03,
+            "p10": 0.054000000000000006,
+            "p25": 0.07500000000000001,
+            "median": 0.11,
+            "p75": 0.425,
+            "p90": 0.8220000000000001,
+            "max": 0.99,
+            "mean": 0.30428571428571427,
+            "std": 0.3545563482461323
+          },
+          "active_duration_s": {
+            "count": 6,
+            "missing_count": 0,
+            "min": 0.04,
+            "p10": 0.045,
+            "p25": 0.20750000000000002,
+            "median": 0.8,
+            "p75": 1.1075,
+            "p90": 1.785,
+            "max": 2.4,
+            "mean": 0.8766666666666666,
+            "std": 0.7990132803791326
+          },
+          "threshold_dbfs": -54.7803334979017,
+          "threshold_method": "adaptive_rms_dbfs",
+          "frame_step_s": 0.01
+        },
+        "speech_rate_proxy": {
+          "method": "word count divided by adaptive RMS active duration",
+          "words_per_audio_second": 2.4324324324324325,
+          "active_duration_mean_s": 5.267117726657646,
+          "words_per_active_second": 3.417428835679786
+        },
+        "id": "heldout01_prompt_attention0_mel",
+        "source_group": "prompt_attention",
+        "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?"
+      },
+      {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/level_matched/heldout01_prompt_attention1_mel.wav",
+        "duration_s": 7.4,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "source_sha256": "8cdfbdac593903574977cee9f31417cb94521c2ec756cb46d2a2bc3d7f59d373",
+        "text_word_count": 18,
+        "pitch": {
+          "method": "Praat autocorrelation via parselmouth",
+          "floor_hz": 60.0,
+          "ceiling_hz": 500.0,
+          "time_step_s": 0.01,
+          "frame_count": 736,
+          "finite_frame_count": 736,
+          "voiced_frame_count": 267,
+          "finite_frame_fraction": 1.0,
+          "voiced_frame_fraction": 0.36277173913043476,
+          "f0_hz": {
+            "count": 267,
+            "missing_count": 0,
+            "min": 65.07530042632429,
+            "p10": 91.20033862219495,
+            "p25": 101.2454653266814,
+            "median": 196.63908601485775,
+            "p75": 217.6942921409372,
+            "p90": 250.93430693472473,
+            "max": 299.1842545790836,
+            "mean": 181.25399785262624,
+            "std": 59.213089924644045
+          },
+          "adjacent_voiced_frame_count": 257,
+          "semitone_delta": {
+            "count": 257,
+            "missing_count": 0,
+            "min": -11.974713288069214,
+            "p10": -0.6188264026591846,
+            "p25": -0.26132918622127876,
+            "median": -0.07208910122077344,
+            "p75": 0.140876538404505,
+            "p90": 0.3187054504084531,
+            "max": 13.227997076979193,
+            "mean": -0.05408517529598383,
+            "std": 1.9413449568501757
+          },
+          "large_jump_fraction_abs_gt_4st": 0.027237354085603113,
+          "reliability_warning": "Whispered, creaky, breathy, and noisy ASMR can produce unreliable autocorrelation F0; frame coverage is diagnostic only."
+        },
+        "harmonicity": {
+          "method": "Praat cross-correlation harmonicity",
+          "minimum_pitch_hz": 60.0,
+          "time_step_s": 0.01,
+          "frame_count": 731,
+          "raw_finite_frame_count": 731,
+          "raw_finite_frame_fraction": 1.0,
+          "undefined_sentinel_db": -200.0,
+          "undefined_sentinel_frame_count": 348,
+          "defined_frame_count": 383,
+          "defined_frame_fraction": 0.5239398084815321,
+          "harmonicity_db": {
+            "count": 383,
+            "missing_count": 0,
+            "min": -4.254091493606177,
+            "p10": -0.6925684438342815,
+            "p25": 1.5626028565706411,
+            "median": 7.094497358859324,
+            "p75": 9.965153166522297,
+            "p90": 12.260725949071704,
+            "max": 17.94262903800449,
+            "mean": 6.250205255845036,
+            "std": 5.013872668164046
+          },
+          "reliability_warning": "Harmonicity coverage is a diagnostic of periodic structure, not a realism or quality score.",
+          "sentinel_warning": "Praat reports -200 dB for undefined or silent harmonicity frames; those finite sentinel values are excluded from the HNR distribution and counted separately."
+        },
+        "pauses_and_duration": {
+          "frame_count": 739,
+          "active_frame_fraction": 0.6982408660351827,
+          "pause_frame_fraction": 0.3017591339648173,
+          "pause_count": 9,
+          "pause_duration_s": {
+            "count": 9,
+            "missing_count": 0,
+            "min": 0.03,
+            "p10": 0.03,
+            "p25": 0.04,
+            "median": 0.08,
+            "p75": 0.15,
+            "p90": 0.768,
+            "max": 1.0,
+            "mean": 0.24777777777777776,
+            "std": 0.3337256950044045
+          },
+          "active_duration_s": {
+            "count": 8,
+            "missing_count": 0,
+            "min": 0.03,
+            "p10": 0.037,
+            "p25": 0.04,
+            "median": 0.56,
+            "p75": 0.9650000000000001,
+            "p90": 1.343,
+            "max": 1.9100000000000001,
+            "mean": 0.645,
+            "std": 0.616076293976647
+          },
+          "threshold_dbfs": -52.15776986299385,
+          "threshold_method": "adaptive_rms_dbfs",
+          "frame_step_s": 0.01
+        },
+        "speech_rate_proxy": {
+          "method": "word count divided by adaptive RMS active duration",
+          "words_per_audio_second": 2.4324324324324325,
+          "active_duration_mean_s": 5.166982408660352,
+          "words_per_active_second": 3.4836580766813325
+        },
+        "id": "heldout01_prompt_attention1_mel",
+        "source_group": "prompt_attention",
+        "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?"
+      },
+      {
+        "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/cadence_penalty/level_matched/source_heldout01.wav",
+        "duration_s": 10.0,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "source_sha256": "76907be97a066cc40ccf47e1efb8f29c0340d3e5ee2936105c0d22f1ad99814b",
+        "text_word_count": 18,
+        "pitch": {
+          "method": "Praat autocorrelation via parselmouth",
+          "floor_hz": 60.0,
+          "ceiling_hz": 500.0,
+          "time_step_s": 0.01,
+          "frame_count": 995,
+          "finite_frame_count": 995,
+          "voiced_frame_count": 318,
+          "finite_frame_fraction": 1.0,
+          "voiced_frame_fraction": 0.31959798994974875,
+          "f0_hz": {
+            "count": 318,
+            "missing_count": 0,
+            "min": 89.15858124929274,
+            "p10": 129.5172927044441,
+            "p25": 217.92800945331518,
+            "median": 258.8736790180749,
+            "p75": 305.47809152268303,
+            "p90": 357.41499599299374,
+            "max": 491.4389731807967,
+            "mean": 258.0468465720263,
+            "std": 83.52987496408659
+          },
+          "adjacent_voiced_frame_count": 304,
+          "semitone_delta": {
+            "count": 304,
+            "missing_count": 0,
+            "min": -11.537550429222696,
+            "p10": -0.6440307648144423,
+            "p25": -0.2746161291584257,
+            "median": -0.015555904912253735,
+            "p75": 0.17150967043363302,
+            "p90": 0.39852664813914485,
+            "max": 11.189882004309887,
+            "mean": -0.05962283726288449,
+            "std": 1.1101543923666208
+          },
+          "large_jump_fraction_abs_gt_4st": 0.009868421052631578,
+          "reliability_warning": "Whispered, creaky, breathy, and noisy ASMR can produce unreliable autocorrelation F0; frame coverage is diagnostic only."
+        },
+        "harmonicity": {
+          "method": "Praat cross-correlation harmonicity",
+          "minimum_pitch_hz": 60.0,
+          "time_step_s": 0.01,
+          "frame_count": 991,
+          "raw_finite_frame_count": 991,
+          "raw_finite_frame_fraction": 1.0,
+          "undefined_sentinel_db": -200.0,
+          "undefined_sentinel_frame_count": 672,
+          "defined_frame_count": 319,
+          "defined_frame_fraction": 0.3218970736629667,
+          "harmonicity_db": {
+            "count": 319,
+            "missing_count": 0,
+            "min": -5.281955111726093,
+            "p10": 2.4936923692542625,
+            "p25": 4.597804117883024,
+            "median": 7.859638138429814,
+            "p75": 10.94551486321203,
+            "p90": 13.658310446503307,
+            "max": 18.953955233243942,
+            "mean": 7.784505081709603,
+            "std": 4.570950748477749
+          },
+          "reliability_warning": "Harmonicity coverage is a diagnostic of periodic structure, not a realism or quality score.",
+          "sentinel_warning": "Praat reports -200 dB for undefined or silent harmonicity frames; those finite sentinel values are excluded from the HNR distribution and counted separately."
+        },
+        "pauses_and_duration": {
+          "frame_count": 999,
+          "active_frame_fraction": 0.5065065065065065,
+          "pause_frame_fraction": 0.4934934934934935,
+          "pause_count": 15,
+          "pause_duration_s": {
+            "count": 15,
+            "missing_count": 0,
+            "min": 0.03,
+            "p10": 0.03,
+            "p25": 0.045,
+            "median": 0.15,
+            "p75": 0.36,
+            "p90": 0.97,
+            "max": 1.43,
+            "mean": 0.32866666666666666,
+            "std": 0.42047380682061786
+          },
+          "active_duration_s": {
+            "count": 14,
+            "missing_count": 0,
+            "min": 0.05,
+            "p10": 0.06,
+            "p25": 0.0625,
+            "median": 0.21500000000000002,
+            "p75": 0.6275,
+            "p90": 0.768,
+            "max": 1.0,
+            "mean": 0.3614285714285714,
+            "std": 0.3220882120266599
+          },
+          "threshold_dbfs": -43.95381502786743,
+          "threshold_method": "adaptive_rms_dbfs",
+          "frame_step_s": 0.01
+        },
+        "speech_rate_proxy": {
+          "method": "word count divided by adaptive RMS active duration",
+          "words_per_audio_second": 1.8,
+          "active_duration_mean_s": 5.065065065065065,
+          "words_per_active_second": 3.5537549407114626
+        },
+        "id": "source_heldout01",
+        "source_group": "source",
+        "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?"
+      }
+    ],
+    "groups": {
+      "prompt_attention": {
+        "count": 2,
+        "distributions": {
+          "duration_s": {
+            "count": 2,
+            "missing_count": 0,
+            "min": 7.4,
+            "p10": 7.4,
+            "p25": 7.4,
+            "median": 7.4,
+            "p75": 7.4,
+            "p90": 7.4,
+            "max": 7.4,
+            "mean": 7.4,
+            "std": 0.0
+          },
+          "voiced_frame_fraction": {
+            "count": 2,
+            "missing_count": 0,
+            "min": 0.36277173913043476,
+            "p10": 0.36277173913043476,
+            "p25": 0.36277173913043476,
+            "median": 0.36277173913043476,
+            "p75": 0.36277173913043476,
+            "p90": 0.36277173913043476,
+            "max": 0.36277173913043476,
+            "mean": 0.36277173913043476,
+            "std": 0.0
+          },
+          "harmonicity_defined_frame_fraction": {
+            "count": 2,
+            "missing_count": 0,
+            "min": 0.5239398084815321,
+            "p10": 0.5242134062927496,
+            "p25": 0.5246238030095759,
+            "median": 0.5253077975376197,
+            "p75": 0.5259917920656635,
+            "p90": 0.5264021887824898,
+            "max": 0.5266757865937073,
+            "mean": 0.5253077975376197,
+            "std": 0.001367989056087593
+          },
+          "harmonicity_raw_finite_frame_fraction": {
+            "count": 2,
+            "missing_count": 0,
+            "min": 1.0,
+            "p10": 1.0,
+            "p25": 1.0,
+            "median": 1.0,
+            "p75": 1.0,
+            "p90": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "pause_frame_fraction": {
+            "count": 2,
+            "missing_count": 0,
+            "min": 0.2882273342354533,
+            "p10": 0.2895805142083897,
+            "p25": 0.29161028416779433,
+            "median": 0.29499323410013534,
+            "p75": 0.2983761840324763,
+            "p90": 0.3004059539918809,
+            "max": 0.3017591339648173,
+            "mean": 0.29499323410013534,
+            "std": 0.0067658998646819846
+          },
+          "words_per_audio_second": {
+            "count": 2,
+            "missing_count": 0,
+            "min": 2.4324324324324325,
+            "p10": 2.4324324324324325,
+            "p25": 2.4324324324324325,
+            "median": 2.4324324324324325,
+            "p75": 2.4324324324324325,
+            "p90": 2.4324324324324325,
+            "max": 2.4324324324324325,
+            "mean": 2.4324324324324325,
+            "std": 0.0
+          }
+        },
+        "ids": [
+          "heldout01_prompt_attention0_mel",
+          "heldout01_prompt_attention1_mel"
+        ]
+      },
+      "source": {
+        "count": 1,
+        "distributions": {
+          "duration_s": {
+            "count": 1,
+            "missing_count": 0,
+            "min": 10.0,
+            "p10": 10.0,
+            "p25": 10.0,
+            "median": 10.0,
+            "p75": 10.0,
+            "p90": 10.0,
+            "max": 10.0,
+            "mean": 10.0,
+            "std": 0.0
+          },
+          "voiced_frame_fraction": {
+            "count": 1,
+            "missing_count": 0,
+            "min": 0.31959798994974875,
+            "p10": 0.31959798994974875,
+            "p25": 0.31959798994974875,
+            "median": 0.31959798994974875,
+            "p75": 0.31959798994974875,
+            "p90": 0.31959798994974875,
+            "max": 0.31959798994974875,
+            "mean": 0.31959798994974875,
+            "std": 0.0
+          },
+          "harmonicity_defined_frame_fraction": {
+            "count": 1,
+            "missing_count": 0,
+            "min": 0.3218970736629667,
+            "p10": 0.3218970736629667,
+            "p25": 0.3218970736629667,
+            "median": 0.3218970736629667,
+            "p75": 0.3218970736629667,
+            "p90": 0.3218970736629667,
+            "max": 0.3218970736629667,
+            "mean": 0.3218970736629667,
+            "std": 0.0
+          },
+          "harmonicity_raw_finite_frame_fraction": {
+            "count": 1,
+            "missing_count": 0,
+            "min": 1.0,
+            "p10": 1.0,
+            "p25": 1.0,
+            "median": 1.0,
+            "p75": 1.0,
+            "p90": 1.0,
+            "max": 1.0,
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "pause_frame_fraction": {
+            "count": 1,
+            "missing_count": 0,
+            "min": 0.4934934934934935,
+            "p10": 0.4934934934934935,
+            "p25": 0.4934934934934935,
+            "median": 0.4934934934934935,
+            "p75": 0.4934934934934935,
+            "p90": 0.4934934934934935,
+            "max": 0.4934934934934935,
+            "mean": 0.4934934934934935,
+            "std": 0.0
+          },
+          "words_per_audio_second": {
+            "count": 1,
+            "missing_count": 0,
+            "min": 1.8,
+            "p10": 1.8,
+            "p25": 1.8,
+            "median": 1.8,
+            "p75": 1.8,
+            "p90": 1.8,
+            "max": 1.8,
+            "mean": 1.8,
+            "std": 0.0
+          }
+        },
+        "ids": [
+          "source_heldout01"
+        ]
+      }
+    },
+    "elapsed_s": 8.224874,
+    "peak_rss_mib": 134.301
+  }
+}

@@ -1,0 +1,424 @@
+{
+  "model": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+  "backend": "CTranslate2 CPU int8",
+  "role": "independent_content_audit",
+  "human_listening": false,
+  "model_download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+  "inputs": [
+    {
+      "id": "source01_source",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_source.wav",
+      "audio_sha256": "b71115fb5f1afb51099d5a5dcbd5985febe1de62625ec0db6bc2ac634fd686f6",
+      "expected_text": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+      "transcript": "Okay, gather around, everybody. Great. So, as the one throwing the party...",
+      "segments": [
+        {
+          "text": "Okay, gather around, everybody.",
+          "start_s": 0.0,
+          "end_s": 2.24,
+          "avg_logprob": -0.49907896041870115,
+          "no_speech_prob": 0.033260077238082886,
+          "compression_ratio": 0.974025974025974
+        },
+        {
+          "text": "Great.",
+          "start_s": 2.24,
+          "end_s": 3.68,
+          "avg_logprob": -0.49907896041870115,
+          "no_speech_prob": 0.033260077238082886,
+          "compression_ratio": 0.974025974025974
+        },
+        {
+          "text": "So, as the one throwing the party...",
+          "start_s": 3.68,
+          "end_s": 6.0,
+          "avg_logprob": -0.49907896041870115,
+          "no_speech_prob": 0.033260077238082886,
+          "compression_ratio": 0.974025974025974
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ]
+      },
+      "seconds": 6.1808382400049595
+    },
+    {
+      "id": "source01_vocoder",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_vocoder.wav",
+      "audio_sha256": "42fadf0a0d151060618484b5f6b28bd9b0f5b5f9378fdfe09ba56a7fdbb93b0c",
+      "expected_text": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+      "transcript": "Okay, gather around everybody. Great. So, as the one throwing the party...",
+      "segments": [
+        {
+          "text": "Okay, gather around everybody.",
+          "start_s": 0.0,
+          "end_s": 2.0,
+          "avg_logprob": -0.5119508182009062,
+          "no_speech_prob": 0.049471400678157806,
+          "compression_ratio": 0.9736842105263158
+        },
+        {
+          "text": "Great.",
+          "start_s": 2.0,
+          "end_s": 3.0,
+          "avg_logprob": -0.5119508182009062,
+          "no_speech_prob": 0.049471400678157806,
+          "compression_ratio": 0.9736842105263158
+        },
+        {
+          "text": "So, as the one throwing the party...",
+          "start_s": 3.0,
+          "end_s": 6.0,
+          "avg_logprob": -0.5119508182009062,
+          "no_speech_prob": 0.049471400678157806,
+          "compression_ratio": 0.9736842105263158
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ]
+      },
+      "seconds": 6.4644961199956015
+    },
+    {
+      "id": "source01_tokens",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tokens.wav",
+      "audio_sha256": "7225770d3f0eaf12d0bb57d896511241ffb565c23840f4d6a492adecbe856690",
+      "expected_text": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+      "transcript": "Okay, gather around, everybody. Great. So, as the ones who are in the party.",
+      "segments": [
+        {
+          "text": "Okay, gather around, everybody.",
+          "start_s": 0.0,
+          "end_s": 2.24,
+          "avg_logprob": -0.5650808237217091,
+          "no_speech_prob": 0.006563739851117134,
+          "compression_ratio": 1.0
+        },
+        {
+          "text": "Great.",
+          "start_s": 2.24,
+          "end_s": 3.68,
+          "avg_logprob": -0.5650808237217091,
+          "no_speech_prob": 0.006563739851117134,
+          "compression_ratio": 1.0
+        },
+        {
+          "text": "So, as the ones who are in the party.",
+          "start_s": 3.68,
+          "end_s": 6.08,
+          "avg_logprob": -0.5650808237217091,
+          "no_speech_prob": 0.006563739851117134,
+          "compression_ratio": 1.0
+        }
+      ],
+      "wer": {
+        "wer": 0.333333,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 14,
+        "substitutions": 2,
+        "deletions": 0,
+        "insertions": 2,
+        "reference_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "ones",
+          "who",
+          "are",
+          "in",
+          "the",
+          "party"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.333333,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 14,
+        "substitutions": 2,
+        "deletions": 0,
+        "insertions": 2,
+        "reference_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "ones",
+          "who",
+          "are",
+          "in",
+          "the",
+          "party"
+        ]
+      },
+      "seconds": 7.6940551590014366
+    },
+    {
+      "id": "source01_tts_corrected",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tts_corrected.wav",
+      "audio_sha256": "ec017a394e328e62713f20a6b3d24c73e2fd4307cc7dc30f5996e7a70d058e56",
+      "expected_text": "Okay, gather around everybody. Great. So, as the one throwing the party.",
+      "transcript": "Okay, gather around everybody. Great. So it was the one throwing the party.",
+      "segments": [
+        {
+          "text": "Okay, gather around everybody. Great. So it was the one throwing the party.",
+          "start_s": 0.0,
+          "end_s": 4.8,
+          "avg_logprob": -0.3030173897743225,
+          "no_speech_prob": 0.0291711688041687,
+          "compression_ratio": 0.974025974025974
+        }
+      ],
+      "wer": {
+        "wer": 0.166667,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 13,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "it",
+          "was",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.166667,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 13,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 1,
+        "reference_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "as",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ],
+        "hypothesis_words": [
+          "okay",
+          "gather",
+          "around",
+          "everybody",
+          "great",
+          "so",
+          "it",
+          "was",
+          "the",
+          "one",
+          "throwing",
+          "the",
+          "party"
+        ]
+      },
+      "seconds": 6.4279034700011835
+    }
+  ],
+  "peak_rss_mib": 860.578125
+}

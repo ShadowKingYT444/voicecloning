@@ -1,0 +1,23 @@
+{
+  "status": "experimental_not_promoted",
+  "human_realism_verified": false,
+  "summary": [
+    {
+      "variant": "base",
+      "count": 4,
+      "mean_speaker_cosine": 0.8668432500000001,
+      "mean_dnsmos_overall": 2.978969941175168,
+      "small_exact_count": 4,
+      "tiny_exact_count": 2
+    },
+    {
+      "variant": "mel_full",
+      "count": 4,
+      "mean_speaker_cosine": 0.87022425,
+      "mean_dnsmos_overall": 3.0395362206573617,
+      "small_exact_count": 4,
+      "tiny_exact_count": 2
+    }
+  ],
+  "caution": "Automatic scores are development diagnostics. They do not establish realistic voice character or a convincing clone."
+}

@@ -1,0 +1,103 @@
+{
+  "synthetic": true,
+  "profile": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/revalidation/retry_test_profile.json",
+  "device": "cuda",
+  "dtype": "fp32",
+  "seed": 31,
+  "load_and_prepare_seconds": 5.18829627300147,
+  "runtime_load_report": {
+    "optimized": true,
+    "device": "cuda",
+    "dtype": "torch.float32",
+    "decoder": "meanflow",
+    "implementation_sha256": "74ca7629d3e2460943b747519f8bda3449115202c85072c897bafee2f44532af",
+    "ve": {
+      "skipped": true,
+      "reason": "conditionals_path supplied"
+    },
+    "t3": {
+      "loaded_tensors": 153,
+      "skipped_tensors": 2,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": [],
+      "removed_parameters": [
+        "tfmr.wte",
+        "text_head"
+      ]
+    },
+    "precision_policy": {
+      "t3": "torch.float32",
+      "s3gen": "torch.float32"
+    },
+    "s3gen": {
+      "loaded_tensors": 1450,
+      "skipped_tensors": 1041,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": []
+    },
+    "conditionals_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_soft_morning_31.conds.pt",
+    "parameters": {
+      "t3": 140247203,
+      "s3gen": 135467807,
+      "ve": 0
+    },
+    "load_seconds": 5.185766843998863,
+    "engine": {
+      "optimized": true,
+      "dtype": "torch.float32",
+      "device": "cuda",
+      "decoder": "meanflow"
+    }
+  },
+  "ready_rss_mib": 1454.19140625,
+  "segments": [
+    {
+      "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee.",
+      "seconds": 5.04,
+      "generation_and_master_seconds": 4.8352580819992,
+      "rtf": 0.9593766035712699,
+      "processing": {
+        "highpass_hz": 45,
+        "gain_db": 6.505208277073894,
+        "target_lufs": -19,
+        "achieved_lufs": -18.999999572941793,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      }
+    },
+    {
+      "text": "We have the whole morning ahead of us.",
+      "seconds": 2.32,
+      "generation_and_master_seconds": 1.141198802000872,
+      "rtf": 0.49189603534520354,
+      "processing": {
+        "highpass_hz": 45,
+        "gain_db": 7.349030318897789,
+        "target_lufs": -19,
+        "achieved_lufs": -18.99999975708414,
+        "true_peak_ceiling_dbtp": -1,
+        "true_peak_oversampling": 4,
+        "noise_gate": false
+      }
+    }
+  ],
+  "length_limit_retries": [
+    {
+      "text": "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee. We have the whole morning ahead of us.",
+      "split_into": [
+        "The rain has finally stopped. I opened the curtains and made a fresh cup of coffee.",
+        "We have the whole morning ahead of us."
+      ],
+      "failed_seconds": 3.530921618999855
+    }
+  ],
+  "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/revalidation/retry_branch_test.wav",
+  "audio_seconds": 7.46,
+  "total_seconds": 14.706108432001201,
+  "rss_mib": 2390.4140625,
+  "peak_rss_mib": 2389.1875,
+  "cuda_peak_allocated_mib": 1664.5810546875
+}

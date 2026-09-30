@@ -1,0 +1,6 @@
+{"id": "base_neutral_seed31", "cosine": 0.796628, "wer": 0.0, "dnsmos_overall": 3.213176168351657}
+{"id": "base_calm_seed47", "cosine": 0.789372, "wer": 0.0, "dnsmos_overall": 3.082306203039517}
+{"id": "rank4_neutral_seed31", "cosine": 0.794155, "wer": 0.117647, "dnsmos_overall": 3.426325506615222}
+{"id": "rank4_calm_seed47", "cosine": 0.806926, "wer": 0.0625, "dnsmos_overall": 3.089594346248726}
+{"id": "rank8_neutral_seed31", "cosine": 0.804276, "wer": 0.235294, "dnsmos_overall": 3.4363150092480246}
+{"id": "rank8_calm_seed47", "cosine": 0.801149, "wer": 0.125, "dnsmos_overall": 3.4289024940008974}

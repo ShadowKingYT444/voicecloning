@@ -1,0 +1,17 @@
+{
+  "text": "Package smoke test.",
+  "temperature": 0.0,
+  "voice_state": "voices/asmr7_30s_loud_state.npz",
+  "threads": 1,
+  "int8": {
+    "seconds": 3.128,
+    "audio_seconds": 1.92
+  },
+  "fp32": {
+    "seconds": 4.968,
+    "audio_seconds": 2.0
+  },
+  "overlap_mae": 0.010913537815213203,
+  "length_delta_samples": 1920,
+  "note": "Smoke comparison confirms both bundles execute; temperature 0.0 removes sampling noise, but quantization can still change EOS timing slightly."
+}

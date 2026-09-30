@@ -1,0 +1,27 @@
+{
+  "source_root": "/home/terryd/gooning/voicecloning",
+  "publication": "Source/text snapshot; model/audio/cache assets excluded",
+  "copied_non_app_files": 1598,
+  "copied_non_app_bytes": 30755347,
+  "upstream_app_tracked_files": 681,
+  "excluded_local_asset_count": 2305,
+  "excluded_local_file_bytes": 9773748218,
+  "other_omitted": [
+    {
+      "path": "artifacts/nano_lab/onnx_pipeline/soft_cuda_retry/ort_profiles/t3_387678_2026-09-29_09-25-45_886.json",
+      "reason": "large_generated_trace",
+      "bytes": 75594942
+    },
+    {
+      "path": "artifacts/nano_lab/onnx_pipeline/soft_cuda_shrink/ort_profiles/t3_388788_2026-09-29_09-31-45_578.json",
+      "reason": "large_generated_trace",
+      "bytes": 87207257
+    },
+    {
+      "path": "vendor/chatterbox/src/chatterbox_tts.egg-info/PKG-INFO",
+      "reason": "not_selected_source_type",
+      "bytes": 17716
+    }
+  ],
+  "notes": "Counts describe initial export; final publication also adds handoff, environment, requirements, inventory, and checker files."
+}

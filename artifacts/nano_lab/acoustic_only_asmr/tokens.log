@@ -1,0 +1,12 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 7bb3315ac3b4426eb5a5c7b048f1dad8
+{
+  "status": "failed",
+  "error_type": "ValueError",
+  "error": "ready acoustic cache needs a passed exact aligned-overlap check"
+}
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 30.366s
+             CPU time consumed: 31.969s
+                   Memory peak: 1.9G (swap: 0B)

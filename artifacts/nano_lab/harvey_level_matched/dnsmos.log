@@ -1,0 +1,21 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "business_base", "dnsmos_signal": 3.624503849590629, "dnsmos_background": 4.177309351804419, "dnsmos_overall": 3.382331647538509, "dnsmos_windows": 4, "dnsmos_repeated_short_clip": true}
+{"id": "business_speaker", "dnsmos_signal": 3.599302636177078, "dnsmos_background": 4.1903547723548735, "dnsmos_overall": 3.3803460590557157, "dnsmos_windows": 4, "dnsmos_repeated_short_clip": true}
+{"id": "business_adapter_half", "dnsmos_signal": 3.6445527198397554, "dnsmos_background": 4.158083684022096, "dnsmos_overall": 3.407947391355042, "dnsmos_windows": 3, "dnsmos_repeated_short_clip": true}
+{"id": "business_adapter_full", "dnsmos_signal": 3.5953854093154267, "dnsmos_background": 4.078990620988701, "dnsmos_overall": 3.311766180691201, "dnsmos_windows": 4, "dnsmos_repeated_short_clip": true}
+{"id": "question_base", "dnsmos_signal": 3.6437987658404434, "dnsmos_background": 4.155799517655888, "dnsmos_overall": 3.3904733967485594, "dnsmos_windows": 8, "dnsmos_repeated_short_clip": true}
+{"id": "question_speaker", "dnsmos_signal": 3.712545148379819, "dnsmos_background": 4.215634366873544, "dnsmos_overall": 3.5128405296068226, "dnsmos_windows": 9, "dnsmos_repeated_short_clip": true}
+{"id": "question_adapter_half", "dnsmos_signal": 3.682589504182585, "dnsmos_background": 4.208511962248929, "dnsmos_overall": 3.468969520837298, "dnsmos_windows": 9, "dnsmos_repeated_short_clip": true}
+{"id": "question_adapter_full", "dnsmos_signal": 3.650476745521658, "dnsmos_background": 4.169884378712379, "dnsmos_overall": 3.4207990306667875, "dnsmos_windows": 1, "dnsmos_repeated_short_clip": true}
+{"id": "narrative_base", "dnsmos_signal": 3.653844470349918, "dnsmos_background": 4.161055481510568, "dnsmos_overall": 3.4245456524696145, "dnsmos_windows": 3, "dnsmos_repeated_short_clip": true}
+{"id": "narrative_speaker", "dnsmos_signal": 3.68170631276624, "dnsmos_background": 4.205966797089586, "dnsmos_overall": 3.46580955544855, "dnsmos_windows": 5, "dnsmos_repeated_short_clip": true}
+{"id": "narrative_adapter_half", "dnsmos_signal": 3.672524402788722, "dnsmos_background": 4.192225140915534, "dnsmos_overall": 3.431424498169654, "dnsmos_windows": 4, "dnsmos_repeated_short_clip": true}
+{"id": "narrative_adapter_full", "dnsmos_signal": 3.6358490990625465, "dnsmos_background": 4.2044211530650335, "dnsmos_overall": 3.403860299542022, "dnsmos_windows": 4, "dnsmos_repeated_short_clip": true}
+{"id": "source_isolated", "dnsmos_signal": 3.5117754871617906, "dnsmos_background": 3.110368491726577, "dnsmos_overall": 2.7757375508366486, "dnsmos_windows": 6, "dnsmos_repeated_short_clip": true}
+{"id": "source_heldout_isolated", "dnsmos_signal": 3.6184629993508346, "dnsmos_background": 3.7843585356622134, "dnsmos_overall": 3.185773530705804, "dnsmos_windows": 5, "dnsmos_repeated_short_clip": true}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 49.540s
+             CPU time consumed: 1min 35.874s
+                   Memory peak: 272.9M (swap: 0B)

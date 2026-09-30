@@ -1,0 +1,15 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 33079ba2133541c59dff8804cfce297a
+file:///home/terryd/gooning/voicecloning/artifacts/nano_lab/render_delivery.mjs:85
+  if (playback.exceptionDetails || !Array.isArray(playback.result.value)) throw new Error('Muted playback verification failed: ' + JSON.stringify(playback));
+                                                                                ^
+
+Error: Muted playback verification failed: {"result":{"type":"object","value":{}},"exceptionDetails":{"exceptionId":1,"text":"Uncaught (in promise)","lineNumber":0,"columnNumber":0,"exception":{"type":"object","subtype":"error","className":"DOMException","description":"NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD","objectId":"4888840409311188185.1.1","preview":{"type":"object","subtype":"error","description":"NotAllowedError: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD","overflow":false,"properties":[{"name":"code","type":"number","value":"0"},{"name":"name","type":"string","value":"NotAllowedError"},{"name":"message","type":"string","value":"play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD"}]}}}}
+    at file:///home/terryd/gooning/voicecloning/artifacts/nano_lab/render_delivery.mjs:85:81
+
+Node.js v24.20.0
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 4.052s
+             CPU time consumed: 3.685s
+                   Memory peak: 277.1M (swap: 0B)

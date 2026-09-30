@@ -1,0 +1,19 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "morning_projection0_raw", "cosine": 0.860826, "wer": null, "dnsmos_overall": 3.077840941206808}
+{"id": "morning_projection1_raw", "cosine": 0.861862, "wer": null, "dnsmos_overall": 3.0767633805419714}
+{"id": "morning_projection0_mel", "cosine": 0.86326, "wer": null, "dnsmos_overall": 3.115634951601715}
+{"id": "morning_projection1_mel", "cosine": 0.866143, "wer": null, "dnsmos_overall": 3.141645075311931}
+{"id": "question_projection0_raw", "cosine": 0.901892, "wer": null, "dnsmos_overall": 3.2793204241323206}
+{"id": "question_projection1_raw", "cosine": 0.90193, "wer": null, "dnsmos_overall": 3.3309992685661087}
+{"id": "question_projection0_mel", "cosine": 0.90511, "wer": null, "dnsmos_overall": 3.18177719591183}
+{"id": "question_projection1_mel", "cosine": 0.905179, "wer": null, "dnsmos_overall": 3.2042654544899736}
+{"id": "narrative_projection0_raw", "cosine": 0.891777, "wer": null, "dnsmos_overall": 3.081602195515001}
+{"id": "narrative_projection1_raw", "cosine": 0.891114, "wer": null, "dnsmos_overall": 3.0594850084871887}
+{"id": "narrative_projection0_mel", "cosine": 0.90015, "wer": null, "dnsmos_overall": 3.2038074245133097}
+{"id": "narrative_projection1_mel", "cosine": 0.900082, "wer": null, "dnsmos_overall": 3.146999062362853}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 53.090s
+             CPU time consumed: 1min 35.508s
+                   Memory peak: 716.1M (swap: 0B)

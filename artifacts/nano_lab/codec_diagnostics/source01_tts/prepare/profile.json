@@ -1,0 +1,20 @@
+{
+  "conditioning_cache": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+  "conditioning_cache_sha256": "92e644466f79befe5ef937f819c921729ba00f29790efb81684cc3e88ef18c52",
+  "cuda_dtype": "fp32",
+  "decoder": "meanflow",
+  "label": "ASMR conversational",
+  "mode": "zero_shot",
+  "profile_path": "/home/terryd/gooning/voicecloning/voices/nano/asmr_conversational.json",
+  "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+  "sampling": {
+    "repetition_penalty": 1.2,
+    "temperature": 0.8,
+    "top_k": 1000,
+    "top_p": 0.95
+  },
+  "source_case": "asmr_conversational_morning_31",
+  "status": "candidate_under_validation",
+  "steps": 2,
+  "watermark": true
+}

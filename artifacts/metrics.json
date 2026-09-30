@@ -1,0 +1,56 @@
+{
+  "reference": {
+    "duration_s": 13.5,
+    "speaker_cosine": 1.0,
+    "peak_dbfs": -1.34,
+    "rms_dbfs": -17.02,
+    "hf_energy_ratio_above_5k": 0.01857,
+    "clipped_samples": 0
+  },
+  "natural_seed31": {
+    "speaker_cosine": 0.8297,
+    "duration_s": 5.92,
+    "peak_dbfs": -2.77,
+    "rms_dbfs": -20.41,
+    "pause_ratio_below_-45db": 0.0422,
+    "spectral_flux_median": 0.34644,
+    "hf_energy_ratio_above_5k": 0.01881,
+    "clipped_samples": 0
+  },
+  "bandlimited_seed17": {
+    "speaker_cosine": 0.7999,
+    "duration_s": 5.12,
+    "peak_dbfs": -4.59,
+    "rms_dbfs": -21.98,
+    "pause_ratio_below_-45db": 0.0643,
+    "spectral_flux_median": 0.32688,
+    "clipped_samples": 0
+  },
+  "natural_seed43": {
+    "speaker_cosine": 0.7814,
+    "duration_s": 6.72,
+    "peak_dbfs": -9.03,
+    "rms_dbfs": -25.36,
+    "pause_ratio_below_-45db": 0.1575,
+    "spectral_flux_median": 0.14516,
+    "clipped_samples": 0
+  },
+  "natural_seed17": {
+    "speaker_cosine": 0.7688,
+    "duration_s": 5.36,
+    "peak_dbfs": -7.38,
+    "rms_dbfs": -22.37,
+    "pause_ratio_below_-45db": 0.0726,
+    "spectral_flux_median": 0.25861,
+    "clipped_samples": 0
+  },
+  "paced_seed101": {
+    "speaker_cosine": 0.7348,
+    "duration_s": 6.4,
+    "peak_dbfs": -7.03,
+    "rms_dbfs": -23.58,
+    "pause_ratio_below_-45db": 0.2324,
+    "spectral_flux_median": 0.17904,
+    "clipped_samples": 0
+  }
+}

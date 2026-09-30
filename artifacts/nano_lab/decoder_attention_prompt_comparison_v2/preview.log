@@ -1,0 +1,8 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"screenshot":"/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_attention_prompt_comparison_v2/preview.png","contentHeight":1500,"media":[{"src":"../cadence_penalty/level_matched/source_heldout01.wav","duration":10},{"src":"level_matched/heldout01_prompt_attention0_mel.wav","duration":7.4},{"src":"level_matched/heldout01_prompt_attention1_mel.wav","duration":7.4},{"src":"level_matched/question_prompt_attention0_mel.wav","duration":5.72},{"src":"level_matched/question_prompt_attention1_mel.wav","duration":5.72},{"src":"level_matched/narrative_prompt_attention0_mel.wav","duration":7.8},{"src":"level_matched/narrative_prompt_attention1_mel.wav","duration":7.8}],"mutedPlayback":[{"src":"../cadence_penalty/level_matched/source_heldout01.wav","advancedSeconds":0.078489},{"src":"level_matched/heldout01_prompt_attention0_mel.wav","advancedSeconds":0.078347},{"src":"level_matched/heldout01_prompt_attention1_mel.wav","advancedSeconds":0.078255},{"src":"level_matched/question_prompt_attention0_mel.wav","advancedSeconds":0.078174},{"src":"level_matched/question_prompt_attention1_mel.wav","advancedSeconds":0.078126},{"src":"level_matched/narrative_prompt_attention0_mel.wav","advancedSeconds":0.078348},{"src":"level_matched/narrative_prompt_attention1_mel.wav","advancedSeconds":0.078063}]}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 5.236s
+             CPU time consumed: 5.120s
+                   Memory peak: 100.5M (swap: 0B)

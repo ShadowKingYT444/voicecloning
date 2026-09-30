@@ -1,0 +1,27 @@
+{
+  "label": "ASMR fitted conversational, speaker-specific experimental",
+  "mode": "speaker_adapted_and_mel_calibrated",
+  "status": "awaiting_listening_validation",
+  "experimental": true,
+  "zero_shot": false,
+  "speaker_specific": true,
+  "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+  "conditioning_cache": "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+  "decoder": "meanflow",
+  "steps": 2,
+  "cuda_dtype": "fp32",
+  "sampling": {
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "top_k": 1000,
+    "repetition_penalty": 1.2
+  },
+  "adapter": "artifacts/nano_lab/adapter_aligned_all_attn.pt",
+  "adapter_scale": 1.0,
+  "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+  "mel_calibration_strength": 1.0,
+  "source_case": "asmr_conversational_morning_31",
+  "validation_report": "artifacts/nano_lab/all_attn_robustness/review.json",
+  "validation_config": "artifacts/nano_lab/all_attn_robustness_config.json",
+  "watermark": true
+}

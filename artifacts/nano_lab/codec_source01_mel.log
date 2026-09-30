@@ -1,0 +1,31 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{
+  "command": [
+    "scripts/nano_lab/codec_diagnostics.py",
+    "source-mel",
+    "--id",
+    "asmr7_train_01"
+  ],
+  "elapsed_seconds": 8.58925175666809,
+  "resources": {
+    "peak_rss_bytes": 416251904,
+    "rss_bytes": 417144832
+  },
+  "result": {
+    "id": "asmr7_train_01",
+    "mel": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/asmr7_train_01.source_mel.npz",
+    "mel_shape": [
+      1,
+      80,
+      300
+    ],
+    "synthetic_tts": false
+  },
+  "status": "ok"
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 9.827s
+             CPU time consumed: 9.682s
+                   Memory peak: 300.1M (swap: 0B)

@@ -1,0 +1,16 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "question_mlp_0", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "question_mlp_half", "wer": 0.0625, "transcript": "Did you remember the blue folder? I thought we agreed to meet at a half past nine."}
+{"id": "question_mlp_full", "wer": 0.0, "transcript": "Did you remember the blue folder? I thought we agreed to meet at half past nine."}
+{"id": "narrative_mlp_0", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "narrative_mlp_half", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "narrative_mlp_full", "wer": 0.0, "transcript": "The last train had already left when I reached the station. A small light was still on above the ticket office."}
+{"id": "heldout01_mlp_0", "wer": 0.0, "transcript": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?"}
+{"id": "heldout01_mlp_half", "wer": 0.05, "transcript": "Let's see who's the lucky person who gets the kiss me. Wait a minute. Do I know you?"}
+{"id": "heldout01_mlp_full", "wer": 0.05, "transcript": "Let's see how is the lucky person who gets to kiss me. Wait a minute. Do I know you?"}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 1.870s
+             CPU time consumed: 1min 58.625s
+                   Memory peak: 1G (swap: 0B)

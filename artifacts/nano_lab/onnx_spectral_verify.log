@@ -1,0 +1,79 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{
+  "istft": {
+    "errors": [],
+    "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_spectral/istft/nano_istft_real.onnx",
+    "inference_seconds": 0.004404298999361345,
+    "inputs": [
+      "magnitude",
+      "phase"
+    ],
+    "max_abs_error": 1.4901161193847656e-08,
+    "max_relative_error": 2.596663919095178e-06,
+    "method": "pure ORT CPU against Torch reference saved during export",
+    "outputs": 1,
+    "peak_rss_bytes": 67698688,
+    "provider": "CPUExecutionProvider",
+    "rss_after_session_bytes": 67465216,
+    "rss_before_session_bytes": 67399680,
+    "session_load_seconds": 0.011690010000165785,
+    "stage": "istft",
+    "status": "verified",
+    "tolerances": {
+      "atol": 3e-05,
+      "rtol": 3e-05
+    }
+  },
+  "roundtrip": {
+    "errors": [],
+    "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_spectral/roundtrip/nano_roundtrip_real.onnx",
+    "inference_seconds": 0.0016292220007017022,
+    "inputs": [
+      "waveform"
+    ],
+    "max_abs_error": 2.384185791015625e-07,
+    "max_relative_error": 3.9420133774194967e-07,
+    "method": "pure ORT CPU against Torch reference saved during export",
+    "outputs": 1,
+    "peak_rss_bytes": 68063232,
+    "provider": "CPUExecutionProvider",
+    "rss_after_session_bytes": 67928064,
+    "rss_before_session_bytes": 67776512,
+    "session_load_seconds": 0.019102489999568206,
+    "stage": "roundtrip",
+    "status": "verified",
+    "tolerances": {
+      "atol": 3e-05,
+      "rtol": 3e-05
+    }
+  },
+  "stft": {
+    "errors": [],
+    "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_spectral/stft/nano_stft_real.onnx",
+    "inference_seconds": 0.005349651000869926,
+    "inputs": [
+      "waveform"
+    ],
+    "max_abs_error": 0.0,
+    "max_relative_error": 0.0,
+    "method": "pure ORT CPU against Torch reference saved during export",
+    "outputs": 2,
+    "peak_rss_bytes": 67387392,
+    "provider": "CPUExecutionProvider",
+    "rss_after_session_bytes": 66048000,
+    "rss_before_session_bytes": 56979456,
+    "session_load_seconds": 0.07506520999959321,
+    "stage": "stft",
+    "status": "verified",
+    "tolerances": {
+      "atol": 3e-05,
+      "rtol": 3e-05
+    }
+  }
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1.115s
+             CPU time consumed: 1.082s
+                   Memory peak: 53.3M (swap: 0B)

@@ -1,0 +1,69 @@
+{
+  "torch": "2.11.0+cu128",
+  "python": "3.12.14",
+  "before_load": {
+    "rss_mib": 865.9609375,
+    "peak_rss_mib": 865.19140625,
+    "cuda_allocated_mib": 0.0,
+    "cuda_reserved_mib": 0.0,
+    "cuda_peak_allocated_mib": 0.0
+  },
+  "load_seconds": 19.43502471699958,
+  "loaded": {
+    "rss_mib": 1700.47265625,
+    "peak_rss_mib": 3891.63671875,
+    "cuda_allocated_mib": 2492.59521484375,
+    "cuda_reserved_mib": 2544.0,
+    "cuda_peak_allocated_mib": 2492.59521484375
+  },
+  "parameters": {
+    "t3": 178859171,
+    "s3gen": 266030919,
+    "ve": 1423618
+  },
+  "conditioning_seconds": 3.935937033999835,
+  "runs": [
+    {
+      "voice": "asmr",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/baseline/asmr_baseline_0.wav",
+      "text": "Hey there. You are doing great. Take a slow breath and let your shoulders relax. I am right here with you.",
+      "seed": 31,
+      "seconds": 6.8,
+      "generation_seconds": 4.223459996999736,
+      "rtf": 0.6210970583823141,
+      "rss_mib": 2464.53515625,
+      "peak_rss_mib": 3891.63671875,
+      "cuda_allocated_mib": 2821.6796875,
+      "cuda_reserved_mib": 3054.0,
+      "cuda_peak_allocated_mib": 2996.49560546875
+    },
+    {
+      "voice": "asmr",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/baseline/asmr_baseline_1.wav",
+      "text": "I left the blue notebook beside the window. Please bring it with you when we meet tomorrow.",
+      "seed": 31,
+      "seconds": 4.48,
+      "generation_seconds": 1.7708183630002168,
+      "rtf": 0.39527195602683407,
+      "rss_mib": 2464.18359375,
+      "peak_rss_mib": 3891.63671875,
+      "cuda_allocated_mib": 2821.6796875,
+      "cuda_reserved_mib": 3054.0,
+      "cuda_peak_allocated_mib": 2996.49560546875
+    },
+    {
+      "voice": "asmr",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/baseline/asmr_baseline_2.wav",
+      "text": "You have done enough for today. Take a quiet moment, breathe slowly, and let yourself relax.",
+      "seed": 31,
+      "seconds": 5.52,
+      "generation_seconds": 2.2546404459999394,
+      "rtf": 0.40844935615940936,
+      "rss_mib": 2468.16796875,
+      "peak_rss_mib": 3891.63671875,
+      "cuda_allocated_mib": 2821.6796875,
+      "cuda_reserved_mib": 3054.0,
+      "cuda_peak_allocated_mib": 2996.49560546875
+    }
+  ]
+}

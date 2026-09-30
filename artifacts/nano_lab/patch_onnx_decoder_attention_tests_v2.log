@@ -1,0 +1,120 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+.F.F.                                                                    [100%]
+=================================== FAILURES ===================================
+_ ExternalPatcherTests.test_layout_rejects_transposed_missing_dtype_location_and_offset _
+patch_onnx_decoder_attention.PatchError: external report graph_bytes does not match the graph
+
+During handling of the above exception, another exception occurred:
+
+self = <test_patch_onnx_decoder_attention.ExternalPatcherTests testMethod=test_layout_rejects_transposed_missing_dtype_location_and_offset>
+
+    def test_layout_rejects_transposed_missing_dtype_location_and_offset(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            # Transposed report shape differs from the graph and sidecar length.
+            report_layout, _, _ = _fixture(root)
+            payload = json.loads((root / "nano_meanflow_estimator.external.json").read_text())
+            payload["external"]["initializers"][0]["shape"] = [2, 3]
+            payload["external"]["initializers"][0]["length"] = 24
+            (root / "nano_meanflow_estimator.external.json").write_text(json.dumps(payload))
+            with self.assertRaises(patcher.PatchError):
+                patcher._load_external_layout(root)
+            # Missing initializer record.
+            root2 = Path(raw) / "missing"
+            root2.mkdir()
+            _fixture(root2)
+            payload = json.loads((root2 / "nano_meanflow_estimator.external.json").read_text())
+            payload["external"]["initializers"].pop()
+            (root2 / "nano_meanflow_estimator.external.json").write_text(json.dumps(payload))
+            with self.assertRaisesRegex(patcher.PatchError, "sets differ"):
+                patcher._load_external_layout(root2)
+            # Wrong dtype.
+            root3 = Path(raw) / "dtype"
+            root3.mkdir()
+            _fixture(root3)
+            payload = json.loads((root3 / "nano_meanflow_estimator.external.json").read_text())
+            payload["external"]["initializers"][0]["dtype"] = "float16"
+            (root3 / "nano_meanflow_estimator.external.json").write_text(json.dumps(payload))
+            with self.assertRaisesRegex(patcher.PatchError, "dtype"):
+                patcher._load_external_layout(root3)
+            # Wrong location in the graph.
+            root4 = Path(raw) / "location"
+            root4.mkdir()
+            _fixture(root4)
+            graph = _graph([
+                ("estimator.down_blocks.0.1.0.attn1.to_q.weight", (2, 2), 7, 16, 1),
+                ("estimator.down_blocks.0.1.0.attn1.to_out.0.weight", (2, 2), 36, 16, 1),
+            ], location="wrong.bin")
+            (root4 / "nano_meanflow_estimator.onnx").write_bytes(graph)
+>           with self.assertRaisesRegex(patcher.PatchError, "location"):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AssertionError: "location" does not match "external report graph_bytes does not match the graph"
+
+scripts/nano_lab/test_patch_onnx_decoder_attention.py:218: AssertionError
+_____ ExternalPatcherTests.test_strength_zero_and_one_and_non_target_bytes _____
+
+self = <test_patch_onnx_decoder_attention.ExternalPatcherTests testMethod=test_strength_zero_and_one_and_non_target_bytes>
+
+    def test_strength_zero_and_one_and_non_target_bytes(self) -> None:
+        with tempfile.TemporaryDirectory() as raw:
+            root = Path(raw)
+            layout, _, _ = _fixture(root)
+            factors = _factors(layout)
+            source = layout.weights_path.read_bytes()
+            zero_path = root / "zero.bin"
+            zero = patcher._patch_external_weights(layout.weights_path, zero_path, layout, factors, strength=0.0)
+            self.assertEqual(zero_path.read_bytes(), source)
+            self.assertEqual(zero.base_weights_sha256, zero.patched_weights_sha256)
+            self.assertTrue(all(item["before_sha256"] == item["after_sha256"] for item in zero.changed_spans))
+            one_path = root / "one.bin"
+            one = patcher._patch_external_weights(layout.weights_path, one_path, layout, factors, strength=1.0)
+            self.assertNotEqual(one_path.read_bytes(), source)
+            self.assertEqual(one.weight_bytes, len(source))
+            changed_ranges = [(item["offset"], item["offset"] + item["length"]) for item in one.changed_spans]
+            for index, (before, after) in enumerate(zip(source, one_path.read_bytes())):
+                inside = any(start <= index < stop for start, stop in changed_ranges)
+                if not inside:
+                    self.assertEqual(before, after, index)
+            for item in one.changed_spans:
+                start = int(item["offset"])
+                length = int(item["length"])
+                original = np.frombuffer(source[start : start + length], dtype="<f4").reshape(2, 2)
+                expected = original + np.float32(0.5) * np.eye(2, dtype="<f4") * (1 if start < changed_ranges[-1][0] else 2)
+                actual = np.frombuffer(one_path.read_bytes()[start : start + length], dtype="<f4").reshape(2, 2)
+>               np.testing.assert_array_equal(actual, expected)
+
+scripts/nano_lab/test_patch_onnx_decoder_attention.py:169: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<built-in function eq>, array([[2., 2.],
+       [3., 5.]], dtype=float32), array([[1.5, 2. ],
+       [3. , 4.5]], dtype=float32))
+kwds = {'err_msg': '', 'verbose': True, 'header': 'Arrays are not equal', 'strict': False}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+                   ^^^^^^^^^^^^^^^^^^^
+E           AssertionError: 
+E           Arrays are not equal
+E           
+E           Mismatched elements: 2 / 4 (50%)
+E           Max absolute difference: 0.5
+E           Max relative difference: 0.33333334
+E            x: array([[2., 2.],
+E                  [3., 5.]], dtype=float32)
+E            y: array([[1.5, 2. ],
+E                  [3. , 4.5]], dtype=float32)
+
+../../.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/contextlib.py:81: AssertionError
+=========================== short test summary info ============================
+FAILED scripts/nano_lab/test_patch_onnx_decoder_attention.py::ExternalPatcherTests::test_layout_rejects_transposed_missing_dtype_location_and_offset
+FAILED scripts/nano_lab/test_patch_onnx_decoder_attention.py::ExternalPatcherTests::test_strength_zero_and_one_and_non_target_bytes
+2 failed, 3 passed in 0.57s
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 1.653s
+             CPU time consumed: 1.713s
+                   Memory peak: 37.9M (swap: 0B)

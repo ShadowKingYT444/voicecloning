@@ -1,0 +1,13 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+Traceback (most recent call last):
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/level_match.py", line 69, in <module>
+    main()
+  File "/home/terryd/gooning/voicecloning/scripts/nano_lab/level_match.py", line 54, in main
+    raise RuntimeError(f"Loudness or peak verification failed: {path}")
+RuntimeError: Loudness or peak verification failed: artifacts/nano_lab/cadence_penalty/level_matched/heldout01_rp1p1.wav
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 2.722s
+             CPU time consumed: 2.901s
+                   Memory peak: 82.3M (swap: 0B)

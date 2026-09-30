@@ -1,0 +1,69 @@
+{
+  "elapsed_seconds": 0.14255917400078033,
+  "export_options": {
+    "do_constant_folding": false,
+    "export_params": false,
+    "keep_initializers_as_inputs": true,
+    "onnx_shape_inference": false
+  },
+  "external": {
+    "graph_inputs_after": [
+      "x"
+    ],
+    "graph_inputs_before": [
+      "x",
+      "linear.weight",
+      "linear.bias"
+    ],
+    "initializers": [
+      {
+        "dtype": "float32",
+        "graph_name": "linear.weight",
+        "length": 48,
+        "offset": 0,
+        "sha256": "34511e3c8eb66623e6e07822a8b5701726a06e27d53fec17c74c3b338342504a",
+        "shape": [
+          3,
+          4
+        ],
+        "state_name": "linear.weight"
+      },
+      {
+        "dtype": "float32",
+        "graph_name": "linear.bias",
+        "length": 12,
+        "offset": 64,
+        "sha256": "80dd8a9ec6c412563b5c97673fad9e3b07c4b1cf9ea14a01e926edb885f2bdd1",
+        "shape": [
+          3
+        ],
+        "state_name": "linear.bias"
+      }
+    ],
+    "outputs": [
+      "y"
+    ],
+    "runtime_inputs": [
+      "x"
+    ],
+    "unbound_state": [],
+    "weight_bytes": 76,
+    "weight_file": "toy.weights.bin"
+  },
+  "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_external/toy.onnx",
+  "graph_bytes": 353,
+  "output_names": [
+    "y"
+  ],
+  "peak_rss_bytes": 543883264,
+  "private_api": "torch.onnx._internal.torchscript_exporter.utils._export",
+  "private_api_signature": "(model, args, f, export_params=True, verbose=False, training=<TrainingMode.EVAL: 0>, input_names=None, output_names=None, operator_export_type=<OperatorExportTypes.ONNX: 0>, export_type=None, opset_version=None, do_constant_folding=True, dynamic_axes=None, keep_initializers_as_inputs=None, fixed_batch_size=False, custom_opsets=None, add_node_names=True, onnx_shape_inference=True, export_modules_as_functions: 'Any' = False, autograd_inlining=True)",
+  "rss_after_bytes": 545648640,
+  "rss_before_bytes": 532787200,
+  "runtime_inputs": [
+    "x"
+  ],
+  "safe_fallback": "disabled",
+  "status": "exported",
+  "torch_version": "2.11.0+cu128"
+}

@@ -1,0 +1,10 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+[('heldout01_rp1p0', -22.585088762868526, -1.000000968117645), ('heldout01_rp1p1', -20.90393148561782, -0.9999998612632538), ('heldout01_rp1p2', -19.819074236651982, -1.2045280794116884), ('question_rp1p0', -19.00000001452006, -3.507693431677179), ('question_rp1p1', -22.984594504594487, -1.0000002157358097), ('question_rp1p2', -19.95639348392962, -0.999999524312116), ('narrative_rp1p0', -19.18399104976004, -0.999999101820674), ('narrative_rp1p1', -19.659083636728777, -1.0000006868330467), ('narrative_rp1p2', -19.00000014589555, -1.1347088830271872), ('source_heldout01', -27.8361736144528, -8.571022552123686)]
+target -27
+written (-26.926643868707085, -7.09606982366695)
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 2.628s
+             CPU time consumed: 2.771s
+                   Memory peak: 81.4M (swap: 0B)

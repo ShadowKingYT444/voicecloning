@@ -1,0 +1,84 @@
+{
+  "elapsed_seconds": 1.4084477424621582,
+  "finished_unix": 1790704191.0338004,
+  "result": {
+    "mel_length": 682,
+    "prompt_feat_length": 355,
+    "prompt_token_count": 177,
+    "runtime": {
+      "cuda_arena_shrinkage_after_run": true,
+      "cuda_kv_cache_location": "numpy_cpu",
+      "cuda_kv_resident_active": false,
+      "cuda_kv_resident_requested": true,
+      "cuda_memory_pattern_enabled": false,
+      "fallback_disabled": true,
+      "graph": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_staged_adapter_harvey_rank2/flow_encoder/nano_flow_encoder.onnx",
+      "inputs": [
+        "speech_tokens",
+        "token_lengths"
+      ],
+      "io_binding_calls": 0,
+      "ort_provider": "cuda",
+      "ort_version": "1.26.0",
+      "outputs": [
+        "mu",
+        "mask"
+      ],
+      "profile_requested": false,
+      "profiling": {
+        "enabled": false,
+        "ended": false,
+        "profile_path": null,
+        "profile_prefix": null
+      },
+      "provider_metadata": {
+        "available": [
+          "TensorrtExecutionProvider",
+          "CUDAExecutionProvider",
+          "CPUExecutionProvider"
+        ],
+        "cuda_options": {
+          "arena_extend_strategy": "kSameAsRequested",
+          "cudnn_conv_algo_search": "HEURISTIC",
+          "device_id": 0,
+          "do_copy_in_default_stream": true,
+          "gpu_mem_limit": 2147483648,
+          "use_tf32": 0
+        },
+        "preload_dlls": {
+          "attempted": true,
+          "directory": "",
+          "status": "ok"
+        },
+        "requested": "cuda"
+      },
+      "providers": [
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "requested_provider_options": {
+        "arena_extend_strategy": "kSameAsRequested",
+        "cuda_device_id": 0,
+        "cudnn_conv_algo_search": "HEURISTIC",
+        "do_copy_in_default_stream": true,
+        "gpu_mem_limit_mib": 2048
+      },
+      "requested_providers": [
+        "CUDAExecutionProvider",
+        "CPUExecutionProvider"
+      ],
+      "stage": "flow_encoder",
+      "threads": "bounded by caller; default 1 intra-op and 1 inter-op",
+      "verification_only": false
+    },
+    "speech_token_count": 164
+  },
+  "rss": {
+    "peak_rss_bytes": 1094246400,
+    "rss_bytes": 1094778880
+  },
+  "schema_version": 1,
+  "stage": "flow",
+  "started_unix": 1790704189.6253545,
+  "status": "ok"
+}

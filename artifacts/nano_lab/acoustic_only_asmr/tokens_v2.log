@@ -1,0 +1,12 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{
+  "status": "ready",
+  "format": "nano_acoustic_cache_v1",
+  "output_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/cache_v2"
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 25.220s
+             CPU time consumed: 27.663s
+                   Memory peak: 978.6M (swap: 0B)

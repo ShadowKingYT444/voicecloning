@@ -1,0 +1,28 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+{"id": "morning_base_raw", "cosine": 0.845779, "wer": null, "dnsmos_overall": 3.176984072615381}
+{"id": "morning_base_mel", "cosine": 0.845953, "wer": null, "dnsmos_overall": 3.2141700793357075}
+{"id": "morning_fit_raw", "cosine": 0.860826, "wer": null, "dnsmos_overall": 3.077840941206808}
+{"id": "morning_fit_mel", "cosine": 0.86326, "wer": null, "dnsmos_overall": 3.115634951601715}
+{"id": "question_base_raw", "cosine": 0.873489, "wer": null, "dnsmos_overall": 3.1504526426504396}
+{"id": "question_base_mel", "cosine": 0.875305, "wer": null, "dnsmos_overall": 3.03688078926857}
+{"id": "question_fit_raw", "cosine": 0.901892, "wer": null, "dnsmos_overall": 3.2793204241323206}
+{"id": "question_fit_mel", "cosine": 0.90511, "wer": null, "dnsmos_overall": 3.18177719591183}
+{"id": "narrative_base_raw", "cosine": 0.87854, "wer": null, "dnsmos_overall": 3.1922261940679215}
+{"id": "narrative_base_mel", "cosine": 0.884645, "wer": null, "dnsmos_overall": 3.2809225844835503}
+{"id": "narrative_fit_raw", "cosine": 0.891777, "wer": null, "dnsmos_overall": 3.081602195515001}
+{"id": "narrative_fit_mel", "cosine": 0.90015, "wer": null, "dnsmos_overall": 3.2038074245133097}
+{"id": "heldout01_rp1p0", "cosine": 0.88688, "wer": null, "dnsmos_overall": 2.6011394448034335}
+{"id": "heldout01_rp1p1", "cosine": 0.880382, "wer": null, "dnsmos_overall": 2.1821457639033257}
+{"id": "heldout01_rp1p2", "cosine": 0.875678, "wer": null, "dnsmos_overall": 2.4335087251149488}
+{"id": "question_rp1p0", "cosine": 0.897007, "wer": null, "dnsmos_overall": 3.2766435189524454}
+{"id": "question_rp1p1", "cosine": 0.891483, "wer": null, "dnsmos_overall": 2.7668281934847965}
+{"id": "question_rp1p2", "cosine": 0.875305, "wer": null, "dnsmos_overall": 3.03688078926857}
+{"id": "narrative_rp1p0", "cosine": 0.889598, "wer": null, "dnsmos_overall": 3.0567847409373994}
+{"id": "narrative_rp1p1", "cosine": 0.879692, "wer": null, "dnsmos_overall": 3.238760579462113}
+{"id": "narrative_rp1p2", "cosine": 0.884645, "wer": null, "dnsmos_overall": 3.2809225844835503}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 29.770s
+             CPU time consumed: 2min 49.251s
+                   Memory peak: 713.5M (swap: 0B)

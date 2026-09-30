@@ -1,0 +1,30 @@
+{
+  "event": "fit",
+  "delta_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/mel_calibration_asmr/delta.npy",
+  "heldout": [
+    {
+      "strength": 0.0,
+      "mean_source_envelope_mse": 0.04879700126279617,
+      "per_row": {
+        "asmr7_repair_011": 0.06629101887841268,
+        "asmr7_repair_022": 0.031302983647179664
+      }
+    },
+    {
+      "strength": 0.5,
+      "mean_source_envelope_mse": 0.04548402325937698,
+      "per_row": {
+        "asmr7_repair_011": 0.0607686095455776,
+        "asmr7_repair_022": 0.030199436973176362
+      }
+    },
+    {
+      "strength": 1.0,
+      "mean_source_envelope_mse": 0.04391203356335332,
+      "per_row": {
+        "asmr7_repair_011": 0.056987188520138045,
+        "asmr7_repair_022": 0.030836878606568596
+      }
+    }
+  ]
+}

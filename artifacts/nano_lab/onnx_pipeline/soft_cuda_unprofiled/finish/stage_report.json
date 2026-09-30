@@ -1,0 +1,35 @@
+{
+  "elapsed_seconds": 7.777393579483032,
+  "finished_unix": 1790699703.5764122,
+  "result": {
+    "audio_samples": 176640,
+    "audio_seconds": 7.36,
+    "master_processing": {
+      "achieved_lufs": -22.10532561475891,
+      "gain_db": 0.9197352488595096,
+      "highpass_hz": 45,
+      "noise_gate": false,
+      "target_lufs": -19,
+      "true_peak_ceiling_dbtp": -1,
+      "true_peak_oversampling": 4
+    },
+    "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/soft_cuda_unprofiled.wav",
+    "sample_rate": 24000,
+    "schema_version": 1,
+    "source": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_pipeline/soft_cuda_unprofiled/vocoder/audio.npz",
+    "trim_fade": {
+      "fade_ms": 20,
+      "n_trim": 480
+    },
+    "watermark": "PerthImplicitWatermarker",
+    "watermark_applied": true
+  },
+  "rss": {
+    "peak_rss_bytes": 535400448,
+    "rss_bytes": 505688064
+  },
+  "schema_version": 1,
+  "stage": "finish",
+  "started_unix": 1790699695.7990198,
+  "status": "ok"
+}

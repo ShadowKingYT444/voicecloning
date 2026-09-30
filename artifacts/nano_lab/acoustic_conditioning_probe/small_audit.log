@@ -1,0 +1,17 @@
+MemoryMax=1280MiB, MemoryHigh=1024MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 4b6240e9dc404b5794d8965b3aeffbc6
+{"id": "baseline_10031", "wer": 0.1, "transcript": "Let's see, who's the lucky person to get to kiss me? Wait a minute, do I know you?"}
+{"id": "baseline_10097", "wer": 0.1, "transcript": "Let's see, who's the lucky person to get to kiss me? Wait a minute, do I know you?"}
+{"id": "self_all_10031", "wer": 0.0, "transcript": "Let's see, who's the lucky person who gets to kiss me? Wait a minute. Do I know you?"}
+{"id": "self_all_10097", "wer": 0.0, "transcript": "Let's see, who's the lucky person who gets to kiss me? Wait a minute, do I know you?"}
+{"id": "baseline_self_embedding_10031", "wer": 0.1, "transcript": "Let's see, who's the lucky person to get to kiss me? Wait a minute, do I know you?"}
+{"id": "baseline_self_embedding_10097", "wer": 0.1, "transcript": "Let's see, who's the lucky person to get to kiss me? Wait a minute, do I know you?"}
+{"id": "baseline_self_prompt_10031", "wer": 0.0, "transcript": "Let's see, who's the lucky person who gets to kiss me? Wait a minute, do I know you?"}
+{"id": "baseline_self_prompt_10097", "wer": 0.0, "transcript": "Let's see, who's the lucky person who gets to kiss me? Wait a minute, do I know you?"}
+{"id": "source_mel_upperbound", "wer": 0.05, "transcript": "Let's see, who's the lucky person who got to kiss me? Wait a minute, do I know you?"}
+{"id": "source", "wer": 0.0, "transcript": "Let's see, who's the lucky person who gets to kiss me? Wait a minute, do I know you?"}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 9.555s
+             CPU time consumed: 2min 14.612s
+                   Memory peak: 1G (swap: 0B)

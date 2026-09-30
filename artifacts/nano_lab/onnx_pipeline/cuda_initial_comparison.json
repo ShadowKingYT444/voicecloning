@@ -1,0 +1,12 @@
+{
+  "cpu_run": "soft_complete",
+  "cuda_run": "soft_cuda_shrink",
+  "speech_tokens_exact": true,
+  "cpu_token_shape": [
+    184
+  ],
+  "cuda_token_shape": [
+    184
+  ],
+  "note": "GPU profiling enabled. Full quality not yet audited. Different ORT versions and execution providers."
+}

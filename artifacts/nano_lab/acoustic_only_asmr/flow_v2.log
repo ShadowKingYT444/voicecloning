@@ -1,0 +1,14 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+{
+  "status": "ready",
+  "format": "nano_mel_calibration_prepare_v1",
+  "output_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/acoustic_only_asmr/flow_v2"
+}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 52.291s
+             CPU time consumed: 50.917s
+                   Memory peak: 1.4G (swap: 0B)

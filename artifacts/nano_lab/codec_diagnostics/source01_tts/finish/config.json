@@ -1,0 +1,23 @@
+{
+  "audio_samples": 140160,
+  "audio_seconds": 5.84,
+  "master_processing": {
+    "achieved_lufs": -21.657338720233884,
+    "gain_db": 12.0,
+    "highpass_hz": 45,
+    "noise_gate": false,
+    "target_lufs": -19,
+    "true_peak_ceiling_dbtp": -1,
+    "true_peak_oversampling": 4
+  },
+  "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tts.wav",
+  "sample_rate": 24000,
+  "schema_version": 1,
+  "source": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/codec_diagnostics/source01_tts/vocoder/audio.npz",
+  "trim_fade": {
+    "fade_ms": 20,
+    "n_trim": 480
+  },
+  "watermark": "PerthImplicitWatermarker",
+  "watermark_applied": true
+}

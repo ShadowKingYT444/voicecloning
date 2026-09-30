@@ -1,0 +1,43 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 147ceafe6d2f49ddb35195e5e6f9725b
+{"id": "all_attn_comparison__neutral_base", "dnsmos_signal": 3.174266913046426, "dnsmos_background": 2.8826224148970283, "dnsmos_overall": 2.434367568616126, "dnsmos_windows": 3, "dnsmos_repeated_short_clip": true}
+{"id": "all_attn_comparison__neutral_adapter_full", "dnsmos_signal": 3.559483721759225, "dnsmos_background": 3.8493718300304223, "dnsmos_overall": 3.183242537189191, "dnsmos_windows": 3, "dnsmos_repeated_short_clip": true}
+{"id": "all_attn_comparison__expressive_base", "dnsmos_signal": 2.8815085820050106, "dnsmos_background": 2.8666273288197015, "dnsmos_overall": 2.1917579103591587, "dnsmos_windows": 5, "dnsmos_repeated_short_clip": true}
+{"id": "all_attn_comparison__expressive_adapter_full", "dnsmos_signal": 3.6060838745408494, "dnsmos_background": 2.9194873554447316, "dnsmos_overall": 2.732096045534294, "dnsmos_windows": 2, "dnsmos_repeated_short_clip": true}
+{"id": "all_attn_comparison__quiet_base", "dnsmos_signal": 3.3278009283572545, "dnsmos_background": 3.549668119922768, "dnsmos_overall": 2.8193014941326484, "dnsmos_windows": 2, "dnsmos_repeated_short_clip": true}
+{"id": "all_attn_comparison__quiet_adapter_full", "dnsmos_signal": 3.596538589245806, "dnsmos_background": 4.032322057042272, "dnsmos_overall": 3.2854060803970837, "dnsmos_windows": 2, "dnsmos_repeated_short_clip": true}
+{"id": "all_attn_robustness__question_79_base", "dnsmos_signal": 2.9706303948880075, "dnsmos_background": 3.1460740207599867, "dnsmos_overall": 2.3739095337421756, "dnsmos_windows": 1, "dnsmos_repeated_short_clip": true}
+{"id": "all_attn_robustness__question_79_adapter", "dnsmos_signal": 3.5938902207802017, "dnsmos_background": 4.033960668298771, "dnsmos_overall": 3.283659604592904, "dnsmos_windows": 1, "dnsmos_repeated_short_clip": true}
+{"id": "all_attn_robustness__question_79_combined", "dnsmos_signal": 3.576726175371384, "dnsmos_background": 4.026254935074543, "dnsmos_overall": 3.255978638444367, "dnsmos_windows": 1, "dnsmos_repeated_short_clip": true}
+{"id": "all_attn_robustness__question_97_base", "dnsmos_signal": 3.5430703922361317, "dnsmos_background": 4.032988245188896, "dnsmos_overall": 3.249524069135683, "dnsmos_windows": 2, "dnsmos_repeated_short_clip": true}
+{"id": "all_attn_robustness__question_97_adapter", "dnsmos_signal": 3.610432639321035, "dnsmos_background": 3.7950738466988767, "dnsmos_overall": 3.214175953931849, "dnsmos_windows": 2, "dnsmos_repeated_short_clip": true}
+{"id": "all_attn_robustness__question_97_combined", "dnsmos_signal": 3.641916907882867, "dnsmos_background": 3.9047143199779613, "dnsmos_overall": 3.288362233704952, "dnsmos_windows": 2, "dnsmos_repeated_short_clip": true}
+{"id": "all_attn_robustness__narrative_79_base", "dnsmos_signal": 3.4105241923136633, "dnsmos_background": 3.5966072101066864, "dnsmos_overall": 2.9081845699441633, "dnsmos_windows": 5, "dnsmos_repeated_short_clip": true}
+{"id": "all_attn_robustness__narrative_79_adapter", "dnsmos_signal": 3.6320262743278584, "dnsmos_background": 3.6127797175454885, "dnsmos_overall": 3.1068420095054106, "dnsmos_windows": 5, "dnsmos_repeated_short_clip": true}
+{"id": "all_attn_robustness__narrative_79_combined", "dnsmos_signal": 3.6271681535166906, "dnsmos_background": 3.7330149703131745, "dnsmos_overall": 3.162486760950998, "dnsmos_windows": 5, "dnsmos_repeated_short_clip": true}
+{"id": "all_attn_robustness__narrative_97_base", "dnsmos_signal": 3.490814870051936, "dnsmos_background": 3.566823095047633, "dnsmos_overall": 2.975561832271217, "dnsmos_windows": 4, "dnsmos_repeated_short_clip": true}
+{"id": "all_attn_robustness__narrative_97_adapter", "dnsmos_signal": 3.4588220001458616, "dnsmos_background": 3.9352576560399535, "dnsmos_overall": 3.141857320617402, "dnsmos_windows": 5, "dnsmos_repeated_short_clip": true}
+{"id": "all_attn_robustness__narrative_97_combined", "dnsmos_signal": 3.4907572291570808, "dnsmos_background": 4.076277951015443, "dnsmos_overall": 3.231887734751452, "dnsmos_windows": 5, "dnsmos_repeated_short_clip": true}
+{"id": "mel_comparison__neutral_base", "dnsmos_signal": 3.174266913046426, "dnsmos_background": 2.8826224148970283, "dnsmos_overall": 2.434367568616126, "dnsmos_windows": 3, "dnsmos_repeated_short_clip": true}
+{"id": "mel_comparison__neutral_mel_half", "dnsmos_signal": 3.1729637547679874, "dnsmos_background": 3.153536684673797, "dnsmos_overall": 2.559843333632775, "dnsmos_windows": 3, "dnsmos_repeated_short_clip": true}
+{"id": "mel_comparison__neutral_mel_full", "dnsmos_signal": 3.1848005450054195, "dnsmos_background": 3.3846903401863053, "dnsmos_overall": 2.6737993855858755, "dnsmos_windows": 3, "dnsmos_repeated_short_clip": true}
+{"id": "mel_comparison__expressive_base", "dnsmos_signal": 2.8815085820050106, "dnsmos_background": 2.8666273288197015, "dnsmos_overall": 2.1917579103591587, "dnsmos_windows": 5, "dnsmos_repeated_short_clip": true}
+{"id": "mel_comparison__expressive_mel_half", "dnsmos_signal": 2.965913831833506, "dnsmos_background": 3.112026179103549, "dnsmos_overall": 2.359159865061814, "dnsmos_windows": 5, "dnsmos_repeated_short_clip": true}
+{"id": "mel_comparison__expressive_mel_full", "dnsmos_signal": 3.0257817985137945, "dnsmos_background": 3.2954382224315197, "dnsmos_overall": 2.4748476706793476, "dnsmos_windows": 5, "dnsmos_repeated_short_clip": true}
+{"id": "mel_comparison__quiet_base", "dnsmos_signal": 3.3278009283572545, "dnsmos_background": 3.549668119922768, "dnsmos_overall": 2.8193014941326484, "dnsmos_windows": 2, "dnsmos_repeated_short_clip": true}
+{"id": "mel_comparison__quiet_mel_half", "dnsmos_signal": 3.3962342056933075, "dnsmos_background": 3.789401736172471, "dnsmos_overall": 2.9905319149623915, "dnsmos_windows": 2, "dnsmos_repeated_short_clip": true}
+{"id": "mel_comparison__quiet_mel_full", "dnsmos_signal": 3.417475817894844, "dnsmos_background": 3.8652329426645697, "dnsmos_overall": 3.0397934724956226, "dnsmos_windows": 2, "dnsmos_repeated_short_clip": true}
+{"id": "mel_robustness__question_79_base", "dnsmos_signal": 2.9706303948880075, "dnsmos_background": 3.1460740207599867, "dnsmos_overall": 2.3739095337421756, "dnsmos_windows": 1, "dnsmos_repeated_short_clip": true}
+{"id": "mel_robustness__question_79_mel_full", "dnsmos_signal": 2.8307024336679505, "dnsmos_background": 3.260335729813075, "dnsmos_overall": 2.317809836397479, "dnsmos_windows": 1, "dnsmos_repeated_short_clip": true}
+{"id": "mel_robustness__question_97_base", "dnsmos_signal": 3.5430703922361317, "dnsmos_background": 4.032988245188896, "dnsmos_overall": 3.249524069135683, "dnsmos_windows": 2, "dnsmos_repeated_short_clip": true}
+{"id": "mel_robustness__question_97_mel_full", "dnsmos_signal": 3.5714793083363423, "dnsmos_background": 4.068222856134989, "dnsmos_overall": 3.2854180429837676, "dnsmos_windows": 2, "dnsmos_repeated_short_clip": true}
+{"id": "mel_robustness__narrative_79_base", "dnsmos_signal": 3.4105241923136633, "dnsmos_background": 3.5966072101066864, "dnsmos_overall": 2.9081845699441633, "dnsmos_windows": 5, "dnsmos_repeated_short_clip": true}
+{"id": "mel_robustness__narrative_79_mel_full", "dnsmos_signal": 3.412791268777757, "dnsmos_background": 3.746631082863601, "dnsmos_overall": 2.9839091922414838, "dnsmos_windows": 5, "dnsmos_repeated_short_clip": true}
+{"id": "mel_robustness__narrative_97_base", "dnsmos_signal": 3.490814870051936, "dnsmos_background": 3.566823095047633, "dnsmos_overall": 2.975561832271217, "dnsmos_windows": 4, "dnsmos_repeated_short_clip": true}
+{"id": "mel_robustness__narrative_97_mel_full", "dnsmos_signal": 3.5146338608916636, "dnsmos_background": 3.859564247523883, "dnsmos_overall": 3.139751895020998, "dnsmos_windows": 4, "dnsmos_repeated_short_clip": true}
+{"id": "source_conversational", "dnsmos_signal": 3.656614388477846, "dnsmos_background": 3.4518373444742694, "dnsmos_overall": 3.078661126532651, "dnsmos_windows": 5, "dnsmos_repeated_short_clip": false}
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1min 18.014s
+             CPU time consumed: 2min 33.359s
+                   Memory peak: 274.8M (swap: 0B)

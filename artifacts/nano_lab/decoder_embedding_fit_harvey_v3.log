@@ -1,0 +1,77 @@
+MemoryMax=3072MiB, MemoryHigh=2500MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service; invocation ID: 9330b1c4db0047548ac7d707cbeaaaac
+/home/terryd/gooning/voicecloning/voicebox/backend/venv/lib/python3.12/site-packages/diffusers/models/lora.py:391: FutureWarning: `LoRACompatibleLinear` is deprecated and will be removed in version 1.0.0. Use of `LoRACompatibleLinear` is deprecated. Please switch to PEFT backend by installing PEFT: `pip install peft`.
+  deprecate("LoRACompatibleLinear", "1.0.0", deprecation_message)
+{
+  "output_dir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit_harvey_v3",
+  "parity": {
+    "atol": 0.0001,
+    "failures": [
+      {
+        "atol": 0.0001,
+        "id": "harvey_repair_001",
+        "max_abs": 2.661346435546875,
+        "reason": "numeric",
+        "rmse": 0.5219535315360173
+      },
+      {
+        "atol": 0.0001,
+        "id": "harvey_repair_005",
+        "max_abs": 3.7091712951660156,
+        "reason": "numeric",
+        "rmse": 0.6038890583680547
+      },
+      {
+        "atol": 0.0001,
+        "id": "harvey_repair_004",
+        "max_abs": 2.1709208488464355,
+        "reason": "numeric",
+        "rmse": 0.48203105496511156
+      }
+    ],
+    "max_abs": 3.7091712951660156,
+    "rmse_mean": 0.5359578816230611,
+    "rows": [
+      {
+        "id": "harvey_repair_001",
+        "max_abs": 2.661346435546875,
+        "passed": false,
+        "rmse": 0.5219535315360173,
+        "shape": [
+          1,
+          80,
+          215
+        ]
+      },
+      {
+        "id": "harvey_repair_005",
+        "max_abs": 3.7091712951660156,
+        "passed": false,
+        "rmse": 0.6038890583680547,
+        "shape": [
+          1,
+          80,
+          225
+        ]
+      },
+      {
+        "id": "harvey_repair_004",
+        "max_abs": 2.1709208488464355,
+        "passed": false,
+        "rmse": 0.48203105496511156,
+        "shape": [
+          1,
+          80,
+          173
+        ]
+      }
+    ],
+    "status": "failed"
+  },
+  "status": "parity_failed"
+}
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 28.369s
+             CPU time consumed: 27.781s
+                   Memory peak: 1.2G (swap: 0B)

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "asmr_cold",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_batch_asmr_fitted_fp32/asmr_cold.wav",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine."
+  },
+  {
+    "id": "asmr_warm_repeat",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_batch_asmr_fitted_fp32/asmr_warm_repeat.wav",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine."
+  },
+  {
+    "id": "asmr_warm_new",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_batch_asmr_fitted_fp32/asmr_warm_new.wav",
+    "text": "The last train had already left when I reached the station. A small light was still on above the ticket office."
+  },
+  {
+    "id": "harvey_cold",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_batch_harvey_fitted_fp32/harvey_cold.wav",
+    "text": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence."
+  },
+  {
+    "id": "harvey_warm_repeat",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_batch_harvey_fitted_fp32/harvey_warm_repeat.wav",
+    "text": "We have a clear plan. Check the details, prepare your next move, and walk into that meeting with confidence."
+  },
+  {
+    "id": "harvey_warm_new",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_batch_harvey_fitted_fp32/harvey_warm_new.wav",
+    "text": "Did you remember the blue folder? I thought we agreed to meet at half past nine."
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "status": "audio_evaluation_pending",
+  "user_feedback": "Neither sounds convincing yet",
+  "old_fit_status": "rejected_training_label_mismatch",
+  "dataset": {
+    "manifest": "artifacts/nano_lab/dataset_repair_complete/adaptation_repaired.json",
+    "counts": {
+      "all": 17,
+      "train": 15,
+      "valid": 2
+    },
+    "duration_seconds": 89.42,
+    "human_verified": false,
+    "transcript_gate": "exact Tiny/Small consensus and text/audio SHA256"
+  },
+  "speaker_fit": {
+    "baseline_valid_loss": 4.9582689746897275,
+    "best_valid_loss": 4.720667471276953,
+    "trainable_parameters": 256,
+    "cgroup_memory_peak_display": "2.4G"
+  },
+  "rank4_adapter": {
+    "baseline_valid_loss": 4.95826862720733,
+    "best_valid_loss": 4.624262718444175,
+    "trainable_parameters": 73728,
+    "peak_rss_mib": 2015.33984375,
+    "cgroup_memory_peak_display": "1.5G"
+  },
+  "note": "Training losses are not perceptual quality scores. Cgroup memory and process RSS count shared pages differently."
+}

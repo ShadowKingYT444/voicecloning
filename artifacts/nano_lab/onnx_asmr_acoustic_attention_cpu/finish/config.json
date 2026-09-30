@@ -1,0 +1,23 @@
+{
+  "audio_samples": 167040,
+  "audio_seconds": 6.96,
+  "master_processing": {
+    "achieved_lufs": -19.000000182140475,
+    "gain_db": 11.121752358818608,
+    "highpass_hz": 45,
+    "noise_gate": false,
+    "target_lufs": -19,
+    "true_peak_ceiling_dbtp": -1,
+    "true_peak_oversampling": 4
+  },
+  "output": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_asmr_acoustic_attention_cpu.wav",
+  "sample_rate": 24000,
+  "schema_version": 1,
+  "source": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/onnx_asmr_acoustic_attention_cpu/vocoder/audio.npz",
+  "trim_fade": {
+    "fade_ms": 20,
+    "n_trim": 480
+  },
+  "watermark": "PerthImplicitWatermarker",
+  "watermark_applied": true
+}

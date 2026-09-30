@@ -1,0 +1,51 @@
+MemoryMax=640MiB, MemoryHigh=512MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB
+Running as unit: nano-lab-model.service
+..F.....                                                                 [100%]
+=================================== FAILURES ===================================
+______________ test_nonzero_factor_fold_matches_factorized_output ______________
+
+    def test_nonzero_factor_fold_matches_factorized_output() -> None:
+        rng = np.random.default_rng(9)
+        shape = (256, 512)
+        base = rng.normal(size=shape).astype(np.float32)
+        hidden = rng.normal(size=(2, 5, shape[1])).astype(np.float32)
+        down = rng.normal(0.0, 0.03, size=(RANK, shape[1])).astype(np.float32)
+        up = rng.normal(0.0, 0.03, size=(shape[0], RANK)).astype(np.float32)
+        expected = np.matmul(hidden, _fold_weight_numpy(base, up, down, shape).T)
+        actual = np.matmul(hidden, base.T) + np.matmul(hidden, _factor_delta_numpy(up, down, shape).T)
+>       np.testing.assert_allclose(actual, expected, rtol=0.0, atol=2e-5)
+
+scripts/nano_lab/test_fit_decoder_attention.py:59: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<function assert_allclose.<locals>.compare at 0x7d5f8c5725c0>, array([[[ 10.714472  ,   1.8335209 ,  36.389835  , ......  [-16.109222  , -13.313084  ,   7.797859  , ...,  -1.1005125 ,
+          23.935759  , -35.31546   ]]], dtype=float32))
+kwds = {'err_msg': '', 'verbose': True, 'header': 'Not equal to tolerance rtol=0, atol=2e-05', 'equal_nan': True}
+
+    @wraps(func)
+    def inner(*args, **kwds):
+        with self._recreate_cm():
+>           return func(*args, **kwds)
+                   ^^^^^^^^^^^^^^^^^^^
+E           AssertionError: 
+E           Not equal to tolerance rtol=0, atol=2e-05
+E           
+E           Mismatched elements: 92 / 2560 (3.59%)
+E           Max absolute difference: 5.722046e-05
+E           Max relative difference: 0.00069183
+E            x: array([[[ 10.714472,   1.833521,  36.389835, ..., -13.207362,
+E                    -44.92128 ,  -7.813703],
+E                   [ 32.957462,  -3.179956, -44.84432 , ...,   1.140611,...
+E            y: array([[[ 10.714481,   1.833525,  36.38984 , ..., -13.20736 ,
+E                    -44.921265,  -7.813701],
+E                   [ 32.957466,  -3.17996 , -44.84433 , ...,   1.140612,...
+
+../../.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/contextlib.py:81: AssertionError
+=========================== short test summary info ============================
+FAILED scripts/nano_lab/test_fit_decoder_attention.py::test_nonzero_factor_fold_matches_factorized_output
+1 failed, 7 passed in 3.84s
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 5.583s
+             CPU time consumed: 5.740s
+                   Memory peak: 282.7M (swap: 0B)

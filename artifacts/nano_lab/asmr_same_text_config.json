@@ -1,0 +1,52 @@
+{
+  "output_dir": "artifacts/nano_lab/asmr_same_text",
+  "device": "cuda",
+  "threads": 2,
+  "optimized_loader": true,
+  "cases": [
+    {
+      "id": "heldout01_base",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+      "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "seed": 107,
+      "temperature": 0.8,
+      "steps": 2,
+      "voice": "asmr7",
+      "save_conditionals": false,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 0,
+      "adapter_scale": 0
+    },
+    {
+      "id": "heldout01_adapter",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+      "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "seed": 107,
+      "temperature": 0.8,
+      "steps": 2,
+      "voice": "asmr7",
+      "save_conditionals": false,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 0,
+      "adapter_scale": 1
+    },
+    {
+      "id": "heldout01_combined",
+      "reference": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "input_conditioning_cache": "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+      "text": "Let's see who's the lucky person who gets to kiss me. Wait a minute. Do I know you?",
+      "seed": 107,
+      "temperature": 0.8,
+      "steps": 2,
+      "voice": "asmr7",
+      "save_conditionals": false,
+      "mel_calibration": "artifacts/nano_lab/mel_calibration_asmr/report.json",
+      "mel_calibration_strength": 1,
+      "adapter_scale": 1
+    }
+  ],
+  "resume": false,
+  "adapter": "artifacts/nano_lab/adapter_aligned_all_attn.pt"
+}

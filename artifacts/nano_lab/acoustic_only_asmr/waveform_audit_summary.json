@@ -1,0 +1,34 @@
+{
+  "status": "basic_waveform_checks_passed",
+  "source_manifest_sha256": "3885d08701e3f9fbf15793ad5afe2c0ce7ba8ed96e994070f35d65fc4259650a",
+  "count": 30,
+  "ranges": {
+    "rms_dbfs": {
+      "min": -49.655,
+      "max": -28.798
+    },
+    "peak_dbfs": {
+      "min": -27.058,
+      "max": -5.322
+    },
+    "clipping_fraction_abs_ge_minus_0.01dbfs": {
+      "min": 0.0,
+      "max": 0.0
+    },
+    "near_clip_fraction_abs_ge_minus_0.1dbfs": {
+      "min": 0.0,
+      "max": 0.0
+    },
+    "snr_db_proxy_high50_minus_low10": {
+      "min": 16.113,
+      "max": 30.755
+    },
+    "noise_floor_dbfs_proxy_low10pct_frames": {
+      "min": -70.76,
+      "max": -51.649
+    }
+  },
+  "human_cleanliness_verified": false,
+  "automatic_noise_rejection_applied": false,
+  "limits": "Noise fields are speech/silence energy proxies. Breathy and quiet ASMR can yield low proxy SNR without stationary background noise."
+}
