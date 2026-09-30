@@ -57,5 +57,27 @@ model_job.lock
 /artifacts/**/*.jpg
 /artifacts/**/*.jpeg
 
+# Shared voice references required for remote continuation. These exceptions
+# keep the original paths used by the manifests and experiment scripts.
+!/*.mp3
+!/artifacts/references/
+!/artifacts/references/**
+!/artifacts/nano_lab/references/
+!/artifacts/nano_lab/references/**
+!/artifacts/nano_lab/dataset_repair/
+!/artifacts/nano_lab/dataset_repair/**
+!/artifacts/nano_lab/dataset_repair_complete/
+!/artifacts/nano_lab/dataset_repair_complete/**
+!/artifacts/nano_lab/harvey_repair/
+!/artifacts/nano_lab/harvey_repair/**
+!/artifacts/nano_lab/harvey_repair_isolated/
+!/artifacts/nano_lab/harvey_repair_isolated/**
+!/Pocket_package/voices/
+!/Pocket_package/voices/asmr7_30s_loud_reference.wav
+!/Pocket_package/voices/asmr7_promoted_temp02.wav
+!/Pocket_package/voices/asmr7_30s_loud_state.npz
+!/kokoro_package/reference/
+!/kokoro_package/reference/mommy_reference.wav
+
 # Nested repository internals are never part of this source snapshot.
 **/.git/

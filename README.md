@@ -69,6 +69,6 @@ The final local stop was caused by low host memory, not a successful completion.
 
 ## Source and asset boundaries
 
-This is a source snapshot, not a self-contained model distribution. Git excludes model weights, trained binary checkpoints, audio, tensor caches, ONNX graphs, virtual environments, credentials, and large execution traces. Historical reports retain original paths and measurements. See [asset transfer](docs/ASSETS.md) before moving to another directory or machine.
+This is a source snapshot, not a self-contained model distribution. Git excludes model weights, trained binary checkpoints, generated audio, tensor caches, ONNX graphs, virtual environments, credentials, and large execution traces. The shared source recordings and curated reference clips are tracked so cloud agents can reproduce the reference preparation steps. Historical reports retain original paths and measurements. See [asset transfer](docs/ASSETS.md) before moving to another directory or machine.
 
 Third-party licenses remain with their respective sources. See [provenance](docs/THIRD_PARTY.md). No new blanket license overrides those licenses.

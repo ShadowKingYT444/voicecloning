@@ -1,8 +1,8 @@
 # Restore local assets before continuing
 
-Git contains code and text evidence. The original workspace also contains approximately 9.1 GiB of excluded assets. [The inventory](local-assets.json) records paths, sizes, and symlink targets. These sizes are an inventory, not cryptographic verification. Existing experiment manifests contain the authoritative hashes.
+Git contains code, text evidence, and the shared voice-reference bundle. The original workspace also contains approximately 9.0 GiB of excluded model, cache, and generated assets. [The inventory](local-assets.json) records paths, sizes, and symlink targets. These sizes are an inventory, not cryptographic verification. Existing experiment manifests contain the authoritative hashes.
 
-No source recordings or generated voices were uploaded to GitHub. The listening HTML pages need their local WAV files. Fitted profile JSON files also need their exact conditioning caches and adapters.
+The tracked reference bundle includes the source MP3 recordings, curated ASMR and Harvey reference variants, audited repair clips, and the Pocket/Kokoro reference files. Generated voices, model weights, fitting caches, and ONNX graphs remain local. The listening HTML pages still need generated WAV files. Fitted profile JSON files also need their exact conditioning caches and adapters.
 
 ## Transfer the saved state
 
@@ -34,15 +34,16 @@ Preserve the same absolute workspace path when possible. Many archived JSON file
 | Group | Purpose |
 |---|---|
 | `models/chatterbox-nano/` | Native model weights, tokenizer files, and configuration |
-| Root source MP3 files | Original ASMR and Harvey material for rebuilding references and clips |
-| `artifacts/nano_lab/references/` | Selected voice references and protected evaluation excerpts |
-| `dataset_repair_complete/clips/`, other source-clip directories | Actual audio behind the audited training manifests |
+| Root source MP3 files | Original ASMR and Harvey material for rebuilding references and clips; tracked in the repository |
+| `artifacts/references/` | Mommy ASMR reference variants and preparation notes; tracked in the repository |
+| `artifacts/nano_lab/references/` | Selected ASMR and Harvey references, manifests, and protected evaluation excerpts; tracked in the repository |
+| `dataset_repair_complete/clips/`, other source-clip directories | Actual audio behind the audited training manifests; tracked in the repository |
 | `*.pt`, `*.npy`, `*.npz` under the experiment directories | Adapters, pinned conditioning caches, source tokens, prepared flow data, and numerical references |
 | `onnx_staged*` directories and symlinks | Graphs, external weights, and stage layout for low-memory inference |
 | `models/faster-whisper-small/` and `Whisper_fast_package/models/` | Independent Small and Tiny transcript checks |
 | `vendor/dnsmos/sig_bak_ovr.onnx` | Audio-quality proxy model |
 
-The inventory also includes earlier baseline assets and optional generated samples. Restoring all entries is the simplest way to preserve historical comparisons. A smaller transfer must still satisfy every input and SHA-256 binding for the chosen experiment.
+The inventory also includes earlier baseline assets and optional generated samples. The shared reference bundle is already in GitHub. Restoring the remaining entries is still required for fitted-model continuation and historical comparisons. A smaller transfer must satisfy every input and SHA-256 binding for the chosen experiment.
 
 ## Reacquire base models
 
