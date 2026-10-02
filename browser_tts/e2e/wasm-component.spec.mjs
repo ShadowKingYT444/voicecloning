@@ -2,6 +2,10 @@ import { test, expect } from '@playwright/test';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
+// Playwright traces can retain fetched response bodies. Never attach model
+// weights to the evidence artifact, including when this component fails.
+test.use({ trace: 'off' });
+
 test('real browser WASM embedding outputs match pinned lossless rows without WebGPU', async ({ page, browser }) => {
   const group = await readFile('/proc/self/cgroup', 'utf8');
   if (!group.includes('nano-lab-model')) throw Error('Use the existing process-tree resource guard.');
