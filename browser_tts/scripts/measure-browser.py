@@ -329,7 +329,7 @@ def guard_context() -> dict[str, Any]:
         "cgroup": lines,
         "bounded_job_unit_detected": expected,
         "single_process_guard_detected": tiny_guard,
-        "accepted": expected or tiny_guard,
+        "accepted": expected,
     }
 
 
@@ -773,6 +773,9 @@ class BrowserMeasurement:
             stage["sampledPeakIncrementalPssMiB"] = (None if name == "clean_baseline" else round(
                 stage["sampledPeakPssMiB"] - (self.baseline_pss_mib or 0.0), 3))
             stage["sampledPeakProcessCount"] = max(item["hostProcessTree"]["processCount"] for item in samples)
+            heap_used = [item['javascriptHeap'].get('observedTargetUsedBytes') for item in samples]
+            stage['sampledPeakObservedJsHeapUsedMiB'] = max(
+                (value / 1048576 for value in heap_used if value is not None), default=None)
             gpu_rows = [sample.get("webgpuRequestedBuffers", {}) for sample in samples]
             current_rows = [row.get("currentNotDestroyedRequestedBytes", 0) for row in gpu_rows]
             highwater_rows = [row.get("largestWorkerLifetimePeakRequestedBytes", 0) for row in gpu_rows]
@@ -853,6 +856,7 @@ class BrowserMeasurement:
                 "scope": "Chrome root PID and its current /proc parent-child descendants only.",
             },
             "webgpuRequestedBuffers": gpu,
+            "javascriptHeap": self.js_heap_snapshot(),
         }
         if self.args.nvidia_smi:
             row["nvidiaSmi"] = self.nvidia_memory(pids)
@@ -918,6 +922,29 @@ class BrowserMeasurement:
             ],
             "workers": rows,
             "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+        }
+
+    def js_heap_snapshot(self) -> dict[str, Any]:
+        targets = [{'session': self.page_session, 'type': 'page'}]
+        targets.extend({'session': session, 'type': record.get('type'), 'targetId': record.get('targetId')}
+                       for session, record in list(self.worker_sessions.items()))
+        rows = []
+        for target in targets:
+            row = {key: value for key, value in target.items() if key != 'session'}
+            try:
+                usage = self.protocol('Runtime.getHeapUsage', {}, target['session'], timeout=4)
+                if not isinstance(usage.get('usedSize'), (float, int)) or usage['usedSize'] < 0:
+                    raise RunnerError('Runtime.getHeapUsage did not return a valid usedSize.')
+                row.update(usage); row['available'] = True
+            except Exception as error:
+                row.update(available=False, error=str(error))
+            rows.append(row)
+        complete = all(row['available'] for row in rows)
+        return {
+            'targets': rows, 'allObservedTargetsAvailable': complete,
+            'observedTargetUsedBytes': sum(row['usedSize'] for row in rows) if complete else None,
+            'scope': 'CDP V8 heap for the page and currently attached worker targets only. Missing targets remain unknown.',
+            'limitations': 'Not browser RSS/PSS, WASM linear memory, physical GPU memory, or total ArrayBuffer residency. Optional backingStorageSize/embedderHeapUsedSize are reported separately when returned; do not sum them into RSS.',
         }
 
     def nvidia_memory(self, owned_pids: list[int]) -> dict[str, Any]:

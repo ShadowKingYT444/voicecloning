@@ -48,6 +48,16 @@ test('cache stays within its fixed budget and evicts before loading another shar
   assert.ok(lookup.snapshot().shardRequests > 3);
   lookup.clear(); assert.equal(lookup.snapshot().cacheBytes, 0);
 });
+test('native fetch keeps its global receiver when called by a shard reader', async () => {
+  const f = fixture();
+  const original = f.fetchImpl;
+  f.fetchImpl = async function(url) {
+    assert.equal(this, globalThis, 'Web IDL fetch requires its Window/Worker receiver.');
+    return original(url);
+  };
+  const lookup = new StreamedEmbeddings(f.manifest, 'https://app.test/shards/manifest.json', f);
+  assert.equal((await lookup.lookup([0])).length, 768);
+});
 test('invalid IDs fail before shard fetch; corrupted bytes never enter the cache', async () => {
   const f = fixture(); const lookup = new StreamedEmbeddings(f.manifest, 'https://app.test/shards/manifest.json', f);
   for (const ids of [[], [-1], [6563], [1.2], [NaN], [129, 50256, 50256]]) await assert.rejects(lookup.lookup(ids));

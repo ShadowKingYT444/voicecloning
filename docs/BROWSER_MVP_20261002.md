@@ -125,6 +125,10 @@ above clean Chrome, JS heap, requested GPU buffers and physical GPU evidence
 separately. GPU descriptor sizes are not VRAM residency. The clean profile does
 not flush OS/HTTP caches. Cold load, first request, warm request, playback and
 export are separate stages. This harness does not perform a word/listening audit.
+JS heap samples use CDP `Runtime.getHeapUsage` separately for the page and
+attached workers. Missing targets stay unknown. Optional backing-storage and
+embedder-heap fields remain separate; the V8 used-heap sum does not establish
+WASM memory, all ArrayBuffer residency or total browser memory.
 
 ## Cloud CPU browser controls
 
@@ -155,6 +159,10 @@ selected screenshots are retained under `artifacts/nano_lab/browser_mvp_20261002
 It explicitly selects CPU/WASM, verifies the same pinned assets, and compares
 three hybrid lookup inputs with the lossless reader. It does not synthesize
 speech, establish full-model CPU compatibility or integrate a runtime fallback.
+The first real component run caught an invalid native `fetch` receiver after
+the ONNX WASM session loaded. That failure is retained in `ci_wasm_failure/`.
+The reader now binds fetch to its Window/Worker global; a guarded rerun is
+required before claiming browser lookup parity.
 
 The current Work browser cannot run the WebGPU-only model path. A CPU/WASM or
 cloud-service inference fallback has not been verified or integrated; the UI

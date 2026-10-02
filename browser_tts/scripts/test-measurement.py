@@ -19,6 +19,22 @@ def wav(frames=24000):
 
 
 class ExportTests(unittest.TestCase):
+    def test_heap_scopes_and_missing_targets_stay_explicit(self):
+        fake = object.__new__(runner.BrowserMeasurement)
+        fake.page_session = 'page'; fake.worker_sessions = {'worker': {'type': 'worker', 'targetId': 'w'}}
+        def protocol(method, params, session, timeout):
+            self.assertEqual(method, 'Runtime.getHeapUsage')
+            return dict(usedSize=100 if session == 'page' else 200, totalSize=1000, backingStorageSize=5000)
+        fake.protocol = protocol
+        report = fake.js_heap_snapshot()
+        self.assertEqual(report['observedTargetUsedBytes'], 300)
+        self.assertTrue(report['allObservedTargetsAvailable'])
+        self.assertEqual(report['targets'][0]['backingStorageSize'], 5000)
+        fake.protocol = lambda *args, **kwargs: {'totalSize': 1000}
+        missing = fake.js_heap_snapshot()
+        self.assertIsNone(missing['observedTargetUsedBytes'])
+        self.assertFalse(missing['allObservedTargetsAvailable'])
+
     def fake(self, contents, bad=None):
         # Reuse the production method while replacing browser I/O with bounded chunks.
         cls = next(value for value in vars(runner).values() if isinstance(value, type) and hasattr(value, 'export_wav'))

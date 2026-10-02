@@ -1,0 +1,24 @@
+{
+  "browserVersion": "153.0.8010.12",
+  "schema": "voice-study.wasm-embedding-component/v1",
+  "provider": "wasm",
+  "ortVersion": "1.30.0",
+  "revision": "4a66d7dab72a9e98f24b515d49a1d7a81632df2e",
+  "embeddingPackageBytes": 87306224,
+  "fullNanoInferenceRun": false,
+  "speechGenerated": false,
+  "voiceQualityVerified": false,
+  "memoryTargetVerified": false,
+  "cases": [],
+  "status": "failed",
+  "error": "Failed to execute 'fetch' on 'Window': Illegal invocation",
+  "requests": [
+    "http://127.0.0.1:4187/wasm-component.html",
+    "http://127.0.0.1:4187/assets/wasmComponent-BUr2t2I6.js",
+    "http://127.0.0.1:4187/assets/model-loader-Upzp-NqL.js",
+    "http://127.0.0.1:4187/experiments/embedding_lossless/manifest.json",
+    "http://127.0.0.1:4187/models/chatterbox-nano-browser/onnx/embed_tokens_fp16.onnx",
+    "http://127.0.0.1:4187/models/chatterbox-nano-browser/onnx/embed_tokens_fp16.onnx_data",
+    "http://127.0.0.1:4187/assets/ort-wasm-simd-threaded.jspi-CZzFqCHi.wasm"
+  ]
+}

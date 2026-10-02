@@ -13,7 +13,10 @@ export class StreamedEmbeddings {
     if (!Number.isSafeInteger(cacheBytes) || cacheBytes < 64 * ROW_BYTES || cacheBytes > DEFAULT_CACHE_BYTES) {
       throw Error('The lossless embedding cache must be between one shard and 4 MiB.');
     }
-    this.manifest = manifest; this.manifestUrl = manifestUrl; this.fetchImpl = fetchImpl;
+    this.manifest = manifest; this.manifestUrl = manifestUrl;
+    // Window/Worker fetch is a Web IDL method; a reader object is not a valid
+    // receiver. Bind the original global instead of invoking it as our method.
+    this.fetchImpl = fetchImpl.bind(globalThis);
     this.cacheBytes = cacheBytes; this.cache = new Map(); this.residentBytes = 0;
     this.stats = { mode: 'lossless-fp16-shards', cacheBudgetBytes: cacheBytes, cachePeakBytes: 0,
       cacheBytes: 0, fetchedShardBytes: 0, shardRequests: 0, cacheHits: 0,
