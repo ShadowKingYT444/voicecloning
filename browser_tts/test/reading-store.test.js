@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { ReadingStore } from '../src/reading-store.js';
+import { ReadingStore, isTemporaryReadingKey } from '../src/reading-store.js';
 
 function fixture(sizes = [3, 70000, 11]) {
   const store = new ReadingStore();
@@ -9,6 +9,13 @@ function fixture(sizes = [3, 70000, 11]) {
   store.get = async (index) => new Blob([bytes[index]]);
   return { store, bytes };
 }
+test('transient cleanup recognizes only app UUID/passage keys, leaving other keys alone', () => {
+  const id = '684ecbd6-a6a8-4103-aef4-de0415d628d8';
+  assert.equal(isTemporaryReadingKey([id, 0]), true);
+  for (const key of ['user-kept-note', ['library-file', 0], [id, -1], [id, 'saved'], [id, 0, 'keep'], null]) {
+    assert.equal(isTemporaryReadingKey(key), false);
+  }
+});
 test('long WAV exports use bounded chunks with exact header, ordering, and PCM bytes', async () => {
   const { store, bytes } = fixture(); const output = [];
   for await (const chunk of store.wavChunks()) {

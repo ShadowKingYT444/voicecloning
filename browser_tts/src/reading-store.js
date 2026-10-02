@@ -5,13 +5,61 @@ const requestResult = (request) => new Promise((resolve, reject) => {
   request.onerror = () => reject(request.error);
 });
 
+export function isTemporaryReadingKey(key) {
+  return Array.isArray(key) && key.length === 2
+    && typeof key[0] === 'string' && /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(key[0])
+    && Number.isSafeInteger(key[1]) && key[1] >= 0;
+}
+const sessionLock = (id) => `voice-study-reading:${id}`;
+
 export class ReadingStore {
   async open() {
     if (this.db) return;
+    if (this.opening) return this.opening;
     this.sessionId ||= crypto.randomUUID();
+    this.opening = this.openSession();
+    try { await this.opening; } finally { this.opening = null; }
+  }
+  async openSession() {
+    const locks = globalThis.navigator?.locks;
+    if (locks) {
+      // The browser releases this lease when its document dies. Stale sessions
+      // can then be removed without racing a live tab, picker or file writer.
+      await new Promise((ready, reject) => {
+        this.lease = locks.request(sessionLock(this.sessionId), async () => {
+          ready(); await new Promise((release) => { this.releaseLease = release; });
+        }).catch(reject);
+      });
+    }
     const request = indexedDB.open('voice-study-reading', 1);
     request.onupgradeneeded = () => request.result.createObjectStore('passages');
-    this.db = await requestResult(request);
+    try {
+      this.db = await requestResult(request);
+      this.retention = { mode: locks ? 'web-lock-scoped-transient-cleanup' : 'cleanup-skipped-no-web-locks', removedSessions: 0 };
+      if (locks) await this.cleanupStaleSessions(locks);
+    } catch (error) { this.releaseLease?.(); this.db?.close(); this.db = null; throw error; }
+  }
+  async cleanupStaleSessions(locks) {
+    const sessions = new Set();
+    await new Promise((resolve, reject) => {
+      const tx = this.db.transaction('passages');
+      tx.oncomplete = resolve; tx.onabort = () => reject(tx.error);
+      const cursor = tx.objectStore('passages').openKeyCursor();
+      cursor.onerror = () => reject(cursor.error);
+      cursor.onsuccess = () => {
+        const item = cursor.result;
+        if (!item) return;
+        if (isTemporaryReadingKey(item.key) && item.key[0] !== this.sessionId) sessions.add(item.key[0]);
+        item.continue();
+      };
+    });
+    for (const id of sessions) {
+      await locks.request(sessionLock(id), { ifAvailable: true }, async (lock) => {
+        if (!lock) return;
+        await this.transaction('readwrite', (store) => store.delete(IDBKeyRange.bound([id, 0], [id, Number.MAX_SAFE_INTEGER])));
+        this.retention.removedSessions += 1;
+      });
+    }
   }
   async transaction(mode, operation) {
     await this.open();

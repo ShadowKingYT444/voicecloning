@@ -11,6 +11,10 @@ deployment is authorized.
 
 Ten browser files were restored from the pinned public conversion and verified:
 395,880,313 bytes (377.54 MiB), excluding voice state and runtime assets.
+The downloader now also verifies and stages the conversion's 1,087-byte
+`LICENSE` and 246-byte `NOTICE.md` from its pinned SHA256SUMS. Copies are retained
+under `browser_tts/public/licenses/chatterbox-nano-ONNX/` for builds without
+locally restored model weights. This adds 1,333 notice bytes, not model weights.
 The selected generated reference and state match their documented hashes:
 
 - Reference: `67f94a868976b22a47bce8fd00a873d4c5b7085ba6eedd698f8a898a26ce76c0`.
@@ -69,6 +73,8 @@ temporary response Blobs, the browser HTTP cache, other graphs and runtime
 allocations are additional. This cache bound is not a browser memory measurement.
 
 No quantization, sampling change, fitted adapter or default promotion is applied.
+The visible Prepare control still selects the full FP16 embedding ONNX session.
+Only an explicit `losslessEmbeddingManifestUrl` selects the 4 MiB shard cache.
 Package bytes are unchanged for the FP16 tables, plus 129,432 bytes of manifest
 metadata and HTTP/file overhead. Random shard requests may hurt TTFA. Measure
 that tradeoff rather than inferring a speedup from the smaller resident cache.
@@ -102,6 +108,12 @@ The export API returns at most 65,536 PCM bytes per call. It awaits disk/browser
 backpressure and rejects missing, changed, duplicated, reordered or truncated
 data. The harness streams long WAVs to disk, checks exact header/payload size,
 and records hashes. It no longer transfers the entire paper as one base64 string.
+The visible Save flow and legacy short export also hold the reading lock through
+the file picker and writes, releasing it in `finally`. Programmatic cancellation
+cannot unlock a visible Save. A Web Locks session lease protects live tabs;
+startup cleanup removes only abandoned UUID/passage records in the app's own
+IndexedDB store. Unknown keys remain untouched. Cleanup is skipped when Web
+Locks is unavailable; the retention status is recorded in the snapshot.
 
 On a cloud browser host with the existing enforceable systemd guard, rebuild and
 serve `dist`, then run:
@@ -161,8 +173,29 @@ three hybrid lookup inputs with the lossless reader. It does not synthesize
 speech, establish full-model CPU compatibility or integrate a runtime fallback.
 The first real component run caught an invalid native `fetch` receiver after
 the ONNX WASM session loaded. That failure is retained in `ci_wasm_failure/`.
-The reader now binds fetch to its Window/Worker global; a guarded rerun is
-required before claiming browser lookup parity.
+The reader now binds fetch to its Window/Worker global. The guarded rerun
+https://github.com/ShadowKingYT444/voicecloning/actions/runs/36980252819
+passed all five browser checks. Actual WASM ONNX outputs and lossless rows
+matched bitwise for 5,376 Float32 values across three hybrid inputs. This is
+a finite component check, not all-row browser proof or full-model speech.
+The separate UI-only Python harness measured its owned Chromium process tree
+and V8 heap: rendered-mobile peak RSS 1,275.652 MiB, PSS 503.879 MiB and observed
+JS used heap 1.571 MiB. It ran no model inference. Those scopes illustrate why
+model package/cache bytes cannot stand in for browser memory.
+
+## Watermark release gate
+
+Native Nano uses `ChatterboxTurboTTS(nano=True)` and applies Perth after S3Gen
+decode (`vendor/chatterbox/src/chatterbox/tts_turbo.py`). The browser currently
+has no application-layer Perth step. Preservation within the pinned community
+decoder graph has not been demonstrated. No watermark stripping or licensing
+violation is inferred from that uncertainty. The prototype labels browser WAVs
+as research output, exposes `releaseReady: false` and the unverified watermark
+status in snapshots/export metadata, and names visible saves `*-research.wav`.
+Do not promote these as native-equivalent release audio until the actual graph
+and end-to-end watermark detection/preservation have been verified. No browser
+Perth replacement or invented watermark was added. Official model information:
+https://huggingface.co/ResembleAI/chatterbox-nano.
 
 The current Work browser cannot run the WebGPU-only model path. A CPU/WASM or
 cloud-service inference fallback has not been verified or integrated; the UI

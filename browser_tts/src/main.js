@@ -15,6 +15,9 @@ const ui = {
   download: $('download-reading'),
 };
 const store = new ReadingStore();
+const outputContract = Object.freeze({ purpose: 'research-only', releaseReady: false,
+  watermarkStatus: 'community-decoder-graph-preservation-unverified', applicationLayerWatermarkApplied: false,
+  processing: '9ms edge fade and PCM16 export; native Perth parity has not been established' });
 const localModelBase = '/models/chatterbox-nano-browser/';
 const localModelDiscovery = fetch(`${localModelBase}download_manifest.json`)
   .then(async (response) => {
@@ -41,12 +44,13 @@ function updateTextStats() {
   ui.words.textContent = `${wordCount(ui.passage.value).toLocaleString()} words`;
   ui.chunks.textContent = `${passages().length.toLocaleString()} passages`;
   ui.read.disabled = !modelReady || !passages().length || busy || exporting;
+  ui.download.disabled = busy || exporting;
   ui.passage.disabled = busy; ui.chunkSize.disabled = busy;
 }
 function metric(id, value) { $(id).textContent = value; }
 function snapshot() {
   return { status, error: lastError, modelReady, busy, exporting, loadSeconds, seed, modelIdentity, readingOutcome,
-    chunks: chunkRecords.map((chunk) => ({ ...chunk })),
+    chunks: chunkRecords.map((chunk) => ({ ...chunk })), storageRetention: store.retention ?? null, outputContract,
     metrics: { firstAudioSeconds: firstAudio, totalSynthesisSeconds: synthSeconds, audioSeconds,
       rtf: audioSeconds ? synthSeconds / audioSeconds : null, playbackGapsSeconds: [...gaps],
       maximumPlaybackGapSeconds: Math.max(0, ...gaps), scheduledQueueSize: sources.size,
@@ -265,7 +269,8 @@ function showDownload() {
 }
 ui.download.addEventListener('click', async (event) => {
   event.preventDefault(); if (busy || exporting || !store.count) return;
-  const name = store.count === total ? 'federalist-no-10-asmr.wav' : 'federalist-no-10-asmr-partial.wav';
+  exporting = true; updateTextStats();
+  const name = store.count === total ? 'federalist-no-10-asmr-research.wav' : 'federalist-no-10-asmr-partial-research.wav';
   try {
     if (window.showSaveFilePicker) {
       const file = await window.showSaveFilePicker({ suggestedName: name, types: [{ description: 'WAV audio', accept: { 'audio/wav': ['.wav'] } }] });
@@ -277,6 +282,7 @@ ui.download.addEventListener('click', async (event) => {
       setTimeout(() => URL.revokeObjectURL(url), 60000);
     }
   } catch (error) { if (error.name !== 'AbortError') setStatus(`Audio export failed: ${error.message}`, 'error'); }
+  finally { exporting = false; updateTextStats(); }
 });
 
 window.voiceStudy = {
@@ -287,13 +293,16 @@ window.voiceStudy = {
     wavExport = { iterator: store.wavChunks(), offsetBytes: 0 };
     exporting = true; updateTextStats();
     return { bytes: 44 + store.frames * 2, frames: store.frames, passages: store.count,
-      sampleRate: 24000, maximumChunkBytes: 65536 };
+      sampleRate: 24000, maximumChunkBytes: 65536, outputContract };
   },
   async readWavExport() {
     if (!wavExport) throw new Error('Open a WAV export before reading bytes.');
     const current = wavExport;
+    if (current.reading) throw new Error('Wait for the previous WAV export chunk.');
+    current.reading = true;
     try {
       const { value, done } = await current.iterator.next();
+      if (wavExport !== current) throw new Error('The WAV export was cancelled.');
       const offsetBytes = current.offsetBytes;
       if (done) { wavExport = null; exporting = false; updateTextStats(); return { done: true, offsetBytes }; }
       let binary = '';
@@ -301,19 +310,26 @@ window.voiceStudy = {
       current.offsetBytes += value.byteLength;
       return { done: false, offsetBytes, byteLength: value.byteLength, base64: btoa(binary) };
     } catch (error) {
-      wavExport = null; exporting = false; updateTextStats(); throw error;
-    }
+      if (wavExport === current) { wavExport = null; exporting = false; updateTextStats(); }
+      throw error;
+    } finally { current.reading = false; }
   },
   async cancelWavExport() {
-    const current = wavExport; wavExport = null; exporting = false;
-    await current?.iterator.return(); updateTextStats();
+    const current = wavExport;
+    if (!current) return;
+    wavExport = null;
+    try { await current.iterator.return(); }
+    finally { exporting = false; updateTextStats(); }
   },
   async exportWavBase64() {
     if (busy || exporting) throw new Error('Wait for the reading or export to finish before exporting.');
     if (audioSeconds > 60) throw new Error('Use the Save control to stream a long reading to disk.');
-    const bytes = new Uint8Array(await (await store.blob()).arrayBuffer());
-    let binary = '';
-    for (let start = 0; start < bytes.length; start += 8192) binary += String.fromCharCode(...bytes.subarray(start, start + 8192));
-    return btoa(binary);
+    exporting = true; updateTextStats();
+    try {
+      const bytes = new Uint8Array(await (await store.blob()).arrayBuffer());
+      let binary = '';
+      for (let start = 0; start < bytes.length; start += 8192) binary += String.fromCharCode(...bytes.subarray(start, start + 8192));
+      return btoa(binary);
+    } finally { exporting = false; updateTextStats(); }
   },
 };
