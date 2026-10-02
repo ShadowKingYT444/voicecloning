@@ -9,6 +9,10 @@ Browser inference is technically possible, but this repository has not demonstra
 ## Start here, future agent
 
 For the current browser task, start with [the cloud handoff](docs/CLOUD_BROWSER_HANDOFF.md).
+The [October 2 tested continuation](docs/BROWSER_MVP_20261002.md) includes
+guarded browser controls, lossless embedding probes and a long-export harness.
+Full speech, accepted fitted voices, watermark parity and the memory target
+remain pending; the lossless reader is opt-in.
 
 1. Read [the experiment handoff](docs/EXPERIMENT_HANDOFF.md), then [current status](artifacts/nano_lab/WORK_STATUS.md).
 2. Read [resource constraints](scripts/nano_lab/AGENTS.md). The original machine suffered memory pressure. Run one model workload at a time through `bounded_job.py`.
