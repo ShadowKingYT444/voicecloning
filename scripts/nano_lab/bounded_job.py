@@ -35,13 +35,21 @@ def single_process_job(command, memory_mib, high_mib, lock, report_path=None):
     env={**os.environ,'OMP_NUM_THREADS':'2','MKL_NUM_THREADS':'2',
          'OPENBLAS_NUM_THREADS':'2','NUMEXPR_MAX_THREADS':'2',
          'TOKENIZERS_PARALLELISM':'false','MALLOC_ARENA_MAX':'2'}
-    if not Path(command[0]).name.startswith('python'):
-        raise SystemExit('Single-process backend requires a Python workload for in-process RSS enforcement')
+    executable=Path(command[0]).name
+    if not (executable.startswith('python') or executable=='node'):
+        raise SystemExit('Single-process backend requires Python or restricted Node component checks')
     read_fd,write_fd=os.pipe()
     os.set_blocking(read_fd,False)
     env.update(NANO_GUARD_REPORT_FD=str(write_fd),NANO_GUARD_HIGH_MIB=str(high_mib))
-    entry=Path(__file__).with_name('guarded_python.py')
-    guarded_command=[command[0],str(entry),*command[1:]]
+    if executable=='node':
+        # No JIT/WASM reservation or child test runners: these are CPU-only
+        # source/component checks, never ONNX, browser, or Vite model jobs.
+        entry=Path(__file__).with_name('guarded_node.mjs')
+        guarded_command=[command[0],'--jitless','--max-old-space-size=128',
+                         '--v8-pool-size=1',str(entry),*command[1:]]
+    else:
+        entry=Path(__file__).with_name('guarded_python.py')
+        guarded_command=[command[0],str(entry),*command[1:]]
     child=Path(__file__).with_name('single_process_guard.py')
     process=subprocess.Popen([sys.executable,str(child),'--memory-mib',str(memory_mib),'--',*guarded_command],
                              cwd=ROOT,env=env,start_new_session=True,pass_fds=(lock.fileno(),write_fd))

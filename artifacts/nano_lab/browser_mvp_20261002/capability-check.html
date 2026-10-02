@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Voice Study · Browser capability check</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f2f0ea;color:#26372e;font:16px/1.6 system-ui,sans-serif}
+    main{max-width:850px;margin:40px auto;padding:24px}h1{font:42px/1.15 Georgia,serif;margin:8px 0 20px}
+    .card{background:#fffdfa;border:1px solid #d5dbd2;border-radius:14px;padding:24px;margin:24px 0}
+    .eyebrow{font-size:12px;letter-spacing:.13em;text-transform:uppercase}a{color:#294f3a}
+    label{display:block;margin-bottom:8px}select,button{font:inherit;border-radius:6px;padding:10px 14px}
+    select{border:1px solid #bdc9bf;background:#fffdfa;max-width:100%}button{background:#294f3a;color:white;border:0;cursor:pointer;margin:12px 8px 0 0}
+    button:disabled{opacity:.55;cursor:wait}button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #b67a40;outline-offset:3px}
+    pre{background:#e9ece6;padding:18px;border-radius:8px;white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.6 ui-monospace,monospace}
+    .status{font-weight:600}small{display:block;color:#526353} @media(max-width:500px){main{margin:8px auto;padding:18px}h1{font-size:32px}.card{padding:18px}}
+  </style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Voice Study · model-free diagnostic</p>
+  <h1>Check this browser before preparing a voice.</h1>
+  <p>This checks the actual browser's WebGPU adapter, FP16 shader support, limits, and WebAssembly JSPI. It downloads no model or reference audio and runs no inference.</p>
+  <section class="card" aria-label="Capability controls">
+    <label for="power">Adapter preference</label>
+    <select id="power"><option value="low-power">Low power (reader default)</option><option value="high-performance">High performance</option></select>
+    <div><button id="check" type="button">Check browser</button><button id="save" type="button" disabled>Save report</button></div>
+    <p id="status" class="status" role="status" aria-live="polite">Ready to check. No model will load.</p>
+    <small>A passing capability check still needs guarded inference and audio validation. Unknown fallback status does not prove hardware support.</small>
+  </section>
+  <pre id="report" aria-label="Capability report">Press Check browser to collect a report.</pre>
+  <p>This standalone diagnostic contains no model or reference assets.</p>
+</main>
+<script type="module">
+// Model-free diagnostic shared by the visible page and CPU component tests.
+// No runtime import, fetch, device request, or GPU buffer allocation.
+const LIMIT_NAMES = Object.freeze([
+  'maxBufferSize', 'maxStorageBufferBindingSize', 'maxUniformBufferBindingSize',
+  'maxStorageBuffersPerShaderStage', 'maxComputeWorkgroupStorageSize',
+  'maxComputeInvocationsPerWorkgroup', 'maxComputeWorkgroupSizeX',
+  'maxComputeWorkgroupSizeY', 'maxComputeWorkgroupSizeZ',
+  'maxComputeWorkgroupsPerDimension', 'maxBindGroups', 'maxBindingsPerBindGroup',
+]);
+
+async function checkCapabilities({
+  scope = globalThis, powerPreference = 'low-power',
+} = {}) {
+  if (!['low-power', 'high-performance'].includes(powerPreference)) {
+    throw new TypeError('Select low-power or high-performance.');
+  }
+  const nav = scope.navigator || {};
+  const wasm = scope.WebAssembly || {};
+  const report = {
+    schema: 'voice-study.browser-capabilities/v1',
+    checkedAtUtc: new Date().toISOString(),
+    userAgent: nav.userAgent || null,
+    powerPreference,
+    secureContext: scope.isSecureContext === true,
+    crossOriginIsolated: scope.crossOriginIsolated === true,
+    runtime: {
+      target: 'onnxruntime-web@1.30.0 / JSPI / WebGPU / FP16',
+      webgpu: typeof nav.gpu?.requestAdapter === 'function',
+      jspiSuspending: typeof wasm.Suspending === 'function',
+      jspiPromising: typeof wasm.promising === 'function',
+      audioContext: typeof (scope.AudioContext || scope.webkitAudioContext) === 'function',
+      indexedDB: !!scope.indexedDB,
+      filePicker: typeof scope.showSaveFilePicker === 'function',
+      userAgentMemoryApi: typeof scope.performance?.measureUserAgentSpecificMemory === 'function',
+    },
+    adapter: null, capabilityPrerequisitesPassed: false, hardwareAdapterVerified: false,
+    modelsDownloaded: false, inferenceRun: false, gpuDeviceRequested: false,
+    limitations: [
+      'Capability checks do not establish ONNX operator support, inference parity, memory, speed, or voice quality.',
+      'Unknown fallback status or redacted identity does not establish a hardware adapter.',
+      'Adapter limits are capabilities, not measurements of allocated or physical GPU memory.',
+    ],
+  };
+  if (!report.runtime.webgpu) return report;
+  try {
+    const adapter = await nav.gpu.requestAdapter({ powerPreference });
+    if (!adapter) { report.adapterError = 'No adapter was returned.'; return report; }
+    let info = adapter.info || {};
+    if (!Object.values(info).some(Boolean) && typeof adapter.requestAdapterInfo === 'function') {
+      info = await adapter.requestAdapterInfo();
+    }
+    const identity = Object.fromEntries(['vendor', 'architecture', 'device', 'description']
+      .map((name) => [name, typeof info[name] === 'string' ? info[name] : null]));
+    const fallback = typeof info.isFallbackAdapter === 'boolean' ? info.isFallbackAdapter
+      : typeof adapter.isFallbackAdapter === 'boolean' ? adapter.isFallbackAdapter : null;
+    const features = [...adapter.features].map(String).sort();
+    const limits = Object.fromEntries(LIMIT_NAMES.map((name) => [name,
+      Number.isFinite(adapter.limits?.[name]) ? adapter.limits[name] : null]));
+    const label = Object.values(identity).filter(Boolean).join(' ').toLowerCase();
+    const software = ['swiftshader', 'llvmpipe', 'lavapipe', 'softpipe', 'software renderer', 'software adapter']
+      .some((marker) => label.includes(marker));
+    report.adapter = { identity, isFallbackAdapter: fallback,
+      fallbackStatusSource: typeof info.isFallbackAdapter === 'boolean' ? 'GPUAdapterInfo.isFallbackAdapter'
+        : typeof adapter.isFallbackAdapter === 'boolean' ? 'GPUAdapter.isFallbackAdapter' : 'unknown',
+      knownSoftwareLabel: software, shaderF16: features.includes('shader-f16'), features, limits };
+    report.capabilityPrerequisitesPassed = report.secureContext && report.runtime.jspiSuspending
+      && report.runtime.jspiPromising && report.runtime.audioContext && report.runtime.indexedDB
+      && report.adapter.shaderF16;
+    report.hardwareAdapterVerified = fallback === false && !software && Object.values(identity).some(Boolean);
+  } catch (error) { report.adapterError = error?.message || String(error); }
+  return report;
+}
+
+  const report = document.getElementById('report');
+  const status = document.getElementById('status');
+  const button = document.getElementById('check');
+  const save = document.getElementById('save');
+  let latest;
+  async function check(options = {}) {
+    button.disabled = true; save.disabled = true; status.textContent = 'Checking browser features and adapter…';
+    try {
+      latest = await checkCapabilities({ powerPreference: options.powerPreference || document.getElementById('power').value });
+      report.textContent = JSON.stringify(latest, null, 2);
+      status.textContent = latest.capabilityPrerequisitesPassed
+        ? latest.hardwareAdapterVerified ? 'Runtime prerequisites present; hardware adapter identified. Inference is untested.'
+          : 'Runtime prerequisites present; hardware status is unverified. Inference is untested.'
+        : 'Runtime prerequisites are missing. See the report before loading models.';
+      save.disabled = false; return latest;
+    } catch (error) { status.textContent = `Check failed: ${error.message}`; throw error; }
+    finally { button.disabled = false; }
+  }
+  button.addEventListener('click', () => check().catch(() => {}));
+  save.addEventListener('click', () => {
+    const url = URL.createObjectURL(new Blob([JSON.stringify(latest, null, 2) + '\n'], { type: 'application/json' }));
+    const link = document.createElement('a'); link.href = url; link.download = 'voice-study-browser-capabilities.json'; link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+  window.voiceCapabilities = { check, snapshot: () => latest || null };
+</script>
+</body>
+</html>
