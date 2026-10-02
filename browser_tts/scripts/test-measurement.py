@@ -7,6 +7,7 @@ import struct
 import tempfile
 import time
 import unittest
+from unittest import mock
 
 spec = importlib.util.spec_from_file_location('browser_measurement', Path(__file__).with_name('measure-browser.py'))
 runner = importlib.util.module_from_spec(spec); spec.loader.exec_module(runner)
@@ -19,6 +20,16 @@ def wav(frames=24000):
 
 
 class ExportTests(unittest.TestCase):
+    def test_hardware_assertions_do_not_force_backend_flags(self):
+        with mock.patch('sys.argv', ['measure-browser.py', '--require-hardware-webgpu']):
+            args = runner.parse_args()
+        self.assertTrue(args.require_hardware_webgpu)
+        self.assertFalse(args.hardware_webgpu)
+        flags = runner.chrome_arguments(Path('/opt/chrome'), Path('/tmp/isolated-profile'), True,
+                                        hardware_webgpu=args.hardware_webgpu)
+        self.assertNotIn('--enable-unsafe-webgpu', flags)
+        self.assertNotIn('--use-angle=vulkan', flags)
+
     def test_heap_scopes_and_missing_targets_stay_explicit(self):
         fake = object.__new__(runner.BrowserMeasurement)
         fake.page_session = 'page'; fake.worker_sessions = {'worker': {'type': 'worker', 'targetId': 'w'}}
