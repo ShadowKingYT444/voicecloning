@@ -1220,7 +1220,6 @@ def chrome_arguments(chrome: Path, profile: Path, headless: bool, ui_only: bool 
         "--disable-sync",
         "--disable-background-networking",
         "--disable-component-update",
-        "--enable-unsafe-webgpu",
     ]
     if headless:
         args.append("--headless" if headless_shell else "--headless=new")
@@ -1234,7 +1233,7 @@ def chrome_arguments(chrome: Path, profile: Path, headless: bool, ui_only: bool 
     if hardware_webgpu:
         # Chrome's Linux headless WebGPU recipe uses Vulkan. Keep these flags
         # opt-in so the ordinary browser measurement retains its normal setup.
-        args.extend(("--use-angle=vulkan", "--enable-features=Vulkan", "--disable-vulkan-surface"))
+        args.extend(("--use-angle=vulkan", "--enable-features=Vulkan", "--disable-vulkan-surface", "--enable-unsafe-webgpu"))
     args.append("about:blank")
     return args
 
@@ -1261,6 +1260,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--nvidia-smi", action="store_true", help="Sample nvidia-smi compute-app memory separately when available.")
     parser.add_argument("--headed", action="store_true", help="Use a visible Chrome window instead of headless Chrome.")
     parser.add_argument("--hardware-webgpu", action="store_true", help="Use Chrome's Linux Vulkan WebGPU flags and require a non-fallback adapter with shader-f16.")
+    parser.add_argument('--require-hardware-webgpu', action='store_true', help='Require an identified non-fallback FP16 adapter without changing GPU backend or unsafe-WebGPU flags.')
     parser.add_argument('--power-preference', choices=('low-power', 'high-performance'), default='low-power', help='WebGPU adapter preference. Reported identity decides which GPU was actually selected.')
     parser.add_argument("--ui-only", action="store_true", help="Capture rendered UI and check the missing-state retry path. Do not load models or synthesize speech.")
     parser.add_argument("--adapter-only", action="store_true", help="Check the WebGPU adapter without preparing a model or synthesizing speech. This component check is not an inference benchmark.")
@@ -1277,6 +1277,8 @@ def parse_args() -> argparse.Namespace:
         parser.error("--model-base applies only to full model measurements, not --ui-only.")
     if args.ui_only and args.hardware_webgpu:
         parser.error("--hardware-webgpu applies only to full model measurements, not --ui-only.")
+    if args.ui_only and args.require_hardware_webgpu:
+        parser.error('--require-hardware-webgpu does not apply to UI-only checks.')
     if args.adapter_only and (args.ui_only or args.embedding_manifest or args.model_base):
         parser.error('--adapter-only cannot be combined with UI, embedding, or model-loading options.')
     if args.embedding_manifest and args.lossless_embedding_manifest:
@@ -1331,6 +1333,7 @@ def main() -> int:
             "modelBaseUrl": args.model_base,
             "resolvedModelBaseUrl": args.resolved_model_base,
             "hardwareWebgpuDiagnostic": args.hardware_webgpu,
+            'requireHardwareWebgpu': args.require_hardware_webgpu,
             "nvidiaSmiEnabled": args.nvidia_smi,
             "uiOnly": args.ui_only,
         },
@@ -1631,7 +1634,7 @@ def main() -> int:
             if not isinstance(adapter, dict) or not adapter.get("available"):
                 raise RunnerError(f"WebGPU adapter check failed: {adapter}")
             report["app"]["webgpuAdapter"] = adapter
-            if args.hardware_webgpu:
+            if args.hardware_webgpu or args.require_hardware_webgpu:
                 report["app"]["hardwareWebgpuPreflight"] = {
                     "adapterAssertions": adapter.get("hardwareAssertions", {}),
                     "passed": bool(adapter.get("hardwareAssertionsPassed")),
@@ -1642,7 +1645,7 @@ def main() -> int:
                 }
                 write_json(report_path, report)
                 if not adapter.get("hardwareAssertionsPassed"):
-                    raise RunnerError("--hardware-webgpu requires a non-fallback adapter without a known software-renderer label and with shader-f16.")
+                    raise RunnerError("Hardware verification requires a non-fallback adapter without a known software-renderer label and with shader-f16.")
 
             if args.adapter_only:
                 report['app']['adapterOnly'] = True
@@ -1701,7 +1704,7 @@ def main() -> int:
                 measurement.wait_sample(args.sample_seconds, "load")
             measurement.finish_stage("load")
             report["app"]["loadedSnapshot"] = load_value.get("snapshot")
-            if args.hardware_webgpu:
+            if args.hardware_webgpu or args.require_hardware_webgpu:
                 gpu_load_snapshot = measurement.gpu_snapshot()
                 report["app"]["gpuBufferInstrumentationAfterLoad"] = gpu_load_snapshot
                 worker_adapters = [adapter_row
