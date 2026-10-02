@@ -285,6 +285,8 @@ export async function createGraph(ort, name, outputLocations = {}, options = {})
   }
 
   assertJspiSupport(options.webAssembly);
+  const executionProvider = options.executionProvider ?? 'webgpu';
+  if (!['webgpu', 'wasm'].includes(executionProvider)) throw new Error('Only the explicit WebGPU or WASM provider is supported.');
   const asset = ASSETS[name];
   const fetchImpl = options.fetchImpl || globalThis.fetch;
   if (typeof fetchImpl !== 'function') throw new Error('Fetch is unavailable in this worker.');
@@ -296,7 +298,7 @@ export async function createGraph(ort, name, outputLocations = {}, options = {})
   ]);
 
   return ort.InferenceSession.create(graph, {
-    executionProviders: ['webgpu'],
+    executionProviders: [executionProvider],
     graphOptimizationLevel: 'all',
     externalData: [{ path: asset.externalPath, data: externalData }],
     preferredOutputLocation: outputLocations,

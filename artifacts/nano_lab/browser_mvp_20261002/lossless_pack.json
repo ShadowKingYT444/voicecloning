@@ -1,0 +1,9 @@
+{
+  "manifest_sha256": "a244131d73e89e0b39e06522535eb1267340ff7c27306290f7ec4cca890198da",
+  "shard_bytes": 87304704,
+  "manifest_bytes": 129432,
+  "shards": 889,
+  "source_data_sha256": "bcd7b35ae4f206932e2491cb60b42ebb80f6d8facfdb53ba7d7449ad00a3237b",
+  "bitwise_copy": true,
+  "inference_or_quality_verified": false
+}

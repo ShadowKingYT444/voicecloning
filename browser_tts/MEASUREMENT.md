@@ -8,6 +8,13 @@ WAVs with SHA-256 hashes. The JSON report has timestamps, stage samples,
 process IDs, text, seed, result chunks, and app metrics. A JSONL file keeps a
 sample record on disk during the run.
 
+The October 2 continuation adds bounded long-WAV transfer, `--full-paper`,
+opt-in `--lossless-embedding-manifest`, and separate page/worker V8 heap samples.
+Use `--require-hardware-webgpu` to require an identified non-fallback FP16
+adapter without changing backend flags. Ordinary launches do not force unsafe
+WebGPU. Read [the tested cloud handoff](../docs/BROWSER_MVP_20261002.md) for
+evidence, exact asset recovery and unresolved speech/watermark gates.
+
 The runner does not start or stop Vite. Keep the existing app server running on
 `http://127.0.0.1:4187/`. The runner rejects another host or port. It launches
 Chrome with a new temporary profile, then removes that profile and only the

@@ -1,0 +1,221 @@
+# Cloud browser MVP continuation, 2026-10-02
+
+Branch: `codex/browser-streaming-mvp-20261002`. Base:
+`09ba969b28b8856c87d74e4c83aafad8843990e1` (`work`, same as remote `main`).
+Draft: https://github.com/ShadowKingYT444/voicecloning/pull/1.
+Work stops no later than 2026-10-02 10:42 UTC. Work/Cloud only; the user's
+computer is excluded. No training, paid compute, credential creation, or public
+deployment is authorized.
+
+## Recovery and voice boundary
+
+Ten browser files were restored from the pinned public conversion and verified:
+395,880,313 bytes (377.54 MiB), excluding voice state and runtime assets.
+The downloader now also verifies and stages the conversion's 1,087-byte
+`LICENSE` and 246-byte `NOTICE.md` from its pinned SHA256SUMS. Copies are retained
+under `browser_tts/public/licenses/chatterbox-nano-ONNX/` for builds without
+locally restored model weights. This adds 1,333 notice bytes, not model weights.
+The selected generated reference and state match their documented hashes:
+
+- Reference: `67f94a868976b22a47bce8fd00a873d4c5b7085ba6eedd698f8a898a26ce76c0`.
+- State, 331,200 bytes: `6f56c0dd844ecc038e5b60debff22d1e16b44c9d13386d0f7a91156bfca1b38e`.
+
+This preserves those **input artifacts**, not a demonstrated accepted voice.
+The community Nano preset uses a generated 3.52-second reference, CPU-exported
+base encoder conditioning, and no folded local fitted adapter. Terry praised
+voices on October 2, but the accepted sample/profile/seed/adapter has not been
+identified. No browser output exists to compare to that feedback.
+
+The tracked references and profile JSONs are present. Historical fitted adapters,
+conditioning/donor caches, fitted stage weights and most listening WAVs are
+absent. Examples include `adapter_aligned_all_attn.pt`,
+`decoder_embedding_fit/conditionals.pt`, `decoder_attention_fit/best_attention.pt`,
+and `t3_reference_matrix_caches/prompt.conds.pt`. The per-profile inventory is
+[fitted-assets.json](../artifacts/nano_lab/browser_mvp_20261002/fitted-assets.json).
+These profiles are experimental, not identified accepted controls. Authorized
+Git assets do not contain their excluded binary inputs. Public base downloads do
+not recreate them. Recovering them needs an existing authorized asset store;
+do not request the excluded laptop or fit replacement adapters.
+
+`browser_cpu_components_20261002/RESULTS.md` from task
+`01a0fb43-45e0-7072-9546-83117adf801a` is absent here. The reported earlier Python
+158.53 → 45.77 MiB result is historical, not reproduced by this continuation.
+Q4 provenance reports are tracked, but Q4 binary candidates remain absent.
+
+## Browser capability evidence
+
+This Codex executor has Chromium and no visible GPU devices. Its systemd user
+manager is offline and cgroup v2 is read-only. Browser workloads cannot run here
+through the required process-tree guard.
+
+Separately, the parent reported a live Work-browser visit to
+`https://webgpureport.org/`: WebGPU appeared disabled, no fallback adapter was
+supported, and rgba16float canvas support was absent. That observation concerns
+the separate browser, not this executor. It does not authorize changing browser
+security or GPU flags. WGSL language features alone do not establish an adapter.
+
+`/capabilities.html` checks actual adapter identity/fallback status, `shader-f16`,
+limits, JSPI and browser APIs without model/reference fetches, device requests or
+inference. A standalone copy is in
+[capability-check.html](../artifacts/nano_lab/browser_mvp_20261002/capability-check.html).
+No native private preview is exposed here. Sites publishing provisions a source
+write credential, which conflicts with this task's constraint; no Site was
+created. GitHub Actions provides an authorized cloud-only browser test route.
+
+## Optional lossless embedding runtime
+
+The worker can replace the 87,304,704-byte FP16 embedding ONNX session with
+independently hash-verified 64-row FP16 shards. It preserves the exact graph's
+hybrid text/speech-tail lookup and FP16-to-FP32 conversion. The manifest itself
+is pinned, so shard hashes cannot be replaced by an arbitrary same-origin
+manifest. The LRU holds at most 4 MiB of shard ArrayBuffers; output tensors,
+temporary response Blobs, the browser HTTP cache, other graphs and runtime
+allocations are additional. This cache bound is not a browser memory measurement.
+
+No quantization, sampling change, fitted adapter or default promotion is applied.
+The visible Prepare control still selects the full FP16 embedding ONNX session.
+Only an explicit `losslessEmbeddingManifestUrl` selects the 4 MiB shard cache.
+Package bytes are unchanged for the FP16 tables, plus 129,432 bytes of manifest
+metadata and HTTP/file overhead. Random shard requests may hurt TTFA. Measure
+that tradeoff rather than inferring a speedup from the smaller resident cache.
+
+Generate and verify serially from the repository root:
+
+```bash
+python3 scripts/nano_lab/bounded_job.py --backend single-process --max-memory-mib 640 -- \
+  python3 browser_tts/scripts/pack-lossless-embeddings.py
+python3 scripts/nano_lab/bounded_job.py --backend single-process --small-job -- \
+  .venv-browser-cpu/bin/python browser_tts/scripts/verify-lossless-embeddings.py \
+  --report artifacts/nano_lab/browser_mvp_20261002/lossless_cpu.json
+```
+
+The verifier needs `onnxruntime==1.29.0` and `numpy==1.26.4`. It compares every
+text and speech row to CPU ONNX: **43,652,352 Float32 values matched bitwise**.
+Its measured process peak RSS is 148.73 MiB, including the CPU ONNX session.
+That is a component comparison, not an embedding-only streaming-memory benchmark
+and not browser/audio parity.
+
+## Playback and measurement harness
+
+The retained fixed voice state still omits the reference encoder. Playback keeps
+two passage credits. Snapshots now retain the maximum queue and requested audio
+buffer bytes, generation completion and playback completion separately. TTFA is
+request-to-first-scheduled-WebAudio-start and includes storage/context preparation;
+it excludes model loading. Timeline gaps are scheduled gaps, not audible-gap
+measurements. Listen at boundaries before making a continuity claim.
+
+The export API returns at most 65,536 PCM bytes per call. It awaits disk/browser
+backpressure and rejects missing, changed, duplicated, reordered or truncated
+data. The harness streams long WAVs to disk, checks exact header/payload size,
+and records hashes. It no longer transfers the entire paper as one base64 string.
+The visible Save flow and legacy short export also hold the reading lock through
+the file picker and writes, releasing it in `finally`. Programmatic cancellation
+cannot unlock a visible Save. A Web Locks session lease protects live tabs;
+startup cleanup removes only abandoned UUID/passage records in the app's own
+IndexedDB store. Unknown keys remain untouched. Cleanup is skipped when Web
+Locks is unavailable; the retention status is recorded in the snapshot.
+
+On a cloud browser host with the existing enforceable systemd guard, rebuild and
+serve `dist`, then run:
+
+```bash
+python3 scripts/nano_lab/bounded_job.py --max-memory-mib 640 -- npm --prefix browser_tts run build:low-copy
+npm --prefix browser_tts run preview
+python3 scripts/nano_lab/bounded_job.py -- \
+  python3 browser_tts/scripts/measure-browser.py --chrome chromium \
+  --require-hardware-webgpu --power-preference low-power --model-base /models/chatterbox-nano-browser/ \
+  --full-paper --timeout-seconds 3600 --full-reading-timeout-seconds 3000 \
+  --output-dir artifacts/nano_lab/browser_measurements/cloud_fp16_full
+```
+
+Repeat in a separate run with the same text/seed/provider and
+`--lossless-embedding-manifest /experiments/embedding_lossless/manifest.json`.
+The new mode is opt-in and unpromoted. Q4 remains a separate experiment.
+`--require-hardware-webgpu` verifies adapter identity, non-fallback status and
+FP16 without forcing GPU/backend flags. The older `--hardware-webgpu` flag
+remains an explicit backend diagnostic for a separately permitted host; this
+continuation did not run that mode. Ordinary/UI-only launches no longer inherit
+its `--enable-unsafe-webgpu` flag.
+
+Report package bytes, CPU Python RSS, absolute browser RSS/PSS, incremental PSS
+above clean Chrome, JS heap, requested GPU buffers and physical GPU evidence
+separately. GPU descriptor sizes are not VRAM residency. The clean profile does
+not flush OS/HTTP caches. Cold load, first request, warm request, playback and
+export are separate stages. This harness does not perform a word/listening audit.
+JS heap samples use CDP `Runtime.getHeapUsage` separately for the page and
+attached workers. Missing targets stay unknown. Optional backing-storage and
+embedder-heap fields remain separate; the V8 used-heap sum does not establish
+WASM memory, all ArrayBuffer residency or total browser memory.
+
+## Cloud CPU browser controls
+
+The draft includes a serial, 15-minute GitHub Actions workflow on the standard
+public-repository Ubuntu runner. It establishes the existing systemd guard,
+then runs guarded components, build and Chromium tests. Its optional CPU/WASM
+diagnostic downloads only the pinned 87,306,224-byte embedding graph/data, not
+the language model, decoder, encoder or reference. Those assets stay on the
+ephemeral runner and are not uploaded as evidence.
+The real capability page is tested without API stubs. Other integration tests
+replace the model worker with **synthetic tones**, exercise failure/retry,
+stop/restart, full-paper two-credit playback and >60-second streamed export,
+and capture desktop/mobile screenshots. Their metrics describe fixture control
+flow, never TTS speed, voice quality, speech accuracy or the memory target.
+
+The initial run at commit `82b7d8f` passed all three browser checks:
+https://github.com/ShadowKingYT444/voicecloning/actions/runs/36978713257.
+Actual Chromium 153.0.8010.12 exposed both JSPI APIs, but `requestAdapter`
+returned null. Its model-free fixture completed 215 passages, 86 seconds of
+synthetic tones, with a maximum two-passage queue. Streamed WAV export was
+4,128,044 bytes, SHA-256
+`d0e9e065c7874602d036d9641e2719eb5ebd5f2838d65589981843b06a1328e4`.
+The guard sampled 1,258.03 MiB aggregate RSS for the whole npm/Playwright/Vite/
+Chromium job; this is neither isolated browser RSS nor Nano memory. JSON and
+selected screenshots are retained under `artifacts/nano_lab/browser_mvp_20261002/ci_first/`.
+
+`/wasm-component.html` is a manually started, finite embedding-only diagnostic.
+It explicitly selects CPU/WASM, verifies the same pinned assets, and compares
+three hybrid lookup inputs with the lossless reader. It does not synthesize
+speech, establish full-model CPU compatibility or integrate a runtime fallback.
+The first real component run caught an invalid native `fetch` receiver after
+the ONNX WASM session loaded. That failure is retained in `ci_wasm_failure/`.
+The reader now binds fetch to its Window/Worker global. The guarded rerun
+https://github.com/ShadowKingYT444/voicecloning/actions/runs/36980252819
+passed all five browser checks. Actual WASM ONNX outputs and lossless rows
+matched bitwise for 5,376 Float32 values across three hybrid inputs. This is
+a finite component check, not all-row browser proof or full-model speech.
+The separate UI-only Python harness measured its owned Chromium process tree
+and V8 heap: rendered-mobile peak RSS 1,275.652 MiB, PSS 503.879 MiB and observed
+JS used heap 1.571 MiB. It ran no model inference. Those scopes illustrate why
+model package/cache bytes cannot stand in for browser memory.
+
+## Watermark release gate
+
+Native Nano uses `ChatterboxTurboTTS(nano=True)` and applies Perth after S3Gen
+decode (`vendor/chatterbox/src/chatterbox/tts_turbo.py`). The browser currently
+has no application-layer Perth step. Preservation within the pinned community
+decoder graph has not been demonstrated. No watermark stripping or licensing
+violation is inferred from that uncertainty. The prototype labels browser WAVs
+as research output, exposes `releaseReady: false` and the unverified watermark
+status in snapshots/export metadata, and names visible saves `*-research.wav`.
+Do not promote these as native-equivalent release audio until the actual graph
+and end-to-end watermark detection/preservation have been verified. No browser
+Perth replacement or invented watermark was added. Official model information:
+https://huggingface.co/ResembleAI/chatterbox-nano.
+
+The current Work browser cannot run the WebGPU-only model path. A CPU/WASM or
+cloud-service inference fallback has not been verified or integrated; the UI
+tests do not create one. No architecture change is justified by fixture timing.
+
+## Remaining speech gates
+
+1. A permitted cloud browser with JSPI and a verified non-fallback FP16 adapter,
+   or a separately validated CPU/WASM/service provider with enforceable guard.
+2. Matched first/warm generation with actual WAVs/tokens and process/JS/GPU
+   traces; include cold load and export peaks.
+3. Independent transcripts, raw/controlled listening and fixed-reference
+   identity checks. Identify the praised voice and recover its exact artifacts.
+4. FP16 versus lossless browser logits/tokens/audio parity and measured tradeoffs.
+5. Real full-paper continuity, complete saved audio, stop/restart and memory
+   drift under actual inference. Synthetic integration cannot satisfy these.
+
+No voice is promoted and no target performance is claimed.

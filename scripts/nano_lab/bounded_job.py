@@ -35,13 +35,22 @@ def single_process_job(command, memory_mib, high_mib, lock, report_path=None):
     env={**os.environ,'OMP_NUM_THREADS':'2','MKL_NUM_THREADS':'2',
          'OPENBLAS_NUM_THREADS':'2','NUMEXPR_MAX_THREADS':'2',
          'TOKENIZERS_PARALLELISM':'false','MALLOC_ARENA_MAX':'2'}
-    if not Path(command[0]).name.startswith('python'):
-        raise SystemExit('Single-process backend requires a Python workload for in-process RSS enforcement')
+    executable=Path(command[0]).name
+    if not (executable.startswith('python') or executable=='node'):
+        raise SystemExit('Single-process backend requires Python or restricted Node component checks')
     read_fd,write_fd=os.pipe()
     os.set_blocking(read_fd,False)
     env.update(NANO_GUARD_REPORT_FD=str(write_fd),NANO_GUARD_HIGH_MIB=str(high_mib))
-    entry=Path(__file__).with_name('guarded_python.py')
-    guarded_command=[command[0],str(entry),*command[1:]]
+    if executable=='node':
+        # No JIT/WASM reservation or child test runners: these are CPU-only
+        # source/component checks, never ONNX, browser, or Vite model jobs.
+        entry=Path(__file__).with_name('guarded_node.mjs')
+        env['UV_THREADPOOL_SIZE']='2'
+        guarded_command=[command[0],'--jitless','--max-old-space-size=64','--max-semi-space-size=4',
+                         '--v8-pool-size=1',str(entry),*command[1:]]
+    else:
+        entry=Path(__file__).with_name('guarded_python.py')
+        guarded_command=[command[0],str(entry),*command[1:]]
     child=Path(__file__).with_name('single_process_guard.py')
     process=subprocess.Popen([sys.executable,str(child),'--memory-mib',str(memory_mib),'--',*guarded_command],
                              cwd=ROOT,env=env,start_new_session=True,pass_fds=(lock.fileno(),write_fd))
@@ -128,6 +137,7 @@ def main():
                  '--setenv=TOKENIZERS_PARALLELISM=false',*args.command]
         print(f'MemoryMax={memory_mib}MiB, MemoryHigh={high_mib}MiB, no swap, 2 CPU cores, one job; desktop reserve=4GiB',flush=True)
         process=subprocess.Popen(command)
+        started=time.monotonic(); peak_rss=0.; samples=0; reason=None
         def interrupted(signum,frame):
             raise KeyboardInterrupt
         signal.signal(signal.SIGTERM,interrupted)
@@ -137,11 +147,15 @@ def main():
                 if available_mib()<4096:
                     print('Stopping job: desktop headroom fell below 4 GiB',flush=True)
                     stopped_for_resources=True
+                    reason='headroom_below_4096_mib'
                     subprocess.run(['systemctl','--user','stop',unit],check=False)
                     break
-                if job_rss_mib(unit)>memory_mib:
+                rss=job_rss_mib(unit)
+                if rss>0: samples+=1; peak_rss=max(peak_rss,rss)
+                if rss>memory_mib:
                     print(f'Stopping job: aggregate process RSS exceeded {memory_mib} MiB',flush=True)
                     stopped_for_resources=True
+                    reason='aggregate_rss_exceeded_hard_limit'
                     subprocess.run(['systemctl','--user','stop',unit],check=False)
                     break
                 time.sleep(1)
@@ -151,5 +165,12 @@ def main():
             if process.poll() is None:
                 subprocess.run(['systemctl','--user','stop',unit],check=False)
                 process.wait()
+            if args.guard_report:
+                args.guard_report.parent.mkdir(parents=True,exist_ok=True)
+                args.guard_report.write_text(json.dumps(dict(backend='systemd-cgroup',memory_max_mib=memory_mib,
+                    memory_high_mib=high_mib,memory_swap_max_bytes=0,cpu_quota_percent=200,desktop_reserve_mib=4096,
+                    sample_count=samples,sampled_peak_process_tree_rss_mib=peak_rss if samples else None,
+                    measurement_source='sampled_cgroup_processes_proc_status',stopped_reason=reason,
+                    wrapper_returncode=process.returncode,elapsed_s=time.monotonic()-started),indent=2)+'\n')
 
 if __name__=='__main__':main()

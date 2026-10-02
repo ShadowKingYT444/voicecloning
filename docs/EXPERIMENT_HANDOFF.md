@@ -1,5 +1,13 @@
 # Voice cloning experiment handoff
 
+2026-10-02 Cloud continuation: read
+[the tested browser MVP handoff](BROWSER_MVP_20261002.md). Guarded Chromium
+controls, long synthetic export and real CPU/WASM embedding probes pass.
+Lossless streamed embeddings remain opt-in. Full Nano browser speech, accepted
+fitted-voice identity, native watermark preservation and target memory are
+unverified. The default UI still needs a verified WebGPU/FP16 adapter. Missing
+historical fitted binaries have not been recreated or retrained.
+
 For the current browser task and transfer to a 16 GiB cloud VM, read
 [CLOUD_BROWSER_HANDOFF.md](CLOUD_BROWSER_HANDOFF.md) first. Local experiments
 stopped for this handoff. The latest adapter checks, logit validation, and

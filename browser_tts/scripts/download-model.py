@@ -66,6 +66,7 @@ def main():
         expected[path.lstrip('*')] = digest
     names = ['speech_encoder_q4f16'] if args.encoder_only else ['embed_tokens_fp16'] if args.embedding_only else ['embed_tokens_fp16', 'language_model_q4f16', 'conditional_decoder_q4'] if args.runtime_only else ['embed_tokens_fp16', 'speech_encoder_q4f16', 'language_model_q4f16', 'conditional_decoder_q4']
     paths = [f'onnx/{name}.onnx{suffix}' for name in names for suffix in ['', '_data']]
+    paths += ['LICENSE', 'NOTICE.md']
     if not args.encoder_only and not args.embedding_only:
         paths += ['tokenizer.json', 'tokenizer_config.json', 'config.json', 'generation_config.json']
     files = [download(path, expected[path], args.model_dir / path) for path in paths]

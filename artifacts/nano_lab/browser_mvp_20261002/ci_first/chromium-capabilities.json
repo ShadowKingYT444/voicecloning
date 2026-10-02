@@ -1,0 +1,35 @@
+{
+  "browserVersion": "153.0.8010.12",
+  "schema": "voice-study.browser-capabilities/v1",
+  "checkedAtUtc": "2026-10-02T07:28:55.518Z",
+  "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+  "powerPreference": "low-power",
+  "secureContext": true,
+  "crossOriginIsolated": false,
+  "runtime": {
+    "target": "onnxruntime-web@1.30.0 / JSPI / WebGPU / FP16",
+    "webgpu": true,
+    "jspiSuspending": true,
+    "jspiPromising": true,
+    "audioContext": true,
+    "indexedDB": true,
+    "filePicker": true,
+    "userAgentMemoryApi": false
+  },
+  "adapter": null,
+  "capabilityPrerequisitesPassed": false,
+  "hardwareAdapterVerified": false,
+  "modelsDownloaded": false,
+  "inferenceRun": false,
+  "gpuDeviceRequested": false,
+  "limitations": [
+    "Capability checks do not establish ONNX operator support, inference parity, memory, speed, or voice quality.",
+    "Unknown fallback status or redacted identity does not establish a hardware adapter.",
+    "Adapter limits are capabilities, not measurements of allocated or physical GPU memory."
+  ],
+  "adapterError": "No adapter was returned.",
+  "requests": [
+    "http://127.0.0.1:4187/capabilities.html",
+    "http://127.0.0.1:4187/capabilities.js"
+  ]
+}

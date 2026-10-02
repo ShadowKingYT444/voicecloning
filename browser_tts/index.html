@@ -59,7 +59,7 @@
               </div>
               <div class="load-progress" id="load-progress-wrap" hidden><div class="progress-track"><div id="load-progress" class="progress-value"></div></div><span id="load-progress-label"></span></div>
               <button class="button button-dark load-button" id="load-model" type="button" disabled><span>Prepare voice</span><span aria-hidden="true">↗</span></button>
-              <p class="model-footnote">The saved voice avoids loading the reference encoder. Download size is not runtime memory. Browser memory and playback still need measurement.</p>
+              <p class="model-footnote">The saved voice avoids loading the reference encoder. Download size is not runtime memory. Browser memory and playback still need measurement. <a href="/capabilities.html">Check browser capabilities</a>.</p>
             </article>
           </aside>
 
@@ -103,11 +103,12 @@
 
         <section class="experiment-note">
           <span class="note-star" aria-hidden="true">✳</span>
-          <p><strong>About this prototype.</strong> Nano decodes each complete passage before playback. The reader keeps at most two passages queued and saves audio to browser storage. The under-500-MiB target is unverified. Passage joins can change rhythm or add a pause. This quantized Nano export is a community conversion. It has not passed a broad speech-quality or browser-compatibility evaluation.</p>
+          <p><strong>About this prototype.</strong> Nano decodes each complete passage before playback. The reader keeps at most two passages queued and saves temporary audio to browser storage. Save a WAV to keep it. Abandoned recordings are cleaned up when a new reading starts in browsers supporting Web Locks. The under-500-MiB target is unverified. Passage joins can change rhythm or add a pause. This quantized Nano export is a community conversion. It has not passed a broad speech-quality or browser-compatibility evaluation.</p>
+          <p><strong>Research output.</strong> Watermark preservation in the community decoder is unverified. This app does not apply native Perth watermarking. Browser WAVs are not release-ready native equivalents.</p>
           <a href="/research.html">Read the browser research <span aria-hidden="true">↗</span></a>
         </section>
       </main>
-      <footer><span>VOICE STUDY <i>·</i> LOCAL INFERENCE</span><span>Chatterbox Nano <i>·</i> Browser experiment</span></footer>
+      <footer><span>VOICE STUDY <i>·</i> LOCAL INFERENCE</span><span>Chatterbox Nano <i>·</i> <a href="/licenses/chatterbox-nano-ONNX/NOTICE.md">Model notice</a> · <a href="/licenses/chatterbox-nano-ONNX/LICENSE">License</a></span></footer>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>

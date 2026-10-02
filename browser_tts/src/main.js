@@ -15,6 +15,9 @@ const ui = {
   download: $('download-reading'),
 };
 const store = new ReadingStore();
+const outputContract = Object.freeze({ purpose: 'research-only', releaseReady: false,
+  watermarkStatus: 'community-decoder-graph-preservation-unverified', applicationLayerWatermarkApplied: false,
+  processing: '9ms edge fade and PCM16 export; native Perth parity has not been established' });
 const localModelBase = '/models/chatterbox-nano-browser/';
 const localModelDiscovery = fetch(`${localModelBase}download_manifest.json`)
   .then(async (response) => {
@@ -29,6 +32,9 @@ let synthSeconds = 0; let audioSeconds = 0; let completed = 0; let total = 0;
 let busy = false; let receivingDone = false; let modelReady = false; let stopping = false;
 let status = 'checking'; let lastError = null; let runId = 0; let seed = 1337;
 let modelIdentity = null;
+let wavExport = null; let exporting = false;
+let maximumScheduledQueueSize = 0; let scheduledAudioBytes = 0; let maximumScheduledAudioBytes = 0;
+let playbackCompleteSeconds = null; let generationCompleteSeconds = null; let readingOutcome = null;
 let gaps = []; let chunkRecords = []; let loadWait; let readWait; let messageChain = Promise.resolve();
 
 function setStatus(text, state = '') { ui.statusText.textContent = text; ui.status.dataset.state = state; }
@@ -37,16 +43,24 @@ function passages() { return splitIntoPassages(ui.passage.value, Number(ui.chunk
 function updateTextStats() {
   ui.words.textContent = `${wordCount(ui.passage.value).toLocaleString()} words`;
   ui.chunks.textContent = `${passages().length.toLocaleString()} passages`;
-  ui.read.disabled = !modelReady || !passages().length || busy;
+  ui.read.disabled = !modelReady || !passages().length || busy || exporting;
+  ui.download.disabled = busy || exporting;
   ui.passage.disabled = busy; ui.chunkSize.disabled = busy;
 }
 function metric(id, value) { $(id).textContent = value; }
 function snapshot() {
-  return { status, error: lastError, modelReady, busy, loadSeconds, seed, modelIdentity,
-    chunks: chunkRecords.map((chunk) => ({ ...chunk })),
+  return { status, error: lastError, modelReady, busy, exporting, loadSeconds, seed, modelIdentity, readingOutcome,
+    chunks: chunkRecords.map((chunk) => ({ ...chunk })), storageRetention: store.retention ?? null, outputContract,
     metrics: { firstAudioSeconds: firstAudio, totalSynthesisSeconds: synthSeconds, audioSeconds,
       rtf: audioSeconds ? synthSeconds / audioSeconds : null, playbackGapsSeconds: [...gaps],
-      maximumPlaybackGapSeconds: Math.max(0, ...gaps), scheduledQueueSize: sources.size } };
+      maximumPlaybackGapSeconds: Math.max(0, ...gaps), scheduledQueueSize: sources.size,
+      maximumScheduledQueueSize, scheduledAudioBytes, maximumScheduledAudioBytes,
+      generationCompleteSeconds, playbackCompleteSeconds,
+      audioContextBaseLatencySeconds: audioContext?.baseLatency ?? null,
+      audioContextOutputLatencySeconds: audioContext?.outputLatency ?? null,
+      firstAudioScope: 'Request to first scheduled WebAudio start; excludes model preparation. Not physical speaker latency.',
+      playbackGapScope: 'Scheduled AudioContext timeline gaps; listening/hardware continuity is unverified.',
+      queuedAudioScope: 'Requested Float32 playback-buffer bytes; not measured JS, browser process, or GPU memory.' } };
 }
 function deferred() {
   let resolve; let reject;
@@ -96,6 +110,7 @@ function prepareVoice(options = {}) {
   localModelDiscovery.then((discoveredBase) => {
     if (worker !== loadingWorker) return;
     loadingWorker.postMessage({ type: 'load', embeddingManifestUrl: options.embeddingManifestUrl,
+      losslessEmbeddingManifestUrl: options.losslessEmbeddingManifestUrl,
       modelBaseUrl: options.modelBaseUrl ?? discoveredBase, voiceStateManifestUrl: options.voiceStateManifestUrl,
       powerPreference: options.powerPreference });
   }).catch((error) => { if (worker === loadingWorker) fail(error); });
@@ -106,8 +121,10 @@ ui.load.addEventListener('click', () => { prepareVoice().catch(() => {}); });
 async function readText(text, options = {}) {
   if (!modelReady) throw new Error('Prepare the voice before reading.');
   if (busy) throw new Error('A reading is already active.');
+  if (exporting) throw new Error('Wait for the audio export to finish before starting another reading.');
   const chunks = splitIntoPassages(text, options.chunkWords ?? Number(ui.chunkSize.value));
   if (!chunks.length) throw new Error('Enter text to read.');
+  const requestedAt = performance.now();
   busy = true; status = 'reading'; stopping = false; lastError = null; updateTextStats();
   try {
     await store.clear();
@@ -117,7 +134,9 @@ async function readText(text, options = {}) {
   readWait = deferred(); runId += 1; seed = (options.seed ?? 1337) >>> 0;
   completed = 0; total = chunks.length; firstAudio = null; synthSeconds = 0; audioSeconds = 0;
   gaps = []; chunkRecords = []; receivingDone = false;
-  runStarted = performance.now(); nextPlayTime = 0;
+  runStarted = requestedAt; nextPlayTime = 0;
+  maximumScheduledQueueSize = 0; scheduledAudioBytes = 0; maximumScheduledAudioBytes = 0;
+  playbackCompleteSeconds = null; generationCompleteSeconds = null; readingOutcome = null;
   ui.download.hidden = true; ui.stop.disabled = false; ui.readState.textContent = 'Generating the first passage…';
   ui.readingWrap.hidden = false; ui.now.hidden = true; ui.readingProgress.style.width = '0%';
   ui.readingLabel.textContent = `Passage 0 of ${total}`; ui.readingTime.textContent = '';
@@ -133,6 +152,7 @@ function cancelSources() {
   labelTimers.clear();
   for (const source of sources) { source.onended = null; try { source.stop(); } catch {} source.disconnect(); }
   sources.clear(); ui.wave.classList.remove('playing');
+  scheduledAudioBytes = 0;
 }
 function stop() {
   if (!busy) return Promise.resolve(snapshot());
@@ -158,8 +178,13 @@ async function playChunk(message) {
   if (completed > 0) gaps.push(Math.max(0, start - nextPlayTime));
   const end = start + buffer.duration; nextPlayTime = end;
   sources.add(source);
+  const bufferBytes = buffer.length * 4;
+  scheduledAudioBytes += bufferBytes;
+  maximumScheduledQueueSize = Math.max(maximumScheduledQueueSize, sources.size);
+  maximumScheduledAudioBytes = Math.max(maximumScheduledAudioBytes, scheduledAudioBytes);
   source.onended = () => {
     sources.delete(source); source.disconnect(); source.buffer = null;
+    scheduledAudioBytes -= bufferBytes;
     worker?.postMessage({ type: 'consumed', runId });
     if (receivingDone && sources.size === 0) finishReading();
   };
@@ -167,7 +192,8 @@ async function playChunk(message) {
   audioSeconds += buffer.duration; synthSeconds += message.synthesisSeconds; completed += 1;
   chunkRecords.push({ index: message.index, text: message.text, sampleRate: message.sampleRate,
     synthesisSeconds: message.synthesisSeconds, audioSeconds: buffer.duration,
-    speechTokens: message.speechTokens, truncated: message.truncated, scheduledStartSeconds: start });
+    speechTokens: message.speechTokens, truncated: message.truncated, scheduledStartSeconds: start,
+    embeddingLookup: message.embeddingLookup });
   if (firstAudio === null) {
     firstAudio = (performance.now() - runStarted) / 1000 + Math.max(0, start - audioContext.currentTime);
     metric('metric-first', fmt(firstAudio));
@@ -202,6 +228,7 @@ async function handleWorkerMessage(data) {
   } else if (data.type === 'chunk') {
     await playChunk(data);
   } else if (data.type === 'done') {
+    generationCompleteSeconds = (performance.now() - runStarted) / 1000;
     receivingDone = true;
     if (stopping || sources.size === 0) finishReading(stopping);
   } else if (data.type === 'stopped') {
@@ -211,6 +238,8 @@ async function handleWorkerMessage(data) {
   }
 }
 function finishReading(wasStopped = false) {
+  readingOutcome = wasStopped ? 'stopped' : 'complete';
+  playbackCompleteSeconds = (performance.now() - runStarted) / 1000;
   receivingDone = false; busy = false; status = 'ready'; ui.stop.disabled = true;
   ui.readState.textContent = wasStopped ? 'Stopped.' : `Finished in ${fmt((performance.now() - runStarted) / 1000)}.`;
   ui.wave.classList.remove('playing');
@@ -219,6 +248,7 @@ function finishReading(wasStopped = false) {
   readWait?.resolve(snapshot()); readWait = null;
 }
 function fail(error) {
+  readingOutcome = 'failed';
   const preparing = !!loadWait;
   lastError = error?.message || String(error); status = 'error'; busy = false; receivingDone = false;
   cancelSources(); ui.stop.disabled = true;
@@ -238,8 +268,9 @@ function showDownload() {
   ui.download.textContent = `Save ${store.count || 0} passage${store.count === 1 ? '' : 's'}`;
 }
 ui.download.addEventListener('click', async (event) => {
-  event.preventDefault(); if (busy || !store.count) return;
-  const name = store.count === total ? 'federalist-no-10-asmr.wav' : 'federalist-no-10-asmr-partial.wav';
+  event.preventDefault(); if (busy || exporting || !store.count) return;
+  exporting = true; updateTextStats();
+  const name = store.count === total ? 'federalist-no-10-asmr-research.wav' : 'federalist-no-10-asmr-partial-research.wav';
   try {
     if (window.showSaveFilePicker) {
       const file = await window.showSaveFilePicker({ suggestedName: name, types: [{ description: 'WAV audio', accept: { 'audio/wav': ['.wav'] } }] });
@@ -251,16 +282,54 @@ ui.download.addEventListener('click', async (event) => {
       setTimeout(() => URL.revokeObjectURL(url), 60000);
     }
   } catch (error) { if (error.name !== 'AbortError') setStatus(`Audio export failed: ${error.message}`, 'error'); }
+  finally { exporting = false; updateTextStats(); }
 });
 
 window.voiceStudy = {
   prepareVoice, readText, stop, snapshot,
+  openWavExport() {
+    if (busy || exporting) throw new Error('Wait for the reading or export to finish.');
+    if (!store.count) throw new Error('No generated audio is available.');
+    wavExport = { iterator: store.wavChunks(), offsetBytes: 0 };
+    exporting = true; updateTextStats();
+    return { bytes: 44 + store.frames * 2, frames: store.frames, passages: store.count,
+      sampleRate: 24000, maximumChunkBytes: 65536, outputContract };
+  },
+  async readWavExport() {
+    if (!wavExport) throw new Error('Open a WAV export before reading bytes.');
+    const current = wavExport;
+    if (current.reading) throw new Error('Wait for the previous WAV export chunk.');
+    current.reading = true;
+    try {
+      const { value, done } = await current.iterator.next();
+      if (wavExport !== current) throw new Error('The WAV export was cancelled.');
+      const offsetBytes = current.offsetBytes;
+      if (done) { wavExport = null; exporting = false; updateTextStats(); return { done: true, offsetBytes }; }
+      let binary = '';
+      for (let index = 0; index < value.length; index += 8192) binary += String.fromCharCode(...value.subarray(index, index + 8192));
+      current.offsetBytes += value.byteLength;
+      return { done: false, offsetBytes, byteLength: value.byteLength, base64: btoa(binary) };
+    } catch (error) {
+      if (wavExport === current) { wavExport = null; exporting = false; updateTextStats(); }
+      throw error;
+    } finally { current.reading = false; }
+  },
+  async cancelWavExport() {
+    const current = wavExport;
+    if (!current) return;
+    wavExport = null;
+    try { await current.iterator.return(); }
+    finally { exporting = false; updateTextStats(); }
+  },
   async exportWavBase64() {
-    if (busy) throw new Error('Wait for the reading to finish before exporting.');
+    if (busy || exporting) throw new Error('Wait for the reading or export to finish before exporting.');
     if (audioSeconds > 60) throw new Error('Use the Save control to stream a long reading to disk.');
-    const bytes = new Uint8Array(await (await store.blob()).arrayBuffer());
-    let binary = '';
-    for (let start = 0; start < bytes.length; start += 8192) binary += String.fromCharCode(...bytes.subarray(start, start + 8192));
-    return btoa(binary);
+    exporting = true; updateTextStats();
+    try {
+      const bytes = new Uint8Array(await (await store.blob()).arrayBuffer());
+      let binary = '';
+      for (let start = 0; start < bytes.length; start += 8192) binary += String.fromCharCode(...bytes.subarray(start, start + 8192));
+      return btoa(binary);
+    } finally { exporting = false; updateTextStats(); }
   },
 };

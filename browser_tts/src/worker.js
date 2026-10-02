@@ -10,9 +10,11 @@ import {
 import { loadFixedVoiceState } from './voice-state.js';
 import { floatToHalf, values } from './numeric.js';
 import { Tokenizer } from '@huggingface/tokenizers';
+import { StreamedEmbeddings } from './streamed-embeddings.js';
 
 const START_SPEECH = 6561; const STOP_SPEECH = 6562; const SILENCE = 4299;
 const sessions = {}; let tokenizer; let stopped = false; let running = false; let speakerConditioning; let randomState = 1337;
+let streamedEmbeddings = null;
 
 function post(type, extra = {}) { self.postMessage({ type, ...extra }); }
 async function fetchJson(path, modelBaseUrl) {
@@ -48,10 +50,18 @@ async function load(options = {}) {
     fetchJson('tokenizer_config.json', modelBaseUrl),
   ]);
   tokenizer = new Tokenizer(tokenizerJson, tokenizerConfig);
-  const names = ['embed_tokens_fp16', 'language_model_q4f16', 'conditional_decoder_q4'];
+  if (options.embeddingManifestUrl && options.losslessEmbeddingManifestUrl) {
+    throw new Error('Select either Q4 or lossless streamed embeddings.');
+  }
+  if (options.losslessEmbeddingManifestUrl) {
+    streamedEmbeddings = await StreamedEmbeddings.load(options.losslessEmbeddingManifestUrl);
+  }
+  const names = streamedEmbeddings
+    ? ['language_model_q4f16', 'conditional_decoder_q4']
+    : ['embed_tokens_fp16', 'language_model_q4f16', 'conditional_decoder_q4'];
   for (let index = 0; index < names.length; index += 1) {
     const name = names[index];
-    post('progress', { value: 8 + index * 30, message: `Loading graph ${index + 1} of 3…` });
+    post('progress', { value: 8 + index * (90 / names.length), message: `Loading graph ${index + 1} of ${names.length}…` });
     const locations = {};
     if (name === 'language_model_q4f16') {
       locations.logits = 'cpu';
@@ -67,6 +77,7 @@ async function load(options = {}) {
   return { modelBaseUrl, voiceStateManifestUrl: voiceStateManifestUrl.href, powerPreference };
 }
 async function releaseModel() {
+  streamedEmbeddings?.clear(); streamedEmbeddings = null;
   for (const session of Object.values(sessions)) { try { await session.release(); } catch {} }
   for (const name of Object.keys(sessions)) delete sessions[name];
   for (const value of Object.values(speakerConditioning || {})) dispose(value);
@@ -112,14 +123,20 @@ async function synthesize(text, index) {
   const floats = (session, name, data, dims) => keep(sessionTensor(session, name, data, dims));
   try {
     const embed = sessions.embed_tokens_fp16; const lm = sessions.language_model_q4f16; const decoder = sessions.conditional_decoder_q4;
+    const embedIds = async (ids) => {
+      if (streamedEmbeddings) {
+        return keep(tensor('float32', await streamedEmbeddings.lookup(ids), [1, ids.length, 768]));
+      }
+      const input = integers(ids, [1, ids.length]);
+      const output = await run(embed, { input_ids: input }); free(input);
+      return output[embed.outputNames[0]];
+    };
     const { audioFeatures, audioTokens, speakerEmbeddings, speakerFeatures } = speakerConditioning;
     const ids = tokenizer.encode(text, { add_special_tokens: true }).ids;
     if (ids.length < 3 || ids.at(-1) !== 50256 || ids.at(-2) !== 50256) {
       throw new Error('The tokenizer did not supply the embedding graph’s two speech-start markers.');
     }
-    const inputIds = integers(ids, [1, ids.length]);
-    const embedded = await run(embed, { input_ids: inputIds });
-    const textEmbeddings = embedded[embed.outputNames[0]];
+    const textEmbeddings = await embedIds(ids);
     const audioData = values(audioFeatures); const textData = values(textEmbeddings);
     const featureDim = audioFeatures.dims.at(-1);
     if (featureDim !== textEmbeddings.dims.at(-1)) throw new Error('Voice and text embedding dimensions differ.');
@@ -138,7 +155,7 @@ async function synthesize(text, index) {
     for (const name of cacheInputs) feeds[name] = floats(lm, name, new Float32Array(0), [1, 12, 0, 64]);
     let result = await run(lm, feeds);
     Object.values(feeds).forEach(free);
-    free(inputIds); Object.values(embedded).forEach(free);
+    free(textEmbeddings);
     const history = [START_SPEECH];
     const tokenLimit = 256;
     let reachedEos = false;
@@ -148,10 +165,7 @@ async function synthesize(text, index) {
       if (tokenId === STOP_SPEECH) { reachedEos = true; break; }
       history.push(tokenId);
       if (step + 1 === tokenLimit) break;
-      const tokenInput = integers([tokenId], [1, 1]);
-      const tokenResult = await run(embed, { input_ids: tokenInput });
-      free(tokenInput);
-      const tokenVector = tokenResult[embed.outputNames[0]];
+      const tokenVector = await embedIds([tokenId]);
       const past = sequence + step;
       feeds = {
         [embedsName]: floats(lm, embedsName, values(tokenVector), [1, 1, featureDim]),
@@ -162,7 +176,7 @@ async function synthesize(text, index) {
       const nextResult = await run(lm, feeds);
       Object.values(feeds).forEach(free);
       Object.values(result).forEach(free);
-      Object.values(tokenResult).forEach(free);
+      free(tokenVector);
       result = nextResult;
     }
     Object.values(result).forEach(free);
@@ -179,7 +193,7 @@ async function synthesize(text, index) {
     const audio = values(decodeResult[decoder.outputNames[0]]);
     if (!audio.length || audio.some((value) => !Number.isFinite(value))) throw new Error('The decoder returned invalid audio.');
     return { index, text, sampleRate: 24000, synthesisSeconds: (performance.now() - t0) / 1000,
-      speechTokens, truncated: false, audio: audio.buffer };
+      speechTokens, truncated: false, embeddingLookup: streamedEmbeddings?.snapshot() || null, audio: audio.buffer };
   } finally {
     for (const value of owned) dispose(value);
   }
@@ -197,7 +211,9 @@ self.onmessage = async ({ data }) => {
     try {
       const t0 = performance.now(); const { modelBaseUrl, voiceStateManifestUrl, powerPreference } = await load(data);
       post('ready', { backend: 'WebGPU', loadSeconds: (performance.now() - t0) / 1000,
-        modelIdentity: { revision: REVISION, modelBaseUrl, powerPreference, embedding: data.embeddingManifestUrl || 'embed_tokens_fp16',
+        modelIdentity: { revision: REVISION, modelBaseUrl, powerPreference,
+          embedding: data.losslessEmbeddingManifestUrl || data.embeddingManifestUrl || 'embed_tokens_fp16',
+          embeddingMode: streamedEmbeddings ? 'lossless-fp16-shards' : data.embeddingManifestUrl ? 'experimental-q4' : 'fp16-onnx',
           voiceState: voiceStateManifestUrl, fittedAdapterApplied: false } });
     } catch (error) { await releaseModel(); post('error', { message: error?.message || String(error) }); }
   } else if (data.type === 'stop' && data.runId === activeRun) {
