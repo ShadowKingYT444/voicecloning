@@ -1,0 +1,93 @@
+{
+  "role": "explicit numeric-formatting ASR annotation; original raw and contraction-normalized WER retained",
+  "number_spelling_mapping": {
+    "nine": "9"
+  },
+  "human_listening": false,
+  "inputs": [
+    {
+      "id": "harvey_t1_seed31_temp08",
+      "original_wer": 0.0,
+      "number_equivalent_wer": 0.0,
+      "expected": "Winning starts with preparation. Make your next move count.",
+      "transcript": "Winning starts with preparation. Make your next move count."
+    },
+    {
+      "id": "harvey_t1_seed31_temp06",
+      "original_wer": 0.0,
+      "number_equivalent_wer": 0.0,
+      "expected": "Winning starts with preparation. Make your next move count.",
+      "transcript": "Winning starts with preparation. Make your next move count."
+    },
+    {
+      "id": "harvey_t1_seed47_temp08",
+      "original_wer": 0.111111,
+      "number_equivalent_wer": 0.111111,
+      "expected": "Winning starts with preparation. Make your next move count.",
+      "transcript": "Winning starts at preparation. Make your next move count."
+    },
+    {
+      "id": "harvey_t1_seed47_temp06",
+      "original_wer": 0.0,
+      "number_equivalent_wer": 0.0,
+      "expected": "Winning starts with preparation. Make your next move count.",
+      "transcript": "Winning starts with preparation. Make your next move count."
+    },
+    {
+      "id": "harvey_t2_seed31_temp08",
+      "original_wer": 0.090909,
+      "number_equivalent_wer": 0.0,
+      "expected": "The meeting starts at nine on Thursday. Bring the signed agreement.",
+      "transcript": "The meeting starts at 9 on Thursday. Bring the signed agreement."
+    },
+    {
+      "id": "harvey_t2_seed31_temp06",
+      "original_wer": 0.090909,
+      "number_equivalent_wer": 0.0,
+      "expected": "The meeting starts at nine on Thursday. Bring the signed agreement.",
+      "transcript": "The meeting starts at 9 on Thursday. Bring the signed agreement."
+    },
+    {
+      "id": "harvey_t2_seed47_temp08",
+      "original_wer": 0.090909,
+      "number_equivalent_wer": 0.0,
+      "expected": "The meeting starts at nine on Thursday. Bring the signed agreement.",
+      "transcript": "The meeting starts at 9 on Thursday. Bring the signed agreement."
+    },
+    {
+      "id": "harvey_t2_seed47_temp06",
+      "original_wer": 0.090909,
+      "number_equivalent_wer": 0.0,
+      "expected": "The meeting starts at nine on Thursday. Bring the signed agreement.",
+      "transcript": "The meeting starts at 9 on Thursday. Bring the signed agreement."
+    },
+    {
+      "id": "harvey_t3_seed31_temp08",
+      "original_wer": 0.0,
+      "number_equivalent_wer": 0.0,
+      "expected": "We have one chance to get this right. Let's make it count.",
+      "transcript": "We have one chance to get this right. Let's make it count."
+    },
+    {
+      "id": "harvey_t3_seed31_temp06",
+      "original_wer": 0.0,
+      "number_equivalent_wer": 0.0,
+      "expected": "We have one chance to get this right. Let's make it count.",
+      "transcript": "We have one chance to get this right. Let's make it count."
+    },
+    {
+      "id": "harvey_t3_seed47_temp08",
+      "original_wer": 0.0,
+      "number_equivalent_wer": 0.0,
+      "expected": "We have one chance to get this right. Let's make it count.",
+      "transcript": "We have one chance to get this right. Let's make it count."
+    },
+    {
+      "id": "harvey_t3_seed47_temp06",
+      "original_wer": 0.0,
+      "number_equivalent_wer": 0.0,
+      "expected": "We have one chance to get this right. Let's make it count.",
+      "transcript": "We have one chance to get this right. Let's make it count."
+    }
+  ]
+}

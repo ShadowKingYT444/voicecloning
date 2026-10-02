@@ -1,0 +1,56 @@
+{
+  "conditioning_references": {
+    "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav": {
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "preprocessing": {
+        "entrypoint": "ChatterboxTurboTTS.prepare_conditionals",
+        "exaggeration": 0.5,
+        "norm_loudness": true,
+        "prompt_token_source": "model.conds.t3.cond_prompt_speech_tokens",
+        "prompt_tokens_unmodified": true,
+        "speaker_embedding_source": "model.conds.t3.speaker_emb",
+        "speaker_embedding_unmodified": true
+      },
+      "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+    }
+  },
+  "counts": {
+    "all": 14,
+    "reference": 0,
+    "test": 0,
+    "train": 12,
+    "valid": 2
+  },
+  "created_at_unix": 1790740717.8223739,
+  "device_at_prepare": "cpu",
+  "elapsed_seconds": 5.758322981999299,
+  "format": "nano_t3_adaptation_cache_v1",
+  "max_target_tokens": 400,
+  "model_dir": "/workspace/scratch/37b8eb4aea87/voicecloning/models/chatterbox-nano",
+  "prompt_target_leakage_policy": {
+    "self_reference_allowed_for_diagnostic": false,
+    "target_and_reference_must_be_distinct": true,
+    "target_audio_is_never_used_as_reference_by_default": true
+  },
+  "reference_only_load_report": {
+    "s3gen": {
+      "checkpoint_io_backend": "streamed",
+      "ignored_missing_tensors": [],
+      "loaded_tensors": 1041,
+      "missing_tensors": [],
+      "skipped_tensors": 1450,
+      "unexpected_tensors": []
+    },
+    "ve": {
+      "checkpoint_io_backend": "streamed",
+      "ignored_missing_tensors": [],
+      "loaded_tensors": 16,
+      "missing_tensors": [],
+      "skipped_tensors": 0,
+      "unexpected_tensors": []
+    }
+  },
+  "source_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/training_manifest.json",
+  "target_sample_rate": 16000,
+  "target_token_rate_hz": 25
+}

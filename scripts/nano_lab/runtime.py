@@ -155,9 +155,10 @@ def _stream_load_safetensors(
 ) -> dict[str, Any]:
     """Load a safetensors file one tensor at a time.
 
-    ``safe_open(..., device=...)`` keeps the tensor on the destination device.
-    Only one checkpoint tensor is materialised at a time, in contrast to
-    ``load_file`` which creates a full state dictionary before assignment.
+    The default official mmap reader keeps tensors on the destination device.
+    ``NANO_SAFETENSORS_BACKEND=streamed`` selects a CPU reader without a
+    whole-file mapping. Only one checkpoint tensor is materialised at a time,
+    in contrast to ``load_file`` which creates a full state dictionary.
     """
 
     targets = _module_state_targets(module)
@@ -165,7 +166,20 @@ def _stream_load_safetensors(
     skipped: list[str] = []
     unexpected: list[str] = []
     source_device = str(device)
-    with safe_open(str(checkpoint), framework="pt", device=source_device) as handle:
+    # A whole-checkpoint reservation can exceed a strict address-space cap.
+    # Keep the official mmap default; explicitly select streamed CPU reads
+    # where mapping the unused checkpoint tensors cannot fit.
+    file_backend = os.environ.get('NANO_SAFETENSORS_BACKEND', 'mmap')
+    if file_backend not in ('mmap', 'pread', 'streamed'):
+        raise ValueError('NANO_SAFETENSORS_BACKEND must be mmap, pread, or streamed')
+    if file_backend in ('pread', 'streamed') and device.type != 'cpu':
+        raise ValueError('The lab streamed checkpoint paths are CPU-only')
+    if file_backend == 'streamed':
+        from checkpoint_reader import CheckpointReader
+        reader = CheckpointReader(checkpoint)
+    else:
+        reader = safe_open(str(checkpoint), framework="pt", device=source_device, backend=file_backend)
+    with reader as handle:
         for name in handle.keys():
             if any(name == prefix or name.startswith(prefix + ".") for prefix in skip_prefixes):
                 skipped.append(name)
@@ -184,6 +198,8 @@ def _stream_load_safetensors(
             with torch.no_grad():
                 target.copy_(source.to(device=target.device, dtype=target.dtype))
             loaded.append(name)
+            # Release the prior buffer before allocating the next tensor.
+            del source
 
     def is_skipped(name: str) -> bool:
         return any(name == prefix or name.startswith(prefix + ".") for prefix in skip_prefixes)
@@ -210,6 +226,7 @@ def _stream_load_safetensors(
             details.append("unexpected=" + ", ".join(unexpected[:8]))
         raise RuntimeError(f"Could not stream {checkpoint.name}: " + "; ".join(details))
     return {
+        "checkpoint_io_backend": file_backend,
         "loaded_tensors": len(loaded),
         "skipped_tensors": len(skipped),
         "unexpected_tensors": unexpected,
@@ -283,6 +300,15 @@ def _repair_runtime_buffers(s3gen: torch.nn.Module, device: torch.device, dtype:
         module.extend_pe(torch.zeros(1, max_len, device=device, dtype=dtype))
 
 
+def _defer_t3_causal_masks(t3: torch.nn.Module) -> None:
+    """Avoid allocating one large deterministic mask per layer on to_empty."""
+    for module in t3.modules():
+        bias = getattr(module, '_buffers', {}).get('bias')
+        if torch.is_tensor(bias) and bias.ndim == 4 and bias.dtype == torch.bool:
+            module._nano_causal_mask_size = int(bias.shape[-1])
+            module.bias = None
+
+
 def _repair_t3_runtime_buffers(t3: torch.nn.Module, device: torch.device) -> None:
     """Restore shared read-only GPT-2 causal masks omitted by checkpoints.
 
@@ -294,11 +320,14 @@ def _repair_t3_runtime_buffers(t3: torch.nn.Module, device: torch.device) -> Non
     for module in t3.modules():
         buffers = getattr(module, "_buffers", {})
         bias = buffers.get("bias")
-        if torch.is_tensor(bias) and bias.ndim == 4 and bias.dtype == torch.bool:
-            size = int(bias.shape[-1])
+        deferred_size = getattr(module, '_nano_causal_mask_size', None)
+        if deferred_size is not None or (torch.is_tensor(bias) and bias.ndim == 4 and bias.dtype == torch.bool):
+            size = deferred_size if deferred_size is not None else int(bias.shape[-1])
             if size not in causal_masks:
                 causal_masks[size] = torch.tril(torch.ones((size, size), dtype=torch.bool, device=device)).view(1, 1, size, size)
             module.bias = causal_masks[size]
+            if deferred_size is not None:
+                del module._nano_causal_mask_size
         masked_bias = buffers.get("masked_bias")
         if torch.is_tensor(masked_bias) and masked_bias.ndim == 0:
             module.masked_bias = torch.tensor(-1e4, dtype=torch.float32, device=device)
@@ -393,6 +422,7 @@ def _prepare_model(
         # Remove dead modules before allocating destination storage.  The
         # skipped checkpoint keys are explicitly permitted below.
         removed = _delete_unused_t3_weights(t3)
+        _defer_t3_causal_masks(t3)
         t3.to(dtype=dtype)
         t3.to_empty(device=device)
         t3_report = _stream_load_safetensors(
@@ -423,6 +453,11 @@ def _prepare_model(
     if optimized:
         with torch.device("meta"):
             s3gen = S3Gen(meanflow=meanflow)
+        if conditionals_path is not None:
+            # Remove reference-only modules before allocating storage, rather
+            # than merely skipping their weights after to_empty.
+            s3gen.speaker_encoder = None
+            s3gen.tokenizer = None
         s3gen.to(dtype=acoustic_dtype)
         s3gen.to_empty(device=device)
         s3_report = _stream_load_safetensors(

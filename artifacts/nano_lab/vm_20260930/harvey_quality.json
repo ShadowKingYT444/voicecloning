@@ -1,0 +1,532 @@
+{
+  "schema_version": 1,
+  "generated_by": "scripts/nano_lab/reference_evaluator.py",
+  "manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "runtime": {
+    "cpu_threads": 2,
+    "whisper_enabled": false,
+    "speaker_enabled": true,
+    "whisper_model": "/workspace/scratch/37b8eb4aea87/voicecloning/Whisper_fast_package/models/tiny.en",
+    "heldout_variant": "natural",
+    "excluded_heldout_ids": [
+      "asmr7_heldout_01",
+      "asmr7_heldout_04",
+      "asmr7_heldout_05"
+    ],
+    "rss_mb": {
+      "rss_before_models_mb": 114.04,
+      "rss_after_speaker_model_mb": 318.1,
+      "rss_after_evaluation_mb": 473.5
+    }
+  },
+  "inputs": [
+    {
+      "label": "harvey_t1_seed31_temp08",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t1_seed31_temp08.wav",
+      "family": "harvey",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "measurements": {
+        "duration_s": 2.94,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -23.19,
+        "peak_dbfs": -2.494,
+        "crest_db": 20.696,
+        "dc_offset": -6.443e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -15.787,
+        "noise_floor_dbfs_proxy_low10pct_frames": -70.539,
+        "speech_level_dbfs_proxy_high50pct_frames": -22.036,
+        "snr_db_proxy_high50_minus_low10": 48.503,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -91.316,
+        "spectral_centroid_hz": 945.752,
+        "spectral_flatness_proxy": 0.022525,
+        "high_band_fraction_proxy_ge8khz": 0.002073,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 117.26,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.715365,
+        "min_cosine": 0.715365,
+        "max_cosine": 0.715365,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.715365
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "harvey_t1_seed31_temp06",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t1_seed31_temp06.wav",
+      "family": "harvey",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "measurements": {
+        "duration_s": 3.42,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -23.543,
+        "peak_dbfs": -1.24,
+        "crest_db": 22.303,
+        "dc_offset": -5.136e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -14.58,
+        "noise_floor_dbfs_proxy_low10pct_frames": -62.551,
+        "speech_level_dbfs_proxy_high50pct_frames": -23.267,
+        "snr_db_proxy_high50_minus_low10": 39.284,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -79.716,
+        "spectral_centroid_hz": 1025.869,
+        "spectral_flatness_proxy": 0.03801,
+        "high_band_fraction_proxy_ge8khz": 0.004194,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 467.85,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.673782,
+        "min_cosine": 0.673782,
+        "max_cosine": 0.673782,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.673782
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "harvey_t1_seed47_temp08",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t1_seed47_temp08.wav",
+      "family": "harvey",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "measurements": {
+        "duration_s": 3.1,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -23.342,
+        "peak_dbfs": -1.776,
+        "crest_db": 21.566,
+        "dc_offset": -7.192e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -15.374,
+        "noise_floor_dbfs_proxy_low10pct_frames": -63.029,
+        "speech_level_dbfs_proxy_high50pct_frames": -21.292,
+        "snr_db_proxy_high50_minus_low10": 41.738,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -94.783,
+        "spectral_centroid_hz": 956.268,
+        "spectral_flatness_proxy": 0.025332,
+        "high_band_fraction_proxy_ge8khz": 0.002188,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 472.26,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.673497,
+        "min_cosine": 0.673497,
+        "max_cosine": 0.673497,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.673497
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "harvey_t1_seed47_temp06",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t1_seed47_temp06.wav",
+      "family": "harvey",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "measurements": {
+        "duration_s": 3.34,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -24.27,
+        "peak_dbfs": -3.255,
+        "crest_db": 21.015,
+        "dc_offset": -5.098e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -16.045,
+        "noise_floor_dbfs_proxy_low10pct_frames": -63.022,
+        "speech_level_dbfs_proxy_high50pct_frames": -24.048,
+        "snr_db_proxy_high50_minus_low10": 38.975,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -80.555,
+        "spectral_centroid_hz": 941.826,
+        "spectral_flatness_proxy": 0.023115,
+        "high_band_fraction_proxy_ge8khz": 0.001559,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 472.29,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.637616,
+        "min_cosine": 0.637616,
+        "max_cosine": 0.637616,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.637616
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "harvey_t2_seed31_temp08",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t2_seed31_temp08.wav",
+      "family": "harvey",
+      "expected_text": "The meeting starts at nine on Thursday. Bring the signed agreement.",
+      "measurements": {
+        "duration_s": 2.94,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -22.956,
+        "peak_dbfs": -2.704,
+        "crest_db": 20.251,
+        "dc_offset": -8.548e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -15.977,
+        "noise_floor_dbfs_proxy_low10pct_frames": -64.192,
+        "speech_level_dbfs_proxy_high50pct_frames": -21.267,
+        "snr_db_proxy_high50_minus_low10": 42.926,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -83.916,
+        "spectral_centroid_hz": 993.776,
+        "spectral_flatness_proxy": 0.026618,
+        "high_band_fraction_proxy_ge8khz": 0.002395,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 472.29,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.704821,
+        "min_cosine": 0.704821,
+        "max_cosine": 0.704821,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.704821
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "harvey_t2_seed31_temp06",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t2_seed31_temp06.wav",
+      "family": "harvey",
+      "expected_text": "The meeting starts at nine on Thursday. Bring the signed agreement.",
+      "measurements": {
+        "duration_s": 3.26,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -23.933,
+        "peak_dbfs": -2.282,
+        "crest_db": 21.651,
+        "dc_offset": -6.615e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -15.704,
+        "noise_floor_dbfs_proxy_low10pct_frames": -53.626,
+        "speech_level_dbfs_proxy_high50pct_frames": -23.11,
+        "snr_db_proxy_high50_minus_low10": 30.516,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -86.639,
+        "spectral_centroid_hz": 982.806,
+        "spectral_flatness_proxy": 0.02578,
+        "high_band_fraction_proxy_ge8khz": 0.00186,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 472.29,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.746933,
+        "min_cosine": 0.746933,
+        "max_cosine": 0.746933,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.746933
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "harvey_t2_seed47_temp08",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t2_seed47_temp08.wav",
+      "family": "harvey",
+      "expected_text": "The meeting starts at nine on Thursday. Bring the signed agreement.",
+      "measurements": {
+        "duration_s": 2.98,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -23.084,
+        "peak_dbfs": -3.242,
+        "crest_db": 19.842,
+        "dc_offset": -8.493e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -14.939,
+        "noise_floor_dbfs_proxy_low10pct_frames": -62.806,
+        "speech_level_dbfs_proxy_high50pct_frames": -21.858,
+        "snr_db_proxy_high50_minus_low10": 40.948,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -86.473,
+        "spectral_centroid_hz": 955.399,
+        "spectral_flatness_proxy": 0.031367,
+        "high_band_fraction_proxy_ge8khz": 0.002413,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 472.29,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.730329,
+        "min_cosine": 0.730329,
+        "max_cosine": 0.730329,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.730329
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "harvey_t2_seed47_temp06",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t2_seed47_temp06.wav",
+      "family": "harvey",
+      "expected_text": "The meeting starts at nine on Thursday. Bring the signed agreement.",
+      "measurements": {
+        "duration_s": 3.22,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -24.435,
+        "peak_dbfs": -4.007,
+        "crest_db": 20.427,
+        "dc_offset": -7.207e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -16.738,
+        "noise_floor_dbfs_proxy_low10pct_frames": -55.612,
+        "speech_level_dbfs_proxy_high50pct_frames": -22.6,
+        "snr_db_proxy_high50_minus_low10": 33.012,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -81.237,
+        "spectral_centroid_hz": 1076.464,
+        "spectral_flatness_proxy": 0.035013,
+        "high_band_fraction_proxy_ge8khz": 0.00373,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 472.31,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.739177,
+        "min_cosine": 0.739177,
+        "max_cosine": 0.739177,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.739177
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "harvey_t3_seed31_temp08",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t3_seed31_temp08.wav",
+      "family": "harvey",
+      "expected_text": "We have one chance to get this right. Let's make it count.",
+      "measurements": {
+        "duration_s": 3.86,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -23.508,
+        "peak_dbfs": -0.611,
+        "crest_db": 22.898,
+        "dc_offset": -6.35e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -13.811,
+        "noise_floor_dbfs_proxy_low10pct_frames": -59.062,
+        "speech_level_dbfs_proxy_high50pct_frames": -24.365,
+        "snr_db_proxy_high50_minus_low10": 34.698,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -84.147,
+        "spectral_centroid_hz": 1191.474,
+        "spectral_flatness_proxy": 0.050129,
+        "high_band_fraction_proxy_ge8khz": 0.004052,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 472.31,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.761266,
+        "min_cosine": 0.761266,
+        "max_cosine": 0.761266,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.761266
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "harvey_t3_seed31_temp06",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t3_seed31_temp06.wav",
+      "family": "harvey",
+      "expected_text": "We have one chance to get this right. Let's make it count.",
+      "measurements": {
+        "duration_s": 3.14,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -21.837,
+        "peak_dbfs": -1.768,
+        "crest_db": 20.069,
+        "dc_offset": -7.288e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -12.931,
+        "noise_floor_dbfs_proxy_low10pct_frames": -62.875,
+        "speech_level_dbfs_proxy_high50pct_frames": -22.723,
+        "snr_db_proxy_high50_minus_low10": 40.152,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -80.916,
+        "spectral_centroid_hz": 913.603,
+        "spectral_flatness_proxy": 0.022629,
+        "high_band_fraction_proxy_ge8khz": 0.001387,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 472.31,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.719465,
+        "min_cosine": 0.719465,
+        "max_cosine": 0.719465,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.719465
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "harvey_t3_seed47_temp08",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t3_seed47_temp08.wav",
+      "family": "harvey",
+      "expected_text": "We have one chance to get this right. Let's make it count.",
+      "measurements": {
+        "duration_s": 3.06,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -24.669,
+        "peak_dbfs": -0.848,
+        "crest_db": 23.821,
+        "dc_offset": -5.845e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -13.906,
+        "noise_floor_dbfs_proxy_low10pct_frames": -67.768,
+        "speech_level_dbfs_proxy_high50pct_frames": -26.861,
+        "snr_db_proxy_high50_minus_low10": 40.907,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -88.18,
+        "spectral_centroid_hz": 948.76,
+        "spectral_flatness_proxy": 0.030823,
+        "high_band_fraction_proxy_ge8khz": 0.003138,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 472.31,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.722697,
+        "min_cosine": 0.722697,
+        "max_cosine": 0.722697,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.722697
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "harvey_t3_seed47_temp06",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t3_seed47_temp06.wav",
+      "family": "harvey",
+      "expected_text": "We have one chance to get this right. Let's make it count.",
+      "measurements": {
+        "duration_s": 2.98,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -23.998,
+        "peak_dbfs": -3.224,
+        "crest_db": 20.775,
+        "dc_offset": -6.47e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -14.383,
+        "noise_floor_dbfs_proxy_low10pct_frames": -67.156,
+        "speech_level_dbfs_proxy_high50pct_frames": -25.577,
+        "snr_db_proxy_high50_minus_low10": 41.578,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -90.41,
+        "spectral_centroid_hz": 1030.808,
+        "spectral_flatness_proxy": 0.035342,
+        "high_band_fraction_proxy_ge8khz": 0.002771,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 473.5,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.731388,
+        "min_cosine": 0.731388,
+        "max_cosine": 0.731388,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.731388
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    }
+  ],
+  "synthesis_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_eval_inputs.json",
+  "reference_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "dnsmos_enabled": false,
+  "evaluation_role": "development_selection"
+}

@@ -1,5 +1,9 @@
-"""Run one lab job with a hard 3 GiB cgroup limit and desktop headroom."""
-import argparse, fcntl, os, signal, subprocess, time
+"""Run one lab job with a hard 3 GiB limit and desktop headroom.
+
+Default: the existing systemd cgroup. Explicit single-process backend: a
+stricter Linux address-space cap and in-process RSS stop for containers.
+"""
+import argparse, fcntl, os, signal, subprocess, time, sys, json
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -23,13 +27,81 @@ def job_rss_mib(unit):
         except FileNotFoundError:pass
     return total/1024
 
+def single_process_job(command, memory_mib, high_mib, lock, report_path=None):
+    """Stricter Linux backend: one process, capped virtual memory, no swap."""
+    from single_process_guard import no_swap
+    if not no_swap():
+        raise SystemExit('Single-process guard refuses hosts with enabled swap')
+    env={**os.environ,'OMP_NUM_THREADS':'2','MKL_NUM_THREADS':'2',
+         'OPENBLAS_NUM_THREADS':'2','NUMEXPR_MAX_THREADS':'2',
+         'TOKENIZERS_PARALLELISM':'false','MALLOC_ARENA_MAX':'2'}
+    if not Path(command[0]).name.startswith('python'):
+        raise SystemExit('Single-process backend requires a Python workload for in-process RSS enforcement')
+    read_fd,write_fd=os.pipe()
+    os.set_blocking(read_fd,False)
+    env.update(NANO_GUARD_REPORT_FD=str(write_fd),NANO_GUARD_HIGH_MIB=str(high_mib))
+    entry=Path(__file__).with_name('guarded_python.py')
+    guarded_command=[command[0],str(entry),*command[1:]]
+    child=Path(__file__).with_name('single_process_guard.py')
+    process=subprocess.Popen([sys.executable,str(child),'--memory-mib',str(memory_mib),'--',*guarded_command],
+                             cwd=ROOT,env=env,start_new_session=True,pass_fds=(lock.fileno(),write_fd))
+    os.close(write_fd)
+    started=time.monotonic(); peak_rss=0.; stopped=False; reason=None
+    pending=b''
+    def read_measurements():
+        nonlocal pending,peak_rss,reason,stopped
+        while True:
+            try:data=os.read(read_fd,65536)
+            except BlockingIOError:break
+            if not data:break
+            pending+=data
+            while b'\n' in pending:
+                line,pending=pending.split(b'\n',1)
+                row=json.loads(line)
+                peak_rss=max(peak_rss,float(row['peak_rss_mib']))
+                if row['stopped_reason']:
+                    reason=row['stopped_reason']; stopped=True
+    def stop():
+        try:os.killpg(process.pid,signal.SIGKILL)
+        except ProcessLookupError:pass
+    def interrupted(signum,frame):
+        raise KeyboardInterrupt
+    previous={s:signal.signal(s,interrupted) for s in (signal.SIGTERM,signal.SIGINT)}
+    try:
+        while process.poll() is None:
+            read_measurements()
+            if available_mib()<4096:reason='headroom_below_4096_mib'
+            elif not no_swap():reason='swap_enabled'
+            elif peak_rss>high_mib:reason='rss_exceeded_high_threshold'
+            if reason:
+                stopped=True; print('Stopping single-process job: '+reason,flush=True); stop(); break
+            time.sleep(.1)
+        code=process.wait()
+        read_measurements()
+        return 125 if stopped else code
+    finally:
+        if process.poll() is None:stop(); process.wait()
+        os.close(read_fd)
+        for s,handler in previous.items():signal.signal(s,handler)
+        if report_path:
+            report_path.parent.mkdir(parents=True,exist_ok=True)
+            report_path.write_text(json.dumps(dict(backend='single-process',hard_address_space_mib=memory_mib,
+                rss_stop_mib=high_mib,desktop_reserve_mib=4096,child_processes='seccomp_denied',
+                threads='allowed_on_two_cpus',swap='host_disabled_required',sampled_peak_rss_mib=peak_rss,
+                measurement_source='in_process_getrusage',
+                stopped_reason=reason,returncode=process.returncode,elapsed_s=time.monotonic()-started),indent=2))
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--backend',choices=('systemd','single-process'),default='systemd',
+                        help='single-process is stricter: hard address-space cap, seccomp denies child processes, no host swap')
+    parser.add_argument('--guard-report',type=Path,help='Write single-process watchdog measurements')
     budget=parser.add_mutually_exclusive_group()
     budget.add_argument('--small-job',action='store_true',help='Hard 1280 MiB cap; require that budget plus 4 GiB desktop reserve')
     budget.add_argument('--max-memory-mib',type=int,choices=(640,768,1024),help='Stricter cap for tiny component checks; always reserve another 4 GiB at launch')
     parser.add_argument('command',nargs=argparse.REMAINDER)
     args=parser.parse_args()
+    if args.command[:1]==['--']:args.command=args.command[1:]
     if not args.command:parser.error('A command is required')
     lock_path=ROOT/'artifacts/nano_lab/model_job.lock'
     lock_path.parent.mkdir(parents=True,exist_ok=True)
@@ -41,6 +113,9 @@ def main():
         high_mib=int(memory_mib*.8) if memory_mib<3072 else 2500
         if available_mib()<start_mib:
             raise SystemExit(f'Not starting: less than {start_mib/1024:g} GiB RAM is available')
+        if args.backend=='single-process':
+            print(f'Hard address-space cap={memory_mib}MiB, RSS stop={high_mib}MiB, seccomp single process, no swap, 2 CPUs; reserve=4GiB',flush=True)
+            raise SystemExit(single_process_job(args.command,memory_mib,high_mib,lock,args.guard_report))
         # A fixed service name also prevents overlap if a prior wrapper was
         # interrupted but its service is still being stopped.
         unit='nano-lab-model'

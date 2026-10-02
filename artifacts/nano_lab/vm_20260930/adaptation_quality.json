@@ -1,0 +1,580 @@
+{
+  "schema_version": 1,
+  "generated_by": "scripts/nano_lab/reference_evaluator.py",
+  "manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "runtime": {
+    "cpu_threads": 2,
+    "whisper_enabled": false,
+    "speaker_enabled": true,
+    "whisper_model": "/workspace/scratch/37b8eb4aea87/voicecloning/Whisper_fast_package/models/tiny.en",
+    "heldout_variant": "natural",
+    "excluded_heldout_ids": [
+      "asmr7_heldout_01",
+      "asmr7_heldout_04",
+      "asmr7_heldout_05"
+    ],
+    "rss_mb": {
+      "rss_before_models_mb": 113.53,
+      "rss_after_speaker_model_mb": 308.12,
+      "rss_after_evaluation_mb": 477.78
+    }
+  },
+  "inputs": [
+    {
+      "label": "asmr_t1_seed31_base",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t1_seed31_base.wav",
+      "family": "asmr7",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "measurements": {
+        "duration_s": 2.72,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -34.102,
+        "peak_dbfs": -14.133,
+        "crest_db": 19.969,
+        "dc_offset": -3.657e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -28.606,
+        "noise_floor_dbfs_proxy_low10pct_frames": -70.466,
+        "speech_level_dbfs_proxy_high50pct_frames": -31.897,
+        "snr_db_proxy_high50_minus_low10": 38.569,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -94.009,
+        "spectral_centroid_hz": 1768.05,
+        "spectral_flatness_proxy": 0.10679,
+        "high_band_fraction_proxy_ge8khz": 0.01688,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 117.12,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.86248,
+        "min_cosine": 0.843262,
+        "max_cosine": 0.881699,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.881699
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.843262
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "asmr_t1_seed31_fit",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t1_seed31_fit.wav",
+      "family": "asmr7",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "measurements": {
+        "duration_s": 2.72,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -32.315,
+        "peak_dbfs": -12.174,
+        "crest_db": 20.141,
+        "dc_offset": -3.312e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -25.485,
+        "noise_floor_dbfs_proxy_low10pct_frames": -70.477,
+        "speech_level_dbfs_proxy_high50pct_frames": -30.305,
+        "snr_db_proxy_high50_minus_low10": 40.172,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -93.538,
+        "spectral_centroid_hz": 1402.898,
+        "spectral_flatness_proxy": 0.086543,
+        "high_band_fraction_proxy_ge8khz": 0.014083,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 468.83,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.834769,
+        "min_cosine": 0.809305,
+        "max_cosine": 0.860232,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.860232
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.809305
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "asmr_t1_seed47_base",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t1_seed47_base.wav",
+      "family": "asmr7",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "measurements": {
+        "duration_s": 2.96,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -31.729,
+        "peak_dbfs": -12.507,
+        "crest_db": 19.222,
+        "dc_offset": -4.118e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -25.744,
+        "noise_floor_dbfs_proxy_low10pct_frames": -68.708,
+        "speech_level_dbfs_proxy_high50pct_frames": -29.634,
+        "snr_db_proxy_high50_minus_low10": 39.074,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -90.973,
+        "spectral_centroid_hz": 1286.901,
+        "spectral_flatness_proxy": 0.073065,
+        "high_band_fraction_proxy_ge8khz": 0.0088,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 475.49,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.867593,
+        "min_cosine": 0.836235,
+        "max_cosine": 0.898951,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.898951
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.836235
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "asmr_t1_seed47_fit",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t1_seed47_fit.wav",
+      "family": "asmr7",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "measurements": {
+        "duration_s": 3.0,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -32.462,
+        "peak_dbfs": -10.433,
+        "crest_db": 22.028,
+        "dc_offset": -3.657e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -26.06,
+        "noise_floor_dbfs_proxy_low10pct_frames": -70.885,
+        "speech_level_dbfs_proxy_high50pct_frames": -30.868,
+        "snr_db_proxy_high50_minus_low10": 40.017,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -95.216,
+        "spectral_centroid_hz": 1703.84,
+        "spectral_flatness_proxy": 0.105601,
+        "high_band_fraction_proxy_ge8khz": 0.017929,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 475.59,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.88845,
+        "min_cosine": 0.861863,
+        "max_cosine": 0.915036,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.915036
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.861863
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "asmr_t2_seed31_base",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t2_seed31_base.wav",
+      "family": "asmr7",
+      "expected_text": "You don't have to rush. Take a slow breath, and stay here with me for a moment.",
+      "measurements": {
+        "duration_s": 5.56,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -31.824,
+        "peak_dbfs": -11.014,
+        "crest_db": 20.81,
+        "dc_offset": -3.992e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -21.909,
+        "noise_floor_dbfs_proxy_low10pct_frames": -105.055,
+        "speech_level_dbfs_proxy_high50pct_frames": -31.447,
+        "snr_db_proxy_high50_minus_low10": 73.609,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -124.91,
+        "spectral_centroid_hz": 2118.599,
+        "spectral_flatness_proxy": 0.101331,
+        "high_band_fraction_proxy_ge8khz": 0.01103,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 475.62,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.875892,
+        "min_cosine": 0.853328,
+        "max_cosine": 0.898455,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.898455
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.853328
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "asmr_t2_seed31_fit",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t2_seed31_fit.wav",
+      "family": "asmr7",
+      "expected_text": "You don't have to rush. Take a slow breath, and stay here with me for a moment.",
+      "measurements": {
+        "duration_s": 5.12,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -30.529,
+        "peak_dbfs": -10.205,
+        "crest_db": 20.325,
+        "dc_offset": -4.221e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -22.676,
+        "noise_floor_dbfs_proxy_low10pct_frames": -69.355,
+        "speech_level_dbfs_proxy_high50pct_frames": -29.254,
+        "snr_db_proxy_high50_minus_low10": 40.1,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -93.352,
+        "spectral_centroid_hz": 2010.784,
+        "spectral_flatness_proxy": 0.107137,
+        "high_band_fraction_proxy_ge8khz": 0.015169,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 477.72,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.866221,
+        "min_cosine": 0.852527,
+        "max_cosine": 0.879915,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.879915
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.852527
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "asmr_t2_seed47_base",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t2_seed47_base.wav",
+      "family": "asmr7",
+      "expected_text": "You don't have to rush. Take a slow breath, and stay here with me for a moment.",
+      "measurements": {
+        "duration_s": 5.28,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -30.66,
+        "peak_dbfs": -10.184,
+        "crest_db": 20.476,
+        "dc_offset": -4.602e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -22.113,
+        "noise_floor_dbfs_proxy_low10pct_frames": -80.696,
+        "speech_level_dbfs_proxy_high50pct_frames": -28.691,
+        "snr_db_proxy_high50_minus_low10": 52.005,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -101.861,
+        "spectral_centroid_hz": 1782.909,
+        "spectral_flatness_proxy": 0.107077,
+        "high_band_fraction_proxy_ge8khz": 0.018752,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 477.73,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.852391,
+        "min_cosine": 0.826436,
+        "max_cosine": 0.878346,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.878346
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.826436
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "asmr_t2_seed47_fit",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t2_seed47_fit.wav",
+      "family": "asmr7",
+      "expected_text": "You don't have to rush. Take a slow breath, and stay here with me for a moment.",
+      "measurements": {
+        "duration_s": 4.84,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -28.674,
+        "peak_dbfs": -8.775,
+        "crest_db": 19.899,
+        "dc_offset": -4.708e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -20.722,
+        "noise_floor_dbfs_proxy_low10pct_frames": -69.088,
+        "speech_level_dbfs_proxy_high50pct_frames": -27.44,
+        "snr_db_proxy_high50_minus_low10": 41.648,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -93.195,
+        "spectral_centroid_hz": 1204.96,
+        "spectral_flatness_proxy": 0.069553,
+        "high_band_fraction_proxy_ge8khz": 0.010464,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 477.75,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.830769,
+        "min_cosine": 0.810937,
+        "max_cosine": 0.8506,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.8506
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.810937
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "asmr_t3_seed31_base",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t3_seed31_base.wav",
+      "family": "asmr7",
+      "expected_text": "I wasn't sure you would come back. But I'm glad you're here.",
+      "measurements": {
+        "duration_s": 3.6,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -31.267,
+        "peak_dbfs": -12.285,
+        "crest_db": 18.982,
+        "dc_offset": -4.514e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -23.536,
+        "noise_floor_dbfs_proxy_low10pct_frames": -73.91,
+        "speech_level_dbfs_proxy_high50pct_frames": -29.603,
+        "snr_db_proxy_high50_minus_low10": 44.306,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -97.375,
+        "spectral_centroid_hz": 1699.246,
+        "spectral_flatness_proxy": 0.062237,
+        "high_band_fraction_proxy_ge8khz": 0.004654,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 477.75,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.852012,
+        "min_cosine": 0.841738,
+        "max_cosine": 0.862286,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.862286
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.841738
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "asmr_t3_seed31_fit",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t3_seed31_fit.wav",
+      "family": "asmr7",
+      "expected_text": "I wasn't sure you would come back. But I'm glad you're here.",
+      "measurements": {
+        "duration_s": 4.04,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -28.578,
+        "peak_dbfs": -9.704,
+        "crest_db": 18.875,
+        "dc_offset": -5.372e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -20.621,
+        "noise_floor_dbfs_proxy_low10pct_frames": -81.936,
+        "speech_level_dbfs_proxy_high50pct_frames": -26.982,
+        "snr_db_proxy_high50_minus_low10": 54.954,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -99.633,
+        "spectral_centroid_hz": 1374.219,
+        "spectral_flatness_proxy": 0.043553,
+        "high_band_fraction_proxy_ge8khz": 0.003459,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 477.75,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.791451,
+        "min_cosine": 0.79085,
+        "max_cosine": 0.792052,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.79085
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.792052
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "asmr_t3_seed47_base",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t3_seed47_base.wav",
+      "family": "asmr7",
+      "expected_text": "I wasn't sure you would come back. But I'm glad you're here.",
+      "measurements": {
+        "duration_s": 3.88,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -31.11,
+        "peak_dbfs": -10.787,
+        "crest_db": 20.323,
+        "dc_offset": -5.729e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -22.243,
+        "noise_floor_dbfs_proxy_low10pct_frames": -83.642,
+        "speech_level_dbfs_proxy_high50pct_frames": -29.629,
+        "snr_db_proxy_high50_minus_low10": 54.013,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -106.654,
+        "spectral_centroid_hz": 1521.55,
+        "spectral_flatness_proxy": 0.04204,
+        "high_band_fraction_proxy_ge8khz": 0.002245,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 477.75,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.841932,
+        "min_cosine": 0.837088,
+        "max_cosine": 0.846776,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.846776
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.837088
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "asmr_t3_seed47_fit",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t3_seed47_fit.wav",
+      "family": "asmr7",
+      "expected_text": "I wasn't sure you would come back. But I'm glad you're here.",
+      "measurements": {
+        "duration_s": 3.52,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -30.163,
+        "peak_dbfs": -8.983,
+        "crest_db": 21.179,
+        "dc_offset": -5.137e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -21.511,
+        "noise_floor_dbfs_proxy_low10pct_frames": -80.235,
+        "speech_level_dbfs_proxy_high50pct_frames": -29.065,
+        "snr_db_proxy_high50_minus_low10": 51.169,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -95.809,
+        "spectral_centroid_hz": 1713.494,
+        "spectral_flatness_proxy": 0.058162,
+        "high_band_fraction_proxy_ge8khz": 0.005221,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 477.78,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.824631,
+        "min_cosine": 0.810732,
+        "max_cosine": 0.83853,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.83853
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.810732
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    }
+  ],
+  "synthesis_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation_eval_inputs.json",
+  "reference_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "dnsmos_enabled": false,
+  "evaluation_role": "development_selection"
+}

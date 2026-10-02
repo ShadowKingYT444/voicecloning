@@ -2,12 +2,13 @@
 from pathlib import Path
 from types import SimpleNamespace
 import torch
-from runtime import T3,_nano_hp,_delete_unused_t3_weights,_stream_load_safetensors,_repair_t3_runtime_buffers
+from runtime import T3,_nano_hp,_delete_unused_t3_weights,_stream_load_safetensors,_repair_t3_runtime_buffers,_defer_t3_causal_masks
 
 def load_cached_t3(model_dir,device):
     device=torch.device(device)
     with torch.device('meta'):t3=T3(_nano_hp())
     _delete_unused_t3_weights(t3)
+    _defer_t3_causal_masks(t3)
     t3.to_empty(device=device)
     report=_stream_load_safetensors(t3,Path(model_dir)/'t3_nano_v1.safetensors',device=device,strict=True,skip_prefixes=('tfmr.wte','text_head'))
     _repair_t3_runtime_buffers(t3,device)

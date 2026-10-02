@@ -1,5 +1,13 @@
 # Next quality experiment
 
+2026-09-30 update: feature preparation and the proposed rank-4 all-attention
+fit have now run on CPU in the guarded VM. Best validation loss improves by
+10.9%, but the six matched new-text fit samples have lower mean speaker cosine
+than the fresh base controls. The adapter is not promoted. See
+[VM results](../vm_20260930/RESULTS.md). The historical instructions below are
+retained for provenance; their missing fitted acoustic comparator was not used
+in this fresh base-versus-T3-only experiment.
+
 Status: dataset metadata verified; features and model fitting not run.
 
 The separate manifest contains 14 existing source clips: 12 training clips (55.80 seconds) and two validation clips (18.22 seconds). All have exact normalized Tiny/Small consensus on the actual clip, with unchanged audited transcript and audio hashes. Source windows avoid all protected reference/evaluation intervals by two seconds. Clip 011 was removed for the extra buffer. New validation clip 030 was never in the earlier T3 training cache; clip 022 was already used for validation. Both clips occur in acoustic-model fitting data, which limits full-pipeline generalization claims.

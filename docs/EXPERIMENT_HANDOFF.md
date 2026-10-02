@@ -1,5 +1,13 @@
 # Voice cloning experiment handoff
 
+2026-09-30 continuation: source/reference audio is now tracked and verified.
+A guarded CPU VM run generated matched ASMR/Harvey baselines and completed the
+strict T3 clip-consensus fit. The fit is **rejected for promotion** because
+new-text speaker similarity regresses despite lower validation loss. Read
+[VM results](../artifacts/nano_lab/vm_20260930/RESULTS.md) and
+[CPU VM instructions](CPU_VM_EXPERIMENTS.md). Historical fitted checkpoints and
+ONNX graphs remain absent; the original CUDA gates and limits are unchanged.
+
 This repository contains an active Chatterbox Nano 110M investigation. The requested quality target is not achieved. The user rejected the earlier samples as unconvincing. No voice profile is promoted, and no result proves general zero-shot improvement or ElevenLabs-level realism.
 
 Use this file with the current reports:

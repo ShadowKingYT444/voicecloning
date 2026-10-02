@@ -1,0 +1,40 @@
+{
+  "pytest": {
+    "passed": 14,
+    "subtests_passed": 3,
+    "files": [
+      "test_checkpoint_reader.py",
+      "test_deferred_causal_masks.py",
+      "test_adaptation_conditioning.py",
+      "test_dataset_contract.py",
+      "test_resource_guard.py",
+      "test_verify_decoder_attention_onnx.py"
+    ]
+  },
+  "live_guard_tests_passed": 4,
+  "high_threshold_live_test": {
+    "expected_exit": 125,
+    "actual_exit": 125,
+    "peak_rss_mib": 519.125,
+    "high_threshold_mib": 512
+  },
+  "reader_parity": {
+    "tensors": 2662,
+    "all_exact": true,
+    "report": "checkpoint_parity.json"
+  },
+  "allocation_change_audio_parity": {
+    "asmr_seed31": true,
+    "asmr_seed47": true,
+    "harvey_seed31": true,
+    "harvey_seed47": true
+  },
+  "git_diff_check": "passed",
+  "delivery": {
+    "audio_links": 42,
+    "all_existing": true,
+    "loudness_error_max_lu": 9.865719263757455e-08,
+    "all_true_peak_below_minus_0_99_dbtp": true,
+    "all_36_raw_output_hashes_valid": true
+  }
+}

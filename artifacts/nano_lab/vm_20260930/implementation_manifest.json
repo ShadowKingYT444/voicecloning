@@ -1,0 +1,50 @@
+{
+  "base_commit": "5b116a82e1b8aee9e7cd12fc3a92431d53e0a6ff",
+  "role": "final implementation snapshot; each trial report also records its earlier run-time source hash",
+  "files": [
+    {
+      "path": "scripts/nano_lab/bounded_job.py",
+      "sha256": "dcce90eaa353cf0d0b0bd87d0de6df2862a39af07d400ee5d78288ed494b9421"
+    },
+    {
+      "path": "scripts/nano_lab/single_process_guard.py",
+      "sha256": "0cca00da5e9d9ab3460ada1194eab2d0d0b0728cba973e207f76a6cda3e6f07a"
+    },
+    {
+      "path": "scripts/nano_lab/guarded_python.py",
+      "sha256": "e6adec9cacbd16c397275a00606ace1e793b0ec0440a9749ee9bceb7db125607"
+    },
+    {
+      "path": "scripts/nano_lab/checkpoint_reader.py",
+      "sha256": "64f8774d842d7fe8e2e8442dc2737a8160df43312856711b10ac176485d4ff45"
+    },
+    {
+      "path": "scripts/nano_lab/runtime.py",
+      "sha256": "ac2d252b7875fff5b43f4e690a0f040fbfc37ae9d6cb5b51a167464c47b5fbc7"
+    },
+    {
+      "path": "scripts/nano_lab/prepare_reference_only.py",
+      "sha256": "84d607ba4564c5ac82b3bf9fdbdbd2f20d73e2f134589e10d4f2afd02c7c3032"
+    },
+    {
+      "path": "scripts/nano_lab/vm_reference_trial.py",
+      "sha256": "961ee11f049cccff4e10c6fd9c359ebe6703519e07ab7f3abff40cf4afed51b3"
+    },
+    {
+      "path": "scripts/nano_lab/adaptation.py",
+      "sha256": "9987e90f20cc8aab14ee7801074841283351f3b3bd84760ba911e84506371d19"
+    },
+    {
+      "path": "scripts/nano_lab/t3_training.py",
+      "sha256": "19c0654ceb018ac584debd00e22b80656e4acc9396501ebf0e7d8bc370d3c23a"
+    },
+    {
+      "path": "scripts/nano_lab/verify_streamed_checkpoint.py",
+      "sha256": "8487f5372d79e32e32177a4118254a3f6c4eee9910251d8a5f38243bb64081ab"
+    },
+    {
+      "path": "scripts/nano_lab/build_vm_delivery.py",
+      "sha256": "cab71f4a6cc6ea405a037aa460a59ff9dc679dc8205bfc9d1986a7766b538643"
+    }
+  ]
+}

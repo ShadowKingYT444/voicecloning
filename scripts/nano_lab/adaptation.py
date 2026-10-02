@@ -446,6 +446,7 @@ def prepare_cache(
     min_target_tokens: int,
     global_reference: Path | None,
     allow_self_reference: bool,
+    reference_only: bool = False,
 ) -> dict[str, Any]:
     """Extract immutable features/tokens and write a portable JSON cache."""
 
@@ -465,7 +466,16 @@ def prepare_cache(
     from dataset_contract import require_audited_rows
     require_audited_rows(rows)
 
-    model = load_nano(model_dir, device)
+    if reference_only:
+        if device != 'cpu':
+            raise ValueError('Reference-only feature preparation is CPU-only')
+        from prepare_reference_only import load_reference_model
+        from transformers import AutoTokenizer
+        model, reference_load_report = load_reference_model(model_dir)
+        model.tokenizer = AutoTokenizer.from_pretrained(model_dir)
+    else:
+        model = load_nano(model_dir, device)
+        reference_load_report = None
     # Match ChatterboxTurboTTS.generate's punc_norm before tokenization.  This
     # keeps adaptation inputs aligned with the text path used at inference.
     from chatterbox.tts_turbo import punc_norm
@@ -559,6 +569,7 @@ def prepare_cache(
         "source_manifest": str(manifest_path.resolve()),
         "model_dir": str(model_dir.resolve()),
         "device_at_prepare": device,
+        "reference_only_load_report": reference_load_report,
         "target_sample_rate": 16_000,
         "target_token_rate_hz": 25,
         "max_target_tokens": max_target_tokens,
@@ -1474,6 +1485,7 @@ def build_parser() -> argparse.ArgumentParser:
     prepare.add_argument("--min-target-tokens", type=int, default=2)
     prepare.add_argument("--reference-audio", type=Path)
     prepare.add_argument("--allow-self-reference", action="store_true")
+    prepare.add_argument("--reference-only", action="store_true", help="CPU: omit unused T3/decoder weights while extracting native conditioning and target tokens")
 
     train = sub.add_parser("train", help="fit a frozen-base LoRA adapter with heldout early stopping")
     train.add_argument("--cache", type=Path, default=DEFAULT_CACHE)
@@ -1545,6 +1557,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             min_target_tokens=args.min_target_tokens,
             global_reference=args.reference_audio,
             allow_self_reference=args.allow_self_reference,
+            reference_only=args.reference_only,
         )
         return 0
     if args.command == "train":

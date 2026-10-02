@@ -1,0 +1,2162 @@
+{
+  "model": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+  "backend": "CTranslate2 CPU int8",
+  "role": "independent_content_audit",
+  "human_listening": false,
+  "model_download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+  "model_identity": {
+    "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+    "name": "faster-whisper-small",
+    "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+    "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+    "size_class": "small"
+  },
+  "word_timestamps": true,
+  "inputs": [
+    {
+      "id": "asmr_t1_seed31_base",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t1_seed31_base.wav",
+      "audio_sha256": "6e99e6bfdeb3e2ef918e2de3726970d19702a04b6b1df12e98118388b90b3800",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "transcript": "Take a quiet moment and let yourself relax.",
+      "segments": [
+        {
+          "text": "Take a quiet moment and let yourself relax.",
+          "start_s": 0.0,
+          "end_s": 2.22,
+          "avg_logprob": -0.30142458031574887,
+          "no_speech_prob": 0.003037919756025076,
+          "compression_ratio": 0.8775510204081632,
+          "words": [
+            {
+              "word": "Take",
+              "start_s": 0.0,
+              "end_s": 0.22,
+              "probability": 0.8276195526123047
+            },
+            {
+              "word": "a",
+              "start_s": 0.22,
+              "end_s": 0.4,
+              "probability": 0.9983347058296204
+            },
+            {
+              "word": "quiet",
+              "start_s": 0.4,
+              "end_s": 0.68,
+              "probability": 0.9930750131607056
+            },
+            {
+              "word": "moment",
+              "start_s": 0.68,
+              "end_s": 0.98,
+              "probability": 0.9961715340614319
+            },
+            {
+              "word": "and",
+              "start_s": 0.98,
+              "end_s": 1.3,
+              "probability": 0.8847390413284302
+            },
+            {
+              "word": "let",
+              "start_s": 1.3,
+              "end_s": 1.46,
+              "probability": 0.9968522191047668
+            },
+            {
+              "word": "yourself",
+              "start_s": 1.46,
+              "end_s": 1.76,
+              "probability": 0.9958343505859375
+            },
+            {
+              "word": "relax.",
+              "start_s": 1.76,
+              "end_s": 2.22,
+              "probability": 0.9965552091598511
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.2722744769998826
+    },
+    {
+      "id": "asmr_t1_seed31_fit",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t1_seed31_fit.wav",
+      "audio_sha256": "bb020e7f0c096b1b4723e93adba0bf9b954164117a61ffbfc84521f65a982b1d",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "transcript": "Take a quiet moment and let yourself relax.",
+      "segments": [
+        {
+          "text": "Take a quiet moment and let yourself relax.",
+          "start_s": 0.0,
+          "end_s": 2.2,
+          "avg_logprob": -0.314552682141463,
+          "no_speech_prob": 0.002946102526038885,
+          "compression_ratio": 0.8775510204081632,
+          "words": [
+            {
+              "word": "Take",
+              "start_s": 0.0,
+              "end_s": 0.22,
+              "probability": 0.8104754090309143
+            },
+            {
+              "word": "a",
+              "start_s": 0.22,
+              "end_s": 0.38,
+              "probability": 0.9980860948562622
+            },
+            {
+              "word": "quiet",
+              "start_s": 0.38,
+              "end_s": 0.68,
+              "probability": 0.9974474906921387
+            },
+            {
+              "word": "moment",
+              "start_s": 0.68,
+              "end_s": 0.98,
+              "probability": 0.9968095421791077
+            },
+            {
+              "word": "and",
+              "start_s": 0.98,
+              "end_s": 1.3,
+              "probability": 0.9160698056221008
+            },
+            {
+              "word": "let",
+              "start_s": 1.3,
+              "end_s": 1.44,
+              "probability": 0.9975085258483887
+            },
+            {
+              "word": "yourself",
+              "start_s": 1.44,
+              "end_s": 1.74,
+              "probability": 0.9965583682060242
+            },
+            {
+              "word": "relax.",
+              "start_s": 1.74,
+              "end_s": 2.2,
+              "probability": 0.9966475367546082
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.200365549999333
+    },
+    {
+      "id": "asmr_t1_seed47_base",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t1_seed47_base.wav",
+      "audio_sha256": "f5f0da256595fc08ce7bc1ecf7470e057d44177f0bc96f6f88533bf84e89e20f",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "transcript": "Take a quiet moment and let yourself relax.",
+      "segments": [
+        {
+          "text": "Take a quiet moment and let yourself relax.",
+          "start_s": 0.0,
+          "end_s": 2.46,
+          "avg_logprob": -0.28664762526750565,
+          "no_speech_prob": 0.0032359163742512465,
+          "compression_ratio": 0.8775510204081632,
+          "words": [
+            {
+              "word": "Take",
+              "start_s": 0.0,
+              "end_s": 0.2,
+              "probability": 0.8683445453643799
+            },
+            {
+              "word": "a",
+              "start_s": 0.2,
+              "end_s": 0.36,
+              "probability": 0.9953343272209167
+            },
+            {
+              "word": "quiet",
+              "start_s": 0.36,
+              "end_s": 0.7,
+              "probability": 0.9972219467163086
+            },
+            {
+              "word": "moment",
+              "start_s": 0.7,
+              "end_s": 1.08,
+              "probability": 0.9953356385231018
+            },
+            {
+              "word": "and",
+              "start_s": 1.08,
+              "end_s": 1.44,
+              "probability": 0.8811452984809875
+            },
+            {
+              "word": "let",
+              "start_s": 1.44,
+              "end_s": 1.6,
+              "probability": 0.9972944855690002
+            },
+            {
+              "word": "yourself",
+              "start_s": 1.6,
+              "end_s": 1.94,
+              "probability": 0.9949595928192139
+            },
+            {
+              "word": "relax.",
+              "start_s": 1.94,
+              "end_s": 2.46,
+              "probability": 0.9966017007827759
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 1.9887832210006309
+    },
+    {
+      "id": "asmr_t1_seed47_fit",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t1_seed47_fit.wav",
+      "audio_sha256": "df8642230750eb2b992cb5b41733c7c6f7af6aba4007840499d2f05fd2e11e7f",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "transcript": "Take a quiet moment and let yourself relax.",
+      "segments": [
+        {
+          "text": "Take a quiet moment and let yourself relax.",
+          "start_s": 0.0,
+          "end_s": 2.46,
+          "avg_logprob": -0.27702367802460987,
+          "no_speech_prob": 0.0065209465101361275,
+          "compression_ratio": 0.8775510204081632,
+          "words": [
+            {
+              "word": "Take",
+              "start_s": 0.0,
+              "end_s": 0.18,
+              "probability": 0.8957875370979309
+            },
+            {
+              "word": "a",
+              "start_s": 0.18,
+              "end_s": 0.42,
+              "probability": 0.9976691603660583
+            },
+            {
+              "word": "quiet",
+              "start_s": 0.42,
+              "end_s": 0.7,
+              "probability": 0.9869885444641113
+            },
+            {
+              "word": "moment",
+              "start_s": 0.7,
+              "end_s": 1.04,
+              "probability": 0.9969344139099121
+            },
+            {
+              "word": "and",
+              "start_s": 1.04,
+              "end_s": 1.42,
+              "probability": 0.8866106271743774
+            },
+            {
+              "word": "let",
+              "start_s": 1.42,
+              "end_s": 1.6,
+              "probability": 0.9977879524230957
+            },
+            {
+              "word": "yourself",
+              "start_s": 1.6,
+              "end_s": 1.96,
+              "probability": 0.9931783676147461
+            },
+            {
+              "word": "relax.",
+              "start_s": 1.96,
+              "end_s": 2.46,
+              "probability": 0.9973289966583252
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.0670327640000323
+    },
+    {
+      "id": "asmr_t2_seed31_base",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t2_seed31_base.wav",
+      "audio_sha256": "de8c87bf3fe5a901d6565f34749e1daa9cb3b8db1f9d881f12c9fbda980379c0",
+      "expected_text": "You don't have to rush. Take a slow breath, and stay here with me for a moment.",
+      "transcript": "You don't have to rush, take a slow breath and stay here with me for a moment.",
+      "segments": [
+        {
+          "text": "You don't have to rush, take a slow breath and stay here with me for a moment.",
+          "start_s": 0.0,
+          "end_s": 5.04,
+          "avg_logprob": -0.2608793792517289,
+          "no_speech_prob": 0.022647490724921227,
+          "compression_ratio": 1.04,
+          "words": [
+            {
+              "word": "You",
+              "start_s": 0.0,
+              "end_s": 0.16,
+              "probability": 0.7658579349517822
+            },
+            {
+              "word": "don't",
+              "start_s": 0.16,
+              "end_s": 0.46,
+              "probability": 0.9961347877979279
+            },
+            {
+              "word": "have",
+              "start_s": 0.46,
+              "end_s": 0.56,
+              "probability": 0.9983561635017395
+            },
+            {
+              "word": "to",
+              "start_s": 0.56,
+              "end_s": 0.68,
+              "probability": 0.9991794228553772
+            },
+            {
+              "word": "rush,",
+              "start_s": 0.68,
+              "end_s": 0.98,
+              "probability": 0.995786726474762
+            },
+            {
+              "word": "take",
+              "start_s": 1.78,
+              "end_s": 2.02,
+              "probability": 0.9776334166526794
+            },
+            {
+              "word": "a",
+              "start_s": 2.02,
+              "end_s": 2.16,
+              "probability": 0.9971393346786499
+            },
+            {
+              "word": "slow",
+              "start_s": 2.16,
+              "end_s": 2.38,
+              "probability": 0.9883190393447876
+            },
+            {
+              "word": "breath",
+              "start_s": 2.38,
+              "end_s": 2.74,
+              "probability": 0.985373318195343
+            },
+            {
+              "word": "and",
+              "start_s": 2.74,
+              "end_s": 3.32,
+              "probability": 0.6051040291786194
+            },
+            {
+              "word": "stay",
+              "start_s": 3.32,
+              "end_s": 3.62,
+              "probability": 0.9967542290687561
+            },
+            {
+              "word": "here",
+              "start_s": 3.62,
+              "end_s": 3.88,
+              "probability": 0.9785920977592468
+            },
+            {
+              "word": "with",
+              "start_s": 3.88,
+              "end_s": 4.06,
+              "probability": 0.9974205493927002
+            },
+            {
+              "word": "me",
+              "start_s": 4.06,
+              "end_s": 4.32,
+              "probability": 0.998706579208374
+            },
+            {
+              "word": "for",
+              "start_s": 4.32,
+              "end_s": 4.56,
+              "probability": 0.9954979419708252
+            },
+            {
+              "word": "a",
+              "start_s": 4.56,
+              "end_s": 4.7,
+              "probability": 0.9990960359573364
+            },
+            {
+              "word": "moment.",
+              "start_s": 4.7,
+              "end_s": 5.04,
+              "probability": 0.998055100440979
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 17,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "you",
+          "don't",
+          "have",
+          "to",
+          "rush",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "and",
+          "stay",
+          "here",
+          "with",
+          "me",
+          "for",
+          "a",
+          "moment"
+        ],
+        "hypothesis_words": [
+          "you",
+          "don't",
+          "have",
+          "to",
+          "rush",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "and",
+          "stay",
+          "here",
+          "with",
+          "me",
+          "for",
+          "a",
+          "moment"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 18,
+        "hypothesis_word_count": 18,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "you",
+          "do",
+          "not",
+          "have",
+          "to",
+          "rush",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "and",
+          "stay",
+          "here",
+          "with",
+          "me",
+          "for",
+          "a",
+          "moment"
+        ],
+        "hypothesis_words": [
+          "you",
+          "do",
+          "not",
+          "have",
+          "to",
+          "rush",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "and",
+          "stay",
+          "here",
+          "with",
+          "me",
+          "for",
+          "a",
+          "moment"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.4745862189993204
+    },
+    {
+      "id": "asmr_t2_seed31_fit",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t2_seed31_fit.wav",
+      "audio_sha256": "81d95bd39029257dcaa85f1822d36c885c168c58dc7748a254cf323840f28c90",
+      "expected_text": "You don't have to rush. Take a slow breath, and stay here with me for a moment.",
+      "transcript": "You don't have to rush. Take a slow breath and stay here with me for a moment.",
+      "segments": [
+        {
+          "text": "You don't have to rush. Take a slow breath and stay here with me for a moment.",
+          "start_s": 0.0,
+          "end_s": 4.62,
+          "avg_logprob": -0.1624768544798312,
+          "no_speech_prob": 0.007628473918884993,
+          "compression_ratio": 1.0263157894736843,
+          "words": [
+            {
+              "word": "You",
+              "start_s": 0.0,
+              "end_s": 0.16,
+              "probability": 0.8823680877685547
+            },
+            {
+              "word": "don't",
+              "start_s": 0.16,
+              "end_s": 0.46,
+              "probability": 0.9952240884304047
+            },
+            {
+              "word": "have",
+              "start_s": 0.46,
+              "end_s": 0.58,
+              "probability": 0.99819415807724
+            },
+            {
+              "word": "to",
+              "start_s": 0.58,
+              "end_s": 0.72,
+              "probability": 0.9991499185562134
+            },
+            {
+              "word": "rush.",
+              "start_s": 0.72,
+              "end_s": 1.06,
+              "probability": 0.9990209341049194
+            },
+            {
+              "word": "Take",
+              "start_s": 1.48,
+              "end_s": 1.64,
+              "probability": 0.9920439720153809
+            },
+            {
+              "word": "a",
+              "start_s": 1.64,
+              "end_s": 1.82,
+              "probability": 0.9969415068626404
+            },
+            {
+              "word": "slow",
+              "start_s": 1.82,
+              "end_s": 2.06,
+              "probability": 0.9937615990638733
+            },
+            {
+              "word": "breath",
+              "start_s": 2.06,
+              "end_s": 2.4,
+              "probability": 0.9843969941139221
+            },
+            {
+              "word": "and",
+              "start_s": 2.4,
+              "end_s": 2.86,
+              "probability": 0.8355218768119812
+            },
+            {
+              "word": "stay",
+              "start_s": 2.86,
+              "end_s": 3.2,
+              "probability": 0.9969313144683838
+            },
+            {
+              "word": "here",
+              "start_s": 3.2,
+              "end_s": 3.46,
+              "probability": 0.981662929058075
+            },
+            {
+              "word": "with",
+              "start_s": 3.46,
+              "end_s": 3.7,
+              "probability": 0.9969915151596069
+            },
+            {
+              "word": "me",
+              "start_s": 3.7,
+              "end_s": 3.96,
+              "probability": 0.9977648258209229
+            },
+            {
+              "word": "for",
+              "start_s": 3.96,
+              "end_s": 4.22,
+              "probability": 0.9855043292045593
+            },
+            {
+              "word": "a",
+              "start_s": 4.22,
+              "end_s": 4.34,
+              "probability": 0.9982842803001404
+            },
+            {
+              "word": "moment.",
+              "start_s": 4.34,
+              "end_s": 4.62,
+              "probability": 0.9976134300231934
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 17,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "you",
+          "don't",
+          "have",
+          "to",
+          "rush",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "and",
+          "stay",
+          "here",
+          "with",
+          "me",
+          "for",
+          "a",
+          "moment"
+        ],
+        "hypothesis_words": [
+          "you",
+          "don't",
+          "have",
+          "to",
+          "rush",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "and",
+          "stay",
+          "here",
+          "with",
+          "me",
+          "for",
+          "a",
+          "moment"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 18,
+        "hypothesis_word_count": 18,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "you",
+          "do",
+          "not",
+          "have",
+          "to",
+          "rush",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "and",
+          "stay",
+          "here",
+          "with",
+          "me",
+          "for",
+          "a",
+          "moment"
+        ],
+        "hypothesis_words": [
+          "you",
+          "do",
+          "not",
+          "have",
+          "to",
+          "rush",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "and",
+          "stay",
+          "here",
+          "with",
+          "me",
+          "for",
+          "a",
+          "moment"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.522844229999464
+    },
+    {
+      "id": "asmr_t2_seed47_base",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t2_seed47_base.wav",
+      "audio_sha256": "6b7c65cec48b6252d6c7cec39479a419a1f697c1e678dbe58759f99c75fb2af3",
+      "expected_text": "You don't have to rush. Take a slow breath, and stay here with me for a moment.",
+      "transcript": "You don't have to rush. Take a slow breath and stay here with me for a moment.",
+      "segments": [
+        {
+          "text": "You don't have to rush.",
+          "start_s": 0.0,
+          "end_s": 1.18,
+          "avg_logprob": -0.20088490962982178,
+          "no_speech_prob": 0.013714100234210491,
+          "compression_ratio": 1.0263157894736843,
+          "words": [
+            {
+              "word": "You",
+              "start_s": 0.0,
+              "end_s": 0.12,
+              "probability": 0.6720480918884277
+            },
+            {
+              "word": "don't",
+              "start_s": 0.12,
+              "end_s": 0.5,
+              "probability": 0.9957711696624756
+            },
+            {
+              "word": "have",
+              "start_s": 0.5,
+              "end_s": 0.66,
+              "probability": 0.9978552460670471
+            },
+            {
+              "word": "to",
+              "start_s": 0.66,
+              "end_s": 0.86,
+              "probability": 0.9986498951911926
+            },
+            {
+              "word": "rush.",
+              "start_s": 0.86,
+              "end_s": 1.18,
+              "probability": 0.99856036901474
+            }
+          ]
+        },
+        {
+          "text": "Take a slow breath and stay here with me for a moment.",
+          "start_s": 1.66,
+          "end_s": 4.7,
+          "avg_logprob": -0.20088490962982178,
+          "no_speech_prob": 0.013714100234210491,
+          "compression_ratio": 1.0263157894736843,
+          "words": [
+            {
+              "word": "Take",
+              "start_s": 1.66,
+              "end_s": 1.8,
+              "probability": 0.9943174719810486
+            },
+            {
+              "word": "a",
+              "start_s": 1.8,
+              "end_s": 1.98,
+              "probability": 0.9970773458480835
+            },
+            {
+              "word": "slow",
+              "start_s": 1.98,
+              "end_s": 2.2,
+              "probability": 0.991363525390625
+            },
+            {
+              "word": "breath",
+              "start_s": 2.2,
+              "end_s": 2.54,
+              "probability": 0.986478328704834
+            },
+            {
+              "word": "and",
+              "start_s": 2.54,
+              "end_s": 3.1,
+              "probability": 0.7404693365097046
+            },
+            {
+              "word": "stay",
+              "start_s": 3.1,
+              "end_s": 3.42,
+              "probability": 0.9966873526573181
+            },
+            {
+              "word": "here",
+              "start_s": 3.42,
+              "end_s": 3.68,
+              "probability": 0.9833667278289795
+            },
+            {
+              "word": "with",
+              "start_s": 3.68,
+              "end_s": 3.9,
+              "probability": 0.9979962110519409
+            },
+            {
+              "word": "me",
+              "start_s": 3.9,
+              "end_s": 4.1,
+              "probability": 0.9992197751998901
+            },
+            {
+              "word": "for",
+              "start_s": 4.1,
+              "end_s": 4.32,
+              "probability": 0.9957310557365417
+            },
+            {
+              "word": "a",
+              "start_s": 4.32,
+              "end_s": 4.4,
+              "probability": 0.9985554814338684
+            },
+            {
+              "word": "moment.",
+              "start_s": 4.4,
+              "end_s": 4.7,
+              "probability": 0.9985699653625488
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 17,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "you",
+          "don't",
+          "have",
+          "to",
+          "rush",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "and",
+          "stay",
+          "here",
+          "with",
+          "me",
+          "for",
+          "a",
+          "moment"
+        ],
+        "hypothesis_words": [
+          "you",
+          "don't",
+          "have",
+          "to",
+          "rush",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "and",
+          "stay",
+          "here",
+          "with",
+          "me",
+          "for",
+          "a",
+          "moment"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 18,
+        "hypothesis_word_count": 18,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "you",
+          "do",
+          "not",
+          "have",
+          "to",
+          "rush",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "and",
+          "stay",
+          "here",
+          "with",
+          "me",
+          "for",
+          "a",
+          "moment"
+        ],
+        "hypothesis_words": [
+          "you",
+          "do",
+          "not",
+          "have",
+          "to",
+          "rush",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "and",
+          "stay",
+          "here",
+          "with",
+          "me",
+          "for",
+          "a",
+          "moment"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.2936544369986223
+    },
+    {
+      "id": "asmr_t2_seed47_fit",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t2_seed47_fit.wav",
+      "audio_sha256": "c17c8f5aff13776c64a2a9e151e7ce08d901be1a774270dad76e984ab4b7965a",
+      "expected_text": "You don't have to rush. Take a slow breath, and stay here with me for a moment.",
+      "transcript": "You don't have to rush. Take a slow breath and stay here with me for a moment.",
+      "segments": [
+        {
+          "text": "You don't have to rush.",
+          "start_s": 0.0,
+          "end_s": 1.22,
+          "avg_logprob": -0.2081892442703247,
+          "no_speech_prob": 0.014049064368009567,
+          "compression_ratio": 1.0263157894736843,
+          "words": [
+            {
+              "word": "You",
+              "start_s": 0.0,
+              "end_s": 0.12,
+              "probability": 0.7709953188896179
+            },
+            {
+              "word": "don't",
+              "start_s": 0.12,
+              "end_s": 0.5,
+              "probability": 0.9948210418224335
+            },
+            {
+              "word": "have",
+              "start_s": 0.5,
+              "end_s": 0.64,
+              "probability": 0.9987078905105591
+            },
+            {
+              "word": "to",
+              "start_s": 0.64,
+              "end_s": 0.84,
+              "probability": 0.9972018003463745
+            },
+            {
+              "word": "rush.",
+              "start_s": 0.84,
+              "end_s": 1.22,
+              "probability": 0.9995214939117432
+            }
+          ]
+        },
+        {
+          "text": "Take a slow breath and stay here with me for a moment.",
+          "start_s": 1.66,
+          "end_s": 4.28,
+          "avg_logprob": -0.2081892442703247,
+          "no_speech_prob": 0.014049064368009567,
+          "compression_ratio": 1.0263157894736843,
+          "words": [
+            {
+              "word": "Take",
+              "start_s": 1.66,
+              "end_s": 1.76,
+              "probability": 0.99366295337677
+            },
+            {
+              "word": "a",
+              "start_s": 1.76,
+              "end_s": 1.9,
+              "probability": 0.9986819624900818
+            },
+            {
+              "word": "slow",
+              "start_s": 1.9,
+              "end_s": 2.06,
+              "probability": 0.9962320923805237
+            },
+            {
+              "word": "breath",
+              "start_s": 2.06,
+              "end_s": 2.36,
+              "probability": 0.9853319525718689
+            },
+            {
+              "word": "and",
+              "start_s": 2.36,
+              "end_s": 2.82,
+              "probability": 0.8724349141120911
+            },
+            {
+              "word": "stay",
+              "start_s": 2.82,
+              "end_s": 3.08,
+              "probability": 0.9969220757484436
+            },
+            {
+              "word": "here",
+              "start_s": 3.08,
+              "end_s": 3.3,
+              "probability": 0.9717565774917603
+            },
+            {
+              "word": "with",
+              "start_s": 3.3,
+              "end_s": 3.5,
+              "probability": 0.9946476817131042
+            },
+            {
+              "word": "me",
+              "start_s": 3.5,
+              "end_s": 3.68,
+              "probability": 0.9990345239639282
+            },
+            {
+              "word": "for",
+              "start_s": 3.68,
+              "end_s": 3.86,
+              "probability": 0.9970787763595581
+            },
+            {
+              "word": "a",
+              "start_s": 3.86,
+              "end_s": 3.96,
+              "probability": 0.9989570379257202
+            },
+            {
+              "word": "moment.",
+              "start_s": 3.96,
+              "end_s": 4.28,
+              "probability": 0.9975948929786682
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 17,
+        "hypothesis_word_count": 17,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "you",
+          "don't",
+          "have",
+          "to",
+          "rush",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "and",
+          "stay",
+          "here",
+          "with",
+          "me",
+          "for",
+          "a",
+          "moment"
+        ],
+        "hypothesis_words": [
+          "you",
+          "don't",
+          "have",
+          "to",
+          "rush",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "and",
+          "stay",
+          "here",
+          "with",
+          "me",
+          "for",
+          "a",
+          "moment"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 18,
+        "hypothesis_word_count": 18,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "you",
+          "do",
+          "not",
+          "have",
+          "to",
+          "rush",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "and",
+          "stay",
+          "here",
+          "with",
+          "me",
+          "for",
+          "a",
+          "moment"
+        ],
+        "hypothesis_words": [
+          "you",
+          "do",
+          "not",
+          "have",
+          "to",
+          "rush",
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "and",
+          "stay",
+          "here",
+          "with",
+          "me",
+          "for",
+          "a",
+          "moment"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.5427531940003973
+    },
+    {
+      "id": "asmr_t3_seed31_base",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t3_seed31_base.wav",
+      "audio_sha256": "4a7c2b497a19659b8a7e417391e5ab909e5acdd824b650be7a5d2578245c01d8",
+      "expected_text": "I wasn't sure you would come back. But I'm glad you're here.",
+      "transcript": "I wasn't sure you would come back, but I'm glad you're here.",
+      "segments": [
+        {
+          "text": "I wasn't sure you would come back, but I'm glad you're here.",
+          "start_s": 0.0,
+          "end_s": 3.18,
+          "avg_logprob": -0.17354358956217766,
+          "no_speech_prob": 0.023057350888848305,
+          "compression_ratio": 0.9230769230769231,
+          "words": [
+            {
+              "word": "I",
+              "start_s": 0.0,
+              "end_s": 0.2,
+              "probability": 0.9447643756866455
+            },
+            {
+              "word": "wasn't",
+              "start_s": 0.2,
+              "end_s": 0.64,
+              "probability": 0.9957164227962494
+            },
+            {
+              "word": "sure",
+              "start_s": 0.64,
+              "end_s": 0.78,
+              "probability": 0.9989978671073914
+            },
+            {
+              "word": "you",
+              "start_s": 0.78,
+              "end_s": 1.0,
+              "probability": 0.9814820289611816
+            },
+            {
+              "word": "would",
+              "start_s": 1.0,
+              "end_s": 1.14,
+              "probability": 0.9110432267189026
+            },
+            {
+              "word": "come",
+              "start_s": 1.14,
+              "end_s": 1.36,
+              "probability": 0.9954202175140381
+            },
+            {
+              "word": "back,",
+              "start_s": 1.36,
+              "end_s": 1.68,
+              "probability": 0.9990447163581848
+            },
+            {
+              "word": "but",
+              "start_s": 2.18,
+              "end_s": 2.32,
+              "probability": 0.9871916770935059
+            },
+            {
+              "word": "I'm",
+              "start_s": 2.32,
+              "end_s": 2.48,
+              "probability": 0.9870780408382416
+            },
+            {
+              "word": "glad",
+              "start_s": 2.48,
+              "end_s": 2.66,
+              "probability": 0.9998323917388916
+            },
+            {
+              "word": "you're",
+              "start_s": 2.66,
+              "end_s": 2.94,
+              "probability": 0.9928471744060516
+            },
+            {
+              "word": "here.",
+              "start_s": 2.94,
+              "end_s": 3.18,
+              "probability": 0.9986881613731384
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "wasn't",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i'm",
+          "glad",
+          "you're",
+          "here"
+        ],
+        "hypothesis_words": [
+          "i",
+          "wasn't",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i'm",
+          "glad",
+          "you're",
+          "here"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 15,
+        "hypothesis_word_count": 15,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "was",
+          "not",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i",
+          "am",
+          "glad",
+          "you",
+          "are",
+          "here"
+        ],
+        "hypothesis_words": [
+          "i",
+          "was",
+          "not",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i",
+          "am",
+          "glad",
+          "you",
+          "are",
+          "here"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.3203086480007187
+    },
+    {
+      "id": "asmr_t3_seed31_fit",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t3_seed31_fit.wav",
+      "audio_sha256": "d8ea24fccb5626dd286e938bc5694738705949f197b9075797aca2513a5ca058",
+      "expected_text": "I wasn't sure you would come back. But I'm glad you're here.",
+      "transcript": "I wasn't sure you would come back, but I'm glad you're here.",
+      "segments": [
+        {
+          "text": "I wasn't sure you would come back, but I'm glad you're here.",
+          "start_s": 0.0,
+          "end_s": 3.7,
+          "avg_logprob": -0.19832103103399276,
+          "no_speech_prob": 0.047808513045310974,
+          "compression_ratio": 0.9230769230769231,
+          "words": [
+            {
+              "word": "I",
+              "start_s": 0.0,
+              "end_s": 0.22,
+              "probability": 0.8714500665664673
+            },
+            {
+              "word": "wasn't",
+              "start_s": 0.22,
+              "end_s": 0.58,
+              "probability": 0.9923740029335022
+            },
+            {
+              "word": "sure",
+              "start_s": 0.58,
+              "end_s": 0.78,
+              "probability": 0.9985552430152893
+            },
+            {
+              "word": "you",
+              "start_s": 0.78,
+              "end_s": 0.94,
+              "probability": 0.8928827047348022
+            },
+            {
+              "word": "would",
+              "start_s": 0.94,
+              "end_s": 1.1,
+              "probability": 0.9515045881271362
+            },
+            {
+              "word": "come",
+              "start_s": 1.1,
+              "end_s": 1.3,
+              "probability": 0.9955561757087708
+            },
+            {
+              "word": "back,",
+              "start_s": 1.3,
+              "end_s": 1.66,
+              "probability": 0.9992269277572632
+            },
+            {
+              "word": "but",
+              "start_s": 2.32,
+              "end_s": 2.62,
+              "probability": 0.9873294830322266
+            },
+            {
+              "word": "I'm",
+              "start_s": 2.62,
+              "end_s": 2.82,
+              "probability": 0.9810787737369537
+            },
+            {
+              "word": "glad",
+              "start_s": 2.82,
+              "end_s": 3.08,
+              "probability": 0.9992775321006775
+            },
+            {
+              "word": "you're",
+              "start_s": 3.08,
+              "end_s": 3.42,
+              "probability": 0.994265079498291
+            },
+            {
+              "word": "here.",
+              "start_s": 3.42,
+              "end_s": 3.7,
+              "probability": 0.9982958436012268
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "wasn't",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i'm",
+          "glad",
+          "you're",
+          "here"
+        ],
+        "hypothesis_words": [
+          "i",
+          "wasn't",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i'm",
+          "glad",
+          "you're",
+          "here"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 15,
+        "hypothesis_word_count": 15,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "was",
+          "not",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i",
+          "am",
+          "glad",
+          "you",
+          "are",
+          "here"
+        ],
+        "hypothesis_words": [
+          "i",
+          "was",
+          "not",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i",
+          "am",
+          "glad",
+          "you",
+          "are",
+          "here"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.425354167999103
+    },
+    {
+      "id": "asmr_t3_seed47_base",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t3_seed47_base.wav",
+      "audio_sha256": "68df6a2a2b67bb7bc253b91a50b12614a68d91f1dccaf2ce0ade5d5777e5621d",
+      "expected_text": "I wasn't sure you would come back. But I'm glad you're here.",
+      "transcript": "I wasn't sure you would come back, but I'm glad you're here.",
+      "segments": [
+        {
+          "text": "I wasn't sure you would come back, but I'm glad you're here.",
+          "start_s": 0.0,
+          "end_s": 3.46,
+          "avg_logprob": -0.2270078644156456,
+          "no_speech_prob": 0.018083641305565834,
+          "compression_ratio": 0.9230769230769231,
+          "words": [
+            {
+              "word": "I",
+              "start_s": 0.0,
+              "end_s": 0.2,
+              "probability": 0.9304638504981995
+            },
+            {
+              "word": "wasn't",
+              "start_s": 0.2,
+              "end_s": 0.58,
+              "probability": 0.9961569607257843
+            },
+            {
+              "word": "sure",
+              "start_s": 0.58,
+              "end_s": 0.78,
+              "probability": 0.9988999366760254
+            },
+            {
+              "word": "you",
+              "start_s": 0.78,
+              "end_s": 0.96,
+              "probability": 0.9858457446098328
+            },
+            {
+              "word": "would",
+              "start_s": 0.96,
+              "end_s": 1.08,
+              "probability": 0.7667691111564636
+            },
+            {
+              "word": "come",
+              "start_s": 1.08,
+              "end_s": 1.26,
+              "probability": 0.9969664216041565
+            },
+            {
+              "word": "back,",
+              "start_s": 1.26,
+              "end_s": 1.56,
+              "probability": 0.9993466734886169
+            },
+            {
+              "word": "but",
+              "start_s": 2.0,
+              "end_s": 2.48,
+              "probability": 0.9808611273765564
+            },
+            {
+              "word": "I'm",
+              "start_s": 2.48,
+              "end_s": 2.66,
+              "probability": 0.9805948138237
+            },
+            {
+              "word": "glad",
+              "start_s": 2.66,
+              "end_s": 2.9,
+              "probability": 0.9995385408401489
+            },
+            {
+              "word": "you're",
+              "start_s": 2.9,
+              "end_s": 3.22,
+              "probability": 0.9947819411754608
+            },
+            {
+              "word": "here.",
+              "start_s": 3.22,
+              "end_s": 3.46,
+              "probability": 0.9989575147628784
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "wasn't",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i'm",
+          "glad",
+          "you're",
+          "here"
+        ],
+        "hypothesis_words": [
+          "i",
+          "wasn't",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i'm",
+          "glad",
+          "you're",
+          "here"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 15,
+        "hypothesis_word_count": 15,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "was",
+          "not",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i",
+          "am",
+          "glad",
+          "you",
+          "are",
+          "here"
+        ],
+        "hypothesis_words": [
+          "i",
+          "was",
+          "not",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i",
+          "am",
+          "glad",
+          "you",
+          "are",
+          "here"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.172920602000886
+    },
+    {
+      "id": "asmr_t3_seed47_fit",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adaptation/asmr_t3_seed47_fit.wav",
+      "audio_sha256": "25bff318b5a8147b8ae0d67fdff3b0a9980a6a218b08b7de1f72db5dec81aedb",
+      "expected_text": "I wasn't sure you would come back. But I'm glad you're here.",
+      "transcript": "I wasn't sure you would come back, but I'm glad you're here.",
+      "segments": [
+        {
+          "text": "I wasn't sure you would come back, but I'm glad you're here.",
+          "start_s": 0.0,
+          "end_s": 3.08,
+          "avg_logprob": -0.1941917806863785,
+          "no_speech_prob": 0.02777726575732231,
+          "compression_ratio": 0.9230769230769231,
+          "words": [
+            {
+              "word": "I",
+              "start_s": 0.0,
+              "end_s": 0.22,
+              "probability": 0.9443340301513672
+            },
+            {
+              "word": "wasn't",
+              "start_s": 0.22,
+              "end_s": 0.56,
+              "probability": 0.995156854391098
+            },
+            {
+              "word": "sure",
+              "start_s": 0.56,
+              "end_s": 0.68,
+              "probability": 0.9992666840553284
+            },
+            {
+              "word": "you",
+              "start_s": 0.68,
+              "end_s": 0.84,
+              "probability": 0.9901372194290161
+            },
+            {
+              "word": "would",
+              "start_s": 0.84,
+              "end_s": 0.96,
+              "probability": 0.9567028880119324
+            },
+            {
+              "word": "come",
+              "start_s": 0.96,
+              "end_s": 1.14,
+              "probability": 0.9977151155471802
+            },
+            {
+              "word": "back,",
+              "start_s": 1.14,
+              "end_s": 1.46,
+              "probability": 0.9989221096038818
+            },
+            {
+              "word": "but",
+              "start_s": 1.88,
+              "end_s": 2.26,
+              "probability": 0.9904896020889282
+            },
+            {
+              "word": "I'm",
+              "start_s": 2.26,
+              "end_s": 2.4,
+              "probability": 0.9817093312740326
+            },
+            {
+              "word": "glad",
+              "start_s": 2.4,
+              "end_s": 2.6,
+              "probability": 0.9997521042823792
+            },
+            {
+              "word": "you're",
+              "start_s": 2.6,
+              "end_s": 2.86,
+              "probability": 0.9958536028862
+            },
+            {
+              "word": "here.",
+              "start_s": 2.86,
+              "end_s": 3.08,
+              "probability": 0.9987826943397522
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "wasn't",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i'm",
+          "glad",
+          "you're",
+          "here"
+        ],
+        "hypothesis_words": [
+          "i",
+          "wasn't",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i'm",
+          "glad",
+          "you're",
+          "here"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 15,
+        "hypothesis_word_count": 15,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "was",
+          "not",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i",
+          "am",
+          "glad",
+          "you",
+          "are",
+          "here"
+        ],
+        "hypothesis_words": [
+          "i",
+          "was",
+          "not",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i",
+          "am",
+          "glad",
+          "you",
+          "are",
+          "here"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.3591214640000544
+    }
+  ],
+  "peak_rss_mib": 672.45703125
+}

@@ -1,0 +1,12 @@
+# Tested evaluation additions on the CPU VM, Python 3.12.14.
+# Install nano-common and CPU Torch/Torchaudio first. The recorded run uses
+# webrtcvad-wheels, which exposes webrtcvad; install resemblyzer --no-deps to
+# avoid resolving its separate source-build webrtcvad requirement.
+faster-whisper==1.2.1
+ctranslate2==4.8.2
+av==16.1.0
+praat-parselmouth==0.4.7
+onnxruntime==1.29.0
+webrtcvad-wheels==2.0.14
+pytest==9.1.1
+# resemblyzer==0.1.4 (install --no-deps after dependencies above)

@@ -1,0 +1,11 @@
+{
+  "human_listening_completed": false,
+  "quality_target_achieved": false,
+  "promoted_profiles": [],
+  "asmr_adapter": {
+    "status": "not_promoted_identity_proxy_regression",
+    "sha256": "5125c57484c8228bfe6f86c4b729523fb3db8ed6126a7fb264961ec23885a5eb"
+  },
+  "asmr_reference": "natural retained as experimental baseline; clean trades identity for cleanliness",
+  "harvey_temperature_06": "experimental content candidate; slight speaker proxy regression; listening pending"
+}

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "asmr_raw_seed31",
+    "reference_id": "asmr_raw",
+    "text": "Take a quiet moment and let yourself relax.",
+    "seed": 31,
+    "acoustic_seed": 10031,
+    "n_cfm_steps": 2,
+    "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_raw_seed31.wav",
+    "sha256": "d63e59529cd47d4df64ca9110b08b92a1a7f2deca94c400f7feb2396314fee08",
+    "duration_s": 2.72,
+    "elapsed_s": 6.037257117999616,
+    "speech_tokens": 68,
+    "sample_rate": 24000,
+    "memory": {
+      "rusage_peak_rss_mib": 1878.94921875,
+      "proc_status": {
+        "VmSize": "2625232 kB",
+        "VmHWM": "1924044 kB",
+        "VmRSS": "1895900 kB"
+      }
+    },
+    "voice": "asmr7",
+    "source_group": "new_text_asmr7"
+  },
+  {
+    "id": "asmr_natural_seed31",
+    "reference_id": "asmr_natural",
+    "text": "Take a quiet moment and let yourself relax.",
+    "seed": 31,
+    "acoustic_seed": 10031,
+    "n_cfm_steps": 2,
+    "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_natural_seed31.wav",
+    "sha256": "6e99e6bfdeb3e2ef918e2de3726970d19702a04b6b1df12e98118388b90b3800",
+    "duration_s": 2.72,
+    "elapsed_s": 6.016100302000268,
+    "speech_tokens": 68,
+    "sample_rate": 24000,
+    "memory": {
+      "rusage_peak_rss_mib": 1930.0546875,
+      "proc_status": {
+        "VmSize": "2625232 kB",
+        "VmHWM": "1976376 kB",
+        "VmRSS": "1895900 kB"
+      }
+    },
+    "voice": "asmr7",
+    "source_group": "new_text_asmr7"
+  },
+  {
+    "id": "asmr_clean_seed31",
+    "reference_id": "asmr_clean",
+    "text": "Take a quiet moment and let yourself relax.",
+    "seed": 31,
+    "acoustic_seed": 10031,
+    "n_cfm_steps": 2,
+    "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_clean_seed31.wav",
+    "sha256": "38f2e2acb1ca40ca2e2b199d35695845272c872024b85a21590d7e9ece26f25f",
+    "duration_s": 2.96,
+    "elapsed_s": 6.091662590000851,
+    "speech_tokens": 74,
+    "sample_rate": 24000,
+    "memory": {
+      "rusage_peak_rss_mib": 1933.87109375,
+      "proc_status": {
+        "VmSize": "2675856 kB",
+        "VmHWM": "1980284 kB",
+        "VmRSS": "1923552 kB"
+      }
+    },
+    "voice": "asmr7",
+    "source_group": "new_text_asmr7"
+  },
+  {
+    "id": "harvey_raw_seed31",
+    "reference_id": "harvey_raw",
+    "text": "Winning starts with preparation. Make your next move count.",
+    "seed": 31,
+    "acoustic_seed": 10031,
+    "n_cfm_steps": 2,
+    "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_raw_seed31.wav",
+    "sha256": "86068624882c26376b62446e419c8311f32a67fcf34e2b81d39f11b74be78945",
+    "duration_s": 2.94,
+    "elapsed_s": 5.1758600209996075,
+    "speech_tokens": 74,
+    "sample_rate": 24000,
+    "memory": {
+      "rusage_peak_rss_mib": 1933.87109375,
+      "proc_status": {
+        "VmSize": "2709592 kB",
+        "VmHWM": "1980284 kB",
+        "VmRSS": "1934244 kB"
+      }
+    },
+    "voice": "harvey",
+    "source_group": "new_text_harvey"
+  },
+  {
+    "id": "harvey_natural_seed31",
+    "reference_id": "harvey_natural",
+    "text": "Winning starts with preparation. Make your next move count.",
+    "seed": 31,
+    "acoustic_seed": 10031,
+    "n_cfm_steps": 2,
+    "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_natural_seed31.wav",
+    "sha256": "84387430b3137d460cd949b9048a87d6422e1cef007faf2c511c4182993d7b73",
+    "duration_s": 2.94,
+    "elapsed_s": 5.206851048000317,
+    "speech_tokens": 74,
+    "sample_rate": 24000,
+    "memory": {
+      "rusage_peak_rss_mib": 1933.87109375,
+      "proc_status": {
+        "VmSize": "2726916 kB",
+        "VmHWM": "1980284 kB",
+        "VmRSS": "1951568 kB"
+      }
+    },
+    "voice": "harvey",
+    "source_group": "new_text_harvey"
+  },
+  {
+    "id": "harvey_clean_seed31",
+    "reference_id": "harvey_clean",
+    "text": "Winning starts with preparation. Make your next move count.",
+    "seed": 31,
+    "acoustic_seed": 10031,
+    "n_cfm_steps": 2,
+    "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_clean_seed31.wav",
+    "sha256": "aa31f1d12c9cde42c61c118d89cb75ff28d223dbfa70f10f60a29afc535b73b9",
+    "duration_s": 3.38,
+    "elapsed_s": 5.68975447000048,
+    "speech_tokens": 85,
+    "sample_rate": 24000,
+    "memory": {
+      "rusage_peak_rss_mib": 1933.87109375,
+      "proc_status": {
+        "VmSize": "2757068 kB",
+        "VmHWM": "1980284 kB",
+        "VmRSS": "1958912 kB"
+      }
+    },
+    "voice": "harvey",
+    "source_group": "new_text_harvey"
+  },
+  {
+    "id": "asmr_raw_seed47",
+    "reference_id": "asmr_raw",
+    "text": "Take a quiet moment and let yourself relax.",
+    "seed": 47,
+    "acoustic_seed": 10047,
+    "n_cfm_steps": 2,
+    "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_raw_seed47.wav",
+    "sha256": "9014dc94a23605f56333a854cb786aed94cd268cb63abbe9f27104f38aa793f4",
+    "duration_s": 2.68,
+    "elapsed_s": 5.856713743998625,
+    "speech_tokens": 67,
+    "sample_rate": 24000,
+    "memory": {
+      "rusage_peak_rss_mib": 1969.04296875,
+      "proc_status": {
+        "VmSize": "2763376 kB",
+        "VmHWM": "2016300 kB",
+        "VmRSS": "1943812 kB"
+      }
+    },
+    "voice": "asmr7",
+    "source_group": "new_text_asmr7"
+  },
+  {
+    "id": "asmr_natural_seed47",
+    "reference_id": "asmr_natural",
+    "text": "Take a quiet moment and let yourself relax.",
+    "seed": 47,
+    "acoustic_seed": 10047,
+    "n_cfm_steps": 2,
+    "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_natural_seed47.wav",
+    "sha256": "f5f0da256595fc08ce7bc1ecf7470e057d44177f0bc96f6f88533bf84e89e20f",
+    "duration_s": 2.96,
+    "elapsed_s": 6.051642415999595,
+    "speech_tokens": 74,
+    "sample_rate": 24000,
+    "memory": {
+      "rusage_peak_rss_mib": 1976.9453125,
+      "proc_status": {
+        "VmSize": "2765896 kB",
+        "VmHWM": "2024392 kB",
+        "VmRSS": "1946332 kB"
+      }
+    },
+    "voice": "asmr7",
+    "source_group": "new_text_asmr7"
+  },
+  {
+    "id": "asmr_clean_seed47",
+    "reference_id": "asmr_clean",
+    "text": "Take a quiet moment and let yourself relax.",
+    "seed": 47,
+    "acoustic_seed": 10047,
+    "n_cfm_steps": 2,
+    "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_clean_seed47.wav",
+    "sha256": "380226f509f21eef61aa7afabce240052d0ac2d614aaa6103e49efa8496d1a69",
+    "duration_s": 3.04,
+    "elapsed_s": 6.2459958370000095,
+    "speech_tokens": 76,
+    "sample_rate": 24000,
+    "memory": {
+      "rusage_peak_rss_mib": 1978.32421875,
+      "proc_status": {
+        "VmSize": "2806664 kB",
+        "VmHWM": "2025804 kB",
+        "VmRSS": "1964468 kB"
+      }
+    },
+    "voice": "asmr7",
+    "source_group": "new_text_asmr7"
+  },
+  {
+    "id": "harvey_raw_seed47",
+    "reference_id": "harvey_raw",
+    "text": "Winning starts with preparation. Make your next move count.",
+    "seed": 47,
+    "acoustic_seed": 10047,
+    "n_cfm_steps": 2,
+    "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_raw_seed47.wav",
+    "sha256": "7f89c102525cbf4db9d1d7b443fd2a5de452dc78e1677294f88b9a5f7ea21289",
+    "duration_s": 3.34,
+    "elapsed_s": 5.2757153370002925,
+    "speech_tokens": 84,
+    "sample_rate": 24000,
+    "memory": {
+      "rusage_peak_rss_mib": 1978.32421875,
+      "proc_status": {
+        "VmSize": "2841068 kB",
+        "VmHWM": "2025804 kB",
+        "VmRSS": "1977440 kB"
+      }
+    },
+    "voice": "harvey",
+    "source_group": "new_text_harvey"
+  },
+  {
+    "id": "harvey_natural_seed47",
+    "reference_id": "harvey_natural",
+    "text": "Winning starts with preparation. Make your next move count.",
+    "seed": 47,
+    "acoustic_seed": 10047,
+    "n_cfm_steps": 2,
+    "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_natural_seed47.wav",
+    "sha256": "691b14911de3c4b44004d1626e716cc79b4c65e001b57f7ae0c2df9f8311bfe9",
+    "duration_s": 3.1,
+    "elapsed_s": 5.062583715998699,
+    "speech_tokens": 78,
+    "sample_rate": 24000,
+    "memory": {
+      "rusage_peak_rss_mib": 1978.32421875,
+      "proc_status": {
+        "VmSize": "2876364 kB",
+        "VmHWM": "2025804 kB",
+        "VmRSS": "1989824 kB"
+      }
+    },
+    "voice": "harvey",
+    "source_group": "new_text_harvey"
+  },
+  {
+    "id": "harvey_clean_seed47",
+    "reference_id": "harvey_clean",
+    "text": "Winning starts with preparation. Make your next move count.",
+    "seed": 47,
+    "acoustic_seed": 10047,
+    "n_cfm_steps": 2,
+    "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_clean_seed47.wav",
+    "sha256": "912a847b9eb1b44cc623d69f7bf75ba762f36a3e764699a6c75c2c85a1633fc1",
+    "duration_s": 3.1,
+    "elapsed_s": 5.132576198000606,
+    "speech_tokens": 78,
+    "sample_rate": 24000,
+    "memory": {
+      "rusage_peak_rss_mib": 1978.32421875,
+      "proc_status": {
+        "VmSize": "2869460 kB",
+        "VmHWM": "2025804 kB",
+        "VmRSS": "1982920 kB"
+      }
+    },
+    "voice": "harvey",
+    "source_group": "new_text_harvey"
+  }
+]

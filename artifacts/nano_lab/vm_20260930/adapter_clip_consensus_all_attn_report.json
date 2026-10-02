@@ -1,0 +1,349 @@
+{
+  "adoption": {
+    "accepted_for_audio_evaluation": true,
+    "reason": "heldout loss improved beyond min_delta",
+    "release_status": "unreviewed",
+    "speaker_id": "asmr7"
+  },
+  "best_epoch": 6,
+  "best_valid_loss": 4.37611159695288,
+  "checkpoint": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/adapter_clip_consensus_all_attn.pt",
+  "checkpoint_written": true,
+  "config": {
+    "alpha": 8.0,
+    "dropout": 0.05,
+    "module_shapes": {
+      "h.0.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.0.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.1.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.1.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.10.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.10.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.11.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.11.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.2.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.2.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.3.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.3.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.4.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.4.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.5.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.5.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.6.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.6.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.7.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.7.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.8.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.8.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      },
+      "h.9.attn.c_attn": {
+        "in_features": 768,
+        "out_features": 2304
+      },
+      "h.9.attn.c_proj": {
+        "in_features": 768,
+        "out_features": 768
+      }
+    },
+    "modules": [
+      "h.0.attn.c_attn",
+      "h.0.attn.c_proj",
+      "h.1.attn.c_attn",
+      "h.1.attn.c_proj",
+      "h.2.attn.c_attn",
+      "h.2.attn.c_proj",
+      "h.3.attn.c_attn",
+      "h.3.attn.c_proj",
+      "h.4.attn.c_attn",
+      "h.4.attn.c_proj",
+      "h.5.attn.c_attn",
+      "h.5.attn.c_proj",
+      "h.6.attn.c_attn",
+      "h.6.attn.c_proj",
+      "h.7.attn.c_attn",
+      "h.7.attn.c_proj",
+      "h.8.attn.c_attn",
+      "h.8.attn.c_proj",
+      "h.9.attn.c_attn",
+      "h.9.attn.c_proj",
+      "h.10.attn.c_attn",
+      "h.10.attn.c_proj",
+      "h.11.attn.c_attn",
+      "h.11.attn.c_proj"
+    ],
+    "rank": 4
+  },
+  "elapsed_seconds": 221.01349623100032,
+  "format": "nano_t3_adaptation_report_v1",
+  "history": [
+    {
+      "epoch": 0,
+      "objective": "initial heldout loss before optimizer steps",
+      "train": null,
+      "valid": {
+        "correct": 65,
+        "loss": 4.909707927287406,
+        "perplexity": 135.59980362166084,
+        "token_accuracy": 0.14192139737991266,
+        "tokens": 458
+      }
+    },
+    {
+      "adapter_l2": 1e-05,
+      "epoch": 1,
+      "kl_coef": 1.0,
+      "kl_temperature": 1.0,
+      "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+      "train": {
+        "correct": 114,
+        "loss": 5.160348325481996,
+        "perplexity": 174.22513209002543,
+        "token_accuracy": 0.08079376328844791,
+        "tokens": 1411
+      },
+      "train_kl": 0.05218694726304506,
+      "valid": {
+        "correct": 68,
+        "loss": 4.576762572126097,
+        "perplexity": 97.19920885934289,
+        "token_accuracy": 0.14847161572052403,
+        "tokens": 458
+      }
+    },
+    {
+      "adapter_l2": 1e-05,
+      "epoch": 2,
+      "kl_coef": 1.0,
+      "kl_temperature": 1.0,
+      "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+      "train": {
+        "correct": 146,
+        "loss": 4.862500776389573,
+        "perplexity": 129.34726657331893,
+        "token_accuracy": 0.1034727143869596,
+        "tokens": 1411
+      },
+      "train_kl": 0.20205813466784467,
+      "valid": {
+        "correct": 63,
+        "loss": 4.475712253537241,
+        "perplexity": 87.85715469905969,
+        "token_accuracy": 0.13755458515283842,
+        "tokens": 458
+      }
+    },
+    {
+      "adapter_l2": 1e-05,
+      "epoch": 3,
+      "kl_coef": 1.0,
+      "kl_temperature": 1.0,
+      "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+      "train": {
+        "correct": 164,
+        "loss": 4.793915008163722,
+        "perplexity": 120.77327265487827,
+        "token_accuracy": 0.11622962437987243,
+        "tokens": 1411
+      },
+      "train_kl": 0.1769794845183972,
+      "valid": {
+        "correct": 67,
+        "loss": 4.416395381027955,
+        "perplexity": 82.79729411013709,
+        "token_accuracy": 0.1462882096069869,
+        "tokens": 458
+      }
+    },
+    {
+      "adapter_l2": 1e-05,
+      "epoch": 4,
+      "kl_coef": 1.0,
+      "kl_temperature": 1.0,
+      "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+      "train": {
+        "correct": 172,
+        "loss": 4.701500265079555,
+        "perplexity": 110.11224615174052,
+        "token_accuracy": 0.12189936215450035,
+        "tokens": 1411
+      },
+      "train_kl": 0.22554021780158,
+      "valid": {
+        "correct": 69,
+        "loss": 4.401129220770956,
+        "perplexity": 81.54289662784159,
+        "token_accuracy": 0.15065502183406113,
+        "tokens": 458
+      }
+    },
+    {
+      "adapter_l2": 1e-05,
+      "epoch": 5,
+      "kl_coef": 1.0,
+      "kl_temperature": 1.0,
+      "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+      "train": {
+        "correct": 165,
+        "loss": 4.698175616842225,
+        "perplexity": 109.74676954388681,
+        "token_accuracy": 0.11693834160170093,
+        "tokens": 1411
+      },
+      "train_kl": 0.19234957225478178,
+      "valid": {
+        "correct": 69,
+        "loss": 4.398862166175675,
+        "perplexity": 81.35824381741593,
+        "token_accuracy": 0.15065502183406113,
+        "tokens": 458
+      }
+    },
+    {
+      "adapter_l2": 1e-05,
+      "epoch": 6,
+      "kl_coef": 1.0,
+      "kl_temperature": 1.0,
+      "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+      "train": {
+        "correct": 173,
+        "loss": 4.628312087582832,
+        "perplexity": 102.34117530037906,
+        "token_accuracy": 0.12260807937632884,
+        "tokens": 1411
+      },
+      "train_kl": 0.22601768582489032,
+      "valid": {
+        "correct": 70,
+        "loss": 4.37611159695288,
+        "perplexity": 79.52819373386653,
+        "token_accuracy": 0.15283842794759825,
+        "tokens": 458
+      }
+    },
+    {
+      "adapter_l2": 1e-05,
+      "epoch": 7,
+      "kl_coef": 1.0,
+      "kl_temperature": 1.0,
+      "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+      "train": {
+        "correct": 173,
+        "loss": 4.585809505889806,
+        "perplexity": 98.08255341872012,
+        "token_accuracy": 0.12260807937632884,
+        "tokens": 1411
+      },
+      "train_kl": 0.23259835994936404,
+      "valid": {
+        "correct": 72,
+        "loss": 4.388406008091556,
+        "perplexity": 80.51198119671726,
+        "token_accuracy": 0.1572052401746725,
+        "tokens": 458
+      }
+    },
+    {
+      "adapter_l2": 1e-05,
+      "epoch": 8,
+      "kl_coef": 1.0,
+      "kl_temperature": 1.0,
+      "objective": "shifted speech-token cross-entropy + adapter L2 + base-logit KL",
+      "train": {
+        "correct": 163,
+        "loss": 4.5743559287170585,
+        "perplexity": 96.96556628393004,
+        "token_accuracy": 0.11552090715804395,
+        "tokens": 1411
+      },
+      "train_kl": 0.21340738507258308,
+      "valid": {
+        "correct": 68,
+        "loss": 4.382448383814383,
+        "perplexity": 80.03374704713396,
+        "token_accuracy": 0.14847161572052403,
+        "tokens": 458
+      }
+    }
+  ],
+  "initial_valid": {
+    "correct": 65,
+    "loss": 4.909707927287406,
+    "perplexity": 135.59980362166084,
+    "token_accuracy": 0.14192139737991266,
+    "tokens": 458
+  },
+  "parameter_counts": {
+    "adapter_trainable": 221184,
+    "s3gen_frozen": 0,
+    "t3_total": 140468387,
+    "voice_encoder_frozen": 0
+  },
+  "peak_rss_mib": 1931.46875,
+  "resume": null,
+  "training_loader": "t3_only_cached_features; acoustic/reference encoders not loaded"
+}

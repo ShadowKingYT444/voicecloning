@@ -1,6 +1,8 @@
 # Voice cloning research workspace
 
-Chatterbox Nano 110M experiments for an ASMR reference voice and a Harvey Specter reference voice. This repository contains the implementation, tests, experiment configurations, profiles, and recorded results. It also preserves earlier Kokoro, Pocket TTS, Whisper, and Voicebox code.
+This project aims to build zero-shot voice cloning with small text-to-speech (TTS) models that can run in a web browser. The target is natural, clean speech with a speaker's character, rhythm, pitch, and richness. The current research uses Chatterbox Nano 110M with ASMR and Harvey Specter reference voices. It also preserves earlier Kokoro, Pocket TTS, Whisper, and Voicebox code.
+
+Browser inference is technically possible. ONNX Runtime Web supports CPU inference through WebAssembly and GPU inference through WebGPU. Browser GPU support covers only part of the ONNX operator set, and support varies by browser. This repository has not demonstrated browser inference. Its current experimental CPU ONNX profile takes 118.07 seconds to produce 6.96 seconds of audio and samples 861.75 MiB of process-tree RSS. These measurements show that the current profile is not ready for practical browser use. Model size, browser memory, supported operators, and real-time speed remain open engineering targets. See the [latest matched listening samples and results](artifacts/voice-experiments-20260930/README.md). [ONNX Runtime Web](https://onnxruntime.ai/docs/tutorials/web/) documents the browser execution options and their operator limits.
 
 **The requested voice realism is not achieved.** The user rejected the earlier comparison: “Neither sounds convincing yet.” The newer candidates remain experimental. Speaker-specific fitted adapters are not evidence of general zero-shot improvement.
 
@@ -24,6 +26,7 @@ The objective remains convincing, clean speech that captures the source voice's 
 | New CUDA acoustic stage | Fails strict numerical comparison at four of five lengths. Inference remains blocked for this provider. CPU verification does not authorize CUDA. |
 | Earlier persistent CUDA runtime | About 1.9 GiB process-tree RSS; measured warm requests faster than playback. These results use older profiles. |
 | Harvey fit | Only two training clips and one validation clip. Six comparison word checks pass. Automatic gains are small; realism is unaccepted. |
+| Latest CPU VM comparison | The September 30 ASMR fit lowers validation loss but lowers mean speaker similarity on six new-text samples. It is not promoted. Harvey temperature 0.6 passes six small content checks, with slightly lower mean speaker similarity. Human listening is pending. |
 
 Read the [quality report](artifacts/nano_lab/QUALITY_REPORT.md) and [RSS report](artifacts/nano_lab/RSS_REPORT.md). The [listening page](artifacts/nano_lab/delivery/index.html) needs the excluded local WAV files before its players work.
 
@@ -33,6 +36,7 @@ Read the [quality report](artifacts/nano_lab/QUALITY_REPORT.md) and [RSS report]
 - `voices/nano/`: opt-in voice profiles and [usage notes](voices/nano/README.md).
 - `nano-clone`, `nano-clone-onnx`: guarded native and staged ONNX launchers.
 - `artifacts/nano_lab/`: retained text reports, configurations, manifests, and experiment helper code. Binary outputs are excluded.
+- `artifacts/nano_lab/vm_20260930/`: latest CPU VM run reports and audit data. `artifacts/voice-experiments-20260930/` contains its selected matched listening WAVs and results.
 - `vendor/chatterbox/`: vendored upstream source with local lazy-import changes. Preserve these changes.
 - `vendor/dnsmos/`: scoring source and its license; the ONNX scoring weights are excluded.
 - `Pocket_package/`, `Whisper_fast_package/`, `kokoro_package/`, `scripts/`: earlier baseline tools.

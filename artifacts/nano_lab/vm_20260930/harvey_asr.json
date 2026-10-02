@@ -1,0 +1,2008 @@
+{
+  "model": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+  "backend": "CTranslate2 CPU int8",
+  "role": "independent_content_audit",
+  "human_listening": false,
+  "model_download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+  "model_identity": {
+    "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+    "name": "faster-whisper-small",
+    "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+    "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+    "size_class": "small"
+  },
+  "word_timestamps": true,
+  "inputs": [
+    {
+      "id": "harvey_t1_seed31_temp08",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t1_seed31_temp08.wav",
+      "audio_sha256": "84387430b3137d460cd949b9048a87d6422e1cef007faf2c511c4182993d7b73",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "transcript": "Winning starts with preparation. Make your next move count.",
+      "segments": [
+        {
+          "text": "Winning starts with preparation. Make your next move count.",
+          "start_s": 0.0,
+          "end_s": 2.64,
+          "avg_logprob": -0.26750122706095375,
+          "no_speech_prob": 0.00569345336407423,
+          "compression_ratio": 0.9076923076923077,
+          "words": [
+            {
+              "word": "Winning",
+              "start_s": 0.0,
+              "end_s": 0.34,
+              "probability": 0.9270108342170715
+            },
+            {
+              "word": "starts",
+              "start_s": 0.34,
+              "end_s": 0.58,
+              "probability": 0.9919711351394653
+            },
+            {
+              "word": "with",
+              "start_s": 0.58,
+              "end_s": 0.82,
+              "probability": 0.9979133009910583
+            },
+            {
+              "word": "preparation.",
+              "start_s": 0.82,
+              "end_s": 1.34,
+              "probability": 0.9625973105430603
+            },
+            {
+              "word": "Make",
+              "start_s": 1.7,
+              "end_s": 1.84,
+              "probability": 0.9962990880012512
+            },
+            {
+              "word": "your",
+              "start_s": 1.84,
+              "end_s": 1.96,
+              "probability": 0.9909462928771973
+            },
+            {
+              "word": "next",
+              "start_s": 1.96,
+              "end_s": 2.14,
+              "probability": 0.9962517619132996
+            },
+            {
+              "word": "move",
+              "start_s": 2.14,
+              "end_s": 2.4,
+              "probability": 0.995553195476532
+            },
+            {
+              "word": "count.",
+              "start_s": 2.4,
+              "end_s": 2.64,
+              "probability": 0.9986296892166138
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.3989906499991775
+    },
+    {
+      "id": "harvey_t1_seed31_temp06",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t1_seed31_temp06.wav",
+      "audio_sha256": "c88a85b271987a12db0d0f03854345975b0b3756b650816b7dfc56ce5e0a495b",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "transcript": "Winning starts with preparation. Make your next move count.",
+      "segments": [
+        {
+          "text": "Winning starts with preparation.",
+          "start_s": 0.0,
+          "end_s": 1.48,
+          "avg_logprob": -0.3215779136208927,
+          "no_speech_prob": 0.010353751480579376,
+          "compression_ratio": 0.9076923076923077,
+          "words": [
+            {
+              "word": "Winning",
+              "start_s": 0.0,
+              "end_s": 0.3,
+              "probability": 0.9379524886608124
+            },
+            {
+              "word": "starts",
+              "start_s": 0.3,
+              "end_s": 0.6,
+              "probability": 0.9902074933052063
+            },
+            {
+              "word": "with",
+              "start_s": 0.6,
+              "end_s": 0.88,
+              "probability": 0.9977445602416992
+            },
+            {
+              "word": "preparation.",
+              "start_s": 0.88,
+              "end_s": 1.48,
+              "probability": 0.9677944183349609
+            }
+          ]
+        },
+        {
+          "text": "Make your next move count.",
+          "start_s": 2.02,
+          "end_s": 3.1,
+          "avg_logprob": -0.3215779136208927,
+          "no_speech_prob": 0.010353751480579376,
+          "compression_ratio": 0.9076923076923077,
+          "words": [
+            {
+              "word": "Make",
+              "start_s": 2.02,
+              "end_s": 2.26,
+              "probability": 0.9963998794555664
+            },
+            {
+              "word": "your",
+              "start_s": 2.26,
+              "end_s": 2.4,
+              "probability": 0.9948047995567322
+            },
+            {
+              "word": "next",
+              "start_s": 2.4,
+              "end_s": 2.6,
+              "probability": 0.9964463114738464
+            },
+            {
+              "word": "move",
+              "start_s": 2.6,
+              "end_s": 2.86,
+              "probability": 0.99111008644104
+            },
+            {
+              "word": "count.",
+              "start_s": 2.86,
+              "end_s": 3.1,
+              "probability": 0.9977637529373169
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.232946718999301
+    },
+    {
+      "id": "harvey_t1_seed47_temp08",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t1_seed47_temp08.wav",
+      "audio_sha256": "691b14911de3c4b44004d1626e716cc79b4c65e001b57f7ae0c2df9f8311bfe9",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "transcript": "Winning starts at preparation. Make your next move count.",
+      "segments": [
+        {
+          "text": "Winning starts at preparation. Make your next move count.",
+          "start_s": 0.0,
+          "end_s": 2.8,
+          "avg_logprob": -0.31196263631184895,
+          "no_speech_prob": 0.0024366804864257574,
+          "compression_ratio": 0.9047619047619048,
+          "words": [
+            {
+              "word": "Winning",
+              "start_s": 0.0,
+              "end_s": 0.3,
+              "probability": 0.9514131844043732
+            },
+            {
+              "word": "starts",
+              "start_s": 0.3,
+              "end_s": 0.54,
+              "probability": 0.97388756275177
+            },
+            {
+              "word": "at",
+              "start_s": 0.54,
+              "end_s": 0.7,
+              "probability": 0.3465886116027832
+            },
+            {
+              "word": "preparation.",
+              "start_s": 0.7,
+              "end_s": 1.18,
+              "probability": 0.7163675427436829
+            },
+            {
+              "word": "Make",
+              "start_s": 1.76,
+              "end_s": 1.88,
+              "probability": 0.9959088563919067
+            },
+            {
+              "word": "your",
+              "start_s": 1.88,
+              "end_s": 2.02,
+              "probability": 0.9907384514808655
+            },
+            {
+              "word": "next",
+              "start_s": 2.02,
+              "end_s": 2.22,
+              "probability": 0.9951100945472717
+            },
+            {
+              "word": "move",
+              "start_s": 2.22,
+              "end_s": 2.52,
+              "probability": 0.997566819190979
+            },
+            {
+              "word": "count.",
+              "start_s": 2.52,
+              "end_s": 2.8,
+              "probability": 0.9958789348602295
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.111111,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "at",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.111111,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "at",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.261841335999634
+    },
+    {
+      "id": "harvey_t1_seed47_temp06",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t1_seed47_temp06.wav",
+      "audio_sha256": "26647b77ed71b81eaf68b6a0fa39862ac4bade163e1fe610ddd328cb493a9577",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "transcript": "Winning starts with preparation. Make your next move count.",
+      "segments": [
+        {
+          "text": "Winning starts with preparation.",
+          "start_s": 0.0,
+          "end_s": 1.28,
+          "avg_logprob": -0.27072816736557903,
+          "no_speech_prob": 0.004579165019094944,
+          "compression_ratio": 0.9076923076923077,
+          "words": [
+            {
+              "word": "Winning",
+              "start_s": 0.0,
+              "end_s": 0.26,
+              "probability": 0.9195376336574554
+            },
+            {
+              "word": "starts",
+              "start_s": 0.26,
+              "end_s": 0.52,
+              "probability": 0.9891473054885864
+            },
+            {
+              "word": "with",
+              "start_s": 0.52,
+              "end_s": 0.76,
+              "probability": 0.998364269733429
+            },
+            {
+              "word": "preparation.",
+              "start_s": 0.76,
+              "end_s": 1.28,
+              "probability": 0.9740039706230164
+            }
+          ]
+        },
+        {
+          "text": "Make your next move count.",
+          "start_s": 1.8,
+          "end_s": 2.98,
+          "avg_logprob": -0.27072816736557903,
+          "no_speech_prob": 0.004579165019094944,
+          "compression_ratio": 0.9076923076923077,
+          "words": [
+            {
+              "word": "Make",
+              "start_s": 1.8,
+              "end_s": 2.16,
+              "probability": 0.9961259961128235
+            },
+            {
+              "word": "your",
+              "start_s": 2.16,
+              "end_s": 2.3,
+              "probability": 0.9954215884208679
+            },
+            {
+              "word": "next",
+              "start_s": 2.3,
+              "end_s": 2.48,
+              "probability": 0.9970815777778625
+            },
+            {
+              "word": "move",
+              "start_s": 2.48,
+              "end_s": 2.74,
+              "probability": 0.9962378740310669
+            },
+            {
+              "word": "count.",
+              "start_s": 2.74,
+              "end_s": 2.98,
+              "probability": 0.9975188970565796
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.258622146999187
+    },
+    {
+      "id": "harvey_t2_seed31_temp08",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t2_seed31_temp08.wav",
+      "audio_sha256": "e3a0ec526ac2e4074536a7b876e3005e1a7b8fb4024b42299ca68cecf050c7fa",
+      "expected_text": "The meeting starts at nine on Thursday. Bring the signed agreement.",
+      "transcript": "The meeting starts at 9 on Thursday. Bring the signed agreement.",
+      "segments": [
+        {
+          "text": "The meeting starts at 9 on Thursday.",
+          "start_s": 0.0,
+          "end_s": 1.52,
+          "avg_logprob": -0.30484672056304085,
+          "no_speech_prob": 0.0015031987568363547,
+          "compression_ratio": 0.9411764705882353,
+          "words": [
+            {
+              "word": "The",
+              "start_s": 0.0,
+              "end_s": 0.08,
+              "probability": 0.9199355244636536
+            },
+            {
+              "word": "meeting",
+              "start_s": 0.08,
+              "end_s": 0.28,
+              "probability": 0.9952581524848938
+            },
+            {
+              "word": "starts",
+              "start_s": 0.28,
+              "end_s": 0.58,
+              "probability": 0.9958049058914185
+            },
+            {
+              "word": "at",
+              "start_s": 0.58,
+              "end_s": 0.78,
+              "probability": 0.9961436986923218
+            },
+            {
+              "word": "9",
+              "start_s": 0.78,
+              "end_s": 0.96,
+              "probability": 0.6715173125267029
+            },
+            {
+              "word": "on",
+              "start_s": 0.96,
+              "end_s": 1.14,
+              "probability": 0.8207712769508362
+            },
+            {
+              "word": "Thursday.",
+              "start_s": 1.14,
+              "end_s": 1.52,
+              "probability": 0.9955321550369263
+            }
+          ]
+        },
+        {
+          "text": "Bring the signed agreement.",
+          "start_s": 1.74,
+          "end_s": 2.64,
+          "avg_logprob": -0.30484672056304085,
+          "no_speech_prob": 0.0015031987568363547,
+          "compression_ratio": 0.9411764705882353,
+          "words": [
+            {
+              "word": "Bring",
+              "start_s": 1.74,
+              "end_s": 1.86,
+              "probability": 0.988926887512207
+            },
+            {
+              "word": "the",
+              "start_s": 1.86,
+              "end_s": 2.04,
+              "probability": 0.9867838621139526
+            },
+            {
+              "word": "signed",
+              "start_s": 2.04,
+              "end_s": 2.32,
+              "probability": 0.9926139116287231
+            },
+            {
+              "word": "agreement.",
+              "start_s": 2.32,
+              "end_s": 2.64,
+              "probability": 0.9950461387634277
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.090909,
+        "reference_word_count": 11,
+        "hypothesis_word_count": 11,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "the",
+          "meeting",
+          "starts",
+          "at",
+          "nine",
+          "on",
+          "thursday",
+          "bring",
+          "the",
+          "signed",
+          "agreement"
+        ],
+        "hypothesis_words": [
+          "the",
+          "meeting",
+          "starts",
+          "at",
+          "9",
+          "on",
+          "thursday",
+          "bring",
+          "the",
+          "signed",
+          "agreement"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.090909,
+        "reference_word_count": 11,
+        "hypothesis_word_count": 11,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "the",
+          "meeting",
+          "starts",
+          "at",
+          "nine",
+          "on",
+          "thursday",
+          "bring",
+          "the",
+          "signed",
+          "agreement"
+        ],
+        "hypothesis_words": [
+          "the",
+          "meeting",
+          "starts",
+          "at",
+          "9",
+          "on",
+          "thursday",
+          "bring",
+          "the",
+          "signed",
+          "agreement"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.2664065520002623
+    },
+    {
+      "id": "harvey_t2_seed31_temp06",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t2_seed31_temp06.wav",
+      "audio_sha256": "e57e281266274f908eb16a7983db644546bf0de3071d7a9dfd4d5ddf23fbd7ab",
+      "expected_text": "The meeting starts at nine on Thursday. Bring the signed agreement.",
+      "transcript": "The meeting starts at 9 on Thursday. Bring the signed agreement.",
+      "segments": [
+        {
+          "text": "The meeting starts at 9 on Thursday. Bring the signed agreement.",
+          "start_s": 0.0,
+          "end_s": 2.98,
+          "avg_logprob": -0.2674627024680376,
+          "no_speech_prob": 0.008449261076748371,
+          "compression_ratio": 0.9411764705882353,
+          "words": [
+            {
+              "word": "The",
+              "start_s": 0.0,
+              "end_s": 0.14,
+              "probability": 0.9213045835494995
+            },
+            {
+              "word": "meeting",
+              "start_s": 0.14,
+              "end_s": 0.36,
+              "probability": 0.9944572448730469
+            },
+            {
+              "word": "starts",
+              "start_s": 0.36,
+              "end_s": 0.64,
+              "probability": 0.996591329574585
+            },
+            {
+              "word": "at",
+              "start_s": 0.64,
+              "end_s": 0.84,
+              "probability": 0.9972272515296936
+            },
+            {
+              "word": "9",
+              "start_s": 0.84,
+              "end_s": 1.08,
+              "probability": 0.6563218235969543
+            },
+            {
+              "word": "on",
+              "start_s": 1.08,
+              "end_s": 1.28,
+              "probability": 0.9065355658531189
+            },
+            {
+              "word": "Thursday.",
+              "start_s": 1.28,
+              "end_s": 1.68,
+              "probability": 0.9943729639053345
+            },
+            {
+              "word": "Bring",
+              "start_s": 2.06,
+              "end_s": 2.24,
+              "probability": 0.992634117603302
+            },
+            {
+              "word": "the",
+              "start_s": 2.24,
+              "end_s": 2.38,
+              "probability": 0.9854063987731934
+            },
+            {
+              "word": "signed",
+              "start_s": 2.38,
+              "end_s": 2.64,
+              "probability": 0.9929351210594177
+            },
+            {
+              "word": "agreement.",
+              "start_s": 2.64,
+              "end_s": 2.98,
+              "probability": 0.9975572824478149
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.090909,
+        "reference_word_count": 11,
+        "hypothesis_word_count": 11,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "the",
+          "meeting",
+          "starts",
+          "at",
+          "nine",
+          "on",
+          "thursday",
+          "bring",
+          "the",
+          "signed",
+          "agreement"
+        ],
+        "hypothesis_words": [
+          "the",
+          "meeting",
+          "starts",
+          "at",
+          "9",
+          "on",
+          "thursday",
+          "bring",
+          "the",
+          "signed",
+          "agreement"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.090909,
+        "reference_word_count": 11,
+        "hypothesis_word_count": 11,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "the",
+          "meeting",
+          "starts",
+          "at",
+          "nine",
+          "on",
+          "thursday",
+          "bring",
+          "the",
+          "signed",
+          "agreement"
+        ],
+        "hypothesis_words": [
+          "the",
+          "meeting",
+          "starts",
+          "at",
+          "9",
+          "on",
+          "thursday",
+          "bring",
+          "the",
+          "signed",
+          "agreement"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.4419682799998554
+    },
+    {
+      "id": "harvey_t2_seed47_temp08",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t2_seed47_temp08.wav",
+      "audio_sha256": "48670a6cda8b64d345c325bb063f858467fcdab2eaf3011257207b600e6b8a10",
+      "expected_text": "The meeting starts at nine on Thursday. Bring the signed agreement.",
+      "transcript": "The meeting starts at 9 on Thursday. Bring the signed agreement.",
+      "segments": [
+        {
+          "text": "The meeting starts at 9 on Thursday.",
+          "start_s": 0.0,
+          "end_s": 1.6,
+          "avg_logprob": -0.29719885687033337,
+          "no_speech_prob": 0.007036133669316769,
+          "compression_ratio": 0.9411764705882353,
+          "words": [
+            {
+              "word": "The",
+              "start_s": 0.0,
+              "end_s": 0.14,
+              "probability": 0.8878549337387085
+            },
+            {
+              "word": "meeting",
+              "start_s": 0.14,
+              "end_s": 0.32,
+              "probability": 0.9820630550384521
+            },
+            {
+              "word": "starts",
+              "start_s": 0.32,
+              "end_s": 0.64,
+              "probability": 0.9943126440048218
+            },
+            {
+              "word": "at",
+              "start_s": 0.64,
+              "end_s": 0.86,
+              "probability": 0.996033251285553
+            },
+            {
+              "word": "9",
+              "start_s": 0.86,
+              "end_s": 1.1,
+              "probability": 0.6439577341079712
+            },
+            {
+              "word": "on",
+              "start_s": 1.1,
+              "end_s": 1.28,
+              "probability": 0.8962200284004211
+            },
+            {
+              "word": "Thursday.",
+              "start_s": 1.28,
+              "end_s": 1.6,
+              "probability": 0.9967198967933655
+            }
+          ]
+        },
+        {
+          "text": "Bring the signed agreement.",
+          "start_s": 1.92,
+          "end_s": 2.68,
+          "avg_logprob": -0.29719885687033337,
+          "no_speech_prob": 0.007036133669316769,
+          "compression_ratio": 0.9411764705882353,
+          "words": [
+            {
+              "word": "Bring",
+              "start_s": 1.92,
+              "end_s": 2.0,
+              "probability": 0.9875563979148865
+            },
+            {
+              "word": "the",
+              "start_s": 2.0,
+              "end_s": 2.14,
+              "probability": 0.9646480083465576
+            },
+            {
+              "word": "signed",
+              "start_s": 2.14,
+              "end_s": 2.4,
+              "probability": 0.7174115777015686
+            },
+            {
+              "word": "agreement.",
+              "start_s": 2.4,
+              "end_s": 2.68,
+              "probability": 0.9974517226219177
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.090909,
+        "reference_word_count": 11,
+        "hypothesis_word_count": 11,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "the",
+          "meeting",
+          "starts",
+          "at",
+          "nine",
+          "on",
+          "thursday",
+          "bring",
+          "the",
+          "signed",
+          "agreement"
+        ],
+        "hypothesis_words": [
+          "the",
+          "meeting",
+          "starts",
+          "at",
+          "9",
+          "on",
+          "thursday",
+          "bring",
+          "the",
+          "signed",
+          "agreement"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.090909,
+        "reference_word_count": 11,
+        "hypothesis_word_count": 11,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "the",
+          "meeting",
+          "starts",
+          "at",
+          "nine",
+          "on",
+          "thursday",
+          "bring",
+          "the",
+          "signed",
+          "agreement"
+        ],
+        "hypothesis_words": [
+          "the",
+          "meeting",
+          "starts",
+          "at",
+          "9",
+          "on",
+          "thursday",
+          "bring",
+          "the",
+          "signed",
+          "agreement"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.2167775079997227
+    },
+    {
+      "id": "harvey_t2_seed47_temp06",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t2_seed47_temp06.wav",
+      "audio_sha256": "589331de6aafd50ca1bbc6cff93ad136a0c8a99f01a4bd6e8eb2991b86952f0b",
+      "expected_text": "The meeting starts at nine on Thursday. Bring the signed agreement.",
+      "transcript": "The meeting starts at 9 on Thursday. Bring the signed agreement.",
+      "segments": [
+        {
+          "text": "The meeting starts at 9 on Thursday.",
+          "start_s": 0.0,
+          "end_s": 1.7,
+          "avg_logprob": -0.2837261027759976,
+          "no_speech_prob": 0.011065663769841194,
+          "compression_ratio": 0.9411764705882353,
+          "words": [
+            {
+              "word": "The",
+              "start_s": 0.0,
+              "end_s": 0.14,
+              "probability": 0.8648677468299866
+            },
+            {
+              "word": "meeting",
+              "start_s": 0.14,
+              "end_s": 0.34,
+              "probability": 0.9941674470901489
+            },
+            {
+              "word": "starts",
+              "start_s": 0.34,
+              "end_s": 0.66,
+              "probability": 0.996985137462616
+            },
+            {
+              "word": "at",
+              "start_s": 0.66,
+              "end_s": 0.86,
+              "probability": 0.9972865581512451
+            },
+            {
+              "word": "9",
+              "start_s": 0.86,
+              "end_s": 1.1,
+              "probability": 0.6528212428092957
+            },
+            {
+              "word": "on",
+              "start_s": 1.1,
+              "end_s": 1.3,
+              "probability": 0.8695508241653442
+            },
+            {
+              "word": "Thursday.",
+              "start_s": 1.3,
+              "end_s": 1.7,
+              "probability": 0.9950751662254333
+            }
+          ]
+        },
+        {
+          "text": "Bring the signed agreement.",
+          "start_s": 1.98,
+          "end_s": 2.9,
+          "avg_logprob": -0.2837261027759976,
+          "no_speech_prob": 0.011065663769841194,
+          "compression_ratio": 0.9411764705882353,
+          "words": [
+            {
+              "word": "Bring",
+              "start_s": 1.98,
+              "end_s": 2.16,
+              "probability": 0.9904284477233887
+            },
+            {
+              "word": "the",
+              "start_s": 2.16,
+              "end_s": 2.32,
+              "probability": 0.9907676577568054
+            },
+            {
+              "word": "signed",
+              "start_s": 2.32,
+              "end_s": 2.6,
+              "probability": 0.9850534796714783
+            },
+            {
+              "word": "agreement.",
+              "start_s": 2.6,
+              "end_s": 2.9,
+              "probability": 0.9979212880134583
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.090909,
+        "reference_word_count": 11,
+        "hypothesis_word_count": 11,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "the",
+          "meeting",
+          "starts",
+          "at",
+          "nine",
+          "on",
+          "thursday",
+          "bring",
+          "the",
+          "signed",
+          "agreement"
+        ],
+        "hypothesis_words": [
+          "the",
+          "meeting",
+          "starts",
+          "at",
+          "9",
+          "on",
+          "thursday",
+          "bring",
+          "the",
+          "signed",
+          "agreement"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.090909,
+        "reference_word_count": 11,
+        "hypothesis_word_count": 11,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "the",
+          "meeting",
+          "starts",
+          "at",
+          "nine",
+          "on",
+          "thursday",
+          "bring",
+          "the",
+          "signed",
+          "agreement"
+        ],
+        "hypothesis_words": [
+          "the",
+          "meeting",
+          "starts",
+          "at",
+          "9",
+          "on",
+          "thursday",
+          "bring",
+          "the",
+          "signed",
+          "agreement"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.252029708999544
+    },
+    {
+      "id": "harvey_t3_seed31_temp08",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t3_seed31_temp08.wav",
+      "audio_sha256": "940ca8f9443b3feec7f2a8a8c5d525c0c42b9eaf9dae42e1417c0ba79183cce9",
+      "expected_text": "We have one chance to get this right. Let's make it count.",
+      "transcript": "We have one chance to get this right. Let's make it count.",
+      "segments": [
+        {
+          "text": "We have one chance to get this right.",
+          "start_s": 0.0,
+          "end_s": 1.74,
+          "avg_logprob": -0.26832650005817416,
+          "no_speech_prob": 0.006563605275005102,
+          "compression_ratio": 0.9354838709677419,
+          "words": [
+            {
+              "word": "We",
+              "start_s": 0.0,
+              "end_s": 0.16,
+              "probability": 0.8145577907562256
+            },
+            {
+              "word": "have",
+              "start_s": 0.16,
+              "end_s": 0.3,
+              "probability": 0.9966375827789307
+            },
+            {
+              "word": "one",
+              "start_s": 0.3,
+              "end_s": 0.58,
+              "probability": 0.9635228514671326
+            },
+            {
+              "word": "chance",
+              "start_s": 0.58,
+              "end_s": 0.92,
+              "probability": 0.9971411228179932
+            },
+            {
+              "word": "to",
+              "start_s": 0.92,
+              "end_s": 1.18,
+              "probability": 0.9978112578392029
+            },
+            {
+              "word": "get",
+              "start_s": 1.18,
+              "end_s": 1.3,
+              "probability": 0.9983332753181458
+            },
+            {
+              "word": "this",
+              "start_s": 1.3,
+              "end_s": 1.52,
+              "probability": 0.9966748952865601
+            },
+            {
+              "word": "right.",
+              "start_s": 1.52,
+              "end_s": 1.74,
+              "probability": 0.9977380037307739
+            }
+          ]
+        },
+        {
+          "text": "Let's make it count.",
+          "start_s": 2.36,
+          "end_s": 3.46,
+          "avg_logprob": -0.26832650005817416,
+          "no_speech_prob": 0.006563605275005102,
+          "compression_ratio": 0.9354838709677419,
+          "words": [
+            {
+              "word": "Let's",
+              "start_s": 2.36,
+              "end_s": 2.84,
+              "probability": 0.9866252243518829
+            },
+            {
+              "word": "make",
+              "start_s": 2.84,
+              "end_s": 3.04,
+              "probability": 0.9890621304512024
+            },
+            {
+              "word": "it",
+              "start_s": 3.04,
+              "end_s": 3.18,
+              "probability": 0.9989396929740906
+            },
+            {
+              "word": "count.",
+              "start_s": 3.18,
+              "end_s": 3.46,
+              "probability": 0.9977703094482422
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "we",
+          "have",
+          "one",
+          "chance",
+          "to",
+          "get",
+          "this",
+          "right",
+          "let's",
+          "make",
+          "it",
+          "count"
+        ],
+        "hypothesis_words": [
+          "we",
+          "have",
+          "one",
+          "chance",
+          "to",
+          "get",
+          "this",
+          "right",
+          "let's",
+          "make",
+          "it",
+          "count"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 13,
+        "hypothesis_word_count": 13,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "we",
+          "have",
+          "one",
+          "chance",
+          "to",
+          "get",
+          "this",
+          "right",
+          "let",
+          "us",
+          "make",
+          "it",
+          "count"
+        ],
+        "hypothesis_words": [
+          "we",
+          "have",
+          "one",
+          "chance",
+          "to",
+          "get",
+          "this",
+          "right",
+          "let",
+          "us",
+          "make",
+          "it",
+          "count"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.190577029999986
+    },
+    {
+      "id": "harvey_t3_seed31_temp06",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t3_seed31_temp06.wav",
+      "audio_sha256": "6d9e3585ca836546abe70c963600b8d03298003ae48e2d9e798e2f5f97d3df10",
+      "expected_text": "We have one chance to get this right. Let's make it count.",
+      "transcript": "We have one chance to get this right. Let's make it count.",
+      "segments": [
+        {
+          "text": "We have one chance to get this right.",
+          "start_s": 0.0,
+          "end_s": 1.64,
+          "avg_logprob": -0.25173438638448714,
+          "no_speech_prob": 0.0035913093015551567,
+          "compression_ratio": 0.9354838709677419,
+          "words": [
+            {
+              "word": "We",
+              "start_s": 0.0,
+              "end_s": 0.18,
+              "probability": 0.8213984966278076
+            },
+            {
+              "word": "have",
+              "start_s": 0.18,
+              "end_s": 0.34,
+              "probability": 0.9948129653930664
+            },
+            {
+              "word": "one",
+              "start_s": 0.34,
+              "end_s": 0.54,
+              "probability": 0.953329861164093
+            },
+            {
+              "word": "chance",
+              "start_s": 0.54,
+              "end_s": 0.82,
+              "probability": 0.9962401390075684
+            },
+            {
+              "word": "to",
+              "start_s": 0.82,
+              "end_s": 1.06,
+              "probability": 0.9972018003463745
+            },
+            {
+              "word": "get",
+              "start_s": 1.06,
+              "end_s": 1.2,
+              "probability": 0.9979560375213623
+            },
+            {
+              "word": "this",
+              "start_s": 1.2,
+              "end_s": 1.4,
+              "probability": 0.9958529472351074
+            },
+            {
+              "word": "right.",
+              "start_s": 1.4,
+              "end_s": 1.64,
+              "probability": 0.9972310662269592
+            }
+          ]
+        },
+        {
+          "text": "Let's make it count.",
+          "start_s": 2.04,
+          "end_s": 2.84,
+          "avg_logprob": -0.25173438638448714,
+          "no_speech_prob": 0.0035913093015551567,
+          "compression_ratio": 0.9354838709677419,
+          "words": [
+            {
+              "word": "Let's",
+              "start_s": 2.04,
+              "end_s": 2.32,
+              "probability": 0.9875830709934235
+            },
+            {
+              "word": "make",
+              "start_s": 2.32,
+              "end_s": 2.48,
+              "probability": 0.9931526184082031
+            },
+            {
+              "word": "it",
+              "start_s": 2.48,
+              "end_s": 2.62,
+              "probability": 0.9948750138282776
+            },
+            {
+              "word": "count.",
+              "start_s": 2.62,
+              "end_s": 2.84,
+              "probability": 0.997678816318512
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "we",
+          "have",
+          "one",
+          "chance",
+          "to",
+          "get",
+          "this",
+          "right",
+          "let's",
+          "make",
+          "it",
+          "count"
+        ],
+        "hypothesis_words": [
+          "we",
+          "have",
+          "one",
+          "chance",
+          "to",
+          "get",
+          "this",
+          "right",
+          "let's",
+          "make",
+          "it",
+          "count"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 13,
+        "hypothesis_word_count": 13,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "we",
+          "have",
+          "one",
+          "chance",
+          "to",
+          "get",
+          "this",
+          "right",
+          "let",
+          "us",
+          "make",
+          "it",
+          "count"
+        ],
+        "hypothesis_words": [
+          "we",
+          "have",
+          "one",
+          "chance",
+          "to",
+          "get",
+          "this",
+          "right",
+          "let",
+          "us",
+          "make",
+          "it",
+          "count"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.255209670000113
+    },
+    {
+      "id": "harvey_t3_seed47_temp08",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t3_seed47_temp08.wav",
+      "audio_sha256": "6e091300b22e559d80313f4aefd40bb0bfa277a7468bc89a64e4e52ae1256459",
+      "expected_text": "We have one chance to get this right. Let's make it count.",
+      "transcript": "We have one chance to get this right. Let's make it count.",
+      "segments": [
+        {
+          "text": "We have one chance to get this right.",
+          "start_s": 0.0,
+          "end_s": 1.5,
+          "avg_logprob": -0.25204754769802096,
+          "no_speech_prob": 0.005549211520701647,
+          "compression_ratio": 0.9354838709677419,
+          "words": [
+            {
+              "word": "We",
+              "start_s": 0.0,
+              "end_s": 0.12,
+              "probability": 0.7670350074768066
+            },
+            {
+              "word": "have",
+              "start_s": 0.12,
+              "end_s": 0.26,
+              "probability": 0.9969819188117981
+            },
+            {
+              "word": "one",
+              "start_s": 0.26,
+              "end_s": 0.52,
+              "probability": 0.9640496969223022
+            },
+            {
+              "word": "chance",
+              "start_s": 0.52,
+              "end_s": 0.78,
+              "probability": 0.9978387951850891
+            },
+            {
+              "word": "to",
+              "start_s": 0.78,
+              "end_s": 1.0,
+              "probability": 0.997908353805542
+            },
+            {
+              "word": "get",
+              "start_s": 1.0,
+              "end_s": 1.12,
+              "probability": 0.9979047775268555
+            },
+            {
+              "word": "this",
+              "start_s": 1.12,
+              "end_s": 1.28,
+              "probability": 0.9962610602378845
+            },
+            {
+              "word": "right.",
+              "start_s": 1.28,
+              "end_s": 1.5,
+              "probability": 0.9894307851791382
+            }
+          ]
+        },
+        {
+          "text": "Let's make it count.",
+          "start_s": 1.88,
+          "end_s": 2.7,
+          "avg_logprob": -0.25204754769802096,
+          "no_speech_prob": 0.005549211520701647,
+          "compression_ratio": 0.9354838709677419,
+          "words": [
+            {
+              "word": "Let's",
+              "start_s": 1.88,
+              "end_s": 2.2,
+              "probability": 0.9892427921295166
+            },
+            {
+              "word": "make",
+              "start_s": 2.2,
+              "end_s": 2.34,
+              "probability": 0.9962934851646423
+            },
+            {
+              "word": "it",
+              "start_s": 2.34,
+              "end_s": 2.48,
+              "probability": 0.9500380754470825
+            },
+            {
+              "word": "count.",
+              "start_s": 2.48,
+              "end_s": 2.7,
+              "probability": 0.9984863996505737
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "we",
+          "have",
+          "one",
+          "chance",
+          "to",
+          "get",
+          "this",
+          "right",
+          "let's",
+          "make",
+          "it",
+          "count"
+        ],
+        "hypothesis_words": [
+          "we",
+          "have",
+          "one",
+          "chance",
+          "to",
+          "get",
+          "this",
+          "right",
+          "let's",
+          "make",
+          "it",
+          "count"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 13,
+        "hypothesis_word_count": 13,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "we",
+          "have",
+          "one",
+          "chance",
+          "to",
+          "get",
+          "this",
+          "right",
+          "let",
+          "us",
+          "make",
+          "it",
+          "count"
+        ],
+        "hypothesis_words": [
+          "we",
+          "have",
+          "one",
+          "chance",
+          "to",
+          "get",
+          "this",
+          "right",
+          "let",
+          "us",
+          "make",
+          "it",
+          "count"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.301908066001488
+    },
+    {
+      "id": "harvey_t3_seed47_temp06",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/harvey_sampling/harvey_t3_seed47_temp06.wav",
+      "audio_sha256": "beb01fe359af884b873b139f5815cf418dc5c261df453e1984c6988f5c592c2f",
+      "expected_text": "We have one chance to get this right. Let's make it count.",
+      "transcript": "We have one chance to get this right. Let's make it count.",
+      "segments": [
+        {
+          "text": "We have one chance to get this right.",
+          "start_s": 0.0,
+          "end_s": 1.5,
+          "avg_logprob": -0.2513191595673561,
+          "no_speech_prob": 0.006136236246675253,
+          "compression_ratio": 0.9354838709677419,
+          "words": [
+            {
+              "word": "We",
+              "start_s": 0.0,
+              "end_s": 0.14,
+              "probability": 0.8029562830924988
+            },
+            {
+              "word": "have",
+              "start_s": 0.14,
+              "end_s": 0.28,
+              "probability": 0.9956169128417969
+            },
+            {
+              "word": "one",
+              "start_s": 0.28,
+              "end_s": 0.52,
+              "probability": 0.936987042427063
+            },
+            {
+              "word": "chance",
+              "start_s": 0.52,
+              "end_s": 0.78,
+              "probability": 0.9975247979164124
+            },
+            {
+              "word": "to",
+              "start_s": 0.78,
+              "end_s": 0.98,
+              "probability": 0.9982216954231262
+            },
+            {
+              "word": "get",
+              "start_s": 0.98,
+              "end_s": 1.12,
+              "probability": 0.9975972771644592
+            },
+            {
+              "word": "this",
+              "start_s": 1.12,
+              "end_s": 1.3,
+              "probability": 0.9971082806587219
+            },
+            {
+              "word": "right.",
+              "start_s": 1.3,
+              "end_s": 1.5,
+              "probability": 0.9974180459976196
+            }
+          ]
+        },
+        {
+          "text": "Let's make it count.",
+          "start_s": 1.86,
+          "end_s": 2.72,
+          "avg_logprob": -0.2513191595673561,
+          "no_speech_prob": 0.006136236246675253,
+          "compression_ratio": 0.9354838709677419,
+          "words": [
+            {
+              "word": "Let's",
+              "start_s": 1.86,
+              "end_s": 2.2,
+              "probability": 0.9890526235103607
+            },
+            {
+              "word": "make",
+              "start_s": 2.2,
+              "end_s": 2.36,
+              "probability": 0.9929910898208618
+            },
+            {
+              "word": "it",
+              "start_s": 2.36,
+              "end_s": 2.5,
+              "probability": 0.945927083492279
+            },
+            {
+              "word": "count.",
+              "start_s": 2.5,
+              "end_s": 2.72,
+              "probability": 0.9981465339660645
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "we",
+          "have",
+          "one",
+          "chance",
+          "to",
+          "get",
+          "this",
+          "right",
+          "let's",
+          "make",
+          "it",
+          "count"
+        ],
+        "hypothesis_words": [
+          "we",
+          "have",
+          "one",
+          "chance",
+          "to",
+          "get",
+          "this",
+          "right",
+          "let's",
+          "make",
+          "it",
+          "count"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 13,
+        "hypothesis_word_count": 13,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "we",
+          "have",
+          "one",
+          "chance",
+          "to",
+          "get",
+          "this",
+          "right",
+          "let",
+          "us",
+          "make",
+          "it",
+          "count"
+        ],
+        "hypothesis_words": [
+          "we",
+          "have",
+          "one",
+          "chance",
+          "to",
+          "get",
+          "this",
+          "right",
+          "let",
+          "us",
+          "make",
+          "it",
+          "count"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.1221432740003365
+    }
+  ],
+  "peak_rss_mib": 671.703125
+}

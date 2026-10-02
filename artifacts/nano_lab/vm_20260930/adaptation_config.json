@@ -1,0 +1,127 @@
+{
+  "checkpoint": "models/chatterbox-nano",
+  "conditionals_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/conditions/asmr_natural.conds.pt",
+  "references": [
+    {
+      "id": "asmr_natural",
+      "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__natural.wav",
+      "sha256": "73c8cd1be040323dc80057d3402590020768ed1ce921113461575093fb0ef66d",
+      "conditionals_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/conditions/asmr_natural.conds.pt",
+      "conditionals_sha256": "0f6c4f3478c90beb10b46bdce5283e21a5342673ed8d94d8c4efdcf06d664c82",
+      "seconds": 1.432606869000665
+    }
+  ],
+  "trials": [
+    {
+      "id": "asmr_t1_seed31_base",
+      "reference_id": "asmr_natural",
+      "text": "Take a quiet moment and let yourself relax.",
+      "seed": 31,
+      "acoustic_seed": 10031,
+      "n_cfm_steps": 2,
+      "adapter_scale": 0.0
+    },
+    {
+      "id": "asmr_t1_seed31_fit",
+      "reference_id": "asmr_natural",
+      "text": "Take a quiet moment and let yourself relax.",
+      "seed": 31,
+      "acoustic_seed": 10031,
+      "n_cfm_steps": 2,
+      "adapter_scale": 1.0
+    },
+    {
+      "id": "asmr_t1_seed47_base",
+      "reference_id": "asmr_natural",
+      "text": "Take a quiet moment and let yourself relax.",
+      "seed": 47,
+      "acoustic_seed": 10047,
+      "n_cfm_steps": 2,
+      "adapter_scale": 0.0
+    },
+    {
+      "id": "asmr_t1_seed47_fit",
+      "reference_id": "asmr_natural",
+      "text": "Take a quiet moment and let yourself relax.",
+      "seed": 47,
+      "acoustic_seed": 10047,
+      "n_cfm_steps": 2,
+      "adapter_scale": 1.0
+    },
+    {
+      "id": "asmr_t2_seed31_base",
+      "reference_id": "asmr_natural",
+      "text": "You don't have to rush. Take a slow breath, and stay here with me for a moment.",
+      "seed": 31,
+      "acoustic_seed": 10031,
+      "n_cfm_steps": 2,
+      "adapter_scale": 0.0
+    },
+    {
+      "id": "asmr_t2_seed31_fit",
+      "reference_id": "asmr_natural",
+      "text": "You don't have to rush. Take a slow breath, and stay here with me for a moment.",
+      "seed": 31,
+      "acoustic_seed": 10031,
+      "n_cfm_steps": 2,
+      "adapter_scale": 1.0
+    },
+    {
+      "id": "asmr_t2_seed47_base",
+      "reference_id": "asmr_natural",
+      "text": "You don't have to rush. Take a slow breath, and stay here with me for a moment.",
+      "seed": 47,
+      "acoustic_seed": 10047,
+      "n_cfm_steps": 2,
+      "adapter_scale": 0.0
+    },
+    {
+      "id": "asmr_t2_seed47_fit",
+      "reference_id": "asmr_natural",
+      "text": "You don't have to rush. Take a slow breath, and stay here with me for a moment.",
+      "seed": 47,
+      "acoustic_seed": 10047,
+      "n_cfm_steps": 2,
+      "adapter_scale": 1.0
+    },
+    {
+      "id": "asmr_t3_seed31_base",
+      "reference_id": "asmr_natural",
+      "text": "I wasn't sure you would come back. But I'm glad you're here.",
+      "seed": 31,
+      "acoustic_seed": 10031,
+      "n_cfm_steps": 2,
+      "adapter_scale": 0.0
+    },
+    {
+      "id": "asmr_t3_seed31_fit",
+      "reference_id": "asmr_natural",
+      "text": "I wasn't sure you would come back. But I'm glad you're here.",
+      "seed": 31,
+      "acoustic_seed": 10031,
+      "n_cfm_steps": 2,
+      "adapter_scale": 1.0
+    },
+    {
+      "id": "asmr_t3_seed47_base",
+      "reference_id": "asmr_natural",
+      "text": "I wasn't sure you would come back. But I'm glad you're here.",
+      "seed": 47,
+      "acoustic_seed": 10047,
+      "n_cfm_steps": 2,
+      "adapter_scale": 0.0
+    },
+    {
+      "id": "asmr_t3_seed47_fit",
+      "reference_id": "asmr_natural",
+      "text": "I wasn't sure you would come back. But I'm glad you're here.",
+      "seed": 47,
+      "acoustic_seed": 10047,
+      "n_cfm_steps": 2,
+      "adapter_scale": 1.0
+    }
+  ],
+  "purpose": "Prospective base versus strict ASMR T3 adapter, three texts and two seeds; no acoustic adapter",
+  "adapter_path": "artifacts/nano_lab/vm_20260930/adapter_clip_consensus_all_attn.pt",
+  "adapter_sha256": "5125c57484c8228bfe6f86c4b729523fb3db8ed6126a7fb264961ec23885a5eb"
+}
