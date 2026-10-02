@@ -23,7 +23,9 @@ function sample() {
   if (reason) process.kill(process.pid, 'SIGKILL');
 }
 sample();
-const watchdog = new Worker(new URL('./guarded_node_watchdog.mjs', import.meta.url), { workerData: { fd, high } });
+const watchdog = new Worker(new URL('./guarded_node_watchdog.mjs', import.meta.url), {
+  workerData: { fd, high }, resourceLimits: { maxOldGenerationSizeMb: 16, maxYoungGenerationSizeMb: 2, stackSizeMb: 1 },
+});
 watchdog.on('error', () => process.kill(process.pid, 'SIGKILL'));
 try {
   // node:test also runs when imported directly; no child process isolation.

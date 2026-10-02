@@ -1,0 +1,196 @@
+{
+  "accepted_profile_identified": false,
+  "accepted_adapters_recovered": false,
+  "profiles": [
+    {
+      "profile": "voices/nano/asmr_acoustic_attention_experimental.json",
+      "status": "awaiting_listening_validation",
+      "inputs": {
+        "reference": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+          "present": true
+        },
+        "conditioning_cache": {
+          "path": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+          "present": false
+        },
+        "adapter": {
+          "path": "artifacts/nano_lab/adapter_aligned_all_attn.pt",
+          "present": false
+        },
+        "t3_donor_cache": {
+          "path": "artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+          "present": false
+        },
+        "decoder_attention": {
+          "path": "artifacts/nano_lab/decoder_attention_fit/best_attention.pt",
+          "present": false
+        }
+      }
+    },
+    {
+      "profile": "voices/nano/asmr_conversational.json",
+      "status": "candidate_under_validation",
+      "inputs": {
+        "reference": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+          "present": true
+        },
+        "conditioning_cache": {
+          "path": "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+          "present": false
+        }
+      }
+    },
+    {
+      "profile": "voices/nano/asmr_conversational_adapted.json",
+      "status": "rejected_training_label_mismatch",
+      "inputs": {
+        "reference": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+          "present": true
+        },
+        "conditioning_cache": {
+          "path": "artifacts/nano_lab/sweep_robustness/conv_fitted_expressive_63_s75.conds.pt",
+          "present": false
+        }
+      }
+    },
+    {
+      "profile": "voices/nano/asmr_decoder_fitted_experimental.json",
+      "status": "awaiting_listening_validation",
+      "inputs": {
+        "reference": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+          "present": true
+        },
+        "conditioning_cache": {
+          "path": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+          "present": false
+        },
+        "adapter": {
+          "path": "artifacts/nano_lab/adapter_aligned_all_attn.pt",
+          "present": false
+        }
+      }
+    },
+    {
+      "profile": "voices/nano/asmr_decoder_slow_experimental.json",
+      "status": "awaiting_listening_validation",
+      "inputs": {
+        "reference": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+          "present": true
+        },
+        "conditioning_cache": {
+          "path": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+          "present": false
+        },
+        "adapter": {
+          "path": "artifacts/nano_lab/adapter_aligned_all_attn.pt",
+          "present": false
+        }
+      }
+    },
+    {
+      "profile": "voices/nano/asmr_fitted_experimental.json",
+      "status": "awaiting_listening_validation",
+      "inputs": {
+        "reference": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+          "present": true
+        },
+        "conditioning_cache": {
+          "path": "artifacts/nano_lab/sweep_round2/asmr_conversational_morning_31.conds.pt",
+          "present": false
+        },
+        "adapter": {
+          "path": "artifacts/nano_lab/adapter_aligned_all_attn.pt",
+          "present": false
+        }
+      }
+    },
+    {
+      "profile": "voices/nano/asmr_intimate.json",
+      "status": "candidate_under_validation",
+      "inputs": {
+        "reference": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_bully_01/asmr7_bully_01__natural.wav",
+          "present": true
+        },
+        "conditioning_cache": {
+          "path": "artifacts/nano_lab/sweep_round2/asmr_intimate_morning_31.conds.pt",
+          "present": false
+        }
+      }
+    },
+    {
+      "profile": "voices/nano/asmr_prompt_experimental.json",
+      "status": "awaiting_listening_validation",
+      "inputs": {
+        "reference": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+          "present": true
+        },
+        "conditioning_cache": {
+          "path": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+          "present": false
+        },
+        "adapter": {
+          "path": "artifacts/nano_lab/adapter_aligned_all_attn.pt",
+          "present": false
+        },
+        "t3_donor_cache": {
+          "path": "artifacts/nano_lab/t3_reference_matrix_caches/prompt.conds.pt",
+          "present": false
+        }
+      }
+    },
+    {
+      "profile": "voices/nano/asmr_soft.json",
+      "status": "candidate_under_validation",
+      "inputs": {
+        "reference": {
+          "path": "artifacts/nano_lab/references/asmr7/asmr7_soft_praise_01/asmr7_soft_praise_01__raw.wav",
+          "present": true
+        },
+        "conditioning_cache": {
+          "path": "artifacts/nano_lab/sweep_round2/asmr_soft_morning_31.conds.pt",
+          "present": false
+        }
+      }
+    },
+    {
+      "profile": "voices/nano/harvey.json",
+      "status": "candidate_under_validation",
+      "inputs": {
+        "reference": {
+          "path": "artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+          "present": false
+        },
+        "conditioning_cache": {
+          "path": "artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+          "present": false
+        }
+      }
+    },
+    {
+      "profile": "voices/nano/harvey_fitted_experimental.json",
+      "status": "awaiting_listening_validation",
+      "inputs": {
+        "reference": {
+          "path": "artifacts/nano_lab/harvey_separation/harvey_quote_02_isolated.wav",
+          "present": false
+        },
+        "conditioning_cache": {
+          "path": "artifacts/nano_lab/sweep_round2/harvey_tune_isolated.conds.pt",
+          "present": false
+        },
+        "adapter": {
+          "path": "artifacts/nano_lab/adapter_harvey_rank2.pt",
+          "present": false
+        }
+      }
+    }
+  ]
+}

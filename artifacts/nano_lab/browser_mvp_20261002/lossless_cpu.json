@@ -1,0 +1,15 @@
+{
+  "provider": "CPUExecutionProvider",
+  "onnxruntime_version": "1.29.0",
+  "source_graph_sha256": "019d257243774091d78c2ad91c2c0f61e4e442740cb7b3b00b5a89109417b18d",
+  "source_data_sha256": "bcd7b35ae4f206932e2491cb60b42ebb80f6d8facfdb53ba7d7449ad00a3237b",
+  "compared_float32_values": {
+    "text": 38611968,
+    "speech": 5040384
+  },
+  "total_values": 43652352,
+  "bitwise_equal": true,
+  "elapsed_seconds": 0.47737699800018163,
+  "browser_or_audio_equivalence_verified": false,
+  "voice_quality_verified": false
+}

@@ -1044,7 +1044,7 @@ class BrowserMeasurement:
 
     def read_text(self, name: str, text: str, seed: int, timeout: float) -> dict[str, Any]:
         text_js = json.dumps(text, ensure_ascii=True)
-        options_js = json.dumps({"seed": seed, "chunkWords": 18}, separators=(",", ":"))
+        options_js = json.dumps({"seed": seed, "chunkWords": self.args.chunk_words}, separators=(",", ":"))
 
         def start() -> None:
             expression = f"""(() => {{
@@ -1068,6 +1068,8 @@ class BrowserMeasurement:
                 raise RunnerError(f"voiceStudy.readText ({name}) failed: {run['error']}")
             if not isinstance(snap, dict) or snap.get("busy"):
                 raise RunnerError("readText resolved while the reader was still busy.")
+            if snap.get('readingOutcome') != 'complete':
+                raise RunnerError('The reader did not report complete playback.')
             rows = snap.get("chunks")
             if not isinstance(rows, list) or not rows:
                 raise RunnerError("readText returned without any completed audio chunks.")
@@ -1079,6 +1081,7 @@ class BrowserMeasurement:
                 token_counts.append(len(tokens) if isinstance(tokens, list) else int(tokens or 0))
             if not any(count > 0 for count in token_counts):
                 raise RunnerError("No generated speech token count was reported.")
+            assert_complete_reading(snap, text)
             return True
 
         result = self.begin_recording_stage(name, start, complete, timeout)
@@ -1092,21 +1095,37 @@ class BrowserMeasurement:
 
     def export_wav(self, stage_name: str, artifact_name: str, path: Path) -> dict[str, Any]:
         self.start_stage(stage_name)
+        opened = False
         try:
-            value = self.evaluate("window.voiceStudy.exportWavBase64()", await_promise=True, timeout=60)
-            if isinstance(value, dict):
-                value = value.get("wavBase64") or value.get("base64")
-            if not isinstance(value, str) or not value:
-                raise RunnerError("exportWavBase64 did not return base64 text.")
-            if value.startswith("data:") and "," in value:
-                value = value.split(",", 1)[1]
-            contents = base64.b64decode(value, validate=True)
-            metadata = inspect_wav(contents)
-            path.write_bytes(contents)
+            info = self.evaluate('window.voiceStudy.openWavExport()')
+            opened = True
+            if not isinstance(info, dict) or not isinstance(info.get('bytes'), int) or not 44 < info['bytes'] <= 0xffffffff + 8:
+                raise RunnerError('Invalid streamed WAV export metadata.')
+            digest = hashlib.sha256(); written = 0; max_chunk = 0
+            with path.open('wb') as output:
+                while True:
+                    self.check_timeout(stage_name, self.deadline)
+                    row = self.evaluate('window.voiceStudy.readWavExport()', await_promise=True, timeout=30)
+                    if not isinstance(row, dict) or row.get('offsetBytes') != written:
+                        raise RunnerError('Streamed WAV offset is missing, duplicated, or out of order.')
+                    if row.get('done') is True:
+                        opened = False; break
+                    contents = base64.b64decode(row.get('base64', ''), validate=True)
+                    if not 0 < len(contents) <= 65536 or row.get('byteLength') != len(contents) or written + len(contents) > info['bytes']:
+                        raise RunnerError('Invalid or oversized streamed WAV chunk.')
+                    output.write(contents); digest.update(contents); written += len(contents)
+                    max_chunk = max(max_chunk, len(contents))
+                    self.sample(stage_name)
+            if written != info['bytes']:
+                raise RunnerError('Streamed WAV ended before all declared bytes were exported.')
+            metadata = inspect_wav_file(path)
             metadata.update({
                 "path": str(path),
-                "sha256": hashlib.sha256(contents).hexdigest(),
+                "sha256": digest.hexdigest(),
                 "hashAlgorithm": "sha256",
+                'exportMode': 'bounded-base64-chunks-to-disk',
+                'maximumTransferChunkBytes': max_chunk,
+                'exportedPassages': info.get('passages'),
             })
             self.report["artifacts"][artifact_name] = metadata
             self.finish_stage(stage_name)
@@ -1115,6 +1134,10 @@ class BrowserMeasurement:
             if self.stage_name == stage_name:
                 self.finish_stage(stage_name, status="failed", error=str(error))
             raise
+        finally:
+            if opened:
+                try: self.evaluate('window.voiceStudy.cancelWavExport()', await_promise=True, timeout=5)
+                except Exception: pass
 
     def capture_screenshot(self, path: Path, viewport: tuple[int, int] | None = None) -> dict[str, Any]:
         self.evaluate("document.fonts && document.fonts.ready ? document.fonts.ready.then(() => true) : Promise.resolve(true)", await_promise=True, timeout=20)
@@ -1203,6 +1226,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--text", default=DEFAULT_TEXT, help="Short text used for both matched synthesis passes.")
     parser.add_argument("--seed", type=int, default=1337)
     parser.add_argument("--embedding-manifest", help="Optional explicit Q4 embedding manifest URL for this full measurement.")
+    parser.add_argument('--lossless-embedding-manifest', help='Optional independently hash-pinned FP16 shard manifest; no embedding ONNX session.')
+    parser.add_argument('--chunk-words', type=int, choices=range(15, 25), default=18)
+    parser.add_argument('--full-paper', action='store_true', help='After matched short first/warm readings, read the entire checked-in Federalist No. 10 and stream its WAV to disk.')
+    parser.add_argument('--full-reading-timeout-seconds', type=float, default=1800)
     parser.add_argument("--model-base", help="Optional same-origin model asset base URL, for example /models/chatterbox-nano-browser/.")
     parser.add_argument("--nvidia-smi", action="store_true", help="Sample nvidia-smi compute-app memory separately when available.")
     parser.add_argument("--headed", action="store_true", help="Use a visible Chrome window instead of headless Chrome.")
@@ -1225,6 +1252,12 @@ def parse_args() -> argparse.Namespace:
         parser.error("--hardware-webgpu applies only to full model measurements, not --ui-only.")
     if args.adapter_only and (args.ui_only or args.embedding_manifest or args.model_base):
         parser.error('--adapter-only cannot be combined with UI, embedding, or model-loading options.')
+    if args.embedding_manifest and args.lossless_embedding_manifest:
+        parser.error('Select either Q4 or lossless streamed embeddings.')
+    if (args.ui_only or args.adapter_only) and (args.lossless_embedding_manifest or args.full_paper):
+        parser.error('Full-paper and lossless embeddings require a full measurement.')
+    if args.full_reading_timeout_seconds <= 0:
+        parser.error('Full reading timeout must be greater than zero.')
     try:
         args.resolved_model_base = normalize_local_model_base(args.model_base, args.url)
     except ValueError as error:
@@ -1265,6 +1298,9 @@ def main() -> int:
             "text": args.text,
             "seed": args.seed,
             "embeddingManifestUrl": args.embedding_manifest,
+            'losslessEmbeddingManifestUrl': args.lossless_embedding_manifest,
+            'chunkWords': args.chunk_words,
+            'fullPaper': args.full_paper,
             "modelBaseUrl": args.model_base,
             "resolvedModelBaseUrl": args.resolved_model_base,
             "hardwareWebgpuDiagnostic": args.hardware_webgpu,
@@ -1597,6 +1633,8 @@ def main() -> int:
             if args.embedding_manifest:
                 prepare_options["embeddingManifestUrl"] = args.embedding_manifest
                 report["app"]["embeddingManifestUrl"] = args.embedding_manifest
+            if args.lossless_embedding_manifest:
+                prepare_options['losslessEmbeddingManifestUrl'] = args.lossless_embedding_manifest
             if args.model_base:
                 prepare_options["modelBaseUrl"] = args.model_base
                 report["app"]["modelBaseUrl"] = args.model_base
@@ -1604,7 +1642,8 @@ def main() -> int:
             if prepare_options:
                 options = json.dumps(prepare_options, ensure_ascii=True)
                 prepare_call = f"window.voiceStudy.prepareVoice({options})"
-            report["app"]["embeddingSelection"] = "explicit Q4 manifest" if args.embedding_manifest else "pinned default embed_tokens_fp16"
+            report["app"]["embeddingSelection"] = ('lossless FP16 shards' if args.lossless_embedding_manifest
+                else 'explicit Q4 manifest' if args.embedding_manifest else 'pinned default embed_tokens_fp16')
             report["app"]["modelAssetSelection"] = "explicit same-origin model base" if args.model_base else "pinned default model base"
             load_start = """(() => {
               const state = {done:false,error:null,value:null}; window.__browserMeasurementRun=state;
@@ -1686,6 +1725,21 @@ def main() -> int:
                 "warmSha256": warm_hash,
                 "interpretation": "Hash equality establishes byte identity only. A difference can result from runtime nondeterminism and requires listening and waveform checks.",
             }
+            report['latencyScopes'] = {
+                'coldLoadSeconds': report['stages']['load'].get('durationSeconds'),
+                'firstRequest': first.get('snapshot', {}).get('metrics'),
+                'warmRequest': warm.get('snapshot', {}).get('metrics'),
+                'note': 'Cold means a fresh Chrome profile; OS/HTTP-server caches are not flushed. First/warm TTFA excludes model preparation. Playback and export are separate stages.',
+            }
+            if args.full_paper:
+                full_path = ROOT / 'browser_tts/public/federalist-no-10.txt'
+                full_text = full_path.read_text(encoding='utf-8').strip()
+                report['fullReading'] = {
+                    'inputPath': str(full_path), 'inputSha256': hashlib.sha256(full_path.read_bytes()).hexdigest(),
+                    'inputWords': len(full_text.split()),
+                    'reading': measurement.read_text('full_reading', full_text, args.seed, args.full_reading_timeout_seconds),
+                }
+                report['artifacts']['fullWav'] = measurement.export_wav('full_artifact_export', 'fullWav', out / 'full-reading.wav')
             write_json(report_path, report)
             report["status"] = "complete"
     except BaseException as error:
@@ -1755,6 +1809,16 @@ def main() -> int:
 
 
 def inspect_wav(data: bytes) -> dict[str, Any]:
+    return inspect_wav_header(data[:44], len(data))
+
+
+def inspect_wav_file(path: Path) -> dict[str, Any]:
+    with path.open('rb') as source:
+        header = source.read(44)
+    return inspect_wav_header(header, path.stat().st_size)
+
+
+def inspect_wav_header(data: bytes, file_size: int) -> dict[str, Any]:
     if len(data) < 44 or data[:4] != b"RIFF" or data[8:12] != b"WAVE":
         raise RunnerError("The exported audio is not a RIFF/WAVE file.")
     channels = struct.unpack_from("<H", data, 22)[0]
@@ -1762,16 +1826,30 @@ def inspect_wav(data: bytes) -> dict[str, Any]:
     bits = struct.unpack_from("<H", data, 34)[0]
     pcm_bytes = struct.unpack_from("<I", data, 40)[0]
     frame_size = channels * bits // 8
-    if frame_size <= 0 or pcm_bytes <= 0 or len(data) < 44 + pcm_bytes:
+    if channels != 1 or sample_rate != 24000 or bits != 16 or pcm_bytes <= 0 or file_size != 44 + pcm_bytes or pcm_bytes % 2:
         raise RunnerError("The exported WAV header has invalid or incomplete PCM data.")
+    if data[12:16] != b'fmt ' or data[36:40] != b'data' or struct.unpack_from('<H', data, 20)[0] != 1 or struct.unpack_from('<I', data, 4)[0] != file_size - 8:
+        raise RunnerError('The exported WAV format/RIFF length is invalid.')
     return {
-        "bytes": len(data),
+        "bytes": file_size,
         "channels": channels,
         "sampleRateHz": sample_rate,
         "bitsPerSample": bits,
         "audioSeconds": round(pcm_bytes / frame_size / sample_rate, 3),
         "validPcmPayload": True,
     }
+
+
+def assert_complete_reading(snapshot: dict[str, Any], text: str) -> None:
+    rows = snapshot.get('chunks', [])
+    joined = ' '.join(row.get('text', '') for row in rows)
+    if joined.split() != text.split():
+        raise RunnerError('Reading input passages omit, repeat, or reorder text. This checks submitted text, not spoken words.')
+    for index, row in enumerate(rows):
+        if row.get('index') != index or row.get('truncated') is not False or not row.get('speechTokens') or row.get('audioSeconds', 0) <= 0:
+            raise RunnerError('The reading contains a missing, truncated, or invalid passage.')
+    if snapshot.get('metrics', {}).get('maximumScheduledQueueSize', 3) > 2:
+        raise RunnerError('The playback queue exceeded two passages.')
 
 
 if __name__ == "__main__":

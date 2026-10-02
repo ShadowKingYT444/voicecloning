@@ -36,11 +36,26 @@ export class ReadingStore {
     return requestResult(this.db.transaction('passages').objectStore('passages').get([this.sessionId, index]));
   }
   async writeTo(stream) {
-    await stream.write(wavHeader(this.frames));
-    for (let index = 0; index < this.count; index += 1) {
+    for await (const bytes of this.wavChunks()) await stream.write(bytes);
+  }
+  async *wavChunks(maxBytes = 65536) {
+    if (!Number.isSafeInteger(maxBytes) || maxBytes < 44 || maxBytes > 65536) {
+      throw new Error('WAV export chunks must contain between 44 and 65536 bytes.');
+    }
+    const count = this.count; const frames = this.frames;
+    let pcmBytes = 0;
+    yield new Uint8Array(wavHeader(frames));
+    for (let index = 0; index < count; index += 1) {
+      if (this.count !== count || this.frames !== frames) throw new Error('The reading changed during export.');
       const part = await this.get(index);
       if (!part) throw new Error(`Saved audio passage ${index + 1} is missing.`);
-      await stream.write(part);
+      pcmBytes += part.size;
+      for (let offset = 0; offset < part.size; offset += maxBytes) {
+        yield new Uint8Array(await part.slice(offset, offset + maxBytes).arrayBuffer());
+      }
+    }
+    if (this.count !== count || this.frames !== frames || pcmBytes !== frames * 2) {
+      throw new Error('Saved audio size changed or does not match the WAV header.');
     }
   }
   async blob() {

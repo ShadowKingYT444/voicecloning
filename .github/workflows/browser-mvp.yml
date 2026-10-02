@@ -1,0 +1,56 @@
+name: Guarded browser MVP controls
+on:
+  pull_request:
+    paths:
+      - 'browser_tts/**'
+      - 'scripts/nano_lab/*guard*'
+      - 'scripts/nano_lab/bounded_job.py'
+      - 'artifacts/nano_lab/browser_mvp_20261002/lossless-manifest.json'
+      - '.github/workflows/browser-mvp.yml'
+permissions:
+  contents: read
+concurrency:
+  group: browser-mvp-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  controls:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Dependencies only; no models downloaded
+        run: |
+          npm --prefix browser_tts ci
+          cd browser_tts
+          npx playwright install --with-deps chromium
+      - name: Establish the existing systemd guard on this ephemeral runner
+        run: |
+          sudo loginctl enable-linger "$(id -un)"
+          sudo systemctl start "user@$(id -u).service"
+          echo "XDG_RUNTIME_DIR=/run/user/$(id -u)" >> "$GITHUB_ENV"
+          echo "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus" >> "$GITHUB_ENV"
+          mkdir -p artifacts/nano_lab/browser_mvp_20261002/ci
+          cat /proc/meminfo > artifacts/nano_lab/browser_mvp_20261002/ci/host-meminfo.txt
+          cat /proc/swaps > artifacts/nano_lab/browser_mvp_20261002/ci/host-swaps.txt
+      - name: Verify guard infrastructure and CPU components serially
+        run: |
+          systemctl --user is-system-running
+          python3 scripts/nano_lab/bounded_job.py --max-memory-mib 640 -- env PATH="$PATH" "$(command -v npm)" --prefix browser_tts test
+          python3 scripts/nano_lab/bounded_job.py --max-memory-mib 640 --guard-report artifacts/nano_lab/browser_mvp_20261002/ci/python-tests-guard.json -- python3 browser_tts/scripts/test-measurement.py
+      - name: Guarded production build
+        run: python3 scripts/nano_lab/bounded_job.py --max-memory-mib 640 --guard-report artifacts/nano_lab/browser_mvp_20261002/ci/build-guard.json -- env PATH="$PATH" "$(command -v npm)" --prefix browser_tts run build
+      - name: Guarded real Chromium capability and synthetic control checks
+        run: python3 scripts/nano_lab/bounded_job.py --guard-report artifacts/nano_lab/browser_mvp_20261002/ci/browser-guard.json -- env PATH="$PATH" "$(command -v npm)" --prefix browser_tts run test:browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-mvp-control-evidence
+          path: artifacts/nano_lab/browser_mvp_20261002/ci/
+          retention-days: 1
+          if-no-files-found: warn

@@ -6,9 +6,9 @@
   "child_processes": "seccomp_denied",
   "threads": "allowed_on_two_cpus",
   "swap": "host_disabled_required",
-  "sampled_peak_rss_mib": 56.1015625,
+  "sampled_peak_rss_mib": 26.13671875,
   "measurement_source": "in_process_getrusage",
   "stopped_reason": null,
   "returncode": 0,
-  "elapsed_s": 1.3064776480000546
+  "elapsed_s": 0.40293284799986395
 }
