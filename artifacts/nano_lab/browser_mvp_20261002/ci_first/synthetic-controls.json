@@ -1,0 +1,2849 @@
+{
+  "kind": "model-free-control-flow-only",
+  "inferenceRun": false,
+  "speechQualityValidated": false,
+  "memoryTargetValidated": false,
+  "latencyTargetValidated": false,
+  "note": "Synthetic tones replace the worker. Metrics below describe fixture scheduling, not TTS inference.",
+  "snapshot": {
+    "status": "ready",
+    "error": null,
+    "modelReady": true,
+    "busy": false,
+    "exporting": false,
+    "loadSeconds": 0,
+    "seed": 1337,
+    "modelIdentity": {
+      "fixture": true,
+      "inferenceRun": false,
+      "fittedAdapterApplied": false
+    },
+    "readingOutcome": "complete",
+    "chunks": [
+      {
+        "index": 0,
+        "text": "To the People of the State of New York:",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 0.04531746031746032
+      },
+      {
+        "index": 1,
+        "text": "AMONG the numerous advantages promised by a wellconstructed Union, none deserves to be more accurately",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 0.44531746031746033
+      },
+      {
+        "index": 2,
+        "text": "developed than its tendency to break and control the violence of faction. The friend of",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 0.8453174603174604
+      },
+      {
+        "index": 3,
+        "text": "popular governments never finds himself so much alarmed for their character and fate, as when",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 1.2453174603174604
+      },
+      {
+        "index": 4,
+        "text": "he contemplates their propensity to this dangerous vice. He will not fail, therefore, to set",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 1.6453174603174605
+      },
+      {
+        "index": 5,
+        "text": "a due value on any plan which, without violating the principles to which he is",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 2.0453174603174604
+      },
+      {
+        "index": 6,
+        "text": "attached, provides a proper cure for it. The instability, injustice, and confusion introduced into the",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 2.4453174603174603
+      },
+      {
+        "index": 7,
+        "text": "public councils, have, in truth, been the mortal diseases under which popular governments have everywhere",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 2.8453174603174602
+      },
+      {
+        "index": 8,
+        "text": "perished; as they continue to be the favorite and fruitful topics from which the adversaries",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 3.24531746031746
+      },
+      {
+        "index": 9,
+        "text": "to liberty derive their most specious declamations. The valuable improvements made by the American constitutions",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 3.64531746031746
+      },
+      {
+        "index": 10,
+        "text": "on the popular models, both ancient and modern, cannot certainly be too much admired; but",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 4.04531746031746
+      },
+      {
+        "index": 11,
+        "text": "it would be an unwarrantable partiality, to contend that they have as effectually obviated the",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 4.445317460317461
+      },
+      {
+        "index": 12,
+        "text": "danger on this side, as was wished and expected. Complaints are everywhere heard from our",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 4.845317460317461
+      },
+      {
+        "index": 13,
+        "text": "most considerate and virtuous citizens, equally the friends of public and private faith, and of",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 5.2453174603174615
+      },
+      {
+        "index": 14,
+        "text": "public and personal liberty, that our governments are too unstable, that the public good is",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 5.645317460317462
+      },
+      {
+        "index": 15,
+        "text": "disregarded in the conflicts of rival parties, and that measures are too often decided, not",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 6.045317460317462
+      },
+      {
+        "index": 16,
+        "text": "according to the rules of justice and the rights of the minor party, but by",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 6.4453174603174626
+      },
+      {
+        "index": 17,
+        "text": "the superior force of an interested and overbearing majority. However anxiously we may wish that",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 6.845317460317463
+      },
+      {
+        "index": 18,
+        "text": "these complaints had no foundation, the evidence, of known facts will not permit us to",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 7.245317460317463
+      },
+      {
+        "index": 19,
+        "text": "deny that they are in some degree true. It will be found, indeed, on a",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 7.645317460317464
+      },
+      {
+        "index": 20,
+        "text": "candid review of our situation, that some of the distresses under which we labor have",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 8.045317460317463
+      },
+      {
+        "index": 21,
+        "text": "been erroneously charged on the operation of our governments; but it will be found, at",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 8.445317460317463
+      },
+      {
+        "index": 22,
+        "text": "the same time, that other causes will not alone account for many of our heaviest",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 8.845317460317464
+      },
+      {
+        "index": 23,
+        "text": "misfortunes; and, particularly, for that prevailing and increasing distrust of public engagements, and alarm for",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 9.245317460317464
+      },
+      {
+        "index": 24,
+        "text": "private rights, which are echoed from one end of the continent to the other. These",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 9.645317460317465
+      },
+      {
+        "index": 25,
+        "text": "must be chiefly, if not wholly, effects of the unsteadiness and injustice with which a",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 10.045317460317465
+      },
+      {
+        "index": 26,
+        "text": "factious spirit has tainted our public administrations.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 10.445317460317465
+      },
+      {
+        "index": 27,
+        "text": "By a faction, I understand a number of citizens, whether amounting to a majority or",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 10.845317460317466
+      },
+      {
+        "index": 28,
+        "text": "a minority of the whole, who are united and actuated by some common impulse of",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 11.245317460317466
+      },
+      {
+        "index": 29,
+        "text": "passion, or of interest, adversed to the rights of other citizens, or to the permanent",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 11.645317460317466
+      },
+      {
+        "index": 30,
+        "text": "and aggregate interests of the community.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 12.045317460317467
+      },
+      {
+        "index": 31,
+        "text": "There are two methods of curing the mischiefs of faction: the one, by removing its",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 12.445317460317467
+      },
+      {
+        "index": 32,
+        "text": "causes; the other, by controlling its effects.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 12.845317460317467
+      },
+      {
+        "index": 33,
+        "text": "There are again two methods of removing the causes of faction: the one, by destroying",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 13.245317460317468
+      },
+      {
+        "index": 34,
+        "text": "the liberty which is essential to its existence; the other, by giving to every citizen",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 13.645317460317468
+      },
+      {
+        "index": 35,
+        "text": "the same opinions, the same passions, and the same interests.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 14.045317460317468
+      },
+      {
+        "index": 36,
+        "text": "It could never be more truly said than of the first remedy, that it was",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 14.445317460317469
+      },
+      {
+        "index": 37,
+        "text": "worse than the disease. Liberty is to faction what air is to fire, an aliment",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 14.84531746031747
+      },
+      {
+        "index": 38,
+        "text": "without which it instantly expires. But it could not be less folly to abolish liberty,",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 15.24531746031747
+      },
+      {
+        "index": 39,
+        "text": "which is essential to political life, because it nourishes faction, than it would be to",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 15.64531746031747
+      },
+      {
+        "index": 40,
+        "text": "wish the annihilation of air, which is essential to animal life, because it imparts to",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 16.04531746031747
+      },
+      {
+        "index": 41,
+        "text": "fire its destructive agency.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 16.44531746031747
+      },
+      {
+        "index": 42,
+        "text": "The second expedient is as impracticable as the first would be unwise. As long as",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 16.845317460317467
+      },
+      {
+        "index": 43,
+        "text": "the reason of man continues fallible, and he is at liberty to exercise it, different",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 17.245317460317466
+      },
+      {
+        "index": 44,
+        "text": "opinions will be formed. As long as the connection subsists between his reason and his",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 17.645317460317465
+      },
+      {
+        "index": 45,
+        "text": "self-love, his opinions and his passions will have a reciprocal influence on each other; and",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 18.045317460317463
+      },
+      {
+        "index": 46,
+        "text": "the former will be objects to which the latter will attach themselves. The diversity in",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 18.44531746031746
+      },
+      {
+        "index": 47,
+        "text": "the faculties of men, from which the rights of property originate, is not less an",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 18.84531746031746
+      },
+      {
+        "index": 48,
+        "text": "insuperable obstacle to a uniformity of interests. The protection of these faculties is the first",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 19.24531746031746
+      },
+      {
+        "index": 49,
+        "text": "object of government. From the protection of different and unequal faculties of acquiring property, the",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 19.645317460317457
+      },
+      {
+        "index": 50,
+        "text": "possession of different degrees and kinds of property immediately results; and from the influence of",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 20.045317460317456
+      },
+      {
+        "index": 51,
+        "text": "these on the sentiments and views of the respective proprietors, ensues a division of the",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 20.445317460317455
+      },
+      {
+        "index": 52,
+        "text": "society into different interests and parties.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 20.845317460317453
+      },
+      {
+        "index": 53,
+        "text": "The latent causes of faction are thus sown in the nature of man; and we",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 21.24531746031745
+      },
+      {
+        "index": 54,
+        "text": "see them everywhere brought into different degrees of activity, according to the different circumstances of",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 21.64531746031745
+      },
+      {
+        "index": 55,
+        "text": "civil society. A zeal for different opinions concerning religion, concerning government, and many other points,",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 22.04531746031745
+      },
+      {
+        "index": 56,
+        "text": "as well of speculation as of practice; an attachment to different leaders ambitiously contending for",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 22.445317460317447
+      },
+      {
+        "index": 57,
+        "text": "pre-eminence and power; or to persons of other descriptions whose fortunes have been interesting to",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 22.845317460317446
+      },
+      {
+        "index": 58,
+        "text": "the human passions, have, in turn, divided mankind into parties, inflamed them with mutual animosity,",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 23.245317460317445
+      },
+      {
+        "index": 59,
+        "text": "and rendered them much more disposed to vex and oppress each other than to co-operate",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 23.645317460317443
+      },
+      {
+        "index": 60,
+        "text": "for their common good. So strong is this propensity of mankind to fall into mutual",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 24.04531746031744
+      },
+      {
+        "index": 61,
+        "text": "animosities, that where no substantial occasion presents itself, the most frivolous and fanciful distinctions have",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 24.44531746031744
+      },
+      {
+        "index": 62,
+        "text": "been sufficient to kindle their unfriendly passions and excite their most violent conflicts. But the",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 24.84531746031744
+      },
+      {
+        "index": 63,
+        "text": "most common and durable source of factions has been the various and unequal distribution of",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 25.245317460317438
+      },
+      {
+        "index": 64,
+        "text": "property. Those who hold and those who are without property have ever formed distinct interests",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 25.645317460317436
+      },
+      {
+        "index": 65,
+        "text": "in society. Those who are creditors, and those who are debtors, fall under a like",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 26.045317460317435
+      },
+      {
+        "index": 66,
+        "text": "discrimination. A landed interest, a manufacturing interest, a mercantile interest, a moneyed interest, with many",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 26.445317460317433
+      },
+      {
+        "index": 67,
+        "text": "lesser interests, grow up of necessity in civilized nations, and divide them into different classes,",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 26.845317460317432
+      },
+      {
+        "index": 68,
+        "text": "actuated by different sentiments and views. The regulation of these various and interfering interests forms",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 27.24531746031743
+      },
+      {
+        "index": 69,
+        "text": "the principal task of modern legislation, and involves the spirit of party and faction in",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 27.64531746031743
+      },
+      {
+        "index": 70,
+        "text": "the necessary and ordinary operations of the government.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 28.045317460317428
+      },
+      {
+        "index": 71,
+        "text": "No man is allowed to be a judge in his own cause, because his interest",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 28.445317460317426
+      },
+      {
+        "index": 72,
+        "text": "would certainly bias his judgment, and, not improbably, corrupt his integrity. With equal, nay with",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 28.845317460317425
+      },
+      {
+        "index": 73,
+        "text": "greater reason, a body of men are unfit to be both judges and parties at",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 29.245317460317423
+      },
+      {
+        "index": 74,
+        "text": "the same time; yet what are many of the most important acts of legislation, but",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 29.645317460317422
+      },
+      {
+        "index": 75,
+        "text": "so many judicial determinations, not indeed concerning the rights of single persons, but concerning the",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 30.04531746031742
+      },
+      {
+        "index": 76,
+        "text": "rights of large bodies of citizens? And what are the different classes of legislators but",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 30.44531746031742
+      },
+      {
+        "index": 77,
+        "text": "advocates and parties to the causes which they determine? Is a law proposed concerning private",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 30.845317460317418
+      },
+      {
+        "index": 78,
+        "text": "debts? It is a question to which the creditors are parties on one side and",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 31.245317460317416
+      },
+      {
+        "index": 79,
+        "text": "the debtors on the other. Justice ought to hold the balance between them. Yet the",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 31.645317460317415
+      },
+      {
+        "index": 80,
+        "text": "parties are, and must be, themselves the judges; and the most numerous party, or, in",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 32.04531746031741
+      },
+      {
+        "index": 81,
+        "text": "other words, the most powerful faction must be expected to prevail. Shall domestic manufactures be",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 32.44531746031741
+      },
+      {
+        "index": 82,
+        "text": "encouraged, and in what degree, by restrictions on foreign manufactures? are questions which would be",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 32.84531746031741
+      },
+      {
+        "index": 83,
+        "text": "differently decided by the landed and the manufacturing classes, and probably by neither with a",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 33.24531746031741
+      },
+      {
+        "index": 84,
+        "text": "sole regard to justice and the public good. The apportionment of taxes on the various",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 33.64531746031741
+      },
+      {
+        "index": 85,
+        "text": "descriptions of property is an act which seems to require the most exact impartiality; yet",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 34.045317460317406
+      },
+      {
+        "index": 86,
+        "text": "there is, perhaps, no legislative act in which greater opportunity and temptation are given to",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 34.445317460317405
+      },
+      {
+        "index": 87,
+        "text": "a predominant party to trample on the rules of justice. Every shilling with which they",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 34.8453174603174
+      },
+      {
+        "index": 88,
+        "text": "overburden the inferior number, is a shilling saved to their own pockets.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 35.2453174603174
+      },
+      {
+        "index": 89,
+        "text": "It is in vain to say that enlightened statesmen will be able to adjust these",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 35.6453174603174
+      },
+      {
+        "index": 90,
+        "text": "clashing interests, and render them all subservient to the public good. Enlightened statesmen will not",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 36.0453174603174
+      },
+      {
+        "index": 91,
+        "text": "always be at the helm. Nor, in many cases, can such an adjustment be made",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 36.4453174603174
+      },
+      {
+        "index": 92,
+        "text": "at all without taking into view indirect and remote considerations, which will rarely prevail over",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 36.845317460317396
+      },
+      {
+        "index": 93,
+        "text": "the immediate interest which one party may find in disregarding the rights of another or",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 37.245317460317395
+      },
+      {
+        "index": 94,
+        "text": "the good of the whole.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 37.64531746031739
+      },
+      {
+        "index": 95,
+        "text": "The inference to which we are brought is, that the CAUSES of faction cannot be",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 38.04531746031739
+      },
+      {
+        "index": 96,
+        "text": "removed, and that relief is only to be sought in the means of controlling its",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 38.44531746031739
+      },
+      {
+        "index": 97,
+        "text": "EFFECTS.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 38.84531746031739
+      },
+      {
+        "index": 98,
+        "text": "If a faction consists of less than a majority, relief is supplied by the republican",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 39.24531746031739
+      },
+      {
+        "index": 99,
+        "text": "principle, which enables the majority to defeat its sinister views by regular vote. It may",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 39.645317460317386
+      },
+      {
+        "index": 100,
+        "text": "clog the administration, it may convulse the society; but it will be unable to execute",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 40.045317460317385
+      },
+      {
+        "index": 101,
+        "text": "and mask its violence under the forms of the Constitution. When a majority is included",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 40.44531746031738
+      },
+      {
+        "index": 102,
+        "text": "in a faction, the form of popular government, on the other hand, enables it to",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 40.84531746031738
+      },
+      {
+        "index": 103,
+        "text": "sacrifice to its ruling passion or interest both the public good and the rights of",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 41.24531746031738
+      },
+      {
+        "index": 104,
+        "text": "other citizens. To secure the public good and private rights against the danger of such",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 41.64531746031738
+      },
+      {
+        "index": 105,
+        "text": "a faction, and at the same time to preserve the spirit and the form of",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 42.04531746031738
+      },
+      {
+        "index": 106,
+        "text": "popular government, is then the great object to which our inquiries are directed. Let me",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 42.445317460317376
+      },
+      {
+        "index": 107,
+        "text": "add that it is the great desideratum by which this form of government can be",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 42.845317460317375
+      },
+      {
+        "index": 108,
+        "text": "rescued from the opprobrium under which it has so long labored, and be recommended to",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 43.245317460317374
+      },
+      {
+        "index": 109,
+        "text": "the esteem and adoption of mankind.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 43.64531746031737
+      },
+      {
+        "index": 110,
+        "text": "By what means is this object attainable? Evidently by one of two only. Either the",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 44.04531746031737
+      },
+      {
+        "index": 111,
+        "text": "existence of the same passion or interest in a majority at the same time must",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 44.44531746031737
+      },
+      {
+        "index": 112,
+        "text": "be prevented, or the majority, having such coexistent passion or interest, must be rendered, by",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 44.84531746031737
+      },
+      {
+        "index": 113,
+        "text": "their number and local situation, unable to concert and carry into effect schemes of oppression.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 45.24531746031737
+      },
+      {
+        "index": 114,
+        "text": "If the impulse and the opportunity be suffered to coincide, we well know that neither",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 45.645317460317365
+      },
+      {
+        "index": 115,
+        "text": "moral nor religious motives can be relied on as an adequate control. They are not",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 46.045317460317364
+      },
+      {
+        "index": 116,
+        "text": "found to be such on the injustice and violence of individuals, and lose their efficacy",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 46.44531746031736
+      },
+      {
+        "index": 117,
+        "text": "in proportion to the number combined together, that is, in proportion as their efficacy becomes",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 46.84531746031736
+      },
+      {
+        "index": 118,
+        "text": "needful.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 47.24531746031736
+      },
+      {
+        "index": 119,
+        "text": "From this view of the subject it may be concluded that a pure democracy, by",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 47.64531746031736
+      },
+      {
+        "index": 120,
+        "text": "which I mean a society consisting of a small number of citizens, who assemble and",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 48.04531746031736
+      },
+      {
+        "index": 121,
+        "text": "administer the government in person, can admit of no cure for the mischiefs of faction.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 48.445317460317355
+      },
+      {
+        "index": 122,
+        "text": "A common passion or interest will, in almost every case, be felt by a majority",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 48.845317460317354
+      },
+      {
+        "index": 123,
+        "text": "of the whole; a communication and concert result from the form of government itself; and",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 49.24531746031735
+      },
+      {
+        "index": 124,
+        "text": "there is nothing to check the inducements to sacrifice the weaker party or an obnoxious",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 49.64531746031735
+      },
+      {
+        "index": 125,
+        "text": "individual. Hence it is that such democracies have ever been spectacles of turbulence and contention;",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 50.04531746031735
+      },
+      {
+        "index": 126,
+        "text": "have ever been found incompatible with personal security or the rights of property; and have",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 50.44531746031735
+      },
+      {
+        "index": 127,
+        "text": "in general been as short in their lives as they have been violent in their",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 50.84531746031735
+      },
+      {
+        "index": 128,
+        "text": "deaths. Theoretic politicians, who have patronized this species of government, have erroneously supposed that by",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 51.245317460317345
+      },
+      {
+        "index": 129,
+        "text": "reducing mankind to a perfect equality in their political rights, they would, at the same",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 51.645317460317344
+      },
+      {
+        "index": 130,
+        "text": "time, be perfectly equalized and assimilated in their possessions, their opinions, and their passions.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 52.04531746031734
+      },
+      {
+        "index": 131,
+        "text": "A republic, by which I mean a government in which the scheme of representation takes",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 52.44531746031734
+      },
+      {
+        "index": 132,
+        "text": "place, opens a different prospect, and promises the cure for which we are seeking. Let",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 52.84531746031734
+      },
+      {
+        "index": 133,
+        "text": "us examine the points in which it varies from pure democracy, and we shall comprehend",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 53.24531746031734
+      },
+      {
+        "index": 134,
+        "text": "both the nature of the cure and the efficacy which it must derive from the",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 53.64531746031734
+      },
+      {
+        "index": 135,
+        "text": "Union.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 54.045317460317335
+      },
+      {
+        "index": 136,
+        "text": "The two great points of difference between a democracy and a republic are: first, the",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 54.445317460317334
+      },
+      {
+        "index": 137,
+        "text": "delegation of the government, in the latter, to a small number of citizens elected by",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 54.84531746031733
+      },
+      {
+        "index": 138,
+        "text": "the rest; secondly, the greater number of citizens, and greater sphere of country, over which",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 55.24531746031733
+      },
+      {
+        "index": 139,
+        "text": "the latter may be extended.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 55.64531746031733
+      },
+      {
+        "index": 140,
+        "text": "The effect of the first difference is, on the one hand, to refine and enlarge",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 56.04531746031733
+      },
+      {
+        "index": 141,
+        "text": "the public views, by passing them through the medium of a chosen body of citizens,",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 56.44531746031733
+      },
+      {
+        "index": 142,
+        "text": "whose wisdom may best discern the true interest of their country, and whose patriotism and",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 56.845317460317325
+      },
+      {
+        "index": 143,
+        "text": "love of justice will be least likely to sacrifice it to temporary or partial considerations.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 57.245317460317324
+      },
+      {
+        "index": 144,
+        "text": "Under such a regulation, it may well happen that the public voice, pronounced by the",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 57.64531746031732
+      },
+      {
+        "index": 145,
+        "text": "representatives of the people, will be more consonant to the public good than if pronounced",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 58.04531746031732
+      },
+      {
+        "index": 146,
+        "text": "by the people themselves, convened for the purpose. On the other hand, the effect may",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 58.44531746031732
+      },
+      {
+        "index": 147,
+        "text": "be inverted. Men of factious tempers, of local prejudices, or of sinister designs, may, by",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 58.84531746031732
+      },
+      {
+        "index": 148,
+        "text": "intrigue, by corruption, or by other means, first obtain the suffrages, and then betray the",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 59.24531746031732
+      },
+      {
+        "index": 149,
+        "text": "interests, of the people. The question resulting is, whether small or extensive republics are more",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 59.645317460317315
+      },
+      {
+        "index": 150,
+        "text": "favorable to the election of proper guardians of the public weal; and it is clearly",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 60.045317460317314
+      },
+      {
+        "index": 151,
+        "text": "decided in favor of the latter by two obvious considerations:",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 60.44531746031731
+      },
+      {
+        "index": 152,
+        "text": "In the first place, it is to be remarked that, however small the republic may",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 60.84531746031731
+      },
+      {
+        "index": 153,
+        "text": "be, the representatives must be raised to a certain number, in order to guard against",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 61.24531746031731
+      },
+      {
+        "index": 154,
+        "text": "the cabals of a few; and that, however large it may be, they must be",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 61.64531746031731
+      },
+      {
+        "index": 155,
+        "text": "limited to a certain number, in order to guard against the confusion of a multitude.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 62.04531746031731
+      },
+      {
+        "index": 156,
+        "text": "Hence, the number of representatives in the two cases not being in proportion to that",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 62.445317460317305
+      },
+      {
+        "index": 157,
+        "text": "of the two constituents, and being proportionally greater in the small republic, it follows that,",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 62.845317460317304
+      },
+      {
+        "index": 158,
+        "text": "if the proportion of fit characters be not less in the large than in the",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 63.2453174603173
+      },
+      {
+        "index": 159,
+        "text": "small republic, the former will present a greater option, and consequently a greater probability of",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 63.6453174603173
+      },
+      {
+        "index": 160,
+        "text": "a fit choice.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 64.0453174603173
+      },
+      {
+        "index": 161,
+        "text": "In the next place, as each representative will be chosen by a greater number of",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 64.44531746031731
+      },
+      {
+        "index": 162,
+        "text": "citizens in the large than in the small republic, it will be more difficult for",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 64.84531746031732
+      },
+      {
+        "index": 163,
+        "text": "unworthy candidates to practice with success the vicious arts by which elections are too often",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 65.24531746031732
+      },
+      {
+        "index": 164,
+        "text": "carried; and the suffrages of the people being more free, will be more likely to",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 65.64531746031733
+      },
+      {
+        "index": 165,
+        "text": "centre in men who possess the most attractive merit and the most diffusive and established",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 66.04531746031734
+      },
+      {
+        "index": 166,
+        "text": "characters.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 66.44531746031734
+      },
+      {
+        "index": 167,
+        "text": "It must be confessed that in this, as in most other cases, there is a",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 66.84531746031735
+      },
+      {
+        "index": 168,
+        "text": "mean, on both sides of which inconveniences will be found to lie. By enlarging too",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 67.24531746031735
+      },
+      {
+        "index": 169,
+        "text": "much the number of electors, you render the representatives too little acquainted with all their",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 67.64531746031736
+      },
+      {
+        "index": 170,
+        "text": "local circumstances and lesser interests; as by reducing it too much, you render him unduly",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 68.04531746031736
+      },
+      {
+        "index": 171,
+        "text": "attached to these, and too little fit to comprehend and pursue great and national objects.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 68.44531746031737
+      },
+      {
+        "index": 172,
+        "text": "The federal Constitution forms a happy combination in this respect; the great and aggregate interests",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 68.84531746031737
+      },
+      {
+        "index": 173,
+        "text": "being referred to the national, the local and particular to the State legislatures.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 69.24531746031738
+      },
+      {
+        "index": 174,
+        "text": "The other point of difference is, the greater number of citizens and extent of territory",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 69.64531746031739
+      },
+      {
+        "index": 175,
+        "text": "which may be brought within the compass of republican than of democratic government; and it",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 70.04531746031739
+      },
+      {
+        "index": 176,
+        "text": "is this circumstance principally which renders factious combinations less to be dreaded in the former",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 70.4453174603174
+      },
+      {
+        "index": 177,
+        "text": "than in the latter. The smaller the society, the fewer probably will be the distinct",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 70.8453174603174
+      },
+      {
+        "index": 178,
+        "text": "parties and interests composing it; the fewer the distinct parties and interests, the more frequently",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 71.24531746031741
+      },
+      {
+        "index": 179,
+        "text": "will a majority be found of the same party; and the smaller the number of",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 71.64531746031741
+      },
+      {
+        "index": 180,
+        "text": "individuals composing a majority, and the smaller the compass within which they are placed, the",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 72.04531746031742
+      },
+      {
+        "index": 181,
+        "text": "more easily will they concert and execute their plans of oppression. Extend the sphere, and",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 72.44531746031743
+      },
+      {
+        "index": 182,
+        "text": "you take in a greater variety of parties and interests; you make it less probable",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 72.84531746031743
+      },
+      {
+        "index": 183,
+        "text": "that a majority of the whole will have a common motive to invade the rights",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 73.24531746031744
+      },
+      {
+        "index": 184,
+        "text": "of other citizens; or if such a common motive exists, it will be more difficult",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 73.64531746031744
+      },
+      {
+        "index": 185,
+        "text": "for all who feel it to discover their own strength, and to act in unison",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 74.04531746031745
+      },
+      {
+        "index": 186,
+        "text": "with each other. Besides other impediments, it may be remarked that, where there is a",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 74.44531746031745
+      },
+      {
+        "index": 187,
+        "text": "consciousness of unjust or dishonorable purposes, communication is always checked by distrust in proportion to",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 74.84531746031746
+      },
+      {
+        "index": 188,
+        "text": "the number whose concurrence is necessary.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 75.24531746031747
+      },
+      {
+        "index": 189,
+        "text": "Hence, it clearly appears, that the same advantage which a republic has over a democracy,",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 75.64531746031747
+      },
+      {
+        "index": 190,
+        "text": "in controlling the effects of faction, is enjoyed by a large over a small republic,--is",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 76.04531746031748
+      },
+      {
+        "index": 191,
+        "text": "enjoyed by the Union over the States composing it. Does the advantage consist in the",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 76.44531746031748
+      },
+      {
+        "index": 192,
+        "text": "substitution of representatives whose enlightened views and virtuous sentiments render them superior to local prejudices",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 76.84531746031749
+      },
+      {
+        "index": 193,
+        "text": "and schemes of injustice? It will not be denied that the representation of the Union",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 77.2453174603175
+      },
+      {
+        "index": 194,
+        "text": "will be most likely to possess these requisite endowments. Does it consist in the greater",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 77.6453174603175
+      },
+      {
+        "index": 195,
+        "text": "security afforded by a greater variety of parties, against the event of any one party",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 78.0453174603175
+      },
+      {
+        "index": 196,
+        "text": "being able to outnumber and oppress the rest? In an equal degree does the increased",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 78.44531746031751
+      },
+      {
+        "index": 197,
+        "text": "variety of parties comprised within the Union, increase this security. Does it, in fine, consist",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 78.84531746031752
+      },
+      {
+        "index": 198,
+        "text": "in the greater obstacles opposed to the concert and accomplishment of the secret wishes of",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 79.24531746031752
+      },
+      {
+        "index": 199,
+        "text": "an unjust and interested majority? Here, again, the extent of the Union gives it the",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 79.64531746031753
+      },
+      {
+        "index": 200,
+        "text": "most palpable advantage.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 80.04531746031753
+      },
+      {
+        "index": 201,
+        "text": "The influence of factious leaders may kindle a flame within their particular States, but will",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 80.44531746031754
+      },
+      {
+        "index": 202,
+        "text": "be unable to spread a general conflagration through the other States. A religious sect may",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 80.84531746031755
+      },
+      {
+        "index": 203,
+        "text": "degenerate into a political faction in a part of the Confederacy; but the variety of",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 81.24531746031755
+      },
+      {
+        "index": 204,
+        "text": "sects dispersed over the entire face of it must secure the national councils against any",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 81.64531746031756
+      },
+      {
+        "index": 205,
+        "text": "danger from that source. A rage for paper money, for an abolition of debts, for",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 82.04531746031756
+      },
+      {
+        "index": 206,
+        "text": "an equal division of property, or for any other improper or wicked project, will be",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 82.44531746031757
+      },
+      {
+        "index": 207,
+        "text": "less apt to pervade the whole body of the Union than a particular member of",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 82.84531746031757
+      },
+      {
+        "index": 208,
+        "text": "it; in the same proportion as such a malady is more likely to taint a",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 83.24531746031758
+      },
+      {
+        "index": 209,
+        "text": "particular county or district, than an entire State.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 83.64531746031759
+      },
+      {
+        "index": 210,
+        "text": "In the extent and proper structure of the Union, therefore, we behold a republican remedy",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 84.04531746031759
+      },
+      {
+        "index": 211,
+        "text": "for the diseases most incident to republican government. And according to the degree of pleasure",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 84.4453174603176
+      },
+      {
+        "index": 212,
+        "text": "and pride we feel in being republicans, ought to be our zeal in cherishing the",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 84.8453174603176
+      },
+      {
+        "index": 213,
+        "text": "spirit and supporting the character of Federalists.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 85.24531746031761
+      },
+      {
+        "index": 214,
+        "text": "PUBLIUS.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 0,
+        "audioSeconds": 0.4,
+        "speechTokens": [
+          42
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 85.64531746031761
+      }
+    ],
+    "metrics": {
+      "firstAudioSeconds": 0.0445,
+      "totalSynthesisSeconds": 0,
+      "audioSeconds": 86.00000000000014,
+      "rtf": 0,
+      "playbackGapsSeconds": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximumPlaybackGapSeconds": 0,
+      "scheduledQueueSize": 0,
+      "maximumScheduledQueueSize": 2,
+      "scheduledAudioBytes": 0,
+      "maximumScheduledAudioBytes": 76800,
+      "generationCompleteSeconds": 85.24239999999996,
+      "playbackCompleteSeconds": 86.03959999999998,
+      "audioContextBaseLatencySeconds": 0.01,
+      "audioContextOutputLatencySeconds": 0.032,
+      "firstAudioScope": "Request to first scheduled WebAudio start; excludes model preparation. Not physical speaker latency.",
+      "playbackGapScope": "Scheduled AudioContext timeline gaps; listening/hardware continuity is unverified.",
+      "queuedAudioScope": "Requested Float32 playback-buffer bytes; not measured JS, browser process, or GPU memory."
+    }
+  },
+  "export": {
+    "bytes": 4128044,
+    "frames": 2064000,
+    "passages": 215,
+    "sampleRate": 24000,
+    "maximumChunkBytes": 65536,
+    "writtenBytes": 4128044,
+    "maximumTransferBytes": 19200,
+    "sha256": "d0e9e065c7874602d036d9641e2719eb5ebd5f2838d65589981843b06a1328e4"
+  }
+}

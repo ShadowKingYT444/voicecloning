@@ -346,6 +346,15 @@ test('runtime graph loader refuses the offline-only encoder', async () => {
   await assert.rejects(createGraph(ort, 'speech_encoder_q4f16'), /offline-only/);
 });
 
+test('runtime graph loader rejects an implicit or unsupported provider before fetching weights', async () => {
+  const ort = { InferenceSession: { create: async () => assert.fail('No runtime session should be created.') } };
+  await assert.rejects(createGraph(ort, 'embed_tokens_fp16', {}, {
+    webAssembly: { Suspending() {}, promising() {} },
+    executionProvider: 'auto',
+    fetchImpl: async () => assert.fail('Invalid provider must not fetch weights.'),
+  }), /explicit WebGPU or WASM/);
+});
+
  test('fixed state rejects non-finite features even with a matching binary hash', async () => {
   const { manifest, binary } = makeStateFixture();
   binary.writeFloatLE(Infinity, 0); manifest.data.sha256 = referenceHash(binary);

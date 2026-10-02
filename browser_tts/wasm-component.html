@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Voice Study · WASM embedding component</title>
+<style>body{max-width:800px;margin:36px auto;padding:24px;background:#f2f0ea;color:#26372e;font:16px/1.6 system-ui}h1{font:36px/1.2 Georgia,serif}button{padding:12px 18px;background:#294f3a;color:white;border:0;border-radius:6px;font:inherit;cursor:pointer}pre{padding:16px;background:#e7ebe3;white-space:pre-wrap;overflow-wrap:anywhere}a{color:#294f3a}</style></head>
+<body>
+<h1>CPU / WASM embedding component</h1>
+<p>This optional diagnostic downloads the pinned 83.26 MiB FP16 embedding tables and the ORT runtime. It compares real CPU/WASM Gather output to lossless streamed lookups. It runs no language model, decoder, reference encoder, or speech synthesis.</p>
+<p>Use an isolated, guarded cloud browser. Component success does not establish full Nano compatibility, voice quality, latency, or the memory target.</p>
+<button id="run" type="button">Run guarded component check</button>
+<p id="status" role="status" aria-live="polite">Not run.</p><pre id="report">No model component has run.</pre>
+<p><a href="/capabilities.html">Model-free capability check</a> · <a href="/">Reader</a></p>
+<script type="module" src="/src/wasm-component.js"></script>
+</body></html>

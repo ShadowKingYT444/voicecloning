@@ -130,12 +130,31 @@ export are separate stages. This harness does not perform a word/listening audit
 
 The draft includes a serial, 15-minute GitHub Actions workflow on the standard
 public-repository Ubuntu runner. It establishes the existing systemd guard,
-then runs guarded components, build and Chromium tests. It downloads no models.
+then runs guarded components, build and Chromium tests. Its optional CPU/WASM
+diagnostic downloads only the pinned 87,306,224-byte embedding graph/data, not
+the language model, decoder, encoder or reference. Those assets stay on the
+ephemeral runner and are not uploaded as evidence.
 The real capability page is tested without API stubs. Other integration tests
 replace the model worker with **synthetic tones**, exercise failure/retry,
 stop/restart, full-paper two-credit playback and >60-second streamed export,
 and capture desktop/mobile screenshots. Their metrics describe fixture control
 flow, never TTS speed, voice quality, speech accuracy or the memory target.
+
+The initial run at commit `82b7d8f` passed all three browser checks:
+https://github.com/ShadowKingYT444/voicecloning/actions/runs/36978713257.
+Actual Chromium 153.0.8010.12 exposed both JSPI APIs, but `requestAdapter`
+returned null. Its model-free fixture completed 215 passages, 86 seconds of
+synthetic tones, with a maximum two-passage queue. Streamed WAV export was
+4,128,044 bytes, SHA-256
+`d0e9e065c7874602d036d9641e2719eb5ebd5f2838d65589981843b06a1328e4`.
+The guard sampled 1,258.03 MiB aggregate RSS for the whole npm/Playwright/Vite/
+Chromium job; this is neither isolated browser RSS nor Nano memory. JSON and
+selected screenshots are retained under `artifacts/nano_lab/browser_mvp_20261002/ci_first/`.
+
+`/wasm-component.html` is a manually started, finite embedding-only diagnostic.
+It explicitly selects CPU/WASM, verifies the same pinned assets, and compares
+three hybrid lookup inputs with the lossless reader. It does not synthesize
+speech, establish full-model CPU compatibility or integrate a runtime fallback.
 
 The current Work browser cannot run the WebGPU-only model path. A CPU/WASM or
 cloud-service inference fallback has not been verified or integrated; the UI
