@@ -1,5 +1,13 @@
 # Voice cloning experiment handoff
 
+2026-10-02 local continuation: the cloud changes are merged at `2ed423b`.
+Device-bound hardware browser inference, real Stop/restart, and WAV exports
+complete within the existing resource guard. The original short generated-reference
+state fails speech. A separate native ASMR donor state now passes the short
+browser transcript check in first, warm and restarted reads. Read [local verification](LOCAL_BROWSER_VERIFICATION_20261002.md)
+for exact artifacts, memory, latency and the remaining long-reading checks.
+The full-paper and voice-quality targets remain unfinished.
+
 2026-10-02 Cloud continuation: read
 [the tested browser MVP handoff](BROWSER_MVP_20261002.md). Guarded Chromium
 controls, long synthetic export and real CPU/WASM embedding probes pass.

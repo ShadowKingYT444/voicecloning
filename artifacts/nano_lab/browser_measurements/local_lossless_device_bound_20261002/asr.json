@@ -1,0 +1,208 @@
+{
+  "model": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+  "backend": "CTranslate2 CPU int8",
+  "role": "independent_content_audit",
+  "human_listening": false,
+  "model_download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+  "model_identity": {
+    "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+    "name": "faster-whisper-small",
+    "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+    "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+    "size_class": "small"
+  },
+  "word_timestamps": true,
+  "inputs": [
+    {
+      "id": "first",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/local_lossless_device_bound_20261002/first-reading.wav",
+      "audio_sha256": "376c590b479974bb9ed07aa662b4713b1b941498a69843e6dcc2f80c99343ef2",
+      "expected_text": "Take a slow breath in, and let your shoulders relax.",
+      "transcript": "E, E, E.",
+      "segments": [
+        {
+          "text": "E, E, E.",
+          "start_s": 0.0,
+          "end_s": 1.18,
+          "avg_logprob": -0.9275048573811849,
+          "no_speech_prob": 0.2800746262073517,
+          "compression_ratio": 0.5714285714285714,
+          "words": [
+            {
+              "word": "E,",
+              "start_s": 0.0,
+              "end_s": 0.36,
+              "probability": 0.3194468915462494
+            },
+            {
+              "word": "E,",
+              "start_s": 0.76,
+              "end_s": 0.96,
+              "probability": 0.36601492762565613
+            },
+            {
+              "word": "E.",
+              "start_s": 1.02,
+              "end_s": 1.18,
+              "probability": 0.9516331553459167
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 1.0,
+        "reference_word_count": 10,
+        "hypothesis_word_count": 3,
+        "substitutions": 3,
+        "deletions": 7,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "in",
+          "and",
+          "let",
+          "your",
+          "shoulders",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "e",
+          "e",
+          "e"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 1.0,
+        "reference_word_count": 10,
+        "hypothesis_word_count": 3,
+        "substitutions": 3,
+        "deletions": 7,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "in",
+          "and",
+          "let",
+          "your",
+          "shoulders",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "e",
+          "e",
+          "e"
+        ]
+      },
+      "model_identity": {
+        "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+        "size_class": "small"
+      },
+      "seconds": 7.450693498998589
+    },
+    {
+      "id": "warm",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/local_lossless_device_bound_20261002/warm-reading.wav",
+      "audio_sha256": "696dc17d6def6b8990b098abc30bb30c874b2db44fc3525767904ee1761b1dce",
+      "expected_text": "Take a slow breath in, and let your shoulders relax.",
+      "transcript": "E, E, E.",
+      "segments": [
+        {
+          "text": "E, E, E.",
+          "start_s": 0.0,
+          "end_s": 1.18,
+          "avg_logprob": -0.8570732540554471,
+          "no_speech_prob": 0.3581177592277527,
+          "compression_ratio": 0.5714285714285714,
+          "words": [
+            {
+              "word": "E,",
+              "start_s": 0.0,
+              "end_s": 0.36,
+              "probability": 0.42398324608802795
+            },
+            {
+              "word": "E,",
+              "start_s": 0.78,
+              "end_s": 0.96,
+              "probability": 0.4569840133190155
+            },
+            {
+              "word": "E.",
+              "start_s": 1.02,
+              "end_s": 1.18,
+              "probability": 0.9710540771484375
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 1.0,
+        "reference_word_count": 10,
+        "hypothesis_word_count": 3,
+        "substitutions": 3,
+        "deletions": 7,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "in",
+          "and",
+          "let",
+          "your",
+          "shoulders",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "e",
+          "e",
+          "e"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 1.0,
+        "reference_word_count": 10,
+        "hypothesis_word_count": 3,
+        "substitutions": 3,
+        "deletions": 7,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "in",
+          "and",
+          "let",
+          "your",
+          "shoulders",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "e",
+          "e",
+          "e"
+        ]
+      },
+      "model_identity": {
+        "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+        "size_class": "small"
+      },
+      "seconds": 6.748559696003213
+    }
+  ],
+  "peak_rss_mib": 858.38671875
+}

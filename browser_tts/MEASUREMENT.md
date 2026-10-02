@@ -77,10 +77,27 @@ records both the requested and resolved URL. Without this option, the app
 discovers a pinned local installation from its revision manifest and otherwise
 uses the pinned remote model base. The ready snapshot records the actual base.
 
-The fixed voice-state manifest and its 331,200-byte binary are included in the
-repository publication at `public/voice/asmr-state.json` and
-`public/voice/asmr-state.bin`. The binary SHA-256 is
-`6f56c0dd844ecc038e5b60debff22d1e16b44c9d13386d0f7a91156bfca1b38e`.
+The default reader uses `public/voice/native-asmr-donor/asmr-state.json` and its
+1,083,840-byte sibling binary. Its SHA-256 is
+`77a2955a6b50122c581cf211f86d7c624381b7dfa8bb8ce61af3fb6359e16496`.
+The native ASMR T3 prefix uses one speech-start row. Three decoder-conditioning
+tensors remain copied exactly from the original selected-reference state.
+The first, warm and restarted short readings pass independent word checks.
+This is a speaker-specific research candidate, without a fitted adapter.
+
+The original 331,200-byte state remains at `public/voice/asmr-state.json` with
+binary SHA-256 `6f56c0dd844ecc038e5b60debff22d1e16b44c9d13386d0f7a91156bfca1b38e`.
+It fails the short word check. Use `--voice-state-manifest /voice/asmr-state.json`
+to reproduce that control. Other candidate URLs must use the app origin.
+
+`--check-stop-restart` exercises actual inference and exports a restarted WAV.
+`--trace-inference` captures bounded diagnostic logits and input metadata.
+It cannot be used with `--full-paper`. Chunks report conditioning, prefill,
+autoregressive and decoder durations. Autoregressive time includes token
+sampling and embedding lookup. Decoder time includes waveform readback.
+
+Read [local hardware verification](../docs/LOCAL_BROWSER_VERIFICATION_20261002.md)
+for current hashes, failures, successful short controls, RSS and latency.
 Restoring the encoder and rerunning the exporter is an optional reproducibility
 check. The large model files and Q4 weights remain excluded and can be
 restored or rebuilt through the [model restore](../docs/BROWSER_CONTINUATION.md#restore-and-reproduce)

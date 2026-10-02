@@ -112,7 +112,7 @@ function prepareVoice(options = {}) {
     loadingWorker.postMessage({ type: 'load', embeddingManifestUrl: options.embeddingManifestUrl,
       losslessEmbeddingManifestUrl: options.losslessEmbeddingManifestUrl,
       modelBaseUrl: options.modelBaseUrl ?? discoveredBase, voiceStateManifestUrl: options.voiceStateManifestUrl,
-      powerPreference: options.powerPreference });
+      powerPreference: options.powerPreference, traceInference: options.traceInference === true });
   }).catch((error) => { if (worker === loadingWorker) fail(error); });
   return loadWait.promise;
 }
@@ -190,10 +190,12 @@ async function playChunk(message) {
   };
   source.start(start);
   audioSeconds += buffer.duration; synthSeconds += message.synthesisSeconds; completed += 1;
-  chunkRecords.push({ index: message.index, text: message.text, sampleRate: message.sampleRate,
-    synthesisSeconds: message.synthesisSeconds, audioSeconds: buffer.duration,
+  const chunkRecord = { index: message.index, text: message.text, sampleRate: message.sampleRate,
+    synthesisSeconds: message.synthesisSeconds, stageSeconds: message.stageSeconds, audioSeconds: buffer.duration,
     speechTokens: message.speechTokens, truncated: message.truncated, scheduledStartSeconds: start,
-    embeddingLookup: message.embeddingLookup });
+    embeddingLookup: message.embeddingLookup };
+  if (message.inferenceTrace) chunkRecord.inferenceTrace = message.inferenceTrace;
+  chunkRecords.push(chunkRecord);
   if (firstAudio === null) {
     firstAudio = (performance.now() - runStarted) / 1000 + Math.max(0, start - audioContext.currentTime);
     metric('metric-first', fmt(firstAudio));
@@ -224,6 +226,7 @@ async function handleWorkerMessage(data) {
     modelReady = true; status = 'ready'; loadSeconds = data.loadSeconds; modelIdentity = data.modelIdentity;
     metric('metric-load', fmt(loadSeconds)); setStatus(`Voice ready · ${data.backend}`, 'ready');
     ui.load.querySelector('span:first-child').textContent = 'Voice prepared'; ui.progressWrap.hidden = true;
+    ui.readState.textContent = 'Ready to read.';
     updateTextStats(); loadWait?.resolve(snapshot()); loadWait = null;
   } else if (data.type === 'chunk') {
     await playChunk(data);
@@ -292,8 +295,14 @@ window.voiceStudy = {
     if (!store.count) throw new Error('No generated audio is available.');
     wavExport = { iterator: store.wavChunks(), offsetBytes: 0 };
     exporting = true; updateTextStats();
-    return { bytes: 44 + store.frames * 2, frames: store.frames, passages: store.count,
-      sampleRate: 24000, maximumChunkBytes: 65536, outputContract };
+    const metadata = { bytes: 44 + store.frames * 2, frames: store.frames, passages: store.count,
+      sampleRate: 24000, maximumChunkBytes: 65536, outputContract,
+      traceInference: modelIdentity?.traceInference === true };
+    const inferenceTrace = chunkRecords
+      .filter((chunk) => chunk.inferenceTrace)
+      .map(({ index, inferenceTrace: trace }) => ({ index, inferenceTrace: trace }));
+    if (inferenceTrace.length) metadata.inferenceTrace = inferenceTrace;
+    return metadata;
   },
   async readWavExport() {
     if (!wavExport) throw new Error('Open a WAV export before reading bytes.');

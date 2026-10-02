@@ -82,6 +82,7 @@ model_job.lock
 !/kokoro_package/reference/mommy_reference.wav
 !/browser_tts/public/voice/asmr_t3_seed47_fit.wav
 !/browser_tts/public/voice/asmr-state.bin
+!/browser_tts/public/voice/native-asmr-donor/asmr-state.bin
 
 # Small visual evidence for the browser cloud handoff.
 !/artifacts/nano_lab/browser_measurements/ui_fixed_voice_mobile_fixed/browser-ui.png
@@ -92,4 +93,8 @@ model_job.lock
 
 # Local diagnostic browser model candidates
 /browser_tts/public/experiments/
+!/browser_tts/public/experiments/
+/browser_tts/public/experiments/*
+!/browser_tts/public/experiments/native-donor-listening/
+!/browser_tts/public/experiments/native-donor-listening/**
 /browser_tts/public/models/

@@ -1,0 +1,10 @@
+{
+  "source": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+  "sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+  "promptTokens": 333,
+  "prefixShape": [
+    1,
+    334,
+    768
+  ]
+}

@@ -275,6 +275,16 @@ async function checkedExternalData(fetchImpl, asset, externalUrl) {
   return blob;
 }
 
+function getExecutionProviders(executionProvider, gpuDevice) {
+  if (!['webgpu', 'wasm'].includes(executionProvider)) {
+    throw new Error('Only the explicit WebGPU or WASM provider is supported.');
+  }
+  if (gpuDevice && executionProvider !== 'webgpu') {
+    throw new Error('A supplied GPU device requires the WebGPU execution provider.');
+  }
+  return gpuDevice ? [{ name: 'webgpu', device: gpuDevice }] : [executionProvider];
+}
+
 export async function createGraph(ort, name, outputLocations = {}, options = {}) {
   if (!ort?.InferenceSession?.create) throw new TypeError('An ONNX Runtime module is required.');
   if (!RUNTIME_GRAPHS.has(name)) {
@@ -286,7 +296,7 @@ export async function createGraph(ort, name, outputLocations = {}, options = {})
 
   assertJspiSupport(options.webAssembly);
   const executionProvider = options.executionProvider ?? 'webgpu';
-  if (!['webgpu', 'wasm'].includes(executionProvider)) throw new Error('Only the explicit WebGPU or WASM provider is supported.');
+  const executionProviders = getExecutionProviders(executionProvider, options.gpuDevice);
   const asset = ASSETS[name];
   const fetchImpl = options.fetchImpl || globalThis.fetch;
   if (typeof fetchImpl !== 'function') throw new Error('Fetch is unavailable in this worker.');
@@ -298,7 +308,7 @@ export async function createGraph(ort, name, outputLocations = {}, options = {})
   ]);
 
   return ort.InferenceSession.create(graph, {
-    executionProviders: [executionProvider],
+    executionProviders,
     graphOptimizationLevel: 'all',
     externalData: [{ path: asset.externalPath, data: externalData }],
     preferredOutputLocation: outputLocations,
@@ -527,7 +537,7 @@ export async function createExperimentalEmbeddingGraph(ort, manifestUrl, options
   const graph = new Uint8Array(await graphBlob.arrayBuffer());
 
   return ort.InferenceSession.create(graph, {
-    executionProviders: ['webgpu'],
+    executionProviders: getExecutionProviders('webgpu', options.gpuDevice),
     graphOptimizationLevel: 'all',
     externalData: [{ path: manifest.target.external_data.path, data: externalDataBlob }],
   });

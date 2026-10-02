@@ -11,13 +11,20 @@ import {
   REVISION,
   SHA256SUMS_SHA256,
   createGraph,
+  createExperimentalEmbeddingGraph,
   resolveModelAssetUrl,
   resolvePinnedRuntimeAsset,
   sha256Blob,
   sha256Bytes,
   validateExperimentalEmbeddingManifest,
 } from '../src/model-loader.js';
-import { loadFixedVoiceState } from '../src/voice-state.js';
+import {
+  getFixedVoiceStateIdentity,
+  loadFixedVoiceState,
+  removeDuplicateDonorSpeechStartEmbedding,
+  resolveVoiceStateDataUrl,
+  validateFixedVoiceStateManifest as validateFixedVoiceStateManifestFromLoader,
+} from '../src/voice-state.js';
 
 test('the retained real Q4 export manifest passes browser validation', () => {
   const path = new URL('../../artifacts/nano_lab/browser_embedding_q4_20261001/manifest.json', import.meta.url);
@@ -56,12 +63,51 @@ function makeChunkedBlob(bytes, chunkSizes) {
   };
 }
 
-function makeStateFixture() {
+function addNativeDonorProvenance(manifest) {
+  manifest.conditioning.source = 'native_t3_donor';
+  manifest.data.sha256 = '77a2955a6b50122c581cf211f86d7c624381b7dfa8bb8ce61af3fb6359e16496';
+  manifest.conditioning.native_t3_donor = {
+    profile: 'clean_asmr_original',
+    cache: {
+      path: 'artifacts/nano_lab/decoder_embedding_fit/conditionals.pt',
+      sha256: '3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c',
+    },
+    checkpoint: {
+      repo_id: 'ResembleAI/chatterbox-nano',
+      revision: '71ccd1d0081b430592cea481f4307e764e07bc64',
+      path: 'models/chatterbox-nano/t3_nano_v1.safetensors',
+      sha256: '72b110185087d945dbdf54dee4e333848e1811bdd5fd6cb16ceb8da50006f0c9',
+    },
+    prefix: {
+      path: 'artifacts/nano_lab/browser_measurements/local_asmr_cache_prefix_20261002/prefix.npy',
+      sha256: '6d27b0087b442abb8264d0fea19425be649f663519830e9ca28bdb57c80fe311',
+      frames: 334,
+      prompt_tokens: 333,
+      processing: 'cond_enc.spkr_enc(speaker_emb) concatenated with speech_emb(cond_prompt_speech_tokens)',
+    },
+    execution: { provider: 'CPU', framework: 'PyTorch', version: '2.11.0+cpu', threads: 2 },
+  };
+  manifest.encoder_execution.scope = 'three retained decoder-conditioning tensors copied bitwise from source_public_state; does not describe native T3 prefix';
+  manifest.source_public_state = {
+    path: 'browser_tts/public/voice/asmr-state.bin',
+    sha256: '6f56c0dd844ecc038e5b60debff22d1e16b44c9d13386d0f7a91156bfca1b38e',
+  };
+}
+
+function readNativeDonorStateFixture() {
+  const directory = new URL('../public/voice/native-asmr-donor/', import.meta.url);
+  return {
+    manifest: JSON.parse(readFileSync(new URL('asmr-state.json', directory), 'utf8')),
+    binary: readFileSync(new URL('asmr-state.bin', directory)),
+  };
+}
+
+function makeStateFixture({ source = 'generated_reference', featureFrames = 1 } = {}) {
   const specifications = [
-    { role: 'audio_features', name: 'audio_features', type: 'float32', dims: [1, 1, 768], bytes: 1 * 1 * 768 * 4 },
-    { role: 'audio_tokens', name: 'audio_tokens', type: 'int64', dims: [1, 2], bytes: 2 * 8 },
+    { role: 'audio_features', name: 'audio_features', type: 'float32', dims: [1, featureFrames, 768], bytes: featureFrames * 768 * 4 },
+    { role: 'audio_tokens', name: 'audio_tokens', type: 'int64', dims: [1, 88], bytes: 88 * 8 },
     { role: 'speaker_embeddings', name: 'speaker_embeddings', type: 'float32', dims: [1, 192], bytes: 192 * 4 },
-    { role: 'speaker_features', name: 'speaker_features', type: 'float32', dims: [1, 1, 80], bytes: 80 * 4 },
+    { role: 'speaker_features', name: 'speaker_features', type: 'float32', dims: [1, 176, 80], bytes: 176 * 80 * 4 },
   ];
   let offset = 0;
   const tensors = specifications.map((specification) => {
@@ -111,16 +157,18 @@ function makeStateFixture() {
     data: { file: 'asmr-state.bin', size_bytes: binary.byteLength, sha256: referenceHash(binary) },
     tensors,
   };
+  if (source === 'native_t3_donor') addNativeDonorProvenance(manifest);
   return { manifest, binary };
 }
 
 function makeFetch(manifest, binary, requests = []) {
   return async (url) => {
     requests.push(url);
-    if (url === '/voice/asmr-state.json') {
+    const pathname = new URL(url, 'http://voice-state.invalid/').pathname;
+    if (pathname.endsWith('/asmr-state.json')) {
       return { ok: true, status: 200, blob: async () => new Blob([JSON.stringify(manifest)]) };
     }
-    if (url === '/voice/asmr-state.bin') {
+    if (pathname.endsWith('/asmr-state.bin')) {
       return { ok: true, status: 200, blob: async () => new Blob([binary]) };
     }
     return { ok: false, status: 404, blob: async () => new Blob() };
@@ -258,7 +306,91 @@ test('fixed state loader verifies provenance and creates the four raw ORT tensor
   assert.equal(state.audioTokens.type, 'int64');
   assert.ok(state.audioTokens.data instanceof BigInt64Array);
   assert.deepEqual(state.speakerEmbeddings.dims, [1, 192]);
-  assert.deepEqual(state.speakerFeatures.dims, [1, 1, 80]);
+  assert.deepEqual(state.speakerFeatures.dims, [1, 176, 80]);
+  assert.deepEqual(getFixedVoiceStateIdentity(state), {
+    source: 'generated_reference', speechStartCount: 2, nativeT3Donor: null,
+  });
+});
+
+test('native donor state validates its pinned provenance and fetches its binary beside its manifest', async () => {
+  const { manifest, binary } = readNativeDonorStateFixture();
+  const manifestUrl = '/voice/native-asmr-donor/asmr-state.json';
+  const requests = [];
+  assert.equal(validateFixedVoiceStateManifestFromLoader(manifest), manifest);
+  assert.equal(resolveVoiceStateDataUrl(manifestUrl), '/voice/native-asmr-donor/asmr-state.bin');
+
+  const state = await loadFixedVoiceState({
+    ort: { Tensor: FakeTensor },
+    fetchImpl: makeFetch(manifest, binary, requests),
+    manifestUrl,
+  });
+  assert.deepEqual(requests, [manifestUrl, '/voice/native-asmr-donor/asmr-state.bin']);
+  assert.deepEqual(state.audioFeatures.dims, [1, 334, 768]);
+  assert.deepEqual(state.audioTokens.dims, [1, 88]);
+  assert.deepEqual(state.speakerEmbeddings.dims, [1, 192]);
+  assert.deepEqual(state.speakerFeatures.dims, [1, 176, 80]);
+  assert.deepEqual(getFixedVoiceStateIdentity(state), {
+    source: 'native_t3_donor',
+    speechStartCount: 1,
+    nativeT3Donor: {
+      profile: 'clean_asmr_original',
+      cacheSha256: '3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c',
+      revision: '71ccd1d0081b430592cea481f4307e764e07bc64',
+      checkpointSha256: '72b110185087d945dbdf54dee4e333848e1811bdd5fd6cb16ceb8da50006f0c9',
+      prefixSha256: '6d27b0087b442abb8264d0fea19425be649f663519830e9ca28bdb57c80fe311',
+      prefixFrames: 334,
+      promptTokens: 333,
+    },
+  });
+});
+
+test('voice-state binary URL stays beside the same-origin manifest', () => {
+  assert.equal(
+    resolveVoiceStateDataUrl(
+      'https://voice.example/voice/native/asmr-state.json',
+      'asmr-state.bin',
+      'https://voice.example/app/index.html',
+    ),
+    'https://voice.example/voice/native/asmr-state.bin',
+  );
+  assert.throws(
+    () => resolveVoiceStateDataUrl('https://cdn.example/native/asmr-state.json', 'asmr-state.bin', 'https://voice.example/'),
+    /browser app origin/,
+  );
+  assert.throws(() => resolveVoiceStateDataUrl('/voice/state.json', '../asmr-state.bin'), /binary filename/);
+});
+
+test('native donor provenance and prefix shape reject unpinned variants', () => {
+  const { manifest } = makeStateFixture({ source: 'native_t3_donor', featureFrames: 334 });
+  manifest.conditioning.native_t3_donor.prefix.sha256 = '0'.repeat(64);
+  assert.throws(() => validateFixedVoiceStateManifestFromLoader(manifest), /prefix provenance/);
+
+  const wrongShape = makeStateFixture({ source: 'native_t3_donor', featureFrames: 333 });
+  assert.throws(() => validateFixedVoiceStateManifestFromLoader(wrongShape.manifest), /334 frames/);
+
+  const wrongRetainedState = makeStateFixture({ source: 'native_t3_donor', featureFrames: 334 });
+  wrongRetainedState.manifest.tensors[3].dims[1] = 175;
+  assert.throws(() => validateFixedVoiceStateManifestFromLoader(wrongRetainedState.manifest), /retained public decoder state/);
+});
+
+test('native donor rejects a self-hashed but unpinned binary before fetching it', async () => {
+  const { manifest, binary } = makeStateFixture({ source: 'native_t3_donor', featureFrames: 334 });
+  manifest.data.sha256 = referenceHash(binary);
+  const requests = [];
+  await assert.rejects(loadFixedVoiceState({
+    ort: { Tensor: FakeTensor },
+    fetchImpl: makeFetch(manifest, binary, requests),
+    manifestUrl: '/voice/native-asmr-donor/asmr-state.json',
+  }), /native T3 donor binary SHA-256/);
+  assert.deepEqual(requests, ['/voice/native-asmr-donor/asmr-state.json']);
+});
+
+test('native donor trims exactly one identical trailing speech-start embedding', () => {
+  const ids = [7, 50256, 50256];
+  const embeddings = Float32Array.from([1, 2, 9, 10, 9, 10]);
+  assert.deepEqual(removeDuplicateDonorSpeechStartEmbedding(embeddings, ids, 2), Float32Array.from([1, 2, 9, 10]));
+  assert.throws(() => removeDuplicateDonorSpeechStartEmbedding(Float32Array.from([1, 2, 9, 10, 8, 10]), ids, 2), /different rows/);
+  assert.throws(() => removeDuplicateDonorSpeechStartEmbedding(embeddings, [7, 50256, 8], 2), /two speech-start markers/);
 });
 
 test('fixed state loader rejects an unpinned revision before it fetches tensor bytes', async () => {
@@ -353,6 +485,58 @@ test('runtime graph loader rejects an implicit or unsupported provider before fe
     executionProvider: 'auto',
     fetchImpl: async () => assert.fail('Invalid provider must not fetch weights.'),
   }), /explicit WebGPU or WASM/);
+});
+
+test('a supplied device reaches the WebGPU EP and cannot be paired with WASM', async () => {
+  const graphBytes = Buffer.from('diagnostic graph bytes');
+  const weightBytes = Buffer.from('diagnostic weight bytes');
+  const manifest = makeEmbeddingCandidateManifest();
+  manifest.target.graph.bytes = graphBytes.byteLength;
+  manifest.target.graph.sha256 = referenceHash(graphBytes);
+  manifest.target.external_data.bytes = weightBytes.byteLength;
+  manifest.target.external_data.sha256 = referenceHash(weightBytes);
+
+  const manifestUrl = 'https://voice.example/experiments/q4/manifest.json';
+  const graphUrl = 'https://voice.example/experiments/q4/embed_tokens_gather_q4.onnx';
+  const weightsUrl = 'https://voice.example/experiments/q4/embed_tokens_gather_q4.onnx.data';
+  const requests = [];
+  const fetchImpl = async (url) => {
+    requests.push(url);
+    const bytes = url === manifestUrl
+      ? Buffer.from(JSON.stringify(manifest))
+      : url === graphUrl ? graphBytes : url === weightsUrl ? weightBytes : null;
+    return bytes
+      ? { ok: true, status: 200, blob: async () => new Blob([bytes]) }
+      : { ok: false, status: 404, blob: async () => new Blob() };
+  };
+  const device = { name: 'selected-adapter-device' };
+  let captured;
+  const ort = {
+    InferenceSession: {
+      create: async (graph, options) => {
+        captured = { graph, options };
+        return { release: async () => {} };
+      },
+    },
+  };
+
+  await createExperimentalEmbeddingGraph(ort, manifestUrl, {
+    gpuDevice: device,
+    fetchImpl,
+    webAssembly: { Suspending() {}, promising() {} },
+  });
+  assert.equal(Buffer.from(captured.graph).compare(graphBytes), 0);
+  assert.deepEqual(captured.options.executionProviders, [{ name: 'webgpu', device }]);
+  assert.deepEqual(requests, [manifestUrl, graphUrl, weightsUrl]);
+
+  let forbiddenFetches = 0;
+  await assert.rejects(createGraph(ort, 'embed_tokens_fp16', {}, {
+    webAssembly: { Suspending() {}, promising() {} },
+    executionProvider: 'wasm',
+    gpuDevice: device,
+    fetchImpl: async () => { forbiddenFetches += 1; throw new Error('fetch must not start'); },
+  }), /GPU device requires the WebGPU execution provider/);
+  assert.equal(forbiddenFetches, 0);
 });
 
  test('fixed state rejects non-finite features even with a matching binary hash', async () => {

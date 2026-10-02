@@ -1,0 +1,17 @@
+[
+  {
+    "id": "fp16-firstWav",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/local_native_donor_fp16_20261002/first-reading.wav",
+    "text": "Take a slow breath in, and let your shoulders relax."
+  },
+  {
+    "id": "fp16-warmWav",
+    "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/local_native_donor_fp16_20261002/warm-reading.wav",
+    "text": "Take a slow breath in, and let your shoulders relax."
+  },
+  {
+    "id": "reusable-native-donor-cpu",
+    "path": "artifacts/nano_lab/browser_measurements/local_cpu_native_donor_20261002/cpu-reference.wav",
+    "text": "Take a slow breath in, and let your shoulders relax."
+  }
+]

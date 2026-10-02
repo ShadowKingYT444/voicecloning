@@ -1,0 +1,168 @@
+{
+  "text": "Take a slow breath in, and let your shoulders relax.",
+  "seed": 1337,
+  "voice_state_sha256": "77a2955a6b50122c581cf211f86d7c624381b7dfa8bb8ce61af3fb6359e16496",
+  "limits": [
+    "Single matched sentence and seed. No perceptual success or general zero-shot claim.",
+    "Process-tree RSS includes browser overhead; GPU allocations are separate.",
+    "One run per mode; differences include cold process and driver variation."
+  ],
+  "modes": {
+    "fp16_session": {
+      "source_report": "artifacts/nano_lab/browser_measurements/local_native_donor_fp16_20261002/measurement.json",
+      "model_load_seconds": 132.15320000000298,
+      "baseline": {
+        "cleanBrowserPssMiB": 475.671,
+        "cleanBrowserRssMiB": 1227.074,
+        "definition": "Mean measured Chrome process-tree PSS/RSS during a clean about:blank profile before app navigation."
+      },
+      "passes": {
+        "first": {
+          "speech_tokens": 83,
+          "audio_seconds": 3.44,
+          "synthesis_seconds": 16.49059999999404,
+          "stage_seconds": {
+            "autoregressive": 8.70919999999553,
+            "conditioning": 0.3296999999955296,
+            "decoder": 6.18970000000298,
+            "prefill": 1.2616000000014902
+          },
+          "metrics": {
+            "audioContextBaseLatencySeconds": 0.010666666666666666,
+            "audioContextOutputLatencySeconds": 0.168,
+            "audioSeconds": 3.44,
+            "firstAudioScope": "Request to first scheduled WebAudio start; excludes model preparation. Not physical speaker latency.",
+            "firstAudioSeconds": 16.947,
+            "generationCompleteSeconds": 16.92230000000447,
+            "maximumPlaybackGapSeconds": 0,
+            "maximumScheduledAudioBytes": 330240,
+            "maximumScheduledQueueSize": 1,
+            "playbackCompleteSeconds": 20.38110000000149,
+            "playbackGapScope": "Scheduled AudioContext timeline gaps; listening/hardware continuity is unverified.",
+            "playbackGapsSeconds": [],
+            "queuedAudioScope": "Requested Float32 playback-buffer bytes; not measured JS, browser process, or GPU memory.",
+            "rtf": 4.793779069765709,
+            "scheduledAudioBytes": 0,
+            "scheduledQueueSize": 0,
+            "totalSynthesisSeconds": 16.49059999999404
+          },
+          "memory": {
+            "sampledPeakRssMiB": 1692.781,
+            "sampledPeakPssMiB": 977.655,
+            "sampledPeakIncrementalPssMiB": 501.984,
+            "sampledPeakCurrentNotDestroyedRequestedMiB": 523.636
+          }
+        },
+        "warm": {
+          "speech_tokens": 83,
+          "audio_seconds": 3.44,
+          "synthesis_seconds": 12.04410000000149,
+          "stage_seconds": {
+            "autoregressive": 8.192600000001491,
+            "conditioning": 0.0325,
+            "decoder": 3.6016000000014903,
+            "prefill": 0.21719999999552966
+          },
+          "metrics": {
+            "audioContextBaseLatencySeconds": 0.010666666666666666,
+            "audioContextOutputLatencySeconds": 0.168,
+            "audioSeconds": 3.44,
+            "firstAudioScope": "Request to first scheduled WebAudio start; excludes model preparation. Not physical speaker latency.",
+            "firstAudioSeconds": 12.10880000000447,
+            "generationCompleteSeconds": 12.08410000000149,
+            "maximumPlaybackGapSeconds": 0,
+            "maximumScheduledAudioBytes": 330240,
+            "maximumScheduledQueueSize": 1,
+            "playbackCompleteSeconds": 15.54510000000149,
+            "playbackGapScope": "Scheduled AudioContext timeline gaps; listening/hardware continuity is unverified.",
+            "playbackGapsSeconds": [],
+            "queuedAudioScope": "Requested Float32 playback-buffer bytes; not measured JS, browser process, or GPU memory.",
+            "rtf": 3.50119186046555,
+            "scheduledAudioBytes": 0,
+            "scheduledQueueSize": 0,
+            "totalSynthesisSeconds": 12.04410000000149
+          },
+          "memory": {
+            "sampledPeakRssMiB": 1879.305,
+            "sampledPeakPssMiB": 1020.809,
+            "sampledPeakIncrementalPssMiB": 545.138,
+            "sampledPeakCurrentNotDestroyedRequestedMiB": 526.471
+          }
+        }
+      }
+    },
+    "lossless_shards": {
+      "source_report": "artifacts/nano_lab/browser_measurements/local_native_donor_browser_20261002/measurement.json",
+      "model_load_seconds": 110.00630000000447,
+      "baseline": {
+        "cleanBrowserPssMiB": 477.208,
+        "cleanBrowserRssMiB": 1202.55,
+        "definition": "Mean measured Chrome process-tree PSS/RSS during a clean about:blank profile before app navigation."
+      },
+      "passes": {
+        "first": {
+          "speech_tokens": 83,
+          "audio_seconds": 3.44,
+          "synthesis_seconds": 17.75459999999404,
+          "stage_seconds": null,
+          "metrics": {
+            "audioContextBaseLatencySeconds": 0.010666666666666666,
+            "audioContextOutputLatencySeconds": 0.168,
+            "audioSeconds": 3.44,
+            "firstAudioScope": "Request to first scheduled WebAudio start; excludes model preparation. Not physical speaker latency.",
+            "firstAudioSeconds": 18.11260000000149,
+            "generationCompleteSeconds": 18.08789999999851,
+            "maximumPlaybackGapSeconds": 0,
+            "maximumScheduledAudioBytes": 330240,
+            "maximumScheduledQueueSize": 1,
+            "playbackCompleteSeconds": 21.55039999999851,
+            "playbackGapScope": "Scheduled AudioContext timeline gaps; listening/hardware continuity is unverified.",
+            "playbackGapsSeconds": [],
+            "queuedAudioScope": "Requested Float32 playback-buffer bytes; not measured JS, browser process, or GPU memory.",
+            "rtf": 5.161220930230825,
+            "scheduledAudioBytes": 0,
+            "scheduledQueueSize": 0,
+            "totalSynthesisSeconds": 17.75459999999404
+          },
+          "memory": {
+            "sampledPeakRssMiB": 1745.215,
+            "sampledPeakPssMiB": 924.516,
+            "sampledPeakIncrementalPssMiB": 447.308,
+            "sampledPeakCurrentNotDestroyedRequestedMiB": 440.345
+          }
+        },
+        "warm": {
+          "speech_tokens": 83,
+          "audio_seconds": 3.44,
+          "synthesis_seconds": 11.23310000000149,
+          "stage_seconds": null,
+          "metrics": {
+            "audioContextBaseLatencySeconds": 0.010666666666666666,
+            "audioContextOutputLatencySeconds": 0.168,
+            "audioSeconds": 3.44,
+            "firstAudioScope": "Request to first scheduled WebAudio start; excludes model preparation. Not physical speaker latency.",
+            "firstAudioSeconds": 11.309399999998508,
+            "generationCompleteSeconds": 11.28470000000298,
+            "maximumPlaybackGapSeconds": 0,
+            "maximumScheduledAudioBytes": 330240,
+            "maximumScheduledQueueSize": 1,
+            "playbackCompleteSeconds": 14.74160000000149,
+            "playbackGapScope": "Scheduled AudioContext timeline gaps; listening/hardware continuity is unverified.",
+            "playbackGapsSeconds": [],
+            "queuedAudioScope": "Requested Float32 playback-buffer bytes; not measured JS, browser process, or GPU memory.",
+            "rtf": 3.265436046512061,
+            "scheduledAudioBytes": 0,
+            "scheduledQueueSize": 0,
+            "totalSynthesisSeconds": 11.23310000000149
+          },
+          "memory": {
+            "sampledPeakRssMiB": 1683.344,
+            "sampledPeakPssMiB": 944.718,
+            "sampledPeakIncrementalPssMiB": 467.51,
+            "sampledPeakCurrentNotDestroyedRequestedMiB": 443.179
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "comparison": "descriptive_only; this script does not synthesize speech or apply an acceptance threshold",
+  "native_checkpoint": {
+    "repo_id": "ResembleAI/chatterbox-nano",
+    "revision": "71ccd1d0081b430592cea481f4307e764e07bc64",
+    "sha256": {
+      "t3_nano_v1.safetensors": "72b110185087d945dbdf54dee4e333848e1811bdd5fd6cb16ceb8da50006f0c9",
+      "ve.safetensors": "f0921cab452fa278bc25cd23ffd59d36f816d7dc5181dd1bef9751a7fb61f63c"
+    }
+  },
+  "native_prefix_shape": [
+    1,
+    89,
+    768
+  ],
+  "prompt_rows": {
+    "cosine_similarity": 0.9967463612033353,
+    "elements": 67584,
+    "max_absolute_error": 0.12718729674816132,
+    "mean_absolute_error": 0.03956470518440912,
+    "native_l2_norm": 149.55362407498174,
+    "public_l2_norm": 150.0401837044481,
+    "rmse": 0.046519149373708185
+  },
+  "prompt_token_count": 88,
+  "public_feature_shape": [
+    1,
+    89,
+    768
+  ],
+  "public_state_sha256": "6f56c0dd844ecc038e5b60debff22d1e16b44c9d13386d0f7a91156bfca1b38e",
+  "reference": {
+    "duration_seconds": 3.52,
+    "native_prepare_conditionals_duration_supported": false,
+    "norm_loudness": false,
+    "resample_target_hz": 16000,
+    "sample_rate": 24000,
+    "sha256": "67f94a868976b22a47bce8fd00a873d4c5b7085ba6eedd698f8a898a26ce76c0"
+  },
+  "schema": "browser_tts.native-conditioning-probe/v1",
+  "speaker_row": {
+    "cosine_similarity": 0.9282568912046827,
+    "elements": 768,
+    "max_absolute_error": 0.24644345045089722,
+    "mean_absolute_error": 0.04252638001465433,
+    "native_l2_norm": 3.998357593043294,
+    "public_l2_norm": 4.07152606592518,
+    "rmse": 0.055212959143048045
+  }
+}

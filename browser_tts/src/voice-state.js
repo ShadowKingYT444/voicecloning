@@ -12,6 +12,18 @@ const MODEL_REPOSITORY = 'owensong/chatterbox-nano-ONNX';
 const REFERENCE_PATH = 'browser_tts/public/voice/asmr_t3_seed47_fit.wav';
 const MAX_STATE_BYTES = 16 * 1024 * 1024;
 const DATA_FILE = 'asmr-state.bin';
+const PUBLIC_STATE_SHA256 = '6f56c0dd844ecc038e5b60debff22d1e16b44c9d13386d0f7a91156bfca1b38e';
+const NANO_REPOSITORY = 'ResembleAI/chatterbox-nano';
+const NANO_REVISION = '71ccd1d0081b430592cea481f4307e764e07bc64';
+const NANO_T3_SHA256 = '72b110185087d945dbdf54dee4e333848e1811bdd5fd6cb16ceb8da50006f0c9';
+const DONOR_CACHE_SHA256 = '3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c';
+const DONOR_PREFIX_SHA256 = '6d27b0087b442abb8264d0fea19425be649f663519830e9ca28bdb57c80fe311';
+const DONOR_STATE_SHA256 = '77a2955a6b50122c581cf211f86d7c624381b7dfa8bb8ce61af3fb6359e16496';
+const DONOR_PREFIX_FRAMES = 334;
+const DONOR_PROMPT_TOKENS = 333;
+const DONOR_PREFIX_PROCESSING = 'cond_enc.spkr_enc(speaker_emb) concatenated with speech_emb(cond_prompt_speech_tokens)';
+const DONOR_ENCODER_SCOPE = 'three retained decoder-conditioning tensors copied bitwise from source_public_state; does not describe native T3 prefix';
+const STATE_IDENTITY = new WeakMap();
 
 const ENCODER_ASSET = getPinnedAsset('speech_encoder_q4f16');
 const TENSOR_SPEC = Object.freeze([
@@ -20,6 +32,11 @@ const TENSOR_SPEC = Object.freeze([
   Object.freeze({ role: 'speaker_embeddings', name: 'speaker_embeddings', type: 'float32', rank: 2, lastDim: 192 }),
   Object.freeze({ role: 'speaker_features', name: 'speaker_features', type: 'float32', rank: 3, lastDim: 80 }),
 ]);
+const DONOR_RETAINED_DIMS = Object.freeze({
+  audio_tokens: Object.freeze([1, 88]),
+  speaker_embeddings: Object.freeze([1, 192]),
+  speaker_features: Object.freeze([1, 176, 80]),
+});
 
 const ELEMENT_BYTES = Object.freeze({ float32: 4, int64: 8 });
 
@@ -33,6 +50,61 @@ function isSha256(value) {
 
 function requireObject(value, label) {
   if (!value || typeof value !== 'object' || Array.isArray(value)) invalid(`${label} must be an object.`);
+}
+
+function requireKeys(value, keys, label) {
+  requireObject(value, label);
+  const actual = Object.keys(value).sort();
+  const expected = [...keys].sort();
+  if (actual.length !== expected.length || actual.some((key, index) => key !== expected[index])) {
+    invalid(`${label} must contain exactly these fields: ${expected.join(', ')}.`);
+  }
+}
+
+function validateNativeDonor(conditioning, manifest) {
+  const donor = conditioning.native_t3_donor;
+  requireKeys(donor, ['profile', 'cache', 'checkpoint', 'prefix', 'execution'], 'native T3 donor provenance');
+  if (donor.profile !== 'clean_asmr_original') invalid('native T3 donor profile is not pinned.');
+
+  requireKeys(donor.cache, ['path', 'sha256'], 'native T3 donor cache provenance');
+  if (donor.cache.path !== 'artifacts/nano_lab/decoder_embedding_fit/conditionals.pt'
+      || donor.cache.sha256 !== DONOR_CACHE_SHA256) {
+    invalid('native T3 donor cache provenance does not match the reviewed donor.');
+  }
+
+  requireKeys(donor.checkpoint, ['repo_id', 'revision', 'path', 'sha256'], 'native T3 checkpoint provenance');
+  if (donor.checkpoint.repo_id !== NANO_REPOSITORY
+      || donor.checkpoint.revision !== NANO_REVISION
+      || donor.checkpoint.path !== 'models/chatterbox-nano/t3_nano_v1.safetensors'
+      || donor.checkpoint.sha256 !== NANO_T3_SHA256) {
+    invalid('native T3 checkpoint provenance does not match the pinned Nano checkpoint.');
+  }
+
+  requireKeys(donor.prefix, ['path', 'sha256', 'frames', 'prompt_tokens', 'processing'], 'native T3 prefix provenance');
+  if (donor.prefix.path !== 'artifacts/nano_lab/browser_measurements/local_asmr_cache_prefix_20261002/prefix.npy'
+      || donor.prefix.sha256 !== DONOR_PREFIX_SHA256
+      || donor.prefix.frames !== DONOR_PREFIX_FRAMES
+      || donor.prefix.prompt_tokens !== DONOR_PROMPT_TOKENS
+      || donor.prefix.processing !== DONOR_PREFIX_PROCESSING) {
+    invalid('native T3 prefix provenance does not match the exported donor prefix.');
+  }
+
+  requireKeys(donor.execution, ['provider', 'framework', 'version', 'threads'], 'native T3 execution provenance');
+  if (donor.execution.provider !== 'CPU'
+      || donor.execution.framework !== 'PyTorch'
+      || !/^2\.\d+\.\d+\+cpu$/.test(donor.execution.version || '')
+      || donor.execution.threads !== 2) {
+    invalid('native T3 prefix must record the bounded CPU PyTorch export.');
+  }
+
+  requireKeys(manifest.source_public_state, ['path', 'sha256'], 'source public state provenance');
+  if (manifest.source_public_state.path !== 'browser_tts/public/voice/asmr-state.bin'
+      || manifest.source_public_state.sha256 !== PUBLIC_STATE_SHA256) {
+    invalid('native T3 donor must retain decoder tensors from the pinned public state.');
+  }
+  if (manifest.encoder_execution.scope !== DONOR_ENCODER_SCOPE) {
+    invalid('native T3 donor encoder scope does not describe the retained decoder tensors.');
+  }
 }
 
 function validateManifest(manifest) {
@@ -72,11 +144,16 @@ function validateManifest(manifest) {
   }
 
   requireObject(manifest.conditioning, 'conditioning provenance');
-  if (manifest.conditioning.source !== 'generated_reference'
+  if (!['generated_reference', 'native_t3_donor'].includes(manifest.conditioning.source)
       || manifest.conditioning.zero_shot !== false
       || manifest.conditioning.speaker_specific !== true
       || manifest.conditioning.fitted_adapter_applied !== false) {
-    invalid('conditioning provenance must identify speaker-specific generated-reference features without a fitted adapter.');
+    invalid('conditioning provenance must identify speaker-specific features without a fitted adapter.');
+  }
+  if (manifest.conditioning.source === 'native_t3_donor') {
+    validateNativeDonor(manifest.conditioning, manifest);
+  } else if (manifest.conditioning.native_t3_donor) {
+    invalid('native T3 donor provenance is only valid when conditioning.source is native_t3_donor.');
   }
 
   requireObject(manifest.data, 'binary data metadata');
@@ -87,6 +164,9 @@ function validateManifest(manifest) {
     invalid(`binary size must be between 1 byte and ${MAX_STATE_BYTES} bytes.`);
   }
   if (!isSha256(manifest.data.sha256)) invalid('binary SHA-256 must contain 64 lowercase hexadecimal characters.');
+  if (manifest.conditioning.source === 'native_t3_donor' && manifest.data.sha256 !== DONOR_STATE_SHA256) {
+    invalid('native T3 donor binary SHA-256 does not match the pinned exported state.');
+  }
 
   if (!Array.isArray(manifest.tensors) || manifest.tensors.length !== TENSOR_SPEC.length) {
     invalid(`exactly ${TENSOR_SPEC.length} tensors are required.`);
@@ -107,6 +187,16 @@ function validateManifest(manifest) {
       invalid(`${expected.name} must have ${expected.rank} positive integer dimensions.`);
     }
     if (tensor.dims[0] !== 1) invalid(`${expected.name} must have batch size 1.`);
+    if (manifest.conditioning.source === 'native_t3_donor'
+        && expected.role === 'audio_features'
+        && tensor.dims[1] !== DONOR_PREFIX_FRAMES) {
+      invalid(`native T3 audio_features must contain ${DONOR_PREFIX_FRAMES} frames.`);
+    }
+    if (manifest.conditioning.source === 'native_t3_donor' && DONOR_RETAINED_DIMS[expected.name]
+        && (tensor.dims.length !== DONOR_RETAINED_DIMS[expected.name].length
+          || tensor.dims.some((dim, axis) => dim !== DONOR_RETAINED_DIMS[expected.name][axis]))) {
+      invalid(`${expected.name} dimensions must match the retained public decoder state.`);
+    }
     if (expected.lastDim && tensor.dims.at(-1) !== expected.lastDim) {
       invalid(`${expected.name} must have last dimension ${expected.lastDim}.`);
     }
@@ -142,7 +232,6 @@ export async function loadFixedVoiceState({
   ort,
   fetchImpl = globalThis.fetch,
   manifestUrl = '/voice/asmr-state.json',
-  dataUrl = '/voice/asmr-state.bin',
 } = {}) {
   if (!ort?.Tensor) throw new TypeError('An ONNX Runtime module is required to load the fixed voice state.');
   if (typeof fetchImpl !== 'function') throw new Error('Fetch is unavailable in this worker.');
@@ -158,6 +247,7 @@ export async function loadFixedVoiceState({
   }
   validateManifest(manifest);
 
+  const dataUrl = resolveVoiceStateDataUrl(manifestUrl, manifest.data.file);
   const dataBlob = await responseBlob(fetchImpl, dataUrl, 'the fixed voice state binary');
   if (dataBlob.size !== manifest.data.size_bytes) invalid('binary size does not match the manifest.');
   const actualSha256 = await sha256Blob(dataBlob);
@@ -181,12 +271,72 @@ export async function loadFixedVoiceState({
     throw error;
   }
 
-  return {
+  const state = {
     audioFeatures: tensors.audio_features,
     audioTokens: tensors.audio_tokens,
     speakerEmbeddings: tensors.speaker_embeddings,
     speakerFeatures: tensors.speaker_features,
   };
+  const donor = manifest.conditioning.source === 'native_t3_donor'
+    ? manifest.conditioning.native_t3_donor
+    : null;
+  STATE_IDENTITY.set(state, Object.freeze({
+    source: manifest.conditioning.source,
+    speechStartCount: donor ? 1 : 2,
+    nativeT3Donor: donor ? Object.freeze({
+      profile: donor.profile,
+      cacheSha256: donor.cache.sha256,
+      revision: donor.checkpoint.revision,
+      checkpointSha256: donor.checkpoint.sha256,
+      prefixSha256: donor.prefix.sha256,
+      prefixFrames: donor.prefix.frames,
+      promptTokens: donor.prefix.prompt_tokens,
+    }) : null,
+  }));
+  return state;
+}
+
+export function resolveVoiceStateDataUrl(manifestUrl, dataFile = DATA_FILE, pageUrl = globalThis.location?.href) {
+  if (dataFile !== DATA_FILE) invalid(`binary filename must be ${DATA_FILE}.`);
+  if (typeof manifestUrl !== 'string' || !manifestUrl.trim()) invalid('manifest URL must be a non-empty string.');
+  const isAbsolute = /^[a-z][a-z\d+.-]*:/i.test(manifestUrl);
+  let baseUrl = pageUrl;
+  if (!baseUrl && !isAbsolute) baseUrl = 'http://voice-state.invalid/';
+  let manifest;
+  try {
+    manifest = new URL(manifestUrl, baseUrl);
+  } catch (error) {
+    invalid(`manifest URL is invalid: ${error?.message || String(error)}.`);
+  }
+  if (manifest.username || manifest.password) invalid('manifest URL cannot contain URL credentials.');
+  if (pageUrl && manifest.origin !== new URL(pageUrl).origin) {
+    invalid('manifest URL must use the browser app origin.');
+  }
+  const sibling = new URL(dataFile, manifest);
+  if (sibling.origin !== manifest.origin) invalid('binary URL must use the manifest origin.');
+  return isAbsolute || pageUrl ? sibling.href : sibling.pathname;
+}
+
+export function getFixedVoiceStateIdentity(state) {
+  return STATE_IDENTITY.get(state) || Object.freeze({ source: 'generated_reference', speechStartCount: 2, nativeT3Donor: null });
+}
+
+export function removeDuplicateDonorSpeechStartEmbedding(embeddings, tokenIds, featureDim = 768) {
+  if (!ArrayBuffer.isView(embeddings) || !Array.isArray(tokenIds)
+      || !Number.isSafeInteger(featureDim) || featureDim <= 0
+      || embeddings.length !== tokenIds.length * featureDim) {
+    invalid('native T3 text embeddings do not match their token sequence.');
+  }
+  if (tokenIds.length < 2 || tokenIds.at(-1) !== 50256 || tokenIds.at(-2) !== 50256) {
+    invalid('native T3 text sequence must end with two speech-start markers.');
+  }
+  const tailStart = embeddings.length - featureDim * 2;
+  for (let index = 0; index < featureDim; index += 1) {
+    if (embeddings[tailStart + index] !== embeddings[tailStart + featureDim + index]) {
+      invalid('the embedding graph returned different rows for duplicate native T3 speech-start markers.');
+    }
+  }
+  return embeddings.slice(0, embeddings.length - featureDim);
 }
 
 export { validateManifest as validateFixedVoiceStateManifest };

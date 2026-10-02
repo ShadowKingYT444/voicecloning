@@ -1,0 +1,91 @@
+{
+  "model": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+  "backend": "CTranslate2 CPU int8",
+  "role": "independent_content_audit",
+  "human_listening": false,
+  "model_download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+  "model_identity": {
+    "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+    "name": "faster-whisper-small",
+    "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+    "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+    "size_class": "small"
+  },
+  "word_timestamps": false,
+  "inputs": [
+    {
+      "id": "one-start",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/local_cpu_one_start_20261002/cpu-reference.wav",
+      "audio_sha256": "099e1b8112703fe09445cb91c34ce84a160264280229c727ef5469d3a3121da1",
+      "expected_text": "Take a slow breath in, and let your shoulders relax.",
+      "transcript": "Epis Diffmer",
+      "segments": [
+        {
+          "text": "Epis Diffmer",
+          "start_s": 0.0,
+          "end_s": 1.0,
+          "avg_logprob": -0.8486935943365097,
+          "no_speech_prob": 0.15796537697315216,
+          "compression_ratio": 0.6
+        }
+      ],
+      "wer": {
+        "wer": 1.0,
+        "reference_word_count": 10,
+        "hypothesis_word_count": 2,
+        "substitutions": 2,
+        "deletions": 8,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "in",
+          "and",
+          "let",
+          "your",
+          "shoulders",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "epis",
+          "diffmer"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 1.0,
+        "reference_word_count": 10,
+        "hypothesis_word_count": 2,
+        "substitutions": 2,
+        "deletions": 8,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "in",
+          "and",
+          "let",
+          "your",
+          "shoulders",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "epis",
+          "diffmer"
+        ]
+      },
+      "model_identity": {
+        "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+        "size_class": "small"
+      },
+      "seconds": 4.4968720260003465
+    }
+  ],
+  "peak_rss_mib": 796.25
+}

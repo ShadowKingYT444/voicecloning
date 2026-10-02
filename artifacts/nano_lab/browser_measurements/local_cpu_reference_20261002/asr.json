@@ -1,0 +1,97 @@
+{
+  "model": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+  "backend": "CTranslate2 CPU int8",
+  "role": "independent_content_audit",
+  "human_listening": false,
+  "model_download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+  "model_identity": {
+    "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+    "name": "faster-whisper-small",
+    "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+    "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+    "size_class": "small"
+  },
+  "word_timestamps": true,
+  "inputs": [
+    {
+      "id": "cpu-reference",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/local_cpu_reference_20261002/cpu-reference.wav",
+      "audio_sha256": "935ce8b943a8ac39cad49f73c8128d079ed8b5637ad4b6a0bd5c2b4f5cec0590",
+      "expected_text": "Take a slow breath in, and let your shoulders relax.",
+      "transcript": "epistext.",
+      "segments": [
+        {
+          "text": "epistext.",
+          "start_s": 0.0,
+          "end_s": 0.76,
+          "avg_logprob": -0.6764247587748936,
+          "no_speech_prob": 0.05895764008164406,
+          "compression_ratio": 0.5294117647058824,
+          "words": [
+            {
+              "word": "epistext.",
+              "start_s": 0.0,
+              "end_s": 0.76,
+              "probability": 0.49366166194279987
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 1.0,
+        "reference_word_count": 10,
+        "hypothesis_word_count": 1,
+        "substitutions": 1,
+        "deletions": 9,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "in",
+          "and",
+          "let",
+          "your",
+          "shoulders",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "epistext"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 1.0,
+        "reference_word_count": 10,
+        "hypothesis_word_count": 1,
+        "substitutions": 1,
+        "deletions": 9,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "in",
+          "and",
+          "let",
+          "your",
+          "shoulders",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "epistext"
+        ]
+      },
+      "model_identity": {
+        "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+        "size_class": "small"
+      },
+      "seconds": 5.76627553099388
+    }
+  ],
+  "peak_rss_mib": 796.1015625
+}

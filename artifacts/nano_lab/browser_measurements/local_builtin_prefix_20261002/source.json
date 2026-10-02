@@ -1,0 +1,10 @@
+{
+  "source": "/home/terryd/gooning/voicecloning/models/chatterbox-nano/conds.pt",
+  "sha256": "b1852099306fd6a7814eb9d0bd10186caba7249596cc23868f78a0eefbfa5033",
+  "promptTokens": 375,
+  "prefixShape": [
+    1,
+    376,
+    768
+  ]
+}

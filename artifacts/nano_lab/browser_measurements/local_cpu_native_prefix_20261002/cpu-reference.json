@@ -1,0 +1,992 @@
+{
+  "schema": "voice-study.cpu-pipeline-probe/v1",
+  "status": "complete",
+  "provider": "CPUExecutionProvider",
+  "onnxruntime_version": "1.29.0",
+  "numpy_version": "1.26.4",
+  "tokenizers_version": "0.22.2",
+  "revision": "4a66d7dab72a9e98f24b515d49a1d7a81632df2e",
+  "repo_id": "owensong/chatterbox-nano-ONNX",
+  "text": "Take a slow breath in, and let your shoulders relax.",
+  "seed": 1337,
+  "sampling": {
+    "temperature": 0.8,
+    "repetition_penalty": 1.2,
+    "top_k": 1000,
+    "top_p": 0.95,
+    "token_limit": 256,
+    "start_token": 6561,
+    "stop_token": 6562,
+    "sampler": "JavaScript LCG32 / stable descending score then token ID"
+  },
+  "decode_requested": true,
+  "stage_seconds": {
+    "embedding_session_load": 0.013434924003377091,
+    "language_model_session_load": 1.0428956920004566,
+    "initial_embedding_and_lm": 1.2876382449976518,
+    "autoregressive_inference": 1.1205235920060659
+  },
+  "rss": {
+    "before_sessions": {
+      "current_rss_mib": 90.12109375,
+      "peak_rss_mib": 100.3359375
+    },
+    "after_embedding_session": {
+      "current_rss_mib": 97.375,
+      "peak_rss_mib": 100.3359375
+    },
+    "after_language_model_session": {
+      "current_rss_mib": 150.5546875,
+      "peak_rss_mib": 151.4765625
+    },
+    "after_initial_lm": {
+      "current_rss_mib": 169.51953125,
+      "peak_rss_mib": 168.97265625
+    },
+    "after_generation": {
+      "current_rss_mib": 171.96484375,
+      "peak_rss_mib": 171.28515625
+    },
+    "before_decoder": {
+      "current_rss_mib": 170.203125,
+      "peak_rss_mib": 171.28515625
+    },
+    "after_decoder": {
+      "current_rss_mib": 208.18359375,
+      "peak_rss_mib": 417.08984375
+    },
+    "peak": {
+      "current_rss_mib": 208.18359375,
+      "peak_rss_mib": 417.08984375
+    }
+  },
+  "logit_probes": [
+    {
+      "step": 0,
+      "path": "artifacts/nano_lab/browser_measurements/local_cpu_native_prefix_20261002/logits-step-000.npy",
+      "shape": [
+        6563
+      ],
+      "top10_raw": [
+        {
+          "token_id": 4028,
+          "logit": 11.7327880859375
+        },
+        {
+          "token_id": 3947,
+          "logit": 11.552825927734375
+        },
+        {
+          "token_id": 4027,
+          "logit": 10.90399169921875
+        },
+        {
+          "token_id": 4010,
+          "logit": 10.784164428710938
+        },
+        {
+          "token_id": 1760,
+          "logit": 10.7144775390625
+        },
+        {
+          "token_id": 4001,
+          "logit": 10.346908569335938
+        },
+        {
+          "token_id": 3944,
+          "logit": 10.26055908203125
+        },
+        {
+          "token_id": 1841,
+          "logit": 10.17987060546875
+        },
+        {
+          "token_id": 2059,
+          "logit": 10.14825439453125
+        },
+        {
+          "token_id": 3956,
+          "logit": 10.10101318359375
+        }
+      ],
+      "sampled_token": 1814
+    },
+    {
+      "step": 1,
+      "path": "artifacts/nano_lab/browser_measurements/local_cpu_native_prefix_20261002/logits-step-001.npy",
+      "shape": [
+        6563
+      ],
+      "top10_raw": [
+        {
+          "token_id": 4299,
+          "logit": 16.793701171875
+        },
+        {
+          "token_id": 4218,
+          "logit": 13.683349609375
+        },
+        {
+          "token_id": 6562,
+          "logit": 13.4686279296875
+        },
+        {
+          "token_id": 6486,
+          "logit": 13.242240905761719
+        },
+        {
+          "token_id": 2112,
+          "logit": 12.77099609375
+        },
+        {
+          "token_id": 2031,
+          "logit": 11.4818115234375
+        },
+        {
+          "token_id": 4137,
+          "logit": 10.4444580078125
+        },
+        {
+          "token_id": 1950,
+          "logit": 10.039306640625
+        },
+        {
+          "token_id": 2139,
+          "logit": 10.0103759765625
+        },
+        {
+          "token_id": 2058,
+          "logit": 9.9866943359375
+        }
+      ],
+      "sampled_token": 4299
+    },
+    {
+      "step": 2,
+      "path": "artifacts/nano_lab/browser_measurements/local_cpu_native_prefix_20261002/logits-step-002.npy",
+      "shape": [
+        6563
+      ],
+      "top10_raw": [
+        {
+          "token_id": 4299,
+          "logit": 9.637451171875
+        },
+        {
+          "token_id": 6456,
+          "logit": 9.11651611328125
+        },
+        {
+          "token_id": 2085,
+          "logit": 8.99212646484375
+        },
+        {
+          "token_id": 2139,
+          "logit": 8.9556884765625
+        },
+        {
+          "token_id": 2112,
+          "logit": 8.86474609375
+        },
+        {
+          "token_id": 2058,
+          "logit": 8.8226318359375
+        },
+        {
+          "token_id": 4191,
+          "logit": 8.700637817382812
+        },
+        {
+          "token_id": 4272,
+          "logit": 8.695682525634766
+        },
+        {
+          "token_id": 6375,
+          "logit": 8.642852783203125
+        },
+        {
+          "token_id": 2004,
+          "logit": 8.620635986328125
+        }
+      ],
+      "sampled_token": 4191
+    },
+    {
+      "step": 3,
+      "path": "artifacts/nano_lab/browser_measurements/local_cpu_native_prefix_20261002/logits-step-003.npy",
+      "shape": [
+        6563
+      ],
+      "top10_raw": [
+        {
+          "token_id": 3222,
+          "logit": 10.510009765625
+        },
+        {
+          "token_id": 2250,
+          "logit": 10.425704956054688
+        },
+        {
+          "token_id": 63,
+          "logit": 10.400100708007812
+        },
+        {
+          "token_id": 36,
+          "logit": 10.313232421875
+        },
+        {
+          "token_id": 64,
+          "logit": 10.167724609375
+        },
+        {
+          "token_id": 3213,
+          "logit": 10.003662109375
+        },
+        {
+          "token_id": 792,
+          "logit": 9.760162353515625
+        },
+        {
+          "token_id": 73,
+          "logit": 9.6866455078125
+        },
+        {
+          "token_id": 2223,
+          "logit": 9.555953979492188
+        },
+        {
+          "token_id": 37,
+          "logit": 9.51336669921875
+        }
+      ],
+      "sampled_token": 63
+    }
+  ],
+  "limitations": [
+    "CPU reference only; it does not validate WebGPU behavior.",
+    "Fixed speaker state is used as exported; the reference encoder is not loaded or recomputed.",
+    "The speaker state is generated-reference, speaker-specific, and has no fitted adapter."
+  ],
+  "model_sha256": {
+    "embed_tokens_fp16": "019d257243774091d78c2ad91c2c0f61e4e442740cb7b3b00b5a89109417b18d",
+    "language_model_q4f16": "8fe9620856d86b8a0235041d7fd2a8a47292da50828044bab5740b246e66e65b",
+    "conditional_decoder_q4": "745faa9c2e2494a81e47f2a72601ac248639fd417ae53d999c5068bc441d1f97"
+  },
+  "external_data_sha256": {
+    "embed_tokens_fp16": "bcd7b35ae4f206932e2491cb60b42ebb80f6d8facfdb53ba7d7449ad00a3237b",
+    "language_model_q4f16": "8f2fdc616373c9ccaebbf2db3210dc80c860922a672898bca111eb75f6d3abd2",
+    "conditional_decoder_q4": "b5c5317e0b79a1a19dd3d5e2b2091ea06b15716716ab801a54eaeb906c6971ec"
+  },
+  "token_ids": [
+    12322,
+    257,
+    3105,
+    8033,
+    287,
+    11,
+    290,
+    1309,
+    534,
+    12450,
+    8960,
+    13,
+    50256,
+    50256
+  ],
+  "tokenizer_sha256": "3f04e34bea22f9144d1a19151154095bc9ce0430bf421304f5797e716288a906",
+  "voice_state": {
+    "sha256": "6f56c0dd844ecc038e5b60debff22d1e16b44c9d13386d0f7a91156bfca1b38e",
+    "bytes": 331200,
+    "reference_sha256": "67f94a868976b22a47bce8fd00a873d4c5b7085ba6eedd698f8a898a26ce76c0",
+    "conditioning": {
+      "description": "Generated-reference conditioning from the pinned public Q4F16 base conversion. No experimental fitted adapter was applied. This state is specific to the exact reference audio.",
+      "fitted_adapter_applied": false,
+      "source": "generated_reference",
+      "speaker_specific": true,
+      "zero_shot": false
+    },
+    "tensor_shapes": {
+      "audio_features": [
+        1,
+        89,
+        768
+      ],
+      "audio_tokens": [
+        1,
+        88
+      ],
+      "speaker_embeddings": [
+        1,
+        192
+      ],
+      "speaker_features": [
+        1,
+        176,
+        80
+      ]
+    }
+  },
+  "experiment_override": {
+    "temporary_script": {
+      "path": "/tmp/cpu-probe-native-prefix.py",
+      "sha256": "ff072bb3b8f538471dc48834a5284dbdfd3291fffc375289a2e6169be7591b64"
+    },
+    "speech_start_embedding_count": 1,
+    "t3_prefix": {
+      "source_path": "artifacts/nano_lab/browser_measurements/local_native_conditioning_20261002/native-prefix.npy",
+      "source_sha256": "233993e3c9bfb8f4bfa96ed9ae909c365c46cd1b2be54eef00a38af30ea9c2e8",
+      "dtype": "float32",
+      "shape": [
+        1,
+        89,
+        768
+      ],
+      "operation": "Replace the in-memory audio_features tensor with this same-reference native T3 prefix."
+    },
+    "input_changes": [
+      "The tokenizer returns two trailing 50256 IDs. The probe drops the final text-embedding row, leaving one speech-start embedding.",
+      "The in-memory audio_features tensor is replaced by the recorded same-reference native T3 prefix."
+    ],
+    "sampler": "WorkerSampler unchanged: JavaScript LCG32 with stable descending-score and token-ID ordering.",
+    "base_voice_state": {
+      "path": "browser_tts/public/voice/asmr-state.bin",
+      "sha256": "6f56c0dd844ecc038e5b60debff22d1e16b44c9d13386d0f7a91156bfca1b38e"
+    },
+    "base_voice_state_hash_scope": "The reported voice_state.sha256 identifies the original state binary, not the native-prefix.npy used by the LM. The speaker_embeddings and speaker_features decoder inputs remain from the original state."
+  },
+  "input_metadata": {
+    "embedding": {
+      "inputs": [
+        {
+          "name": "input_ids",
+          "type": "tensor(int64)",
+          "shape": [
+            "s0",
+            "s1"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "inputs_embeds",
+          "type": "tensor(float)",
+          "shape": [
+            "s0",
+            "s1",
+            768
+          ]
+        }
+      ]
+    },
+    "language_model": {
+      "inputs": [
+        {
+          "name": "inputs_embeds",
+          "type": "tensor(float)",
+          "shape": [
+            "batch_size",
+            "sequence_length",
+            768
+          ]
+        },
+        {
+          "name": "attention_mask",
+          "type": "tensor(int64)",
+          "shape": [
+            "batch_size",
+            "total_sequence_length"
+          ]
+        },
+        {
+          "name": "position_ids",
+          "type": "tensor(int64)",
+          "shape": [
+            "batch_size",
+            "sequence_length"
+          ]
+        },
+        {
+          "name": "past_key_values.0.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.0.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.1.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.1.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.2.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.2.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.3.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.3.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.4.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.4.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.5.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.5.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.6.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.6.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.7.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.7.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.8.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.8.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.9.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.9.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.10.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.10.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.11.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "past_key_values.11.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "past_sequence_length",
+            64
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "logits",
+          "type": "tensor(float)",
+          "shape": [
+            "batch_size",
+            "sequence_length",
+            6563
+          ]
+        },
+        {
+          "name": "present.0.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.0.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.1.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.1.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.2.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.2.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.3.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.3.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.4.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.4.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.5.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.5.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.6.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.6.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.7.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.7.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.8.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.8.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.9.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.9.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.10.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.10.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.11.key",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        },
+        {
+          "name": "present.11.value",
+          "type": "tensor(float16)",
+          "shape": [
+            "batch_size",
+            12,
+            "total_sequence_length",
+            64
+          ]
+        }
+      ]
+    }
+  },
+  "sequence": {
+    "text_tokens": 14,
+    "audio_feature_frames": 89,
+    "combined_frames": 102,
+    "embedding_dim": 768
+  },
+  "speech_tokens": [
+    1814,
+    4299,
+    4191,
+    63,
+    1162,
+    2166,
+    1917,
+    3848,
+    5999,
+    6032,
+    6059,
+    6035
+  ],
+  "token_steps": 13,
+  "reached_eos": true,
+  "truncated": false,
+  "step_seconds": [
+    0.11074351299612317,
+    0.12913516299886396,
+    0.10488200699910522,
+    0.08545771799981594,
+    0.08513403499819105,
+    0.06023649599956116,
+    0.05925661199580645,
+    0.09313511600339552,
+    0.09393897699919762,
+    0.11415846100135241,
+    0.06163098900287878,
+    0.057941704006225336,
+    0.00561261699476745
+  ],
+  "decoder": {
+    "sample_rate": 24000,
+    "sample_count": 14400,
+    "duration_seconds": 0.6,
+    "session_load_seconds": 7.344874007998442,
+    "inference_seconds": 4.563203962003172,
+    "decoder_seconds": 11.943589048998547,
+    "wav_path": "artifacts/nano_lab/browser_measurements/local_cpu_native_prefix_20261002/cpu-reference.wav",
+    "wav_bytes": 28844,
+    "wav_sha256": "5c2017031d947485ad29f483a1061e56dbb31691e5bddf8f007f970aa19d2d90",
+    "audio_raw_npy": "artifacts/nano_lab/browser_measurements/local_cpu_native_prefix_20261002/audio-raw.npy",
+    "model_metadata": {
+      "inputs": [
+        {
+          "name": "speech_tokens",
+          "type": "tensor(int64)",
+          "shape": [
+            "batch_size",
+            "num_speech_tokens"
+          ]
+        },
+        {
+          "name": "speaker_embeddings",
+          "type": "tensor(float)",
+          "shape": [
+            "batch_size",
+            192
+          ]
+        },
+        {
+          "name": "speaker_features",
+          "type": "tensor(float)",
+          "shape": [
+            "batch_size",
+            "feature_dim",
+            80
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "waveform",
+          "type": "tensor(float)",
+          "shape": [
+            "batch_size",
+            "num_samples"
+          ]
+        }
+      ]
+    }
+  },
+  "total_seconds": 17.27169741000398
+}

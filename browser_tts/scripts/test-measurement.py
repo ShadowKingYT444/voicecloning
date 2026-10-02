@@ -1,4 +1,4 @@
-"""CPU-only checks for bounded transfer and complete-reading validation."""
+"""CPU-only checks for bounded transfer, reader invariants, and CLI modes."""
 import base64
 import hashlib
 import importlib.util
@@ -96,6 +96,65 @@ class ExportTests(unittest.TestCase):
             with self.assertRaises(runner.RunnerError): runner.assert_complete_reading(snap, text)
         snap['metrics']['maximumScheduledQueueSize'] = 3
         with self.assertRaises(runner.RunnerError): runner.assert_complete_reading(snap, 'Some new text.')
+
+
+class StopRestartTests(unittest.TestCase):
+    def test_voice_state_candidate_requires_full_mode(self):
+        url = '/voice/native-asmr-donor/asmr-state.json'
+        with mock.patch('sys.argv', ['measure-browser.py', '--voice-state-manifest', url]):
+            self.assertEqual(runner.parse_args().voice_state_manifest, url)
+        for mode in ('--ui-only', '--adapter-only'):
+            with mock.patch('sys.argv', ['measure-browser.py', '--voice-state-manifest', url, mode]):
+                with self.subTest(mode=mode), self.assertRaises(SystemExit):
+                    runner.parse_args()
+
+    def test_probe_text_contains_at_least_four_passages_of_words(self):
+        text = runner.make_stop_probe_text('Take a quiet breath.', 18)
+        self.assertGreaterEqual(len(text.split()), 4 * 18)
+        self.assertLessEqual(len(text.split()), 5 * 18)
+
+    def test_probe_text_rejects_empty_input(self):
+        with self.assertRaises(runner.RunnerError):
+            runner.make_stop_probe_text('  ', 18)
+
+    def test_stopped_snapshot_requires_ready_idle_queue_and_audio(self):
+        valid = dict(
+            readingOutcome='stopped', busy=False, modelReady=True, status='ready',
+            chunks=[dict(index=0, truncated=False, speechTokens=[42], audioSeconds=1)],
+            metrics=dict(scheduledQueueSize=0),
+        )
+        runner.assert_stopped_reading(valid)
+        for field, value in (
+            ('readingOutcome', 'complete'), ('busy', True), ('modelReady', False), ('status', 'stopping'),
+        ):
+            bad = {**valid, field: value}
+            with self.subTest(field=field), self.assertRaises(runner.RunnerError):
+                runner.assert_stopped_reading(bad)
+        bad_metrics = {**valid, 'metrics': {'scheduledQueueSize': 1}}
+        with self.assertRaises(runner.RunnerError):
+            runner.assert_stopped_reading(bad_metrics)
+        bad_chunks = {**valid, 'chunks': []}
+        with self.assertRaises(runner.RunnerError):
+            runner.assert_stopped_reading(bad_chunks)
+
+    def test_stop_restart_flag_is_full_mode_only(self):
+        with mock.patch('sys.argv', ['measure-browser.py', '--check-stop-restart']):
+            self.assertTrue(runner.parse_args().check_stop_restart)
+        for mode in ('--ui-only', '--adapter-only'):
+            with mock.patch('sys.argv', ['measure-browser.py', '--check-stop-restart', mode]):
+                with self.subTest(mode=mode), self.assertRaises(SystemExit):
+                    runner.parse_args()
+
+    def test_inference_trace_flag_is_full_mode_only(self):
+        with mock.patch('sys.argv', ['measure-browser.py', '--trace-inference']):
+            self.assertTrue(runner.parse_args().trace_inference)
+        for mode in ('--ui-only', '--adapter-only'):
+            with mock.patch('sys.argv', ['measure-browser.py', '--trace-inference', mode]):
+                with self.subTest(mode=mode), self.assertRaises(SystemExit):
+                    runner.parse_args()
+        with mock.patch('sys.argv', ['measure-browser.py', '--trace-inference', '--full-paper']):
+            with self.assertRaises(SystemExit):
+                runner.parse_args()
 
 
 if __name__ == '__main__': unittest.main()

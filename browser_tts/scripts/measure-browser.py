@@ -1069,22 +1069,25 @@ class BrowserMeasurement:
             self.finish_stage(name, status="failed", error=str(error))
             raise
 
-    def read_text(self, name: str, text: str, seed: int, timeout: float) -> dict[str, Any]:
+    def start_read_text(self, text: str, seed: int) -> None:
         text_js = json.dumps(text, ensure_ascii=True)
         options_js = json.dumps({"seed": seed, "chunkWords": self.args.chunk_words}, separators=(",", ":"))
+        expression = f"""(() => {{
+          const api = window.voiceStudy;
+          if (!api || typeof api.readText !== 'function') throw new Error('window.voiceStudy.readText is unavailable.');
+          const state = {{ done:false, error:null, value:null }};
+          window.__browserMeasurementRun = state;
+          try {{ Promise.resolve(api.readText({text_js}, {options_js})).then(value => {{ state.value=value; state.done=true; }}).catch(error => {{
+            state.error=error && error.message ? error.message : String(error); state.done=true;
+          }}); }} catch(error) {{ state.error=error && error.message ? error.message : String(error); state.done=true; }}
+          return true;
+        }})()"""
+        self.evaluate(expression, user_gesture=True)
+
+    def read_text(self, name: str, text: str, seed: int, timeout: float) -> dict[str, Any]:
 
         def start() -> None:
-            expression = f"""(() => {{
-              const api = window.voiceStudy;
-              if (!api || typeof api.readText !== 'function') throw new Error('window.voiceStudy.readText is unavailable.');
-              const state = {{ done:false, error:null, value:null }};
-              window.__browserMeasurementRun = state;
-              try {{ Promise.resolve(api.readText({text_js}, {options_js})).then(value => {{ state.value=value; state.done=true; }}).catch(error => {{
-                state.error=error && error.message ? error.message : String(error); state.done=true;
-              }}); }} catch(error) {{ state.error=error && error.message ? error.message : String(error); state.done=true; }}
-              return true;
-            }})()"""
-            self.evaluate(expression, user_gesture=True)
+            self.start_read_text(text, seed)
 
         def complete(value: Any) -> bool:
             run = value.get("run") if isinstance(value, dict) else None
@@ -1120,8 +1123,138 @@ class BrowserMeasurement:
         write_json(self.report_path, self.report)
         return run_result
 
-    def export_wav(self, stage_name: str, artifact_name: str, path: Path) -> dict[str, Any]:
+    def stop_restart_probe(self, text: str, seed: int, timeout: float) -> dict[str, Any]:
+        probe_text = make_stop_probe_text(text, self.args.chunk_words)
+        passage_poll = """(() => ({
+          run: window.__browserMeasurementRun || null,
+          snapshot: window.voiceStudy && typeof window.voiceStudy.snapshot === 'function' ? window.voiceStudy.snapshot() : null,
+          passageLabel: document.getElementById('reading-progress-label')?.textContent || ''
+        }))()"""
+        click_stop = """(() => {
+          const api = window.voiceStudy;
+          const button = document.getElementById('stop-button');
+          const snapshot = api && typeof api.snapshot === 'function' ? api.snapshot() : null;
+          if (!snapshot?.busy || !Array.isArray(snapshot.chunks) || snapshot.chunks.length < 1 || !button || button.disabled) {
+            return {clicked:false, snapshot, passageLabel:document.getElementById('reading-progress-label')?.textContent || ''};
+          }
+          const passageLabel = document.getElementById('reading-progress-label')?.textContent || '';
+          button.click();
+          return {clicked:true, snapshot, passageLabel, buttonDisabledAfterClick:button.disabled};
+        })()"""
+        self.start_stage('stop_restart')
+        stage_deadline = min(time.monotonic() + timeout, self.deadline)
+        stage_started = time.monotonic()
+        stop_clicked_at = None
+        click_snapshot = None
+        passage_label = ''
+        try:
+            self.check_timeout('stop_restart', stage_deadline)
+            self.start_read_text(probe_text, seed)
+            interval = self.args.sample_seconds
+            while stop_clicked_at is None:
+                self.check_timeout('stop_restart', stage_deadline)
+                current = self.evaluate(passage_poll)
+                run = current.get('run') if isinstance(current, dict) else None
+                if isinstance(run, dict) and run.get('done'):
+                    if run.get('error'):
+                        raise RunnerError(f"Stop probe read failed before Stop was clicked: {run['error']}")
+                    raise RunnerError('The stop probe completed before the runner could click Stop.')
+                snap = current.get('snapshot') if isinstance(current, dict) else None
+                if isinstance(snap, dict) and snap.get('busy') and snap.get('chunks'):
+                    result = self.evaluate(click_stop, user_gesture=True)
+                    if isinstance(result, dict) and result.get('clicked'):
+                        stop_clicked_at = time.monotonic()
+                        click_snapshot = result.get('snapshot')
+                        passage_label = result.get('passageLabel') or ''
+                        match = re.search(r'\bof\s+(\d+)\b', passage_label)
+                        observed_passages = int(match.group(1)) if match else None
+                        stage = self.report['stages']['stop_restart']
+                        stage['stopRestartProbe'] = {
+                            'probeText': probe_text,
+                            'probeInputWords': len(probe_text.split()),
+                            'minimumPassages': 4,
+                            'observedPassageCount': observed_passages,
+                            'chunksBeforeStop': len((click_snapshot or {}).get('chunks', [])),
+                            'stopButtonClicked': True,
+                            'stopButtonDisabledAfterClick': result.get('buttonDisabledAfterClick'),
+                            'stopRequestElapsedSeconds': round(stop_clicked_at - stage_started, 3),
+                            'stopRequestedSnapshot': click_snapshot,
+                        }
+                        write_json(self.report_path, self.report)
+                        break
+                if time.monotonic() + interval >= stage_deadline:
+                    self.check_timeout('stop_restart', stage_deadline)
+                self.wait_sample(interval, 'stop_restart')
+
+            passage_match = re.search(r'\bof\s+(\d+)\b', passage_label)
+            passage_count = int(passage_match.group(1)) if passage_match else None
+            stop_wait = """(() => ({
+              run: window.__browserMeasurementRun || null,
+              snapshot: window.voiceStudy && typeof window.voiceStudy.snapshot === 'function' ? window.voiceStudy.snapshot() : null
+            }))()"""
+            interval = self.args.sample_seconds
+            stopped_row = None
+            while stopped_row is None:
+                self.check_timeout('stop_restart', stage_deadline)
+                current = self.evaluate(stop_wait)
+                run = current.get('run') if isinstance(current, dict) else None
+                snap = current.get('snapshot') if isinstance(current, dict) else None
+                if isinstance(run, dict) and run.get('done'):
+                    if run.get('error'):
+                        raise RunnerError(f"Stop probe read failed after Stop was clicked: {run['error']}")
+                    stopped_row = run.get('value')
+                    if not isinstance(stopped_row, dict):
+                        raise RunnerError('The stopped read did not return a snapshot.')
+                    assert_stopped_reading(stopped_row)
+                    break
+                if time.monotonic() + interval >= stage_deadline:
+                    self.check_timeout('stop_restart', stage_deadline)
+                self.wait_sample(interval, 'stop_restart')
+
+            if passage_count is None or passage_count < 4:
+                raise RunnerError(f'The stop probe started {passage_count!r} passages; it must start at least four.')
+            if len((click_snapshot or {}).get('chunks', [])) < 1:
+                raise RunnerError('The Stop control was clicked before the first completed audio chunk.')
+            click_elapsed = round(stop_clicked_at - stage_started, 3)
+            stop_ack_seconds = round(time.monotonic() - stop_clicked_at, 3)
+            button_disabled_after_click = (result.get('buttonDisabledAfterClick') is True)
+            if not button_disabled_after_click:
+                raise RunnerError('The Stop control did not enter its disabled stopping state.')
+            detail = {
+                'probeText': probe_text,
+                'probeInputWords': len(probe_text.split()),
+                'minimumPassages': 4,
+                'observedPassageCount': passage_count,
+                'chunksBeforeStop': len((click_snapshot or {}).get('chunks', [])),
+                'stopButtonClicked': True,
+                'stopButtonDisabledAfterClick': button_disabled_after_click,
+                'stopRequestElapsedSeconds': click_elapsed,
+                'stopAcknowledgementSeconds': stop_ack_seconds,
+                'stopRequestedSnapshot': click_snapshot,
+                'stoppedSnapshot': stopped_row,
+                'assertions': {
+                    'stoppedOutcome': stopped_row.get('readingOutcome') == 'stopped',
+                    'notBusy': stopped_row.get('busy') is False,
+                    'modelRemainsReady': stopped_row.get('modelReady') is True,
+                    'scheduledQueueEmpty': stopped_row.get('metrics', {}).get('scheduledQueueSize') == 0,
+                },
+            }
+            stage = self.report['stages']['stop_restart']
+            stage['stopRestartProbe'] = detail
+            stage['readerMetrics'] = stopped_row.get('metrics')
+            stage['readerMetricsScope'] = 'A real model read was stopped after its first completed audio chunk. Stop acknowledgement includes the active model call and scheduled-playback cancellation.'
+            self.finish_stage('stop_restart')
+            write_json(self.report_path, self.report)
+            return detail
+        except Exception as error:
+            if self.stage_name == 'stop_restart':
+                self.finish_stage('stop_restart', status='failed', error=str(error))
+            raise
+
+    def export_wav(self, stage_name: str, artifact_name: str, path: Path,
+                   deadline: float | None = None) -> dict[str, Any]:
         self.start_stage(stage_name)
+        stage_deadline = min(deadline, self.deadline) if deadline is not None else self.deadline
         opened = False
         try:
             info = self.evaluate('window.voiceStudy.openWavExport()')
@@ -1131,8 +1264,9 @@ class BrowserMeasurement:
             digest = hashlib.sha256(); written = 0; max_chunk = 0
             with path.open('wb') as output:
                 while True:
-                    self.check_timeout(stage_name, self.deadline)
-                    row = self.evaluate('window.voiceStudy.readWavExport()', await_promise=True, timeout=30)
+                    self.check_timeout(stage_name, stage_deadline)
+                    read_timeout = max(0.05, min(30.0, stage_deadline - time.monotonic()))
+                    row = self.evaluate('window.voiceStudy.readWavExport()', await_promise=True, timeout=read_timeout)
                     if not isinstance(row, dict) or row.get('offsetBytes') != written:
                         raise RunnerError('Streamed WAV offset is missing, duplicated, or out of order.')
                     if row.get('done') is True:
@@ -1163,7 +1297,9 @@ class BrowserMeasurement:
             raise
         finally:
             if opened:
-                try: self.evaluate('window.voiceStudy.cancelWavExport()', await_promise=True, timeout=5)
+                try:
+                    cancel_timeout = max(0.05, min(5.0, stage_deadline - time.monotonic()))
+                    self.evaluate('window.voiceStudy.cancelWavExport()', await_promise=True, timeout=cancel_timeout)
                 except Exception: pass
 
     def capture_screenshot(self, path: Path, viewport: tuple[int, int] | None = None) -> dict[str, Any]:
@@ -1256,6 +1392,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument('--chunk-words', type=int, choices=range(15, 25), default=18)
     parser.add_argument('--full-paper', action='store_true', help='After matched short first/warm readings, read the entire checked-in Federalist No. 10 and stream its WAV to disk.')
     parser.add_argument('--full-reading-timeout-seconds', type=float, default=1800)
+    parser.add_argument('--check-stop-restart', action='store_true', help='Run a real-model multi-passage stop followed by a completed restart and WAV export.')
+    parser.add_argument('--trace-inference', action='store_true', help='Record bounded per-passage tokenizer IDs, ONNX input metadata, and raw logit samples for diagnostic analysis.')
+    parser.add_argument("--voice-state-manifest", help="Explicit same-origin candidate voice-state manifest; default selected voice stays unchanged.")
     parser.add_argument("--model-base", help="Optional same-origin model asset base URL, for example /models/chatterbox-nano-browser/.")
     parser.add_argument("--nvidia-smi", action="store_true", help="Sample nvidia-smi compute-app memory separately when available.")
     parser.add_argument("--headed", action="store_true", help="Use a visible Chrome window instead of headless Chrome.")
@@ -1279,6 +1418,14 @@ def parse_args() -> argparse.Namespace:
         parser.error("--hardware-webgpu applies only to full model measurements, not --ui-only.")
     if args.ui_only and args.require_hardware_webgpu:
         parser.error('--require-hardware-webgpu does not apply to UI-only checks.')
+    if args.check_stop_restart and (args.ui_only or args.adapter_only):
+        parser.error('--check-stop-restart requires a full model measurement.')
+    if args.voice_state_manifest and (args.ui_only or args.adapter_only):
+        parser.error('--voice-state-manifest requires a full model measurement.')
+    if args.trace_inference and (args.ui_only or args.adapter_only):
+        parser.error('--trace-inference requires a full model measurement.')
+    if args.trace_inference and args.full_paper:
+        parser.error('--trace-inference is limited to short diagnostic runs, not --full-paper.')
     if args.adapter_only and (args.ui_only or args.embedding_manifest or args.model_base):
         parser.error('--adapter-only cannot be combined with UI, embedding, or model-loading options.')
     if args.embedding_manifest and args.lossless_embedding_manifest:
@@ -1330,6 +1477,8 @@ def main() -> int:
             'losslessEmbeddingManifestUrl': args.lossless_embedding_manifest,
             'chunkWords': args.chunk_words,
             'fullPaper': args.full_paper,
+            'checkStopRestart': args.check_stop_restart,
+            'traceInference': args.trace_inference,
             "modelBaseUrl": args.model_base,
             "resolvedModelBaseUrl": args.resolved_model_base,
             "hardwareWebgpuDiagnostic": args.hardware_webgpu,
@@ -1660,6 +1809,11 @@ def main() -> int:
                                    "first": None, "warm": None, "matchedTextAndSeed": True}
             prepare_call = "window.voiceStudy.prepareVoice()"
             prepare_options = {'powerPreference': args.power_preference}
+            if args.voice_state_manifest:
+                prepare_options['voiceStateManifestUrl'] = args.voice_state_manifest
+                report['app']['voiceStateManifestUrl'] = args.voice_state_manifest
+            if args.trace_inference:
+                prepare_options['traceInference'] = True
             if args.embedding_manifest:
                 prepare_options["embeddingManifestUrl"] = args.embedding_manifest
                 report["app"]["embeddingManifestUrl"] = args.embedding_manifest
@@ -1727,6 +1881,7 @@ def main() -> int:
                 write_json(report_path, report)
                 if not worker_hardware_passed:
                     raise RunnerError("--hardware-webgpu could not verify a worker adapter with hardware identity and shader-f16.")
+            report['artifacts']['readyScreenshot'] = measurement.capture_screenshot(out / 'voice-ready.png')
             write_json(report_path, report)
 
             measurement.start_stage("idle")
@@ -1745,6 +1900,7 @@ def main() -> int:
             report["app"]["finalSnapshot"] = warm.get("snapshot")
             report["artifacts"]["warmWav"] = measurement.export_wav(
                 "warm_artifact_export", "warmWav", out / "warm-reading.wav")
+            report['artifacts']['completedScreenshot'] = measurement.capture_screenshot(out / 'reading-completed.png')
             first_hash = report["artifacts"]["firstWav"]["sha256"]
             warm_hash = report["artifacts"]["warmWav"]["sha256"]
             report["audioComparison"] = {
@@ -1761,6 +1917,24 @@ def main() -> int:
                 'warmRequest': warm.get('snapshot', {}).get('metrics'),
                 'note': 'Cold means a fresh Chrome profile; OS/HTTP-server caches are not flushed. First/warm TTFA excludes model preparation. Playback and export are separate stages.',
             }
+            if args.check_stop_restart:
+                stop_restart_deadline = min(time.monotonic() + args.inference_timeout_seconds,
+                                            measurement.deadline)
+                report['synthesis']['stopRestart'] = measurement.stop_restart_probe(
+                    args.text, args.seed, max(0.05, stop_restart_deadline - time.monotonic()))
+                restart_timeout = min(stop_restart_deadline - time.monotonic(),
+                                      measurement.deadline - time.monotonic())
+                if restart_timeout <= 0:
+                    raise RunnerError('The combined stop/restart inference timeout expired before the restart read.')
+                restarted = measurement.read_text('restart', args.text, args.seed, restart_timeout)
+                report['synthesis']['restart'] = restarted
+                report['app']['finalSnapshot'] = restarted.get('snapshot')
+                report['artifacts']['restartWav'] = measurement.export_wav(
+                    'restart_artifact_export', 'restartWav', out / 'restart-reading.wav',
+                    deadline=stop_restart_deadline)
+                report['audioComparison']['restartWavByteIdenticalToFirst'] = (
+                    report['artifacts']['restartWav']['sha256'] == first_hash)
+                write_json(report_path, report)
             if args.full_paper:
                 full_path = ROOT / 'browser_tts/public/federalist-no-10.txt'
                 full_text = full_path.read_text(encoding='utf-8').strip()
@@ -1769,6 +1943,7 @@ def main() -> int:
                     'inputWords': len(full_text.split()),
                     'reading': measurement.read_text('full_reading', full_text, args.seed, args.full_reading_timeout_seconds),
                 }
+                report['app']['finalSnapshot'] = report['fullReading']['reading'].get('snapshot')
                 report['artifacts']['fullWav'] = measurement.export_wav('full_artifact_export', 'fullWav', out / 'full-reading.wav')
             write_json(report_path, report)
             report["status"] = "complete"
@@ -1868,6 +2043,42 @@ def inspect_wav_header(data: bytes, file_size: int) -> dict[str, Any]:
         "audioSeconds": round(pcm_bytes / frame_size / sample_rate, 3),
         "validPcmPayload": True,
     }
+
+
+def make_stop_probe_text(text: str, chunk_words: int, minimum_passages: int = 4) -> str:
+    if not isinstance(chunk_words, int) or chunk_words <= 0 or minimum_passages <= 0:
+        raise RunnerError('The stop/restart passage limits must be positive integers.')
+    words = text.strip().split()[:chunk_words]
+    if not words:
+        raise RunnerError('The stop/restart probe requires non-empty synthesis text.')
+    unit = ' '.join(words)
+    target_words = chunk_words * minimum_passages
+    copies = max(1, (target_words + len(words) - 1) // len(words))
+    return ' '.join([unit] * copies)
+
+
+def assert_stopped_reading(snapshot: dict[str, Any]) -> None:
+    if not isinstance(snapshot, dict):
+        raise RunnerError('The stop probe did not return a reader snapshot.')
+    if snapshot.get('readingOutcome') != 'stopped':
+        raise RunnerError('The real-model read did not report a stopped outcome.')
+    if snapshot.get('busy') is not False:
+        raise RunnerError('The reader remained busy after Stop completed.')
+    if snapshot.get('modelReady') is not True:
+        raise RunnerError('The model was not ready after Stop completed.')
+    if snapshot.get('status') != 'ready':
+        raise RunnerError('The reader did not return to ready status after Stop.')
+    metrics = snapshot.get('metrics')
+    if not isinstance(metrics, dict) or metrics.get('scheduledQueueSize') != 0:
+        raise RunnerError('Scheduled audio remained after Stop completed.')
+    chunks = snapshot.get('chunks')
+    if not isinstance(chunks, list) or not chunks:
+        raise RunnerError('The stop probe stopped before any audio chunk was recorded.')
+    for index, row in enumerate(chunks):
+        tokens = row.get('speechTokens') if isinstance(row, dict) else None
+        if (not isinstance(row, dict) or row.get('index') != index or row.get('truncated') is not False
+                or not tokens or row.get('audioSeconds', 0) <= 0):
+            raise RunnerError('The stopped read contains a missing, truncated, or invalid passage.')
 
 
 def assert_complete_reading(snapshot: dict[str, Any], text: str) -> None:

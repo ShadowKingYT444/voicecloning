@@ -1,0 +1,152 @@
+{
+  "schema": "browser_tts.native-donor-listening/v1",
+  "purpose": "research-only-listening-comparison",
+  "limitations": [
+    "This state is speaker-specific. It is not a general zero-shot result.",
+    "No fitted adapter was applied.",
+    "Automated ASR checks word content. It does not prove realism, naturalness, or speaker identity.",
+    "Native Perth watermark parity is unverified. No application-layer watermark was applied to the browser exports."
+  ],
+  "matchedSynthesisInput": {
+    "text": "Take a slow breath in, and let your shoulders relax.",
+    "seed": 1337,
+    "cpuAndBrowserUseSameTextAndSeed": true
+  },
+  "voiceReference": {
+    "role": "speaker-reference-only",
+    "text": "I wasn't sure you would come back. But I'm glad you're here.",
+    "sourceReport": "artifacts/voice-experiments-20260930/adaptation_quality.json",
+    "sourceStateManifest": "browser_tts/public/voice/asmr-state.json",
+    "file": {
+      "path": "voice-reference.wav",
+      "sourcePath": "browser_tts/public/voice/asmr_t3_seed47_fit.wav",
+      "bytes": 253484,
+      "sha256": "67f94a868976b22a47bce8fd00a873d4c5b7085ba6eedd698f8a898a26ce76c0",
+      "channels": 1,
+      "sampleRateHz": 24000,
+      "bitsPerSample": 24
+    }
+  },
+  "voiceState": {
+    "source": "native_t3_donor",
+    "speakerSpecific": true,
+    "zeroShot": false,
+    "fittedAdapterApplied": false,
+    "profile": "clean_asmr_original",
+    "manifestPath": "browser_tts/public/voice/native-asmr-donor/asmr-state.json",
+    "manifestSha256": "2be4c0105ce222456b33ee51ab2359ffd3f9e26a52235f275385e060853f4879",
+    "binaryPath": "browser_tts/public/voice/native-asmr-donor/asmr-state.bin",
+    "binaryBytes": 1083840,
+    "binarySha256": "77a2955a6b50122c581cf211f86d7c624381b7dfa8bb8ce61af3fb6359e16496",
+    "baseConversion": {
+      "repoId": "owensong/chatterbox-nano-ONNX",
+      "revision": "4a66d7dab72a9e98f24b515d49a1d7a81632df2e"
+    },
+    "nativeDonor": {
+      "checkpointPath": "models/chatterbox-nano/t3_nano_v1.safetensors",
+      "checkpointRevision": "71ccd1d0081b430592cea481f4307e764e07bc64",
+      "checkpointSha256": "72b110185087d945dbdf54dee4e333848e1811bdd5fd6cb16ceb8da50006f0c9",
+      "cachePath": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+      "cacheSha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c",
+      "prefixFrames": 334,
+      "prefixSha256": "6d27b0087b442abb8264d0fea19425be649f663519830e9ca28bdb57c80fe311"
+    }
+  },
+  "sources": {
+    "cpuReport": "artifacts/nano_lab/browser_measurements/local_cpu_native_donor_20261002/cpu-reference.json",
+    "browserReport": "artifacts/nano_lab/browser_measurements/local_native_donor_browser_20261002/measurement.json",
+    "browserAsrReport": "artifacts/nano_lab/browser_measurements/local_native_donor_browser_20261002/asr.json",
+    "cpuAsrReport": "artifacts/nano_lab/browser_measurements/local_native_donor_matched_asr.json"
+  },
+  "samples": [
+    {
+      "id": "cpu-reference",
+      "role": "matched-synthesis-output",
+      "runtime": "CPUExecutionProvider",
+      "text": "Take a slow breath in, and let your shoulders relax.",
+      "seed": 1337,
+      "sourceReport": "artifacts/nano_lab/browser_measurements/local_cpu_native_donor_20261002/cpu-reference.json",
+      "file": {
+        "path": "native-donor-cpu.wav",
+        "sourcePath": "artifacts/nano_lab/browser_measurements/local_cpu_native_donor_20261002/cpu-reference.wav",
+        "bytes": 155564,
+        "sha256": "aa30b5bf3d98c69f429e0039acf954808578531707f22c5518db9206a3eb797d",
+        "channels": 1,
+        "sampleRateHz": 24000,
+        "bitsPerSample": 16
+      },
+      "asr": {
+        "model": "faster-whisper-small",
+        "backend": "CTranslate2 CPU int8",
+        "wer": 0.0,
+        "sourceReport": "artifacts/nano_lab/browser_measurements/local_native_donor_matched_asr.json"
+      }
+    },
+    {
+      "id": "browser-first",
+      "role": "matched-synthesis-output",
+      "runtime": "WebGPU",
+      "text": "Take a slow breath in, and let your shoulders relax.",
+      "seed": 1337,
+      "asr": {
+        "model": "faster-whisper-small",
+        "backend": "CTranslate2 CPU int8",
+        "wer": 0.0,
+        "sourceReport": "artifacts/nano_lab/browser_measurements/local_native_donor_browser_20261002/asr.json"
+      },
+      "sourceReport": "artifacts/nano_lab/browser_measurements/local_native_donor_browser_20261002/measurement.json",
+      "file": {
+        "path": "native-donor-browser-first.wav",
+        "sourcePath": "artifacts/nano_lab/browser_measurements/local_native_donor_browser_20261002/first-reading.wav",
+        "bytes": 165164,
+        "sha256": "5926a612eb8145e14871a5997395f223659be2a591a7b0c3392738b54f219eba",
+        "channels": 1,
+        "sampleRateHz": 24000,
+        "bitsPerSample": 16
+      }
+    },
+    {
+      "id": "browser-warm",
+      "role": "matched-synthesis-output",
+      "runtime": "WebGPU",
+      "text": "Take a slow breath in, and let your shoulders relax.",
+      "seed": 1337,
+      "asr": {
+        "model": "faster-whisper-small",
+        "backend": "CTranslate2 CPU int8",
+        "wer": 0.0,
+        "sourceReport": "artifacts/nano_lab/browser_measurements/local_native_donor_browser_20261002/asr.json"
+      },
+      "sourceReport": "artifacts/nano_lab/browser_measurements/local_native_donor_browser_20261002/measurement.json",
+      "file": {
+        "path": "native-donor-browser-warm.wav",
+        "sourcePath": "artifacts/nano_lab/browser_measurements/local_native_donor_browser_20261002/warm-reading.wav",
+        "bytes": 165164,
+        "sha256": "5b0d554a489cfe92061804d572bcaa273bb17614b4da09676d36df5b6a9f3e40",
+        "channels": 1,
+        "sampleRateHz": 24000,
+        "bitsPerSample": 16
+      }
+    }
+  ],
+  "browserAudit": {
+    "asrRole": "independent-word-content-audit",
+    "humanListeningPerformed": false,
+    "restartOutputWer": 0.0,
+    "stopRestartControl": {
+      "passed": true,
+      "stopButtonClicked": true,
+      "stopAcknowledgementSeconds": 1.136,
+      "observedPassageCount": 6,
+      "assertions": {
+        "stoppedOutcome": true,
+        "notBusy": true,
+        "modelRemainsReady": true,
+        "scheduledQueueEmpty": true
+      },
+      "sourceReport": "artifacts/nano_lab/browser_measurements/local_native_donor_browser_20261002/measurement.json"
+    },
+    "firstAndWarmWavsByteIdentical": false,
+    "restartWavByteIdenticalToFirst": false
+  }
+}

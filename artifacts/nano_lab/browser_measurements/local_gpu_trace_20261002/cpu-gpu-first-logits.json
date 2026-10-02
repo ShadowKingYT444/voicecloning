@@ -1,0 +1,8 @@
+{
+  "first_logits_max_abs_error": 0.10784912109375,
+  "first_logits_rmse": 0.027968209236860275,
+  "first_top10_cpu_gpu_same_order": true,
+  "input_ids_same": true,
+  "numeric_gate_defined": false,
+  "quality_passed": false
+}

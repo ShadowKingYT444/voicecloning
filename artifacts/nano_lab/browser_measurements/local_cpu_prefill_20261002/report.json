@@ -1,0 +1,328 @@
+{
+  "tokenizerIds": [
+    12322,
+    257,
+    3105,
+    8033,
+    287,
+    11,
+    290,
+    1309,
+    534,
+    12450,
+    8960,
+    13,
+    50256,
+    50256
+  ],
+  "elapsed": 2.584907207994547,
+  "inputMetadata": [
+    {
+      "name": "inputs_embeds",
+      "type": "tensor(float)",
+      "shape": [
+        "batch_size",
+        "sequence_length",
+        768
+      ]
+    },
+    {
+      "name": "attention_mask",
+      "type": "tensor(int64)",
+      "shape": [
+        "batch_size",
+        "total_sequence_length"
+      ]
+    },
+    {
+      "name": "position_ids",
+      "type": "tensor(int64)",
+      "shape": [
+        "batch_size",
+        "sequence_length"
+      ]
+    },
+    {
+      "name": "past_key_values.0.key",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.0.value",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.1.key",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.1.value",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.2.key",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.2.value",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.3.key",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.3.value",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.4.key",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.4.value",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.5.key",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.5.value",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.6.key",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.6.value",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.7.key",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.7.value",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.8.key",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.8.value",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.9.key",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.9.value",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.10.key",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.10.value",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.11.key",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    },
+    {
+      "name": "past_key_values.11.value",
+      "type": "tensor(float16)",
+      "shape": [
+        "batch_size",
+        12,
+        "past_sequence_length",
+        64
+      ]
+    }
+  ],
+  "top10": [
+    {
+      "id": 1733,
+      "score": 9.712890625
+    },
+    {
+      "id": 1490,
+      "score": 9.537811279296875
+    },
+    {
+      "id": 4001,
+      "score": 9.448471069335938
+    },
+    {
+      "id": 3947,
+      "score": 9.255950927734375
+    },
+    {
+      "id": 3704,
+      "score": 9.247528076171875
+    },
+    {
+      "id": 1814,
+      "score": 9.07574462890625
+    },
+    {
+      "id": 4027,
+      "score": 9.06805419921875
+    },
+    {
+      "id": 1487,
+      "score": 9.026611328125
+    },
+    {
+      "id": 3701,
+      "score": 8.98602294921875
+    },
+    {
+      "id": 1732,
+      "score": 8.9666748046875
+    }
+  ]
+}

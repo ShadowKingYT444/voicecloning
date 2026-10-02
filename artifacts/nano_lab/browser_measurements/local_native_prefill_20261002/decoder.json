@@ -1,0 +1,51 @@
+{
+  "sample_rate": 24000,
+  "sample_count": 21120,
+  "duration_seconds": 0.88,
+  "session_load_seconds": 8.185862791993713,
+  "inference_seconds": 5.728304832999129,
+  "decoder_seconds": 13.979210190998856,
+  "wav_path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/local_native_prefill_20261002/cpu-reference.wav",
+  "wav_bytes": 42284,
+  "wav_sha256": "b3108e8f4821423202fbda63be7c21e2d6a3f311c9d518c3477ba79d02b759bd",
+  "audio_raw_npy": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/local_native_prefill_20261002/audio-raw.npy",
+  "model_metadata": {
+    "inputs": [
+      {
+        "name": "speech_tokens",
+        "type": "tensor(int64)",
+        "shape": [
+          "batch_size",
+          "num_speech_tokens"
+        ]
+      },
+      {
+        "name": "speaker_embeddings",
+        "type": "tensor(float)",
+        "shape": [
+          "batch_size",
+          192
+        ]
+      },
+      {
+        "name": "speaker_features",
+        "type": "tensor(float)",
+        "shape": [
+          "batch_size",
+          "feature_dim",
+          80
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "waveform",
+        "type": "tensor(float)",
+        "shape": [
+          "batch_size",
+          "num_samples"
+        ]
+      }
+    ]
+  }
+}

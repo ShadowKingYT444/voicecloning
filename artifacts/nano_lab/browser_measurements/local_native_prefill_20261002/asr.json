@@ -1,0 +1,372 @@
+{
+  "model": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+  "backend": "CTranslate2 CPU int8",
+  "role": "independent_content_audit",
+  "human_listening": false,
+  "model_download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+  "model_identity": {
+    "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+    "name": "faster-whisper-small",
+    "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+    "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+    "size_class": "small"
+  },
+  "word_timestamps": true,
+  "inputs": [
+    {
+      "id": "native-lm-public-conditioning",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/local_native_prefill_20261002/cpu-reference.wav",
+      "audio_sha256": "b3108e8f4821423202fbda63be7c21e2d6a3f311c9d518c3477ba79d02b759bd",
+      "expected_text": "Take a slow breath in, and let your shoulders relax.",
+      "transcript": "Ipoof.",
+      "segments": [
+        {
+          "text": "Ipoof.",
+          "start_s": 0.0,
+          "end_s": 0.46,
+          "avg_logprob": -0.9416978359222412,
+          "no_speech_prob": 0.16992343962192535,
+          "compression_ratio": 0.42857142857142855,
+          "words": [
+            {
+              "word": "Ipoof.",
+              "start_s": 0.0,
+              "end_s": 0.46,
+              "probability": 0.4701343576113383
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 1.0,
+        "reference_word_count": 10,
+        "hypothesis_word_count": 1,
+        "substitutions": 1,
+        "deletions": 9,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "in",
+          "and",
+          "let",
+          "your",
+          "shoulders",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "ipoof"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 1.0,
+        "reference_word_count": 10,
+        "hypothesis_word_count": 1,
+        "substitutions": 1,
+        "deletions": 9,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "in",
+          "and",
+          "let",
+          "your",
+          "shoulders",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "ipoof"
+        ]
+      },
+      "model_identity": {
+        "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+        "size_class": "small"
+      },
+      "seconds": 7.716546968993498
+    },
+    {
+      "id": "one-start-exact-prompt",
+      "path": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/local_cpu_exact_prompt_20261002/cpu-reference.wav",
+      "audio_sha256": "273e95ba19e4bd52a42198d5811f7c6a7e31737b730f06bf468927d12369a1ff",
+      "expected_text": "Take a slow breath in, and let your shoulders relax.",
+      "transcript": "If it's changed?",
+      "segments": [
+        {
+          "text": "If it's changed?",
+          "start_s": 0.0,
+          "end_s": 0.54,
+          "avg_logprob": -0.6876438781619072,
+          "no_speech_prob": 0.030053887516260147,
+          "compression_ratio": 0.6666666666666666,
+          "words": [
+            {
+              "word": "If",
+              "start_s": 0.0,
+              "end_s": 0.16,
+              "probability": 0.4559415578842163
+            },
+            {
+              "word": "it's",
+              "start_s": 0.16,
+              "end_s": 0.36,
+              "probability": 0.7663584649562836
+            },
+            {
+              "word": "changed?",
+              "start_s": 0.36,
+              "end_s": 0.54,
+              "probability": 0.9192698001861572
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 1.0,
+        "reference_word_count": 10,
+        "hypothesis_word_count": 3,
+        "substitutions": 3,
+        "deletions": 7,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "in",
+          "and",
+          "let",
+          "your",
+          "shoulders",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "if",
+          "it's",
+          "changed"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 1.0,
+        "reference_word_count": 10,
+        "hypothesis_word_count": 4,
+        "substitutions": 4,
+        "deletions": 6,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "slow",
+          "breath",
+          "in",
+          "and",
+          "let",
+          "your",
+          "shoulders",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "if",
+          "it",
+          "is",
+          "changed"
+        ]
+      },
+      "model_identity": {
+        "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+        "size_class": "small"
+      },
+      "seconds": 7.429756789999374
+    },
+    {
+      "id": "selected-reference",
+      "path": "/home/terryd/gooning/voicecloning/browser_tts/public/voice/asmr_t3_seed47_fit.wav",
+      "audio_sha256": "67f94a868976b22a47bce8fd00a873d4c5b7085ba6eedd698f8a898a26ce76c0",
+      "expected_text": "I wasn't sure you would come back. But I'm glad you're here.",
+      "transcript": "I wasn't sure you would come back, but I'm glad you're here.",
+      "segments": [
+        {
+          "text": "I wasn't sure you would come back, but I'm glad you're here.",
+          "start_s": 0.0,
+          "end_s": 3.08,
+          "avg_logprob": -0.1974039278924465,
+          "no_speech_prob": 0.029194405302405357,
+          "compression_ratio": 0.9230769230769231,
+          "words": [
+            {
+              "word": "I",
+              "start_s": 0.0,
+              "end_s": 0.22,
+              "probability": 0.9224371314048767
+            },
+            {
+              "word": "wasn't",
+              "start_s": 0.22,
+              "end_s": 0.56,
+              "probability": 0.9942526817321777
+            },
+            {
+              "word": "sure",
+              "start_s": 0.56,
+              "end_s": 0.68,
+              "probability": 0.9992315769195557
+            },
+            {
+              "word": "you",
+              "start_s": 0.68,
+              "end_s": 0.84,
+              "probability": 0.9884214401245117
+            },
+            {
+              "word": "would",
+              "start_s": 0.84,
+              "end_s": 0.96,
+              "probability": 0.962498128414154
+            },
+            {
+              "word": "come",
+              "start_s": 0.96,
+              "end_s": 1.14,
+              "probability": 0.9978035092353821
+            },
+            {
+              "word": "back,",
+              "start_s": 1.14,
+              "end_s": 1.46,
+              "probability": 0.998977780342102
+            },
+            {
+              "word": "but",
+              "start_s": 1.94,
+              "end_s": 2.26,
+              "probability": 0.9890972375869751
+            },
+            {
+              "word": "I'm",
+              "start_s": 2.26,
+              "end_s": 2.4,
+              "probability": 0.9835743606090546
+            },
+            {
+              "word": "glad",
+              "start_s": 2.4,
+              "end_s": 2.6,
+              "probability": 0.9997078776359558
+            },
+            {
+              "word": "you're",
+              "start_s": 2.6,
+              "end_s": 2.86,
+              "probability": 0.9958150684833527
+            },
+            {
+              "word": "here.",
+              "start_s": 2.86,
+              "end_s": 3.08,
+              "probability": 0.9988566637039185
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 12,
+        "hypothesis_word_count": 12,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "wasn't",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i'm",
+          "glad",
+          "you're",
+          "here"
+        ],
+        "hypothesis_words": [
+          "i",
+          "wasn't",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i'm",
+          "glad",
+          "you're",
+          "here"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 15,
+        "hypothesis_word_count": 15,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "i",
+          "was",
+          "not",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i",
+          "am",
+          "glad",
+          "you",
+          "are",
+          "here"
+        ],
+        "hypothesis_words": [
+          "i",
+          "was",
+          "not",
+          "sure",
+          "you",
+          "would",
+          "come",
+          "back",
+          "but",
+          "i",
+          "am",
+          "glad",
+          "you",
+          "are",
+          "here"
+        ]
+      },
+      "model_identity": {
+        "path": "/home/terryd/gooning/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/home/terryd/gooning/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30daf20aede27ef26b6d17d7606c30da6ab67f69dbcfca3391065dd232dc4839",
+        "size_class": "small"
+      },
+      "seconds": 7.617583833001845,
+      "expected_text_source": "artifacts/voice-experiments-20260930/adaptation/report.json:asmr_t3_seed47_fit",
+      "expected_text_corrected_after_transcription": true
+    }
+  ],
+  "peak_rss_mib": 858.5546875
+}

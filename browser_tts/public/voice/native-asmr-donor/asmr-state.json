@@ -1,0 +1,124 @@
+{
+  "conditioning": {
+    "description": "Experimental native T3 conditioning prefix from the clean ASMR original profile. The three decoder-conditioning tensors remain copied from the pinned public reference state. No fitted adapter was applied.",
+    "fitted_adapter_applied": false,
+    "native_t3_donor": {
+      "cache": {
+        "path": "artifacts/nano_lab/decoder_embedding_fit/conditionals.pt",
+        "sha256": "3c78b8bedb9b5ac94d5aaf900d509162cb4c5274f59cf7fb525117498786c40c"
+      },
+      "checkpoint": {
+        "path": "models/chatterbox-nano/t3_nano_v1.safetensors",
+        "repo_id": "ResembleAI/chatterbox-nano",
+        "revision": "71ccd1d0081b430592cea481f4307e764e07bc64",
+        "sha256": "72b110185087d945dbdf54dee4e333848e1811bdd5fd6cb16ceb8da50006f0c9"
+      },
+      "execution": {
+        "framework": "PyTorch",
+        "provider": "CPU",
+        "threads": 2,
+        "version": "2.11.0+cpu"
+      },
+      "prefix": {
+        "frames": 334,
+        "path": "artifacts/nano_lab/browser_measurements/local_asmr_cache_prefix_20261002/prefix.npy",
+        "processing": "cond_enc.spkr_enc(speaker_emb) concatenated with speech_emb(cond_prompt_speech_tokens)",
+        "prompt_tokens": 333,
+        "sha256": "6d27b0087b442abb8264d0fea19425be649f663519830e9ca28bdb57c80fe311"
+      },
+      "profile": "clean_asmr_original"
+    },
+    "source": "native_t3_donor",
+    "speaker_specific": true,
+    "zero_shot": false
+  },
+  "data": {
+    "file": "asmr-state.bin",
+    "sha256": "77a2955a6b50122c581cf211f86d7c624381b7dfa8bb8ce61af3fb6359e16496",
+    "size_bytes": 1083840
+  },
+  "encoder_execution": {
+    "graph_optimization_level": "ORT_ENABLE_ALL",
+    "onnxruntime_version": "1.29.0",
+    "provider": "CPUExecutionProvider",
+    "scope": "three retained decoder-conditioning tensors copied bitwise from source_public_state; does not describe native T3 prefix"
+  },
+  "format": "chatterbox-nano-reference-state-v1",
+  "model": {
+    "encoder_external_weights": {
+      "path": "onnx/speech_encoder_q4f16.onnx_data",
+      "sha256": "55d89bd87fd36be48b2e831c99c2e309d432169119049066f9f22fcfe517798d"
+    },
+    "encoder_graph": {
+      "path": "onnx/speech_encoder_q4f16.onnx",
+      "sha256": "29e249f59eaf95015527588b955e5286c7ee4524e7bb54a2f8d589b838e8aed2"
+    },
+    "repo_id": "owensong/chatterbox-nano-ONNX",
+    "revision": "4a66d7dab72a9e98f24b515d49a1d7a81632df2e",
+    "sha256sums_sha256": "ecd0b0ee1fde0f9342564fda72fe1ebb4907baa6c9d013c09052bcad5220dcf4"
+  },
+  "reference": {
+    "channels": 1,
+    "path": "browser_tts/public/voice/asmr_t3_seed47_fit.wav",
+    "sample_rate": 24000,
+    "sha256": "67f94a868976b22a47bce8fd00a873d4c5b7085ba6eedd698f8a898a26ce76c0",
+    "wav_encoding": "PCM-24"
+  },
+  "schema_version": 1,
+  "source_public_state": {
+    "path": "browser_tts/public/voice/asmr-state.bin",
+    "sha256": "6f56c0dd844ecc038e5b60debff22d1e16b44c9d13386d0f7a91156bfca1b38e"
+  },
+  "tensors": [
+    {
+      "byte_length": 1026048,
+      "dims": [
+        1,
+        334,
+        768
+      ],
+      "name": "audio_features",
+      "offset": 0,
+      "role": "audio_features",
+      "serialization_round_trip_exact": true,
+      "type": "float32"
+    },
+    {
+      "byte_length": 704,
+      "dims": [
+        1,
+        88
+      ],
+      "name": "audio_tokens",
+      "offset": 1026048,
+      "role": "audio_tokens",
+      "serialization_round_trip_exact": true,
+      "type": "int64"
+    },
+    {
+      "byte_length": 768,
+      "dims": [
+        1,
+        192
+      ],
+      "name": "speaker_embeddings",
+      "offset": 1026752,
+      "role": "speaker_embeddings",
+      "serialization_round_trip_exact": true,
+      "type": "float32"
+    },
+    {
+      "byte_length": 56320,
+      "dims": [
+        1,
+        176,
+        80
+      ],
+      "name": "speaker_features",
+      "offset": 1027520,
+      "role": "speaker_features",
+      "serialization_round_trip_exact": true,
+      "type": "float32"
+    }
+  ]
+}
