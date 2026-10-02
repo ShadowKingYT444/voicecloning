@@ -78,6 +78,7 @@ model_job.lock
 !/Pocket_package/voices/asmr7_30s_loud_state.npz
 !/kokoro_package/reference/
 !/kokoro_package/reference/mommy_reference.wav
+!/browser_tts/public/voice/asmr_t3_seed47_fit.wav
 
 # Nested repository internals are never part of this source snapshot.
 **/.git/

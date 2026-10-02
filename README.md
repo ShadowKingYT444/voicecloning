@@ -1,8 +1,8 @@
 # Voice cloning research workspace
 
-This project aims to build zero-shot voice cloning with small text-to-speech (TTS) models that can run in a web browser. The target is natural, clean speech with a speaker's character, rhythm, pitch, and richness. The current research uses Chatterbox Nano 110M with ASMR and Harvey Specter reference voices. It also preserves earlier Kokoro, Pocket TTS, Whisper, and Voicebox code.
+This project aims to read long text, including Federalist No. 10, in a selected ASMR voice with a small, low-memory TTS model. The target is less than 500 MiB of runtime memory, with streaming and short batches so playback starts quickly and continues smoothly. The reader can use a precomputed voice state. Zero-shot cloning in the browser is not a requirement. The research also tests whether a model can run in the browser, but a local inference service is acceptable when it meets the memory and playback goals. Chatterbox Nano, Pocket TTS, Kokoro, Whisper, and Voicebox remain research candidates.
 
-Browser inference is technically possible. ONNX Runtime Web supports CPU inference through WebAssembly and GPU inference through WebGPU. Browser GPU support covers only part of the ONNX operator set, and support varies by browser. This repository has not demonstrated browser inference. Its current experimental CPU ONNX profile takes 118.07 seconds to produce 6.96 seconds of audio and samples 861.75 MiB of process-tree RSS. These measurements show that the current profile is not ready for practical browser use. Model size, browser memory, supported operators, and real-time speed remain open engineering targets. See the [latest matched listening samples and results](artifacts/voice-experiments-20260930/README.md). [ONNX Runtime Web](https://onnxruntime.ai/docs/tutorials/web/) documents the browser execution options and their operator limits.
+Browser inference is technically possible, but this repository has not demonstrated it. Browser execution is only one deployment option. The current measured CPU ONNX profile takes 118.07 seconds to produce 6.96 seconds of audio and uses 861.75 MiB of process-tree RSS. The existing Pocket TTS ONNX benchmark uses 798 MiB after model load and 1,921 MiB after voice conditioning. Neither meets the under-500-MiB target. Quantized Pocket model files total 559 MiB on disk, before runtime memory. Streaming and a precomputed voice state can reduce startup delay and repeated conditioning work. They do not by themselves reduce model memory below the target. A smaller model or a more compact runtime is required. See [latest matched voice results](artifacts/voice-experiments-20260930/README.md) and the [browser runtime documentation](https://onnxruntime.ai/docs/tutorials/web/).
 
 **The requested voice realism is not achieved.** The user rejected the earlier comparison: “Neither sounds convincing yet.” The newer candidates remain experimental. Speaker-specific fitted adapters are not evidence of general zero-shot improvement.
 
@@ -14,7 +14,7 @@ Browser inference is technically possible. ONNX Runtime Web supports CPU inferen
 4. Rebuild the environments using [environment notes](docs/ENVIRONMENT.md). Do not copy the old virtual environments.
 5. Finish the pending runtime checks, then run the [stricter T3 dataset experiment](artifacts/nano_lab/t3_clip_consensus/NEXT_EXPERIMENT.md). Preserve the current controls and evaluate new text.
 
-The objective remains convincing, clean speech that captures the source voice's character, rhythm, pitch, and richness. Deliver matched listening samples and measured memory/latency reports for both voices. Automated similarity, transcript, and noise scores do not establish perceptual success.
+The primary reader target is convincing, clean speech in the selected ASMR voice, with a strict under-500-MiB runtime target and streamed Federalist playback. Keep Harvey experiments as a separate research track. Deliver matched listening samples and measured memory/latency reports. Automated similarity, transcript, and noise scores do not establish perceptual success.
 
 ## Current evidence
 
@@ -29,6 +29,20 @@ The objective remains convincing, clean speech that captures the source voice's 
 | Latest CPU VM comparison | The September 30 ASMR fit lowers validation loss but lowers mean speaker similarity on six new-text samples. It is not promoted. Harvey temperature 0.6 passes six small content checks, with slightly lower mean speaker similarity. Human listening is pending. |
 
 Read the [quality report](artifacts/nano_lab/QUALITY_REPORT.md) and [RSS report](artifacts/nano_lab/RSS_REPORT.md). The [listening page](artifacts/nano_lab/delivery/index.html) needs the excluded local WAV files before its players work.
+
+## Browser speech experiment
+
+The `browser_tts/` app is an experimental Chatterbox Nano WebGPU prototype. It loads a 547 MiB model package, encodes the selected ASMR clip at run time, and synthesizes short passages before playback. It does not meet the memory goal and is not the intended production path. The desired reader loads a selected, precomputed voice state once, then generates and plays streamed audio in short batches. Passage boundaries can change pauses and prosody, so playback continuity and listening quality still require direct tests.
+
+Start the local app from its directory:
+
+```bash
+cd browser_tts
+npm ci
+npm run dev
+```
+
+Open the localhost URL printed by Vite. The first model load downloads about 547 MiB from the pinned community Nano ONNX conversion. This prototype is retained for comparison. Its model package already exceeds the desired memory budget, and WebGPU execution, quality, and latency have not been verified on this host. See the [browser research note](docs/BROWSER_TTS_RESEARCH.md) for its limits and the Pocket streaming comparison.
 
 ## Repository map
 

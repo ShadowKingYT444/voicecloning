@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f2f0ea" />
+    <meta name="description" content="A local browser TTS experiment with quantized Chatterbox Nano." />
+    <title>Voice Study · Federalist No. 10</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Voice Study home">
+          <span class="brand-mark" aria-hidden="true">v.</span>
+          <span>voice study</span>
+        </a>
+        <div class="privacy-tag"><span class="privacy-dot"></span> Runs on this device</div>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">A browser prototype <span>·</span> comparison only</p>
+            <h1>Listen to the<br /><em>shape of an idea.</em></h1>
+            <p class="intro">Federalist No. 10, read in a soft reference voice. This prototype loads a large browser model. The project target is a preloaded voice state, under 500 MiB of runtime memory, and streamed audio.</p>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="orb-core"><span>10</span></div>
+            <span class="art-note note-top">PUBLIUS</span><span class="art-note note-bottom">1787</span>
+          </div>
+        </section>
+
+        <section class="workspace" aria-label="Voice and reading controls">
+          <aside class="side-column">
+            <article class="card voice-card">
+              <div class="card-heading">
+                <div><p class="eyebrow">Selected voice</p><h2>ASMR · fitted sample</h2></div>
+                <span class="voice-index">01</span>
+              </div>
+              <div class="voice-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <audio id="reference-player" preload="metadata" src="/voice/asmr_t3_seed47_fit.wav"></audio>
+              <button class="text-button" id="play-reference" type="button"><span class="play-icon">▶</span><span>Listen to the reference</span><span class="sample-time">0:03</span></button>
+              <p class="voice-note">This generated 3.5 second clip is the speaker reference. The browser prototype encodes it for each session. A matching precomputed voice state has not been verified in the streaming runtime.</p>
+            </article>
+
+            <article class="card runtime-card">
+              <div class="card-heading">
+                <div><p class="eyebrow">Prototype runtime</p><h2>Chatterbox Nano</h2></div>
+                <span class="runtime-glyph" aria-hidden="true">◌</span>
+              </div>
+              <div class="runtime-specs">
+                <div><span>Weights</span><b>Q4 / Q4F16</b></div>
+                <div><span>Execution</span><b>WebGPU</b></div>
+                <div><span>First download</span><b>≈ 547 MiB</b></div>
+              </div>
+              <div class="model-status" id="model-status" role="status" aria-live="polite">
+                <span class="status-indicator"></span><span id="model-status-text">Checking WebGPU…</span>
+              </div>
+              <div class="load-progress" id="load-progress-wrap" hidden><div class="progress-track"><div id="load-progress" class="progress-value"></div></div><span id="load-progress-label"></span></div>
+              <button class="button button-dark load-button" id="load-model" type="button" disabled><span>Prepare voice</span><span aria-hidden="true">↗</span></button>
+              <p class="model-footnote">This 547 MiB model package exceeds the project memory target. See the research note for measured streaming alternatives and their current limits.</p>
+            </article>
+          </aside>
+
+          <section class="card reader-card" aria-labelledby="reader-title">
+            <div class="reader-topline">
+              <div><p class="eyebrow">The Federalist Papers <span>·</span> No. 10</p><h2 id="reader-title">The Union as a Safeguard Against Domestic Faction</h2></div>
+              <span class="public-domain">PUBLIC DOMAIN</span>
+            </div>
+            <label class="sr-only" for="passage">Federalist No. 10 text</label>
+            <textarea id="passage" spellcheck="false" aria-describedby="passage-meta"></textarea>
+            <div class="passage-meta" id="passage-meta"><span id="word-count">Loading text…</span><span class="meta-divider">/</span><span id="chunk-count">—</span><span class="meta-spacer"></span><label for="chunk-size">Passage length</label><select id="chunk-size" aria-label="Maximum words in each passage"><option value="18">18 words</option><option value="22" selected>22 words</option><option value="24">24 words</option></select></div>
+            <div class="reader-actions">
+              <button class="button button-sage" id="read-button" type="button" disabled><span class="button-play">▶</span><span>Read Federalist No. 10</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+              <button class="button button-stop" id="stop-button" type="button" disabled>Stop</button>
+              <a class="download-link" id="download-reading" hidden download="federalist-no-10-asmr.wav">Download audio</a>
+              <span class="read-state" id="read-state" aria-live="polite">Prepare the voice to begin.</span>
+            </div>
+            <div class="reading-progress" id="reading-progress-wrap" hidden>
+              <div class="progress-track"><div id="reading-progress" class="progress-value"></div></div>
+              <div class="progress-captions"><span id="reading-progress-label">Passage 0 of 0</span><span id="reading-time-label"></span></div>
+            </div>
+            <div class="now-reading" id="now-reading" hidden>
+              <div class="now-reading-mark"><span class="equalizer"><i></i><i></i><i></i><i></i></span></div>
+              <div><p class="eyebrow">Now reading</p><p id="current-text"></p></div>
+              <span id="current-duration" class="current-duration"></span>
+            </div>
+            <details class="metrics" id="metrics">
+              <summary><span>Session measurements</span><span class="summary-hint">Browser results appear here</span></summary>
+              <div class="metric-grid">
+                <div><span>Model load</span><b id="metric-load">—</b></div>
+                <div><span>First audio</span><b id="metric-first">—</b></div>
+                <div><span>Last synthesis</span><b id="metric-last">—</b></div>
+                <div><span>Audio generated</span><b id="metric-audio">—</b></div>
+                <div><span>Mean real-time factor</span><b id="metric-rtf">—</b></div>
+              </div>
+              <p class="metrics-note">Real-time factor is synthesis time divided by audio duration. Values are from this device and browser only.</p>
+            </details>
+          </section>
+        </section>
+
+        <section class="experiment-note">
+          <span class="note-star" aria-hidden="true">✳</span>
+          <p><strong>About this prototype.</strong> Nano decodes each complete passage before playback. It does not meet the under-500-MiB target and does not stream generated speech. The joins can change rhythm or add a pause. This quantized Nano export is a community conversion. It has not passed a broad speech-quality or browser-compatibility evaluation.</p>
+          <a href="/research.html">Read the browser research <span aria-hidden="true">↗</span></a>
+        </section>
+      </main>
+      <footer><span>VOICE STUDY <i>·</i> LOCAL INFERENCE</span><span>Chatterbox Nano <i>·</i> Browser experiment</span></footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
