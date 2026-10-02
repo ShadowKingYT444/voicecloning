@@ -123,7 +123,7 @@ python3 scripts/nano_lab/bounded_job.py --max-memory-mib 640 -- npm --prefix bro
 npm --prefix browser_tts run preview
 python3 scripts/nano_lab/bounded_job.py -- \
   python3 browser_tts/scripts/measure-browser.py --chrome chromium \
-  --hardware-webgpu --power-preference low-power --model-base /models/chatterbox-nano-browser/ \
+  --require-hardware-webgpu --power-preference low-power --model-base /models/chatterbox-nano-browser/ \
   --full-paper --timeout-seconds 3600 --full-reading-timeout-seconds 3000 \
   --output-dir artifacts/nano_lab/browser_measurements/cloud_fp16_full
 ```
@@ -131,6 +131,11 @@ python3 scripts/nano_lab/bounded_job.py -- \
 Repeat in a separate run with the same text/seed/provider and
 `--lossless-embedding-manifest /experiments/embedding_lossless/manifest.json`.
 The new mode is opt-in and unpromoted. Q4 remains a separate experiment.
+`--require-hardware-webgpu` verifies adapter identity, non-fallback status and
+FP16 without forcing GPU/backend flags. The older `--hardware-webgpu` flag
+remains an explicit backend diagnostic for a separately permitted host; this
+continuation did not run that mode. Ordinary/UI-only launches no longer inherit
+its `--enable-unsafe-webgpu` flag.
 
 Report package bytes, CPU Python RSS, absolute browser RSS/PSS, incremental PSS
 above clean Chrome, JS heap, requested GPU buffers and physical GPU evidence
