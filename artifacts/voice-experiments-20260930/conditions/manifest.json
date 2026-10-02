@@ -1,0 +1,75 @@
+{
+  "role": "native_reference_conditioning_only",
+  "upstream_conditioning_sha256": "2f27e8ff2fa35181fdd2849367fb96ecc2cb87a1088ca7520c8bd51946599f08",
+  "implementation_sha256": "b2de570aedad80979a16303d350cb1927323e565303a86b5667bade96f6eb59c",
+  "runtime_sha256": "ca6a7672fa5d03a03664d3eb52330811c26728038852b5d22ae5cd5d0b533046",
+  "load_report": {
+    "ve": {
+      "checkpoint_io_backend": "streamed",
+      "loaded_tensors": 16,
+      "skipped_tensors": 0,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": []
+    },
+    "s3gen": {
+      "checkpoint_io_backend": "streamed",
+      "loaded_tensors": 1041,
+      "skipped_tensors": 1450,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": []
+    }
+  },
+  "references": [
+    {
+      "id": "asmr_raw",
+      "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+      "conditionals_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/conditions/asmr_raw.conds.pt",
+      "conditionals_sha256": "ab9469f06f341686a4d56bca4bf505e7382e014c399327d6b7d0f173a380f328",
+      "seconds": 5.139711548999912
+    },
+    {
+      "id": "asmr_natural",
+      "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__natural.wav",
+      "sha256": "73c8cd1be040323dc80057d3402590020768ed1ce921113461575093fb0ef66d",
+      "conditionals_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/conditions/asmr_natural.conds.pt",
+      "conditionals_sha256": "0f6c4f3478c90beb10b46bdce5283e21a5342673ed8d94d8c4efdcf06d664c82",
+      "seconds": 1.432606869000665
+    },
+    {
+      "id": "asmr_clean",
+      "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__clean.wav",
+      "sha256": "03805cae1e1b12fd1dd11ce1c63d86949e165b657f01dc77bc88db3ee9550acc",
+      "conditionals_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/conditions/asmr_clean.conds.pt",
+      "conditionals_sha256": "80d204f8ceca8fd6f380a0c7f184d1a28205bbaed975a785eb081fc8e0c986b9",
+      "seconds": 1.468645998998909
+    },
+    {
+      "id": "harvey_raw",
+      "path": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__raw.wav",
+      "sha256": "a5eb5e1ccae4a1ee8d5e7ca2fea5d4046222423ecb0015a4b9e02828992a45ee",
+      "conditionals_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/conditions/harvey_raw.conds.pt",
+      "conditionals_sha256": "b28941feb2a17f70b9c8cb340991b6167587e825352752b7a06aabfd3cdb8b95",
+      "seconds": 0.9526654469991627
+    },
+    {
+      "id": "harvey_natural",
+      "path": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__natural.wav",
+      "sha256": "5da856c5485a805a25d0102bb226825f0b6d93f9e1a6f078b55d07ca421cc6a0",
+      "conditionals_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/conditions/harvey_natural.conds.pt",
+      "conditionals_sha256": "216394fe210b443e8de40bdfd5c20c3bc1bd4e6921d4e9e404d21eeef2888c1a",
+      "seconds": 0.8932192219999706
+    },
+    {
+      "id": "harvey_clean",
+      "path": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__clean.wav",
+      "sha256": "a014aa16a7b45f6c36e49341ba87fe882ef5531f1ce7864e09a681e9cad4673f",
+      "conditionals_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/conditions/harvey_clean.conds.pt",
+      "conditionals_sha256": "ef6d930471257dd8432bd67e2634ede8c8fb24cd02cd9856a775cb42fab279e3",
+      "seconds": 0.8605013759988651
+    }
+  ],
+  "peak_rss_mib": 1202.42578125
+}

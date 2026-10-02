@@ -1,0 +1,66 @@
+{
+  "repo_id": "owensong/chatterbox-nano-ONNX",
+  "revision": "4a66d7dab72a9e98f24b515d49a1d7a81632df2e",
+  "files": [
+    {
+      "path": "onnx/embed_tokens_fp16.onnx",
+      "sha256": "019d257243774091d78c2ad91c2c0f61e4e442740cb7b3b00b5a89109417b18d",
+      "bytes": 1520,
+      "reused": true
+    },
+    {
+      "path": "onnx/embed_tokens_fp16.onnx_data",
+      "sha256": "bcd7b35ae4f206932e2491cb60b42ebb80f6d8facfdb53ba7d7449ad00a3237b",
+      "bytes": 87304704,
+      "reused": true
+    },
+    {
+      "path": "onnx/language_model_q4f16.onnx",
+      "sha256": "8fe9620856d86b8a0235041d7fd2a8a47292da50828044bab5740b246e66e65b",
+      "bytes": 522078,
+      "reused": true
+    },
+    {
+      "path": "onnx/language_model_q4f16.onnx_data",
+      "sha256": "8f2fdc616373c9ccaebbf2db3210dc80c860922a672898bca111eb75f6d3abd2",
+      "bytes": 55911658,
+      "reused": true
+    },
+    {
+      "path": "onnx/conditional_decoder_q4.onnx",
+      "sha256": "745faa9c2e2494a81e47f2a72601ac248639fd417ae53d999c5068bc441d1f97",
+      "bytes": 2179022,
+      "reused": true
+    },
+    {
+      "path": "onnx/conditional_decoder_q4.onnx_data",
+      "sha256": "b5c5317e0b79a1a19dd3d5e2b2091ea06b15716716ab801a54eaeb906c6971ec",
+      "bytes": 246397384,
+      "reused": true
+    },
+    {
+      "path": "tokenizer.json",
+      "sha256": "3f04e34bea22f9144d1a19151154095bc9ce0430bf421304f5797e716288a906",
+      "bytes": 3562272,
+      "reused": true
+    },
+    {
+      "path": "tokenizer_config.json",
+      "sha256": "0d637373c70a54c3c7202c0c12b40ff4f346c329960283f5a88031717d73c66f",
+      "bytes": 414,
+      "reused": true
+    },
+    {
+      "path": "config.json",
+      "sha256": "31de0e848899a63d26fdaacc4287bd14963d8f028a8af8583767b3f678f3c576",
+      "bytes": 1206,
+      "reused": true
+    },
+    {
+      "path": "generation_config.json",
+      "sha256": "91d2e5ff0fd172d5e8ac4818ef8bcd9b9ee4f7e562831edc8cc3b3702e64f923",
+      "bytes": 55,
+      "reused": true
+    }
+  ]
+}

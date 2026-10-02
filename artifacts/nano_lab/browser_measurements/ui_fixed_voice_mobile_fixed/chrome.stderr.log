@@ -1,0 +1,5 @@
+[1001/223037.826287:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:130] Should skip nVidia device named: nvidia-drm
+
+DevTools listening on ws://127.0.0.1:37137/devtools/browser/6cb20116-ac53-4f22-9469-d49f4c521b23
+[1001/223038.188422:WARNING:components/dbus/xdg/portal.cc:126] Failed to register with org.freedesktop.host.portal.Registry
+[1001/223042.657179:INFO:CONSOLE:2] "Failed to create WebGPU Context Provider", source: http://127.0.0.1:4187/assets/index-Caff34XX.js (2)

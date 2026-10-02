@@ -36,6 +36,8 @@ model_job.lock
 /samples/
 *.safetensors
 *.onnx
+*.onnx_data
+*.onnx.data
 *.bin
 *.pt
 *.pth
@@ -79,6 +81,15 @@ model_job.lock
 !/kokoro_package/reference/
 !/kokoro_package/reference/mommy_reference.wav
 !/browser_tts/public/voice/asmr_t3_seed47_fit.wav
+!/browser_tts/public/voice/asmr-state.bin
+
+# Small visual evidence for the browser cloud handoff.
+!/artifacts/nano_lab/browser_measurements/ui_fixed_voice_mobile_fixed/browser-ui.png
+!/artifacts/nano_lab/browser_measurements/ui_fixed_voice_mobile_fixed/browser-ui-mobile-390x844.png
 
 # Nested repository internals are never part of this source snapshot.
 **/.git/
+
+# Local diagnostic browser model candidates
+/browser_tts/public/experiments/
+/browser_tts/public/models/

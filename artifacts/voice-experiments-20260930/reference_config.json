@@ -1,0 +1,35 @@
+{
+  "checkpoint": "models/chatterbox-nano",
+  "references": [
+    {
+      "id": "asmr_raw",
+      "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+    },
+    {
+      "id": "asmr_natural",
+      "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__natural.wav",
+      "sha256": "73c8cd1be040323dc80057d3402590020768ed1ce921113461575093fb0ef66d"
+    },
+    {
+      "id": "asmr_clean",
+      "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__clean.wav",
+      "sha256": "03805cae1e1b12fd1dd11ce1c63d86949e165b657f01dc77bc88db3ee9550acc"
+    },
+    {
+      "id": "harvey_raw",
+      "path": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__raw.wav",
+      "sha256": "a5eb5e1ccae4a1ee8d5e7ca2fea5d4046222423ecb0015a4b9e02828992a45ee"
+    },
+    {
+      "id": "harvey_natural",
+      "path": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__natural.wav",
+      "sha256": "5da856c5485a805a25d0102bb226825f0b6d93f9e1a6f078b55d07ca421cc6a0"
+    },
+    {
+      "id": "harvey_clean",
+      "path": "artifacts/nano_lab/references/harvey/harvey_quote_02/harvey_quote_02__clean.wav",
+      "sha256": "a014aa16a7b45f6c36e49341ba87fe882ef5531f1ce7864e09a681e9cad4673f"
+    }
+  ]
+}

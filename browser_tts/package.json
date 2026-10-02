@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 4187 --strictPort",
     "build": "vite build",
-    "preview": "vite preview --host 127.0.0.1 --port 4187 --strictPort"
+    "build:low-copy": "node scripts/build-low-copy.mjs",
+    "preview": "vite preview --host 127.0.0.1 --port 4187 --strictPort",
+    "test": "node --test tests/*.test.mjs test/*.test.js"
   },
   "dependencies": {
     "@huggingface/tokenizers": "0.1.3",

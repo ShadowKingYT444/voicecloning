@@ -1,5 +1,20 @@
 # Voice cloning experiment handoff
 
+For the current browser task and transfer to a 16 GiB cloud VM, read
+[CLOUD_BROWSER_HANDOFF.md](CLOUD_BROWSER_HANDOFF.md) first. Local experiments
+stopped for this handoff. The latest adapter checks, logit validation, and
+optional low-copy build have source syntax checks only. The most recent build
+was interrupted by the desktop reserve guard. No browser speech has completed.
+
+2026-10-01 browser continuation: the reader now uses three runtime graphs,
+JSPI with Blob external weights, and an exported fixed reference state. The
+Q4 embedding candidate completed an all-row CPU comparison. It remains
+unpromoted. Browser inference, final words and voice quality, full-paper
+continuity, and runtime memory are still pending. Read
+[browser continuation](BROWSER_CONTINUATION.md) for current commands, component
+evidence, and retained browser failures. This does not change the native
+acoustic ONNX CUDA gate or the Harvey track.
+
 2026-09-30 continuation: source/reference audio is now tracked and verified.
 A guarded CPU VM run generated matched ASMR/Harvey baselines and completed the
 strict T3 clip-consensus fit. The fit is **rejected for promotion** because

@@ -1,0 +1,14 @@
+{
+  "backend": "single-process",
+  "hard_address_space_mib": 1280,
+  "rss_stop_mib": 1024,
+  "desktop_reserve_mib": 4096,
+  "child_processes": "seccomp_denied",
+  "threads": "allowed_on_two_cpus",
+  "swap": "host_disabled_required",
+  "sampled_peak_rss_mib": 316.40625,
+  "measurement_source": "in_process_getrusage",
+  "stopped_reason": null,
+  "returncode": 0,
+  "elapsed_s": 11.048428216001412
+}

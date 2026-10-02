@@ -1,0 +1,637 @@
+{
+  "app": {
+    "initialStatus": "error",
+    "loadedTextCharacters": 17929,
+    "readyState": "complete",
+    "textLoaded": true,
+    "uiBeforePrepare": {
+      "nowReadingVisible": false,
+      "prepareDisabled": true,
+      "readDisabled": true,
+      "saveAudioVisible": false,
+      "snapshot": {
+        "busy": false,
+        "chunks": [],
+        "error": "No WebGPU adapter is available.",
+        "loadSeconds": null,
+        "metrics": {
+          "audioSeconds": 0,
+          "firstAudioSeconds": null,
+          "maximumPlaybackGapSeconds": 0,
+          "playbackGapsSeconds": [],
+          "rtf": null,
+          "scheduledQueueSize": 0,
+          "totalSynthesisSeconds": 0
+        },
+        "modelIdentity": null,
+        "modelReady": false,
+        "seed": 1337,
+        "status": "error"
+      }
+    },
+    "voiceStudyApiPresent": true
+  },
+  "artifacts": {
+    "sampleLog": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/ui_fixed_voice_sync_wrapper/measurement-samples.jsonl"
+  },
+  "browser": {
+    "cleanTemporaryProfile": true,
+    "devtoolsPath": "/devtools/browser/6aff55a3-e119-443c-b4b0-ff22551b679d",
+    "devtoolsPort": 45091,
+    "executable": "/home/terryd/.cache/puppeteer/chrome-headless-shell/linux-154.0.8037.57/chrome-headless-shell-linux64/chrome-headless-shell",
+    "flags": [
+      "--user-data-dir=/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/ui_fixed_voice_sync_wrapper/voice-study-chrome-r_imst8o",
+      "--remote-debugging-port=0",
+      "--remote-debugging-address=127.0.0.1",
+      "--no-first-run",
+      "--no-default-browser-check",
+      "--disable-extensions",
+      "--disable-sync",
+      "--disable-background-networking",
+      "--disable-component-update",
+      "--enable-unsafe-webgpu",
+      "--headless",
+      "--no-zygote",
+      "--no-sandbox",
+      "--renderer-process-limit=1",
+      "--disable-gpu",
+      "--disable-software-rasterizer"
+    ],
+    "headless": true,
+    "headlessImplementation": "old headless shell",
+    "implementation": "chrome-headless-shell",
+    "pid": 282546,
+    "processLayout": "headless shell, one-renderer UI-only diagnostic with GPU disabled",
+    "processTreeScope": "Chrome root process and current /proc descendants; never system-wide Chrome processes.",
+    "profilePath": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/ui_fixed_voice_sync_wrapper/voice-study-chrome-r_imst8o",
+    "profileRemovedAfterRun": true,
+    "reusedStartupPage": true,
+    "version": {
+      "Browser": "HeadlessChrome/154.0.8037.57",
+      "Protocol-Version": "1.3",
+      "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.8037.57 Safari/537.36",
+      "V8-Version": "15.4.80.11",
+      "WebKit-Version": "537.36 (@73c14f6228d7cd537c855007e8f88678969cc0eb)",
+      "webSocketDebuggerUrl": "ws://127.0.0.1:45091/devtools/browser/6aff55a3-e119-443c-b4b0-ff22551b679d"
+    }
+  },
+  "cleanup": {
+    "browserExitCode": 0,
+    "profileRemoved": true,
+    "terminatedOwnedPids": []
+  },
+  "configuration": {
+    "embeddingManifestUrl": null,
+    "idleSeconds": 15,
+    "inferenceTimeoutSeconds": 300,
+    "loadTimeoutSeconds": 900,
+    "nvidiaSmiEnabled": false,
+    "outputDir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/ui_fixed_voice_sync_wrapper",
+    "sampleSeconds": 1.0,
+    "seed": 1337,
+    "startupTimeoutSeconds": 20,
+    "text": "Take a slow breath in, and let your shoulders relax.",
+    "timeoutSeconds": 90.0,
+    "uiOnly": true,
+    "url": "http://127.0.0.1:4187/"
+  },
+  "elapsedSeconds": 37.641,
+  "endedAtUtc": "2026-10-02T05:11:40.639Z",
+  "error": {
+    "atUtc": "2026-10-02T05:11:40.506Z",
+    "message": "DevTools timed out during Runtime.evaluate.",
+    "type": "RunnerError"
+  },
+  "guard": {
+    "accepted": true,
+    "bounded_job_unit_detected": true,
+    "cgroup": [
+      "0::/user.slice/user-1000.slice/user@1000.service/app.slice/nano-lab-model.service"
+    ],
+    "single_process_guard_detected": false
+  },
+  "limitations": [
+    "Host RSS and PSS sum /proc/smaps_rollup for only Chrome's owned profile process tree.",
+    "The WebGPU counters record requested JavaScript GPUBuffer descriptor sizes. They do not measure physical VRAM residency or every backend allocation.",
+    "Host PSS and GPU metrics are separate measures. Do not add them as an exact resident-memory total.",
+    "This runner does not verify spoken words or perceptual voice quality."
+  ],
+  "memoryBaseline": {
+    "cleanBrowserPssMiB": 130.73,
+    "cleanBrowserRssMiB": 294.766,
+    "definition": "Mean measured Chrome process-tree PSS/RSS during a clean about:blank profile before app navigation."
+  },
+  "mode": "ui-only",
+  "networkRequests": [
+    {
+      "method": "GET",
+      "timestamp": 19849.645676,
+      "type": "Fetch",
+      "url": "http://127.0.0.1:4187/federalist-no-10.txt",
+      "wallTime": 1790917867.769453
+    }
+  ],
+  "reportPath": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/ui_fixed_voice_sync_wrapper/measurement.json",
+  "schemaVersion": 1,
+  "server": {
+    "serverStartedByRunner": false,
+    "status": 200,
+    "url": "http://127.0.0.1:4187/"
+  },
+  "stages": {
+    "clean_baseline": {
+      "createCallsAtEnd": 0,
+      "createdRequestedBytesAtEnd": 0,
+      "destroyCallsAtEnd": 0,
+      "destroyedRequestedBytesAtEnd": 0,
+      "durationSeconds": 3.178,
+      "endedAtUtc": "2026-10-02T05:11:06.837Z",
+      "endedElapsedSeconds": 3.839,
+      "largestWorkerLifetimePeakRequestedMiB": 0.0,
+      "sampleIntervalSeconds": {
+        "configured": 1.0,
+        "maxObserved": 1.084,
+        "meanObserved": 0.778
+      },
+      "sampledPeakCurrentNotDestroyedRequestedMiB": 0.0,
+      "sampledPeakIncrementalPssMiB": 0.0,
+      "sampledPeakProcessCount": 4,
+      "sampledPeakPssMiB": 130.73,
+      "sampledPeakRssMiB": 294.766,
+      "samples": [
+        {
+          "elapsedSeconds": 0.728,
+          "hostProcessTree": {
+            "incrementalPssMiB": null,
+            "pids": [
+              282546,
+              282562,
+              282570,
+              282576
+            ],
+            "processCount": 4,
+            "pssMiB": 130.73,
+            "rootPid": 282546,
+            "rssMiB": 294.766,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "timestampUtc": "2026-10-02T05:11:03.726Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 1.812,
+          "hostProcessTree": {
+            "incrementalPssMiB": 0.0,
+            "pids": [
+              282546,
+              282562,
+              282570,
+              282576
+            ],
+            "processCount": 4,
+            "pssMiB": 130.73,
+            "rootPid": 282546,
+            "rssMiB": 294.766,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "timestampUtc": "2026-10-02T05:11:04.810Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 2.873,
+          "hostProcessTree": {
+            "incrementalPssMiB": 0.0,
+            "pids": [
+              282546,
+              282562,
+              282570,
+              282576
+            ],
+            "processCount": 4,
+            "pssMiB": 130.73,
+            "rootPid": 282546,
+            "rssMiB": 294.766,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "timestampUtc": "2026-10-02T05:11:05.870Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 3.786,
+          "hostProcessTree": {
+            "incrementalPssMiB": 0.0,
+            "pids": [
+              282546,
+              282562,
+              282570,
+              282576
+            ],
+            "processCount": 4,
+            "pssMiB": 130.73,
+            "rootPid": 282546,
+            "rssMiB": 294.766,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "timestampUtc": "2026-10-02T05:11:06.784Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 3.839,
+          "hostProcessTree": {
+            "incrementalPssMiB": 0.0,
+            "pids": [
+              282546,
+              282562,
+              282570,
+              282576
+            ],
+            "processCount": 4,
+            "pssMiB": 130.73,
+            "rootPid": 282546,
+            "rssMiB": 294.766,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "timestampUtc": "2026-10-02T05:11:06.836Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        }
+      ],
+      "startedAtUtc": "2026-10-02T05:11:03.659Z",
+      "startedElapsedSeconds": 0.661,
+      "status": "complete",
+      "workerLifetimePeakIncreaseDuringStageMiB": 0.0
+    },
+    "missing_state_probe": {
+      "createCallsAtEnd": 0,
+      "createdRequestedBytesAtEnd": 0,
+      "destroyCallsAtEnd": 0,
+      "destroyedRequestedBytesAtEnd": 0,
+      "durationSeconds": 32.296,
+      "endedAtUtc": "2026-10-02T05:11:40.504Z",
+      "endedElapsedSeconds": 37.506,
+      "error": "DevTools timed out during Runtime.evaluate.",
+      "largestWorkerLifetimePeakRequestedMiB": 0.0,
+      "sampleIntervalSeconds": {
+        "configured": 1.0,
+        "maxObserved": 16.076,
+        "meanObserved": 10.746
+      },
+      "sampledPeakCurrentNotDestroyedRequestedMiB": 0.0,
+      "sampledPeakIncrementalPssMiB": 67.978,
+      "sampledPeakProcessCount": 4,
+      "sampledPeakPssMiB": 198.708,
+      "sampledPeakRssMiB": 388.965,
+      "samples": [
+        {
+          "elapsedSeconds": 5.268,
+          "hostProcessTree": {
+            "incrementalPssMiB": 64.723,
+            "pids": [
+              282546,
+              282562,
+              282570,
+              282576
+            ],
+            "processCount": 4,
+            "pssMiB": 195.453,
+            "rootPid": 282546,
+            "rssMiB": 385.137,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "timestampUtc": "2026-10-02T05:11:08.265Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 6.345,
+          "hostProcessTree": {
+            "incrementalPssMiB": 67.978,
+            "pids": [
+              282546,
+              282562,
+              282570,
+              282576
+            ],
+            "processCount": 4,
+            "pssMiB": 198.708,
+            "rootPid": 282546,
+            "rssMiB": 388.965,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "timestampUtc": "2026-10-02T05:11:09.343Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 22.421,
+          "hostProcessTree": {
+            "incrementalPssMiB": -13.235,
+            "pids": [
+              282546,
+              282562,
+              282570
+            ],
+            "processCount": 3,
+            "pssMiB": 117.495,
+            "rootPid": 282546,
+            "rssMiB": 233.082,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "timestampUtc": "2026-10-02T05:11:25.418Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "detached": true,
+                "installed": false,
+                "reason": "Worker detached before a final instrumentation snapshot was available.",
+                "targetId": "AA819E9FBEBF3BF3DE7D857FE23F0CAC",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 37.506,
+          "hostProcessTree": {
+            "incrementalPssMiB": -13.341,
+            "pids": [
+              282546,
+              282562,
+              282570
+            ],
+            "processCount": 3,
+            "pssMiB": 117.389,
+            "rootPid": 282546,
+            "rssMiB": 232.84,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "timestampUtc": "2026-10-02T05:11:40.503Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "detached": true,
+                "installed": false,
+                "reason": "Worker detached before a final instrumentation snapshot was available.",
+                "targetId": "AA819E9FBEBF3BF3DE7D857FE23F0CAC",
+                "type": "worker"
+              }
+            ]
+          }
+        }
+      ],
+      "startedAtUtc": "2026-10-02T05:11:08.208Z",
+      "startedElapsedSeconds": 5.21,
+      "status": "failed",
+      "workerLifetimePeakIncreaseDuringStageMiB": 0.0
+    },
+    "page": {
+      "createCallsAtEnd": 0,
+      "createdRequestedBytesAtEnd": 0,
+      "destroyCallsAtEnd": 0,
+      "destroyedRequestedBytesAtEnd": 0,
+      "durationSeconds": 1.36,
+      "endedAtUtc": "2026-10-02T05:11:08.199Z",
+      "endedElapsedSeconds": 5.201,
+      "largestWorkerLifetimePeakRequestedMiB": 0.0,
+      "sampleIntervalSeconds": {
+        "configured": 1.0,
+        "maxObserved": 1.246,
+        "meanObserved": 0.655
+      },
+      "sampledPeakCurrentNotDestroyedRequestedMiB": 0.0,
+      "sampledPeakIncrementalPssMiB": 64.61,
+      "sampledPeakProcessCount": 4,
+      "sampledPeakPssMiB": 195.34,
+      "sampledPeakRssMiB": 384.961,
+      "samples": [
+        {
+          "elapsedSeconds": 3.891,
+          "hostProcessTree": {
+            "incrementalPssMiB": 0.0,
+            "pids": [
+              282546,
+              282562,
+              282570,
+              282576
+            ],
+            "processCount": 4,
+            "pssMiB": 130.73,
+            "rootPid": 282546,
+            "rssMiB": 294.766,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "timestampUtc": "2026-10-02T05:11:06.889Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 5.137,
+          "hostProcessTree": {
+            "incrementalPssMiB": 64.61,
+            "pids": [
+              282546,
+              282562,
+              282570,
+              282576
+            ],
+            "processCount": 4,
+            "pssMiB": 195.34,
+            "rootPid": 282546,
+            "rssMiB": 384.961,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "timestampUtc": "2026-10-02T05:11:08.134Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 5.201,
+          "hostProcessTree": {
+            "incrementalPssMiB": 64.575,
+            "pids": [
+              282546,
+              282562,
+              282570,
+              282576
+            ],
+            "processCount": 4,
+            "pssMiB": 195.305,
+            "rootPid": 282546,
+            "rssMiB": 384.926,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "timestampUtc": "2026-10-02T05:11:08.199Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        }
+      ],
+      "startedAtUtc": "2026-10-02T05:11:06.839Z",
+      "startedElapsedSeconds": 3.841,
+      "status": "complete",
+      "workerLifetimePeakIncreaseDuringStageMiB": 0.0
+    }
+  },
+  "startedAtUtc": "2026-10-02T05:11:03.001Z",
+  "status": "failed",
+  "uiInterceptions": [],
+  "workers": [
+    {
+      "closeWithoutResumeError": "DevTools Target.closeTarget failed: {'code': -32602, 'message': 'No target found for targetId'}",
+      "detachedAtUtc": "2026-10-02T05:11:14.009Z",
+      "failedClosed": true,
+      "instrumentation": "failed",
+      "instrumentationError": "DevTools timed out during Runtime.evaluate.",
+      "sessionId": "7872F4A028AB9625E730BDD031825B22",
+      "targetId": "AA819E9FBEBF3BF3DE7D857FE23F0CAC",
+      "type": "worker",
+      "uiFetchGuardInstalled": false,
+      "url": "http://127.0.0.1:4187/assets/worker-BivgT130.js"
+    }
+  ]
+}

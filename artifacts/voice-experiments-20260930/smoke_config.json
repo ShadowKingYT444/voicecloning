@@ -1,0 +1,20 @@
+{
+  "checkpoint": "models/chatterbox-nano",
+  "references": [
+    {
+      "id": "asmr_raw",
+      "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+      "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+    }
+  ],
+  "trials": [
+    {
+      "id": "asmr_smoke",
+      "reference_id": "asmr_raw",
+      "text": "Take a quiet moment and let yourself relax.",
+      "seed": 31,
+      "acoustic_seed": 10031,
+      "n_cfm_steps": 2
+    }
+  ]
+}

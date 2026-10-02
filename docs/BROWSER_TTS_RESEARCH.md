@@ -2,7 +2,7 @@
 
 ## Result from research
 
-Browser TTS is feasible, but browser-side zero-shot cloning is not a project requirement. The current objective is a selected ASMR voice loaded from a precomputed voice state, with streamed, short-batch reading of Federalist No. 10 and runtime memory below 500 MiB. Inference may run in a local service while the browser handles text, playback, and controls. The existing Nano page is a comparison prototype, not a solution to the memory target.
+Browser TTS is feasible, but browser-side zero-shot cloning is not a project requirement. The current objective is a selected ASMR voice loaded from a precomputed voice state, with streamed, short-batch reading of Federalist No. 10 and runtime memory below 500 MiB. Inference may run in a local service while the browser handles text, playback, and controls. The fixed-voice Nano browser path remains an experiment. Its three-session architecture has not yet been measured against the memory target. See [continuation evidence and pending gates](BROWSER_CONTINUATION.md).
 
 Resemble AI describes Chatterbox Nano as a 110 million parameter English model. Its model card reports about 3x real-time on an eight-core CPU. That is an upstream claim for its supported PyTorch runtime. It does not predict browser speed. [Nano model card](https://huggingface.co/ResembleAI/chatterbox-nano)
 
@@ -14,9 +14,9 @@ The selected Nano export is an independent conversion. Its maintainer publishes 
 
 ## Inference path
 
-The conversion uses four ONNX sessions:
+The published conversion includes four ONNX graphs. The updated browser reader loads only the last three after an offline voice export:
 
-1. The speech encoder converts the supplied reference WAV into audio features, speech tokens, and speaker features.
+1. Offline, the speech encoder converts the selected reference WAV into audio features, speech tokens, and speaker features. These exact tensor bytes are serialized as the fixed voice state. The reader does not load this encoder.
 2. The tokenizer converts each text chunk into GPT-2 token IDs. The embedding graph maps those IDs to vectors.
 3. The autoregressive language model emits speech tokens. Each decode step updates 24 key/value cache tensors across 12 layers.
 4. The conditional decoder converts the prompt tokens and the complete generated speech-token sequence into mono 24 kHz audio.
@@ -25,17 +25,17 @@ I parsed all four published ONNX graph headers at the pinned revision. The langu
 
 The model's acoustic decoder returns a complete waveform. It does not expose an incremental waveform stream. This site therefore divides the passage at clause boundaries, with a 24-word maximum. It sends the next chunk while the current chunk plays. Playback can begin after the first chunk finishes. The first chunk is not audible while its speech tokens are still being generated. Independent chunks can add pauses or prosody changes. The site marks each boundary so these effects can be measured and heard.
 
-The site uses the exact `asmr_t3_seed47_fit.wav` artifact as its speaker reference. Its SHA-256 is `67f94a868976b22a47bce8fd00a873d4c5b7085ba6eedd698f8a898a26ce76c0`, matching the source artifact. It does not load the local fitted adapter. The browser export is the community's base Nano conversion. Voice similarity from a generated reference is not equivalent to using the fitted model weights, and it has not been measured for this browser path.
+The offline voice-state exporter uses the exact `asmr_t3_seed47_fit.wav` artifact as its speaker reference. Its SHA-256 is `67f94a868976b22a47bce8fd00a873d4c5b7085ba6eedd698f8a898a26ce76c0`, matching the source artifact. It does not load the local fitted adapter. The browser export is the community's base Nano conversion. Voice similarity from a generated reference is not equivalent to using the fitted model weights, and it has not been measured for this browser path.
 
 ## Browser runtime and optimization
 
-ONNX Runtime Web supports WebAssembly on CPU and WebGPU on compatible browsers. WebGPU supports only a subset of ONNX operators. A session can assign supported subgraphs to WebGPU and use another provider for remaining work. This experiment requests WebGPU and records whether its four sessions load. It does not treat a successful session load as proof that all operations ran on the GPU. [ONNX Runtime Web overview](https://onnxruntime.ai/docs/tutorials/web/)
+ONNX Runtime Web supports WebAssembly on CPU and WebGPU on compatible browsers. WebGPU supports only a subset of ONNX operators. A session can assign supported subgraphs to WebGPU and use another provider for remaining work. This experiment requests WebGPU and records whether its three runtime sessions load. It does not treat a successful session load as proof that all operations ran on the GPU. [ONNX Runtime Web overview](https://onnxruntime.ai/docs/tutorials/web/)
 
-Autoregressive TTS reuses the KV cache at each speech-token step. ONNX Runtime Web can keep tensor outputs in GPU buffers and use them as later inputs. The worker keeps those cache tensors on GPU and reads only the latest logits on the CPU for sampling. This avoids copying the full cache after each token. The reference encoder, small embedding outputs, masks, token IDs, and final waveform still cross the CPU/GPU boundary. [WebGPU I/O binding](https://onnxruntime.ai/docs/tutorials/web/ep-webgpu.html)
+Autoregressive TTS reuses the KV cache at each speech-token step. ONNX Runtime Web can keep tensor outputs in GPU buffers and use them as later inputs. The worker keeps those cache tensors on GPU and reads logits on the CPU for sampling. This avoids copying the full cache after each token. The saved conditioning, small embedding outputs, masks, token IDs, and final waveform still cross the CPU/GPU boundary. [WebGPU I/O binding](https://onnxruntime.ai/docs/tutorials/web/ep-webgpu.html)
 
-ONNX external weight files need explicit URLs in browser session options. The site loads the graph and its matching external data from one pinned Hugging Face revision. This preserves each graph's weight offsets and avoids bundling 547 MiB into the website. The browser may cache these files for later visits. Browser cache retention depends on available storage. [ONNX Runtime Web external data](https://onnxruntime.ai/docs/tutorials/web/large-models.html)
+ONNX external weight files need explicit URLs in browser session options. The site loads the graph and its matching external data from one pinned Hugging Face revision. This preserves each graph's weight offsets. The reader fetches each external weight file as a Blob and passes it to the JSPI build. ORT 1.30 local source (`lib/wasm/wasm-core-impl.ts`) bypasses `loadFile()` for Blob external data when JSPI is enabled. Its API documentation describes range loading for this case. The code change can avoid a full JS ArrayBuffer weight copy during initialization. It does not establish total browser memory savings. The three graph/weight pairs total 374.14 MiB. Tokenizer and configuration files bring the model assets to 377.54 MiB. The browser may cache these files for later visits. Browser cache retention depends on available storage. [ONNX Runtime Web external data](https://onnxruntime.ai/docs/tutorials/web/large-models.html)
 
-The site moves inference to a Web Worker so model loading and synthesis do not block the page. It reports model-load duration, estimated time until scheduled playback, the latest passage synthesis time, total generated audio duration, and mean real-time factor. It does not measure browser-process RSS or GPU memory; those need a supervised process-level run. It does not claim a two-second first-audio time until this browser has measured it. The reader can export synthesized passages as a local mono PCM WAV. It applies a short fade at each passage edge to reduce clicks; sentence and prosody discontinuities remain.
+The site moves inference to a Web Worker so model loading and synthesis do not block the page. It reports model-load duration, estimated time until scheduled playback, the latest passage synthesis time, total generated audio duration, and mean real-time factor. The page records scheduled playback gaps. The new isolated [measurement runner](../browser_tts/MEASUREMENT.md) records browser process-tree RSS/PSS and requested GPUBuffer sizes. The runner still needs a guarded browser run. Requested buffer size does not prove physical VRAM residency. It does not claim a two-second first-audio time until this browser has measured it. The reader keeps at most two unplayed passages and persists PCM audio in IndexedDB. Chrome can stream the final mono PCM WAV to a file without retaining all Float32 waveforms in RAM. It applies a short fade at each passage edge to reduce clicks; sentence and prosody discontinuities remain.
 
 ## Local measurements and limits
 
@@ -45,7 +45,7 @@ The selected reference is a 3.52-second, 24 kHz mono generated clip. The Septemb
 
 The host uses Chrome 152, an RTX 4060 Laptop GPU, and NVIDIA driver 595.91.07. ONNX Runtime WebGPU support on this Linux driver stack must be tested directly. A model file tag or a successful browser adapter query is not an inference result.
 
-The existing resource guard requires at least 6 GiB available before a model job and preserves 4 GiB for the desktop. Model load, synthesis, and speech-quality evaluation must run one at a time through `scripts/nano_lab/bounded_job.py`. The recorded headroom at the start of this experiment was below the 6 GiB launch threshold, so no model workload was started while this document was prepared.
+The existing resource guard requires at least 6 GiB available before a full model job and preserves 4 GiB for the desktop. Model load, synthesis, and speech-quality evaluation must run one at a time through `scripts/nano_lab/bounded_job.py`. Smaller component jobs preserve the same reserve. The guarded CPU voice-state export completed under a 640 MiB cap. Its measured cgroup peak was 423.7 MiB. That measurement is not browser RSS or final speech-quality evidence. Full browser inference still requires sufficient host headroom. See the continuation note for completed checks and failed browser startups.
 
 ## References
 

@@ -1,0 +1,66 @@
+{
+  "artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_005.wav": {
+    "sha256": "d85d4c4d59149be28187808df69925326149f598ec702a0cbab6e01774e554c0",
+    "matches": true
+  },
+  "ASMR  7 Minutes in Heaven... With Your Bully_  [Enemies to Lovers] [Tsundere] [Confession] [Kiss].mp3": {
+    "sha256": "c7648b06819bf1ae8e244073e4c4c9b409d3dddd7e4cb2cc7f3d055d18cc58a1",
+    "matches": true
+  },
+  "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav": {
+    "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a",
+    "matches": true
+  },
+  "artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_006.wav": {
+    "sha256": "7c573da034bec9d899a989beec8b56dab84194bc9cf4e4c19b14f7fe750c95c5",
+    "matches": true
+  },
+  "artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_007.wav": {
+    "sha256": "840395254e9c7c0890545f76c9e9efa6df36eabdecce2062196f501c46facbd0",
+    "matches": true
+  },
+  "artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_008.wav": {
+    "sha256": "43a93916176b50c56d80646950a5cfc851b5de42b1e466c6b5cfe0250d36b99a",
+    "matches": true
+  },
+  "artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_010.wav": {
+    "sha256": "6180bd226a41a53a78ccdc5549b4ac05cb13270e147d86bedb440f688ae2d8c9",
+    "matches": true
+  },
+  "artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_013.wav": {
+    "sha256": "e2d427a7e015946c6c2400e510928e575a97ef5fd92a6c66e184267fefb67665",
+    "matches": true
+  },
+  "artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_014.wav": {
+    "sha256": "f4187b1b1ea1811e41b0ba1389475eecd1e2e532e269805f5d91856f46536ddd",
+    "matches": true
+  },
+  "artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_015.wav": {
+    "sha256": "61f61df1f60056d42f8fd22a8ebe698e7065e1a3792d973d7252e0e469080346",
+    "matches": true
+  },
+  "artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_019.wav": {
+    "sha256": "35cd121d9598f4e950a3ffe786211395e5712930665abf0ee1e4d1195cddc982",
+    "matches": true
+  },
+  "artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_022.wav": {
+    "sha256": "9a53e7a4211fe6fbb6b2404e3f0fdc752761d9d9a4c7f4550509230cbf2269e8",
+    "matches": true
+  },
+  "artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_024.wav": {
+    "sha256": "8e1c2e81a777029322b7998e42ca802270923ee5fbc9cf8ce25b64b15198a3b4",
+    "matches": true
+  },
+  "artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_029.wav": {
+    "sha256": "23529e55eff9e23010a39ababfa676d666d4fe14b3b0510acc2e939947b33c88",
+    "matches": true
+  },
+  "artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_030.wav": {
+    "sha256": "e4f7f5da93681c1f346da3d322855bcda0afea36120c2663bde59c4e5ffe4119",
+    "matches": true
+  },
+  "artifacts/nano_lab/dataset_repair_complete/clips/asmr7_repair_031.wav": {
+    "sha256": "b81e7b9950c2d4a03eb2bf6cc6a1b4cbbec169ba9c5143f5d53c1f1ba851c192",
+    "matches": true
+  }
+}

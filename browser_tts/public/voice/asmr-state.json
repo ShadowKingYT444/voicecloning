@@ -1,0 +1,93 @@
+{
+  "conditioning": {
+    "description": "Generated-reference conditioning from the pinned public Q4F16 base conversion. No experimental fitted adapter was applied. This state is specific to the exact reference audio.",
+    "fitted_adapter_applied": false,
+    "source": "generated_reference",
+    "speaker_specific": true,
+    "zero_shot": false
+  },
+  "data": {
+    "file": "asmr-state.bin",
+    "sha256": "6f56c0dd844ecc038e5b60debff22d1e16b44c9d13386d0f7a91156bfca1b38e",
+    "size_bytes": 331200
+  },
+  "encoder_execution": {
+    "graph_optimization_level": "ORT_ENABLE_ALL",
+    "onnxruntime_version": "1.29.0",
+    "provider": "CPUExecutionProvider"
+  },
+  "format": "chatterbox-nano-reference-state-v1",
+  "model": {
+    "encoder_external_weights": {
+      "path": "onnx/speech_encoder_q4f16.onnx_data",
+      "sha256": "55d89bd87fd36be48b2e831c99c2e309d432169119049066f9f22fcfe517798d"
+    },
+    "encoder_graph": {
+      "path": "onnx/speech_encoder_q4f16.onnx",
+      "sha256": "29e249f59eaf95015527588b955e5286c7ee4524e7bb54a2f8d589b838e8aed2"
+    },
+    "repo_id": "owensong/chatterbox-nano-ONNX",
+    "revision": "4a66d7dab72a9e98f24b515d49a1d7a81632df2e",
+    "sha256sums_sha256": "ecd0b0ee1fde0f9342564fda72fe1ebb4907baa6c9d013c09052bcad5220dcf4"
+  },
+  "reference": {
+    "channels": 1,
+    "path": "browser_tts/public/voice/asmr_t3_seed47_fit.wav",
+    "sample_rate": 24000,
+    "sha256": "67f94a868976b22a47bce8fd00a873d4c5b7085ba6eedd698f8a898a26ce76c0",
+    "wav_encoding": "PCM-24"
+  },
+  "schema_version": 1,
+  "tensors": [
+    {
+      "byte_length": 273408,
+      "dims": [
+        1,
+        89,
+        768
+      ],
+      "name": "audio_features",
+      "offset": 0,
+      "role": "audio_features",
+      "serialization_round_trip_exact": true,
+      "type": "float32"
+    },
+    {
+      "byte_length": 704,
+      "dims": [
+        1,
+        88
+      ],
+      "name": "audio_tokens",
+      "offset": 273408,
+      "role": "audio_tokens",
+      "serialization_round_trip_exact": true,
+      "type": "int64"
+    },
+    {
+      "byte_length": 768,
+      "dims": [
+        1,
+        192
+      ],
+      "name": "speaker_embeddings",
+      "offset": 274112,
+      "role": "speaker_embeddings",
+      "serialization_round_trip_exact": true,
+      "type": "float32"
+    },
+    {
+      "byte_length": 56320,
+      "dims": [
+        1,
+        176,
+        80
+      ],
+      "name": "speaker_features",
+      "offset": 274880,
+      "role": "speaker_features",
+      "serialization_round_trip_exact": true,
+      "type": "float32"
+    }
+  ]
+}

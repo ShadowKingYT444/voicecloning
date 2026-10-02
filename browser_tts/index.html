@@ -20,9 +20,9 @@
       <main id="top">
         <section class="hero">
           <div class="hero-copy">
-            <p class="eyebrow">A browser prototype <span>·</span> comparison only</p>
+            <p class="eyebrow">A browser reader <span>·</span> experimental</p>
             <h1>Listen to the<br /><em>shape of an idea.</em></h1>
-            <p class="intro">Federalist No. 10, read in a soft reference voice. This prototype loads a large browser model. The project target is a preloaded voice state, under 500 MiB of runtime memory, and streamed audio.</p>
+            <p class="intro">Federalist No. 10, read in the selected soft voice. Short passages play as the next passage is generated. Voice quality, playback continuity, and the under-500-MiB memory target still need verification.</p>
           </div>
           <div class="hero-art" aria-hidden="true">
             <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
@@ -35,13 +35,13 @@
           <aside class="side-column">
             <article class="card voice-card">
               <div class="card-heading">
-                <div><p class="eyebrow">Selected voice</p><h2>ASMR · fitted sample</h2></div>
+                <div><p class="eyebrow">Selected voice</p><h2>ASMR · selected reference</h2></div>
                 <span class="voice-index">01</span>
               </div>
               <div class="voice-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
               <audio id="reference-player" preload="metadata" src="/voice/asmr_t3_seed47_fit.wav"></audio>
               <button class="text-button" id="play-reference" type="button"><span class="play-icon">▶</span><span>Listen to the reference</span><span class="sample-time">0:03</span></button>
-              <p class="voice-note">This generated 3.5 second clip is the speaker reference. The browser prototype encodes it for each session. A matching precomputed voice state has not been verified in the streaming runtime.</p>
+              <p class="voice-note">This generated 3.5 second clip defines the selected voice. The reader uses a saved voice state. The voice remains experimental and needs listening review.</p>
             </article>
 
             <article class="card runtime-card">
@@ -52,14 +52,14 @@
               <div class="runtime-specs">
                 <div><span>Weights</span><b>Q4 / Q4F16</b></div>
                 <div><span>Execution</span><b>WebGPU</b></div>
-                <div><span>First download</span><b>≈ 547 MiB</b></div>
+                <div><span>Model download</span><b>≈ 378 MiB</b></div>
               </div>
               <div class="model-status" id="model-status" role="status" aria-live="polite">
                 <span class="status-indicator"></span><span id="model-status-text">Checking WebGPU…</span>
               </div>
               <div class="load-progress" id="load-progress-wrap" hidden><div class="progress-track"><div id="load-progress" class="progress-value"></div></div><span id="load-progress-label"></span></div>
               <button class="button button-dark load-button" id="load-model" type="button" disabled><span>Prepare voice</span><span aria-hidden="true">↗</span></button>
-              <p class="model-footnote">This 547 MiB model package exceeds the project memory target. See the research note for measured streaming alternatives and their current limits.</p>
+              <p class="model-footnote">The saved voice avoids loading the reference encoder. Download size is not runtime memory. Browser memory and playback still need measurement.</p>
             </article>
           </aside>
 
@@ -74,7 +74,7 @@
             <div class="reader-actions">
               <button class="button button-sage" id="read-button" type="button" disabled><span class="button-play">▶</span><span>Read Federalist No. 10</span><span class="button-arrow" aria-hidden="true">↗</span></button>
               <button class="button button-stop" id="stop-button" type="button" disabled>Stop</button>
-              <a class="download-link" id="download-reading" hidden download="federalist-no-10-asmr.wav">Download audio</a>
+              <button class="text-button download-link" id="download-reading" type="button" hidden>Save audio</button>
               <span class="read-state" id="read-state" aria-live="polite">Prepare the voice to begin.</span>
             </div>
             <div class="reading-progress" id="reading-progress-wrap" hidden>
@@ -94,15 +94,16 @@
                 <div><span>Last synthesis</span><b id="metric-last">—</b></div>
                 <div><span>Audio generated</span><b id="metric-audio">—</b></div>
                 <div><span>Mean real-time factor</span><b id="metric-rtf">—</b></div>
+                <div><span>Largest playback gap</span><b id="metric-gap">—</b></div>
               </div>
-              <p class="metrics-note">Real-time factor is synthesis time divided by audio duration. Values are from this device and browser only.</p>
+              <p class="metrics-note">Real-time factor is synthesis time divided by audio duration. First audio is the scheduled start time. Playback gaps measure delays between scheduled passages. These values do not measure output-device latency or voice quality.</p>
             </details>
           </section>
         </section>
 
         <section class="experiment-note">
           <span class="note-star" aria-hidden="true">✳</span>
-          <p><strong>About this prototype.</strong> Nano decodes each complete passage before playback. It does not meet the under-500-MiB target and does not stream generated speech. The joins can change rhythm or add a pause. This quantized Nano export is a community conversion. It has not passed a broad speech-quality or browser-compatibility evaluation.</p>
+          <p><strong>About this prototype.</strong> Nano decodes each complete passage before playback. The reader keeps at most two passages queued and saves audio to browser storage. The under-500-MiB target is unverified. Passage joins can change rhythm or add a pause. This quantized Nano export is a community conversion. It has not passed a broad speech-quality or browser-compatibility evaluation.</p>
           <a href="/research.html">Read the browser research <span aria-hidden="true">↗</span></a>
         </section>
       </main>

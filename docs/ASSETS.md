@@ -2,7 +2,7 @@
 
 Git contains code, text evidence, and the shared voice-reference bundle. The original workspace also contains approximately 9.0 GiB of excluded model, cache, and generated assets. [The inventory](local-assets.json) records paths, sizes, and symlink targets. These sizes are an inventory, not cryptographic verification. Existing experiment manifests contain the authoritative hashes.
 
-The tracked reference bundle includes the source MP3 recordings, curated ASMR and Harvey reference variants, audited repair clips, and the Pocket/Kokoro reference files. Generated voices, model weights, fitting caches, and ONNX graphs remain local. The listening HTML pages still need generated WAV files. Fitted profile JSON files also need their exact conditioning caches and adapters.
+The tracked reference bundle includes the source MP3 recordings, curated ASMR and Harvey reference variants, audited repair clips, and the Pocket/Kokoro reference files. The browser's selected reference WAV and 331,200-byte fixed voice-state binary are also tracked. Most generated voices, model weights, fitting caches, and ONNX graphs remain local. The listening HTML pages still need generated WAV files. Fitted profile JSON files also need their exact conditioning caches and adapters. See [the cloud browser handoff](CLOUD_BROWSER_HANDOFF.md) for the public model restore path.
 
 ## Transfer the saved state
 
@@ -19,7 +19,7 @@ Use your actual original-machine SSH host in place of `SOURCE_HOST` below. The c
 rsync -a --info=progress2 --files-from=docs/local-assets.paths SOURCE_HOST:/home/terryd/gooning/voicecloning/ ./
 ```
 
-The source machine and its local files must still be available. The GitHub repository does not provide an alternate download for the recordings, trained adapters, or experiment caches. Source and generated audio remain local unless the owner separately chooses to share them.
+The tracked source and reference bundle is available in GitHub. Transfer of excluded assets still needs the original machine or a separate asset store. The repository does not provide trained adapters, experiment caches, or most generated listening WAVs. Public base-model downloads do not recreate those files.
 
 The optional checker reports missing assets and size differences without importing a model:
 

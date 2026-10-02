@@ -1,0 +1,7 @@
+{
+  "status": "blocked",
+  "attempt": "create experiment branch",
+  "github_api_status": 403,
+  "reason": "Resource not accessible by integration",
+  "remote_branch_created": false
+}

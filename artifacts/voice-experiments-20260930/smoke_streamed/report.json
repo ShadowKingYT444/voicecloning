@@ -1,0 +1,155 @@
+{
+  "config": {
+    "checkpoint": "models/chatterbox-nano",
+    "references": [
+      {
+        "id": "asmr_raw",
+        "path": "artifacts/nano_lab/references/asmr7/asmr7_conversational_01/asmr7_conversational_01__raw.wav",
+        "sha256": "a4c0e1eef39fa9d378d116e1e2c3ccecf5c18a51cdf2058c60d659d8b7f71d3a"
+      }
+    ],
+    "trials": [
+      {
+        "id": "asmr_smoke",
+        "reference_id": "asmr_raw",
+        "text": "Take a quiet moment and let yourself relax.",
+        "seed": 31,
+        "acoustic_seed": 10031,
+        "n_cfm_steps": 2
+      }
+    ]
+  },
+  "config_sha256": "a8c6d1cb0fa84319dd7fbf527a00cf840c46f8ba0d0d381d48774ec3a09f8374",
+  "runs": [],
+  "status": "failed",
+  "measurements": [
+    {
+      "stage": "before ve.safetensors",
+      "rusage_peak_rss_mib": 513.07421875,
+      "proc_status": {
+        "VmSize": "1177728 kB",
+        "VmHWM": "525492 kB",
+        "VmRSS": "525492 kB"
+      }
+    },
+    {
+      "stage": "after ve.safetensors",
+      "rusage_peak_rss_mib": 519.7109375,
+      "proc_status": {
+        "VmSize": "1252484 kB",
+        "VmHWM": "532312 kB",
+        "VmRSS": "532312 kB"
+      }
+    },
+    {
+      "stage": "before t3_nano_v1.safetensors",
+      "rusage_peak_rss_mib": 522.4609375,
+      "proc_status": {
+        "VmSize": "2587532 kB",
+        "VmHWM": "535180 kB",
+        "VmRSS": "535180 kB"
+      }
+    },
+    {
+      "stage": "after t3_nano_v1.safetensors",
+      "rusage_peak_rss_mib": 1099.34765625,
+      "proc_status": {
+        "VmSize": "2607008 kB",
+        "VmHWM": "1125732 kB",
+        "VmRSS": "1101304 kB"
+      }
+    },
+    {
+      "stage": "before s3gen_meanflow.safetensors",
+      "rusage_peak_rss_mib": 1203.66015625,
+      "proc_status": {
+        "VmSize": "2914148 kB",
+        "VmHWM": "1232548 kB",
+        "VmRSS": "1182448 kB"
+      }
+    },
+    {
+      "stage": "after s3gen_meanflow.safetensors",
+      "rusage_peak_rss_mib": 2174.43359375,
+      "proc_status": {
+        "VmSize": "2941628 kB",
+        "VmHWM": "2226916 kB",
+        "VmRSS": "2226916 kB"
+      }
+    },
+    {
+      "stage": "loaded",
+      "rusage_peak_rss_mib": 2283.08984375,
+      "proc_status": {
+        "VmSize": "3046924 kB",
+        "VmHWM": "2338096 kB",
+        "VmRSS": "2338096 kB"
+      }
+    }
+  ],
+  "implementation_sha256": "500dd06aab218295a07d99cc7ac457834168836e9e3d5a742152ea4d4c538fb7",
+  "torch_version": "2.11.0+cpu",
+  "runtime_sha256": "6099f961d5a99d62a15e08bed41b08c648306543b1c3c2cb997a36cddc384d9b",
+  "load_report": {
+    "optimized": true,
+    "device": "cpu",
+    "dtype": "torch.float32",
+    "decoder": "meanflow",
+    "implementation_sha256": "6099f961d5a99d62a15e08bed41b08c648306543b1c3c2cb997a36cddc384d9b",
+    "ve": {
+      "checkpoint_io_backend": "streamed",
+      "loaded_tensors": 16,
+      "skipped_tensors": 0,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": [],
+      "dtype": "torch.float32"
+    },
+    "t3": {
+      "checkpoint_io_backend": "streamed",
+      "loaded_tensors": 153,
+      "skipped_tensors": 2,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": [],
+      "removed_parameters": [
+        "tfmr.wte",
+        "text_head"
+      ]
+    },
+    "precision_policy": {
+      "t3": "torch.float32",
+      "s3gen": "torch.float32"
+    },
+    "s3gen": {
+      "checkpoint_io_backend": "streamed",
+      "loaded_tensors": 2491,
+      "skipped_tensors": 0,
+      "unexpected_tensors": [],
+      "missing_tensors": [],
+      "ignored_missing_tensors": []
+    },
+    "parameters": {
+      "t3": 140247203,
+      "s3gen": 266030919,
+      "ve": 1423618
+    },
+    "load_seconds": 2.7707739480010787,
+    "engine": {
+      "optimized": true,
+      "dtype": "torch.float32",
+      "device": "cpu",
+      "decoder": "meanflow"
+    }
+  },
+  "error": "Traceback (most recent call last):\n  File \"/workspace/scratch/37b8eb4aea87/voicecloning/scripts/nano_lab/vm_reference_trial.py\", line 73, in main\n    conditions[reference['id']] = engine.prepare_conditionals(path)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/37b8eb4aea87/voicecloning/scripts/nano_lab/runtime.py\", line 719, in prepare_conditionals\n    self.model.prepare_conditionals(\n  File \"/workspace/scratch/37b8eb4aea87/voicecloning/vendor/chatterbox/src/chatterbox/tts_turbo.py\", line 253, in prepare_conditionals\n    s3gen_ref_dict = self.s3gen.embed_ref(s3gen_ref_wav, S3GEN_SR, device=self.device)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/37b8eb4aea87/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/s3gen.py\", line 152, in embed_ref\n    ref_x_vector = self.speaker_encoder.inference(ref_wav_16.to(dtype=self.dtype))\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/37b8eb4aea87/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/xvector.py\", line 427, in inference\n    results = self.forward(speech.to(torch.float32))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/37b8eb4aea87/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/xvector.py\", line 419, in forward\n    x = self.head(x)\n        ^^^^^^^^^^^^\n  File \"/workspace/scratch/37b8eb4aea87/voicecloning/.venv-nano-cpu/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/37b8eb4aea87/voicecloning/.venv-nano-cpu/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/37b8eb4aea87/voicecloning/vendor/chatterbox/src/chatterbox/models/s3gen/xvector.py\", line 120, in forward\n    out = F.relu(self.bn1(self.conv1(x)))\n                          ^^^^^^^^^^^^^\n  File \"/workspace/scratch/37b8eb4aea87/voicecloning/.venv-nano-cpu/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/37b8eb4aea87/voicecloning/.venv-nano-cpu/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/37b8eb4aea87/voicecloning/.venv-nano-cpu/lib/python3.12/site-packages/torch/nn/modules/conv.py\", line 553, in forward\n    return self._conv_forward(input, self.weight, self.bias)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/37b8eb4aea87/voicecloning/.venv-nano-cpu/lib/python3.12/site-packages/torch/nn/modules/conv.py\", line 548, in _conv_forward\n    return F.conv2d(\n           ^^^^^^^^^\nRuntimeError: [enforce fail at alloc_cpu.cpp:127] err == 0. DefaultCPUAllocator: can't allocate memory: you tried to allocate 10219520 bytes. Error code 12 (Cannot allocate memory)\n",
+  "elapsed_s": 18.28684956500001,
+  "final_memory": {
+    "rusage_peak_rss_mib": 2394.71875,
+    "proc_status": {
+      "VmSize": "3138588 kB",
+      "VmHWM": "2452308 kB",
+      "VmRSS": "2452308 kB"
+    }
+  }
+}

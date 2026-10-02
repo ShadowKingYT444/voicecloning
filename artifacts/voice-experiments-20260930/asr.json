@@ -1,0 +1,1680 @@
+{
+  "model": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+  "backend": "CTranslate2 CPU int8",
+  "role": "independent_content_audit",
+  "human_listening": false,
+  "model_download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+  "model_identity": {
+    "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+    "name": "faster-whisper-small",
+    "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+    "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+    "size_class": "small"
+  },
+  "word_timestamps": true,
+  "inputs": [
+    {
+      "id": "asmr_raw_seed31",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_raw_seed31.wav",
+      "audio_sha256": "d63e59529cd47d4df64ca9110b08b92a1a7f2deca94c400f7feb2396314fee08",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "transcript": "Take a quiet moment and let yourself relax.",
+      "segments": [
+        {
+          "text": "Take a quiet moment and let yourself relax.",
+          "start_s": 0.0,
+          "end_s": 2.22,
+          "avg_logprob": -0.29677218943834305,
+          "no_speech_prob": 0.005850906949490309,
+          "compression_ratio": 0.8775510204081632,
+          "words": [
+            {
+              "word": "Take",
+              "start_s": 0.0,
+              "end_s": 0.2,
+              "probability": 0.7294976115226746
+            },
+            {
+              "word": "a",
+              "start_s": 0.2,
+              "end_s": 0.38,
+              "probability": 0.9840976595878601
+            },
+            {
+              "word": "quiet",
+              "start_s": 0.38,
+              "end_s": 0.68,
+              "probability": 0.998145580291748
+            },
+            {
+              "word": "moment",
+              "start_s": 0.68,
+              "end_s": 1.0,
+              "probability": 0.9960460066795349
+            },
+            {
+              "word": "and",
+              "start_s": 1.0,
+              "end_s": 1.3,
+              "probability": 0.9659489393234253
+            },
+            {
+              "word": "let",
+              "start_s": 1.3,
+              "end_s": 1.46,
+              "probability": 0.9982813596725464
+            },
+            {
+              "word": "yourself",
+              "start_s": 1.46,
+              "end_s": 1.76,
+              "probability": 0.99595707654953
+            },
+            {
+              "word": "relax.",
+              "start_s": 1.76,
+              "end_s": 2.22,
+              "probability": 0.9974964261054993
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.1535636909993627
+    },
+    {
+      "id": "asmr_natural_seed31",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_natural_seed31.wav",
+      "audio_sha256": "6e99e6bfdeb3e2ef918e2de3726970d19702a04b6b1df12e98118388b90b3800",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "transcript": "Take a quiet moment and let yourself relax.",
+      "segments": [
+        {
+          "text": "Take a quiet moment and let yourself relax.",
+          "start_s": 0.0,
+          "end_s": 2.22,
+          "avg_logprob": -0.30142458031574887,
+          "no_speech_prob": 0.003037919756025076,
+          "compression_ratio": 0.8775510204081632,
+          "words": [
+            {
+              "word": "Take",
+              "start_s": 0.0,
+              "end_s": 0.22,
+              "probability": 0.8276195526123047
+            },
+            {
+              "word": "a",
+              "start_s": 0.22,
+              "end_s": 0.4,
+              "probability": 0.9983347058296204
+            },
+            {
+              "word": "quiet",
+              "start_s": 0.4,
+              "end_s": 0.68,
+              "probability": 0.9930750131607056
+            },
+            {
+              "word": "moment",
+              "start_s": 0.68,
+              "end_s": 0.98,
+              "probability": 0.9961715340614319
+            },
+            {
+              "word": "and",
+              "start_s": 0.98,
+              "end_s": 1.3,
+              "probability": 0.8847390413284302
+            },
+            {
+              "word": "let",
+              "start_s": 1.3,
+              "end_s": 1.46,
+              "probability": 0.9968522191047668
+            },
+            {
+              "word": "yourself",
+              "start_s": 1.46,
+              "end_s": 1.76,
+              "probability": 0.9958343505859375
+            },
+            {
+              "word": "relax.",
+              "start_s": 1.76,
+              "end_s": 2.22,
+              "probability": 0.9965552091598511
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.306963064998854
+    },
+    {
+      "id": "asmr_clean_seed31",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_clean_seed31.wav",
+      "audio_sha256": "38f2e2acb1ca40ca2e2b199d35695845272c872024b85a21590d7e9ece26f25f",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "transcript": "Take a quiet moment and let yourself relax.",
+      "segments": [
+        {
+          "text": "Take a quiet moment and let yourself relax.",
+          "start_s": 0.0,
+          "end_s": 2.42,
+          "avg_logprob": -0.28718137989441556,
+          "no_speech_prob": 0.005186138208955526,
+          "compression_ratio": 0.8775510204081632,
+          "words": [
+            {
+              "word": "Take",
+              "start_s": 0.0,
+              "end_s": 0.22,
+              "probability": 0.8586346507072449
+            },
+            {
+              "word": "a",
+              "start_s": 0.22,
+              "end_s": 0.4,
+              "probability": 0.9988211989402771
+            },
+            {
+              "word": "quiet",
+              "start_s": 0.4,
+              "end_s": 0.7,
+              "probability": 0.9964524507522583
+            },
+            {
+              "word": "moment",
+              "start_s": 0.7,
+              "end_s": 1.06,
+              "probability": 0.9973859190940857
+            },
+            {
+              "word": "and",
+              "start_s": 1.06,
+              "end_s": 1.42,
+              "probability": 0.8881714344024658
+            },
+            {
+              "word": "let",
+              "start_s": 1.42,
+              "end_s": 1.62,
+              "probability": 0.970752477645874
+            },
+            {
+              "word": "yourself",
+              "start_s": 1.62,
+              "end_s": 1.98,
+              "probability": 0.9905776977539062
+            },
+            {
+              "word": "relax.",
+              "start_s": 1.98,
+              "end_s": 2.42,
+              "probability": 0.9966476559638977
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.141612763998637
+    },
+    {
+      "id": "harvey_raw_seed31",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_raw_seed31.wav",
+      "audio_sha256": "86068624882c26376b62446e419c8311f32a67fcf34e2b81d39f11b74be78945",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "transcript": "Winning starts with preparation. Make your next move count.",
+      "segments": [
+        {
+          "text": "Winning starts with preparation. Make your next move count.",
+          "start_s": 0.0,
+          "end_s": 2.64,
+          "avg_logprob": -0.2622146964073181,
+          "no_speech_prob": 0.008108889684081078,
+          "compression_ratio": 0.9076923076923077,
+          "words": [
+            {
+              "word": "Winning",
+              "start_s": 0.0,
+              "end_s": 0.34,
+              "probability": 0.9136713147163391
+            },
+            {
+              "word": "starts",
+              "start_s": 0.34,
+              "end_s": 0.58,
+              "probability": 0.9895921945571899
+            },
+            {
+              "word": "with",
+              "start_s": 0.58,
+              "end_s": 0.82,
+              "probability": 0.9973662495613098
+            },
+            {
+              "word": "preparation.",
+              "start_s": 0.82,
+              "end_s": 1.32,
+              "probability": 0.9631403684616089
+            },
+            {
+              "word": "Make",
+              "start_s": 1.74,
+              "end_s": 1.86,
+              "probability": 0.9964292645454407
+            },
+            {
+              "word": "your",
+              "start_s": 1.86,
+              "end_s": 2.0,
+              "probability": 0.9950066804885864
+            },
+            {
+              "word": "next",
+              "start_s": 2.0,
+              "end_s": 2.18,
+              "probability": 0.9941206574440002
+            },
+            {
+              "word": "move",
+              "start_s": 2.18,
+              "end_s": 2.4,
+              "probability": 0.9887511134147644
+            },
+            {
+              "word": "count.",
+              "start_s": 2.4,
+              "end_s": 2.64,
+              "probability": 0.9991000890731812
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.227773585998875
+    },
+    {
+      "id": "harvey_natural_seed31",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_natural_seed31.wav",
+      "audio_sha256": "84387430b3137d460cd949b9048a87d6422e1cef007faf2c511c4182993d7b73",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "transcript": "Winning starts with preparation. Make your next move count.",
+      "segments": [
+        {
+          "text": "Winning starts with preparation. Make your next move count.",
+          "start_s": 0.0,
+          "end_s": 2.64,
+          "avg_logprob": -0.26750122706095375,
+          "no_speech_prob": 0.00569345336407423,
+          "compression_ratio": 0.9076923076923077,
+          "words": [
+            {
+              "word": "Winning",
+              "start_s": 0.0,
+              "end_s": 0.34,
+              "probability": 0.9270108342170715
+            },
+            {
+              "word": "starts",
+              "start_s": 0.34,
+              "end_s": 0.58,
+              "probability": 0.9919711351394653
+            },
+            {
+              "word": "with",
+              "start_s": 0.58,
+              "end_s": 0.82,
+              "probability": 0.9979133009910583
+            },
+            {
+              "word": "preparation.",
+              "start_s": 0.82,
+              "end_s": 1.34,
+              "probability": 0.9625973105430603
+            },
+            {
+              "word": "Make",
+              "start_s": 1.7,
+              "end_s": 1.84,
+              "probability": 0.9962990880012512
+            },
+            {
+              "word": "your",
+              "start_s": 1.84,
+              "end_s": 1.96,
+              "probability": 0.9909462928771973
+            },
+            {
+              "word": "next",
+              "start_s": 1.96,
+              "end_s": 2.14,
+              "probability": 0.9962517619132996
+            },
+            {
+              "word": "move",
+              "start_s": 2.14,
+              "end_s": 2.4,
+              "probability": 0.995553195476532
+            },
+            {
+              "word": "count.",
+              "start_s": 2.4,
+              "end_s": 2.64,
+              "probability": 0.9986296892166138
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.184821782000654
+    },
+    {
+      "id": "harvey_clean_seed31",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_clean_seed31.wav",
+      "audio_sha256": "aa31f1d12c9cde42c61c118d89cb75ff28d223dbfa70f10f60a29afc535b73b9",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "transcript": "Winning starts with preparation. Make your next move count.",
+      "segments": [
+        {
+          "text": "Winning starts with preparation.",
+          "start_s": 0.0,
+          "end_s": 1.36,
+          "avg_logprob": -0.35249984965604897,
+          "no_speech_prob": 0.0016941515496000648,
+          "compression_ratio": 0.9076923076923077,
+          "words": [
+            {
+              "word": "Winning",
+              "start_s": 0.0,
+              "end_s": 0.34,
+              "probability": 0.9374837875366211
+            },
+            {
+              "word": "starts",
+              "start_s": 0.34,
+              "end_s": 0.58,
+              "probability": 0.9917266368865967
+            },
+            {
+              "word": "with",
+              "start_s": 0.58,
+              "end_s": 0.82,
+              "probability": 0.9980803728103638
+            },
+            {
+              "word": "preparation.",
+              "start_s": 0.82,
+              "end_s": 1.36,
+              "probability": 0.890731930732727
+            }
+          ]
+        },
+        {
+          "text": "Make your next move count.",
+          "start_s": 2.04,
+          "end_s": 3.02,
+          "avg_logprob": -0.35249984965604897,
+          "no_speech_prob": 0.0016941515496000648,
+          "compression_ratio": 0.9076923076923077,
+          "words": [
+            {
+              "word": "Make",
+              "start_s": 2.04,
+              "end_s": 2.16,
+              "probability": 0.9962902069091797
+            },
+            {
+              "word": "your",
+              "start_s": 2.16,
+              "end_s": 2.32,
+              "probability": 0.9944226145744324
+            },
+            {
+              "word": "next",
+              "start_s": 2.32,
+              "end_s": 2.52,
+              "probability": 0.9955184459686279
+            },
+            {
+              "word": "move",
+              "start_s": 2.52,
+              "end_s": 2.76,
+              "probability": 0.9937313199043274
+            },
+            {
+              "word": "count.",
+              "start_s": 2.76,
+              "end_s": 3.02,
+              "probability": 0.9985688924789429
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.3677522759990097
+    },
+    {
+      "id": "asmr_raw_seed47",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_raw_seed47.wav",
+      "audio_sha256": "9014dc94a23605f56333a854cb786aed94cd268cb63abbe9f27104f38aa793f4",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "transcript": "Take a quiet moment and let yourself relax.",
+      "segments": [
+        {
+          "text": "Take a quiet moment and let yourself relax.",
+          "start_s": 0.0,
+          "end_s": 2.2,
+          "avg_logprob": -0.28791805853446323,
+          "no_speech_prob": 0.006367442663758993,
+          "compression_ratio": 0.8775510204081632,
+          "words": [
+            {
+              "word": "Take",
+              "start_s": 0.0,
+              "end_s": 0.18,
+              "probability": 0.8280038237571716
+            },
+            {
+              "word": "a",
+              "start_s": 0.18,
+              "end_s": 0.38,
+              "probability": 0.9957222938537598
+            },
+            {
+              "word": "quiet",
+              "start_s": 0.38,
+              "end_s": 0.64,
+              "probability": 0.9956284761428833
+            },
+            {
+              "word": "moment",
+              "start_s": 0.64,
+              "end_s": 0.98,
+              "probability": 0.9972586631774902
+            },
+            {
+              "word": "and",
+              "start_s": 0.98,
+              "end_s": 1.26,
+              "probability": 0.9530969858169556
+            },
+            {
+              "word": "let",
+              "start_s": 1.26,
+              "end_s": 1.42,
+              "probability": 0.9974506497383118
+            },
+            {
+              "word": "yourself",
+              "start_s": 1.42,
+              "end_s": 1.74,
+              "probability": 0.9949333071708679
+            },
+            {
+              "word": "relax.",
+              "start_s": 1.74,
+              "end_s": 2.2,
+              "probability": 0.9971756935119629
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.153216483999131
+    },
+    {
+      "id": "asmr_natural_seed47",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_natural_seed47.wav",
+      "audio_sha256": "f5f0da256595fc08ce7bc1ecf7470e057d44177f0bc96f6f88533bf84e89e20f",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "transcript": "Take a quiet moment and let yourself relax.",
+      "segments": [
+        {
+          "text": "Take a quiet moment and let yourself relax.",
+          "start_s": 0.0,
+          "end_s": 2.46,
+          "avg_logprob": -0.28664762526750565,
+          "no_speech_prob": 0.0032359163742512465,
+          "compression_ratio": 0.8775510204081632,
+          "words": [
+            {
+              "word": "Take",
+              "start_s": 0.0,
+              "end_s": 0.2,
+              "probability": 0.8683445453643799
+            },
+            {
+              "word": "a",
+              "start_s": 0.2,
+              "end_s": 0.36,
+              "probability": 0.9953343272209167
+            },
+            {
+              "word": "quiet",
+              "start_s": 0.36,
+              "end_s": 0.7,
+              "probability": 0.9972219467163086
+            },
+            {
+              "word": "moment",
+              "start_s": 0.7,
+              "end_s": 1.08,
+              "probability": 0.9953356385231018
+            },
+            {
+              "word": "and",
+              "start_s": 1.08,
+              "end_s": 1.44,
+              "probability": 0.8811452984809875
+            },
+            {
+              "word": "let",
+              "start_s": 1.44,
+              "end_s": 1.6,
+              "probability": 0.9972944855690002
+            },
+            {
+              "word": "yourself",
+              "start_s": 1.6,
+              "end_s": 1.94,
+              "probability": 0.9949595928192139
+            },
+            {
+              "word": "relax.",
+              "start_s": 1.94,
+              "end_s": 2.46,
+              "probability": 0.9966017007827759
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.3140584100001433
+    },
+    {
+      "id": "asmr_clean_seed47",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_clean_seed47.wav",
+      "audio_sha256": "380226f509f21eef61aa7afabce240052d0ac2d614aaa6103e49efa8496d1a69",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "transcript": "Take a quiet moment and let yourself relax.",
+      "segments": [
+        {
+          "text": "Take a quiet moment and let yourself relax.",
+          "start_s": 0.0,
+          "end_s": 2.4,
+          "avg_logprob": -0.2980185002088547,
+          "no_speech_prob": 0.004030752927064896,
+          "compression_ratio": 0.8775510204081632,
+          "words": [
+            {
+              "word": "Take",
+              "start_s": 0.0,
+              "end_s": 0.2,
+              "probability": 0.8773943781852722
+            },
+            {
+              "word": "a",
+              "start_s": 0.2,
+              "end_s": 0.36,
+              "probability": 0.9975384473800659
+            },
+            {
+              "word": "quiet",
+              "start_s": 0.36,
+              "end_s": 0.7,
+              "probability": 0.9972042441368103
+            },
+            {
+              "word": "moment",
+              "start_s": 0.7,
+              "end_s": 1.06,
+              "probability": 0.996825098991394
+            },
+            {
+              "word": "and",
+              "start_s": 1.06,
+              "end_s": 1.44,
+              "probability": 0.8835527300834656
+            },
+            {
+              "word": "let",
+              "start_s": 1.44,
+              "end_s": 1.6,
+              "probability": 0.9978565573692322
+            },
+            {
+              "word": "yourself",
+              "start_s": 1.6,
+              "end_s": 1.92,
+              "probability": 0.9965818524360657
+            },
+            {
+              "word": "relax.",
+              "start_s": 1.92,
+              "end_s": 2.4,
+              "probability": 0.9962265491485596
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.0,
+        "reference_word_count": 8,
+        "hypothesis_word_count": 8,
+        "substitutions": 0,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ],
+        "hypothesis_words": [
+          "take",
+          "a",
+          "quiet",
+          "moment",
+          "and",
+          "let",
+          "yourself",
+          "relax"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.1369618759999867
+    },
+    {
+      "id": "harvey_raw_seed47",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_raw_seed47.wav",
+      "audio_sha256": "7f89c102525cbf4db9d1d7b443fd2a5de452dc78e1677294f88b9a5f7ea21289",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "transcript": "Winning starts with preparation. Make her next move count.",
+      "segments": [
+        {
+          "text": "Winning starts with preparation.",
+          "start_s": 0.0,
+          "end_s": 1.4,
+          "avg_logprob": -0.3306137814241297,
+          "no_speech_prob": 0.005745089612901211,
+          "compression_ratio": 0.90625,
+          "words": [
+            {
+              "word": "Winning",
+              "start_s": 0.0,
+              "end_s": 0.28,
+              "probability": 0.9327287077903748
+            },
+            {
+              "word": "starts",
+              "start_s": 0.28,
+              "end_s": 0.52,
+              "probability": 0.9928553700447083
+            },
+            {
+              "word": "with",
+              "start_s": 0.52,
+              "end_s": 0.78,
+              "probability": 0.9983974099159241
+            },
+            {
+              "word": "preparation.",
+              "start_s": 0.78,
+              "end_s": 1.4,
+              "probability": 0.9432189464569092
+            }
+          ]
+        },
+        {
+          "text": "Make her next move count.",
+          "start_s": 1.9,
+          "end_s": 2.98,
+          "avg_logprob": -0.3306137814241297,
+          "no_speech_prob": 0.005745089612901211,
+          "compression_ratio": 0.90625,
+          "words": [
+            {
+              "word": "Make",
+              "start_s": 1.9,
+              "end_s": 2.14,
+              "probability": 0.9910667538642883
+            },
+            {
+              "word": "her",
+              "start_s": 2.14,
+              "end_s": 2.26,
+              "probability": 0.41323232650756836
+            },
+            {
+              "word": "next",
+              "start_s": 2.26,
+              "end_s": 2.46,
+              "probability": 0.9926405549049377
+            },
+            {
+              "word": "move",
+              "start_s": 2.46,
+              "end_s": 2.68,
+              "probability": 0.9980035424232483
+            },
+            {
+              "word": "count.",
+              "start_s": 2.68,
+              "end_s": 2.98,
+              "probability": 0.996039628982544
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.111111,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "her",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.111111,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "her",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.2666477200000372
+    },
+    {
+      "id": "harvey_natural_seed47",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_natural_seed47.wav",
+      "audio_sha256": "691b14911de3c4b44004d1626e716cc79b4c65e001b57f7ae0c2df9f8311bfe9",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "transcript": "Winning starts at preparation. Make your next move count.",
+      "segments": [
+        {
+          "text": "Winning starts at preparation. Make your next move count.",
+          "start_s": 0.0,
+          "end_s": 2.8,
+          "avg_logprob": -0.31196263631184895,
+          "no_speech_prob": 0.0024366804864257574,
+          "compression_ratio": 0.9047619047619048,
+          "words": [
+            {
+              "word": "Winning",
+              "start_s": 0.0,
+              "end_s": 0.3,
+              "probability": 0.9514131844043732
+            },
+            {
+              "word": "starts",
+              "start_s": 0.3,
+              "end_s": 0.54,
+              "probability": 0.97388756275177
+            },
+            {
+              "word": "at",
+              "start_s": 0.54,
+              "end_s": 0.7,
+              "probability": 0.3465886116027832
+            },
+            {
+              "word": "preparation.",
+              "start_s": 0.7,
+              "end_s": 1.18,
+              "probability": 0.7163675427436829
+            },
+            {
+              "word": "Make",
+              "start_s": 1.76,
+              "end_s": 1.88,
+              "probability": 0.9959088563919067
+            },
+            {
+              "word": "your",
+              "start_s": 1.88,
+              "end_s": 2.02,
+              "probability": 0.9907384514808655
+            },
+            {
+              "word": "next",
+              "start_s": 2.02,
+              "end_s": 2.22,
+              "probability": 0.9951100945472717
+            },
+            {
+              "word": "move",
+              "start_s": 2.22,
+              "end_s": 2.52,
+              "probability": 0.997566819190979
+            },
+            {
+              "word": "count.",
+              "start_s": 2.52,
+              "end_s": 2.8,
+              "probability": 0.9958789348602295
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.111111,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "at",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.111111,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "at",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.296353548999832
+    },
+    {
+      "id": "harvey_clean_seed47",
+      "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_clean_seed47.wav",
+      "audio_sha256": "912a847b9eb1b44cc623d69f7bf75ba762f36a3e764699a6c75c2c85a1633fc1",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "transcript": "Winning starts a preparation. Make your next move count.",
+      "segments": [
+        {
+          "text": "Winning starts a preparation.",
+          "start_s": 0.0,
+          "end_s": 1.22,
+          "avg_logprob": -0.35883163003360524,
+          "no_speech_prob": 0.0023700017482042313,
+          "compression_ratio": 0.8888888888888888,
+          "words": [
+            {
+              "word": "Winning",
+              "start_s": 0.0,
+              "end_s": 0.3,
+              "probability": 0.9552660584449768
+            },
+            {
+              "word": "starts",
+              "start_s": 0.3,
+              "end_s": 0.52,
+              "probability": 0.9725544452667236
+            },
+            {
+              "word": "a",
+              "start_s": 0.52,
+              "end_s": 0.7,
+              "probability": 0.344092458486557
+            },
+            {
+              "word": "preparation.",
+              "start_s": 0.7,
+              "end_s": 1.22,
+              "probability": 0.9715157151222229
+            }
+          ]
+        },
+        {
+          "text": "Make your next move count.",
+          "start_s": 1.72,
+          "end_s": 2.8,
+          "avg_logprob": -0.35883163003360524,
+          "no_speech_prob": 0.0023700017482042313,
+          "compression_ratio": 0.8888888888888888,
+          "words": [
+            {
+              "word": "Make",
+              "start_s": 1.72,
+              "end_s": 1.88,
+              "probability": 0.996451735496521
+            },
+            {
+              "word": "your",
+              "start_s": 1.88,
+              "end_s": 2.02,
+              "probability": 0.9933250546455383
+            },
+            {
+              "word": "next",
+              "start_s": 2.02,
+              "end_s": 2.22,
+              "probability": 0.9951364398002625
+            },
+            {
+              "word": "move",
+              "start_s": 2.22,
+              "end_s": 2.52,
+              "probability": 0.9981777667999268
+            },
+            {
+              "word": "count.",
+              "start_s": 2.52,
+              "end_s": 2.8,
+              "probability": 0.9969620108604431
+            }
+          ]
+        }
+      ],
+      "wer": {
+        "wer": 0.111111,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "a",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "wer_contraction_normalized": {
+        "wer": 0.111111,
+        "reference_word_count": 9,
+        "hypothesis_word_count": 9,
+        "substitutions": 1,
+        "deletions": 0,
+        "insertions": 0,
+        "reference_words": [
+          "winning",
+          "starts",
+          "with",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ],
+        "hypothesis_words": [
+          "winning",
+          "starts",
+          "a",
+          "preparation",
+          "make",
+          "your",
+          "next",
+          "move",
+          "count"
+        ]
+      },
+      "model_identity": {
+        "path": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small",
+        "name": "faster-whisper-small",
+        "download_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/models/faster-whisper-small/download_manifest.json",
+        "download_manifest_sha256": "30d70956fb2d01ba1d0b96ca353c0417312b1c38e23bef123b1564b61be931f2",
+        "size_class": "small"
+      },
+      "seconds": 2.3711922399998
+    }
+  ],
+  "peak_rss_mib": 669.4375
+}

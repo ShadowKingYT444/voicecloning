@@ -1,0 +1,227 @@
+{
+  "candidate_status": "experimental_unpromoted",
+  "cpu_component_check": {
+    "acceptance": "descriptive_only_no_gate",
+    "batch_size": 32,
+    "fixed_probe_seed": 20261001,
+    "fixed_probes": {
+      "initial_tail": {
+        "elements_compared": 1536,
+        "max_absolute_error": 0.11474609375,
+        "mean_absolute_error": 0.045220714062452316,
+        "root_mean_square_error": 0.052894935722808206,
+        "token_ids": [
+          50256,
+          50256
+        ]
+      },
+      "speech": {
+        "elements_compared": 23040,
+        "max_absolute_error": 0.1845703125,
+        "mean_absolute_error": 0.05175777323440545,
+        "root_mean_square_error": 0.06034817263753461,
+        "token_ids": [
+          0,
+          1,
+          2,
+          210,
+          464,
+          1516,
+          1664,
+          1892,
+          2035,
+          2083,
+          2154,
+          2192,
+          2560,
+          2950,
+          3180,
+          3190,
+          3200,
+          3682,
+          3707,
+          3931,
+          4127,
+          4499,
+          4626,
+          5698,
+          5978,
+          6131,
+          6208,
+          6560,
+          6561,
+          6562
+        ]
+      },
+      "text": {
+        "elements_compared": 23040,
+        "max_absolute_error": 0.044464111328125,
+        "mean_absolute_error": 0.01103703546234303,
+        "root_mean_square_error": 0.013199886318624498,
+        "token_ids": [
+          0,
+          1,
+          2,
+          2442,
+          5107,
+          8132,
+          8931,
+          9825,
+          12235,
+          12335,
+          12550,
+          14015,
+          15564,
+          21011,
+          22317,
+          23583,
+          24847,
+          25685,
+          30328,
+          34672,
+          37911,
+          39267,
+          41420,
+          44288,
+          46853,
+          48048,
+          49798,
+          50273,
+          50274,
+          50275
+        ]
+      }
+    },
+    "full_lookup": {
+      "speech_emb": {
+        "elements_compared": 5040384,
+        "max_absolute_error": 0.1845703125,
+        "mean_absolute_error": 0.051027399656684055,
+        "root_mean_square_error": 0.059373997564010766,
+        "token_count": 6563
+      },
+      "text_emb": {
+        "elements_compared": 38611968,
+        "max_absolute_error": 0.055206298828125,
+        "mean_absolute_error": 0.011067196417736663,
+        "root_mean_square_error": 0.013251624857053041,
+        "token_count": 50276
+      }
+    },
+    "method": "sequential_streamed_full_lookup",
+    "provider": "CPUExecutionProvider",
+    "quality_or_promotion_gate": false,
+    "status": "completed"
+  },
+  "created_utc": "2026-10-02T04:50:13.427886Z",
+  "limitations": [
+    "This artifact is an experimental embedding-only Q4 candidate.",
+    "The CPU lookup report is descriptive and does not create a numerical acceptance gate.",
+    "No browser inference, WebGPU provider, generated tokens, audio, quality, RSS, or latency is verified by this tool.",
+    "Matched browser token and audio comparisons, host GPU behavior, memory, latency, and listening remain required before promotion."
+  ],
+  "production_gate": false,
+  "quantization": {
+    "algorithm": "DEFAULT",
+    "api": "onnxruntime.quantization.matmul_nbits_quantizer.MatMulNBitsQuantizer",
+    "bits": 4,
+    "block_size": 128,
+    "is_symmetric": false,
+    "onnx_version": "1.22.0",
+    "op_types_to_quantize": [
+      "Gather"
+    ],
+    "ort_version": "1.29.0",
+    "quant_axes": {
+      "Gather": 1
+    },
+    "quant_format": "QOperator",
+    "quantized_dtype": "UINT4",
+    "source_gather_axis": 0,
+    "target_operator": "com.microsoft::GatherBlockQuantized"
+  },
+  "schema": "browser_tts.embedding-q4-candidate/v1",
+  "source": {
+    "files": {
+      "onnx/embed_tokens_fp16.onnx": {
+        "bytes": 1520,
+        "path": "onnx/embed_tokens_fp16.onnx",
+        "sha256": "019d257243774091d78c2ad91c2c0f61e4e442740cb7b3b00b5a89109417b18d"
+      },
+      "onnx/embed_tokens_fp16.onnx_data": {
+        "bytes": 87304704,
+        "path": "onnx/embed_tokens_fp16.onnx_data",
+        "sha256": "bcd7b35ae4f206932e2491cb60b42ebb80f6d8facfdb53ba7d7449ad00a3237b"
+      }
+    },
+    "graph": {
+      "embedding_dim": 768,
+      "gather_tables": [
+        {
+          "dtype": "float16",
+          "external_length": 10080768,
+          "external_offset": 77223936,
+          "gather_axis": 0,
+          "initializer": "speech_emb.weight",
+          "node_name": "node_Gather_56",
+          "output_name": "embedding_1",
+          "shape": [
+            6563,
+            768
+          ]
+        },
+        {
+          "dtype": "float16",
+          "external_length": 77223936,
+          "external_offset": 0,
+          "gather_axis": 0,
+          "initializer": "text_emb.weight",
+          "node_name": "node_Gather_55",
+          "output_name": "embedding",
+          "shape": [
+            50276,
+            768
+          ]
+        }
+      ],
+      "hybrid_tail_contract": {
+        "sentinel_token_id": 50256,
+        "speech_replacement_token_id": 6561,
+        "speech_slice_start": -2,
+        "text_slice_end_exclusive": -2
+      },
+      "input_name": "input_ids",
+      "input_type": "int64",
+      "opsets": {
+        "ai.onnx": 18
+      },
+      "output_name": "inputs_embeds",
+      "output_type": "float"
+    },
+    "repo_id": "owensong/chatterbox-nano-ONNX",
+    "revision": "4a66d7dab72a9e98f24b515d49a1d7a81632df2e",
+    "sha256sums": {
+      "path": "SHA256SUMS",
+      "sha256": "ecd0b0ee1fde0f9342564fda72fe1ebb4907baa6c9d013c09052bcad5220dcf4"
+    }
+  },
+  "source_integrity_after_export": {
+    "checked_files": [
+      "onnx/embed_tokens_fp16.onnx",
+      "onnx/embed_tokens_fp16.onnx_data"
+    ],
+    "unchanged": true
+  },
+  "target": {
+    "external_data": {
+      "bytes": 22678761,
+      "path": "embed_tokens_gather_q4.onnx.data",
+      "sha256": "1c8b2d3bb3a5b09afaefd90d001e096c379ab0d10cd12e7a023fbee52ae90c7e"
+    },
+    "graph": {
+      "bytes": 2324,
+      "path": "embed_tokens_gather_q4.onnx",
+      "sha256": "0b913b402e05b180f19015208c4389aa79c021cb1575ee5d5a080d1580ea875b"
+    }
+  }
+}

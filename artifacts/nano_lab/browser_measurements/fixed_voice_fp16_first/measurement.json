@@ -1,0 +1,4006 @@
+{
+  "app": {
+    "embeddingSelection": "pinned default embed_tokens_fp16",
+    "initialStatus": "idle",
+    "loadedTextCharacters": 17929,
+    "readyState": "complete",
+    "textLoaded": true,
+    "voiceStudyApiPresent": true,
+    "webgpuAdapter": {
+      "available": true,
+      "features": [
+        "depth32float-stencil8",
+        "rg11b10ufloat-renderable",
+        "bgra8unorm-storage",
+        "texture-compression-bc",
+        "chromium-experimental-sampling-resource-table",
+        "core-features-and-limits",
+        "chromium-experimental-timestamp-query-inside-passes",
+        "float32-filterable",
+        "indirect-first-instance",
+        "texture-compression-astc-sliced-3d",
+        "float32-blendable",
+        "subgroup-size-control",
+        "texture-compression-unaligned",
+        "texture-compression-astc",
+        "texture-compression-etc2",
+        "depth-clip-control",
+        "texture-compression-bc-sliced-3d",
+        "clip-distances",
+        "timestamp-query",
+        "texture-component-swizzle",
+        "subgroups"
+      ],
+      "info": {
+        "architecture": "swiftshader",
+        "description": null,
+        "device": null,
+        "vendor": "google"
+      },
+      "limits": {
+        "maxBufferSize": 1073741824,
+        "maxStorageBufferBindingSize": 1073741824
+      }
+    }
+  },
+  "artifacts": {
+    "sampleLog": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/fixed_voice_fp16_first/measurement-samples.jsonl"
+  },
+  "browser": {
+    "cleanTemporaryProfile": true,
+    "devtoolsPath": "/devtools/browser/9cb3c790-c41a-4693-9d9b-2199b44c5bea",
+    "devtoolsPort": 44313,
+    "executable": "/opt/google/chrome/google-chrome",
+    "flags": [
+      "--user-data-dir=/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/fixed_voice_fp16_first/voice-study-chrome-n_1c91mk",
+      "--remote-debugging-port=0",
+      "--remote-debugging-address=127.0.0.1",
+      "--no-first-run",
+      "--no-default-browser-check",
+      "--disable-extensions",
+      "--disable-sync",
+      "--disable-background-networking",
+      "--disable-component-update",
+      "--enable-unsafe-webgpu",
+      "--headless=new"
+    ],
+    "headless": true,
+    "headlessImplementation": "Chrome headless=new",
+    "implementation": "Chrome",
+    "pid": 238753,
+    "processLayout": "normal Chrome process layout",
+    "processTreeScope": "Chrome root process and current /proc descendants; never system-wide Chrome processes.",
+    "profilePath": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/fixed_voice_fp16_first/voice-study-chrome-n_1c91mk",
+    "profileRemovedAfterRun": true,
+    "reusedStartupPage": true,
+    "version": {
+      "Browser": "Chrome/152.0.7977.64",
+      "Protocol-Version": "1.3",
+      "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "V8-Version": "15.2.124.18",
+      "WebKit-Version": "537.36 (@506c834ecceaa943c5f41e6cfe7f68acb5c45346)",
+      "webSocketDebuggerUrl": "ws://127.0.0.1:44313/devtools/browser/9cb3c790-c41a-4693-9d9b-2199b44c5bea"
+    }
+  },
+  "cleanup": {
+    "browserExitCode": 0,
+    "profileRemoved": true,
+    "terminatedOwnedPids": []
+  },
+  "configuration": {
+    "embeddingManifestUrl": null,
+    "idleSeconds": 15,
+    "inferenceTimeoutSeconds": 300,
+    "loadTimeoutSeconds": 900,
+    "nvidiaSmiEnabled": true,
+    "outputDir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/fixed_voice_fp16_first",
+    "sampleSeconds": 1.0,
+    "seed": 1337,
+    "startupTimeoutSeconds": 20,
+    "text": "Take a slow breath in, and let your shoulders relax.",
+    "timeoutSeconds": 1800,
+    "uiOnly": false,
+    "url": "http://127.0.0.1:4187/"
+  },
+  "elapsedSeconds": 79.741,
+  "endedAtUtc": "2026-10-02T05:02:31.106Z",
+  "error": {
+    "atUtc": "2026-10-02T05:02:30.618Z",
+    "message": "voiceStudy.prepareVoice failed: Failed to fetch",
+    "type": "RunnerError"
+  },
+  "guard": {
+    "accepted": true,
+    "bounded_job_unit_detected": true,
+    "cgroup": [
+      "0::/user.slice/user-1000.slice/user@1000.service/app.slice/nano-lab-model.service"
+    ],
+    "single_process_guard_detected": false
+  },
+  "limitations": [
+    "Host RSS and PSS sum /proc/smaps_rollup for only Chrome's owned profile process tree.",
+    "The WebGPU counters record requested JavaScript GPUBuffer descriptor sizes. They do not measure physical VRAM residency or every backend allocation.",
+    "Host PSS and GPU metrics are separate measures. Do not add them as an exact resident-memory total.",
+    "This runner does not verify spoken words or perceptual voice quality."
+  ],
+  "memoryBaseline": {
+    "cleanBrowserPssMiB": 398.174,
+    "cleanBrowserRssMiB": 1141.117,
+    "definition": "Mean measured Chrome process-tree PSS/RSS during a clean about:blank profile before app navigation."
+  },
+  "mode": "browser-tts-measurement",
+  "networkRequests": [
+    {
+      "method": "GET",
+      "timestamp": 19259.793687,
+      "type": "Fetch",
+      "url": "http://127.0.0.1:4187/federalist-no-10.txt",
+      "wallTime": 1790917277.917515
+    },
+    {
+      "method": "GET",
+      "timestamp": 19262.075289,
+      "type": "Fetch",
+      "url": "http://127.0.0.1:4187/voice/asmr-state.json",
+      "wallTime": 1790917280.200184
+    },
+    {
+      "method": "GET",
+      "timestamp": 19262.094236,
+      "type": "Fetch",
+      "url": "http://127.0.0.1:4187/voice/asmr-state.bin",
+      "wallTime": 1790917280.217944
+    },
+    {
+      "method": "GET",
+      "timestamp": 19262.188874,
+      "type": "Fetch",
+      "url": "https://huggingface.co/owensong/chatterbox-nano-ONNX/resolve/4a66d7dab72a9e98f24b515d49a1d7a81632df2e/tokenizer.json",
+      "wallTime": 1790917280.312621
+    },
+    {
+      "method": "GET",
+      "timestamp": 19262.189584,
+      "type": "Fetch",
+      "url": "https://huggingface.co/owensong/chatterbox-nano-ONNX/resolve/4a66d7dab72a9e98f24b515d49a1d7a81632df2e/tokenizer_config.json",
+      "wallTime": 1790917280.313278
+    },
+    {
+      "method": "GET",
+      "timestamp": 19262.463918,
+      "type": "Fetch",
+      "url": "https://huggingface.co/api/resolve-cache/models/owensong/chatterbox-nano-ONNX/4a66d7dab72a9e98f24b515d49a1d7a81632df2e/tokenizer.json?%2Fowensong%2Fchatterbox-nano-ONNX%2Fresolve%2F4a66d7dab72a9e98f24b515d49a1d7a81632df2e%2Ftokenizer.json=&etag=%2260a713d7e79174874affd0c1d07e28feeb34da92%22",
+      "wallTime": 1790917280.587613
+    },
+    {
+      "method": "GET",
+      "timestamp": 19262.46657,
+      "type": "Fetch",
+      "url": "https://huggingface.co/api/resolve-cache/models/owensong/chatterbox-nano-ONNX/4a66d7dab72a9e98f24b515d49a1d7a81632df2e/tokenizer_config.json?%2Fowensong%2Fchatterbox-nano-ONNX%2Fresolve%2F4a66d7dab72a9e98f24b515d49a1d7a81632df2e%2Ftokenizer_config.json=&etag=%223df2c01d2d7d3a1c14ef95848459373ed4c31329%22",
+      "wallTime": 1790917280.590253
+    },
+    {
+      "method": "GET",
+      "timestamp": 19265.422482,
+      "type": "Fetch",
+      "url": "https://huggingface.co/owensong/chatterbox-nano-ONNX/resolve/4a66d7dab72a9e98f24b515d49a1d7a81632df2e/onnx/embed_tokens_fp16.onnx",
+      "wallTime": 1790917283.546218
+    },
+    {
+      "method": "GET",
+      "timestamp": 19265.423271,
+      "type": "Fetch",
+      "url": "https://huggingface.co/owensong/chatterbox-nano-ONNX/resolve/4a66d7dab72a9e98f24b515d49a1d7a81632df2e/onnx/embed_tokens_fp16.onnx_data",
+      "wallTime": 1790917283.546965
+    },
+    {
+      "method": "GET",
+      "timestamp": 19307.611307,
+      "type": "Fetch",
+      "url": "https://huggingface.co/owensong/chatterbox-nano-ONNX/resolve/4a66d7dab72a9e98f24b515d49a1d7a81632df2e/onnx/language_model_q4f16.onnx",
+      "wallTime": 1790917325.735024
+    },
+    {
+      "method": "GET",
+      "timestamp": 19307.611949,
+      "type": "Fetch",
+      "url": "https://huggingface.co/owensong/chatterbox-nano-ONNX/resolve/4a66d7dab72a9e98f24b515d49a1d7a81632df2e/onnx/language_model_q4f16.onnx_data",
+      "wallTime": 1790917325.735669
+    },
+    {
+      "method": "GET",
+      "timestamp": 19327.862401,
+      "type": "Fetch",
+      "url": "https://huggingface.co/owensong/chatterbox-nano-ONNX/resolve/4a66d7dab72a9e98f24b515d49a1d7a81632df2e/onnx/conditional_decoder_q4.onnx",
+      "wallTime": 1790917345.986152
+    },
+    {
+      "method": "GET",
+      "timestamp": 19327.863257,
+      "type": "Fetch",
+      "url": "https://huggingface.co/owensong/chatterbox-nano-ONNX/resolve/4a66d7dab72a9e98f24b515d49a1d7a81632df2e/onnx/conditional_decoder_q4.onnx_data",
+      "wallTime": 1790917345.986953
+    }
+  ],
+  "reportPath": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/fixed_voice_fp16_first/measurement.json",
+  "schemaVersion": 1,
+  "server": {
+    "serverStartedByRunner": false,
+    "status": 200,
+    "url": "http://127.0.0.1:4187/"
+  },
+  "stages": {
+    "clean_baseline": {
+      "createCallsAtEnd": 0,
+      "createdRequestedBytesAtEnd": 0,
+      "destroyCallsAtEnd": 0,
+      "destroyedRequestedBytesAtEnd": 0,
+      "durationSeconds": 3.74,
+      "endedAtUtc": "2026-10-02T05:01:17.260Z",
+      "endedElapsedSeconds": 5.895,
+      "largestWorkerLifetimePeakRequestedMiB": 0.0,
+      "sampleIntervalSeconds": {
+        "configured": 1.0,
+        "maxObserved": 1.244,
+        "meanObserved": 0.837
+      },
+      "sampledPeakCurrentNotDestroyedRequestedMiB": 0.0,
+      "sampledPeakIncrementalPssMiB": 77.412,
+      "sampledPeakProcessCount": 14,
+      "sampledPeakPssMiB": 416.878,
+      "sampledPeakRssMiB": 1169.176,
+      "samples": [
+        {
+          "elapsedSeconds": 2.545,
+          "hostProcessTree": {
+            "incrementalPssMiB": null,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238926,
+              238937
+            ],
+            "processCount": 14,
+            "pssMiB": 339.466,
+            "rootPid": 238753,
+            "rssMiB": 1046.188,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:13.910Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 3.789,
+          "hostProcessTree": {
+            "incrementalPssMiB": 63.361,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238926,
+              238937
+            ],
+            "processCount": 14,
+            "pssMiB": 402.827,
+            "rootPid": 238753,
+            "rssMiB": 1154.574,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:15.154Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 4.988,
+          "hostProcessTree": {
+            "incrementalPssMiB": 75.408,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238926,
+              238937
+            ],
+            "processCount": 14,
+            "pssMiB": 414.874,
+            "rootPid": 238753,
+            "rssMiB": 1166.719,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:16.353Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 5.8,
+          "hostProcessTree": {
+            "incrementalPssMiB": 77.358,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238926,
+              238937
+            ],
+            "processCount": 14,
+            "pssMiB": 416.824,
+            "rootPid": 238753,
+            "rssMiB": 1168.926,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "reason": "sample interval",
+            "sampled": false
+          },
+          "timestampUtc": "2026-10-02T05:01:17.165Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 5.894,
+          "hostProcessTree": {
+            "incrementalPssMiB": 77.412,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238926,
+              238937
+            ],
+            "processCount": 14,
+            "pssMiB": 416.878,
+            "rootPid": 238753,
+            "rssMiB": 1169.176,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "reason": "sample interval",
+            "sampled": false
+          },
+          "timestampUtc": "2026-10-02T05:01:17.259Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        }
+      ],
+      "startedAtUtc": "2026-10-02T05:01:13.520Z",
+      "startedElapsedSeconds": 2.155,
+      "status": "complete",
+      "workerLifetimePeakIncreaseDuringStageMiB": 0.0
+    },
+    "load": {
+      "createCallsAtEnd": 0,
+      "createdRequestedBytesAtEnd": 0,
+      "destroyCallsAtEnd": 0,
+      "destroyedRequestedBytesAtEnd": 0,
+      "durationSeconds": 71.882,
+      "endedAtUtc": "2026-10-02T05:02:30.728Z",
+      "endedElapsedSeconds": 79.363,
+      "error": "voiceStudy.prepareVoice failed: Failed to fetch",
+      "largestWorkerLifetimePeakRequestedMiB": 0.0,
+      "sampleIntervalSeconds": {
+        "configured": 1.0,
+        "maxObserved": 4.61,
+        "meanObserved": 1.355
+      },
+      "sampledPeakCurrentNotDestroyedRequestedMiB": 0.0,
+      "sampledPeakIncrementalPssMiB": 605.057,
+      "sampledPeakProcessCount": 14,
+      "sampledPeakPssMiB": 1003.231,
+      "sampledPeakRssMiB": 1837.613,
+      "samples": [
+        {
+          "elapsedSeconds": 7.571,
+          "hostProcessTree": {
+            "incrementalPssMiB": 74.152,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238926,
+              238937
+            ],
+            "processCount": 14,
+            "pssMiB": 472.326,
+            "rootPid": 238753,
+            "rssMiB": 1263.789,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "reason": "sample interval",
+            "sampled": false
+          },
+          "timestampUtc": "2026-10-02T05:01:18.936Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 8.676,
+          "hostProcessTree": {
+            "incrementalPssMiB": 76.723,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238926,
+              238937
+            ],
+            "processCount": 14,
+            "pssMiB": 474.897,
+            "rootPid": 238753,
+            "rssMiB": 1268.051,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:20.041Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 9.887,
+          "hostProcessTree": {
+            "incrementalPssMiB": 92.081,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238926,
+              238937
+            ],
+            "processCount": 14,
+            "pssMiB": 490.255,
+            "rootPid": 238753,
+            "rssMiB": 1288.047,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:21.252Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 11.089,
+          "hostProcessTree": {
+            "incrementalPssMiB": 95.911,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238926,
+              238937
+            ],
+            "processCount": 14,
+            "pssMiB": 494.085,
+            "rootPid": 238753,
+            "rssMiB": 1292.707,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:22.454Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 12.263,
+          "hostProcessTree": {
+            "incrementalPssMiB": 125.434,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238926,
+              238937
+            ],
+            "processCount": 14,
+            "pssMiB": 523.608,
+            "rootPid": 238753,
+            "rssMiB": 1321.059,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:23.628Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 13.42,
+          "hostProcessTree": {
+            "incrementalPssMiB": 125.669,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238926,
+              238937
+            ],
+            "processCount": 14,
+            "pssMiB": 523.843,
+            "rootPid": 238753,
+            "rssMiB": 1321.328,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:24.785Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 14.582,
+          "hostProcessTree": {
+            "incrementalPssMiB": 123.443,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238926,
+              238937
+            ],
+            "processCount": 14,
+            "pssMiB": 521.617,
+            "rootPid": 238753,
+            "rssMiB": 1318.176,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:25.947Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 15.779,
+          "hostProcessTree": {
+            "incrementalPssMiB": 122.551,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238926,
+              238937
+            ],
+            "processCount": 14,
+            "pssMiB": 520.725,
+            "rootPid": 238753,
+            "rssMiB": 1317.965,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:27.144Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 16.974,
+          "hostProcessTree": {
+            "incrementalPssMiB": 124.017,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238926,
+              238937
+            ],
+            "processCount": 14,
+            "pssMiB": 522.191,
+            "rootPid": 238753,
+            "rssMiB": 1320.289,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:28.339Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 18.162,
+          "hostProcessTree": {
+            "incrementalPssMiB": 116.718,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238937
+            ],
+            "processCount": 13,
+            "pssMiB": 514.892,
+            "rootPid": 238753,
+            "rssMiB": 1226.984,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:29.528Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 19.388,
+          "hostProcessTree": {
+            "incrementalPssMiB": 117.686,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238937
+            ],
+            "processCount": 13,
+            "pssMiB": 515.86,
+            "rootPid": 238753,
+            "rssMiB": 1228.383,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:30.753Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 20.611,
+          "hostProcessTree": {
+            "incrementalPssMiB": 118.106,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238937
+            ],
+            "processCount": 13,
+            "pssMiB": 516.28,
+            "rootPid": 238753,
+            "rssMiB": 1228.578,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:31.976Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 21.829,
+          "hostProcessTree": {
+            "incrementalPssMiB": 118.968,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238937
+            ],
+            "processCount": 13,
+            "pssMiB": 517.142,
+            "rootPid": 238753,
+            "rssMiB": 1229.789,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:33.194Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 23.06,
+          "hostProcessTree": {
+            "incrementalPssMiB": 120.507,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238937
+            ],
+            "processCount": 13,
+            "pssMiB": 518.681,
+            "rootPid": 238753,
+            "rssMiB": 1231.836,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:34.426Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 24.256,
+          "hostProcessTree": {
+            "incrementalPssMiB": 121.239,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238937
+            ],
+            "processCount": 13,
+            "pssMiB": 519.413,
+            "rootPid": 238753,
+            "rssMiB": 1232.844,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:35.621Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 25.449,
+          "hostProcessTree": {
+            "incrementalPssMiB": 121.512,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238937
+            ],
+            "processCount": 13,
+            "pssMiB": 519.686,
+            "rootPid": 238753,
+            "rssMiB": 1233.25,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:36.814Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 26.684,
+          "hostProcessTree": {
+            "incrementalPssMiB": 121.69,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238937
+            ],
+            "processCount": 13,
+            "pssMiB": 519.864,
+            "rootPid": 238753,
+            "rssMiB": 1233.598,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:38.049Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 27.906,
+          "hostProcessTree": {
+            "incrementalPssMiB": 122.085,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238937
+            ],
+            "processCount": 13,
+            "pssMiB": 520.259,
+            "rootPid": 238753,
+            "rssMiB": 1234.277,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:39.271Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 29.07,
+          "hostProcessTree": {
+            "incrementalPssMiB": 129.143,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238937
+            ],
+            "processCount": 13,
+            "pssMiB": 527.317,
+            "rootPid": 238753,
+            "rssMiB": 1241.484,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:40.435Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 30.263,
+          "hostProcessTree": {
+            "incrementalPssMiB": 131.554,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238937
+            ],
+            "processCount": 13,
+            "pssMiB": 529.728,
+            "rootPid": 238753,
+            "rssMiB": 1243.469,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:41.628Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 31.452,
+          "hostProcessTree": {
+            "incrementalPssMiB": 131.503,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238937
+            ],
+            "processCount": 13,
+            "pssMiB": 529.677,
+            "rootPid": 238753,
+            "rssMiB": 1243.465,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:42.817Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 32.618,
+          "hostProcessTree": {
+            "incrementalPssMiB": 121.58,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924
+            ],
+            "processCount": 12,
+            "pssMiB": 519.754,
+            "rootPid": 238753,
+            "rssMiB": 1153.844,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:43.983Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 33.841,
+          "hostProcessTree": {
+            "incrementalPssMiB": 113.475,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924
+            ],
+            "processCount": 12,
+            "pssMiB": 511.649,
+            "rootPid": 238753,
+            "rssMiB": 1147.289,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:45.206Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 35.012,
+          "hostProcessTree": {
+            "incrementalPssMiB": 112.843,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924
+            ],
+            "processCount": 12,
+            "pssMiB": 511.017,
+            "rootPid": 238753,
+            "rssMiB": 1144.781,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:46.377Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 36.178,
+          "hostProcessTree": {
+            "incrementalPssMiB": 112.926,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924
+            ],
+            "processCount": 12,
+            "pssMiB": 511.1,
+            "rootPid": 238753,
+            "rssMiB": 1145.395,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:47.543Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 37.375,
+          "hostProcessTree": {
+            "incrementalPssMiB": 110.965,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924
+            ],
+            "processCount": 12,
+            "pssMiB": 509.139,
+            "rootPid": 238753,
+            "rssMiB": 1145.562,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:48.740Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 38.604,
+          "hostProcessTree": {
+            "incrementalPssMiB": 111.137,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924
+            ],
+            "processCount": 12,
+            "pssMiB": 509.311,
+            "rootPid": 238753,
+            "rssMiB": 1145.734,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:49.969Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 39.799,
+          "hostProcessTree": {
+            "incrementalPssMiB": 95.734,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924
+            ],
+            "processCount": 12,
+            "pssMiB": 493.908,
+            "rootPid": 238753,
+            "rssMiB": 1130.395,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:51.164Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 40.998,
+          "hostProcessTree": {
+            "incrementalPssMiB": 95.801,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924
+            ],
+            "processCount": 12,
+            "pssMiB": 493.975,
+            "rootPid": 238753,
+            "rssMiB": 1130.461,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:52.363Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 42.223,
+          "hostProcessTree": {
+            "incrementalPssMiB": 93.789,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924
+            ],
+            "processCount": 12,
+            "pssMiB": 491.963,
+            "rootPid": 238753,
+            "rssMiB": 1128.449,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:53.588Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 43.479,
+          "hostProcessTree": {
+            "incrementalPssMiB": 93.746,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924
+            ],
+            "processCount": 12,
+            "pssMiB": 491.92,
+            "rootPid": 238753,
+            "rssMiB": 1128.406,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:54.844Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 44.784,
+          "hostProcessTree": {
+            "incrementalPssMiB": 93.785,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924
+            ],
+            "processCount": 12,
+            "pssMiB": 491.959,
+            "rootPid": 238753,
+            "rssMiB": 1128.445,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:56.149Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 45.953,
+          "hostProcessTree": {
+            "incrementalPssMiB": 93.285,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924
+            ],
+            "processCount": 12,
+            "pssMiB": 491.459,
+            "rootPid": 238753,
+            "rssMiB": 1128.008,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:57.318Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 47.144,
+          "hostProcessTree": {
+            "incrementalPssMiB": 93.254,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924
+            ],
+            "processCount": 12,
+            "pssMiB": 491.428,
+            "rootPid": 238753,
+            "rssMiB": 1127.789,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:58.509Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 51.352,
+          "hostProcessTree": {
+            "incrementalPssMiB": 103.428,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924
+            ],
+            "processCount": 12,
+            "pssMiB": 501.602,
+            "rootPid": 238753,
+            "rssMiB": 1138.004,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:02.717Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 52.951,
+          "hostProcessTree": {
+            "incrementalPssMiB": 183.527,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924
+            ],
+            "processCount": 12,
+            "pssMiB": 581.701,
+            "rootPid": 238753,
+            "rssMiB": 1216.363,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:04.316Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 54.255,
+          "hostProcessTree": {
+            "incrementalPssMiB": 274.188,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924
+            ],
+            "processCount": 12,
+            "pssMiB": 672.362,
+            "rootPid": 238753,
+            "rssMiB": 1308.613,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:05.620Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 55.483,
+          "hostProcessTree": {
+            "incrementalPssMiB": 478.117,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              243022
+            ],
+            "processCount": 13,
+            "pssMiB": 876.291,
+            "rootPid": 238753,
+            "rssMiB": 1640.242,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:06.848Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 56.708,
+          "hostProcessTree": {
+            "incrementalPssMiB": 569.428,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              243160,
+              243166
+            ],
+            "processCount": 14,
+            "pssMiB": 967.602,
+            "rootPid": 238753,
+            "rssMiB": 1801.559,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:08.073Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 57.97,
+          "hostProcessTree": {
+            "incrementalPssMiB": 573.815,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              243160,
+              243166
+            ],
+            "processCount": 14,
+            "pssMiB": 971.989,
+            "rootPid": 238753,
+            "rssMiB": 1806.629,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:09.335Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 59.201,
+          "hostProcessTree": {
+            "incrementalPssMiB": 573.862,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              243160,
+              243166
+            ],
+            "processCount": 14,
+            "pssMiB": 972.036,
+            "rootPid": 238753,
+            "rssMiB": 1806.676,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:10.566Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 60.442,
+          "hostProcessTree": {
+            "incrementalPssMiB": 573.409,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              243160,
+              243166
+            ],
+            "processCount": 14,
+            "pssMiB": 971.583,
+            "rootPid": 238753,
+            "rssMiB": 1806.223,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:11.807Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 61.667,
+          "hostProcessTree": {
+            "incrementalPssMiB": 570.597,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              243160,
+              243166
+            ],
+            "processCount": 14,
+            "pssMiB": 968.771,
+            "rootPid": 238753,
+            "rssMiB": 1803.555,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:13.032Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 62.886,
+          "hostProcessTree": {
+            "incrementalPssMiB": 568.598,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              243160,
+              243166
+            ],
+            "processCount": 14,
+            "pssMiB": 966.772,
+            "rootPid": 238753,
+            "rssMiB": 1801.582,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:14.251Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 64.097,
+          "hostProcessTree": {
+            "incrementalPssMiB": 568.704,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              243160,
+              243166
+            ],
+            "processCount": 14,
+            "pssMiB": 966.878,
+            "rootPid": 238753,
+            "rssMiB": 1801.688,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:15.462Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 65.355,
+          "hostProcessTree": {
+            "incrementalPssMiB": 483.004,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              243160,
+              243166
+            ],
+            "processCount": 14,
+            "pssMiB": 881.178,
+            "rootPid": 238753,
+            "rssMiB": 1715.984,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:16.720Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 68.236,
+          "hostProcessTree": {
+            "incrementalPssMiB": 498.045,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              243160,
+              243166
+            ],
+            "processCount": 14,
+            "pssMiB": 896.219,
+            "rootPid": 238753,
+            "rssMiB": 1731.09,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:19.601Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 72.846,
+          "hostProcessTree": {
+            "incrementalPssMiB": 525.746,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              243160,
+              243166
+            ],
+            "processCount": 14,
+            "pssMiB": 923.92,
+            "rootPid": 238753,
+            "rssMiB": 1756.516,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:24.211Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 74.146,
+          "hostProcessTree": {
+            "incrementalPssMiB": 524.866,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              243160,
+              243166
+            ],
+            "processCount": 14,
+            "pssMiB": 923.04,
+            "rootPid": 238753,
+            "rssMiB": 1756.023,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:25.511Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 75.448,
+          "hostProcessTree": {
+            "incrementalPssMiB": 605.057,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              243160,
+              243166
+            ],
+            "processCount": 14,
+            "pssMiB": 1003.231,
+            "rootPid": 238753,
+            "rssMiB": 1837.613,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:26.813Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 76.736,
+          "hostProcessTree": {
+            "incrementalPssMiB": 564.985,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              243160,
+              243166
+            ],
+            "processCount": 14,
+            "pssMiB": 963.159,
+            "rootPid": 238753,
+            "rssMiB": 1796.445,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:28.101Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 77.962,
+          "hostProcessTree": {
+            "incrementalPssMiB": 569.725,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              243160,
+              243166
+            ],
+            "processCount": 14,
+            "pssMiB": 967.899,
+            "rootPid": 238753,
+            "rssMiB": 1803.074,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:29.327Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 79.185,
+          "hostProcessTree": {
+            "incrementalPssMiB": 179.283,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              243160,
+              243166
+            ],
+            "processCount": 14,
+            "pssMiB": 577.457,
+            "rootPid": 238753,
+            "rssMiB": 1330.281,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:02:30.550Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 2,
+            "workers": [
+              {
+                "installed": false,
+                "readError": "DevTools Runtime.evaluate failed: {'code': -32001, 'message': 'Session with given id not found.'}",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              },
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "detached": true,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        },
+        {
+          "elapsedSeconds": 79.362,
+          "hostProcessTree": {
+            "incrementalPssMiB": 179.282,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              243160,
+              243166
+            ],
+            "processCount": 14,
+            "pssMiB": 577.456,
+            "rootPid": 238753,
+            "rssMiB": 1330.281,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "reason": "sample interval",
+            "sampled": false
+          },
+          "timestampUtc": "2026-10-02T05:02:30.728Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 1,
+            "workers": [
+              {
+                "createCalls": 0,
+                "createdRequestedBytes": 0,
+                "destroyCalls": 0,
+                "destroyedRequestedBytes": 0,
+                "detached": true,
+                "installed": false,
+                "notDestroyedRequestedBytes": 0,
+                "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+                "peakNotDestroyedRequestedBytes": 0,
+                "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker.",
+                "targetId": "265C43135AB64046414DD1E8C1C7C130",
+                "type": "worker"
+              }
+            ]
+          }
+        }
+      ],
+      "startedAtUtc": "2026-10-02T05:01:18.846Z",
+      "startedElapsedSeconds": 7.481,
+      "status": "failed",
+      "workerLifetimePeakIncreaseDuringStageMiB": 0.0
+    },
+    "page": {
+      "createCallsAtEnd": 0,
+      "createdRequestedBytesAtEnd": 0,
+      "destroyCallsAtEnd": 0,
+      "destroyedRequestedBytesAtEnd": 0,
+      "durationSeconds": 1.573,
+      "endedAtUtc": "2026-10-02T05:01:18.836Z",
+      "endedElapsedSeconds": 7.47,
+      "largestWorkerLifetimePeakRequestedMiB": 0.0,
+      "sampleIntervalSeconds": {
+        "configured": 1.0,
+        "maxObserved": 1.317,
+        "meanObserved": 0.739
+      },
+      "sampledPeakCurrentNotDestroyedRequestedMiB": 0.0,
+      "sampledPeakIncrementalPssMiB": 73.968,
+      "sampledPeakProcessCount": 14,
+      "sampledPeakPssMiB": 472.142,
+      "sampledPeakRssMiB": 1263.391,
+      "samples": [
+        {
+          "elapsedSeconds": 5.991,
+          "hostProcessTree": {
+            "incrementalPssMiB": 18.746,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238926,
+              238937
+            ],
+            "processCount": 14,
+            "pssMiB": 416.92,
+            "rootPid": 238753,
+            "rssMiB": 1169.246,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:17.357Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 7.308,
+          "hostProcessTree": {
+            "incrementalPssMiB": 73.968,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238926,
+              238937
+            ],
+            "processCount": 14,
+            "pssMiB": 472.142,
+            "rootPid": 238753,
+            "rssMiB": 1263.391,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "available": true,
+            "coverage": "nvidia-smi compute-app query only; graphics/Vulkan allocations may not appear.",
+            "ownedComputeProcessRows": [],
+            "querySucceeded": true
+          },
+          "timestampUtc": "2026-10-02T05:01:18.673Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 7.47,
+          "hostProcessTree": {
+            "incrementalPssMiB": 73.964,
+            "pids": [
+              238753,
+              238763,
+              238764,
+              238798,
+              238800,
+              238811,
+              238843,
+              238845,
+              238866,
+              238881,
+              238904,
+              238924,
+              238926,
+              238937
+            ],
+            "processCount": 14,
+            "pssMiB": 472.138,
+            "rootPid": 238753,
+            "rssMiB": 1263.387,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "nvidiaSmi": {
+            "reason": "sample interval",
+            "sampled": false
+          },
+          "timestampUtc": "2026-10-02T05:01:18.835Z",
+          "webgpuRequestedBuffers": {
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerCount": 0,
+            "workers": []
+          }
+        }
+      ],
+      "startedAtUtc": "2026-10-02T05:01:17.262Z",
+      "startedElapsedSeconds": 5.897,
+      "status": "complete",
+      "workerLifetimePeakIncreaseDuringStageMiB": 0.0
+    }
+  },
+  "startedAtUtc": "2026-10-02T05:01:11.367Z",
+  "status": "failed",
+  "synthesis": {
+    "expectedInputWords": 10,
+    "first": null,
+    "matchedTextAndSeed": true,
+    "seed": 1337,
+    "text": "Take a slow breath in, and let your shoulders relax.",
+    "warm": null
+  },
+  "uiInterceptions": [],
+  "workers": [
+    {
+      "detachedAtUtc": "2026-10-02T05:02:30.549Z",
+      "instrumentation": "unavailable",
+      "instrumentationResult": {
+        "installed": false,
+        "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker."
+      },
+      "lastGpuSnapshot": {
+        "createCalls": 0,
+        "createdRequestedBytes": 0,
+        "destroyCalls": 0,
+        "destroyedRequestedBytes": 0,
+        "installed": false,
+        "notDestroyedRequestedBytes": 0,
+        "note": "Requested GPUBuffer descriptor sizes; not a physical VRAM measurement.",
+        "peakNotDestroyedRequestedBytes": 0,
+        "reason": "GPUDevice/GPUBuffer prototype methods are unavailable in this worker."
+      },
+      "sessionId": "F12B7F495EDFBFA3B70A97843FD12A9F",
+      "targetId": "265C43135AB64046414DD1E8C1C7C130",
+      "type": "worker",
+      "url": "http://127.0.0.1:4187/assets/worker-BH37Ho1g.js"
+    }
+  ]
+}

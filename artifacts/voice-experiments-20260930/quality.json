@@ -1,0 +1,556 @@
+{
+  "schema_version": 1,
+  "generated_by": "scripts/nano_lab/reference_evaluator.py",
+  "manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "runtime": {
+    "cpu_threads": 2,
+    "whisper_enabled": false,
+    "speaker_enabled": true,
+    "whisper_model": "/workspace/scratch/37b8eb4aea87/voicecloning/Whisper_fast_package/models/tiny.en",
+    "heldout_variant": "natural",
+    "excluded_heldout_ids": [
+      "asmr7_heldout_01",
+      "asmr7_heldout_04",
+      "asmr7_heldout_05"
+    ],
+    "rss_mb": {
+      "rss_before_models_mb": 114.3,
+      "rss_after_speaker_model_mb": 308.39,
+      "rss_after_evaluation_mb": 475.43
+    }
+  },
+  "inputs": [
+    {
+      "label": "asmr_raw_seed31",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_raw_seed31.wav",
+      "family": "asmr7",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "measurements": {
+        "duration_s": 2.72,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -35.61,
+        "peak_dbfs": -17.008,
+        "crest_db": 18.603,
+        "dc_offset": -4e-06,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -29.467,
+        "noise_floor_dbfs_proxy_low10pct_frames": -60.156,
+        "speech_level_dbfs_proxy_high50pct_frames": -33.992,
+        "snr_db_proxy_high50_minus_low10": 26.164,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -92.664,
+        "spectral_centroid_hz": 1940.053,
+        "spectral_flatness_proxy": 0.120244,
+        "high_band_fraction_proxy_ge8khz": 0.020255,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 117.28,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.823284,
+        "min_cosine": 0.814841,
+        "max_cosine": 0.831726,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.831726
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.814841
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "asmr_natural_seed31",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_natural_seed31.wav",
+      "family": "asmr7",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "measurements": {
+        "duration_s": 2.72,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -34.102,
+        "peak_dbfs": -14.133,
+        "crest_db": 19.969,
+        "dc_offset": -3.657e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -28.606,
+        "noise_floor_dbfs_proxy_low10pct_frames": -70.466,
+        "speech_level_dbfs_proxy_high50pct_frames": -31.897,
+        "snr_db_proxy_high50_minus_low10": 38.569,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -94.009,
+        "spectral_centroid_hz": 1768.05,
+        "spectral_flatness_proxy": 0.10679,
+        "high_band_fraction_proxy_ge8khz": 0.01688,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 469.75,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.86248,
+        "min_cosine": 0.843262,
+        "max_cosine": 0.881699,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.881699
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.843262
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "asmr_clean_seed31",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_clean_seed31.wav",
+      "family": "asmr7",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "measurements": {
+        "duration_s": 2.96,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -30.925,
+        "peak_dbfs": -12.753,
+        "crest_db": 18.171,
+        "dc_offset": -4.078e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -23.967,
+        "noise_floor_dbfs_proxy_low10pct_frames": -80.585,
+        "speech_level_dbfs_proxy_high50pct_frames": -28.921,
+        "snr_db_proxy_high50_minus_low10": 51.664,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -97.852,
+        "spectral_centroid_hz": 1288.348,
+        "spectral_flatness_proxy": 0.081926,
+        "high_band_fraction_proxy_ge8khz": 0.013802,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 469.77,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.805685,
+        "min_cosine": 0.789396,
+        "max_cosine": 0.821974,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.821974
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.789396
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "harvey_raw_seed31",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_raw_seed31.wav",
+      "family": "harvey",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "measurements": {
+        "duration_s": 2.94,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -23.562,
+        "peak_dbfs": -2.304,
+        "crest_db": 21.258,
+        "dc_offset": -4.429e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -14.868,
+        "noise_floor_dbfs_proxy_low10pct_frames": -60.87,
+        "speech_level_dbfs_proxy_high50pct_frames": -22.149,
+        "snr_db_proxy_high50_minus_low10": 38.721,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -91.448,
+        "spectral_centroid_hz": 950.16,
+        "spectral_flatness_proxy": 0.023234,
+        "high_band_fraction_proxy_ge8khz": 0.001908,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 473.18,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.705058,
+        "min_cosine": 0.705058,
+        "max_cosine": 0.705058,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.705058
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "harvey_natural_seed31",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_natural_seed31.wav",
+      "family": "harvey",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "measurements": {
+        "duration_s": 2.94,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -23.19,
+        "peak_dbfs": -2.494,
+        "crest_db": 20.696,
+        "dc_offset": -6.443e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -15.787,
+        "noise_floor_dbfs_proxy_low10pct_frames": -70.539,
+        "speech_level_dbfs_proxy_high50pct_frames": -22.036,
+        "snr_db_proxy_high50_minus_low10": 48.503,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -91.316,
+        "spectral_centroid_hz": 945.752,
+        "spectral_flatness_proxy": 0.022525,
+        "high_band_fraction_proxy_ge8khz": 0.002073,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 473.37,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.715365,
+        "min_cosine": 0.715365,
+        "max_cosine": 0.715365,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.715365
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "harvey_clean_seed31",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_clean_seed31.wav",
+      "family": "harvey",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "measurements": {
+        "duration_s": 3.38,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -23.703,
+        "peak_dbfs": -1.833,
+        "crest_db": 21.871,
+        "dc_offset": -6.747e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -14.921,
+        "noise_floor_dbfs_proxy_low10pct_frames": -64.559,
+        "speech_level_dbfs_proxy_high50pct_frames": -23.486,
+        "snr_db_proxy_high50_minus_low10": 41.073,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -89.355,
+        "spectral_centroid_hz": 881.636,
+        "spectral_flatness_proxy": 0.016529,
+        "high_band_fraction_proxy_ge8khz": 0.000854,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 473.39,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.655364,
+        "min_cosine": 0.655364,
+        "max_cosine": 0.655364,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.655364
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "asmr_raw_seed47",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_raw_seed47.wav",
+      "family": "asmr7",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "measurements": {
+        "duration_s": 2.68,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -34.576,
+        "peak_dbfs": -14.044,
+        "crest_db": 20.533,
+        "dc_offset": -5.34e-06,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -28.094,
+        "noise_floor_dbfs_proxy_low10pct_frames": -62.619,
+        "speech_level_dbfs_proxy_high50pct_frames": -32.826,
+        "snr_db_proxy_high50_minus_low10": 29.793,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -91.931,
+        "spectral_centroid_hz": 1782.026,
+        "spectral_flatness_proxy": 0.126569,
+        "high_band_fraction_proxy_ge8khz": 0.025735,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 473.88,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.856916,
+        "min_cosine": 0.830294,
+        "max_cosine": 0.883538,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.883538
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.830294
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "asmr_natural_seed47",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_natural_seed47.wav",
+      "family": "asmr7",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "measurements": {
+        "duration_s": 2.96,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -31.729,
+        "peak_dbfs": -12.507,
+        "crest_db": 19.222,
+        "dc_offset": -4.118e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -25.744,
+        "noise_floor_dbfs_proxy_low10pct_frames": -68.708,
+        "speech_level_dbfs_proxy_high50pct_frames": -29.634,
+        "snr_db_proxy_high50_minus_low10": 39.074,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -90.973,
+        "spectral_centroid_hz": 1286.901,
+        "spectral_flatness_proxy": 0.073065,
+        "high_band_fraction_proxy_ge8khz": 0.0088,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 475.0,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.867593,
+        "min_cosine": 0.836235,
+        "max_cosine": 0.898951,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.898951
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.836235
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "asmr_clean_seed47",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/asmr_clean_seed47.wav",
+      "family": "asmr7",
+      "expected_text": "Take a quiet moment and let yourself relax.",
+      "measurements": {
+        "duration_s": 3.04,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -30.748,
+        "peak_dbfs": -12.084,
+        "crest_db": 18.664,
+        "dc_offset": -4.808e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -24.571,
+        "noise_floor_dbfs_proxy_low10pct_frames": -81.357,
+        "speech_level_dbfs_proxy_high50pct_frames": -28.854,
+        "snr_db_proxy_high50_minus_low10": 52.503,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -102.467,
+        "spectral_centroid_hz": 945.303,
+        "spectral_flatness_proxy": 0.05558,
+        "high_band_fraction_proxy_ge8khz": 0.006464,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 476.01,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 2,
+        "successful_count": 2,
+        "mean_cosine": 0.833336,
+        "min_cosine": 0.809328,
+        "max_cosine": 0.857344,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_02/asmr7_heldout_02__natural.wav",
+            "cosine": 0.857344
+          },
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/asmr7/asmr7_heldout_03/asmr7_heldout_03__natural.wav",
+            "cosine": 0.809328
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "harvey_raw_seed47",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_raw_seed47.wav",
+      "family": "harvey",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "measurements": {
+        "duration_s": 3.34,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -25.276,
+        "peak_dbfs": -2.07,
+        "crest_db": 23.206,
+        "dc_offset": -4.575e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -17.377,
+        "noise_floor_dbfs_proxy_low10pct_frames": -61.014,
+        "speech_level_dbfs_proxy_high50pct_frames": -23.985,
+        "snr_db_proxy_high50_minus_low10": 37.03,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -86.697,
+        "spectral_centroid_hz": 943.762,
+        "spectral_flatness_proxy": 0.022127,
+        "high_band_fraction_proxy_ge8khz": 0.001384,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 476.02,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.656761,
+        "min_cosine": 0.656761,
+        "max_cosine": 0.656761,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.656761
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "harvey_natural_seed47",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_natural_seed47.wav",
+      "family": "harvey",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "measurements": {
+        "duration_s": 3.1,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -23.342,
+        "peak_dbfs": -1.776,
+        "crest_db": 21.566,
+        "dc_offset": -7.192e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -15.374,
+        "noise_floor_dbfs_proxy_low10pct_frames": -63.029,
+        "speech_level_dbfs_proxy_high50pct_frames": -21.292,
+        "snr_db_proxy_high50_minus_low10": 41.738,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -94.783,
+        "spectral_centroid_hz": 956.268,
+        "spectral_flatness_proxy": 0.025332,
+        "high_band_fraction_proxy_ge8khz": 0.002188,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 475.42,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.673497,
+        "min_cosine": 0.673497,
+        "max_cosine": 0.673497,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.673497
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    },
+    {
+      "label": "harvey_clean_seed47",
+      "audio_path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/paired/harvey_clean_seed47.wav",
+      "family": "harvey",
+      "expected_text": "Winning starts with preparation. Make your next move count.",
+      "measurements": {
+        "duration_s": 3.1,
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "rms_dbfs": -23.353,
+        "peak_dbfs": -1.632,
+        "crest_db": 21.721,
+        "dc_offset": -6.862e-05,
+        "clipping_fraction_abs_ge_minus_0.01dbfs": 0.0,
+        "near_clip_fraction_abs_ge_minus_0.1dbfs": 0.0,
+        "burst_p99_dbfs_proxy_30ms": -15.428,
+        "noise_floor_dbfs_proxy_low10pct_frames": -65.55,
+        "speech_level_dbfs_proxy_high50pct_frames": -21.33,
+        "snr_db_proxy_high50_minus_low10": 44.22,
+        "stationary_high_band_dbfs_proxy_low10pct_frames": -90.328,
+        "spectral_centroid_hz": 956.17,
+        "spectral_flatness_proxy": 0.024677,
+        "high_band_fraction_proxy_ge8khz": 0.00203,
+        "noise_fields_are_heuristic_proxies": true
+      },
+      "rss_after_audio_load_mb": 475.42,
+      "speaker_similarity": {
+        "metric": "resemblyzer cosine to independent held-out same-voice refs",
+        "heldout_count": 1,
+        "successful_count": 1,
+        "mean_cosine": 0.654814,
+        "min_cosine": 0.654814,
+        "max_cosine": 0.654814,
+        "rows": [
+          {
+            "path": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/harvey/harvey_heldout_01/harvey_heldout_01__natural.wav",
+            "cosine": 0.654814
+          }
+        ],
+        "interpretation": "heuristic speaker-similarity signal; ASMR whisper embeddings can be unstable"
+      }
+    }
+  ],
+  "synthesis_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/vm_20260930/eval_inputs.json",
+  "reference_manifest": "/workspace/scratch/37b8eb4aea87/voicecloning/artifacts/nano_lab/references/manifest.json",
+  "dnsmos_enabled": true,
+  "evaluation_role": "development_selection"
+}

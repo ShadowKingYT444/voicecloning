@@ -1,0 +1,6 @@
+[206131:206131:1001/213510.468806:ERROR:chrome/browser/net/system_network_context_manager.cc:978] Cannot use V8 Proxy resolver in single process mode.
+[206131:206131:1001/213510.651742:ERROR:chrome/browser/net/system_network_context_manager.cc:978] Cannot use V8 Proxy resolver in single process mode.
+
+DevTools listening on ws://127.0.0.1:44313/devtools/browser/bed8fc4c-5032-48a5-9130-5495426c90e0
+[206131:206131:1001/213511.322491:ERROR:chrome/browser/net/system_network_context_manager.cc:978] Cannot use V8 Proxy resolver in single process mode.
+[206181:206187:1001/213511.732756:ERROR:base/nix/mime_util_xdg.cc:139] Invalid mime.cache file does not contain null prior to ALIAS_LIST_OFFSET=44

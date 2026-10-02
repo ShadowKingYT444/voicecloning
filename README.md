@@ -2,11 +2,13 @@
 
 This project aims to read long text, including Federalist No. 10, in a selected ASMR voice with a small, low-memory TTS model. The target is less than 500 MiB of runtime memory, with streaming and short batches so playback starts quickly and continues smoothly. The reader can use a precomputed voice state. Zero-shot cloning in the browser is not a requirement. The research also tests whether a model can run in the browser, but a local inference service is acceptable when it meets the memory and playback goals. Chatterbox Nano, Pocket TTS, Kokoro, Whisper, and Voicebox remain research candidates.
 
-Browser inference is technically possible, but this repository has not demonstrated it. Browser execution is only one deployment option. The current measured CPU ONNX profile takes 118.07 seconds to produce 6.96 seconds of audio and uses 861.75 MiB of process-tree RSS. The existing Pocket TTS ONNX benchmark uses 798 MiB after model load and 1,921 MiB after voice conditioning. Neither meets the under-500-MiB target. Quantized Pocket model files total 559 MiB on disk, before runtime memory. Streaming and a precomputed voice state can reduce startup delay and repeated conditioning work. They do not by themselves reduce model memory below the target. A smaller model or a more compact runtime is required. See [latest matched voice results](artifacts/voice-experiments-20260930/README.md) and the [browser runtime documentation](https://onnxruntime.ai/docs/tutorials/web/).
+Browser inference is technically possible, but this repository has not demonstrated it. Browser execution is only one deployment option. The current measured CPU ONNX profile takes 118.07 seconds to produce 6.96 seconds of audio and uses 861.75 MiB of process-tree RSS. The existing Pocket TTS ONNX benchmark uses 798 MiB after model load and 1,921 MiB after voice conditioning. Neither meets the under-500-MiB target. Quantized Pocket model files total 559 MiB on disk, before runtime memory. Streaming and a precomputed voice state can reduce startup delay and repeated conditioning work. They do not by themselves reduce model memory below the target. These native measurements do not establish the memory limit of a fixed-voice browser runtime. The browser path needs its own memory trace before an architecture decision. See [latest matched voice results](artifacts/voice-experiments-20260930/README.md) and the [browser runtime documentation](https://onnxruntime.ai/docs/tutorials/web/).
 
 **The requested voice realism is not achieved.** The user rejected the earlier comparison: “Neither sounds convincing yet.” The newer candidates remain experimental. Speaker-specific fitted adapters are not evidence of general zero-shot improvement.
 
 ## Start here, future agent
+
+For the current browser task, start with [the cloud handoff](docs/CLOUD_BROWSER_HANDOFF.md).
 
 1. Read [the experiment handoff](docs/EXPERIMENT_HANDOFF.md), then [current status](artifacts/nano_lab/WORK_STATUS.md).
 2. Read [resource constraints](scripts/nano_lab/AGENTS.md). The original machine suffered memory pressure. Run one model workload at a time through `bounded_job.py`.
@@ -30,11 +32,15 @@ The primary reader target is convincing, clean speech in the selected ASMR voice
 
 Read the [quality report](artifacts/nano_lab/QUALITY_REPORT.md) and [RSS report](artifacts/nano_lab/RSS_REPORT.md). The [listening page](artifacts/nano_lab/delivery/index.html) needs the excluded local WAV files before its players work.
 
-## Browser speech experiment
+## Browser speech reader
 
-The `browser_tts/` app is an experimental Chatterbox Nano WebGPU prototype. It loads a 547 MiB model package, encodes the selected ASMR clip at run time, and synthesizes short passages before playback. It does not meet the memory goal and is not the intended production path. The desired reader loads a selected, precomputed voice state once, then generates and plays streamed audio in short batches. Passage boundaries can change pauses and prosody, so playback continuity and listening quality still require direct tests.
+The `browser_tts/` app continues the Chatterbox Nano browser experiment. The current code loads a precomputed selected-voice state and three WebGPU inference graphs. It removes the reference encoder from the reading session. The three published graph/weight pairs total 374.14 MiB. Tokenizer and configuration files bring the model assets to 377.54 MiB. Voice state, runtime, activations, and browser overhead are additional. Download size does not prove the under-500-MiB runtime target.
 
-Start the local app from its directory:
+The loader uses ONNX Runtime Web 1.30 JSPI with Blob-backed external weights. The worker keeps recurrent KV tensors on WebGPU. The playback queue holds at most two passages. Generated audio is saved to IndexedDB, and Chrome can stream the completed WAV to disk. A partial software-adapter load failed before inference. No complete browser inference measurement is available. See [browser continuation](docs/BROWSER_CONTINUATION.md) for setup, evidence, and remaining gates.
+
+The selected reference remains `asmr_t3_seed47_fit.wav`. It is a generated 3.52-second clip. Its fixed voice-state binary and manifest are included for cloud continuation. All four tensors passed exact byte serialization round-trip checks. The export does not fold the local fitted adapters into the community ONNX graphs. New-text speech quality, full-paper continuity, WebGPU equivalence, and actual browser inference memory remain unverified. A fresh checkout must restore the excluded model weights before inference.
+
+The dev server uses an explicit port:
 
 ```bash
 cd browser_tts
@@ -42,7 +48,7 @@ npm ci
 npm run dev
 ```
 
-Open the localhost URL printed by Vite. The first model load downloads about 547 MiB from the pinned community Nano ONNX conversion. This prototype is retained for comparison. Its model package already exceeds the desired memory budget, and WebGPU execution, quality, and latency have not been verified on this host. See the [browser research note](docs/BROWSER_TTS_RESEARCH.md) for its limits and the Pocket streaming comparison.
+Model export, browser inference, and browser verification must run serially through the existing resource guard. Do not click Prepare in an unrelated desktop Chrome session to bypass the guard. Use the isolated measurement runner described in [measurement instructions](browser_tts/MEASUREMENT.md).
 
 ## Repository map
 
