@@ -1,5 +1,14 @@
 # Voice cloning experiment handoff
 
+2026-10-02 browser compatibility continuation: the reader now prefers a guarded
+same-origin CPU service when one is available. Read
+[local CPU reader](LOCAL_CPU_BROWSER_20261002.md) for setup and measurements.
+Actual Chromium and Firefox short speech, word checks and WAV exports pass.
+Chromium Stop/restart passes. Browser GPU and JSPI support are not needed for
+this service path. CPU generation remains much slower than playback. Browser
+memory is separate from service RSS. Safari and Edge are untested. All original
+quality, numerical and resource gates remain in force.
+
 2026-10-02 local continuation: the cloud changes are merged at `2ed423b`.
 Device-bound hardware browser inference, real Stop/restart, and WAV exports
 complete within the existing resource guard. The original short generated-reference

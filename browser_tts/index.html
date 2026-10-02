@@ -51,15 +51,15 @@
               </div>
               <div class="runtime-specs">
                 <div><span>Weights</span><b>Q4 / Q4F16</b></div>
-                <div><span>Execution</span><b>WebGPU</b></div>
-                <div><span>Model download</span><b>≈ 378 MiB</b></div>
+                <div><span>Execution</span><b id="runtime-execution">Checking…</b></div>
+                <div><span>Model download</span><b id="runtime-download">≈ 378 MiB</b></div>
               </div>
               <div class="model-status" id="model-status" role="status" aria-live="polite">
-                <span class="status-indicator"></span><span id="model-status-text">Checking WebGPU…</span>
+                <span class="status-indicator"></span><span id="model-status-text">Checking speech runtime…</span>
               </div>
               <div class="load-progress" id="load-progress-wrap" hidden><div class="progress-track"><div id="load-progress" class="progress-value"></div></div><span id="load-progress-label"></span></div>
               <button class="button button-dark load-button" id="load-model" type="button" disabled><span>Prepare voice</span><span aria-hidden="true">↗</span></button>
-              <p class="model-footnote">The saved voice avoids loading the reference encoder. Download size is not runtime memory. Browser memory and playback still need measurement. <a href="/capabilities.html">Check browser capabilities</a>.</p>
+              <p class="model-footnote">The saved voice avoids loading the reference encoder. Download size is not runtime memory. Browser memory and playback still need measurement. <a href="/capabilities.html">Check GPU support</a>.</p>
             </article>
           </aside>
 
@@ -89,7 +89,7 @@
             <details class="metrics" id="metrics">
               <summary><span>Session measurements</span><span class="summary-hint">Browser results appear here</span></summary>
               <div class="metric-grid">
-                <div><span>Model load</span><b id="metric-load">—</b></div>
+                  <div><span id="metric-load-label">Model load</span><b id="metric-load">—</b></div>
                 <div><span>First audio</span><b id="metric-first">—</b></div>
                 <div><span>Last synthesis</span><b id="metric-last">—</b></div>
                 <div><span>Audio generated</span><b id="metric-audio">—</b></div>

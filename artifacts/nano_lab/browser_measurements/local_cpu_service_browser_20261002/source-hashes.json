@@ -1,0 +1,7 @@
+{
+  "browser_tts/src/main.js": "0feaadf7f4b309334d8bdc5905f9637816417b7710871a268b127d3d4df03dc3",
+  "browser_tts/src/local-reader.js": "6831edfa7a098560c15e54936d75161b49f86d4ffb9d37d12819638baf93486b",
+  "browser_tts/scripts/local-reader-server.py": "7ee8f4ac06b3e05304af42d8eb9ed242a8ba5cb43c993a3f1f57df5ee987d33a",
+  "browser_tts/scripts/probe-cpu-pipeline.py": "d7bcb757e7048d0385cee16e96b83945d430e7aa62503669be404505199eb8aa",
+  "browser_tts/scripts/measure-browser.py": "e02fddf10ad5df35dd16f6a33b18cf75f5f1cbbee98d69eaefe84f75f0675185"
+}

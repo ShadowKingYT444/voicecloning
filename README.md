@@ -39,6 +39,13 @@ Read the [quality report](artifacts/nano_lab/QUALITY_REPORT.md) and [RSS report]
 
 ## Browser speech reader
 
+For ordinary browsers without WebGPU, use the [local CPU reader](docs/LOCAL_CPU_BROWSER_20261002.md).
+The same-origin CPU service runs the pinned model and serves the site on port
+4187. Chromium and Firefox short speech, word checks and WAV export pass.
+Chromium Stop/restart also passes. No browser GPU or JSPI support is required
+for this path. It remains slow and does not establish the complete app's memory
+target. Safari and Edge have not been tested.
+
 The `browser_tts/` app continues the Chatterbox Nano browser experiment. The current code loads a precomputed selected-voice state and three WebGPU inference graphs. It removes the reference encoder from the reading session. The three published graph/weight pairs total 374.14 MiB. Tokenizer and configuration files bring the model assets to 377.54 MiB. Voice state, runtime, activations, and browser overhead are additional. Download size does not prove the under-500-MiB runtime target.
 
 The loader uses ONNX Runtime Web 1.30 JSPI with Blob-backed external weights. The worker keeps recurrent KV tensors on WebGPU. The playback queue holds at most two passages. Generated audio is saved to IndexedDB, and Chrome can stream the completed WAV to disk. Device-bound Intel hardware inference completes. The native-donor first, warm and restart exports have zero word errors on one short sentence. Warm generation remains slower than playback, and measured Chrome RSS exceeds the memory target. See [browser continuation](docs/BROWSER_CONTINUATION.md) for setup, evidence, and remaining gates.

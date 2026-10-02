@@ -3,6 +3,7 @@ import { splitIntoPassages, wordCount } from './chunker.js';
 import { fadeEdges } from './audio.js';
 import { ReadingStore } from './reading-store.js';
 import { REVISION } from './model-loader.js';
+import { LocalReaderClient, localReaderStatus, selectReaderBackend } from './local-reader.js';
 
 const $ = (id) => document.getElementById(id);
 const ui = {
@@ -32,6 +33,8 @@ let synthSeconds = 0; let audioSeconds = 0; let completed = 0; let total = 0;
 let busy = false; let receivingDone = false; let modelReady = false; let stopping = false;
 let status = 'checking'; let lastError = null; let runId = 0; let seed = 1337;
 let modelIdentity = null;
+let selectedBackend = null;
+let cpuMemoryTimer = null;
 let wavExport = null; let exporting = false;
 let maximumScheduledQueueSize = 0; let scheduledAudioBytes = 0; let maximumScheduledAudioBytes = 0;
 let playbackCompleteSeconds = null; let generationCompleteSeconds = null; let readingOutcome = null;
@@ -48,6 +51,31 @@ function updateTextStats() {
   ui.passage.disabled = busy; ui.chunkSize.disabled = busy;
 }
 function metric(id, value) { $(id).textContent = value; }
+function startCpuMemoryMeasurements() {
+  if (cpuMemoryTimer) return;
+  const grid = document.querySelector('.metric-grid');
+  for (const [id, label] of [['metric-cpu-rss', 'Local CPU RAM'], ['metric-cpu-peak', 'Peak local CPU RAM']]) {
+    const row = document.createElement('div');
+    const title = document.createElement('span'); title.textContent = label;
+    const value = document.createElement('b'); value.id = id; value.textContent = '—';
+    row.append(title, value); grid.append(row);
+  }
+  const note = document.createElement('p'); note.className = 'metrics-note';
+  note.textContent = 'CPU RAM is the local speech service process RSS. Models load for each passage and are then released. First-audio time includes that load. Browser memory and GPU memory are separate.';
+  $('metrics').append(note); $('metrics').open = true;
+  let pending = false;
+  const update = async () => {
+    if (selectedBackend !== 'cpu' || pending) return;
+    pending = true;
+    try {
+      const report = await localReaderStatus();
+      for (const [id, value] of [['metric-cpu-rss', report?.rss?.current_rss_mib], ['metric-cpu-peak', report?.rss?.peak_rss_mib]]) {
+        metric(id, Number.isFinite(value) ? `${value.toFixed(0)} MiB` : 'Unavailable');
+      }
+    } finally { pending = false; }
+  };
+  update(); cpuMemoryTimer = setInterval(update, 2000);
+}
 function snapshot() {
   return { status, error: lastError, modelReady, busy, exporting, loadSeconds, seed, modelIdentity, readingOutcome,
     chunks: chunkRecords.map((chunk) => ({ ...chunk })), storageRetention: store.retention ?? null, outputContract,
@@ -72,16 +100,13 @@ fetch('/federalist-no-10.txt').then((r) => { if (!r.ok) throw new Error('Text fi
   .then((text) => { ui.passage.value = text.trim(); updateTextStats(); })
   .catch((error) => { ui.words.textContent = error.message; });
 
-if (!navigator.gpu || typeof WebAssembly.Suspending !== 'function' || typeof WebAssembly.promising !== 'function') {
-  status = 'error'; lastError = 'This reader requires WebGPU and WebAssembly JSPI support.';
-  setStatus(lastError, 'error');
-} else {
-  navigator.gpu.requestAdapter({ powerPreference: 'low-power' }).then((adapter) => {
-    if (!adapter) throw new Error('No WebGPU adapter is available.');
-    if (!adapter.features.has('shader-f16')) throw new Error('This reader requires a WebGPU adapter with FP16 shader support.');
+const backendDiscovery = selectReaderBackend().then((backend) => {
+    selectedBackend = backend;
+    $('runtime-execution').textContent = backend === 'cpu' ? 'Local CPU' : 'WebGPU';
+    $('runtime-download').textContent = backend === 'cpu' ? 'No browser weights' : '≈ 378 MiB';
     status = 'idle'; setStatus('Prepare the selected voice to begin.', 'ready'); ui.load.disabled = false;
-  }).catch((error) => { status = 'error'; lastError = error.message; setStatus(lastError, 'error'); });
-}
+    return backend;
+  }).catch((error) => { status = 'error'; lastError = error.message; setStatus(lastError, 'error'); return null; });
 ui.passage.addEventListener('input', updateTextStats);
 ui.chunkSize.addEventListener('change', updateTextStats);
 ui.playReference.addEventListener('click', async () => {
@@ -97,8 +122,19 @@ function prepareVoice(options = {}) {
   if (loadWait) return loadWait.promise;
   loadWait = deferred(); status = 'loading'; lastError = null;
   ui.load.disabled = true; ui.load.querySelector('span:first-child').textContent = 'Loading model…';
-  ui.progressWrap.hidden = false; setStatus('Loading the saved voice and three model graphs…', 'loading');
-  worker = new Worker(new URL('./worker.js', import.meta.url), { type: 'module' });
+  ui.progressWrap.hidden = false; setStatus('Preparing the selected voice…', 'loading');
+  prepareTransport(options).catch((error) => fail(error));
+  return loadWait.promise;
+}
+async function prepareTransport(options) {
+  const backend = options.backend ?? await backendDiscovery;
+  if (!['cpu', 'webgpu'].includes(backend)) throw new Error(lastError || 'No speech runtime is available.');
+  selectedBackend = backend;
+  $('runtime-execution').textContent = backend === 'cpu' ? 'Local CPU' : 'WebGPU';
+  $('runtime-download').textContent = backend === 'cpu' ? 'No browser weights' : '≈ 378 MiB';
+  $('metric-load-label').textContent = backend === 'cpu' ? 'Voice preparation' : 'Model load';
+  worker = backend === 'cpu' ? new LocalReaderClient()
+    : new Worker(new URL('./worker.js', import.meta.url), { type: 'module' });
   const loadingWorker = worker;
   worker.onmessage = ({ data }) => {
     // Serialize storage writes and terminal messages to preserve passage order.
@@ -114,7 +150,6 @@ function prepareVoice(options = {}) {
       modelBaseUrl: options.modelBaseUrl ?? discoveredBase, voiceStateManifestUrl: options.voiceStateManifestUrl,
       powerPreference: options.powerPreference, traceInference: options.traceInference === true });
   }).catch((error) => { if (worker === loadingWorker) fail(error); });
-  return loadWait.promise;
 }
 ui.load.addEventListener('click', () => { prepareVoice().catch(() => {}); });
 
@@ -224,6 +259,7 @@ async function handleWorkerMessage(data) {
     if (data.value != null) ui.loadProgress.style.width = `${Math.max(0, Math.min(100, data.value))}%`;
   } else if (data.type === 'ready') {
     modelReady = true; status = 'ready'; loadSeconds = data.loadSeconds; modelIdentity = data.modelIdentity;
+    if (selectedBackend === 'cpu') startCpuMemoryMeasurements();
     metric('metric-load', fmt(loadSeconds)); setStatus(`Voice ready · ${data.backend}`, 'ready');
     ui.load.querySelector('span:first-child').textContent = 'Voice prepared'; ui.progressWrap.hidden = true;
     ui.readState.textContent = 'Ready to read.';

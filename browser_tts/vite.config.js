@@ -19,7 +19,7 @@ export default defineConfig({
     exclude: ['onnxruntime-web'],
   },
   build: {
-    target: 'esnext',
+    target: 'es2022',
     rollupOptions: {
       input: {
         main: fileURLToPath(new URL('./index.html', import.meta.url)),

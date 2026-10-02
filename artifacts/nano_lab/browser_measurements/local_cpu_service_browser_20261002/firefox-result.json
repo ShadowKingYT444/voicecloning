@@ -1,0 +1,316 @@
+{
+  "session": {
+    "sessionId": "5e522271-a33f-4c2e-80a2-1d6623a14390",
+    "capabilities": {
+      "acceptInsecureCerts": false,
+      "browserName": "firefox",
+      "browserVersion": "157.0",
+      "platformName": "linux",
+      "setWindowRect": true,
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0",
+      "moz:buildID": "20260925125819",
+      "moz:headless": true,
+      "moz:platformVersion": "7.0.0-34-generic",
+      "moz:processID": 644730,
+      "moz:profile": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/local_cpu_service_browser_20261002/voice-cpu-firefox-m9gp6vce",
+      "moz:shutdownTimeout": 60000
+    }
+  },
+  "browser": {
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0",
+    "gpu": false,
+    "jspi": true,
+    "execution": "Local CPU",
+    "ram": "174 MiB"
+  },
+  "prepared": {
+    "status": "ready",
+    "error": null,
+    "modelReady": true,
+    "busy": false,
+    "exporting": false,
+    "loadSeconds": 2.9681716520135524,
+    "seed": 1337,
+    "modelIdentity": {
+      "repoId": "owensong/chatterbox-nano-ONNX",
+      "revision": "4a66d7dab72a9e98f24b515d49a1d7a81632df2e",
+      "sha256sumsSha256": "ecd0b0ee1fde0f9342564fda72fe1ebb4907baa6c9d013c09052bcad5220dcf4",
+      "provider": "CPUExecutionProvider",
+      "onnxruntimeVersion": "1.29.0",
+      "numpyVersion": "1.26.4",
+      "tokenizerSha256": "3f04e34bea22f9144d1a19151154095bc9ce0430bf421304f5797e716288a906",
+      "graphs": {
+        "embed_tokens_fp16": {
+          "sha256": "019d257243774091d78c2ad91c2c0f61e4e442740cb7b3b00b5a89109417b18d",
+          "externalDataSha256": "bcd7b35ae4f206932e2491cb60b42ebb80f6d8facfdb53ba7d7449ad00a3237b"
+        },
+        "language_model_q4f16": {
+          "sha256": "8fe9620856d86b8a0235041d7fd2a8a47292da50828044bab5740b246e66e65b",
+          "externalDataSha256": "8f2fdc616373c9ccaebbf2db3210dc80c860922a672898bca111eb75f6d3abd2"
+        },
+        "conditional_decoder_q4": {
+          "sha256": "745faa9c2e2494a81e47f2a72601ac248639fd417ae53d999c5068bc441d1f97",
+          "externalDataSha256": "b5c5317e0b79a1a19dd3d5e2b2091ea06b15716716ab801a54eaeb906c6971ec"
+        }
+      },
+      "voiceState": {
+        "path": "browser_tts/public/voice/native-asmr-donor",
+        "sha256": "77a2955a6b50122c581cf211f86d7c624381b7dfa8bb8ce61af3fb6359e16496",
+        "source": "native_t3_donor",
+        "speakerSpecific": true,
+        "zeroShot": false,
+        "speechStartCount": 1,
+        "retainedDecoderTensorsMatchPublicState": true,
+        "fittedAdapterApplied": false
+      }
+    },
+    "readingOutcome": null,
+    "chunks": [],
+    "storageRetention": null,
+    "outputContract": {
+      "purpose": "research-only",
+      "releaseReady": false,
+      "watermarkStatus": "community-decoder-graph-preservation-unverified",
+      "applicationLayerWatermarkApplied": false,
+      "processing": "9ms edge fade and PCM16 export; native Perth parity has not been established"
+    },
+    "metrics": {
+      "firstAudioSeconds": null,
+      "totalSynthesisSeconds": 0,
+      "audioSeconds": 0,
+      "rtf": null,
+      "playbackGapsSeconds": [],
+      "maximumPlaybackGapSeconds": 0,
+      "scheduledQueueSize": 0,
+      "maximumScheduledQueueSize": 0,
+      "scheduledAudioBytes": 0,
+      "maximumScheduledAudioBytes": 0,
+      "generationCompleteSeconds": null,
+      "playbackCompleteSeconds": null,
+      "audioContextBaseLatencySeconds": null,
+      "audioContextOutputLatencySeconds": null,
+      "firstAudioScope": "Request to first scheduled WebAudio start; excludes model preparation. Not physical speaker latency.",
+      "playbackGapScope": "Scheduled AudioContext timeline gaps; listening/hardware continuity is unverified.",
+      "queuedAudioScope": "Requested Float32 playback-buffer bytes; not measured JS, browser process, or GPU memory."
+    }
+  },
+  "first": {
+    "status": "ready",
+    "error": null,
+    "modelReady": true,
+    "busy": false,
+    "exporting": false,
+    "loadSeconds": 2.9681716520135524,
+    "seed": 1337,
+    "modelIdentity": {
+      "repoId": "owensong/chatterbox-nano-ONNX",
+      "revision": "4a66d7dab72a9e98f24b515d49a1d7a81632df2e",
+      "sha256sumsSha256": "ecd0b0ee1fde0f9342564fda72fe1ebb4907baa6c9d013c09052bcad5220dcf4",
+      "provider": "CPUExecutionProvider",
+      "onnxruntimeVersion": "1.29.0",
+      "numpyVersion": "1.26.4",
+      "tokenizerSha256": "3f04e34bea22f9144d1a19151154095bc9ce0430bf421304f5797e716288a906",
+      "graphs": {
+        "embed_tokens_fp16": {
+          "sha256": "019d257243774091d78c2ad91c2c0f61e4e442740cb7b3b00b5a89109417b18d",
+          "externalDataSha256": "bcd7b35ae4f206932e2491cb60b42ebb80f6d8facfdb53ba7d7449ad00a3237b"
+        },
+        "language_model_q4f16": {
+          "sha256": "8fe9620856d86b8a0235041d7fd2a8a47292da50828044bab5740b246e66e65b",
+          "externalDataSha256": "8f2fdc616373c9ccaebbf2db3210dc80c860922a672898bca111eb75f6d3abd2"
+        },
+        "conditional_decoder_q4": {
+          "sha256": "745faa9c2e2494a81e47f2a72601ac248639fd417ae53d999c5068bc441d1f97",
+          "externalDataSha256": "b5c5317e0b79a1a19dd3d5e2b2091ea06b15716716ab801a54eaeb906c6971ec"
+        }
+      },
+      "voiceState": {
+        "path": "browser_tts/public/voice/native-asmr-donor",
+        "sha256": "77a2955a6b50122c581cf211f86d7c624381b7dfa8bb8ce61af3fb6359e16496",
+        "source": "native_t3_donor",
+        "speakerSpecific": true,
+        "zeroShot": false,
+        "speechStartCount": 1,
+        "retainedDecoderTensorsMatchPublicState": true,
+        "fittedAdapterApplied": false
+      }
+    },
+    "readingOutcome": "complete",
+    "chunks": [
+      {
+        "index": 0,
+        "text": "Take a slow breath in, and let your shoulders relax.",
+        "sampleRate": 24000,
+        "synthesisSeconds": 41.590085358009674,
+        "stageSeconds": {
+          "embeddingSessionLoad": 0.04609072000312153,
+          "languageModelSessionLoad": 1.418465094990097,
+          "conditioning": 0.011312488000839949,
+          "prefill": 4.322756007008138,
+          "autoregressive": 8.978558589995373,
+          "decoderSessionLoad": 9.627228938988992,
+          "decoder": 16.988299864999135
+        },
+        "audioSeconds": 3.24,
+        "speechTokens": [
+          4027,
+          2112,
+          1032,
+          2244,
+          2203,
+          2825,
+          1059,
+          165,
+          2234,
+          5644,
+          6374,
+          6373,
+          2076,
+          3451,
+          2711,
+          308,
+          632,
+          1454,
+          2166,
+          2160,
+          4358,
+          1652,
+          3650,
+          2188,
+          6429,
+          1998,
+          29,
+          2195,
+          2204,
+          2197,
+          5934,
+          3666,
+          1470,
+          4299,
+          4299,
+          4299,
+          1788,
+          2924,
+          10,
+          1722,
+          2050,
+          1238,
+          4871,
+          5110,
+          2797,
+          4021,
+          3874,
+          3845,
+          5979,
+          6051,
+          5322,
+          966,
+          2810,
+          5011,
+          630,
+          2331,
+          1928,
+          1688,
+          4509,
+          4755,
+          1936,
+          4366,
+          3134,
+          2831,
+          3563,
+          2675,
+          5914,
+          5266,
+          5915,
+          1622,
+          1541,
+          1869,
+          1299,
+          5481,
+          6376,
+          6375,
+          6375,
+          2028
+        ],
+        "truncated": false,
+        "scheduledStartSeconds": 41.678333333333335
+      }
+    ],
+    "storageRetention": {
+      "mode": "web-lock-scoped-transient-cleanup",
+      "removedSessions": 0
+    },
+    "outputContract": {
+      "purpose": "research-only",
+      "releaseReady": false,
+      "watermarkStatus": "community-decoder-graph-preservation-unverified",
+      "applicationLayerWatermarkApplied": false,
+      "processing": "9ms edge fade and PCM16 export; native Perth parity has not been established"
+    },
+    "metrics": {
+      "firstAudioSeconds": 41.97,
+      "totalSynthesisSeconds": 41.590085358009674,
+      "audioSeconds": 3.24,
+      "rtf": 12.836446098151132,
+      "playbackGapsSeconds": [],
+      "maximumPlaybackGapSeconds": 0,
+      "scheduledQueueSize": 0,
+      "maximumScheduledQueueSize": 1,
+      "scheduledAudioBytes": 0,
+      "maximumScheduledAudioBytes": 311040,
+      "generationCompleteSeconds": 41.945,
+      "playbackCompleteSeconds": 45.22,
+      "audioContextBaseLatencySeconds": 0,
+      "audioContextOutputLatencySeconds": 0.181645833,
+      "firstAudioScope": "Request to first scheduled WebAudio start; excludes model preparation. Not physical speaker latency.",
+      "playbackGapScope": "Scheduled AudioContext timeline gaps; listening/hardware continuity is unverified.",
+      "queuedAudioScope": "Requested Float32 playback-buffer bytes; not measured JS, browser process, or GPU memory."
+    }
+  },
+  "serviceStatus": {
+    "schema": "voice-study.local-reader/v1",
+    "backend": "CPU",
+    "provider": "CPUExecutionProvider",
+    "ready": true,
+    "prepared": true,
+    "busy": false,
+    "modelIdentity": {
+      "repoId": "owensong/chatterbox-nano-ONNX",
+      "revision": "4a66d7dab72a9e98f24b515d49a1d7a81632df2e",
+      "sha256sumsSha256": "ecd0b0ee1fde0f9342564fda72fe1ebb4907baa6c9d013c09052bcad5220dcf4",
+      "provider": "CPUExecutionProvider",
+      "onnxruntimeVersion": "1.29.0",
+      "numpyVersion": "1.26.4",
+      "tokenizerSha256": "3f04e34bea22f9144d1a19151154095bc9ce0430bf421304f5797e716288a906",
+      "graphs": {
+        "embed_tokens_fp16": {
+          "sha256": "019d257243774091d78c2ad91c2c0f61e4e442740cb7b3b00b5a89109417b18d",
+          "externalDataSha256": "bcd7b35ae4f206932e2491cb60b42ebb80f6d8facfdb53ba7d7449ad00a3237b"
+        },
+        "language_model_q4f16": {
+          "sha256": "8fe9620856d86b8a0235041d7fd2a8a47292da50828044bab5740b246e66e65b",
+          "externalDataSha256": "8f2fdc616373c9ccaebbf2db3210dc80c860922a672898bca111eb75f6d3abd2"
+        },
+        "conditional_decoder_q4": {
+          "sha256": "745faa9c2e2494a81e47f2a72601ac248639fd417ae53d999c5068bc441d1f97",
+          "externalDataSha256": "b5c5317e0b79a1a19dd3d5e2b2091ea06b15716716ab801a54eaeb906c6971ec"
+        }
+      },
+      "voiceState": {
+        "path": "browser_tts/public/voice/native-asmr-donor",
+        "sha256": "77a2955a6b50122c581cf211f86d7c624381b7dfa8bb8ce61af3fb6359e16496",
+        "source": "native_t3_donor",
+        "speakerSpecific": true,
+        "zeroShot": false,
+        "speechStartCount": 1,
+        "retainedDecoderTensorsMatchPublicState": true,
+        "fittedAdapterApplied": false
+      }
+    },
+    "rss": {
+      "current_rss_mib": 174.234375,
+      "peak_rss_mib": 362.90234375
+    },
+    "rssScope": "This server process, including loaded model sessions and native runtime memory."
+  }
+}

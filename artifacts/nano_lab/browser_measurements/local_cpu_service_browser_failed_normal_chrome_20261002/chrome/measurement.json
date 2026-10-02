@@ -1,0 +1,1106 @@
+{
+  "app": {
+    "embeddingSelection": "pinned default embed_tokens_fp16",
+    "executionBackend": "same-origin CPU service",
+    "initialStatus": "idle",
+    "loadedSnapshot": {
+      "busy": false,
+      "chunks": [],
+      "error": null,
+      "exporting": false,
+      "loadSeconds": 2.028668386003119,
+      "metrics": {
+        "audioContextBaseLatencySeconds": null,
+        "audioContextOutputLatencySeconds": null,
+        "audioSeconds": 0,
+        "firstAudioScope": "Request to first scheduled WebAudio start; excludes model preparation. Not physical speaker latency.",
+        "firstAudioSeconds": null,
+        "generationCompleteSeconds": null,
+        "maximumPlaybackGapSeconds": 0,
+        "maximumScheduledAudioBytes": 0,
+        "maximumScheduledQueueSize": 0,
+        "playbackCompleteSeconds": null,
+        "playbackGapScope": "Scheduled AudioContext timeline gaps; listening/hardware continuity is unverified.",
+        "playbackGapsSeconds": [],
+        "queuedAudioScope": "Requested Float32 playback-buffer bytes; not measured JS, browser process, or GPU memory.",
+        "rtf": null,
+        "scheduledAudioBytes": 0,
+        "scheduledQueueSize": 0,
+        "totalSynthesisSeconds": 0
+      },
+      "modelIdentity": {
+        "graphs": {
+          "conditional_decoder_q4": {
+            "externalDataSha256": "b5c5317e0b79a1a19dd3d5e2b2091ea06b15716716ab801a54eaeb906c6971ec",
+            "sha256": "745faa9c2e2494a81e47f2a72601ac248639fd417ae53d999c5068bc441d1f97"
+          },
+          "embed_tokens_fp16": {
+            "externalDataSha256": "bcd7b35ae4f206932e2491cb60b42ebb80f6d8facfdb53ba7d7449ad00a3237b",
+            "sha256": "019d257243774091d78c2ad91c2c0f61e4e442740cb7b3b00b5a89109417b18d"
+          },
+          "language_model_q4f16": {
+            "externalDataSha256": "8f2fdc616373c9ccaebbf2db3210dc80c860922a672898bca111eb75f6d3abd2",
+            "sha256": "8fe9620856d86b8a0235041d7fd2a8a47292da50828044bab5740b246e66e65b"
+          }
+        },
+        "numpyVersion": "1.26.4",
+        "onnxruntimeVersion": "1.29.0",
+        "provider": "CPUExecutionProvider",
+        "repoId": "owensong/chatterbox-nano-ONNX",
+        "revision": "4a66d7dab72a9e98f24b515d49a1d7a81632df2e",
+        "sha256sumsSha256": "ecd0b0ee1fde0f9342564fda72fe1ebb4907baa6c9d013c09052bcad5220dcf4",
+        "tokenizerSha256": "3f04e34bea22f9144d1a19151154095bc9ce0430bf421304f5797e716288a906",
+        "voiceState": {
+          "fittedAdapterApplied": false,
+          "path": "browser_tts/public/voice/native-asmr-donor",
+          "retainedDecoderTensorsMatchPublicState": true,
+          "sha256": "77a2955a6b50122c581cf211f86d7c624381b7dfa8bb8ce61af3fb6359e16496",
+          "source": "native_t3_donor",
+          "speakerSpecific": true,
+          "speechStartCount": 1,
+          "zeroShot": false
+        }
+      },
+      "modelReady": true,
+      "outputContract": {
+        "applicationLayerWatermarkApplied": false,
+        "processing": "9ms edge fade and PCM16 export; native Perth parity has not been established",
+        "purpose": "research-only",
+        "releaseReady": false,
+        "watermarkStatus": "community-decoder-graph-preservation-unverified"
+      },
+      "readingOutcome": null,
+      "seed": 1337,
+      "status": "ready",
+      "storageRetention": null
+    },
+    "loadedTextCharacters": 17929,
+    "modelAssetSelection": "pinned default model base",
+    "readyState": "complete",
+    "textLoaded": true,
+    "voiceStudyApiPresent": true
+  },
+  "artifacts": {
+    "sampleLog": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/local_cpu_service_browser_20261002/chrome/measurement-samples.jsonl"
+  },
+  "browser": {
+    "cleanTemporaryProfile": true,
+    "devtoolsPath": "/devtools/browser/0ce3faef-4fb2-43c9-857d-3ce0285f1d33",
+    "devtoolsPort": 35241,
+    "executable": "/opt/google/chrome/google-chrome",
+    "flags": [
+      "--user-data-dir=/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/local_cpu_service_browser_20261002/chrome/voice-study-chrome-1ezg8jz3",
+      "--remote-debugging-port=0",
+      "--remote-debugging-address=127.0.0.1",
+      "--no-first-run",
+      "--no-default-browser-check",
+      "--disable-extensions",
+      "--disable-sync",
+      "--disable-background-networking",
+      "--disable-component-update",
+      "--headless=new",
+      "--disable-gpu",
+      "--disable-software-rasterizer"
+    ],
+    "hardwareWebgpuDiagnostic": false,
+    "hardwareWebgpuRequestedFlags": [],
+    "headless": true,
+    "headlessImplementation": "Chrome headless=new",
+    "implementation": "Chrome",
+    "pid": 642368,
+    "processLayout": "normal Chrome process layout",
+    "processTreeScope": "Chrome root process and current /proc descendants; never system-wide Chrome processes.",
+    "profilePath": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/local_cpu_service_browser_20261002/chrome/voice-study-chrome-1ezg8jz3",
+    "profileRemovedAfterRun": true,
+    "reusedStartupPage": true,
+    "version": {
+      "Browser": "Chrome/152.0.7977.64",
+      "Protocol-Version": "1.3",
+      "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+      "V8-Version": "15.2.124.18",
+      "WebKit-Version": "537.36 (@506c834ecceaa943c5f41e6cfe7f68acb5c45346)",
+      "webSocketDebuggerUrl": "ws://127.0.0.1:35241/devtools/browser/0ce3faef-4fb2-43c9-857d-3ce0285f1d33"
+    }
+  },
+  "cleanup": {
+    "browserExitCode": 0,
+    "profileRemoved": true,
+    "terminatedOwnedPids": []
+  },
+  "configuration": {
+    "checkStopRestart": true,
+    "chunkWords": 18,
+    "embeddingManifestUrl": null,
+    "fullPaper": false,
+    "hardwareWebgpuDiagnostic": false,
+    "idleSeconds": 0.0,
+    "inferenceTimeoutSeconds": 200.0,
+    "interactive": false,
+    "loadTimeoutSeconds": 900,
+    "localCpuService": true,
+    "losslessEmbeddingManifestUrl": null,
+    "modelBaseUrl": null,
+    "nvidiaSmiEnabled": false,
+    "outputDir": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/local_cpu_service_browser_20261002/chrome",
+    "requireHardwareWebgpu": false,
+    "resolvedModelBaseUrl": null,
+    "sampleSeconds": 2.0,
+    "seed": 1337,
+    "startupTimeoutSeconds": 20,
+    "text": "Take a slow breath in, and let your shoulders relax.",
+    "timeoutSeconds": 800.0,
+    "traceInference": false,
+    "uiOnly": false,
+    "url": "http://127.0.0.1:4187/"
+  },
+  "elapsedSeconds": 12.343,
+  "endedAtUtc": "2026-10-02T23:32:30.588Z",
+  "error": {
+    "atUtc": "2026-10-02T23:32:30.108Z",
+    "message": "Received signal 15.",
+    "type": "SignalStop"
+  },
+  "guard": {
+    "accepted": true,
+    "bounded_job_unit_detected": true,
+    "cgroup": [
+      "0::/user.slice/user-1000.slice/user@1000.service/app.slice/nano-lab-model.service"
+    ],
+    "single_process_guard_detected": false
+  },
+  "limitations": [
+    "Host RSS and PSS sum /proc/smaps_rollup for only Chrome's owned profile process tree.",
+    "The WebGPU counters record requested JavaScript GPUBuffer descriptor sizes. They do not measure physical VRAM residency or every backend allocation.",
+    "Host PSS and GPU metrics are separate measures. Do not add them as an exact resident-memory total.",
+    "This runner does not verify spoken words or perceptual voice quality.",
+    "Chrome RSS excludes the separate CPU service. CPU service RSS is recorded independently."
+  ],
+  "memoryBaseline": {
+    "cleanBrowserPssMiB": 449.574,
+    "cleanBrowserRssMiB": 1228.411,
+    "definition": "Mean measured Chrome process-tree PSS/RSS during a clean about:blank profile before app navigation."
+  },
+  "mode": "browser-tts-measurement",
+  "networkRequests": [
+    {
+      "method": "GET",
+      "timestamp": 85927.011151,
+      "type": "Media",
+      "url": "http://127.0.0.1:4187/voice/asmr_t3_seed47_fit.wav",
+      "wallTime": 1790983945.134871
+    },
+    {
+      "method": "GET",
+      "timestamp": 85927.635135,
+      "type": "Fetch",
+      "url": "http://127.0.0.1:4187/models/chatterbox-nano-browser/download_manifest.json",
+      "wallTime": 1790983945.758871
+    },
+    {
+      "method": "GET",
+      "timestamp": 85927.635486,
+      "type": "Fetch",
+      "url": "http://127.0.0.1:4187/federalist-no-10.txt",
+      "wallTime": 1790983945.759167
+    }
+  ],
+  "reportPath": "/home/terryd/gooning/voicecloning/artifacts/nano_lab/browser_measurements/local_cpu_service_browser_20261002/chrome/measurement.json",
+  "schemaVersion": 1,
+  "server": {
+    "serverStartedByRunner": false,
+    "status": 200,
+    "url": "http://127.0.0.1:4187/"
+  },
+  "stages": {
+    "clean_baseline": {
+      "concreteDeviceInstrumentationWorkerCountAtEnd": 0,
+      "createCallsAtEnd": 0,
+      "createdRequestedBytesAtEnd": 0,
+      "destroyCallsAtEnd": 0,
+      "destroyedRequestedBytesAtEnd": 0,
+      "durationSeconds": 5.501,
+      "endedAtUtc": "2026-10-02T23:32:25.001Z",
+      "endedElapsedSeconds": 6.756,
+      "gpuInstrumentationStatusesAtEnd": [],
+      "installationPendingWorkerCountAtEnd": 0,
+      "instrumentedWorkerCountAtEnd": 0,
+      "largestWorkerLifetimePeakRequestedMiB": 0.0,
+      "sampleIntervalSeconds": {
+        "configured": 2.0,
+        "maxObserved": 2.157,
+        "meanObserved": 1.312
+      },
+      "sampledPeakCurrentNotDestroyedRequestedMiB": 0.0,
+      "sampledPeakIncrementalPssMiB": null,
+      "sampledPeakObservedJsHeapUsedMiB": 0.4425201416015625,
+      "sampledPeakProcessCount": 15,
+      "sampledPeakPssMiB": 461.837,
+      "sampledPeakRssMiB": 1242.77,
+      "samples": [
+        {
+          "elapsedSeconds": 1.502,
+          "hostProcessTree": {
+            "incrementalPssMiB": null,
+            "pids": [
+              642368,
+              642372,
+              642373,
+              642383,
+              642384,
+              642386,
+              642408,
+              642410,
+              642411,
+              642422,
+              642445,
+              642455,
+              642466,
+              642467,
+              642482
+            ],
+            "processCount": 15,
+            "pssMiB": 403.639,
+            "rootPid": 642368,
+            "rssMiB": 1175.809,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "javascriptHeap": {
+            "allObservedTargetsAvailable": true,
+            "limitations": "Not browser RSS/PSS, WASM linear memory, physical GPU memory, or total ArrayBuffer residency. Optional backingStorageSize/embedderHeapUsedSize are reported separately when returned; do not sum them into RSS.",
+            "observedTargetUsedBytes": 464016,
+            "scope": "CDP V8 heap for the page and currently attached worker targets only. Missing targets remain unknown.",
+            "targets": [
+              {
+                "available": true,
+                "backingStorageSize": 6,
+                "embedderHeapUsedSize": 1383192,
+                "totalSize": 1048576,
+                "type": "page",
+                "usedSize": 464016
+              }
+            ]
+          },
+          "localCpuService": {
+            "available": true,
+            "rss": {
+              "current_rss_mib": 62.42578125,
+              "peak_rss_mib": 61.875
+            },
+            "scope": "Local CPU service process only; excludes Chrome."
+          },
+          "timestampUtc": "2026-10-02T23:32:19.747Z",
+          "webgpuRequestedBuffers": {
+            "concreteDeviceInstrumentationWorkerCount": 0,
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "installationPendingWorkerCount": 0,
+            "instrumentationStatuses": [],
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerAdapterDiagnostics": [],
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 3.659,
+          "hostProcessTree": {
+            "incrementalPssMiB": null,
+            "pids": [
+              642368,
+              642372,
+              642373,
+              642383,
+              642384,
+              642386,
+              642408,
+              642410,
+              642411,
+              642422,
+              642445,
+              642455,
+              642466,
+              642467,
+              642482
+            ],
+            "processCount": 15,
+            "pssMiB": 459.694,
+            "rootPid": 642368,
+            "rssMiB": 1240.141,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "javascriptHeap": {
+            "allObservedTargetsAvailable": true,
+            "limitations": "Not browser RSS/PSS, WASM linear memory, physical GPU memory, or total ArrayBuffer residency. Optional backingStorageSize/embedderHeapUsedSize are reported separately when returned; do not sum them into RSS.",
+            "observedTargetUsedBytes": 464016,
+            "scope": "CDP V8 heap for the page and currently attached worker targets only. Missing targets remain unknown.",
+            "targets": [
+              {
+                "available": true,
+                "backingStorageSize": 6,
+                "embedderHeapUsedSize": 1383192,
+                "totalSize": 1048576,
+                "type": "page",
+                "usedSize": 464016
+              }
+            ]
+          },
+          "localCpuService": {
+            "available": true,
+            "rss": {
+              "current_rss_mib": 62.4296875,
+              "peak_rss_mib": 61.875
+            },
+            "scope": "Local CPU service process only; excludes Chrome."
+          },
+          "timestampUtc": "2026-10-02T23:32:21.904Z",
+          "webgpuRequestedBuffers": {
+            "concreteDeviceInstrumentationWorkerCount": 0,
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "installationPendingWorkerCount": 0,
+            "instrumentationStatuses": [],
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerAdapterDiagnostics": [],
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 5.761,
+          "hostProcessTree": {
+            "incrementalPssMiB": null,
+            "pids": [
+              642368,
+              642372,
+              642373,
+              642383,
+              642384,
+              642386,
+              642408,
+              642410,
+              642411,
+              642422,
+              642445,
+              642455,
+              642466,
+              642467,
+              642482
+            ],
+            "processCount": 15,
+            "pssMiB": 461.837,
+            "rootPid": 642368,
+            "rssMiB": 1242.77,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "javascriptHeap": {
+            "allObservedTargetsAvailable": true,
+            "limitations": "Not browser RSS/PSS, WASM linear memory, physical GPU memory, or total ArrayBuffer residency. Optional backingStorageSize/embedderHeapUsedSize are reported separately when returned; do not sum them into RSS.",
+            "observedTargetUsedBytes": 464016,
+            "scope": "CDP V8 heap for the page and currently attached worker targets only. Missing targets remain unknown.",
+            "targets": [
+              {
+                "available": true,
+                "backingStorageSize": 6,
+                "embedderHeapUsedSize": 1383192,
+                "totalSize": 1048576,
+                "type": "page",
+                "usedSize": 464016
+              }
+            ]
+          },
+          "localCpuService": {
+            "available": true,
+            "rss": {
+              "current_rss_mib": 62.4296875,
+              "peak_rss_mib": 61.875
+            },
+            "scope": "Local CPU service process only; excludes Chrome."
+          },
+          "timestampUtc": "2026-10-02T23:32:24.006Z",
+          "webgpuRequestedBuffers": {
+            "concreteDeviceInstrumentationWorkerCount": 0,
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "installationPendingWorkerCount": 0,
+            "instrumentationStatuses": [],
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerAdapterDiagnostics": [],
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 6.65,
+          "hostProcessTree": {
+            "incrementalPssMiB": null,
+            "pids": [
+              642368,
+              642372,
+              642373,
+              642383,
+              642384,
+              642386,
+              642408,
+              642410,
+              642411,
+              642422,
+              642445,
+              642455,
+              642466,
+              642467,
+              642482
+            ],
+            "processCount": 15,
+            "pssMiB": 461.349,
+            "rootPid": 642368,
+            "rssMiB": 1241.668,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "javascriptHeap": {
+            "allObservedTargetsAvailable": true,
+            "limitations": "Not browser RSS/PSS, WASM linear memory, physical GPU memory, or total ArrayBuffer residency. Optional backingStorageSize/embedderHeapUsedSize are reported separately when returned; do not sum them into RSS.",
+            "observedTargetUsedBytes": 464016,
+            "scope": "CDP V8 heap for the page and currently attached worker targets only. Missing targets remain unknown.",
+            "targets": [
+              {
+                "available": true,
+                "backingStorageSize": 6,
+                "embedderHeapUsedSize": 1383192,
+                "totalSize": 1048576,
+                "type": "page",
+                "usedSize": 464016
+              }
+            ]
+          },
+          "localCpuService": {
+            "available": true,
+            "rss": {
+              "current_rss_mib": 62.43359375,
+              "peak_rss_mib": 61.875
+            },
+            "scope": "Local CPU service process only; excludes Chrome."
+          },
+          "timestampUtc": "2026-10-02T23:32:24.895Z",
+          "webgpuRequestedBuffers": {
+            "concreteDeviceInstrumentationWorkerCount": 0,
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "installationPendingWorkerCount": 0,
+            "instrumentationStatuses": [],
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerAdapterDiagnostics": [],
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 6.749,
+          "hostProcessTree": {
+            "incrementalPssMiB": null,
+            "pids": [
+              642368,
+              642372,
+              642373,
+              642383,
+              642384,
+              642386,
+              642408,
+              642410,
+              642411,
+              642422,
+              642445,
+              642455,
+              642466,
+              642467,
+              642482
+            ],
+            "processCount": 15,
+            "pssMiB": 461.349,
+            "rootPid": 642368,
+            "rssMiB": 1241.668,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "javascriptHeap": {
+            "allObservedTargetsAvailable": true,
+            "limitations": "Not browser RSS/PSS, WASM linear memory, physical GPU memory, or total ArrayBuffer residency. Optional backingStorageSize/embedderHeapUsedSize are reported separately when returned; do not sum them into RSS.",
+            "observedTargetUsedBytes": 464016,
+            "scope": "CDP V8 heap for the page and currently attached worker targets only. Missing targets remain unknown.",
+            "targets": [
+              {
+                "available": true,
+                "backingStorageSize": 6,
+                "embedderHeapUsedSize": 1383192,
+                "totalSize": 1048576,
+                "type": "page",
+                "usedSize": 464016
+              }
+            ]
+          },
+          "localCpuService": {
+            "available": true,
+            "rss": {
+              "current_rss_mib": 62.43359375,
+              "peak_rss_mib": 61.875
+            },
+            "scope": "Local CPU service process only; excludes Chrome."
+          },
+          "timestampUtc": "2026-10-02T23:32:24.993Z",
+          "webgpuRequestedBuffers": {
+            "concreteDeviceInstrumentationWorkerCount": 0,
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "installationPendingWorkerCount": 0,
+            "instrumentationStatuses": [],
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerAdapterDiagnostics": [],
+            "workerCount": 0,
+            "workers": []
+          }
+        }
+      ],
+      "startedAtUtc": "2026-10-02T23:32:19.500Z",
+      "startedElapsedSeconds": 1.255,
+      "status": "complete",
+      "workerLifetimePeakIncreaseDuringStageMiB": 0.0
+    },
+    "load": {
+      "concreteDeviceInstrumentationWorkerCountAtEnd": 0,
+      "createCallsAtEnd": 0,
+      "createdRequestedBytesAtEnd": 0,
+      "destroyCallsAtEnd": 0,
+      "destroyedRequestedBytesAtEnd": 0,
+      "durationSeconds": 2.366,
+      "endedAtUtc": "2026-10-02T23:32:29.760Z",
+      "endedElapsedSeconds": 11.515,
+      "gpuInstrumentationStatusesAtEnd": [],
+      "installationPendingWorkerCountAtEnd": 0,
+      "instrumentedWorkerCountAtEnd": 0,
+      "largestWorkerLifetimePeakRequestedMiB": 0.0,
+      "sampleIntervalSeconds": {
+        "configured": 2.0,
+        "maxObserved": 2.136,
+        "meanObserved": 1.127
+      },
+      "sampledPeakCurrentNotDestroyedRequestedMiB": 0.0,
+      "sampledPeakIncrementalPssMiB": 86.995,
+      "sampledPeakObservedJsHeapUsedMiB": 1.2156524658203125,
+      "sampledPeakProcessCount": 16,
+      "sampledPeakPssMiB": 536.569,
+      "sampledPeakRssMiB": 1426.105,
+      "samples": [
+        {
+          "elapsedSeconds": 9.253,
+          "hostProcessTree": {
+            "incrementalPssMiB": 85.252,
+            "pids": [
+              642368,
+              642372,
+              642373,
+              642383,
+              642384,
+              642386,
+              642408,
+              642410,
+              642411,
+              642422,
+              642445,
+              642455,
+              642466,
+              642467,
+              642482,
+              642532
+            ],
+            "processCount": 16,
+            "pssMiB": 534.826,
+            "rootPid": 642368,
+            "rssMiB": 1422.742,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "javascriptHeap": {
+            "allObservedTargetsAvailable": true,
+            "limitations": "Not browser RSS/PSS, WASM linear memory, physical GPU memory, or total ArrayBuffer residency. Optional backingStorageSize/embedderHeapUsedSize are reported separately when returned; do not sum them into RSS.",
+            "observedTargetUsedBytes": 1274704,
+            "scope": "CDP V8 heap for the page and currently attached worker targets only. Missing targets remain unknown.",
+            "targets": [
+              {
+                "available": true,
+                "backingStorageSize": 50316,
+                "embedderHeapUsedSize": 5163968,
+                "totalSize": 2621440,
+                "type": "page",
+                "usedSize": 1274704
+              }
+            ]
+          },
+          "localCpuService": {
+            "available": true,
+            "rss": {
+              "current_rss_mib": 64.14453125,
+              "peak_rss_mib": 63.25
+            },
+            "scope": "Local CPU service process only; excludes Chrome."
+          },
+          "timestampUtc": "2026-10-02T23:32:27.498Z",
+          "webgpuRequestedBuffers": {
+            "concreteDeviceInstrumentationWorkerCount": 0,
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "installationPendingWorkerCount": 0,
+            "instrumentationStatuses": [],
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerAdapterDiagnostics": [],
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 11.389,
+          "hostProcessTree": {
+            "incrementalPssMiB": 86.985,
+            "pids": [
+              642368,
+              642372,
+              642373,
+              642383,
+              642384,
+              642386,
+              642408,
+              642410,
+              642411,
+              642422,
+              642445,
+              642455,
+              642466,
+              642467,
+              642482,
+              642532
+            ],
+            "processCount": 16,
+            "pssMiB": 536.559,
+            "rootPid": 642368,
+            "rssMiB": 1426.078,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "javascriptHeap": {
+            "allObservedTargetsAvailable": true,
+            "limitations": "Not browser RSS/PSS, WASM linear memory, physical GPU memory, or total ArrayBuffer residency. Optional backingStorageSize/embedderHeapUsedSize are reported separately when returned; do not sum them into RSS.",
+            "observedTargetUsedBytes": 928768,
+            "scope": "CDP V8 heap for the page and currently attached worker targets only. Missing targets remain unknown.",
+            "targets": [
+              {
+                "available": true,
+                "backingStorageSize": 53740,
+                "embedderHeapUsedSize": 5247936,
+                "totalSize": 2359296,
+                "type": "page",
+                "usedSize": 928768
+              }
+            ]
+          },
+          "localCpuService": {
+            "available": true,
+            "rss": {
+              "current_rss_mib": 95.1953125,
+              "peak_rss_mib": 105.3046875
+            },
+            "scope": "Local CPU service process only; excludes Chrome."
+          },
+          "timestampUtc": "2026-10-02T23:32:29.634Z",
+          "webgpuRequestedBuffers": {
+            "concreteDeviceInstrumentationWorkerCount": 0,
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "installationPendingWorkerCount": 0,
+            "instrumentationStatuses": [],
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerAdapterDiagnostics": [],
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 11.508,
+          "hostProcessTree": {
+            "incrementalPssMiB": 86.995,
+            "pids": [
+              642368,
+              642372,
+              642373,
+              642383,
+              642384,
+              642386,
+              642408,
+              642410,
+              642411,
+              642422,
+              642445,
+              642455,
+              642466,
+              642467,
+              642482,
+              642532
+            ],
+            "processCount": 16,
+            "pssMiB": 536.569,
+            "rootPid": 642368,
+            "rssMiB": 1426.105,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "javascriptHeap": {
+            "allObservedTargetsAvailable": true,
+            "limitations": "Not browser RSS/PSS, WASM linear memory, physical GPU memory, or total ArrayBuffer residency. Optional backingStorageSize/embedderHeapUsedSize are reported separately when returned; do not sum them into RSS.",
+            "observedTargetUsedBytes": 934104,
+            "scope": "CDP V8 heap for the page and currently attached worker targets only. Missing targets remain unknown.",
+            "targets": [
+              {
+                "available": true,
+                "backingStorageSize": 53740,
+                "embedderHeapUsedSize": 5247936,
+                "totalSize": 2359296,
+                "type": "page",
+                "usedSize": 934104
+              }
+            ]
+          },
+          "localCpuService": {
+            "available": true,
+            "rss": {
+              "current_rss_mib": 95.1953125,
+              "peak_rss_mib": 105.3046875
+            },
+            "scope": "Local CPU service process only; excludes Chrome."
+          },
+          "timestampUtc": "2026-10-02T23:32:29.753Z",
+          "webgpuRequestedBuffers": {
+            "concreteDeviceInstrumentationWorkerCount": 0,
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "installationPendingWorkerCount": 0,
+            "instrumentationStatuses": [],
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerAdapterDiagnostics": [],
+            "workerCount": 0,
+            "workers": []
+          }
+        }
+      ],
+      "startedAtUtc": "2026-10-02T23:32:27.394Z",
+      "startedElapsedSeconds": 9.149,
+      "status": "complete",
+      "workerLifetimePeakIncreaseDuringStageMiB": 0.0
+    },
+    "page": {
+      "concreteDeviceInstrumentationWorkerCountAtEnd": 0,
+      "createCallsAtEnd": 0,
+      "createdRequestedBytesAtEnd": 0,
+      "destroyCallsAtEnd": 0,
+      "destroyedRequestedBytesAtEnd": 0,
+      "durationSeconds": 2.378,
+      "endedAtUtc": "2026-10-02T23:32:27.389Z",
+      "endedElapsedSeconds": 9.144,
+      "gpuInstrumentationStatusesAtEnd": [],
+      "installationPendingWorkerCountAtEnd": 0,
+      "instrumentedWorkerCountAtEnd": 0,
+      "largestWorkerLifetimePeakRequestedMiB": 0.0,
+      "sampleIntervalSeconds": {
+        "configured": 2.0,
+        "maxObserved": 2.163,
+        "meanObserved": 1.142
+      },
+      "sampledPeakCurrentNotDestroyedRequestedMiB": 0.0,
+      "sampledPeakIncrementalPssMiB": 85.249,
+      "sampledPeakObservedJsHeapUsedMiB": 1.2156524658203125,
+      "sampledPeakProcessCount": 16,
+      "sampledPeakPssMiB": 534.823,
+      "sampledPeakRssMiB": 1422.676,
+      "samples": [
+        {
+          "elapsedSeconds": 6.846,
+          "hostProcessTree": {
+            "incrementalPssMiB": 11.775,
+            "pids": [
+              642368,
+              642372,
+              642373,
+              642383,
+              642384,
+              642386,
+              642408,
+              642410,
+              642411,
+              642422,
+              642445,
+              642455,
+              642466,
+              642467,
+              642482
+            ],
+            "processCount": 15,
+            "pssMiB": 461.349,
+            "rootPid": 642368,
+            "rssMiB": 1241.668,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "javascriptHeap": {
+            "allObservedTargetsAvailable": true,
+            "limitations": "Not browser RSS/PSS, WASM linear memory, physical GPU memory, or total ArrayBuffer residency. Optional backingStorageSize/embedderHeapUsedSize are reported separately when returned; do not sum them into RSS.",
+            "observedTargetUsedBytes": 464016,
+            "scope": "CDP V8 heap for the page and currently attached worker targets only. Missing targets remain unknown.",
+            "targets": [
+              {
+                "available": true,
+                "backingStorageSize": 6,
+                "embedderHeapUsedSize": 1383192,
+                "totalSize": 1048576,
+                "type": "page",
+                "usedSize": 464016
+              }
+            ]
+          },
+          "localCpuService": {
+            "available": true,
+            "rss": {
+              "current_rss_mib": 62.43359375,
+              "peak_rss_mib": 61.875
+            },
+            "scope": "Local CPU service process only; excludes Chrome."
+          },
+          "timestampUtc": "2026-10-02T23:32:25.091Z",
+          "webgpuRequestedBuffers": {
+            "concreteDeviceInstrumentationWorkerCount": 0,
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "installationPendingWorkerCount": 0,
+            "instrumentationStatuses": [],
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerAdapterDiagnostics": [],
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 9.009,
+          "hostProcessTree": {
+            "incrementalPssMiB": 85.226,
+            "pids": [
+              642368,
+              642372,
+              642373,
+              642383,
+              642384,
+              642386,
+              642408,
+              642410,
+              642411,
+              642422,
+              642445,
+              642455,
+              642466,
+              642467,
+              642482,
+              642532
+            ],
+            "processCount": 16,
+            "pssMiB": 534.8,
+            "rootPid": 642368,
+            "rssMiB": 1422.652,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "javascriptHeap": {
+            "allObservedTargetsAvailable": true,
+            "limitations": "Not browser RSS/PSS, WASM linear memory, physical GPU memory, or total ArrayBuffer residency. Optional backingStorageSize/embedderHeapUsedSize are reported separately when returned; do not sum them into RSS.",
+            "observedTargetUsedBytes": 1268124,
+            "scope": "CDP V8 heap for the page and currently attached worker targets only. Missing targets remain unknown.",
+            "targets": [
+              {
+                "available": true,
+                "backingStorageSize": 50316,
+                "embedderHeapUsedSize": 5163968,
+                "totalSize": 2621440,
+                "type": "page",
+                "usedSize": 1268124
+              }
+            ]
+          },
+          "localCpuService": {
+            "available": true,
+            "rss": {
+              "current_rss_mib": 64.14453125,
+              "peak_rss_mib": 63.25
+            },
+            "scope": "Local CPU service process only; excludes Chrome."
+          },
+          "timestampUtc": "2026-10-02T23:32:27.254Z",
+          "webgpuRequestedBuffers": {
+            "concreteDeviceInstrumentationWorkerCount": 0,
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "installationPendingWorkerCount": 0,
+            "instrumentationStatuses": [],
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerAdapterDiagnostics": [],
+            "workerCount": 0,
+            "workers": []
+          }
+        },
+        {
+          "elapsedSeconds": 9.131,
+          "hostProcessTree": {
+            "incrementalPssMiB": 85.249,
+            "pids": [
+              642368,
+              642372,
+              642373,
+              642383,
+              642384,
+              642386,
+              642408,
+              642410,
+              642411,
+              642422,
+              642445,
+              642455,
+              642466,
+              642467,
+              642482,
+              642532
+            ],
+            "processCount": 16,
+            "pssMiB": 534.823,
+            "rootPid": 642368,
+            "rssMiB": 1422.676,
+            "scope": "Chrome root PID and its current /proc parent-child descendants only.",
+            "smapsRollupMissingPids": []
+          },
+          "javascriptHeap": {
+            "allObservedTargetsAvailable": true,
+            "limitations": "Not browser RSS/PSS, WASM linear memory, physical GPU memory, or total ArrayBuffer residency. Optional backingStorageSize/embedderHeapUsedSize are reported separately when returned; do not sum them into RSS.",
+            "observedTargetUsedBytes": 1274704,
+            "scope": "CDP V8 heap for the page and currently attached worker targets only. Missing targets remain unknown.",
+            "targets": [
+              {
+                "available": true,
+                "backingStorageSize": 50316,
+                "embedderHeapUsedSize": 5163968,
+                "totalSize": 2621440,
+                "type": "page",
+                "usedSize": 1274704
+              }
+            ]
+          },
+          "localCpuService": {
+            "available": true,
+            "rss": {
+              "current_rss_mib": 64.14453125,
+              "peak_rss_mib": 63.25
+            },
+            "scope": "Local CPU service process only; excludes Chrome."
+          },
+          "timestampUtc": "2026-10-02T23:32:27.376Z",
+          "webgpuRequestedBuffers": {
+            "concreteDeviceInstrumentationWorkerCount": 0,
+            "createCalls": 0,
+            "createdRequestedBytes": 0,
+            "currentNotDestroyedRequestedBytes": 0,
+            "currentNotDestroyedRequestedMiB": 0.0,
+            "destroyCalls": 0,
+            "destroyedRequestedBytes": 0,
+            "installationPendingWorkerCount": 0,
+            "instrumentationStatuses": [],
+            "instrumentedWorkerCount": 0,
+            "largestWorkerLifetimePeakRequestedBytes": 0,
+            "measurement": "Requested JavaScript GPUBuffer descriptor sizes. Not physical VRAM or total device residency.",
+            "workerAdapterDiagnostics": [],
+            "workerCount": 0,
+            "workers": []
+          }
+        }
+      ],
+      "startedAtUtc": "2026-10-02T23:32:25.011Z",
+      "startedElapsedSeconds": 6.766,
+      "status": "complete",
+      "workerLifetimePeakIncreaseDuringStageMiB": 0.0
+    }
+  },
+  "startedAtUtc": "2026-10-02T23:32:18.245Z",
+  "status": "interrupted",
+  "synthesis": {
+    "expectedInputWords": 10,
+    "first": null,
+    "matchedTextAndSeed": true,
+    "seed": 1337,
+    "text": "Take a slow breath in, and let your shoulders relax.",
+    "warm": null
+  },
+  "workers": []
+}

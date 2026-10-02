@@ -20,6 +20,44 @@ def wav(frames=24000):
 
 
 class ExportTests(unittest.TestCase):
+    def test_local_cpu_mode_preserves_gpu_gates_and_disables_browser_gpu(self):
+        with mock.patch('sys.argv', ['measure-browser.py', '--local-cpu']):
+            args = runner.parse_args()
+        self.assertTrue(args.local_cpu)
+        flags = runner.chrome_arguments(Path('/chrome'), Path('/profile'), True, local_cpu=True)
+        self.assertIn('--disable-gpu', flags)
+        for option in ('--hardware-webgpu', '--require-hardware-webgpu', '--adapter-only', '--trace-inference'):
+            with mock.patch('sys.argv', ['measure-browser.py', '--local-cpu', option]):
+                with self.subTest(option=option), self.assertRaises(SystemExit): runner.parse_args()
+
+    def test_interactive_mode_is_visible_and_does_not_run_automatic_checks(self):
+        with mock.patch('sys.argv', ['measure-browser.py', '--interactive']):
+            args = runner.parse_args()
+        self.assertTrue(args.interactive)
+        self.assertTrue(args.headed)
+        for mode in ('--ui-only', '--adapter-only', '--full-paper', '--check-stop-restart', '--trace-inference'):
+            with mock.patch('sys.argv', ['measure-browser.py', '--interactive', mode]):
+                with self.subTest(mode=mode), self.assertRaises(SystemExit):
+                    runner.parse_args()
+
+    def test_interactive_reader_samples_ram_without_starting_a_reading(self):
+        fake = mock.MagicMock()
+        fake.args.url = 'http://127.0.0.1:4187/'
+        fake.args.sample_seconds = 1
+        fake.report = {'app': {}}
+        fake.stage = {'samples': []}
+        fake.browser.poll.side_effect = [None, 0]
+        fake.protocol.return_value = {'targetInfos': [{'type': 'page', 'url': fake.args.url}]}
+        memory = {'rssMiB': 1200, 'pssMiB': 500}
+        fake.sample.side_effect = lambda name: fake.stage['samples'].append({'hostProcessTree': memory})
+        fake.evaluate.side_effect = [None, {'status': 'ready', 'busy': False}]
+        with mock.patch.object(runner, 'write_json'), mock.patch.object(runner.time, 'sleep'):
+            runner.interactive_reader(fake)
+        self.assertEqual(fake.report['status'], 'complete')
+        self.assertEqual(fake.report['app']['interactiveMemory'], memory)
+        fake.finish_stage.assert_called_once_with('interactive')
+        self.assertTrue(all('readText(' not in call.args[0] for call in fake.evaluate.call_args_list))
+
     def test_hardware_assertions_do_not_force_backend_flags(self):
         with mock.patch('sys.argv', ['measure-browser.py', '--require-hardware-webgpu']):
             args = runner.parse_args()

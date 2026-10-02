@@ -1,0 +1,14 @@
+{
+  "backend": "systemd-cgroup",
+  "memory_max_mib": 640,
+  "memory_high_mib": 512,
+  "memory_swap_max_bytes": 0,
+  "cpu_quota_percent": 200,
+  "desktop_reserve_mib": 4096,
+  "sample_count": 1,
+  "sampled_peak_process_tree_rss_mib": 2.54296875,
+  "measurement_source": "sampled_cgroup_processes_proc_status",
+  "stopped_reason": null,
+  "wrapper_returncode": 0,
+  "elapsed_s": 1.0837138339993544
+}

@@ -181,9 +181,9 @@ desktop and 390-pixel mobile page were inspected. All four audio players load
 and finish playback; there is no mobile horizontal overflow. This verifies
 the listening artifact's controls, not perceptual quality.
 
-## Full reading in progress
+## Full reading interrupted
 
-The current guarded full-paper job uses the native donor, lossless embeddings,
+The guarded full-paper job used the native donor, lossless embeddings,
 seed 1337 and 18-word passages. Its directory is
 `artifacts/nano_lab/browser_measurements/local_native_donor_full_paper_20261002/`.
 The latest saved `live-progress.json` records partial input coverage and
@@ -191,7 +191,37 @@ synthesis stages. It is not a completed reading or independent word audit.
 An early 18-word passage takes 28.005 seconds to generate 7 seconds of audio.
 It spends 15.383 seconds in autoregressive generation and 11.691 seconds in
 decoding. Scheduled playback gaps exceed 25 seconds. Smooth playback already
-fails on this hardware; completion and full-text transcription remain pending.
+fails on this hardware. The guard stopped the job after 2,627.576 seconds because
+available memory fell below the 4 GiB desktop reserve. No full-reading WAV was
+exported, so no full-text transcription is available. The latest saved partial
+snapshot contains 29 of 186 passages; it does not establish the exact progress
+at termination. The full-reading stage reached 1,976.707 MiB Chrome RSS and
+1,179.312 MiB PSS. These are process-tree measurements, not the guard's separate
+cgroup accounting.
+
+## Manual localhost session
+
+The measurement runner supports `--interactive`. This opens a visible Chrome
+window, prepares the voice, and waits for the user's Read and Stop actions.
+It does not start an automatic reading. Session measurements show live Chrome
+process-tree RSS and PSS beside the app's latency values. PSS divides shared
+pages between processes. Neither value is physical GPU memory.
+
+With the production preview already running on port 4187, launch the session:
+
+```sh
+python3 scripts/nano_lab/bounded_job.py \
+  --guard-report artifacts/nano_lab/browser_measurements/local_interactive_browser_guard.json \
+  -- python3 browser_tts/scripts/measure-browser.py \
+  --interactive --hardware-webgpu \
+  --model-base /models/chatterbox-nano-browser/ \
+  --lossless-embedding-manifest /experiments/embedding_lossless/manifest.json \
+  --sample-seconds 2 --timeout-seconds 5400 \
+  --output-dir artifacts/nano_lab/browser_measurements/local_interactive_browser_20261002
+```
+
+The session retains the existing resource limits and desktop reserve. Closing
+the reader window ends measurement. The runner unit suite now has 14 passes.
 
 ## GPU limitation on this Chrome build
 

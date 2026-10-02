@@ -860,6 +860,14 @@ class BrowserMeasurement:
         }
         if self.args.nvidia_smi:
             row["nvidiaSmi"] = self.nvidia_memory(pids)
+        if self.args.local_cpu:
+            try:
+                with urllib.request.urlopen(urllib.parse.urljoin(self.args.url, '/api/reader/status'), timeout=2) as response:
+                    service = json.load(response)
+                row['localCpuService'] = {'available': True, 'rss': service.get('rss'),
+                                         'scope': 'Local CPU service process only; excludes Chrome.'}
+            except (OSError, ValueError) as error:
+                row['localCpuService'] = {'available': False, 'error': str(error)}
         self.report["stages"][name]["samples"].append(row)
         with self.sample_log_path.open("a", encoding="utf-8") as stream:
             stream.write(json.dumps({"stage": name, "sample": row}, separators=(",", ":")) + "\n")
@@ -1343,7 +1351,7 @@ def read_devtools_version(profile: Path, process: subprocess.Popen[bytes], timeo
 
 
 def chrome_arguments(chrome: Path, profile: Path, headless: bool, ui_only: bool = False,
-                     hardware_webgpu: bool = False, adapter_only: bool = False) -> list[str]:
+                     hardware_webgpu: bool = False, adapter_only: bool = False, local_cpu: bool = False) -> list[str]:
     headless_shell = chrome.name == "chrome-headless-shell"
     args = [
         str(chrome),
@@ -1366,6 +1374,12 @@ def chrome_arguments(chrome: Path, profile: Path, headless: bool, ui_only: bool 
                      "--disable-gpu", "--disable-software-rasterizer"))
     elif adapter_only:
         args.extend(("--no-zygote", "--no-sandbox", "--renderer-process-limit=1"))
+    if local_cpu:
+        args.extend(("--disable-gpu", "--disable-software-rasterizer"))
+        if headless_shell:
+            # This client runs no model. Keep this functional check small;
+            # CPU service memory is sampled separately from browser overhead.
+            args.extend(("--no-zygote", "--no-sandbox", "--renderer-process-limit=1"))
     if hardware_webgpu:
         # Chrome's Linux headless WebGPU recipe uses Vulkan. Keep these flags
         # opt-in so the ordinary browser measurement retains its normal setup.
@@ -1398,12 +1412,22 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--model-base", help="Optional same-origin model asset base URL, for example /models/chatterbox-nano-browser/.")
     parser.add_argument("--nvidia-smi", action="store_true", help="Sample nvidia-smi compute-app memory separately when available.")
     parser.add_argument("--headed", action="store_true", help="Use a visible Chrome window instead of headless Chrome.")
+    parser.add_argument('--interactive', action='store_true', help='Prepare a visible reader, show live browser RSS, and leave reading controls to the user until the window closes.')
     parser.add_argument("--hardware-webgpu", action="store_true", help="Use Chrome's Linux Vulkan WebGPU flags and require a non-fallback adapter with shader-f16.")
     parser.add_argument('--require-hardware-webgpu', action='store_true', help='Require an identified non-fallback FP16 adapter without changing GPU backend or unsafe-WebGPU flags.')
     parser.add_argument('--power-preference', choices=('low-power', 'high-performance'), default='low-power', help='WebGPU adapter preference. Reported identity decides which GPU was actually selected.')
     parser.add_argument("--ui-only", action="store_true", help="Capture rendered UI and check the missing-state retry path. Do not load models or synthesize speech.")
     parser.add_argument("--adapter-only", action="store_true", help="Check the WebGPU adapter without preparing a model or synthesizing speech. This component check is not an inference benchmark.")
+    parser.add_argument('--local-cpu', action='store_true', help='Measure the same-origin CPU service with browser GPU disabled; service RSS is separate from browser RSS.')
     args = parser.parse_args()
+    if args.local_cpu and (args.ui_only or args.adapter_only or args.hardware_webgpu or args.require_hardware_webgpu
+                           or args.embedding_manifest or args.lossless_embedding_manifest or args.voice_state_manifest
+                           or args.model_base or args.trace_inference):
+        parser.error('--local-cpu uses the pinned local service; GPU and experimental model options do not apply.')
+    if args.interactive:
+        if args.ui_only or args.adapter_only or args.full_paper or args.check_stop_restart or args.trace_inference:
+            parser.error('--interactive cannot be combined with automatic or component checks.')
+        args.headed = True
     if args.timeout_seconds <= 0 or args.startup_timeout_seconds <= 0 or args.load_timeout_seconds <= 0 or args.inference_timeout_seconds <= 0:
         parser.error("Timeout values must be greater than zero.")
     if args.idle_seconds < 0 or args.sample_seconds <= 0:
@@ -1445,6 +1469,50 @@ def app_snapshot_js() -> str:
     return "window.voiceStudy && typeof window.voiceStudy.snapshot === 'function' ? window.voiceStudy.snapshot() : null"
 
 
+def interactive_reader(measurement: BrowserMeasurement) -> None:
+    """Keep the owned browser under its guard while the user operates the reader."""
+    measurement.start_stage('interactive')
+    measurement.report['status'] = 'interactive'
+    write_json(measurement.report_path, measurement.report)
+    print(f'Interactive reader ready: {measurement.args.url}', flush=True)
+    while measurement.browser.poll() is None:
+        measurement.check_timeout('interactive', measurement.deadline)
+        targets = measurement.protocol('Target.getTargets', timeout=5).get('targetInfos', [])
+        if not any(t.get('type') == 'page' and t.get('url') == measurement.args.url for t in targets):
+            break
+        measurement.sample('interactive')
+        memory = measurement.stage['samples'][-1]['hostProcessTree']
+        values = json.dumps({'rss': memory['rssMiB'], 'pss': memory['pssMiB']})
+        measurement.evaluate(f"""(() => {{
+          const grid = document.querySelector('.metric-grid');
+          if (!grid) return;
+          for (const [id, label] of [['metric-browser-rss', 'Browser RAM (RSS)'], ['metric-browser-pss', 'Browser RAM (PSS)']]) {{
+            if (!document.getElementById(id)) {{
+              const row = document.createElement('div');
+              const title = document.createElement('span'); title.textContent = label;
+              const value = document.createElement('b'); value.id = id;
+              row.append(title, value); grid.append(row);
+            }}
+          }}
+          const m = {values};
+          document.getElementById('metric-browser-rss').textContent = m.rss.toFixed(0) + ' MiB';
+          document.getElementById('metric-browser-pss').textContent = m.pss.toFixed(0) + ' MiB';
+          document.getElementById('metrics').open = true;
+          if (!document.getElementById('manual-memory-note')) {{
+            const note = document.createElement('p'); note.id = 'manual-memory-note'; note.className = 'metrics-note';
+            note.textContent = 'RSS counts memory in every process of this test browser. PSS divides shared pages between processes. Both include browser overhead.';
+            document.getElementById('metrics').append(note);
+          }}
+        }})()""")
+        measurement.report['app']['interactiveSnapshot'] = measurement.evaluate(app_snapshot_js())
+        measurement.report['app']['interactiveMemory'] = memory
+        if len(measurement.stage['samples']) % 5 == 0:
+            write_json(measurement.report_path, measurement.report)
+        time.sleep(measurement.args.sample_seconds)
+    measurement.finish_stage('interactive')
+    measurement.report['status'] = 'complete'
+
+
 def main() -> int:
     args = parse_args()
     run_started = time.monotonic()
@@ -1455,7 +1523,7 @@ def main() -> int:
         "schemaVersion": 1,
         "startedAtUtc": utc_now(),
         "status": "starting",
-        "mode": "ui-only" if args.ui_only else "adapter-only" if args.adapter_only else "browser-tts-measurement",
+        "mode": "interactive" if args.interactive else "ui-only" if args.ui_only else "adapter-only" if args.adapter_only else "browser-tts-measurement",
         "limitations": [
             "Host RSS and PSS sum /proc/smaps_rollup for only Chrome's owned profile process tree.",
             "The WebGPU counters record requested JavaScript GPUBuffer descriptor sizes. They do not measure physical VRAM residency or every backend allocation.",
@@ -1485,6 +1553,8 @@ def main() -> int:
             'requireHardwareWebgpu': args.require_hardware_webgpu,
             "nvidiaSmiEnabled": args.nvidia_smi,
             "uiOnly": args.ui_only,
+            "localCpuService": args.local_cpu,
+            "interactive": args.interactive,
         },
         "guard": guard_context(),
         "server": None,
@@ -1528,7 +1598,7 @@ def main() -> int:
             raise RunnerError(f"Chrome executable not found: {args.chrome}")
         chrome_path = Path(chrome_name).resolve()
         headless_shell = chrome_path.name == "chrome-headless-shell"
-        if headless_shell and not (args.ui_only or args.adapter_only):
+        if headless_shell and not (args.ui_only or args.adapter_only or args.local_cpu):
             raise RunnerError("chrome-headless-shell supports only UI or adapter component checks. Full measurements require normal Chrome.")
         if headless_shell and args.headed:
             raise RunnerError("chrome-headless-shell cannot run a headed UI check.")
@@ -1541,13 +1611,14 @@ def main() -> int:
             "cleanTemporaryProfile": True,
             "headless": not args.headed,
             "flags": chrome_arguments(chrome_path, profile, not args.headed, args.ui_only,
-                                       args.hardware_webgpu, args.adapter_only)[1:-1],
+                                       args.hardware_webgpu, args.adapter_only, args.local_cpu)[1:-1],
             "hardwareWebgpuDiagnostic": args.hardware_webgpu,
             "hardwareWebgpuRequestedFlags": (["--use-angle=vulkan", "--enable-features=Vulkan",
                                                 "--disable-vulkan-surface", "--enable-unsafe-webgpu"]
                                                if args.hardware_webgpu else []),
             "processLayout": ("one-renderer adapter-only component diagnostic; no model inference" if args.adapter_only
-                              else "headless shell, one-renderer UI-only diagnostic with GPU disabled" if headless_shell
+                              else ("headless shell CPU client with GPU disabled" if args.local_cpu
+                                    else "headless shell, one-renderer UI-only diagnostic with GPU disabled") if headless_shell
                               else ("one-renderer UI-only diagnostic with GPU disabled" if args.ui_only
                                     else "normal Chrome process layout")),
             "profilePath": str(profile),
@@ -1555,7 +1626,7 @@ def main() -> int:
         }
         log_handle = chrome_log.open("wb")
         command = chrome_arguments(chrome_path, profile, not args.headed, args.ui_only,
-                                   args.hardware_webgpu, args.adapter_only)
+                                   args.hardware_webgpu, args.adapter_only, args.local_cpu)
         browser = subprocess.Popen(command, stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL,
                                    stderr=log_handle, start_new_session=True)
         ownership = BrowserOwnership(browser.pid, chrome_path, profile)
@@ -1750,65 +1821,70 @@ def main() -> int:
             measurement.protocol("Target.setAutoAttach", {
                 "autoAttach": True, "waitForDebuggerOnStart": True, "flatten": True,
             }, page_session)
-            adapter = measurement.evaluate("""(async () => {
-              if (!navigator.gpu) return { available:false, reason:'navigator.gpu is absent' };
-              const item = await navigator.gpu.requestAdapter({powerPreference:POWER_PREFERENCE});
-              if (!item) return { available:false, reason:'No WebGPU adapter was returned' };
-              let info = item.info || {};
-              if ((!info.vendor && !info.architecture) && item.requestAdapterInfo) {
-                try { info = await item.requestAdapterInfo(); } catch (_) {}
-              }
-              const infoFields = { vendor:info.vendor || null, architecture:info.architecture || null,
-                device:info.device || null, description:info.description || null };
-              const label = Object.values(infoFields).filter(Boolean).join(' ').toLowerCase();
-              const fallbackStatus = typeof info.isFallbackAdapter === 'boolean' ? info.isFallbackAdapter
-                : (typeof item.isFallbackAdapter === 'boolean' ? item.isFallbackAdapter : null);
-              const fallbackStatusSource = typeof info.isFallbackAdapter === 'boolean' ? 'GPUAdapterInfo.isFallbackAdapter'
-                : (typeof item.isFallbackAdapter === 'boolean' ? 'GPUAdapter.isFallbackAdapter' : 'unknown');
-              const softwareMarkers = ['swiftshader', 'llvmpipe', 'lavapipe', 'softpipe', 'software renderer', 'software adapter'];
-              const features = [...item.features].map(String);
-              const hardwareAssertions = {
-                hasAdapterIdentity:Object.values(infoFields).some(Boolean),
-                notFallback: fallbackStatus === false,
-                noKnownSoftwareLabel: !softwareMarkers.some(marker => label.includes(marker)),
-                noGoogleSwiftShader: !(String(infoFields.vendor || '').toLowerCase() === 'google' && label.includes('swiftshader')),
-                shaderF16: features.includes('shader-f16'),
-              };
-              return { available:true, isFallbackAdapter:fallbackStatus, fallbackStatusSource,
-                info:infoFields, features, hardwareAssertions,
-                hardwareAssertionsPassed:Object.values(hardwareAssertions).every(Boolean),
-                limits:{maxBufferSize:item.limits.maxBufferSize,
-                  maxStorageBufferBindingSize:item.limits.maxStorageBufferBindingSize} };
-            })()""".replace('POWER_PREFERENCE', json.dumps(args.power_preference)), await_promise=True, timeout=20)
-            if not isinstance(adapter, dict) or not adapter.get("available"):
-                raise RunnerError(f"WebGPU adapter check failed: {adapter}")
-            report["app"]["webgpuAdapter"] = adapter
-            if args.hardware_webgpu or args.require_hardware_webgpu:
-                report["app"]["hardwareWebgpuPreflight"] = {
-                    "adapterAssertions": adapter.get("hardwareAssertions", {}),
-                    "passed": bool(adapter.get("hardwareAssertionsPassed")),
-                    "requirements": ["adapter identity must be available",
-                                     "isFallbackAdapter must be false",
-                                     "adapter info must not identify a known software renderer",
-                                     "adapter must expose shader-f16"],
-                }
-                write_json(report_path, report)
-                if not adapter.get("hardwareAssertionsPassed"):
-                    raise RunnerError("Hardware verification requires a non-fallback adapter without a known software-renderer label and with shader-f16.")
+            if not args.local_cpu:
+                adapter = measurement.evaluate("""(async () => {
+                  if (!navigator.gpu) return { available:false, reason:'navigator.gpu is absent' };
+                  const item = await navigator.gpu.requestAdapter({powerPreference:POWER_PREFERENCE});
+                  if (!item) return { available:false, reason:'No WebGPU adapter was returned' };
+                  let info = item.info || {};
+                  if ((!info.vendor && !info.architecture) && item.requestAdapterInfo) {
+                    try { info = await item.requestAdapterInfo(); } catch (_) {}
+                  }
+                  const infoFields = { vendor:info.vendor || null, architecture:info.architecture || null,
+                    device:info.device || null, description:info.description || null };
+                  const label = Object.values(infoFields).filter(Boolean).join(' ').toLowerCase();
+                  const fallbackStatus = typeof info.isFallbackAdapter === 'boolean' ? info.isFallbackAdapter
+                    : (typeof item.isFallbackAdapter === 'boolean' ? item.isFallbackAdapter : null);
+                  const fallbackStatusSource = typeof info.isFallbackAdapter === 'boolean' ? 'GPUAdapterInfo.isFallbackAdapter'
+                    : (typeof item.isFallbackAdapter === 'boolean' ? 'GPUAdapter.isFallbackAdapter' : 'unknown');
+                  const softwareMarkers = ['swiftshader', 'llvmpipe', 'lavapipe', 'softpipe', 'software renderer', 'software adapter'];
+                  const features = [...item.features].map(String);
+                  const hardwareAssertions = {
+                    hasAdapterIdentity:Object.values(infoFields).some(Boolean),
+                    notFallback: fallbackStatus === false,
+                    noKnownSoftwareLabel: !softwareMarkers.some(marker => label.includes(marker)),
+                    noGoogleSwiftShader: !(String(infoFields.vendor || '').toLowerCase() === 'google' && label.includes('swiftshader')),
+                    shaderF16: features.includes('shader-f16'),
+                  };
+                  return { available:true, isFallbackAdapter:fallbackStatus, fallbackStatusSource,
+                    info:infoFields, features, hardwareAssertions,
+                    hardwareAssertionsPassed:Object.values(hardwareAssertions).every(Boolean),
+                    limits:{maxBufferSize:item.limits.maxBufferSize,
+                      maxStorageBufferBindingSize:item.limits.maxStorageBufferBindingSize} };
+                })()""".replace('POWER_PREFERENCE', json.dumps(args.power_preference)), await_promise=True, timeout=20)
+                if not isinstance(adapter, dict) or not adapter.get("available"):
+                    raise RunnerError(f"WebGPU adapter check failed: {adapter}")
+                report["app"]["webgpuAdapter"] = adapter
+                if args.hardware_webgpu or args.require_hardware_webgpu:
+                    report["app"]["hardwareWebgpuPreflight"] = {
+                        "adapterAssertions": adapter.get("hardwareAssertions", {}),
+                        "passed": bool(adapter.get("hardwareAssertionsPassed")),
+                        "requirements": ["adapter identity must be available",
+                                         "isFallbackAdapter must be false",
+                                         "adapter info must not identify a known software renderer",
+                                         "adapter must expose shader-f16"],
+                    }
+                    write_json(report_path, report)
+                    if not adapter.get("hardwareAssertionsPassed"):
+                        raise RunnerError("Hardware verification requires a non-fallback adapter without a known software-renderer label and with shader-f16.")
 
-            if args.adapter_only:
-                report['app']['adapterOnly'] = True
-                report['app']['modelPreparationCalled'] = False
-                report['status'] = 'complete'
-                print(json.dumps({'status':'complete','mode':'adapter-only','report':str(report_path),
-                                  'adapter':adapter}, indent=2), flush=True)
-                return 0
+                if args.adapter_only:
+                    report['app']['adapterOnly'] = True
+                    report['app']['modelPreparationCalled'] = False
+                    report['status'] = 'complete'
+                    print(json.dumps({'status':'complete','mode':'adapter-only','report':str(report_path),
+                                      'adapter':adapter}, indent=2), flush=True)
+                    return 0
+
+            else:
+                report['app']['executionBackend'] = 'same-origin CPU service'
+                report['limitations'].append('Chrome RSS excludes the separate CPU service. CPU service RSS is recorded independently.')
 
             expected_words = len(re.findall(r"\S+", args.text.strip()))
             report["synthesis"] = {"text": args.text, "expectedInputWords": expected_words, "seed": args.seed,
                                    "first": None, "warm": None, "matchedTextAndSeed": True}
             prepare_call = "window.voiceStudy.prepareVoice()"
-            prepare_options = {'powerPreference': args.power_preference}
+            prepare_options = {'backend': 'cpu'} if args.local_cpu else {'backend': 'webgpu', 'powerPreference': args.power_preference}
             if args.voice_state_manifest:
                 prepare_options['voiceStateManifestUrl'] = args.voice_state_manifest
                 report['app']['voiceStateManifestUrl'] = args.voice_state_manifest
@@ -1883,6 +1959,10 @@ def main() -> int:
                     raise RunnerError("--hardware-webgpu could not verify a worker adapter with hardware identity and shader-f16.")
             report['artifacts']['readyScreenshot'] = measurement.capture_screenshot(out / 'voice-ready.png')
             write_json(report_path, report)
+
+            if args.interactive:
+                interactive_reader(measurement)
+                return 0
 
             measurement.start_stage("idle")
             idle_end = min(time.monotonic() + args.idle_seconds, measurement.deadline)
